@@ -1,75 +1,79 @@
 # R0 Reconstruction Assumptions
 
-Status: **PROPOSED, EXPLICIT, REVERSIBLE**
+Status: **V0.2 PROPOSED / EXPLICIT / REVERSIBLE**
 
-This file defines assumptions permitted for the first topology-only build.
-They are not literature facts.
+## A. Gate split
 
-## A. Split R0 build into two permissions
-
-### R0.1A — TOPOLOGY_BUILD
+### R0.1A2 — SLOTTED_TOPOLOGY_BUILD
 
 Purpose:
-- validate scripts, symmetry, conductor connectivity, feed gap, object naming and geometry bookkeeping.
+- validate the corrected Fig. 2 topology only.
 
-Allowed simplifications:
-- zero-thickness PEC sheets,
-- no dielectric substrate,
-- finite ground plane represented by a simple PEC sheet,
-- no active PCB,
-- no shield,
-- no solver.
+Allowed:
+- PEC proxy plate,
+- simple reference ground,
+- eight rectangular slot cutters,
+- boolean subtraction,
+- topology placeholders,
+- build-only and fresh-reopen audit.
 
-Required:
-- 200 mm height over ground,
-- four-petal topology,
-- passive surrounding square ring,
-- explicit central feed/electronics opening,
-- all ambiguous dimensions remain parameters.
+Forbidden:
+- ports,
+- solver,
+- substrate/material claims,
+- LNA/shield/Bias-Tee,
+- L-band scaling,
+- optimization.
 
 ### R0.1B — MATERIALIZED_BUILD
 
-Purpose:
-- instantiate dielectric/copper thickness and prepare the passive EM model.
-
-Requires additional approved assumptions or source evidence for:
-- substrate,
+Still requires approved source/assumptions for:
+- substrate material,
 - substrate thickness,
 - copper thickness,
-- ground-plane extent.
+- detailed center feed/copper implementation.
 
-Still no solver until a separate SOLVER permission.
+## B. Candidate C topology
 
-## B. Primary reconstruction hypothesis
+The next build uses:
+- square continuous plate span: 247.5 mm,
+- outer-slot frame characteristic span: 227.5 mm,
+- central retained solid/electronics region: 40 mm,
+- 200 mm height above ground.
 
-Candidate A from `FIGURE_EXTRACTION.md` is the preferred first topology hypothesis:
+The plate is cut by:
+- four disconnected perimeter slots,
+- four disconnected inner slots.
 
-- smaller 227.5 mm characteristic span -> active petal envelope,
-- larger 247.5 mm characteristic span -> surrounding passive ring,
-- 40 mm -> central removed/feed-region characteristic span.
+The central region stays solid in the topology build.
 
-This is tagged `ASSUMPTION_FROM_FIGURE` in discussion and remains
-`FIGURE_DERIVED_UNVERIFIED` in the parameter manifest.
+## C. Topology-only placeholders
 
-Candidate B must remain reproducible by a single configuration switch.
+The following are not literature dimensions and must not be used for solver claims:
 
-## C. Geometry family, not a single hidden drawing
+- slot width,
+- outer-slot end/corner bridge,
+- inner-to-outer slot bridge,
+- PEC proxy thickness,
+- visualization ground span.
 
-The topology generator must expose at least:
+They exist only to produce a Fig. 2-like connected topology for human review.
 
-- `petal_span`
-- `ring_span`
-- `center_opening`
-- `petal_slit`
-- `ring_trace_width`
-- `pcb_span`
-- `ground_span`
-- `height_ground`
+## D. Connectivity invariant
 
-The exact petal polygon must be represented by named vertices/ratios, not a hand-edited opaque sketch.
+A valid V0.2 topology must satisfy:
 
-## D. No performance fitting
+1. antenna plate remains one connected solid after all eight cuts,
+2. no slot touches another slot,
+3. no outer slot reaches a board edge/corner,
+4. no inner slot reaches the central solid region,
+5. no inner slot reaches an outer slot,
+6. no central through-hole exists.
 
-No value may be adjusted to improve S11/beamwidth during R0.1A.
+If any invariant fails, return HOLD before any solver work.
 
-If the topology build looks unlike the publication, record HOLD and revise provenance/interpretation before any solver work.
+## E. No performance fitting
+
+No parameter may be adjusted to improve S11/gain/beamwidth during R0.1A2.
+
+Visual/topological correction is allowed only against the published figure and must be documented.
