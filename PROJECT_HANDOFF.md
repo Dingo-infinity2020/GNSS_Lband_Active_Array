@@ -17,7 +17,7 @@ CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
 CURRENT_TASK_ID=R0.1A2-SLOTTED-PLATE-BUILD-ONLY-H01
 TASK_OWNER=H01
-TASK_STATUS=READY_FOR_HOST
+TASK_STATUS=HOST_COMPLETE
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -284,14 +284,14 @@ Previous H01 return is preserved in:
 Current task return:
 
 ```text
-TASK_STATUS=NOT_RUN_YET
+TASK_STATUS=HOST_COMPLETE
 HOST=H01
-HOST_START_COMMIT=
-HOST_END_COMMIT=
-FINAL_STATUS=
-EVIDENCE_PATH=
-CST_PROJECT_PATH_OR_HASH=
-NOTES=
+HOST_START_COMMIT=a3671b5afff0a0661b53d2de53db9697afcb5b17
+HOST_END_COMMIT=3fe54de800fd2b77df8ffb4b22e72a43492e1460
+FINAL_STATUS=PASS_R0_V02_SLOTTED_TOPOLOGY_BUILD_ONLY
+EVIDENCE_PATH=evidence/r0_1a2_h01_20260922_2123/
+CST_PROJECT_PATH_OR_HASH=D:\GNSS_Lband_Active_Array\_r0_1a2_h01_work\R0_1A2_SLOTTED_PLATE_BUILD_ONLY_H01.cst sha256=F429A52B784CECFA2F1ED123CD6FF7450DC91AB6FFA848E670892DB9E290C1CA (git-ignored, not committed)
+NOTES=Executed slotted-plate macro body verbatim via CST 2022.5 Python API in a new MWS; saved and fresh-reopened. Definitive shape enumeration: SHAPE_COUNT=2 (ReferenceGround:GROUND_REFERENCE, Radiator:ANTENNA_PLATE), 0 ports, 0 lumped elements, empty Result\output.txt (no solver). Plate volume 5347.225 mm^3 = full 6125.625 - outer 536.0 - inner 242.4, proving 8 non-overlapping slots and one connected solid. All 10 Fig.2 visual checks PASS; side view confirms 200 mm ground spacing. Macro SHA-256 2a5be60a...; V0.1 macro not run. Caveat: Fig.2(a) is not in the repo, so item-10 comparison used the documented Fig.2 topology in refs/charts2025/FIGURE_EXTRACTION.md. See RETURN_REPORT.md. No solver run.
 ```
 
 The host updates this section, commits/pushes, then stops.
