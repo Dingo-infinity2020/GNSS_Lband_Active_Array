@@ -55,3 +55,23 @@ Reason:
 
 Reversal condition:
 - none; this is a methodological rule for R0.
+
+
+## D0005 — Accept V0.3 visible 12-slot topology; keep centre/feed unresolved
+
+Decision:
+- Accept R0.1A3 as the current visible CHARTS topology baseline: 8 outer slot segments + 4 inner radial slots, one connected plate, no large central through-hole, 200 mm height over ground.
+- Preserve all V0.3 photo-derived dimensions as `FIGURE_DERIVED_UNVERIFIED`; do not promote them to paper-explicit truth.
+- Keep the central removed/feed region and the Fig.1 `40 mm` label unresolved.
+- Do not authorize a passive solver until a balanced feed topology can be defined without inventing hidden conductor geometry.
+
+Evidence:
+- `evidence/r0_1a3_h01_20260922_2158/`
+- `docs/R0_1A3_DESIGN_REVIEW_20260922.md`
+
+Reason:
+- deterministic CST build/reopen and exact volume accounting validate the visible 12-slot topology,
+- but the primary paper states that a central area is removed for feed/electronics while not publishing enough detail to reconstruct the hidden feed region unambiguously.
+
+Reversal condition:
+- a higher-quality primary source, author clarification, or independent geometry evidence contradicts the 12-slot topology or resolves the central/feed geometry more precisely.
