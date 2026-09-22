@@ -17,7 +17,7 @@ CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
 CURRENT_TASK_ID=R0.1A-TOPOLOGY-BUILD-ONLY-H01
 TASK_OWNER=H01
-TASK_STATUS=READY_FOR_HOST
+TASK_STATUS=HOST_COMPLETE
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -264,14 +264,14 @@ If the macro requires a syntax-only patch to run in CST 2022:
 # HOST RETURN
 
 ```text
-TASK_STATUS=NOT_RUN_YET
+TASK_STATUS=HOST_COMPLETE
 HOST=H01
-HOST_START_COMMIT=
-HOST_END_COMMIT=
-FINAL_STATUS=
-EVIDENCE_PATH=
-CST_PROJECT_PATH_OR_HASH=
-NOTES=
+HOST_START_COMMIT=cd91035893a6a3ad23dcd13a55f9b7c1a176a9e1
+HOST_END_COMMIT=3ef1f58b4d2180735223b9761c523efae90d0243
+FINAL_STATUS=PASS_R0_TOPOLOGY_BUILD_ONLY
+EVIDENCE_PATH=evidence/r0_1a_h01_20260922_2052/
+CST_PROJECT_PATH_OR_HASH=D:\GNSS_Lband_Active_Array\_r0_1a_h01_work\R0_1A_TOPOLOGY_BUILD_ONLY_H01.cst sha256=100A8563ADE4A9B341338D2698AABC7C71D68633B7F6133F6403E384F8499518 (git-ignored, not committed)
+NOTES=Executed macro body verbatim via CST 2022.5 Python API in a new MWS; saved and fresh-reopened. 9/9 expected solids present after reopen, 0 ports, 0 lumped elements, no solver-result tree. Candidate A materialized (petal 227.5 / ring 247.5 / center 40 / height 200 mm). Screenshots, inventories, hashes and the harness are in the evidence path; see RETURN_REPORT.md. Findings for design review: macro contains two U+2014 em dashes (CST non-ASCII history warning); reserved view name "Front" yields the model Z-axis plan view. No solver was run.
 ```
 
 The host updates this section after execution and then stops.
