@@ -1,0 +1,19 @@
+parameter,value,unit,provenance,status,source_note
+f_min,300,MHz,PAPER_EXPLICIT,FROZEN,CHARTS operating band
+f_max,500,MHz,PAPER_EXPLICIT,FROZEN,CHARTS operating band
+height_ground,200,mm,PAPER_EXPLICIT,FROZEN,optimized height stated in text
+z_center_re_min,60,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,derived from stated 100 +/- 40 range
+z_center_re_nom,100,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,stated center impedance design region
+z_center_re_max,140,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,derived from stated 100 +/- 40 range
+z_center_im_min,-40,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,stated center impedance design region
+z_center_im_nom,0,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,stated center impedance design region
+z_center_im_max,40,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,stated center impedance design region
+feed_center_gap,UNKNOWN,mm,FIGURE_DERIVED_UNVERIFIED,OPEN,figure shows an annotated center dimension but must be checked before use
+petal_geometry,UNKNOWN,,FIGURE_DERIVED_UNVERIFIED,OPEN,no full vertex table published
+ring_outer_size,UNKNOWN,mm,FIGURE_DERIVED_UNVERIFIED,OPEN,visible in Fig.1a but not frozen
+ring_trace_width,UNKNOWN,mm,FIGURE_DERIVED_UNVERIFIED,OPEN,not explicitly stated in text
+pcb_outer_size,UNKNOWN,mm,FIGURE_DERIVED_UNVERIFIED,OPEN,not explicitly stated in text
+ground_xy_size,UNKNOWN,mm,ASSUMPTION,OPEN,not explicitly stated
+substrate_material,UNKNOWN,,ASSUMPTION,OPEN,not explicitly stated in short proceeding
+substrate_thickness,UNKNOWN,mm,ASSUMPTION,OPEN,not explicitly stated in short proceeding
+copper_thickness,UNKNOWN,um,ASSUMPTION,OPEN,not explicitly stated in short proceeding
