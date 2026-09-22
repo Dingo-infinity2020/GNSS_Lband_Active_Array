@@ -26,12 +26,13 @@ ALLOWED_PROVENANCE = {
 
 TOPOLOGY_REQUIRED = {
     "height_ground",
-    "feed_center_gap",
-    "petal_span",
-    "ring_outer_size",
-    "petal_geometry",
-    "petal_slit",
-    "ring_trace_width",
+    "board_span",
+    "outer_slot_frame_span",
+    "center_solid_span",
+    "slot_width",
+    "outer_slot_corner_bridge",
+    "inner_outer_bridge",
+    "topology_t",
     "ground_xy_size",
 }
 
