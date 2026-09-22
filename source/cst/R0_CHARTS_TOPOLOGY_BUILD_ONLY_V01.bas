@@ -1,5 +1,9 @@
 Option Explicit
 
+' DEPRECATED SCIENTIFIC TOPOLOGY - DO NOT USE FOR NEW BUILDS
+' V0.1 executed/reopened successfully, but Fig.2 review showed the topology is wrong.
+' Use R0_CHARTS_SLOTTED_PLATE_BUILD_ONLY_V02.mcr instead.
+
 ' GNSS_Lband_Active_Array
 ' R0-CHARTS-RECON-PASSIVE — TOPOLOGY BUILD-ONLY V0.1
 ' CST Studio Suite 2022
