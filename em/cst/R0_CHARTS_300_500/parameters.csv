@@ -8,17 +8,21 @@ z_center_re_max,140,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,derived from stated 100 +/
 z_center_im_min,-40,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,stated center impedance design region
 z_center_im_nom,0,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,stated center impedance design region
 z_center_im_max,40,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,stated center impedance design region
-fig_label_227_5,227.5,mm,FIGURE_DERIVED_UNVERIFIED,OBSERVED_LABEL,visible red dimension label in Fig.1a; semantic mapping unresolved
-fig_label_247_5,247.5,mm,FIGURE_DERIVED_UNVERIFIED,OBSERVED_LABEL,visible red dimension label in Fig.1a; semantic mapping unresolved
-fig_label_center_40,40,mm,FIGURE_DERIVED_UNVERIFIED,OBSERVED_LABEL,visible red dimension label at central region in Fig.1a
-feed_center_gap,40,mm,FIGURE_DERIVED_UNVERIFIED,CANDIDATE_A,primary reconstruction hypothesis maps center label to central feed/electronics opening
-petal_span,227.5,mm,FIGURE_DERIVED_UNVERIFIED,CANDIDATE_A,primary reconstruction hypothesis; smaller large label mapped to active petal envelope
-ring_outer_size,247.5,mm,FIGURE_DERIVED_UNVERIFIED,CANDIDATE_A,primary reconstruction hypothesis; larger large label mapped to surrounding ring
-petal_geometry,FOUR_PETAL_PARAMETRIC,,ASSUMPTION,TOPOLOGY_PLACEHOLDER,parameterized four-petal family; exact unpublished polygon retained as uncertainty
-petal_slit,5,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,visualization/build placeholder only; no solver use
-ring_trace_width,5,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,visualization/build placeholder only; chosen to retain a visible petal-to-ring clearance in Candidate A
-ground_xy_size,1000,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,large PEC visualization ground for build-only; not an EM claim
-pcb_outer_size,UNKNOWN,mm,FIGURE_DERIVED_UNVERIFIED,OPEN,not required for PEC topology build; needed for materialized build
-substrate_material,UNKNOWN,,ASSUMPTION,OPEN,not required for PEC topology build; needed for materialized build
-substrate_thickness,UNKNOWN,mm,ASSUMPTION,OPEN,not required for PEC topology build; needed for materialized build
-copper_thickness,UNKNOWN,um,ASSUMPTION,OPEN,not required for PEC topology build; needed for materialized build
+fig_label_227_5,227.5,mm,FIGURE_DERIVED_UNVERIFIED,OBSERVED_LABEL,visible red dimension label in Fig.1a
+fig_label_247_5,247.5,mm,FIGURE_DERIVED_UNVERIFIED,OBSERVED_LABEL,visible red dimension label in Fig.1a
+fig_label_center_40,40,mm,FIGURE_DERIVED_UNVERIFIED,OBSERVED_LABEL,visible red central-region label in Fig.1a
+board_span,247.5,mm,FIGURE_DERIVED_UNVERIFIED,CANDIDATE_C,preferred Fig2-consistent interpretation; square PCB/aperture outer span
+outer_slot_frame_span,227.5,mm,FIGURE_DERIVED_UNVERIFIED,CANDIDATE_C,preferred Fig2-consistent interpretation; characteristic outer-slot frame span
+center_solid_span,40,mm,FIGURE_DERIVED_UNVERIFIED,CANDIDATE_C,retained central electronics/feed region; not a through-hole
+slot_width,8,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,visual/topology placeholder only; no solver use
+outer_slot_corner_bridge,30,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,keeps each perimeter slot disconnected and away from corners
+inner_outer_bridge,18,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,keeps each inner slot disconnected from outer slot family
+topology_t,0.1,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,PEC proxy thickness for build-only
+ground_xy_size,1000,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,visual reference ground only; not an EM claim
+pcb_outer_size,247.5,mm,FIGURE_DERIVED_UNVERIFIED,CANDIDATE_C,same as board_span for square topology hypothesis
+substrate_material,UNKNOWN,,ASSUMPTION,OPEN,needed for materialized build
+substrate_thickness,UNKNOWN,mm,ASSUMPTION,OPEN,needed for materialized build
+copper_thickness,UNKNOWN,um,ASSUMPTION,OPEN,needed for materialized build
+v01_feed_center_gap,40,mm,FIGURE_DERIVED_UNVERIFIED,REJECTED_V01,old interpretation rejected after Fig2 review
+v01_petal_span,227.5,mm,FIGURE_DERIVED_UNVERIFIED,REJECTED_V01,old separate-petal interpretation rejected
+v01_ring_outer_size,247.5,mm,FIGURE_DERIVED_UNVERIFIED,REJECTED_V01,old separate-ring interpretation rejected
