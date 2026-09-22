@@ -2,11 +2,47 @@
 
 This repository is a staged scientific hardware project.
 
+## Mandatory reading order
+
+Before changing any scientific or engineering artifact, read:
+
+1. `docs/PROJECT_RULES.md`
+2. `docs/DECISIONS.md`
+3. `docs/REQUIREMENTS_v0.1.md`
+4. the document for the current gate
+5. relevant parameter/provenance manifests
+
+`docs/PROJECT_RULES.md` is the anti-divergence charter. Its rules apply unless an explicit human-approved architecture decision supersedes them.
+
 ## Current gate
 
 Current task: **R0-CHARTS-RECON-PASSIVE**
 
 Do not skip gates.
+
+Current permissions:
+- literature/provenance work: YES
+- manifest work: YES
+- reconstruction assumptions: YES, if explicitly documented
+- CST geometry build: only after manifest gate PASS
+- CST solver: NO
+- optimization: NO
+- L-band scaling: NO
+- LNA integration: NO
+- hardware release: NO
+
+## Architecture control
+
+Current MAINLINE:
+- CHARTS-inspired planar balanced element with feed-point differential active frontend.
+
+Current FIRST_BACKUP:
+- PUMA / unbalanced tightly-coupled element with LNA behind the ground plane.
+
+All other architectures are REFERENCE_ONLY unless promoted through the replacement test defined in `docs/PROJECT_RULES.md`.
+
+New literature or component ideas must first go to `docs/IDEA_BACKLOG.md`.
+Do not silently redirect the project toward a newly discovered architecture.
 
 ## Hard rules for R0
 
@@ -19,18 +55,37 @@ Do not skip gates.
   - PAPER_EXPLICIT
   - FIGURE_DERIVED_UNVERIFIED
   - ASSUMPTION
+  - MEASURED
   - OPTIMIZED (not allowed in initial R0 build)
 - If a required dimension is unknown, keep it visibly unknown until a documented reconstruction assumption is approved.
 - Preserve source/reference metadata; do not copy entire copyrighted papers into the repository.
+- Do not edit multiple scientific layers at once (for example geometry + LNA + conclusions) unless the gate explicitly requires a co-design step.
+
+## Change discipline
+
+Any electromagnetic geometry change must report:
+- parameter,
+- old value,
+- new value,
+- provenance,
+- reason,
+- expected physical effect.
+
+Any design-decision reversal must update `docs/DECISIONS.md`.
+
+Any new candidate architecture/component must update `docs/IDEA_BACKLOG.md` before entering the mainline.
 
 ## Expected engineering style
 
 - parameterized scripts/macros over opaque manual edits,
 - deterministic builds,
 - small commits,
+- one scientific question per gate,
 - build reports before solver reports,
-- explicit PASS/HOLD status,
-- no silent auto-tuning to match a paper plot.
+- explicit PASS/HOLD/FAIL status,
+- no silent auto-tuning to match a paper plot,
+- preserve failed evidence rather than rewriting history,
+- stop optimization when a gate's acceptance criteria are met.
 
 ## Primary tools
 
@@ -39,6 +94,13 @@ Do not skip gates.
 - HFSS: optional independent cross-check
 - Python: post-processing and parameter bookkeeping
 
-## Stop rule
+## Stop rules
 
-When an ambiguity in the source geometry materially changes the model, stop and document it rather than guessing invisibly.
+Stop and document instead of guessing when:
+- a source ambiguity materially changes geometry,
+- a new idea would require changing architecture mid-gate,
+- a solver result cannot be traced to a parameter manifest,
+- an optimization objective has not been frozen,
+- a proposed added feature has no quantified problem it solves.
+
+A HOLD is an acceptable scientific outcome.
