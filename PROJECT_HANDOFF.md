@@ -17,7 +17,7 @@ CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
 CURRENT_TASK_ID=R0.1A3-12SLOT-BUILD-ONLY-H01
 TASK_OWNER=H01
-TASK_STATUS=READY_FOR_HOST
+TASK_STATUS=HOST_COMPLETE
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -286,14 +286,14 @@ Previous execution evidence remains preserved in:
 Current task return:
 
 ```text
-TASK_STATUS=NOT_RUN_YET
+TASK_STATUS=HOST_COMPLETE
 HOST=H01
-HOST_START_COMMIT=
-HOST_END_COMMIT=
-FINAL_STATUS=
-EVIDENCE_PATH=
-CST_PROJECT_PATH_OR_HASH=
-NOTES=
+HOST_START_COMMIT=1ea38af92b4350261adc2598e9c3bb897ae89905
+HOST_END_COMMIT=20303c587061c29a23d76da590b132df60a85c4e
+FINAL_STATUS=PASS_R0_V03_12SLOT_TOPOLOGY_BUILD_ONLY
+EVIDENCE_PATH=evidence/r0_1a3_h01_20260922_2158/
+CST_PROJECT_PATH_OR_HASH=D:\GNSS_Lband_Active_Array\_r0_1a3_h01_work\R0_1A3_12SLOT_BUILD_ONLY_H01.cst sha256=8502C38DA8EB66FE57D96C6A8DCECF449744618CA76E7B35044CD4E47581B491 (git-ignored, not committed)
+NOTES=Executed 12-slot macro body verbatim via CST 2022.5 Python API in a new MWS; saved and fresh-reopened. Definitive shape enumeration: SHAPE_COUNT=2 (ReferenceGround:GROUND_REFERENCE, Radiator:ANTENNA_PLATE), 0 ports, 0 lumped elements, no Result\output.txt (no solver). Plate volume 5486.325 mm^3 = 6125.625 - outer 376.5 - inner 262.8, proving 12 non-overlapping slots and one connected solid. All 12 build checks PASS; top view matches docs/figures/R0_V03_12SLOT_TOPOLOGY_SCHEMATIC.svg; side view confirms 200 mm ground spacing. fig40_unresolved=40 retained, not used as a centre hole or inner-slot spacing. Macro SHA-256 08943e42...; V0.1/V0.2 not run. Nit: PROJECT_HANDOFF.md line 144 has a truncated CURRENT BASELINE paragraph merged into the HOST TASK heading. See RETURN_REPORT.md. No solver run.
 ```
 
 The host updates this section, commits/pushes, then stops.
