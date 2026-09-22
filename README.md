@@ -2,6 +2,11 @@
 
 Low-noise, dual-polarized active antenna array development for full L-band GNSS reception.
 
+## Start here on an execution host
+
+Synchronize `project/r0-charts-scaffold`, then read **`PROJECT_HANDOFF.md`**. It is the canonical current task/return document; do not rely on copied chat prompts.
+
+
 ## Current phase
 
 **R0-CHARTS-RECON-PASSIVE** — literature-traceable passive reconstruction only.
