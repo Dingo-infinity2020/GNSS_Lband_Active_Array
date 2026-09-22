@@ -16,7 +16,7 @@ petal_span,227.5,mm,FIGURE_DERIVED_UNVERIFIED,CANDIDATE_A,primary reconstruction
 ring_outer_size,247.5,mm,FIGURE_DERIVED_UNVERIFIED,CANDIDATE_A,primary reconstruction hypothesis; larger large label mapped to surrounding ring
 petal_geometry,FOUR_PETAL_PARAMETRIC,,ASSUMPTION,TOPOLOGY_PLACEHOLDER,parameterized four-petal family; exact unpublished polygon retained as uncertainty
 petal_slit,5,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,visualization/build placeholder only; no solver use
-ring_trace_width,10,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,visualization/build placeholder only; no solver use
+ring_trace_width,5,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,visualization/build placeholder only; chosen to retain a visible petal-to-ring clearance in Candidate A
 ground_xy_size,1000,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,large PEC visualization ground for build-only; not an EM claim
 pcb_outer_size,UNKNOWN,mm,FIGURE_DERIVED_UNVERIFIED,OPEN,not required for PEC topology build; needed for materialized build
 substrate_material,UNKNOWN,,ASSUMPTION,OPEN,not required for PEC topology build; needed for materialized build
