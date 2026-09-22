@@ -1,78 +1,98 @@
-# CHARTS Figure Extraction — R0.0
+# CHARTS Figure Extraction — R0.0 / R0.1A3
 
-Status: **TOPOLOGY REVISED AFTER FIG. 2 REVIEW**
+Status: **PHOTO-CONSTRAINED TOPOLOGY; DIMENSIONS STILL PARTLY UNRESOLVED**
 
 Primary source:
 - Lau et al., "Active Planar Antenna Design for CHARTS Array", ISAP 2025
-- Fig. 1(a) simulation model
-- Fig. 2(a) fabricated active antenna
-- DOI 10.34385/proc.98.1571143655
+- Fig. 1(a): simulation model
+- Fig. 2(a): fabricated active antenna
 
-## Figure-derived labels
+## Paper-explicit constraints
 
-Fig. 1(a) visibly includes:
-- 227.5 mm
-- 247.5 mm
-- 40 mm
+The paper explicitly states:
+- square PCB layout,
+- "4-petal" square antenna concept,
+- passive ring structure around the antenna,
+- center low-field region may accommodate feed/electronics,
+- antenna height over ground = 200 mm,
+- balanced output directly feeding a pair of LNAs,
+- local ground beneath feed points and clip-on shield in the active implementation.
+
+These facts do not uniquely define the slot dimensions.
+
+## Visible Fig. 1 labels
+
+The figure visibly contains:
+- 227.5 mm,
+- 247.5 mm,
+- 40 mm.
 
 All remain `FIGURE_DERIVED_UNVERIFIED`.
 
-The previous V0.1 mapping of 227.5/247.5 mm to separate petal/ring solids and 40 mm to a through-board center opening is rejected.
+Current semantic interpretation:
+- 247.5 mm -> square board/aperture span hypothesis,
+- 227.5 mm -> opposing outer-slot centerline-frame span hypothesis,
+- 40 mm -> **SEMANTICS_UNRESOLVED**.
 
-## Strong topology evidence from Fig. 2(a)
+The 40 mm label is deliberately not used as a V0.3 center-clear dimension.
 
-The fabricated antenna shows a continuous square PCB/aperture with **eight elongated, disconnected slots**:
+## Direct Fig. 2 topology review
 
-- four outer slots near the perimeter,
-- four inner slots arranged as the arms of a cross/"田"-like partition,
-- inner slots stop before the central electronics region,
-- inner slots also stop before the outer slot family,
-- outer slots stop before the corners,
-- the slot network is therefore **not continuous**,
-- the PCB remains mechanically one piece,
-- there is no large central square through-hole.
+The fabricated board visibly contains **12 disconnected elongated slot segments**:
 
-This photographic topology evidence overrides the earlier abstract four-separate-petal reconstruction.
+### Outer slot family
+- 8 total,
+- two segments per board side,
+- a conductor bridge remains at every side midpoint,
+- conductor remains at the four corners.
 
-## Candidate C — preferred topology hypothesis
+### Inner slot family
+- 4 total,
+- one radial segment along each +/-X and +/-Y direction,
+- inner slots stop before the center electronics region,
+- inner slots stop before the outer slots.
 
-For the next build-only reconstruction:
+Therefore:
+- V0.1 four-separate-petal model is rejected,
+- V0.2 one-outer-slot-per-side model is also rejected,
+- V0.3 is the current photo-constrained topology.
 
-- `board_span = 247.5 mm`
-- `outer_slot_frame_span = 227.5 mm`
-- `center_solid_span = 40 mm`
+## V0.3 figure-derived metric hypothesis
 
-Interpretation:
-- 247.5 mm is treated as the square board/aperture outer span,
-- 227.5 mm is treated as the characteristic span of the outer slot frame,
-- 40 mm is treated as the retained central electronics/feed region, **not a through-hole**.
+See `PHOTO_GEOMETRY_ESTIMATE.md`.
 
-Why this is plausible:
-- the paper explicitly says square PCB layout,
-- 247.5 - 227.5 = 20 mm gives about 10 mm per-side outer margin,
-- this matches the fabricated photograph qualitatively.
+Current topology-only values:
+- board span: 247.5 mm,
+- outer slot frame span: 227.5 mm,
+- outer slot width: ~5 mm,
+- 8 outer slot segment lengths: ~94.125 mm each,
+- midpoint conductor bridge: ~18 mm,
+- inner slot width: ~9 mm,
+- inner slot length: ~73 mm,
+- visible center clear span: ~60 mm,
+- total slot count: 12,
+- no large central through-hole.
 
-This mapping is still figure-derived and reversible; it is not promoted to `PAPER_EXPLICIT`.
+The slot-width/length values are photo-derived estimates with finite uncertainty and are not solver-ready literature truth.
 
-## Still unknown
+## Still unresolved
 
-The short proceeding does not uniquely specify:
-- slot width,
-- exact inner-slot length,
-- exact outer-slot length,
-- exact corner bridge length,
-- exact bridge between inner slots and outer slots,
-- conductor stack/material,
-- substrate material/thickness,
+- exact meaning of the 40 mm Fig.1 label,
+- exact active-feed cutout/copper geometry under the electronics,
+- substrate material and thickness,
 - copper thickness,
-- detailed center copper/feed pattern.
+- detailed feed terminal geometry.
 
-These remain explicit topology placeholders or materialized-build HOLD items.
+## Gate consequence
 
-## R0 consequence
+Allowed:
+- V0.3 12-slot BUILD-ONLY,
+- visual/replay review.
 
-The next allowed model is V0.2:
-
-**one continuous slotted plate + reference ground**
-
-No ports, no dielectric, no LNA, no solver.
+Not allowed:
+- materialized dielectric model,
+- ports,
+- solver,
+- optimization,
+- L-band scaling,
+- LNA integration.
