@@ -1,92 +1,78 @@
 # CHARTS Figure Extraction — R0.0
 
-Status: **SOURCE EXTRACTION COMPLETE; SEMANTIC MAPPING PARTIALLY UNRESOLVED**
+Status: **TOPOLOGY REVISED AFTER FIG. 2 REVIEW**
 
 Primary source:
 - Lau et al., "Active Planar Antenna Design for CHARTS Array", ISAP 2025
-- Figure 1(a), Figure 2
+- Fig. 1(a) simulation model
+- Fig. 2(a) fabricated active antenna
 - DOI 10.34385/proc.98.1571143655
 
-## Directly visible geometry labels in Fig. 1(a)
+## Figure-derived labels
 
-The published figure contains three readable red dimension labels:
+Fig. 1(a) visibly includes:
+- 227.5 mm
+- 247.5 mm
+- 40 mm
 
-- **227.5 mm**
-- **247.5 mm**
-- **40 mm**
+All remain `FIGURE_DERIVED_UNVERIFIED`.
 
-These values are promoted from UNKNOWN to `FIGURE_DERIVED_UNVERIFIED` as *visible labels*.
+The previous V0.1 mapping of 227.5/247.5 mm to separate petal/ring solids and 40 mm to a through-board center opening is rejected.
 
-Important: the low-resolution proceeding figure does not make the semantic mapping of the two larger values sufficiently unambiguous for this project to claim:
-- which one is the petal-envelope dimension,
-- which one is the passive-ring dimension,
-- whether they represent side length, projected length, or another referenced span.
+## Strong topology evidence from Fig. 2(a)
 
-The 40 mm label is visibly located at the central feed/electronics region and is treated as the leading candidate for the central removed/feed-region span, but remains figure-derived rather than paper-explicit.
+The fabricated antenna shows a continuous square PCB/aperture with **eight elongated, disconnected slots**:
 
-## Paper-explicit topology constraints
+- four outer slots near the perimeter,
+- four inner slots arranged as the arms of a cross/"田"-like partition,
+- inner slots stop before the central electronics region,
+- inner slots also stop before the outer slot family,
+- outer slots stop before the corners,
+- the slot network is therefore **not continuous**,
+- the PCB remains mechanically one piece,
+- there is no large central square through-hole.
 
-The text establishes:
+This photographic topology evidence overrides the earlier abstract four-separate-petal reconstruction.
 
-- square PCB layout,
-- "4-petal" square antenna,
-- passive ring around the antenna,
-- small low-field central region may be removed for feed/electronics,
-- differential balanced feed,
-- 200 mm height over a ground plane.
+## Candidate C — preferred topology hypothesis
 
-These constraints are sufficient to define the **topological family**, but not one exact CAD geometry.
+For the next build-only reconstruction:
 
-## Physical-consistency cross-check from Cui 2023
+- `board_span = 247.5 mm`
+- `outer_slot_frame_span = 227.5 mm`
+- `center_solid_span = 40 mm`
 
-CHARTS explicitly cites Cui et al. 2023 for square-loop loading.
+Interpretation:
+- 247.5 mm is treated as the square board/aperture outer span,
+- 227.5 mm is treated as the characteristic span of the outer slot frame,
+- 40 mm is treated as the retained central electronics/feed region, **not a through-hole**.
 
-Cui shows that:
-- a symmetric loop surrounding orthogonal dipoles creates a lower resonance,
-- for the square-loop implementation, two adjacent loop sides behave approximately as a half-wave current path at the lower resonance,
-- square-loop dimensions therefore provide a useful physical sanity check for any CHARTS reconstruction.
+Why this is plausible:
+- the paper explicitly says square PCB layout,
+- 247.5 - 227.5 = 20 mm gives about 10 mm per-side outer margin,
+- this matches the fabricated photograph qualitatively.
 
-This reference is used only as a physics consistency check.
-Cui dimensions are not substituted into CHARTS.
-
-## Reconstruction candidates
-
-Two semantic mappings are retained until a higher-resolution or additional source resolves the ambiguity.
-
-### Candidate A
-- active petal-envelope characteristic dimension: 227.5 mm
-- passive-ring characteristic dimension: 247.5 mm
-- central removed/feed region: 40 mm
-
-Rationale:
-- consistent with the verbal statement that the passive ring surrounds the active antenna,
-- larger ring dimension outside smaller active envelope is physically plausible.
-
-### Candidate B
-- active petal-envelope characteristic dimension: 247.5 mm
-- passive-ring characteristic dimension: 227.5 mm
-- central removed/feed region: 40 mm
-
-Rationale:
-- retained solely because the low-resolution figure does not allow a defensible semantic assignment.
-
-Candidate B must not be silently deleted merely because Candidate A appears more physically intuitive.
+This mapping is still figure-derived and reversible; it is not promoted to `PAPER_EXPLICIT`.
 
 ## Still unknown
 
-The source still does not uniquely specify:
-- exact polygon/curve of each petal,
-- diagonal/inter-petal slit width,
-- passive-ring trace width,
-- exact PCB edge relative to radiator,
-- ground-plane lateral size,
-- substrate material and thickness,
-- copper thickness.
+The short proceeding does not uniquely specify:
+- slot width,
+- exact inner-slot length,
+- exact outer-slot length,
+- exact corner bridge length,
+- exact bridge between inner slots and outer slots,
+- conductor stack/material,
+- substrate material/thickness,
+- copper thickness,
+- detailed center copper/feed pattern.
+
+These remain explicit topology placeholders or materialized-build HOLD items.
 
 ## R0 consequence
 
-R0 shall not claim an exact reconstruction.
+The next allowed model is V0.2:
 
-The next allowed artifact is a **parameterized topology generator** that can represent both Candidate A and Candidate B and keeps the remaining unknowns explicit.
+**one continuous slotted plate + reference ground**
 
-No CST solver is authorized.
+No ports, no dielectric, no LNA, no solver.
