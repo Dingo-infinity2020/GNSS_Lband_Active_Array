@@ -15,9 +15,9 @@
 HANDOFF_VERSION=1
 CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
-CURRENT_TASK_ID=R0.1A2-SLOTTED-PLATE-BUILD-ONLY-H01
+CURRENT_TASK_ID=R0.1A3-12SLOT-BUILD-ONLY-H01
 TASK_OWNER=H01
-TASK_STATUS=HOST_COMPLETE
+TASK_STATUS=READY_FOR_HOST
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -105,57 +105,55 @@ Host registration already completed by H01:
 - Python: Miniconda CPython 3.13.9
 - Detailed paths/toolchain: `docs/HOST_ENVIRONMENT.md`
 
-Verified execution/toolchain state from prior task:
+Verified execution/toolchain state from prior tasks:
 
 ```text
-PREVIOUS_EXECUTION_STATUS=PASS_R0_1A_EXECUTION_REPLAY_ONLY
-PREVIOUS_EVIDENCE=evidence/r0_1a_h01_20260922_2052/
-PREVIOUS_FINAL_SOLIDS=9
-PREVIOUS_PORTS=0
-PREVIOUS_SOLVER_RUN=NO
+V01_STATUS=PASS_EXECUTION_REPLAY_ONLY / SCIENTIFICALLY_SUPERSEDED
+V01_EVIDENCE=evidence/r0_1a_h01_20260922_2052/
+V02_STATUS=PASS_EXECUTION_REPLAY_ONLY / SCIENTIFICALLY_SUPERSEDED
+V02_EVIDENCE=evidence/r0_1a2_h01_20260922_2123/
+SOLVER_RUN=NO
 ```
 
-Important design review:
+Latest design-side review of CHARTS Fig.2(a):
 
-- The V0.1 four-separate-petal + four-separate-ring topology is scientifically superseded.
-- CHARTS Fig.2(a) shows one continuous square board/aperture with eight disconnected elongated slots.
-- The slot network is not continuous.
-- The central electronics region is not a large through-board square hole.
-- The prior 9-solid build remains useful only as a CST execution/replay validation.
+- V0.2 still under-resolved the outer slot topology.
+- The fabricated board has **8 outer slot segments**: 2 per board side.
+- It also has **4 inner radial slots**.
+- Total disconnected slot count is therefore **12**.
+- Each side retains a midpoint conductor bridge.
+- Corner conductor bridges remain.
+- No large center through-hole is introduced in V0.3.
+- The Fig.1 40 mm label is retained but its exact semantics are unresolved.
 
-Current reconstruction hypothesis (Candidate C):
+Current V0.3 photo-constrained topology values:
 
-- board/aperture span = 247.5 mm (figure-derived hypothesis),
-- outer-slot frame characteristic span = 227.5 mm (figure-derived hypothesis),
-- retained central solid/electronics region = 40 mm (figure-derived hypothesis),
-- 4 outer slots + 4 inner slots,
-- slot width and bridge lengths remain topology-only assumptions,
-- plate height = 200 mm (paper explicit).
+- board span = 247.5 mm
+- opposing outer-slot centerline span = 227.5 mm
+- outer slot width = 5 mm
+- each outer slot segment = 94.125 mm
+- midpoint conductor bridge = 18 mm
+- inner slot width = 9 mm
+- inner slot length = 73 mm
+- visible center clear span = 60 mm
+- height over ground = 200 mm
 
-Current permissions:
-
-- V0.2 slotted topology build-only: YES
-- materialized dielectric/copper model: HOLD
-- solver: NO
-- optimization: NO
-- L-band scaling: NO
-- LNA integration: NO
-
----
-
-# HOST TASK
+Source/provenance:
+- `refs/charts2025/PHOTO_GEOMETRY_ESTIMATE.md`
+- `refs/charts2025/FIGURE_EXTRACTION.md`
+- `docs/R0_RECONSTRUCT# HOST TASK
 
 ## Task ID
 
-**R0.1A2-SLOTTED-PLATE-BUILD-ONLY-H01**
+**R0.1A3-12SLOT-BUILD-ONLY-H01**
 
 ## Objective
 
-Execute the corrected V0.2 CST **BUILD-ONLY** topology and fresh-reopen audit.
+Execute the V0.3 photo-constrained **12-slot** CST BUILD-ONLY topology and perform a save/close/fresh-reopen audit.
 
 This task answers only:
 
-> Does the Fig.2-consistent continuous slotted-plate topology build reproducibly in CST 2022, remain one connected antenna solid after eight disconnected slot cuts, and visually correct the V0.1 topology error?
+> Does the corrected one-piece, 12-disconnected-slot topology build reproducibly and preserve the intended geometry in CST 2022?
 
 It does not authorize any EM performance conclusion.
 
@@ -165,22 +163,25 @@ From repository root:
 
 ```bash
 python scripts/r0_manifest_gate.py --stage topology
-python scripts/audit_r0_slotted_plate_v02.py
+python scripts/audit_r0_12slot_v03.py
 ```
 
 Expected:
 
 ```text
 PASS_R0_TOPOLOGY_MANIFEST_READY_FOR_BUILD_ONLY
-PASS_R0_V02_STATIC_AUDIT
+PASS_R0_V03_STATIC_AUDIT
 EXPECTED_FINAL_SOLIDS=2
-EXPECTED_SLOT_SUBTRACTIONS=8
+EXPECTED_OUTER_SLOT_SEGMENTS=8
+EXPECTED_INNER_SLOT_SEGMENTS=4
+EXPECTED_SLOT_SUBTRACTIONS=12
 EXPECTED_PORTS=0
 CENTER_THROUGH_HOLE=NO
+FIG40_SEMANTICS=UNRESOLVED
 SOLVER_RUN=NO
 ```
 
-If either gate does not PASS, return HOST_HOLD and do not execute CST.
+If either gate fails, return HOST_HOLD and do not execute CST.
 
 ## CST BUILD-ONLY
 
@@ -188,52 +189,50 @@ Use a fresh MWS project.
 
 Run:
 
-`source/cst/R0_CHARTS_SLOTTED_PLATE_BUILD_ONLY_V02.mcr`
+`source/cst/R0_CHARTS_12SLOT_BUILD_ONLY_V03.mcr`
 
 Follow:
 
-`em/cst/R0_CHARTS_300_500/RUNBOOK_SLOTTED_PLATE_V02.md`
+`em/cst/R0_CHARTS_300_500/RUNBOOK_12SLOT_V03.md`
 
-Do not run the superseded V0.1 macro.
+Do not run V0.1 or V0.2.
 
 ## Expected final inventory
 
 ```text
-2 solids total:
+2 solids:
   ReferenceGround:GROUND_REFERENCE
   Radiator:ANTENNA_PLATE
 
+12 consumed slot cutters
 0 ports
 0 lumped elements
 0 solver results
 ```
 
-The eight `SlotTools:CUT_*` objects should be consumed by boolean subtraction.
+## Mandatory visual/build review
 
-## Mandatory visual review
+Verify:
 
-Compare top view against CHARTS Fig.2(a). Record PASS/HOLD for each:
+1. antenna plate remains one connected solid,
+2. 8 outer slots total,
+3. exactly 2 outer slots per side,
+4. midpoint conductor bridge present on all 4 sides,
+5. conductor remains at all 4 corners,
+6. 4 inner radial slots,
+7. inner slots stop before center,
+8. inner slots stop before outer slots,
+9. all 12 slots are mutually disconnected,
+10. no large central through-hole,
+11. antenna plane is 200 mm above ground,
+12. CST top view matches `docs/figures/R0_V03_12SLOT_TOPOLOGY_SCHEMATIC.svg`.
 
-1. one continuous square antenna/PCB silhouette,
-2. four outer slots near the perimeter,
-3. outer slots stop before corners,
-4. four inner slots form a cross / "田"-like partition,
-5. inner slots stop before center,
-6. inner slots stop before outer slots,
-7. all eight slot apertures are mutually disconnected,
-8. central region remains solid (no large square through-hole),
-9. the plate remains one connected CST solid,
-10. topology is materially closer to Fig.2 than V0.1.
-
-Side/oblique:
-- antenna plate plane is 200 mm above ground.
-
-Do not tune dimensions for aesthetics. If the placeholder proportions still look materially wrong, return visual mismatch with screenshots.
+Do not tune any dimension.
 
 ## Save / close / reopen
 
-Save, close CST, fresh reopen, and recheck:
-- 2 solids,
+Save project, close CST, reopen fresh and recheck:
+- 2 final solids,
 - 0 ports,
 - no solver results.
 
@@ -241,57 +240,60 @@ Save, close CST, fresh reopen, and recheck:
 
 Create:
 
-`evidence/r0_1a2_h01_<YYYYMMDD_HHMM>/`
+`evidence/r0_1a3_h01_<YYYYMMDD_HHMM>/`
 
-At minimum:
+Include at minimum:
+
 - `RETURN_REPORT.md`
 - `preflight.txt`
 - `object_inventory.txt`
 - `reopen_inventory.txt`
-- top view
-- oblique/side view
+- top-view screenshot
+- side/oblique screenshot
 - fresh-reopen screenshot
-- CST project path + SHA-256 if not committed
+- CST project local path + SHA-256 if not committed
 
-Final status must be exactly one of:
+Final status exactly one of:
 
-- `PASS_R0_V02_SLOTTED_TOPOLOGY_BUILD_ONLY`
-- `HOLD_R0_V02_VISUAL_MISMATCH`
-- `HOLD_R0_V02_CST_RUNTIME_SYNTAX`
-- `FAIL_R0_V02_REPLAY`
+- `PASS_R0_V03_12SLOT_TOPOLOGY_BUILD_ONLY`
+- `HOLD_R0_V03_VISUAL_MISMATCH`
+- `HOLD_R0_V03_CST_RUNTIME_SYNTAX`
+- `FAIL_R0_V03_REPLAY`
 
 ## Strict prohibitions
 
 Do not:
 - run solver,
 - add ports/monitors,
-- add dielectric/material stack,
-- add LNA/shield/Bias-Tee,
-- perform L-band scaling,
-- optimize slot dimensions,
-- resurrect V0.1 petal/ring topology,
-- change the scientific mapping without recording HOLD.
+- add substrate/material stack,
+- add QPL9547/LNA,
+- add shield or Bias-Tee,
+- scale to L band,
+- optimize any dimension,
+- reinterpret the 40 mm Fig.1 label,
+- revive V0.1/V0.2 geometry.
 
-If a CST syntax-only patch is needed, make the minimum patch, preserve all numeric geometry, record exact changes, and return `HOLD_R0_V02_CST_RUNTIME_SYNTAX` for design review.
+If a syntax-only CST patch is required, make the smallest possible syntax patch without numerical geometry changes, document exact lines, and return HOLD for design review.
 
 ---
 
 # HOST RETURN
 
-Previous H01 return is preserved in:
-`evidence/r0_1a_h01_20260922_2052/`
+Previous execution evidence remains preserved in:
+- `evidence/r0_1a_h01_20260922_2052/`
+- `evidence/r0_1a2_h01_20260922_2123/`
 
 Current task return:
 
 ```text
-TASK_STATUS=HOST_COMPLETE
+TASK_STATUS=NOT_RUN_YET
 HOST=H01
-HOST_START_COMMIT=a3671b5afff0a0661b53d2de53db9697afcb5b17
-HOST_END_COMMIT=3fe54de800fd2b77df8ffb4b22e72a43492e1460
-FINAL_STATUS=PASS_R0_V02_SLOTTED_TOPOLOGY_BUILD_ONLY
-EVIDENCE_PATH=evidence/r0_1a2_h01_20260922_2123/
-CST_PROJECT_PATH_OR_HASH=D:\GNSS_Lband_Active_Array\_r0_1a2_h01_work\R0_1A2_SLOTTED_PLATE_BUILD_ONLY_H01.cst sha256=F429A52B784CECFA2F1ED123CD6FF7450DC91AB6FFA848E670892DB9E290C1CA (git-ignored, not committed)
-NOTES=Executed slotted-plate macro body verbatim via CST 2022.5 Python API in a new MWS; saved and fresh-reopened. Definitive shape enumeration: SHAPE_COUNT=2 (ReferenceGround:GROUND_REFERENCE, Radiator:ANTENNA_PLATE), 0 ports, 0 lumped elements, empty Result\output.txt (no solver). Plate volume 5347.225 mm^3 = full 6125.625 - outer 536.0 - inner 242.4, proving 8 non-overlapping slots and one connected solid. All 10 Fig.2 visual checks PASS; side view confirms 200 mm ground spacing. Macro SHA-256 2a5be60a...; V0.1 macro not run. Caveat: Fig.2(a) is not in the repo, so item-10 comparison used the documented Fig.2 topology in refs/charts2025/FIGURE_EXTRACTION.md. See RETURN_REPORT.md. No solver run.
+HOST_START_COMMIT=
+HOST_END_COMMIT=
+FINAL_STATUS=
+EVIDENCE_PATH=
+CST_PROJECT_PATH_OR_HASH=
+NOTES=
 ```
 
 The host updates this section, commits/pushes, then stops.
