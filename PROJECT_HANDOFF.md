@@ -15,9 +15,9 @@
 HANDOFF_VERSION=1
 CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
-CURRENT_TASK_ID=R0.1A3-12SLOT-BUILD-ONLY-H01
+CURRENT_TASK_ID=R0.1B-CENTER-FEED-PROVENANCE-H01
 TASK_OWNER=H01
-TASK_STATUS=HOST_COMPLETE
+TASK_STATUS=READY_FOR_HOST
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -112,6 +112,9 @@ V01_STATUS=PASS_EXECUTION_REPLAY_ONLY / SCIENTIFICALLY_SUPERSEDED
 V01_EVIDENCE=evidence/r0_1a_h01_20260922_2052/
 V02_STATUS=PASS_EXECUTION_REPLAY_ONLY / SCIENTIFICALLY_SUPERSEDED
 V02_EVIDENCE=evidence/r0_1a2_h01_20260922_2123/
+V03_STATUS=PASS_R0_V03_12SLOT_TOPOLOGY_BUILD_ONLY / DESIGN_ACCEPTED
+V03_EVIDENCE=evidence/r0_1a3_h01_20260922_2158/
+V03_REVIEW=docs/R0_1A3_DESIGN_REVIEW_20260922.md
 SOLVER_RUN=NO
 ```
 
@@ -141,159 +144,99 @@ Current V0.3 photo-constrained topology values:
 Source/provenance:
 - `refs/charts2025/PHOTO_GEOMETRY_ESTIMATE.md`
 - `refs/charts2025/FIGURE_EXTRACTION.md`
-- `docs/R0_RECONSTRUCT# HOST TASK
+- `docs/R0_RECONSTRUCTION_ASSUMPTIONS.md`
+
+---
+
+# HOST TASK
 
 ## Task ID
 
-**R0.1A3-12SLOT-BUILD-ONLY-H01**
+**R0.1B-CENTER-FEED-PROVENANCE-H01**
 
 ## Objective
 
-Execute the V0.3 photo-constrained **12-slot** CST BUILD-ONLY topology and perform a save/close/fresh-reopen audit.
+Perform a source/figure extraction focused only on the **central feed/electronics region** of the CHARTS antenna.
 
-This task answers only:
+The current visible 12-slot V0.3 topology is accepted and frozen for this step. Do not change it.
 
-> Does the corrected one-piece, 12-disconnected-slot topology build reproducibly and preserve the intended geometry in CST 2022?
+This task answers:
 
-It does not authorize any EM performance conclusion.
+> What central metal removal, balanced feed-terminal geometry, and Fig.1 `40 mm` semantics are actually supported by the primary source, and what remains unresolved?
 
-## Required preflight
+## Authoritative instruction
 
-From repository root:
+Read and follow:
 
-```bash
-python scripts/r0_manifest_gate.py --stage topology
-python scripts/audit_r0_12slot_v03.py
-```
+`docs/NEXT_ACTION_R0_1B_CENTER_FEED_PROVENANCE_20260922.md`
 
-Expected:
+Also read:
 
-```text
-PASS_R0_TOPOLOGY_MANIFEST_READY_FOR_BUILD_ONLY
-PASS_R0_V03_STATIC_AUDIT
-EXPECTED_FINAL_SOLIDS=2
-EXPECTED_OUTER_SLOT_SEGMENTS=8
-EXPECTED_INNER_SLOT_SEGMENTS=4
-EXPECTED_SLOT_SUBTRACTIONS=12
-EXPECTED_PORTS=0
-CENTER_THROUGH_HOLE=NO
-FIG40_SEMANTICS=UNRESOLVED
-SOLVER_RUN=NO
-```
+- `docs/R0_1A3_DESIGN_REVIEW_20260922.md`
+- `refs/charts2025/PROVENANCE.md`
+- `refs/charts2025/FIGURE_EXTRACTION.md`
+- `refs/charts2025/PHOTO_GEOMETRY_ESTIMATE.md`
+- `docs/R0_RECONSTRUCTION_ASSUMPTIONS.md`
 
-If either gate fails, return HOST_HOLD and do not execute CST.
-
-## CST BUILD-ONLY
-
-Use a fresh MWS project.
-
-Run:
-
-`source/cst/R0_CHARTS_12SLOT_BUILD_ONLY_V03.mcr`
-
-Follow:
-
-`em/cst/R0_CHARTS_300_500/RUNBOOK_12SLOT_V03.md`
-
-Do not run V0.1 or V0.2.
-
-## Expected final inventory
-
-```text
-2 solids:
-  ReferenceGround:GROUND_REFERENCE
-  Radiator:ANTENNA_PLATE
-
-12 consumed slot cutters
-0 ports
-0 lumped elements
-0 solver results
-```
-
-## Mandatory visual/build review
-
-Verify:
-
-1. antenna plate remains one connected solid,
-2. 8 outer slots total,
-3. exactly 2 outer slots per side,
-4. midpoint conductor bridge present on all 4 sides,
-5. conductor remains at all 4 corners,
-6. 4 inner radial slots,
-7. inner slots stop before center,
-8. inner slots stop before outer slots,
-9. all 12 slots are mutually disconnected,
-10. no large central through-hole,
-11. antenna plane is 200 mm above ground,
-12. CST top view matches `docs/figures/R0_V03_12SLOT_TOPOLOGY_SCHEMATIC.svg`.
-
-Do not tune any dimension.
-
-## Save / close / reopen
-
-Save project, close CST, reopen fresh and recheck:
-- 2 final solids,
-- 0 ports,
-- no solver results.
-
-## Required evidence
+## Required outputs
 
 Create:
 
-`evidence/r0_1a3_h01_<YYYYMMDD_HHMM>/`
+- `refs/charts2025/CENTER_FEED_EXTRACTION.md`
+- optionally `docs/figures/R0_CENTER_FEED_INTERPRETATION.svg`
+- `evidence/r0_1b_h01_<YYYYMMDD_HHMM>/RETURN_REPORT.md`
+- source-audit / measurement log and hashes for project-owned outputs
 
-Include at minimum:
+The report must explicitly return:
 
-- `RETURN_REPORT.md`
-- `preflight.txt`
-- `object_inventory.txt`
-- `reopen_inventory.txt`
-- top-view screenshot
-- side/oblique screenshot
-- fresh-reopen screenshot
-- CST project local path + SHA-256 if not committed
+- `FIG40_SEMANTICS=...`
+- `DIFFERENTIAL_TERMINALS_GEOMETRY=RESOLVED|PARTIAL|UNRESOLVED`
+- `CENTRAL_REMOVED_REGION=RESOLVED|PARTIAL|UNRESOLVED`
+- `SOLVER_READY=YES|NO`
 
 Final status exactly one of:
 
-- `PASS_R0_V03_12SLOT_TOPOLOGY_BUILD_ONLY`
-- `HOLD_R0_V03_VISUAL_MISMATCH`
-- `HOLD_R0_V03_CST_RUNTIME_SYNTAX`
-- `FAIL_R0_V03_REPLAY`
+- `PASS_R0_CENTER_FEED_EXTRACTION_COMPLETE`
+- `HOLD_R0_CENTER_FEED_SOURCE_AMBIGUOUS`
+- `HOLD_R0_PRIMARY_SOURCE_UNAVAILABLE`
+
+A PASS means the extraction task is complete; it does not imply that the geometry is fully resolved.
 
 ## Strict prohibitions
 
 Do not:
-- run solver,
-- add ports/monitors,
-- add substrate/material stack,
-- add QPL9547/LNA,
-- add shield or Bias-Tee,
-- scale to L band,
-- optimize any dimension,
-- reinterpret the 40 mm Fig.1 label,
-- revive V0.1/V0.2 geometry.
 
-If a syntax-only CST patch is required, make the smallest possible syntax patch without numerical geometry changes, document exact lines, and return HOLD for design review.
+- run CST,
+- run any solver,
+- edit V0.3 geometry,
+- add ports/materials/LNA/shield/Bias-Tee,
+- tune dimensions,
+- scale to L band,
+- silently reinterpret the `40 mm` label,
+- commit the copyrighted source PDF or raw source figures.
+
+After push, stop. No successor task is pre-authorized.
 
 ---
 
 # HOST RETURN
 
 Previous execution evidence remains preserved in:
+
 - `evidence/r0_1a_h01_20260922_2052/`
 - `evidence/r0_1a2_h01_20260922_2123/`
+- `evidence/r0_1a3_h01_20260922_2158/`
 
 Current task return:
 
 ```text
-TASK_STATUS=HOST_COMPLETE
+TASK_STATUS=NOT_RUN_YET
 HOST=H01
-HOST_START_COMMIT=1ea38af92b4350261adc2598e9c3bb897ae89905
-HOST_END_COMMIT=20303c587061c29a23d76da590b132df60a85c4e
-FINAL_STATUS=PASS_R0_V03_12SLOT_TOPOLOGY_BUILD_ONLY
-EVIDENCE_PATH=evidence/r0_1a3_h01_20260922_2158/
-CST_PROJECT_PATH_OR_HASH=D:\GNSS_Lband_Active_Array\_r0_1a3_h01_work\R0_1A3_12SLOT_BUILD_ONLY_H01.cst sha256=8502C38DA8EB66FE57D96C6A8DCECF449744618CA76E7B35044CD4E47581B491 (git-ignored, not committed)
-NOTES=Executed 12-slot macro body verbatim via CST 2022.5 Python API in a new MWS; saved and fresh-reopened. Definitive shape enumeration: SHAPE_COUNT=2 (ReferenceGround:GROUND_REFERENCE, Radiator:ANTENNA_PLATE), 0 ports, 0 lumped elements, no Result\output.txt (no solver). Plate volume 5486.325 mm^3 = 6125.625 - outer 376.5 - inner 262.8, proving 12 non-overlapping slots and one connected solid. All 12 build checks PASS; top view matches docs/figures/R0_V03_12SLOT_TOPOLOGY_SCHEMATIC.svg; side view confirms 200 mm ground spacing. fig40_unresolved=40 retained, not used as a centre hole or inner-slot spacing. Macro SHA-256 08943e42...; V0.1/V0.2 not run. Nit: PROJECT_HANDOFF.md line 144 has a truncated CURRENT BASELINE paragraph merged into the HOST TASK heading. See RETURN_REPORT.md. No solver run.
+HOST_START_COMMIT=
+HOST_END_COMMIT=
+FINAL_STATUS=
+EVIDENCE_PATH=
+NOTES=
 ```
 
 The host updates this section, commits/pushes, then stops.
