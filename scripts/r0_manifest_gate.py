@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 """Gate R0 geometry construction on explicit parameter provenance.
 
-This script does not run CST. It validates the R0 parameter manifest and emits
-one machine-readable status line for humans/automation.
+This script never runs CST. It validates the R0 parameter manifest and emits a
+machine-readable status for either:
+
+- topology: zero-thickness PEC topology build only
+- materialized: dielectric/copper build preparation
+
+A PASS from this script is not permission to run a solver.
 """
 
 from __future__ import annotations
@@ -15,21 +20,30 @@ ALLOWED_PROVENANCE = {
     "PAPER_EXPLICIT",
     "FIGURE_DERIVED_UNVERIFIED",
     "ASSUMPTION",
+    "MEASURED",
     "OPTIMIZED",
 }
 
-REQUIRED_FOR_BUILD = {
+TOPOLOGY_REQUIRED = {
     "height_ground",
     "feed_center_gap",
-    "petal_geometry",
+    "petal_span",
     "ring_outer_size",
+    "petal_geometry",
+    "petal_slit",
     "ring_trace_width",
-    "pcb_outer_size",
     "ground_xy_size",
+}
+
+MATERIALIZED_EXTRA = {
+    "pcb_outer_size",
     "substrate_material",
     "substrate_thickness",
     "copper_thickness",
 }
+
+UNRESOLVED_VALUES = {"", "UNKNOWN", "TBD"}
+UNRESOLVED_STATUSES = {"OPEN"}
 
 
 def main() -> int:
@@ -38,6 +52,11 @@ def main() -> int:
         "manifest",
         nargs="?",
         default="em/cst/R0_CHARTS_300_500/parameters.csv",
+    )
+    parser.add_argument(
+        "--stage",
+        choices=("topology", "materialized"),
+        default="topology",
     )
     args = parser.parse_args()
 
@@ -57,16 +76,19 @@ def main() -> int:
         if prov not in ALLOWED_PROVENANCE:
             errors.append(f"{row.get('parameter')}:invalid_provenance={prov}")
 
-    missing_names = sorted(REQUIRED_FOR_BUILD - set(by_name))
-    for name in missing_names:
+    required = set(TOPOLOGY_REQUIRED)
+    if args.stage == "materialized":
+        required |= MATERIALIZED_EXTRA
+
+    for name in sorted(required - set(by_name)):
         errors.append(f"{name}:missing_parameter")
 
     unresolved = []
-    for name in sorted(REQUIRED_FOR_BUILD & set(by_name)):
+    for name in sorted(required & set(by_name)):
         row = by_name[name]
         value = (row.get("value") or "").strip().upper()
         status = (row.get("status") or "").strip().upper()
-        if value in {"", "UNKNOWN", "TBD"} or status == "OPEN":
+        if value in UNRESOLVED_VALUES or status in UNRESOLVED_STATUSES:
             unresolved.append(name)
 
     if errors:
@@ -76,7 +98,7 @@ def main() -> int:
         return 3
 
     if unresolved:
-        print("HOLD_R0_PARAMETERS_UNRESOLVED")
+        print(f"HOLD_R0_{args.stage.upper()}_PARAMETERS_UNRESOLVED")
         for name in unresolved:
             row = by_name[name]
             print(
@@ -85,18 +107,22 @@ def main() -> int:
             )
         return 4
 
-    forbidden = [
+    optimized = [
         row["parameter"]
         for row in rows
         if row.get("provenance") == "OPTIMIZED"
+        and row["parameter"] in required
     ]
-    if forbidden:
+    if optimized:
         print("HOLD_R0_OPTIMIZED_PARAMETERS_PRESENT")
-        for name in forbidden:
+        for name in optimized:
             print(f"- {name}")
         return 5
 
-    print("PASS_R0_MANIFEST_READY_FOR_BUILD_ONLY")
+    if args.stage == "topology":
+        print("PASS_R0_TOPOLOGY_MANIFEST_READY_FOR_BUILD_ONLY")
+    else:
+        print("PASS_R0_MATERIALIZED_MANIFEST_READY_FOR_BUILD_ONLY")
     return 0
 
 
