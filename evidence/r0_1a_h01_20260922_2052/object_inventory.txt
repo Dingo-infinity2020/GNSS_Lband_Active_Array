@@ -1,0 +1,29 @@
+R0_1A_OBJECT_INVENTORY
+SELECT|ReferenceGround\GROUND_REFERENCE=-1
+SELECT|Radiator\PETAL_N=-1
+SELECT|Radiator\PETAL_E=-1
+SELECT|Radiator\PETAL_S=-1
+SELECT|Radiator\PETAL_W=-1
+SELECT|PassiveRing\RING_N=-1
+SELECT|PassiveRing\RING_S=-1
+SELECT|PassiveRing\RING_E=-1
+SELECT|PassiveRing\RING_W=-1
+PARAM_COUNT=18
+PARAM|candidate_swap|0|0
+PARAM|center_opening|40|40
+PARAM|d|diag_off|3.5355339
+PARAM|diag_off|0.70710678*petal_slit|3.5355339
+PARAM|fig227|227.5|227.5
+PARAM|fig247|247.5|247.5
+PARAM|ground_span|1000|1000
+PARAM|ground_t|1|1
+PARAM|height_ground|200|200
+PARAM|p|petal_span/2|113.75
+PARAM|petal_slit|5|5
+PARAM|petal_span|fig227 + candidate_swap*(fig247-fig227)|227.5
+PARAM|r|ring_span/2|123.75
+PARAM|ring_span|fig247 - candidate_swap*(fig247-fig227)|247.5
+PARAM|ring_trace_width|5|5
+PARAM|rw|ring_trace_width|5
+PARAM|topology_t|0.1|0.1
+PARAM|||0

@@ -1,0 +1,28 @@
+DE_VERSION=This is CST DESIGN ENVIRONMENT 2022.5 Release from 2022-06-03 (change 981760)
+Using install path: D:\Program Files (x86)\CST Studio Suite 2022\
+Using Qt 5.15.2 (compiled with 5.15.2)
+
+
+2022.5 Release from 2022-06-03 (change 981760)
+Access is denied.
+Access is denied.
+
+=== SESSION A: BUILD ===
+DE_PID=1172
+NEW_MWS_OK
+MACRO_BODY_LINES=193
+BUILD_ADD_TO_HISTORY_ERR=None
+SAVED=D:\GNSS_Lband_Active_Array\_r0_1a_h01_work\R0_1A_TOPOLOGY_BUILD_ONLY_H01.cst exists=True
+=== SESSION B: SCREENSHOTS + INVENTORY (fresh open) ===
+DE_PID=23116
+OPEN_PROJECT_OK
+SHOT[top_view_full.png] view='Front' hide=False err=None sha=765c4f218e74c7024af7d14be4a4b403729cd71e65076d3073d415670bb4d1fc
+SHOT[top_view_radiator.png] view='Front' hide=True err=None sha=1b3d1e7b54f8331cfed2026908c73f46716c14362898b5bac24756b29ad5272c
+SHOT[side_view_ground_gap.png] view='Bottom' hide=False err=None sha=90511ad2de317c0eedbb01e546c9cbd937f3b34bdff777cab14c7ce1af8ea8b0
+SHOT[oblique_view.png] view='Perspective' hide=False err=None sha=9a0151ff3902c391e455cb2cb61b0dadc7fa29f8962c64763372af0451d452b8
+INVENTORY_ERR=None
+=== SESSION C: FRESH-REOPEN AUDIT ===
+DE_PID=10680
+OPEN_PROJECT_OK
+REOPEN_INVENTORY_ERR=None
+REOPEN_SHOT_ERR=None sha=e35cf41f341cb018ce63ed15a33fb5c2c7f6586b6424ffff122b8dd479aecd1e
