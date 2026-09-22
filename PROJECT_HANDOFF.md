@@ -15,9 +15,9 @@
 HANDOFF_VERSION=1
 CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
-CURRENT_TASK_ID=R0.1A-TOPOLOGY-BUILD-ONLY-H01
+CURRENT_TASK_ID=R0.1A2-SLOTTED-PLATE-BUILD-ONLY-H01
 TASK_OWNER=H01
-TASK_STATUS=HOST_COMPLETE
+TASK_STATUS=READY_FOR_HOST
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -105,27 +105,41 @@ Host registration already completed by H01:
 - Python: Miniconda CPython 3.13.9
 - Detailed paths/toolchain: `docs/HOST_ENVIRONMENT.md`
 
-Verified before this handoff:
+Verified execution/toolchain state from prior task:
 
 ```text
-PASS_R0_TOPOLOGY_MANIFEST_READY_FOR_BUILD_ONLY
-PASS_R0_TOPOLOGY_MACRO_STATIC_AUDIT
-EXPECTED_SOLIDS=9
-EXPECTED_PORTS=0
-SOLVER_RUN=NO
+PREVIOUS_EXECUTION_STATUS=PASS_R0_1A_EXECUTION_REPLAY_ONLY
+PREVIOUS_EVIDENCE=evidence/r0_1a_h01_20260922_2052/
+PREVIOUS_FINAL_SOLIDS=9
+PREVIOUS_PORTS=0
+PREVIOUS_SOLVER_RUN=NO
 ```
 
-Current scientific state:
+Important design review:
 
-- CHARTS figure-derived labels retained: 227.5 mm, 247.5 mm, 40 mm.
-- Candidate A currently maps:
-  - petal span = 227.5 mm
-  - passive ring span = 247.5 mm
-  - center opening = 40 mm
-- Candidate B remains available by setting `candidate_swap=1`.
-- R0 topology build is allowed.
-- R0 materialized build remains HOLD.
-- No solver is authorized.
+- The V0.1 four-separate-petal + four-separate-ring topology is scientifically superseded.
+- CHARTS Fig.2(a) shows one continuous square board/aperture with eight disconnected elongated slots.
+- The slot network is not continuous.
+- The central electronics region is not a large through-board square hole.
+- The prior 9-solid build remains useful only as a CST execution/replay validation.
+
+Current reconstruction hypothesis (Candidate C):
+
+- board/aperture span = 247.5 mm (figure-derived hypothesis),
+- outer-slot frame characteristic span = 227.5 mm (figure-derived hypothesis),
+- retained central solid/electronics region = 40 mm (figure-derived hypothesis),
+- 4 outer slots + 4 inner slots,
+- slot width and bridge lengths remain topology-only assumptions,
+- plate height = 200 mm (paper explicit).
+
+Current permissions:
+
+- V0.2 slotted topology build-only: YES
+- materialized dielectric/copper model: HOLD
+- solver: NO
+- optimization: NO
+- L-band scaling: NO
+- LNA integration: NO
 
 ---
 
@@ -133,148 +147,154 @@ Current scientific state:
 
 ## Task ID
 
-**R0.1A-TOPOLOGY-BUILD-ONLY-H01**
+**R0.1A2-SLOTTED-PLATE-BUILD-ONLY-H01**
 
 ## Objective
 
-Execute the first CST 2022 **BUILD-ONLY** runtime validation of the repository-controlled CHARTS topology macro and perform a fresh-reopen audit.
+Execute the corrected V0.2 CST **BUILD-ONLY** topology and fresh-reopen audit.
 
 This task answers only:
 
-> Does the committed topology macro build reproducibly in CST 2022 and produce the intended nine-object Candidate-A geometry without ports or solver activity?
+> Does the Fig.2-consistent continuous slotted-plate topology build reproducibly in CST 2022, remain one connected antenna solid after eight disconnected slot cuts, and visually correct the V0.1 topology error?
 
-It does **not** answer whether the antenna has correct S11, gain, beamwidth, or material properties.
+It does not authorize any EM performance conclusion.
 
 ## Required preflight
 
-From repository root, use the verified Miniconda Python or activated conda environment:
+From repository root:
 
 ```bash
 python scripts/r0_manifest_gate.py --stage topology
-python scripts/audit_r0_topology_macro.py
+python scripts/audit_r0_slotted_plate_v02.py
 ```
 
-Both must PASS.
+Expected:
 
-If either does not PASS:
-- set `TASK_STATUS=HOST_HOLD`,
-- record the exact output,
-- do not open/run the CST macro.
+```text
+PASS_R0_TOPOLOGY_MANIFEST_READY_FOR_BUILD_ONLY
+PASS_R0_V02_STATIC_AUDIT
+EXPECTED_FINAL_SOLIDS=2
+EXPECTED_SLOT_SUBTRACTIONS=8
+EXPECTED_PORTS=0
+CENTER_THROUGH_HOLE=NO
+SOLVER_RUN=NO
+```
 
-## CST BUILD-ONLY execution
+If either gate does not PASS, return HOST_HOLD and do not execute CST.
 
-Use a fresh CST Microwave Studio project.
+## CST BUILD-ONLY
+
+Use a fresh MWS project.
 
 Run:
 
-`source/cst/R0_CHARTS_TOPOLOGY_BUILD_ONLY_V01.mcr`
+`source/cst/R0_CHARTS_SLOTTED_PLATE_BUILD_ONLY_V02.mcr`
 
 Follow:
 
-`em/cst/R0_CHARTS_300_500/RUNBOOK_TOPOLOGY_BUILD_ONLY.md`
+`em/cst/R0_CHARTS_300_500/RUNBOOK_SLOTTED_PLATE_V02.md`
 
-### Expected inventory
+Do not run the superseded V0.1 macro.
+
+## Expected final inventory
 
 ```text
-9 solids total:
-  1 x GROUND_REFERENCE
-  4 x PETAL_*
-  4 x RING_*
+2 solids total:
+  ReferenceGround:GROUND_REFERENCE
+  Radiator:ANTENNA_PLATE
 
 0 ports
 0 lumped elements
 0 solver results
 ```
 
-### Visual checks — Candidate A only
+The eight `SlotTools:CUT_*` objects should be consumed by boolean subtraction.
 
-Verify and record:
+## Mandatory visual review
 
-1. fourfold rotational symmetry,
-2. central square opening present,
-3. four petal gaps remain electrically open,
-4. passive ring surrounds the petals without electrical contact,
-5. radiator/ring plane is 200 mm above the reference ground,
-6. no obvious malformed/self-crossing extruded polygon,
-7. model tree names match the runbook.
+Compare top view against CHARTS Fig.2(a). Record PASS/HOLD for each:
 
-Do **not** alter geometry to make it look closer to the paper.
+1. one continuous square antenna/PCB silhouette,
+2. four outer slots near the perimeter,
+3. outer slots stop before corners,
+4. four inner slots form a cross / "田"-like partition,
+5. inner slots stop before center,
+6. inner slots stop before outer slots,
+7. all eight slot apertures are mutually disconnected,
+8. central region remains solid (no large square through-hole),
+9. the plate remains one connected CST solid,
+10. topology is materially closer to Fig.2 than V0.1.
 
-## Save / close / reopen audit
+Side/oblique:
+- antenna plate plane is 200 mm above ground.
 
-If build succeeds:
+Do not tune dimensions for aesthetics. If the placeholder proportions still look materially wrong, return visual mismatch with screenshots.
 
-1. save the CST project under a clearly R0/build-only name,
-2. close CST,
-3. reopen CST fresh,
-4. reopen the saved project,
-5. verify the same 9 solids remain,
-6. verify 0 ports,
-7. verify there is no solver-result tree created by this task.
+## Save / close / reopen
+
+Save, close CST, fresh reopen, and recheck:
+- 2 solids,
+- 0 ports,
+- no solver results.
 
 ## Required evidence
 
-Create a new directory:
+Create:
 
-`evidence/r0_1a_h01_<YYYYMMDD_HHMM>/`
+`evidence/r0_1a2_h01_<YYYYMMDD_HHMM>/`
 
-Store at minimum:
-
+At minimum:
 - `RETURN_REPORT.md`
 - `preflight.txt`
 - `object_inventory.txt`
 - `reopen_inventory.txt`
-- at least one top-view screenshot
-- at least one oblique/side-view screenshot showing ground separation
-- screenshot after fresh reopen
-- CST project file may be included if practical; if too large, record its local path and SHA-256 instead
+- top view
+- oblique/side view
+- fresh-reopen screenshot
+- CST project path + SHA-256 if not committed
 
-`RETURN_REPORT.md` must state one final status exactly:
+Final status must be exactly one of:
 
-- `PASS_R0_TOPOLOGY_BUILD_ONLY`
-- `HOLD_R0_TOPOLOGY_VISUAL_MISMATCH`
-- `HOLD_R0_CST_RUNTIME_SYNTAX`
-- `FAIL_R0_TOPOLOGY_REPLAY`
+- `PASS_R0_V02_SLOTTED_TOPOLOGY_BUILD_ONLY`
+- `HOLD_R0_V02_VISUAL_MISMATCH`
+- `HOLD_R0_V02_CST_RUNTIME_SYNTAX`
+- `FAIL_R0_V02_REPLAY`
 
 ## Strict prohibitions
 
-For this task, do not:
+Do not:
+- run solver,
+- add ports/monitors,
+- add dielectric/material stack,
+- add LNA/shield/Bias-Tee,
+- perform L-band scaling,
+- optimize slot dimensions,
+- resurrect V0.1 petal/ring topology,
+- change the scientific mapping without recording HOLD.
 
-- run any solver,
-- create ports,
-- create monitors,
-- add substrate/dielectric,
-- add QPL9547/LNA,
-- add Bias-Tee,
-- scale to L band,
-- optimize any parameter,
-- repair scientific geometry silently,
-- switch to Candidate B unless a future handoff explicitly requests it.
-
-If the macro requires a syntax-only patch to run in CST 2022:
-- make the smallest possible syntax patch,
-- do not change numeric geometry,
-- record exact old/new lines and reason,
-- rerun static audit,
-- commit separately,
-- return `HOLD_R0_CST_RUNTIME_SYNTAX` unless the handoff is explicitly reissued after review.
+If a CST syntax-only patch is needed, make the minimum patch, preserve all numeric geometry, record exact changes, and return `HOLD_R0_V02_CST_RUNTIME_SYNTAX` for design review.
 
 ---
 
 # HOST RETURN
 
+Previous H01 return is preserved in:
+`evidence/r0_1a_h01_20260922_2052/`
+
+Current task return:
+
 ```text
-TASK_STATUS=HOST_COMPLETE
+TASK_STATUS=NOT_RUN_YET
 HOST=H01
-HOST_START_COMMIT=cd91035893a6a3ad23dcd13a55f9b7c1a176a9e1
-HOST_END_COMMIT=3ef1f58b4d2180735223b9761c523efae90d0243
-FINAL_STATUS=PASS_R0_TOPOLOGY_BUILD_ONLY
-EVIDENCE_PATH=evidence/r0_1a_h01_20260922_2052/
-CST_PROJECT_PATH_OR_HASH=D:\GNSS_Lband_Active_Array\_r0_1a_h01_work\R0_1A_TOPOLOGY_BUILD_ONLY_H01.cst sha256=100A8563ADE4A9B341338D2698AABC7C71D68633B7F6133F6403E384F8499518 (git-ignored, not committed)
-NOTES=Executed macro body verbatim via CST 2022.5 Python API in a new MWS; saved and fresh-reopened. 9/9 expected solids present after reopen, 0 ports, 0 lumped elements, no solver-result tree. Candidate A materialized (petal 227.5 / ring 247.5 / center 40 / height 200 mm). Screenshots, inventories, hashes and the harness are in the evidence path; see RETURN_REPORT.md. Findings for design review: macro contains two U+2014 em dashes (CST non-ASCII history warning); reserved view name "Front" yields the model Z-axis plan view. No solver was run.
+HOST_START_COMMIT=
+HOST_END_COMMIT=
+FINAL_STATUS=
+EVIDENCE_PATH=
+CST_PROJECT_PATH_OR_HASH=
+NOTES=
 ```
 
-The host updates this section after execution and then stops.
+The host updates this section, commits/pushes, then stops.
 
 ---
 
