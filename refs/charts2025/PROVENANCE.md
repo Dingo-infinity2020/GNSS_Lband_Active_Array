@@ -6,6 +6,11 @@ Source:
 - ISAP 2025
 - DOI: 10.34385/proc.98.1571143655
 
+Official publisher full text (verified 2026-09-22):
+- summary: https://www.ieice.org/publications/proceedings/summary.php?expandable=13&iconf=ISAP&number=1571143655&session_num=Pos1&year=2025
+- PDF: https://www.ieice.org/publications/proceedings/bin/pdf_link.php?fname=1571143655.pdf&iconf=ISAP&lang=E&number=1571143655&vol=98&year=2025
+- repository policy: the PDF/raw figures may be used locally for provenance inspection but are not committed.
+
 ## Paper-explicit parameters used by R0
 
 | Item | Value | Provenance |
