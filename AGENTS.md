@@ -9,10 +9,13 @@ Before changing any scientific or engineering artifact, read:
 1. `docs/PROJECT_RULES.md`
 2. `docs/DECISIONS.md`
 3. `docs/REQUIREMENTS_v0.1.md`
-4. the document for the current gate
-5. relevant parameter/provenance manifests
+4. `PROJECT_HANDOFF.md` — canonical current execution baton
+5. the document for the current gate
+6. relevant parameter/provenance manifests
 
 `docs/PROJECT_RULES.md` is the anti-divergence charter. Its rules apply unless an explicit human-approved architecture decision supersedes them.
+
+`PROJECT_HANDOFF.md` is the only operational task-exchange document between design review and execution hosts. Do not execute a task copied from an old chat or local note if it conflicts with the current handoff.
 
 ## Current gate
 
