@@ -15,9 +15,9 @@
 HANDOFF_VERSION=1
 CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
-CURRENT_TASK_ID=R0.1B-CENTER-FEED-PROVENANCE-H01
+CURRENT_TASK_ID=R0.1B2-CENTER-FEED-SOURCE-RECOVERY-H01
 TASK_OWNER=H01
-TASK_STATUS=HOST_HOLD
+TASK_STATUS=READY_FOR_HOST
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -152,68 +152,54 @@ Source/provenance:
 
 ## Task ID
 
-**R0.1B-CENTER-FEED-PROVENANCE-H01**
+**R0.1B2-CENTER-FEED-SOURCE-RECOVERY-H01**
+
+## Context
+
+The prior R0.1B task correctly returned `HOLD_R0_PRIMARY_SOURCE_UNAVAILABLE` because the host's DOI/metadata path did not expose the paper.
+
+Design-side review has now verified the official IEICE full-text PDF and recorded it in:
+
+- `docs/R0_1B_SOURCE_RECOVERY_20260922.md`
+- `refs/charts2025/PROVENANCE.md`
+
+The official PDF may be downloaded locally for inspection but must not be committed.
 
 ## Objective
 
-Perform a source/figure extraction focused only on the **central feed/electronics region** of the CHARTS antenna.
+Repeat only the previously blocked high-resolution Fig. 1(a) / Fig. 2(a) center-feed provenance audit.
 
-The current visible 12-slot V0.3 topology is accepted and frozen for this step. Do not change it.
+Read and follow exactly:
 
-This task answers:
+`docs/NEXT_ACTION_R0_1B2_CENTER_FEED_SOURCE_RECOVERY_20260922.md`
 
-> What central metal removal, balanced feed-terminal geometry, and Fig.1 `40 mm` semantics are actually supported by the primary source, and what remains unresolved?
+## Key source
 
-## Authoritative instruction
+Direct official IEICE PDF:
 
-Read and follow:
+https://www.ieice.org/publications/proceedings/bin/pdf_link.php?fname=1571143655.pdf&iconf=ISAP&lang=E&number=1571143655&vol=98&year=2025
 
-`docs/NEXT_ACTION_R0_1B_CENTER_FEED_PROVENANCE_20260922.md`
+## Required return fields
 
-Also read:
-
-- `docs/R0_1A3_DESIGN_REVIEW_20260922.md`
-- `refs/charts2025/PROVENANCE.md`
-- `refs/charts2025/FIGURE_EXTRACTION.md`
-- `refs/charts2025/PHOTO_GEOMETRY_ESTIMATE.md`
-- `docs/R0_RECONSTRUCTION_ASSUMPTIONS.md`
-
-## Required outputs
-
-Create:
-
-- `refs/charts2025/CENTER_FEED_EXTRACTION.md`
-- optionally `docs/figures/R0_CENTER_FEED_INTERPRETATION.svg`
-- `evidence/r0_1b_h01_<YYYYMMDD_HHMM>/RETURN_REPORT.md`
-- source-audit / measurement log and hashes for project-owned outputs
-
-The report must explicitly return:
-
-- `FIG40_SEMANTICS=...`
+- `FIG40_SEMANTICS=RESOLVED:<meaning>|PARTIAL|UNRESOLVED`
 - `DIFFERENTIAL_TERMINALS_GEOMETRY=RESOLVED|PARTIAL|UNRESOLVED`
 - `CENTRAL_REMOVED_REGION=RESOLVED|PARTIAL|UNRESOLVED`
 - `SOLVER_READY=YES|NO`
 
 Final status exactly one of:
 
-- `PASS_R0_CENTER_FEED_EXTRACTION_COMPLETE`
+- `PASS_R0_CENTER_FEED_PRIMARY_SOURCE_AUDIT_COMPLETE`
 - `HOLD_R0_CENTER_FEED_SOURCE_AMBIGUOUS`
-- `HOLD_R0_PRIMARY_SOURCE_UNAVAILABLE`
-
-A PASS means the extraction task is complete; it does not imply that the geometry is fully resolved.
+- `HOLD_R0_PRIMARY_SOURCE_ACCESS_FAILED`
 
 ## Strict prohibitions
 
-Do not:
-
-- run CST,
-- run any solver,
-- edit V0.3 geometry,
-- add ports/materials/LNA/shield/Bias-Tee,
-- tune dimensions,
-- scale to L band,
-- silently reinterpret the `40 mm` label,
-- commit the copyrighted source PDF or raw source figures.
+- NO CST.
+- NO solver.
+- NO geometry edit.
+- NO L-band scaling.
+- NO LNA/shield/Bias-Tee work.
+- NO copyrighted PDF or raw source-figure commit.
 
 After push, stop. No successor task is pre-authorized.
 
@@ -226,17 +212,18 @@ Previous execution evidence remains preserved in:
 - `evidence/r0_1a_h01_20260922_2052/`
 - `evidence/r0_1a2_h01_20260922_2123/`
 - `evidence/r0_1a3_h01_20260922_2158/`
+- `evidence/r0_1b_h01_20260922_2253/` (source-unavailable HOLD; preserved as historical evidence)
 
 Current task return:
 
 ```text
-TASK_STATUS=HOST_HOLD
+TASK_STATUS=NOT_RUN_YET
 HOST=H01
-HOST_START_COMMIT=e1bb1a3
-HOST_END_COMMIT=7687778a51ceb333de33905f55ffc55eacc991b0
-FINAL_STATUS=HOLD_R0_PRIMARY_SOURCE_UNAVAILABLE
-EVIDENCE_PATH=evidence/r0_1b_h01_20260922_2253/
-NOTES=Primary source figures unavailable to H01: repo stores no copyrighted figures; no local copy found; DOI resolves to bibliographic metadata only (no full text); Crossref/DataCite APIs returned 404. Required new Fig.1(a)/Fig.2(a) center-feed audit could therefore not be performed. Delivered a provenance-only consolidation from repository records: refs/charts2025/CENTER_FEED_EXTRACTION.md (required table + 40mm candidates A/B/C/D, no winner) and docs/figures/R0_CENTER_FEED_INTERPRETATION.svg (project-owned redraw, no source imagery). Decision fields: FIG40_SEMANTICS=UNRESOLVED, DIFFERENTIAL_TERMINALS_GEOMETRY=UNRESOLVED, CENTRAL_REMOVED_REGION=PARTIAL, SOLVER_READY=NO. No CST/solver run; V0.3 geometry untouched; no copyrighted material downloaded or committed. See source_audit_log.txt.
+HOST_START_COMMIT=
+HOST_END_COMMIT=
+FINAL_STATUS=
+EVIDENCE_PATH=
+NOTES=
 ```
 
 The host updates this section, commits/pushes, then stops.
