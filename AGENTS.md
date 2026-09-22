@@ -94,6 +94,11 @@ Any new candidate architecture/component must update `docs/IDEA_BACKLOG.md` befo
 - HFSS: optional independent cross-check
 - Python: post-processing and parameter bookkeeping
 
+## Execution hosts
+
+Registered hosts and their verified toolchains are tracked in `docs/HOST_ENVIRONMENT.md`.
+Registration records capability only; it does not grant any gate permission.
+
 ## Stop rules
 
 Stop and document instead of guessing when:
