@@ -1,5 +1,9 @@
 Option Explicit
 
+' DEPRECATED SCIENTIFIC TOPOLOGY - DO NOT USE FOR NEW BUILDS
+' V0.2 runtime/replay passed, but direct Fig.2 review shows 8 outer slot segments,
+' not 4. Use R0_CHARTS_12SLOT_BUILD_ONLY_V03.mcr instead.
+
 ' GNSS_Lband_Active_Array
 ' R0-CHARTS-RECON-PASSIVE - TOPOLOGY BUILD-ONLY V0.2
 ' CST Studio Suite 2022
