@@ -17,7 +17,7 @@ CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
 CURRENT_TASK_ID=R0.1B-CENTER-FEED-PROVENANCE-H01
 TASK_OWNER=H01
-TASK_STATUS=READY_FOR_HOST
+TASK_STATUS=HOST_HOLD
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -230,13 +230,13 @@ Previous execution evidence remains preserved in:
 Current task return:
 
 ```text
-TASK_STATUS=NOT_RUN_YET
+TASK_STATUS=HOST_HOLD
 HOST=H01
-HOST_START_COMMIT=
-HOST_END_COMMIT=
-FINAL_STATUS=
-EVIDENCE_PATH=
-NOTES=
+HOST_START_COMMIT=e1bb1a3
+HOST_END_COMMIT=7687778a51ceb333de33905f55ffc55eacc991b0
+FINAL_STATUS=HOLD_R0_PRIMARY_SOURCE_UNAVAILABLE
+EVIDENCE_PATH=evidence/r0_1b_h01_20260922_2253/
+NOTES=Primary source figures unavailable to H01: repo stores no copyrighted figures; no local copy found; DOI resolves to bibliographic metadata only (no full text); Crossref/DataCite APIs returned 404. Required new Fig.1(a)/Fig.2(a) center-feed audit could therefore not be performed. Delivered a provenance-only consolidation from repository records: refs/charts2025/CENTER_FEED_EXTRACTION.md (required table + 40mm candidates A/B/C/D, no winner) and docs/figures/R0_CENTER_FEED_INTERPRETATION.svg (project-owned redraw, no source imagery). Decision fields: FIG40_SEMANTICS=UNRESOLVED, DIFFERENTIAL_TERMINALS_GEOMETRY=UNRESOLVED, CENTRAL_REMOVED_REGION=PARTIAL, SOLVER_READY=NO. No CST/solver run; V0.3 geometry untouched; no copyrighted material downloaded or committed. See source_audit_log.txt.
 ```
 
 The host updates this section, commits/pushes, then stops.
