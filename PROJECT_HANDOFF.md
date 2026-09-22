@@ -31,7 +31,15 @@ The execution host must not infer any permission not explicitly listed here or i
 
 ## 1. SYNC PROTOCOL
 
-For every new work cycle, both sides use the same sequence:
+For every new work cycle, both sides use the same sequence.
+
+On the registered Windows host, the safe shortcut is:
+
+```powershell
+.\\scripts\\sync_handoff.ps1
+```
+
+It only synchronizes the repository and prints the current handoff header; it does not execute CST or change scientific artifacts.
 
 ### ChatGPT / design side
 
