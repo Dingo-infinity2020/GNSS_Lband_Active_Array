@@ -103,3 +103,31 @@ Mainline impact:
 
 Reversal condition:
 - author-provided CAD/layout, a higher-detail CHARTS publication, or another primary source resolves the exact center/feed geometry.
+
+
+## D0007 — REF-CUI 26/26 source geometry mapping frozen; BUILD-ONLY authorized
+
+Decision:
+- Accept the user-supplied publisher PDF as the primary source for completing Figure 7 / Table-1 symbol mapping.
+- Freeze all 26 Table-1 symbols to their Figure 7(a)/(b)/(c) geometric arrow meanings in `refs/cui2023/GEOMETRY_MAP.md`.
+- Authorize a deterministic REF-CUI CST BUILD-ONLY model.
+- Keep solver permission disabled until build/reopen and design-side visual review pass.
+
+Evidence:
+- user-supplied publisher PDF, Cui et al. 2023, DOI 10.1049/mia2.12343,
+- `refs/cui2023/GEOMETRY_MAP.md`,
+- `refs/cui2023/parameters.csv`,
+- `docs/figures/REF_CUI_GEOMETRY_SCHEMATIC.svg`.
+
+Reason:
+- Figure 7(b)/(c) is sufficiently legible at high-resolution render to identify each Table-1 dimension arrow without relying on symbol-name guessing.
+- The paper text explicitly ties Figure 7(c) to the two broadband baluns and Table 1 to the proposed antenna geometry.
+- A build-only gate is appropriate before any solver or EM-performance comparison.
+
+Mainline impact:
+- NONE.
+- CHARTS-inspired active planar element remains MAINLINE.
+- REF-CUI remains REFERENCE_ONLY.
+
+Reversal condition:
+- a contradiction is found during build-only visual comparison against the primary PDF.
