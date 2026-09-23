@@ -10,7 +10,7 @@ CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=REF-CUI-PASSIVE-REFERENCE
 CURRENT_TASK_ID=REF-CUI-R0B-BUILD-ONLY-H01
 TASK_OWNER=H01
-TASK_STATUS=READY_FOR_HOST
+TASK_STATUS=HOST_COMPLETE
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -143,14 +143,14 @@ It is superseded only as an access blocker; the historical evidence remains vali
 Current task return:
 
 ```text
-TASK_STATUS=NOT_RUN_YET
+TASK_STATUS=HOST_COMPLETE
 HOST=H01
-HOST_START_COMMIT=
-HOST_END_COMMIT=
-FINAL_STATUS=
-EVIDENCE_PATH=
-CST_PROJECT_PATH_OR_HASH=
-NOTES=
+HOST_START_COMMIT=3db2a7508fb3502a00499ef2da39544e2ca0ef97
+HOST_END_COMMIT=d21740b4692297f5195e6a3d3bfc2384d3dc0eb7
+FINAL_STATUS=PASS_REF_CUI_R0B_BUILD_ONLY
+EVIDENCE_PATH=evidence/ref_cui_r0b_h01_20260923_1341/
+CST_PROJECT_PATH_OR_HASH=D:\GNSS_Lband_Active_Array\_ref_cui_r0b_work\REF_CUI_R0B_BUILD_ONLY_V01.cst sha256=d880c66ecaad6b98cf501ee7373c626129c4c090fde1711b8ac48b105803588f (git-ignored, not committed)
+NOTES=Static audit PASS; macro body executed verbatim in a fresh MWS; saved and fresh-reopened. Definitive SHAPE_COUNT=22 (MainGround:GROUND; RadiatorBoard:RADIATOR_SUB; Radiator:LOOP; Radiator:ARMS; Balun1/2 substrate + 8 metal strips each), 0 ports, 0 monitors, no solver output. All 26 Table-1 values present and unchanged (PARAM_COUNT=47 incl. material and CAD params). Loop volume 90.1166 = (115^2-103.2^2)*0.035; ground 33800 = 260*260*0.5. Visual checks PASS (260 mm ground, 80 mm height, loop around crossed dipoles, 4 open slots, 2 orthogonal non-shorting baluns, no loop-dipole short, fourfold symmetry). Macro SHA 5df1aa15... . CAD_CONSTRUCTION_ASSUMPTIONs (documented in construction_assumptions.md): copper/ground thickness, board margin, balun width/offset, L-bend open-slot proxy, and a SCHEMATIC balun metal strip proxy built from Wb/Lb arrows. DESIGN ACTION: compare screenshots vs the user-supplied primary PDF before authorizing any passive solver. No solver run; no publisher PDF/figure committed.
 ```
 
 ## 6. Stop rule
