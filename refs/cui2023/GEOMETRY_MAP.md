@@ -1,164 +1,145 @@
 # Cui 2023 — Source-to-Geometry Map (REF-CUI-R0A)
 
-Task: `REF-CUI-R0A-SOURCE-GEOMETRY-FREEZE-H01`
-Date: 2026-09-23
-Host: H01 (DESKTOP-GBTI6Q4)
+Status: **PASS_REF_CUI_SOURCE_GEOMETRY_FROZEN_DESIGN_SIDE**
 
-Status: **MAPPING BLOCKED — PUBLISHER FIGURES NOT ACCESSIBLE TO H01**
+Primary source:
+- Yuehui Cui et al., IET Microwaves, Antennas & Propagation 17(5), 361–368 (2023)
+- DOI 10.1049/mia2.12343
+- User-supplied publisher PDF reviewed design-side at native/high-resolution rendering.
+- Figure 7(a), Figure 7(b), Figure 7(c), and Table 1 are the authoritative mapping source.
 
-## 1. Purpose
+No publisher PDF or raw figure is committed to this repository.
 
-Map every Table-1 symbol of the open-access Cui 2023 antenna to its exact
-physical feature/panel so a deterministic CST build can later be written without
-guessing.
+## 1. Material / architecture facts
 
-Source:
-- Cui, Tu, Qin, Li, "A compact broadband antenna for ultra high frequency and L
-  band on 5G new radio base stations", IET Microw. Antennas Propag. 17(5),
-  361–368 (2023); DOI `10.1049/mia2.12343`.
-- Publisher page: https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/mia2.12343
-
-## 2. Access outcome (blocker)
-
-The publisher full text and figures could **not** be accessed by H01:
-
-- Wiley (`ietresearch.onlinelibrary.wiley.com`, landing / pdfdirect / pdf / epdf)
-  returns HTTP 403 behind a **Cloudflare "Just a moment..." JS challenge**;
-- IET Digital Library (`digital-library.theiet.org`) returns HTTP 403;
-- DOAJ article page returns HTTP 403;
-- Unpaywall / OpenAlex / Semantic Scholar list the item as GOLD OA but provide
-  **only the publisher DOI** as the OA location (`url_for_pdf = null`,
-  `has_fulltext = false`) — no accessible mirror.
-
-Automated, rule-compliant access failed. H01 did **not** attempt to defeat the
-Cloudflare challenge. Full details in
-`evidence/ref_cui_r0a_h01_20260923_1229/source_access_log.txt`.
-
-Consequence: the physical meaning of each Table-1 symbol cannot be established
-from the publisher figures. Per the task rule ("do not guess"), every symbol is
-marked `MAPPING_UNRESOLVED`.
-
-## 3. Symbol map
-
-Value provenance: the numeric values below are transcribed from Table 1 by the
-design side (`refs/cui2023/PROVENANCE.md`) and are treated as `PAPER_EXPLICIT`
-values. H01 did **not** independently verify them against the publisher (blocked).
-
-| Symbol | Value (mm) | Physical feature | Figure/panel used | Provenance | Confidence | Deterministic CAD |
-|---|---:|---|---|---|---|---|
-| Lg | 260 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| H | 80 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Lr | 115 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wr | 5.9 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Ld | 97 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Ws | 2.2 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Ls | 26.6 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wg1 | 1.7 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wg2 | 3.9 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wp | 8.4 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Lp1 | 36.3 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Lp2 | 8.2 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Lp3 | 36.8 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Lb1 | 21 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Lb2 | 10 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Lb3 | 20.5 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Lb4 | 24.5 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Lb5 | 73 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wb1 | 1.5 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wb2 | 0.65 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wb3 | 0.95 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wb4 | 13 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wb5 | 28.5 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wb6 | 3.6 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wb7 | 4.8 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-| Wb8 | 3.6 | MAPPING_UNRESOLVED | NOT_ACCESSED | PAPER_EXPLICIT | NONE | NO |
-
-26 symbols; 0 deterministically mapped; mapping is blocked, not ambiguous, until
-the publisher figures are accessible.
-
-## 4. Material / source facts (from transcript; not re-verified by H01)
-
-- Rogers 4350B, er = 3.48, substrate thickness 0.76 mm;
-- ground-plane height H = 80 mm;
-- dual +/-45-degree polarizations, two orthogonal broadband baluns;
-- square loop tightly coupled but not electrically attached to the dipoles;
-- reported band 0.69–1.52 GHz for RL > 15 dB; reported isolation > 35 dB.
-
-These are the design-side transcription; H01 could not re-verify them against the
-publisher because of the access block.
-
-## 5. Why no redraw was produced
-
-The task requested `docs/figures/REF_CUI_GEOMETRY_SCHEMATIC.svg`. Producing a
-geometry redraw requires knowing Figure 7's layout. Since the figure is
-inaccessible, any redraw would be fabricated, which the task forbids
-("do not guess"). The schematic is therefore **deliberately not created**.
-
-## 6. What would unblock the mapping
-
-Either:
-
-- provide the Cui 2023 PDF to H01 as a git-ignored local file (with permission to
-  read it), or
-- provide a project-owned coordinate description of Figure 7, or
-- perform the Figure 7 symbol mapping design-side and issue H01 a consolidation
-  task.
-
-Until then, no symbol may be assigned a physical feature and no deterministic
-REF-CUI CST build is authorized.
-
-
----
-
-## 7. Design-side source recovery / partial mapping (2026-09-23)
-
-Status: **DESIGN_SIDE_FULL_TEXT_ACCESS_OK / FIGURE_MAPPING_PARTIAL**
-
-H01's Cloudflare HOLD remains valid execution-host evidence. The design side was
-able to access the Wiley full-text HTML and indexed Figure 7(a) through a
-separate compliant web path.
-
-### High-confidence mappings now source-supported
-
-| Symbol | Value | Physical feature | Evidence | Confidence | Deterministic CAD |
-|---|---:|---|---|---|---|
-| Lg | 260 mm | square main ground-plane / reflector side length for the single element | Figure 7(a) labels Lg along the ground-plane edge; Figure 16 later uses Lg/Wg for reflector dimensions | HIGH | YES for reflector |
-| H | 80 mm | vertical separation from antenna/radiator plane to the main ground plane | Figure 7(a) labels H vertically; Table 1 gives 80 mm | HIGH | YES |
-| Lr | 115 mm | square-loop side length | Section 3.2 explicitly states every two neighboring loop sides form a folded dipole of length 2 x Lr = 230 mm | HIGH | YES |
-
-### Family-level mappings, not yet exact enough for CAD
-
-| Symbols | Current family interpretation | Evidence | Confidence | Deterministic CAD |
-|---|---|---|---|---|
-| Wr | square-loop conductor width is the leading interpretation | paired with Lr in Table 1; exact Figure 7(b) label endpoint not yet independently recovered | MEDIUM | NO |
-| Ld | characteristic dipole/radiator dimension | Table 1 ordering and Figure 7(b) top-view family | MEDIUM | NO |
-| Ws, Ls | open-slot width/length family is the leading interpretation | open slots are the paper-explicit high-frequency resonator; exact label endpoints remain unseen | MEDIUM | NO |
-| Wg1, Wg2, Wp, Lp1, Lp2, Lp3 | radiator/feed-center geometry family | appear in the top-geometry parameter family before balun-specific Lb/Wb dimensions | LOW-MEDIUM | NO |
-| Lb1..Lb5, Wb1..Wb8 | broadband-balun geometry family | the paper explicitly says the two broadband baluns are detailed in Figure 7(c); b-family grouping is consistent | HIGH for family, LOW for exact segment | NO |
-
-### Source-explicit topology facts confirmed
+Paper-explicit:
 
 - two +/-45-degree polarized dipoles,
-- a square loop surrounds the dipoles,
-- diamond-like material is removed from the center part of each dipole arm to
-  create open slots,
-- two orthogonal broadband baluns feed the two polarizations,
-- radiator, square loop, and baluns are on Rogers 4350B, er=3.48, thickness
-  0.76 mm,
-- the radiator is 80 mm above the main ground plane,
-- lower resonance near 0.7 GHz is associated with the square loop,
-- upper resonance near 1.5 GHz is associated with the open slots.
+- surrounding square loop,
+- diamond-like regions removed from each dipole arm to form open slots,
+- two orthogonal broadband baluns,
+- radiator, loop and baluns printed on single-layer Rogers 4350B,
+- relative permittivity 3.48,
+- substrate thickness 0.76 mm,
+- radiator assembly placed above a main ground plane,
+- Port 1 = +45-degree polarization,
+- Port 2 = -45-degree polarization.
 
-### Current decision fields
+## 2. Figure 7(a) / global dimensions
+
+| Symbol | Value | Exact figure mapping | Confidence | Deterministic CAD |
+|---|---:|---|---|---|
+| Lg | 260 mm | side length of the square main ground plane / reflector | HIGH | YES |
+| H | 80 mm | vertical separation from radiator plane to main ground plane | HIGH | YES |
+
+## 3. Figure 7(b) — planar radiator / loop top view
+
+Coordinate convention for later CAD:
+- radiator centered at x=y=0,
+- Figure 7(b) viewed from +z,
+- dimensions are applied with fourfold symmetry unless explicitly polarization-specific.
+
+| Symbol | Value | Exact dimension-arrow meaning in Fig. 7(b) | Confidence | Deterministic CAD |
+|---|---:|---|---|---|
+| Lr | 115 mm | outside-to-outside side length of the surrounding square loop | HIGH | YES |
+| Wr | 5.9 mm | in-plane conductor trace width of the surrounding square loop | HIGH | YES |
+| Ld | 97 mm | side/span of the square envelope occupied by the crossed dipole radiator inside the loop | HIGH | YES |
+| Ws | 2.2 mm | width of the U/open-slot cut etched in each dipole-arm region | HIGH | YES |
+| Ls | 26.6 mm | length of the straight outer/horizontal leg of the open slot, as dimensioned in the upper-left quadrant | HIGH | YES |
+| Wg1 | 1.7 mm | narrow inter-arm gap width at the central crossing/origin | HIGH | YES |
+| Wg2 | 3.9 mm | inter-arm gap width at the outer end of the tapered centerline gap, near the dipole-envelope side | HIGH | YES |
+| Wp | 8.4 mm | horizontal residual arm/patch distance between the open end of the slot and the adjacent outer-side inter-arm boundary, as drawn in upper-right quadrant | HIGH | YES |
+| Lp1 | 36.3 mm | distance normal to the centerline from the center/inter-arm line to the outer horizontal leg of the open slot, shown in lower-left quadrant | HIGH | YES |
+| Lp2 | 8.2 mm | short centerline-direction distance from the outer-side arm/slot boundary to the start of the diagonal inner cutout/taper, shown at left-center | HIGH | YES |
+| Lp3 | 36.8 mm | length of the diagonal inner cutout/taper edge separating the central triangular copper region from the outer arm region, shown in lower-left quadrant | HIGH | YES |
+
+### Topology interpretation
+
+Figure 7(b) is not treated as four independent rectangular patches.
+
+It contains:
+- four tapered dipole-arm sectors arranged with fourfold symmetry,
+- narrow central crossed gaps,
+- a larger inter-arm gap toward the outer arm ends,
+- one U/open-slot feature per arm sector,
+- one continuous surrounding square loop that is electromagnetically coupled to, but not electrically attached to, the dipoles.
+
+The square-loop lower resonance and open-slot upper resonance are paper-explicit physical mechanisms.
+
+## 4. Figure 7(c) — broadband baluns
+
+Figure 7(c) shows the broadband baluns for:
+- Port 1 (+45-degree polarization),
+- Port 2 (-45-degree polarization).
+
+The Lb family defines longitudinal/vertical dimensions.
+The Wb family defines transverse widths/offsets.
+
+### Longitudinal dimensions
+
+| Symbol | Value | Exact dimension-arrow meaning in Fig. 7(c) | Confidence | Deterministic CAD |
+|---|---:|---|---|---|
+| Lb1 | 21 mm | lower vertical feed-section length from the port reference plane to the first width/section transition | HIGH | YES |
+| Lb2 | 10 mm | vertical length of the intermediate feed section between the lower and upper feed sections | HIGH | YES |
+| Lb3 | 20.5 mm | upper right vertical feed-section length from the Lb2 transition to the top horizontal bend | HIGH | YES |
+| Lb4 | 24.5 mm | downward length of the left open-ended stub from the top horizontal branch | HIGH | YES |
+| Lb5 | 73 mm | overall main balun-board height from the port plane to the top shoulder of the main substrate | HIGH | YES |
+
+### Transverse dimensions
+
+| Symbol | Value | Exact dimension-arrow meaning in Fig. 7(c) | Confidence | Deterministic CAD |
+|---|---:|---|---|---|
+| Wb1 | 1.5 mm | width of the lower vertical feed strip adjacent to Port 2 | HIGH | YES |
+| Wb2 | 0.65 mm | width of the intermediate narrow feed strip | HIGH | YES |
+| Wb3 | 0.95 mm | width of the upper vertical feed strip | HIGH | YES |
+| Wb4 | 13 mm | total transverse span of the upper U-shaped matching branch between its two vertical legs | HIGH | YES |
+| Wb5 | 28.5 mm | lateral offset from the balun-board left edge to the central feed/slotline region, as arrowed in Port-2 view | HIGH | YES |
+| Wb6 | 3.6 mm | width of the central longitudinal white slot/channel in the balun at the mid-board region | HIGH | YES |
+| Wb7 | 4.8 mm | width of the right top terminal/tab adjacent to the central slot/channel | HIGH | YES |
+| Wb8 | 3.6 mm | width of the left top terminal/tab adjacent to the central slot/channel | HIGH | YES |
+
+## 5. Table-1 completeness check
+
+All 26 Table-1 symbols are now source-mapped:
 
 ```text
-DESIGN_SIDE_FULL_TEXT_ACCESS=YES
-MAPPED_SYMBOLS_EXACT=3/26
-FIGURE_7B_EXACT_LABEL_ENDPOINTS=NOT_YET_RECOVERED
-FIGURE_7C_EXACT_BALUN_SEGMENT_MAPPING=NOT_YET_RECOVERED
-DETERMINISTIC_FULL_CAD_READY=NO
-SOLVER_READY=NO
+Lg H
+Lr Wr
+Ld Ws
+Ls Wg1
+Wg2 Wp
+Lp1 Lp2
+Lp3
+Lb1 Lb2 Lb3 Lb4 Lb5
+Wb1 Wb2 Wb3 Wb4 Wb5 Wb6 Wb7 Wb8
 ```
 
-No unresolved symbol is promoted to an exact physical feature merely from its
-name or numerical plausibility.
+Count:
+
+`MAPPED_SYMBOLS_EXACT=26/26`
+
+## 6. Physics anchors for later solver validation
+
+Paper-explicit targets:
+
+- square loop produces lower resonance near 0.7 GHz,
+- each two neighboring square-loop sides form a folded-dipole path of length 2*Lr = 230 mm,
+- open slots produce upper resonance near 1.5 GHz,
+- broadband baluns improve impedance matching,
+- reported impedance band: 0.69–1.52 GHz for return loss >15 dB,
+- reported isolation: >35 dB.
+
+These are **future solver-validation targets**, not build-only acceptance metrics.
+
+## 7. Current gate
+
+```text
+SOURCE_GEOMETRY_MAPPING=PASS
+MAPPED_SYMBOLS_EXACT=26/26
+DETERMINISTIC_CAD_MAPPING_READY=YES
+BUILD_ONLY_PERMISSION=YES
+SOLVER_PERMISSION=NO
+OPTIMIZATION_PERMISSION=NO
+```
+
+The next permitted action is a deterministic REF-CUI CST **BUILD-ONLY** model.
