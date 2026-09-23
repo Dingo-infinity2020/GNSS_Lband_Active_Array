@@ -131,3 +131,34 @@ Mainline impact:
 
 Reversal condition:
 - a contradiction is found during build-only visual comparison against the primary PDF.
+
+
+## D0008 — Stop REF-CUI before solver; return operational focus to CHARTS MAINLINE
+
+Decision:
+- Reclassify `PASS_REF_CUI_R0B_BUILD_ONLY` as an execution/replay PASS only.
+- Scientific geometry fidelity is HOLD after comparison against the user-supplied primary PDF.
+- Do not authorize a REF-CUI solver gate.
+- Return operational project focus to the CHARTS-inspired MAINLINE.
+
+Evidence:
+- user-supplied Cui 2023 publisher PDF, especially Figure 7(b)/(c),
+- `evidence/ref_cui_r0b_h01_20260923_1341/`,
+- `evidence/REF_CUI_R0B_DESIGN_REVIEW_SCIENTIFIC_HOLD.md`.
+
+Reason:
+- V01 used independent proxy cuts for the four arm/slot regions instead of generating all arms by exact 90-degree rotation from one source-faithful master sector,
+- open-slot geometry and balun metal were explicitly proxy constructions,
+- visual symmetry / shape fidelity is not adequate for literature-solver validation,
+- REF-CUI was introduced only as REFERENCE_ONLY workflow validation and should not consume the MAINLINE schedule.
+
+If REF-CUI is revisited:
+- create one canonical arm + slot and rotate by 90/180/270 degrees,
+- enforce rotational geometry audit,
+- source-lock the balun polygon before solver.
+
+Mainline impact:
+- CHARTS-inspired active planar element remains MAINLINE and becomes the next operational focus.
+
+Reversal condition:
+- only if a later CHARTS-specific blocker requires a reference solver benchmark that cannot be resolved directly.
