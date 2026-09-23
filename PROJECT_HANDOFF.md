@@ -1,23 +1,16 @@
 # PROJECT_HANDOFF.md
 
-> **Canonical operational handoff file**
->
-> This is the single fixed document used for task exchange between ChatGPT/project design work and the registered execution host(s).
->
-> Scientific rules live in `docs/PROJECT_RULES.md`; host capability records live in `docs/HOST_ENVIRONMENT.md`.  
-> This file is only the **current baton**: what to sync, what to do now, what must not be done, and what the host returned.
-
----
+> Canonical operational handoff file for the design side and execution host H01.
 
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=1
+HANDOFF_VERSION=2
 CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
-CURRENT_TASK_ID=REF-CUI-R0A-SOURCE-GEOMETRY-FREEZE-H01
-TASK_OWNER=H01
-TASK_STATUS=HOST_HOLD
+CURRENT_TASK_ID=REF-CUI-R0A-DESIGN-SOURCE-MAPPING
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -25,234 +18,110 @@ LNA_INTEGRATION_PERMISSION=NO
 HARDWARE_PERMISSION=NO
 ```
 
-The execution host must not infer any permission not explicitly listed here or in `AGENTS.md`.
+## 1. Sync protocol
 
----
-
-## 1. SYNC PROTOCOL
-
-For every new work cycle, both sides use the same sequence.
-
-On the registered Windows host, the safe shortcut is:
+Execution host sync shortcut:
 
 ```powershell
-.\\scripts\\sync_handoff.ps1
+.\scripts\sync_handoff.ps1
 ```
 
-It only synchronizes the repository and prints the current handoff header; it does not execute CST or change scientific artifacts.
+Before any work, read:
+1. `docs/PROJECT_RULES.md`
+2. `docs/DECISIONS.md`
+3. `AGENTS.md`
+4. this file
 
-### ChatGPT / design side
+Only the side named by `TASK_OWNER` may advance the current task.
 
-1. Fetch the current canonical branch.
-2. Read, in order:
-   - `docs/PROJECT_RULES.md`
-   - `docs/DECISIONS.md`
-   - `AGENTS.md`
-   - **this file**
-3. Review the latest host return/evidence.
-4. Update the **HOST TASK** section only when issuing the next execution task.
-5. Commit and push to the canonical branch.
+- `READY_FOR_HOST`: H01 may execute the HOST TASK, commit/push, update HOST RETURN, then stop.
+- `HOST_COMPLETE` / `HOST_HOLD`: design side reviews.
+- `READY_FOR_DESIGN`: H01 must not start a new scientific task.
 
-### Execution host
+## 2. Stable project state
 
-1. Do not start from a chat transcript or an old copied prompt.
-2. Synchronize the canonical branch:
-   ```bash
-   git fetch origin
-   git checkout project/r0-charts-scaffold
-   git pull --ff-only origin project/r0-charts-scaffold
-   ```
-3. Confirm a clean working tree:
-   ```bash
-   git status --short
-   ```
-4. Read:
-   - `docs/PROJECT_RULES.md`
-   - `AGENTS.md`
-   - **this file**
-5. Execute only the current **HOST TASK**.
-6. Save requested evidence in the repository.
-7. Replace/update **HOST RETURN** below.
-8. Commit and push to the same canonical branch.
-9. Stop. Do not invent the next task.
+MAINLINE:
+- CHARTS-inspired planar balanced active element.
 
-This makes the Git repository the communication channel. No separate prompt synchronization is required.
-
----
-
-## 2. CONCURRENCY RULE
-
-Only one side owns the baton at a time.
-
-- `TASK_STATUS=READY_FOR_HOST`: host may act; ChatGPT should not concurrently modify execution artifacts.
-- `TASK_STATUS=HOST_COMPLETE` or `HOST_HOLD`: host stops; ChatGPT/design side reviews and issues the successor task.
-- `TASK_STATUS=READY_FOR_DESIGN`: design side owns the baton.
-
-If both sides accidentally have unpushed changes, stop and resolve before scientific work continues.
-
----
-
-## 3. CURRENT BASELINE
-
-Canonical branch:
-
-`project/r0-charts-scaffold`
-
-Host:
-- H01 / DESKTOP-GBTI6Q4
-- CST 2022.5
-- Miniconda Python
-- see `docs/HOST_ENVIRONMENT.md`
+FIRST_BACKUP:
+- PUMA / unbalanced tightly-coupled element.
 
 CHARTS state:
 
 ```text
 V03_VISIBLE_TOPOLOGY=DESIGN_ACCEPTED
 V03_EVIDENCE=evidence/r0_1a3_h01_20260922_2158/
-PRIMARY_SOURCE_ACCESS_H01=BLOCKED_BY_WAF
-PRIMARY_SOURCE_ACCESS_DESIGN_SIDE=YES
-FIG40_SEMANTICS=PARTIAL:CENTER_REGION_DIMENSION_EXACT_FEATURE_UNRESOLVED
-DIFFERENTIAL_TERMINALS_GEOMETRY=UNRESOLVED
-CENTRAL_REMOVED_REGION=PARTIAL
-LOCAL_FEED_GROUND=EXISTS_DIMENSIONS_UNRESOLVED
+CHARTS_EXACT_CENTER_FEED=UNDER_SPECIFIED_PUBLICLY
+FIG40_SEMANTICS=PARTIAL
 SOLVER_READY_EXACT_CHARTS=NO
 ```
 
-Design-side official-PDF audit:
-
+Relevant design-side audit:
 - `docs/R0_1B2_DESIGN_SIDE_PRIMARY_SOURCE_AUDIT_20260923.md`
 - `refs/charts2025/CENTER_FEED_EXTRACTION.md`
 
-Conclusion:
-- CHARTS source access is no longer the blocker.
-- Public CHARTS center/feed geometry is under-specified.
-- Do not invent an exact feed.
-- CHARTS-inspired active planar element remains MAINLINE.
+Decision D0006:
+- do not invent unpublished CHARTS center/feed geometry;
+- keep CHARTS as MAINLINE inspiration;
+- use REF-CUI as REFERENCE_ONLY passive-EM workflow validation if deterministic geometry can be frozen.
 
-Decision D0006 authorizes a **REFERENCE_ONLY** solver-validation path using Cui 2023, which publishes a complete geometry table and material stack.
+## 3. REF-CUI current state
 
-Current REF-CUI source facts are recorded in:
+H01 source task:
+
+```text
+H01_STATUS=HOLD_REF_CUI_FIGURE_ACCESS_FAILED
+H01_EVIDENCE=evidence/ref_cui_r0a_h01_20260923_1229/
+H01_MAPPED_SYMBOLS=0/26
+CAUSE=publisher Cloudflare/WAF access block
+```
+
+Design-side source recovery:
+
+```text
+WILEY_FULL_TEXT_ACCESS=YES
+FIGURE_7A_INDEXED_IMAGE_ACCESS=YES
+MAPPED_SYMBOLS_EXACT=3/26
+Lg=260 mm -> square main ground-plane side length
+H=80 mm -> radiator-to-main-ground height
+Lr=115 mm -> square-loop side length
+FIGURE_7B_EXACT_LABEL_ENDPOINTS=NOT_YET_RECOVERED
+FIGURE_7C_EXACT_BALUN_SEGMENT_MAPPING=NOT_YET_RECOVERED
+DETERMINISTIC_FULL_CAD_READY=NO
+SOLVER_READY=NO
+```
+
+Source/provenance:
 - `refs/cui2023/PROVENANCE.md`
-
-Current permissions:
-
-- REF-CUI source/geometry provenance work: YES
-- CST: NO
-- solver: NO
-- optimization: NO
-- GNSS L-band scaling: NO
-- LNA integration: NO
-
----
-
-# HOST TASK
-
-## Task ID
-
-**R0.1B2-CENTER-FEED-SOURCE-RECOVERY-H01**
-
-## Context
-
-The prior R0.1B task correctly returned `HOLD_R0_PRIMARY_SOURCE_UNAVAILABLE` because the host's DOI/metadata path did not expose the paper.
-
-Design-side review has now verified the official IEICE full-text PDF and recorded it in:
-
-- `docs/R0_1B_SOURCE_RECOVERY_20260922.md`
-- `refs/charts2025/PROVENANCE.md`
-
-Th# HOST TASK
-
-## Task ID
-
-**REF-CUI-R0A-SOURCE-GEOMETRY-FREEZE-H01**
-
-## Objective
-
-Freeze the exact source-to-geometry mapping for the fully specified Cui 2023 reference antenna.
-
-This is a **source/provenance task only**.
-
-Read and follow exactly:
-
-`docs/NEXT_ACTION_REF_CUI_R0A_SOURCE_GEOMETRY_FREEZE_20260923.md`
-
-Primary open-access source:
-
-https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/mia2.12343
-
-The complete published numeric table is already transcribed into:
-
-`refs/cui2023/PROVENANCE.md`
-
-Your job is to map every symbol to the correct physical feature/panel without guessing.
-
-## Required output
-
-At minimum:
-
 - `refs/cui2023/GEOMETRY_MAP.md`
 - `refs/cui2023/parameters.csv`
-- `docs/figures/REF_CUI_GEOMETRY_SCHEMATIC.svg`
-- `evidence/ref_cui_r0a_h01_<YYYYMMDD_HHMM>/RETURN_REPORT.md`
-- source access / parameter mapping evidence
 
-Do not commit publisher PDF or raw figures.
+The design side is currently attempting to resolve Figure 7(b)/(c) mappings.
+H01 must not retry Wiley/Cloudflare unless a later handoff explicitly requests it.
 
-## Final status
+## 4. HOST TASK
 
-Exactly one:
+**NONE.**
 
-- `PASS_REF_CUI_SOURCE_GEOMETRY_FROZEN`
-- `HOLD_REF_CUI_FIGURE_ACCESS_FAILED`
-- `HOLD_REF_CUI_PARAMETER_MAPPING_AMBIGUOUS`
+Current owner is DESIGN. H01 should only sync/read and wait.
 
-## Strict prohibitions
+## 5. HOST RETURN
 
-- NO CST.
-- NO solver.
-- NO optimization.
-- NO CHARTS geometry edits.
-- NO GNSS L-band scaling.
-- NO QPL9547/LNA work.
-- NO architecture promotion.
-
-After push, stop. No successor task is pre-authorized.
-
----
-
-# HOST RETURN
-
-Previous H01 CHARTS source-access HOLD remains preserved at:
-- `evidence/r0_1b2_h01_20260923_1211/`
-
-Design-side source recovery/audit is recorded separately and does not rewrite that evidence.
-
-Current task return:
+Most recent H01 return:
 
 ```text
 TASK_STATUS=HOST_HOLD
 HOST=H01
-HOST_START_COMMIT=e84e6dc
-HOST_END_COMMIT=f7dd5b670266c5e4356c8aa760260d4f6a456b4d
 FINAL_STATUS=HOLD_REF_CUI_FIGURE_ACCESS_FAILED
 EVIDENCE_PATH=evidence/ref_cui_r0a_h01_20260923_1229/
-NOTES=Cui 2023 publisher full text/figures inaccessible to H01: Wiley landing/pdfdirect/pdf/epdf return HTTP 403 behind a Cloudflare JS challenge; IET Digital Library and DOAJ also 403; Unpaywall/OpenAlex/Semantic Scholar report GOLD OA but give only the blocked DOI (url_for_pdf=null, has_fulltext=false, no mirror). H01 did not attempt to defeat the challenge. Table-1 values transcribed (PAPER_EXPLICIT) but all 26 symbols are MAPPING_UNRESOLVED because Figure 7 could not be inspected; no guess made. Delivered refs/cui2023/GEOMETRY_MAP.md and refs/cui2023/parameters.csv. REF_CUI_GEOMETRY_SCHEMATIC.svg deliberately NOT created (a redraw would be fabricated without Figure 7). DETERMINISTIC_CAD_READY=NO, SOLVER_READY=NO. No CST/solver; no publisher PDF/figure downloaded into repo. Unblock: give H01 the PDF as a git-ignored local file, supply a project-owned Fig.7 coordinate description, or map design-side. Doc nit: handoff still contains a stale duplicated R0.1B2 task fragment (lines ~152-163) before the REF-CUI HOST TASK.
+NOTES=Publisher figures blocked by Cloudflare; no bypass attempted; no CST/solver.
 ```
 
-The host updates this section, commits/pushes, then stops.
+## 6. Current design-side stop condition
 
----
+Do not authorize a deterministic REF-CUI CST build until either:
 
-## 4. NEXT-TASK RULE
+1. Figure 7(b)/(c) exact parameter endpoints are recovered sufficiently for CAD, or
+2. a documented decision replaces REF-CUI with a reference whose exact geometry is genuinely accessible.
 
-There is deliberately no pre-authorized next task.
-
-After the host returns, ChatGPT/design review will decide among:
-
-- accept R0.1A PASS and proceed,
-- request Candidate-B visual comparison,
-- patch CST runtime syntax,
-- revise reconstruction assumptions,
-- keep R0 on HOLD.
-
-This prevents the execution host from drifting into solver/material/L-band work without review.
+No solver, L-band scaling, LNA work, or CHARTS geometry edit is authorized by this handoff.
