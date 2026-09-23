@@ -75,3 +75,31 @@ Reason:
 
 Reversal condition:
 - a higher-quality primary source, author clarification, or independent geometry evidence contradicts the 12-slot topology or resolves the central/feed geometry more precisely.
+
+
+## D0006 — Do not invent unpublished CHARTS center feed; use REF-CUI for exact passive-EM validation
+
+Decision:
+- Keep the CHARTS-inspired V0.3 visible topology as MAINLINE inspiration.
+- Do not claim or fabricate an exact CHARTS center/feed geometry from the two-page ISAP source.
+- Use Cui 2023 as the exact, fully specified passive-EM reference to validate CST geometry/material/dual-port/solver workflow.
+- After REF-CUI validation, return to CHARTS-inspired GNSS development with a project-owned feed architecture whose assumptions are explicit.
+
+Evidence:
+- official IEICE CHARTS paper accessed design-side and audited,
+- `docs/R0_1B2_DESIGN_SIDE_PRIMARY_SOURCE_AUDIT_20260923.md`,
+- `refs/charts2025/CENTER_FEED_EXTRACTION.md`,
+- open-access Cui 2023 paper with complete material and geometry table.
+
+Reason:
+- repeated access attempts do not solve missing public geometry,
+- exact differential terminal pads, center copper removal, local-ground dimensions, and material stack are not uniquely published,
+- continuing to tune guesses would violate reproduction-before-optimization and provenance rules,
+- Cui 2023 provides a closely related square-loop dual-polarized structure with enough information to validate the EM workflow honestly.
+
+Mainline impact:
+- NONE. CHARTS-inspired active planar element remains MAINLINE.
+- Cui remains REFERENCE_ONLY.
+
+Reversal condition:
+- author-provided CAD/layout, a higher-detail CHARTS publication, or another primary source resolves the exact center/feed geometry.
