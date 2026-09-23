@@ -4,7 +4,8 @@ Task: `R0.1B-CENTER-FEED-PROVENANCE-H01`
 Date: 2026-09-22
 Host: H01 (DESKTOP-GBTI6Q4)
 
-Status: **EXTRACTION CONSOLIDATED FROM REPOSITORY PROVENANCE; PRIMARY FIGURES NOT AVAILABLE TO H01**
+Status (R0.1B, 2026-09-22): **EXTRACTION CONSOLIDATED FROM REPOSITORY PROVENANCE; PRIMARY FIGURES NOT AVAILABLE TO H01**
+Status (R0.1B2, 2026-09-23): **OFFICIAL PDF ACCESS ATTEMPTED; BLOCKED BY PUBLISHER WAF CAPTCHA — NO NEW FIGURE AUDIT**
 
 ## 0. Source availability (honest limitation)
 
@@ -29,6 +30,29 @@ Relevant repository sources:
 - `refs/charts2025/PHOTO_GEOMETRY_ESTIMATE.md`
 - `docs/R0_RECONSTRUCTION_ASSUMPTIONS.md`
 - `docs/R0_1A3_DESIGN_REVIEW_20260922.md`
+
+## 0b. R0.1B2 update (2026-09-23) — official source access attempted
+
+The design side recovered the official IEICE publisher links and issued
+`R0.1B2-CENTER-FEED-SOURCE-RECOVERY-H01` to repeat the figure audit against the
+primary PDF.
+
+H01 attempted to download the official PDF and was blocked by the publisher's
+**AWS WAF "Human Verification" CAPTCHA**:
+
+- the landing/summary URL and the direct PDF URL both returned HTTP 405 with a
+  2144-byte WAF challenge page for `curl.exe` / webfetch, and HTTP 403 for
+  `Invoke-WebRequest`;
+- the challenge requires JavaScript plus a human CAPTCHA; H01 did not attempt to
+  bypass it.
+
+Conclusion: the primary PDF is inaccessible to H01 via an automated,
+rule-compliant path, so **no new Fig.1(a)/Fig.2(a) inspection was performed** and
+no value below was re-measured or upgraded. The R0.1B content is preserved
+unchanged as the best available provenance record.
+
+Evidence: `evidence/r0_1b2_h01_20260923_1211/` (`source_access_log.txt`,
+`figure_measurements.md`). Final status: `HOLD_R0_PRIMARY_SOURCE_ACCESS_FAILED`.
 
 ## 1. Text-supported central/feed statements (`PAPER_EXPLICIT`)
 
