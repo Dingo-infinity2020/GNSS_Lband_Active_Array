@@ -17,7 +17,7 @@ CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
 CURRENT_TASK_ID=REF-CUI-R0A-SOURCE-GEOMETRY-FREEZE-H01
 TASK_OWNER=H01
-TASK_STATUS=READY_FOR_HOST
+TASK_STATUS=HOST_HOLD
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -230,13 +230,13 @@ Design-side source recovery/audit is recorded separately and does not rewrite th
 Current task return:
 
 ```text
-TASK_STATUS=NOT_RUN_YET
+TASK_STATUS=HOST_HOLD
 HOST=H01
-HOST_START_COMMIT=
-HOST_END_COMMIT=
-FINAL_STATUS=
-EVIDENCE_PATH=
-NOTES=
+HOST_START_COMMIT=e84e6dc
+HOST_END_COMMIT=f7dd5b670266c5e4356c8aa760260d4f6a456b4d
+FINAL_STATUS=HOLD_REF_CUI_FIGURE_ACCESS_FAILED
+EVIDENCE_PATH=evidence/ref_cui_r0a_h01_20260923_1229/
+NOTES=Cui 2023 publisher full text/figures inaccessible to H01: Wiley landing/pdfdirect/pdf/epdf return HTTP 403 behind a Cloudflare JS challenge; IET Digital Library and DOAJ also 403; Unpaywall/OpenAlex/Semantic Scholar report GOLD OA but give only the blocked DOI (url_for_pdf=null, has_fulltext=false, no mirror). H01 did not attempt to defeat the challenge. Table-1 values transcribed (PAPER_EXPLICIT) but all 26 symbols are MAPPING_UNRESOLVED because Figure 7 could not be inspected; no guess made. Delivered refs/cui2023/GEOMETRY_MAP.md and refs/cui2023/parameters.csv. REF_CUI_GEOMETRY_SCHEMATIC.svg deliberately NOT created (a redraw would be fabricated without Figure 7). DETERMINISTIC_CAD_READY=NO, SOLVER_READY=NO. No CST/solver; no publisher PDF/figure downloaded into repo. Unblock: give H01 the PDF as a git-ignored local file, supply a project-owned Fig.7 coordinate description, or map design-side. Doc nit: handoff still contains a stale duplicated R0.1B2 task fragment (lines ~152-163) before the REF-CUI HOST TASK.
 ```
 
 The host updates this section, commits/pushes, then stops.
