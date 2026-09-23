@@ -5,12 +5,12 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=2
+HANDOFF_VERSION=3
 CANONICAL_BRANCH=project/r0-charts-scaffold
-CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
-CURRENT_TASK_ID=REF-CUI-R0A-DESIGN-SOURCE-MAPPING
-TASK_OWNER=DESIGN
-TASK_STATUS=READY_FOR_DESIGN
+CURRENT_GATE=REF-CUI-PASSIVE-REFERENCE
+CURRENT_TASK_ID=REF-CUI-R0B-BUILD-ONLY-H01
+TASK_OWNER=H01
+TASK_STATUS=READY_FOR_HOST
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -20,7 +20,7 @@ HARDWARE_PERMISSION=NO
 
 ## 1. Sync protocol
 
-Execution host sync shortcut:
+Execution host shortcut:
 
 ```powershell
 .\scripts\sync_handoff.ps1
@@ -34,11 +34,7 @@ Before any work, read:
 
 Only the side named by `TASK_OWNER` may advance the current task.
 
-- `READY_FOR_HOST`: H01 may execute the HOST TASK, commit/push, update HOST RETURN, then stop.
-- `HOST_COMPLETE` / `HOST_HOLD`: design side reviews.
-- `READY_FOR_DESIGN`: H01 must not start a new scientific task.
-
-## 2. Stable project state
+## 2. Stable architecture state
 
 MAINLINE:
 - CHARTS-inspired planar balanced active element.
@@ -46,82 +42,119 @@ MAINLINE:
 FIRST_BACKUP:
 - PUMA / unbalanced tightly-coupled element.
 
-CHARTS state:
+REF-CUI:
+- REFERENCE_ONLY passive-EM validation structure.
+- It does not replace MAINLINE.
+
+CHARTS exact center/feed geometry remains publicly under-specified.
+Do not modify CHARTS during the current task.
+
+## 3. REF-CUI source state
+
+The user supplied the publisher PDF to the design side.
+
+Design-side high-resolution review of Figure 7(a)/(b)/(c) plus Table 1 completed the source map.
 
 ```text
-V03_VISIBLE_TOPOLOGY=DESIGN_ACCEPTED
-V03_EVIDENCE=evidence/r0_1a3_h01_20260922_2158/
-CHARTS_EXACT_CENTER_FEED=UNDER_SPECIFIED_PUBLICLY
-FIG40_SEMANTICS=PARTIAL
-SOLVER_READY_EXACT_CHARTS=NO
+REF_CUI_PRIMARY_SOURCE=USER_SUPPLIED_PUBLISHER_PDF
+MAPPED_SYMBOLS_EXACT=26/26
+SOURCE_GEOMETRY_MAPPING=PASS
+DETERMINISTIC_CAD_MAPPING_READY=YES
+BUILD_ONLY_PERMISSION=YES
+SOLVER_PERMISSION=NO
 ```
 
-Relevant design-side audit:
-- `docs/R0_1B2_DESIGN_SIDE_PRIMARY_SOURCE_AUDIT_20260923.md`
-- `refs/charts2025/CENTER_FEED_EXTRACTION.md`
+Authoritative repository inputs:
 
-Decision D0006:
-- do not invent unpublished CHARTS center/feed geometry;
-- keep CHARTS as MAINLINE inspiration;
-- use REF-CUI as REFERENCE_ONLY passive-EM workflow validation if deterministic geometry can be frozen.
-
-## 3. REF-CUI current state
-
-H01 source task:
-
-```text
-H01_STATUS=HOLD_REF_CUI_FIGURE_ACCESS_FAILED
-H01_EVIDENCE=evidence/ref_cui_r0a_h01_20260923_1229/
-H01_MAPPED_SYMBOLS=0/26
-CAUSE=publisher Cloudflare/WAF access block
-```
-
-Design-side source recovery:
-
-```text
-WILEY_FULL_TEXT_ACCESS=YES
-FIGURE_7A_INDEXED_IMAGE_ACCESS=YES
-MAPPED_SYMBOLS_EXACT=3/26
-Lg=260 mm -> square main ground-plane side length
-H=80 mm -> radiator-to-main-ground height
-Lr=115 mm -> square-loop side length
-FIGURE_7B_EXACT_LABEL_ENDPOINTS=NOT_YET_RECOVERED
-FIGURE_7C_EXACT_BALUN_SEGMENT_MAPPING=NOT_YET_RECOVERED
-DETERMINISTIC_FULL_CAD_READY=NO
-SOLVER_READY=NO
-```
-
-Source/provenance:
 - `refs/cui2023/PROVENANCE.md`
 - `refs/cui2023/GEOMETRY_MAP.md`
 - `refs/cui2023/parameters.csv`
+- `docs/figures/REF_CUI_GEOMETRY_SCHEMATIC.svg`
+- `docs/NEXT_ACTION_REF_CUI_R0B_BUILD_ONLY_20260923.md`
 
-The design side is currently attempting to resolve Figure 7(b)/(c) mappings.
-H01 must not retry Wiley/Cloudflare unless a later handoff explicitly requests it.
+H01 does not need publisher-web access and must not retry Cloudflare/Wiley for this task.
 
 ## 4. HOST TASK
 
-**NONE.**
+### Task ID
 
-Current owner is DESIGN. H01 should only sync/read and wait.
+**REF-CUI-R0B-BUILD-ONLY-H01**
+
+Execute exactly:
+
+`docs/NEXT_ACTION_REF_CUI_R0B_BUILD_ONLY_20260923.md`
+
+### Objective
+
+Create and run a deterministic CST 2022 **BUILD-ONLY** reference model of Cui 2023 from the frozen project geometry map.
+
+No EM solver result is authorized.
+
+### Required outputs
+
+Create at minimum:
+
+- `source/cst/REF_CUI_R0B_BUILD_ONLY_V01.mcr`
+- `source/cst/REF_CUI_R0B_BUILD_ONLY_V01.bas`
+- `scripts/audit_ref_cui_r0b_macro.py`
+- `em/cst/REF_CUI_069_152/README.md`
+- `em/cst/REF_CUI_069_152/RUNBOOK_BUILD_ONLY.md`
+- `evidence/ref_cui_r0b_h01_<YYYYMMDD_HHMM>/...`
+
+### Mandatory constraints
+
+- all 26 source-mapped dimensions must remain parameterized,
+- Rogers 4350B, er=3.48, thickness=0.76 mm,
+- main ground = 260 mm square,
+- radiator height = 80 mm,
+- square loop = 115 mm outer side, 5.9 mm trace width,
+- crossed dipole + four open slots,
+- two orthogonal vertical balun boards and metal patterns,
+- no port objects,
+- no solver,
+- no monitor,
+- no optimization,
+- no QPL9547/LNA,
+- no GNSS scaling,
+- no CHARTS edits.
+
+If a remaining CAD construction choice is not source-unique, label it
+`CAD_CONSTRUCTION_ASSUMPTION` and return HOLD if it materially affects source fidelity.
+
+### Allowed final status
+
+Exactly one:
+
+- `PASS_REF_CUI_R0B_BUILD_ONLY`
+- `HOLD_REF_CUI_R0B_CAD_AMBIGUITY`
+- `HOLD_REF_CUI_R0B_CST_RUNTIME_SYNTAX`
+- `HOLD_REF_CUI_R0B_VISUAL_MISMATCH`
+- `FAIL_REF_CUI_R0B_REPLAY`
+
+Commit/push, update HOST RETURN, then stop.
 
 ## 5. HOST RETURN
 
-Most recent H01 return:
+Previous H01 source-access HOLD remains preserved at:
+- `evidence/ref_cui_r0a_h01_20260923_1229/`
+
+It is superseded only as an access blocker; the historical evidence remains valid.
+
+Current task return:
 
 ```text
-TASK_STATUS=HOST_HOLD
+TASK_STATUS=NOT_RUN_YET
 HOST=H01
-FINAL_STATUS=HOLD_REF_CUI_FIGURE_ACCESS_FAILED
-EVIDENCE_PATH=evidence/ref_cui_r0a_h01_20260923_1229/
-NOTES=Publisher figures blocked by Cloudflare; no bypass attempted; no CST/solver.
+HOST_START_COMMIT=
+HOST_END_COMMIT=
+FINAL_STATUS=
+EVIDENCE_PATH=
+CST_PROJECT_PATH_OR_HASH=
+NOTES=
 ```
 
-## 6. Current design-side stop condition
+## 6. Stop rule
 
-Do not authorize a deterministic REF-CUI CST build until either:
+There is no pre-authorized solver task.
 
-1. Figure 7(b)/(c) exact parameter endpoints are recovered sufficiently for CAD, or
-2. a documented decision replaces REF-CUI with a reference whose exact geometry is genuinely accessible.
-
-No solver, L-band scaling, LNA work, or CHARTS geometry edit is authorized by this handoff.
+After H01 returns, DESIGN must compare the CST build screenshots/model inventory against the user-supplied primary PDF and decide whether REF-CUI can proceed to a passive solver gate.
