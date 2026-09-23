@@ -15,9 +15,9 @@
 HANDOFF_VERSION=1
 CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
-CURRENT_TASK_ID=R0.1B2-CENTER-FEED-SOURCE-RECOVERY-H01
+CURRENT_TASK_ID=REF-CUI-R0A-SOURCE-GEOMETRY-FREEZE-H01
 TASK_OWNER=H01
-TASK_STATUS=HOST_HOLD
+TASK_STATUS=READY_FOR_HOST
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -98,53 +98,50 @@ Canonical branch:
 
 `project/r0-charts-scaffold`
 
-Host registration already completed by H01:
+Host:
+- H01 / DESKTOP-GBTI6Q4
+- CST 2022.5
+- Miniconda Python
+- see `docs/HOST_ENVIRONMENT.md`
 
-- Host: `DESKTOP-GBTI6Q4`
-- CST: CST Studio Suite 2022.5
-- Python: Miniconda CPython 3.13.9
-- Detailed paths/toolchain: `docs/HOST_ENVIRONMENT.md`
-
-Verified execution/toolchain state from prior tasks:
+CHARTS state:
 
 ```text
-V01_STATUS=PASS_EXECUTION_REPLAY_ONLY / SCIENTIFICALLY_SUPERSEDED
-V01_EVIDENCE=evidence/r0_1a_h01_20260922_2052/
-V02_STATUS=PASS_EXECUTION_REPLAY_ONLY / SCIENTIFICALLY_SUPERSEDED
-V02_EVIDENCE=evidence/r0_1a2_h01_20260922_2123/
-V03_STATUS=PASS_R0_V03_12SLOT_TOPOLOGY_BUILD_ONLY / DESIGN_ACCEPTED
+V03_VISIBLE_TOPOLOGY=DESIGN_ACCEPTED
 V03_EVIDENCE=evidence/r0_1a3_h01_20260922_2158/
-V03_REVIEW=docs/R0_1A3_DESIGN_REVIEW_20260922.md
-SOLVER_RUN=NO
+PRIMARY_SOURCE_ACCESS_H01=BLOCKED_BY_WAF
+PRIMARY_SOURCE_ACCESS_DESIGN_SIDE=YES
+FIG40_SEMANTICS=PARTIAL:CENTER_REGION_DIMENSION_EXACT_FEATURE_UNRESOLVED
+DIFFERENTIAL_TERMINALS_GEOMETRY=UNRESOLVED
+CENTRAL_REMOVED_REGION=PARTIAL
+LOCAL_FEED_GROUND=EXISTS_DIMENSIONS_UNRESOLVED
+SOLVER_READY_EXACT_CHARTS=NO
 ```
 
-Latest design-side review of CHARTS Fig.2(a):
+Design-side official-PDF audit:
 
-- V0.2 still under-resolved the outer slot topology.
-- The fabricated board has **8 outer slot segments**: 2 per board side.
-- It also has **4 inner radial slots**.
-- Total disconnected slot count is therefore **12**.
-- Each side retains a midpoint conductor bridge.
-- Corner conductor bridges remain.
-- No large center through-hole is introduced in V0.3.
-- The Fig.1 40 mm label is retained but its exact semantics are unresolved.
+- `docs/R0_1B2_DESIGN_SIDE_PRIMARY_SOURCE_AUDIT_20260923.md`
+- `refs/charts2025/CENTER_FEED_EXTRACTION.md`
 
-Current V0.3 photo-constrained topology values:
+Conclusion:
+- CHARTS source access is no longer the blocker.
+- Public CHARTS center/feed geometry is under-specified.
+- Do not invent an exact feed.
+- CHARTS-inspired active planar element remains MAINLINE.
 
-- board span = 247.5 mm
-- opposing outer-slot centerline span = 227.5 mm
-- outer slot width = 5 mm
-- each outer slot segment = 94.125 mm
-- midpoint conductor bridge = 18 mm
-- inner slot width = 9 mm
-- inner slot length = 73 mm
-- visible center clear span = 60 mm
-- height over ground = 200 mm
+Decision D0006 authorizes a **REFERENCE_ONLY** solver-validation path using Cui 2023, which publishes a complete geometry table and material stack.
 
-Source/provenance:
-- `refs/charts2025/PHOTO_GEOMETRY_ESTIMATE.md`
-- `refs/charts2025/FIGURE_EXTRACTION.md`
-- `docs/R0_RECONSTRUCTION_ASSUMPTIONS.md`
+Current REF-CUI source facts are recorded in:
+- `refs/cui2023/PROVENANCE.md`
+
+Current permissions:
+
+- REF-CUI source/geometry provenance work: YES
+- CST: NO
+- solver: NO
+- optimization: NO
+- GNSS L-band scaling: NO
+- LNA integration: NO
 
 ---
 
@@ -163,43 +160,61 @@ Design-side review has now verified the official IEICE full-text PDF and recorde
 - `docs/R0_1B_SOURCE_RECOVERY_20260922.md`
 - `refs/charts2025/PROVENANCE.md`
 
-The official PDF may be downloaded locally for inspection but must not be committed.
+Th# HOST TASK
+
+## Task ID
+
+**REF-CUI-R0A-SOURCE-GEOMETRY-FREEZE-H01**
 
 ## Objective
 
-Repeat only the previously blocked high-resolution Fig. 1(a) / Fig. 2(a) center-feed provenance audit.
+Freeze the exact source-to-geometry mapping for the fully specified Cui 2023 reference antenna.
+
+This is a **source/provenance task only**.
 
 Read and follow exactly:
 
-`docs/NEXT_ACTION_R0_1B2_CENTER_FEED_SOURCE_RECOVERY_20260922.md`
+`docs/NEXT_ACTION_REF_CUI_R0A_SOURCE_GEOMETRY_FREEZE_20260923.md`
 
-## Key source
+Primary open-access source:
 
-Direct official IEICE PDF:
+https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/mia2.12343
 
-https://www.ieice.org/publications/proceedings/bin/pdf_link.php?fname=1571143655.pdf&iconf=ISAP&lang=E&number=1571143655&vol=98&year=2025
+The complete published numeric table is already transcribed into:
 
-## Required return fields
+`refs/cui2023/PROVENANCE.md`
 
-- `FIG40_SEMANTICS=RESOLVED:<meaning>|PARTIAL|UNRESOLVED`
-- `DIFFERENTIAL_TERMINALS_GEOMETRY=RESOLVED|PARTIAL|UNRESOLVED`
-- `CENTRAL_REMOVED_REGION=RESOLVED|PARTIAL|UNRESOLVED`
-- `SOLVER_READY=YES|NO`
+Your job is to map every symbol to the correct physical feature/panel without guessing.
 
-Final status exactly one of:
+## Required output
 
-- `PASS_R0_CENTER_FEED_PRIMARY_SOURCE_AUDIT_COMPLETE`
-- `HOLD_R0_CENTER_FEED_SOURCE_AMBIGUOUS`
-- `HOLD_R0_PRIMARY_SOURCE_ACCESS_FAILED`
+At minimum:
+
+- `refs/cui2023/GEOMETRY_MAP.md`
+- `refs/cui2023/parameters.csv`
+- `docs/figures/REF_CUI_GEOMETRY_SCHEMATIC.svg`
+- `evidence/ref_cui_r0a_h01_<YYYYMMDD_HHMM>/RETURN_REPORT.md`
+- source access / parameter mapping evidence
+
+Do not commit publisher PDF or raw figures.
+
+## Final status
+
+Exactly one:
+
+- `PASS_REF_CUI_SOURCE_GEOMETRY_FROZEN`
+- `HOLD_REF_CUI_FIGURE_ACCESS_FAILED`
+- `HOLD_REF_CUI_PARAMETER_MAPPING_AMBIGUOUS`
 
 ## Strict prohibitions
 
 - NO CST.
 - NO solver.
-- NO geometry edit.
-- NO L-band scaling.
-- NO LNA/shield/Bias-Tee work.
-- NO copyrighted PDF or raw source-figure commit.
+- NO optimization.
+- NO CHARTS geometry edits.
+- NO GNSS L-band scaling.
+- NO QPL9547/LNA work.
+- NO architecture promotion.
 
 After push, stop. No successor task is pre-authorized.
 
@@ -207,23 +222,21 @@ After push, stop. No successor task is pre-authorized.
 
 # HOST RETURN
 
-Previous execution evidence remains preserved in:
+Previous H01 CHARTS source-access HOLD remains preserved at:
+- `evidence/r0_1b2_h01_20260923_1211/`
 
-- `evidence/r0_1a_h01_20260922_2052/`
-- `evidence/r0_1a2_h01_20260922_2123/`
-- `evidence/r0_1a3_h01_20260922_2158/`
-- `evidence/r0_1b_h01_20260922_2253/` (source-unavailable HOLD; preserved as historical evidence)
+Design-side source recovery/audit is recorded separately and does not rewrite that evidence.
 
 Current task return:
 
 ```text
-TASK_STATUS=HOST_HOLD
+TASK_STATUS=NOT_RUN_YET
 HOST=H01
-HOST_START_COMMIT=cb7e650
-HOST_END_COMMIT=4085e68650192371d04fdfa3c41fa47e0142eeff
-FINAL_STATUS=HOLD_R0_PRIMARY_SOURCE_ACCESS_FAILED
-EVIDENCE_PATH=evidence/r0_1b2_h01_20260923_1211/
-NOTES=Attempted to download the recovered official IEICE PDF but the publisher is behind an AWS WAF "Human Verification" CAPTCHA: landing and direct-PDF URLs returned HTTP 405 with a 2144-byte WAF challenge page (curl/webfetch) and HTTP 403 (Invoke-WebRequest). No PDF bytes obtained; H01 did not bypass the CAPTCHA. Therefore no Fig.1(a)/Fig.2(a) center-feed audit was possible. Decision fields: FIG40_SEMANTICS=UNRESOLVED, DIFFERENTIAL_TERMINALS_GEOMETRY=UNRESOLVED, CENTRAL_REMOVED_REGION=PARTIAL, SOLVER_READY=NO. Updated refs/charts2025/CENTER_FEED_EXTRACTION.md with an R0.1B2 access section (prior history preserved; no value upgraded). No CST/solver; no copyrighted PDF/crop stored or committed (challenge page kept in local temp only). See source_access_log.txt and figure_measurements.md. Suggested unblock: provide the PDF to H01 as a git-ignored local file, or perform the figure audit design-side and issue a consolidation task.
+HOST_START_COMMIT=
+HOST_END_COMMIT=
+FINAL_STATUS=
+EVIDENCE_PATH=
+NOTES=
 ```
 
 The host updates this section, commits/pushes, then stops.
