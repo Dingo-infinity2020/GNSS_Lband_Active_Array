@@ -153,3 +153,35 @@ Until then, R0 remains build-only and no passive solver is authorized.
 - The `40 mm` label was not silently decided.
 - No copyrighted PDF/figure was copied into the repository.
 - V0.3 geometry was not modified; no CST/solver was run.
+
+
+## 0c. Design-side official PDF audit (2026-09-23)
+
+The design side successfully accessed the official IEICE PDF through a compliant web path and reviewed the source text plus Fig. 1(a)/Fig. 2(a).
+
+This resolves the **access** question but does not fully resolve the **geometry** question.
+
+Primary-source conclusions:
+
+- `PRIMARY_SOURCE_ACCESS=YES_DESIGN_SIDE`
+- the Fig.1 `40 mm` label is definitely associated with the center region,
+- its exact endpoints / geometric feature identity remain insufficiently exposed,
+- Fig.2 shows center electronics occupying the feed region rather than a simple large empty square aperture,
+- the paper explicitly confirms a balanced differential output feeding a pair of LNAs,
+- a small local ground exists beneath the feed points, with LNA circuitry mounted at the feed region,
+- exact terminal pads, local-ground dimensions, and center copper-removal details remain unpublished/obscured.
+
+Updated decision fields:
+
+```text
+FIG40_SEMANTICS=PARTIAL:CENTER_REGION_DIMENSION_EXACT_FEATURE_UNRESOLVED
+DIFFERENTIAL_TERMINALS_GEOMETRY=UNRESOLVED
+CENTRAL_REMOVED_REGION=PARTIAL
+LOCAL_FEED_GROUND=EXISTS_DIMENSIONS_UNRESOLVED
+SOLVER_READY_EXACT_CHARTS=NO
+```
+
+The blocker is now classified as **PRIMARY_SOURCE_UNDERSPECIFIED**, not source-access failure.
+
+See:
+`docs/R0_1B2_DESIGN_SIDE_PRIMARY_SOURCE_AUDIT_20260923.md`.
