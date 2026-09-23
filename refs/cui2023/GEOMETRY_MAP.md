@@ -106,3 +106,59 @@ Either:
 
 Until then, no symbol may be assigned a physical feature and no deterministic
 REF-CUI CST build is authorized.
+
+
+---
+
+## 7. Design-side source recovery / partial mapping (2026-09-23)
+
+Status: **DESIGN_SIDE_FULL_TEXT_ACCESS_OK / FIGURE_MAPPING_PARTIAL**
+
+H01's Cloudflare HOLD remains valid execution-host evidence. The design side was
+able to access the Wiley full-text HTML and indexed Figure 7(a) through a
+separate compliant web path.
+
+### High-confidence mappings now source-supported
+
+| Symbol | Value | Physical feature | Evidence | Confidence | Deterministic CAD |
+|---|---:|---|---|---|---|
+| Lg | 260 mm | square main ground-plane / reflector side length for the single element | Figure 7(a) labels Lg along the ground-plane edge; Figure 16 later uses Lg/Wg for reflector dimensions | HIGH | YES for reflector |
+| H | 80 mm | vertical separation from antenna/radiator plane to the main ground plane | Figure 7(a) labels H vertically; Table 1 gives 80 mm | HIGH | YES |
+| Lr | 115 mm | square-loop side length | Section 3.2 explicitly states every two neighboring loop sides form a folded dipole of length 2 x Lr = 230 mm | HIGH | YES |
+
+### Family-level mappings, not yet exact enough for CAD
+
+| Symbols | Current family interpretation | Evidence | Confidence | Deterministic CAD |
+|---|---|---|---|---|
+| Wr | square-loop conductor width is the leading interpretation | paired with Lr in Table 1; exact Figure 7(b) label endpoint not yet independently recovered | MEDIUM | NO |
+| Ld | characteristic dipole/radiator dimension | Table 1 ordering and Figure 7(b) top-view family | MEDIUM | NO |
+| Ws, Ls | open-slot width/length family is the leading interpretation | open slots are the paper-explicit high-frequency resonator; exact label endpoints remain unseen | MEDIUM | NO |
+| Wg1, Wg2, Wp, Lp1, Lp2, Lp3 | radiator/feed-center geometry family | appear in the top-geometry parameter family before balun-specific Lb/Wb dimensions | LOW-MEDIUM | NO |
+| Lb1..Lb5, Wb1..Wb8 | broadband-balun geometry family | the paper explicitly says the two broadband baluns are detailed in Figure 7(c); b-family grouping is consistent | HIGH for family, LOW for exact segment | NO |
+
+### Source-explicit topology facts confirmed
+
+- two +/-45-degree polarized dipoles,
+- a square loop surrounds the dipoles,
+- diamond-like material is removed from the center part of each dipole arm to
+  create open slots,
+- two orthogonal broadband baluns feed the two polarizations,
+- radiator, square loop, and baluns are on Rogers 4350B, er=3.48, thickness
+  0.76 mm,
+- the radiator is 80 mm above the main ground plane,
+- lower resonance near 0.7 GHz is associated with the square loop,
+- upper resonance near 1.5 GHz is associated with the open slots.
+
+### Current decision fields
+
+```text
+DESIGN_SIDE_FULL_TEXT_ACCESS=YES
+MAPPED_SYMBOLS_EXACT=3/26
+FIGURE_7B_EXACT_LABEL_ENDPOINTS=NOT_YET_RECOVERED
+FIGURE_7C_EXACT_BALUN_SEGMENT_MAPPING=NOT_YET_RECOVERED
+DETERMINISTIC_FULL_CAD_READY=NO
+SOLVER_READY=NO
+```
+
+No unresolved symbol is promoted to an exact physical feature merely from its
+name or numerical plausibility.
