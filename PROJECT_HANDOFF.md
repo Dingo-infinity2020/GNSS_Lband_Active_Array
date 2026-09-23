@@ -17,7 +17,7 @@ CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R0-CHARTS-RECON-PASSIVE
 CURRENT_TASK_ID=R0.1B2-CENTER-FEED-SOURCE-RECOVERY-H01
 TASK_OWNER=H01
-TASK_STATUS=READY_FOR_HOST
+TASK_STATUS=HOST_HOLD
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=NO
@@ -217,13 +217,13 @@ Previous execution evidence remains preserved in:
 Current task return:
 
 ```text
-TASK_STATUS=NOT_RUN_YET
+TASK_STATUS=HOST_HOLD
 HOST=H01
-HOST_START_COMMIT=
-HOST_END_COMMIT=
-FINAL_STATUS=
-EVIDENCE_PATH=
-NOTES=
+HOST_START_COMMIT=cb7e650
+HOST_END_COMMIT=4085e68650192371d04fdfa3c41fa47e0142eeff
+FINAL_STATUS=HOLD_R0_PRIMARY_SOURCE_ACCESS_FAILED
+EVIDENCE_PATH=evidence/r0_1b2_h01_20260923_1211/
+NOTES=Attempted to download the recovered official IEICE PDF but the publisher is behind an AWS WAF "Human Verification" CAPTCHA: landing and direct-PDF URLs returned HTTP 405 with a 2144-byte WAF challenge page (curl/webfetch) and HTTP 403 (Invoke-WebRequest). No PDF bytes obtained; H01 did not bypass the CAPTCHA. Therefore no Fig.1(a)/Fig.2(a) center-feed audit was possible. Decision fields: FIG40_SEMANTICS=UNRESOLVED, DIFFERENTIAL_TERMINALS_GEOMETRY=UNRESOLVED, CENTRAL_REMOVED_REGION=PARTIAL, SOLVER_READY=NO. Updated refs/charts2025/CENTER_FEED_EXTRACTION.md with an R0.1B2 access section (prior history preserved; no value upgraded). No CST/solver; no copyrighted PDF/crop stored or committed (challenge page kept in local temp only). See source_access_log.txt and figure_measurements.md. Suggested unblock: provide the PDF to H01 as a git-ignored local file, or perform the figure audit design-side and issue a consolidation task.
 ```
 
 The host updates this section, commits/pushes, then stops.
