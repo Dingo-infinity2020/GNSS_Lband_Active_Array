@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1E0A-PERIODIC-CONFIG-BUILD-ONLY-NW",
+    "stage": "R1E0A_PERIODIC_CONFIG_BUILD_ONLY",
+    "status": "READY_FOR_BUILD_ONLY"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "state": "ACTIVE"
+  },
+  "source": {
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "branch": "project/r0-charts-scaffold",
+    "head_commit": "RESOLVE_AT_PREFLIGHT",
+    "head_on_trusted_remote": false
+  },
+  "archive": {
+    "mode": "CHECKPOINTED",
+    "destination": "remote Git + R1E0A build artifact after execution",
+    "critical_artifacts": [],
+    "completed": false
+  },
+  "closeout": {
+    "task_node": "",
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}

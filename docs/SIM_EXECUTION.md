@@ -7,43 +7,67 @@
 
 ## Current stage
 
-DESIGN_R1E0_PERIODIC_UNIT_CELL_94MM
+R1E0A_PERIODIC_CONFIG_BUILD_ONLY
 
-BUILD_AUTHORIZED: false
+BUILD_AUTHORIZED: true
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Last completed stage
+## Host/toolchain
 
-R1A5FQ clean-feed isolated equivalence
+Host: NW / DESKTOP-GBTI6Q4
+CST: 2022.5
+Runtime: CST bundled Python 3.6 / cst.interface
+Mode: BUILD_ONLY / configuration-only
 
-Status:
-PASS_R1A5FQ_CLEAN_FEED_EQUIVALENT
+## Immutable source
 
-## Canonical clean-feed inputs
-
-Pol-A:
 D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLA_SINGLE_PORT_V01.cst
 
 SHA256:
 74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce
 
-Pol-B:
-D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLB_SINGLE_PORT_V01.cst
+## R1E0A periodic configuration
 
-SHA256:
-11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf
+- square unit cell
+- nominal pitch = 94 mm via UnitCellFitToBoundingBox
+- Xmin/Xmax/Ymin/Ymax = unit cell
+- Zmin/Zmax = expanded open
+- OpenAddSpaceFactor = 0.5
+- PeriodicUseConstantAngles = False
+- theta = 0 deg
+- phi = 45 deg
+- direction = outward
+- UnitCellAngle = 90 deg
+- no explicit UnitCellOrigin override
+- no Floquet ports
+- existing differential discrete port retained
+- HF Frequency Domain selected
+- no solver start
 
-## R1E0 design targets
+## Verified CST API source
 
-- square periodic lattice
-- initial pitch 94 mm
-- FR4 baseline
-- periodic/unit-cell x/y boundaries
-- open/radiating z direction
-- scan phase controlled explicitly
-- active differential impedance as the principal output
-- no LNA
-- no isolated-element optimization
+Installed CST macro:
+D:\Program Files (x86)\CST Studio Suite 2022\Library\Macros\Solver\F-Solver\Change settings from Full Array to Unitcell^+MWS.mcr
 
-No execution action is permitted until the R1E0 contract is frozen and separately authorized.
+R1E0 copies only the boundary/scan metadata relevant to a discrete-port-driven antenna. The Floquet-port and parameter-sweep sections of the installed macro are intentionally not copied.
+
+## Paths
+
+Work:
+D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work
+
+Evidence:
+evidence/r1e0a_dc_nw_20260924_build01/
+
+Expected CST:
+D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst
+
+## Stop boundary
+
+Fresh reopen + periodic metadata verification only.
+
+No solver.
+No R1E0B broadside solve.
+No scan sweep.
+No pitch/material/LNA work.

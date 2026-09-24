@@ -1,3 +1,5 @@
+[Reading 190 lines from start (total: 190 lines, 0 remaining)]
+
 [Reading 185 lines from start (total: 185 lines, 0 remaining)]
 
 [Reading 180 lines from start (total: 180 lines, 0 remaining)]
@@ -54,7 +56,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1E0-DESIGN-PERIODIC-UNIT-CELL-94MM**
+Current task: **R1E0A-PERIODIC-CONFIG-BUILD-ONLY-NW**
 
 Authoritative current execution state is defined by:
 - `PROJECT_MAINLINE.md`
@@ -63,18 +65,16 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- inspect the closed R1A5F/R1A5FQ clean-feed artifacts/evidence: YES
-- design/document the first 94-mm periodic unit-cell workflow: YES
-- inspect CST 2022.5 installed examples/macros for exact boundary/scan API: YES
-- run any periodic CST solver: NO
-- modify radiator geometry/materials/ports: NO
-- reopen isolated-element optimization: NO
-- pitch/material sweep: NO
-- LNA integration: NO
-- production solve/CST251: NO
+- copy the protected clean Pol-A R1A5F CST into fresh R1E0A work: YES
+- apply the frozen unit-cell/broadside boundary metadata: YES
+- save, close, fresh reopen and audit periodic metadata: YES
+- run any CST solver: NO
+- create Floquet ports: NO
+- modify geometry/materials/feed port: NO
+- scan sweep / pitch-material trade / LNA integration / CST251: NO
 
-The isolated-element passive stage is closed.
-R1E0 is the first primary array-physics gate and must focus on active differential impedance under periodic scan.
+This is the first array-physics configuration gate.
+Stop after periodic metadata persistence qualification.
 
 ## Architecture control
 
@@ -156,6 +156,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

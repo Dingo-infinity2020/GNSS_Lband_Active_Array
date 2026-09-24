@@ -3,19 +3,20 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=26
+HANDOFF_VERSION=27
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E0-PERIODIC-UNIT-CELL-BASELINE
-CURRENT_TASK_ID=R1E0-DESIGN-PERIODIC-UNIT-CELL-94MM
-TASK_OWNER=DESIGN
-TASK_STATUS=READY_FOR_DESIGN
+CURRENT_TASK_ID=R1E0A-PERIODIC-CONFIG-BUILD-ONLY-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=READY_FOR_BUILD_ONLY
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=NO
+BUILD_AUTHORIZED=YES_R1E0A_CONFIG_ONLY
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
+LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
@@ -23,84 +24,97 @@ CST251_PERMISSION=NO
 
 Read `PROJECT_MAINLINE.md` first.
 
-The isolated-element passive qualification is now CLOSED.
+The isolated-element passive stage is closed.
 
-The active-array mainline has moved to:
-R1E0 periodic unit cell -> R1E1 pitch/material array trade -> R1E2 active-impedance atlas.
+R1E0 is now the first primary array-physics gate.
 
-Do not reopen isolated-element S11 optimization unless a later array result demonstrates a quantified need.
+## R1E0 design
 
-## Closed R1A5FQ stage
+Plan:
+`docs/R1E0_PERIODIC_UNIT_CELL_PLAN.md`
 
-Final status:
-`PASS_R1A5FQ_CLEAN_FEED_EQUIVALENT`
+CST API notes:
+`docs/R1E0_CST_UNIT_CELL_API_NOTES.md`
 
-Formal source HEAD:
-`9d4d7dbf0741df2776298c2be51fa8df26ff3427`
+Initial lattice:
+- square
+- pitch 94 mm
+- Pol-A clean feed
+- FR4 baseline
 
-Formal invocation count:
-1
+## R1E0A authorized build-only task
 
-Exit:
-0
+Purpose:
+validate that the actual clean antenna CST can persist the intended unit-cell boundary and scan metadata.
 
-Runtime:
-180.64 s
-
-Key equivalence:
-- A vs R1A5M2 max complex delta = 0.008537500
-- B vs R1A5M2 max complex delta = 0.008399949
-- clean A vs clean B max complex delta = 0.012309052
-- clean A vs clean B max dB difference = 0.456468929 dB
-
-All frozen equivalence gates PASS.
-
-## Clean passive feed basis
-
-Canonical periodic-array starting sources remain the clean R1A5F no-result CSTs:
-
-Pol-A:
+Input:
 `D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLA_SINGLE_PORT_V01.cst`
 
-SHA256:
+Required SHA256:
 `74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce`
 
-Pol-B:
-`D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLB_SINGLE_PORT_V01.cst`
+Config:
+`source/cst/R1E0A_PERIODIC_BROADSIDE_BUILD_ONLY_V01.mcr`
 
-SHA256:
-`11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf`
+Static audit:
+`PASS_R1E0A_STATIC_AUDIT`
 
-R1A5FQ result CSTs and compact evidence remain checkpointed/protected for provenance, but periodic design should derive from the clean R1A5F source models rather than solver-result-bearing copies.
+Runbook:
+`em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E0A_PERIODIC_BUILD_ONLY.md`
 
-## Current task: R1E0 design
+Harness:
+`scripts/run_r1e0a_periodic_build_only_dc.py`
 
-Scientific goal:
-establish the first periodic/unit-cell workflow for the actual array environment.
+## Frozen periodic metadata
 
-Initial baseline from PROJECT_MAINLINE.md:
-- square lattice
-- pitch = 94 mm
-- FR4 baseline
-- clean single differential polarization per model
-- x/y periodic or unit-cell phase boundaries
-- radiating/open z direction
-- scan-dependent active differential impedance
-- no LNA yet
+- Xmin/Xmax = unit cell
+- Ymin/Ymax = unit cell
+- Zmin/Zmax = expanded open
+- OpenAddSpaceFactor = 0.5
+- UnitCellFitToBoundingBox = True
+- structure x/y span expected = 94 mm
+- theta = 0 deg
+- phi = 45 deg
+- direction = outward
+- no Floquet ports
+- retained discrete differential port count = 1
+- HF Frequency Domain selected
+- no solver start
 
-First R1E0 qualification set should remain small:
-- broadside
-- theta = 30 deg
-- theta = 45 deg
-- theta = 60 deg
-- representative low/mid/high L-band frequencies
+## Formal execution
 
-Before authorizing a solver:
-- verify CST 2022.5 boundary/scan API from installed examples/documented macros;
-- freeze exact phase/sign convention;
-- freeze whether model A alone is sufficient for first workflow proof or whether A/B both are required;
-- define broadside sanity relation to the clean isolated baseline;
-- define scan-blindness/anomaly metrics;
-- define lightweight NW versus CST251 routing.
+Host:
+NW / DESKTOP-GBTI6Q4
 
-No periodic build or solver is currently authorized.
+Fresh work:
+`D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work`
+
+Fresh evidence:
+`evidence/r1e0a_dc_nw_20260924_build01/`
+
+Expected CST:
+`D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst`
+
+One formal invocation only.
+No silent retry.
+
+## PASS gate
+
+`PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY` requires:
+
+- source/copy hash locked;
+- geometry identical to R1A5F Pol-A;
+- port count remains 1;
+- fresh reopen succeeds;
+- x/y boundaries read back as unit cell;
+- z boundaries read back as expanded open;
+- structure x/y spans read back as 94 mm;
+- GetUnitCellScanAngle returns valid;
+- theta=0, phi=45, direction=outward;
+- no solver output.
+
+## Stop boundary
+
+Stop after metadata persistence qualification.
+
+Do not run R1E0B broadside periodic solver in this task.
