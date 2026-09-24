@@ -5,254 +5,170 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=5
+HANDOFF_VERSION=6
 CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R1-CHARTS-GNSS-DERIVATIVE
-CURRENT_TASK_ID=R1A3-DESIGN-MATERIALIZATION-FREEZE
-TASK_OWNER=DESIGN
-TASK_STATUS=READY_FOR_DESIGN
+CURRENT_TASK_ID=R1A3-MATERIALIZED-FR4-BUILD-ONLY-DC-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=READY_FOR_BUILD_ONLY
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=NO
+BUILD_AUTHORIZED=YES
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=R1A1_FROZEN_SCALE_ONLY
 LNA_INTEGRATION_PERMISSION=NO
 HARDWARE_PERMISSION=NO
+HUMAN_CST_REVIEW_REQUIRED=YES
+CST_ARTIFACT_PURGE_ALLOWED=NO
 ```
 
-## 1. Global execution protocol
+## 1. Global protocol
 
-This project now adopts:
-- `Dingo-infinity2020/SimulationOps`
-- protocol version 0.2.4
-- adoption baseline commit `45fcb8c89445f05a696cde524d762641ea7ea961`
+This project follows Dingo-infinity2020/SimulationOps protocol 0.2.4 at commit:
+`45fcb8c89445f05a696cde524d762641ea7ea961`.
 
-Project-local execution files:
-- `docs/SIM_EXECUTION.md`
-- `execution/stage_contract.json`
-- `execution/workspace_record_NW_R1A1.json`
+Read in this order before execution:
+1. SimulationOps CHATGPT_ROUTING.md
+2. GLOBAL_DC_SIMULATION_PROTOCOL.md
+3. infrastructure/HOSTS.md
+4. WORKSPACE_LIFECYCLE.md
+5. docs/SIM_EXECUTION.md
+6. execution/stage_contract.json
+7. this handoff
 
-Global host facts remain in SimulationOps `infrastructure/HOSTS.md`.
+Build and solve are separate permissions. This handoff authorizes only BUILD_ONLY.
 
-## 2. Mainline status
+## 2. Architecture state
 
 MAINLINE:
 - CHARTS-inspired planar balanced active element.
 
 R0:
-- `R0_CLOSED_SOURCE_LIMITED`
-
-R1 current model:
-- `CHARTS_GNSS_R1A1_SCALED_APERTURE_V01`
+- R0_CLOSED_SOURCE_LIMITED.
 
 REF-CUI:
-- REFERENCE_ONLY
-- execution/replay PASS only
-- scientific geometry HOLD
-- no solver authorized
+- REFERENCE_ONLY.
+- CST automation/replay evidence only.
+- scientific geometry HOLD.
+- no solver authorized.
 
-## 3. R1A1 scientific freeze
+## 3. Closed R1 stages
 
-Purpose:
-- scale only the accepted R0 V0.3 visible 12-slot aperture topology,
-- use one frozen scale factor,
-- prove deterministic CST construction at L-band physical size,
-- stop before feed/material/ports/solver.
+R1A1:
+- PASS_R1A1_SCALED_APERTURE_BUILD_ONLY
+- evidence commit: 094f11a25e153d5705f9b68d118b4d5ffb0dad9d
+- frozen scale: 0.285714285714
+- 0 ports, no solver.
 
-Frozen scale:
-- `scale_factor = 0.285714285714`
-- nominal 400 MHz source center -> 1.40 GHz project center
+R1A2:
+- PASS_R1A2_FEED_REFERENCE_BUILD_ONLY
+- evidence commit: 7cace83d85eb55fe4a970ce2285abf15bad76d1e
+- one center-gap master + exact 90-degree copies
+- one terminal-reference master + exact 90-degree copies
+- gap and terminal volume spread = 0
+- 0 ports, no solver.
 
-Key derived dimensions:
-- board = 70.714285714 mm
-- outer slot frame = 65.0 mm
-- outer slot width = 1.428571429 mm
-- outer segment = 26.892857143 mm
-- inner slot width = 2.571428571 mm
-- inner slot length = 20.857142857 mm
-- visible center clear span = 17.142857143 mm
-- height over ground = 57.142857143 mm
-- nominal future unit-cell reference = 94 mm
+## 4. R1A3 scientific freeze
 
-The unresolved source 40 mm label is scaled and stored only for provenance; it is not used geometrically.
+Authoritative design files:
+- docs/R1A3_MATERIALIZED_APERTURE_DESIGN.md
+- docs/R1A3_SCIENTIFIC_FREEZE.md
+- em/cst/R1_CHARTS_LBAND/parameters_r1a3_materialized_fr4.csv
 
-## 4. Symmetry rule for next stage
+R1A3 materializes exactly one FR4 cost baseline:
+- board span 70.714285714 mm
+- substrate thickness 1.00 mm
+- FR4 nominal er 4.2
+- FR4 nominal tanD 0.018
+- top conductor physical thickness 0.035 mm
+- conductor modeled as PEC for BUILD_ONLY
+- 12 accepted disconnected through-slots
+- project-owned center cross copper isolation
+- project-owned continuous square-ring copper isolation
 
-R1A1 contains no feed.
+The center cross and square ring are each generated from one master plus three exact 90-degree CST Transform copies.
 
-R1A2 feed rule is already frozen in:
-- `docs/R1A2_CENTER_FEED_SYMMETRY_SPEC.md`
+R1A2 terminal coordinates remain metadata only in R1A3.
+No terminal PEC overlays, physical ports, LNA, or solver are present.
 
-Only one canonical RF terminal geometry may be authored; X-/Y+/Y- must be exact rotations by 180/90/270 degrees.
+## 5. Authorized NW task
 
-## 5. Current DC/NW task
+Task:
+`R1A3-MATERIALIZED-FR4-BUILD-ONLY-DC-NW`
 
-Build host:
-- `NW` / `DESKTOP-GBTI6Q4`
+Host:
+- NW / DESKTOP-GBTI6Q4
 
-Repository workspace:
-- `D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold`
+Repository:
+`D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold`
 
-Build work:
-- `D:\GNSS_Lband_Active_Array\_r1a1_scaled_aperture_work`
+Canonical build work:
+`D:\GNSS_Lband_Active_Array\_r1a3_materialized_fr4_work`
+
+Canonical CST artifact:
+`D:\GNSS_Lband_Active_Array\_r1a3_materialized_fr4_work\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst`
 
 Source bundle:
-- `source/cst/R1A1_CHARTS_SCALED_APERTURE_BUILD_ONLY_V01.mcr`
-- `scripts/audit_r1a1_scaled_aperture.py`
-- `scripts/run_r1a1_build_only_dc.py`
-- `em/cst/R1_CHARTS_LBAND/parameters_r1a1.csv`
-- `em/cst/R1_CHARTS_LBAND/RUNBOOK_R1A1_BUILD_ONLY.md`
+- source/cst/R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.mcr
+- scripts/audit_r1a3_materialized_fr4.py
+- scripts/run_r1a3_build_only_dc.py
+- em/cst/R1_CHARTS_LBAND/parameters_r1a3_materialized_fr4.csv
+- em/cst/R1_CHARTS_LBAND/RUNBOOK_R1A3_BUILD_ONLY.md
 
-Expected:
-- static audit PASS,
-- 2 final solids,
-- 12 slot subtractions consumed,
-- 0 ports,
-- no solver,
-- fresh-reopen persistence.
-
-Allowed final status:
-- `PASS_R1A1_SCALED_APERTURE_BUILD_ONLY`
-- `HOLD_R1A1_STATIC_AUDIT`
-- `HOLD_R1A1_CST_RUNTIME`
-- `HOLD_R1A1_VISUAL_TOPOLOGY`
-- `FAIL_R1A1_REPLAY`
-
-## 6. Stop boundary
-
-Desktop Commander may execute the authorized NW build-only task.
-
-After fresh reopen:
-- capture evidence,
-- commit/push compact evidence,
-- update stage contract/handoff,
-- perform workspace closeout classification.
-
-Do not:
-- create ports,
-- add substrate,
-- add feed,
-- run solver,
-- start optimization,
-- integrate LNA,
-- stage to CST251.
-
-No production solve is authorized by this handoff.
-
-## 7. Execution source
-
-Pre-execution repository HEAD before this handoff update:
-`d1176b310affc9968b3c78f66926258f2345a00d`
-
-DC must record the actual pulled HEAD at preflight and use that as the source identity.
-
-
-## 8. Recovery note — 2026-09-24
-
-Attempt 1 is preserved as:
-- `HOLD_ENVIRONMENT`
-- `evidence/r1a1_dc_nw_20260924_1111/`
-
-The successor task is explicitly authorized:
-
-`R1A1-RECOVERY-CSTPY-BUILD-ONLY-DC-NW`
+Static audit has passed before authorization:
+`PASS_R1A3_STATIC_AUDIT`
 
 Execution interpreter:
 `D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\python.exe`
 
-Reason:
-- Python 3.6.0
-- `import cst, cst.interface` verified
-- no scientific/model changes
+## 6. Required return
 
-See:
-`docs/RECOVERY_R1A1_NW_CST_PYTHON_20260924.md`
+Required evidence:
+- exact source HEAD
+- macro SHA256
+- CST absolute path
+- CST SHA256
+- CST bytes
+- object inventory
+- parameter inventory
+- top view
+- perspective view
+- fresh-reopen inventory
+- fresh-reopen screenshot
+- 0 ports
+- no solver
 
-Still forbidden:
-- solver
-- ports
-- feed
-- substrate/materialization
-- LNA
-- optimization
-- staging to CST251
+Allowed status:
+- PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW
+- HOLD_R1A3_STATIC_AUDIT
+- HOLD_R1A3_CST_RUNTIME
+- HOLD_R1A3_RUNTIME_AUDIT
+- FAIL_R1A3_REPLAY
 
+## 7. Mandatory human CST review gate
 
-## 9. R1A1 closeout
+The user explicitly requires the canonical R1A3 CST artifact for manual inspection.
 
-```text
-R1A1_STATUS=PASS_R1A1_SCALED_APERTURE_BUILD_ONLY
-SOURCE_HEAD=bc06173084cf9c62f99f52c4cfee33afdade9770
-EVIDENCE_COMMIT=094f11a25e153d5705f9b68d118b4d5ffb0dad9d
-EVIDENCE=evidence/r1a1_recovery_dc_nw_20260924_1113/
-CST_SHA256=fc039106312861674d13e92983688672e0fce05d77fbcec6712a075fc2343253
-FINAL_SOLIDS=2
-PORTS=0
-SOLVER_RUN=NO
-FRESH_REOPEN=PASS
-```
+Therefore after build/fresh reopen:
+- preserve the exact canonical CST file on NW;
+- record path/hash/bytes/source;
+- lifecycle state = PROTECTED or CHECKPOINTED with purge_allowed=false;
+- do not hand-edit a review copy and substitute it for the canonical artifact;
+- do not stage it to CST251;
+- do not run any solver.
 
-R1A1 is closed. The baton returns to DESIGN for R1A2 center-feed geometry freeze.
+A BUILD_ONLY PASS stops at:
+`PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW`
 
-NW remains the preferred build host once R1A2 BUILD_ONLY is explicitly authorized.
+Only explicit user review/approval can close this gate and allow a later port/solver design stage.
 
+## 8. Workspace closeout
 
-## 10. R1A2 NW/DC build authorization
+At R1A3 PASS/HOLD:
+- commit/push compact source/evidence/handoff;
+- check git status and active processes;
+- update execution/workspace_record_NW_R1A3.json;
+- keep the canonical CST artifact protected;
+- do not purge the CST work directory.
 
-Task:
-`R1A2-FEED-REFERENCE-BUILD-ONLY-DC-NW`
-
-Authorized:
-- CST BUILD-ONLY on NW,
-- exact-rotation feed-gap/terminal reference overlays,
-- fresh reopen,
-- runtime symmetry audit.
-
-Source bundle:
-- `source/cst/R1A2_CHARTS_FEED_REFERENCE_BUILD_ONLY_V01.mcr`
-- `scripts/audit_r1a2_feed_reference.py`
-- `scripts/run_r1a2_build_only_dc.py`
-- `em/cst/R1_CHARTS_LBAND/parameters_r1a2_feed.csv`
-- `em/cst/R1_CHARTS_LBAND/RUNBOOK_R1A2_BUILD_ONLY.md`
-
-Expected:
-- 10 final solids,
-- 4 gap references from one master + Transform copies,
-- 4 terminal references from one master + Transform copies,
-- equal group volumes to numerical tolerance,
-- 0 ports,
-- no solver.
-
-Reference overlay solids are non-physical and are not subtracted from the aperture in R1A2.
-
-Stop after fresh-reopen/symmetry audit.
-
-Still forbidden:
-- physical ports,
-- materialization/substrate,
-- solver,
-- optimizer,
-- LNA,
-- CST251 staging.
-
-
-## 11. R1A2 closeout
-
-```text
-R1A2_STATUS=PASS_R1A2_FEED_REFERENCE_BUILD_ONLY
-EVIDENCE=evidence/r1a2_dc_nw_20260924_1127/
-EVIDENCE_COMMIT=7cace83d85eb55fe4a970ce2285abf15bad76d1e
-FINAL_SOLIDS=10
-GAP_REFERENCE_COUNT=4
-TERMINAL_REFERENCE_COUNT=4
-GAP_VOLUME_SPREAD=0
-TERMINAL_VOLUME_SPREAD=0
-CST_SHA256=a75f7c48e73f4461ceaedd5f0ebf1c4f118cd764843a98401cd8470444ca7193
-PORTS=0
-SOLVER_RUN=NO
-FRESH_REOPEN=PASS
-```
-
-The exact-rotation construction method is accepted.
-
-The baton returns to DESIGN for R1A3 materialization freeze. R1A2 reference overlays are not yet physical copper cuts/ports.
+No production solve is authorized.

@@ -19,20 +19,26 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R0-CHARTS-RECON-PASSIVE**
+Current task: **R1A3-MATERIALIZED-FR4-BUILD-ONLY-DC-NW**
 
-Do not skip gates.
+Authoritative current execution state is defined by:
+- `PROJECT_HANDOFF.md`
+- `docs/SIM_EXECUTION.md`
+- `execution/stage_contract.json`
 
 Current permissions:
-- literature/provenance work: YES
-- manifest work: YES
-- reconstruction assumptions: YES, if explicitly documented
-- CST geometry build: only after manifest gate PASS
+- R1A3 literature/provenance/manifest work: YES
+- frozen R1A1 scale reuse: YES
+- R1A3 NW CST BUILD_ONLY: YES
+- canonical CST artifact retention for human review: REQUIRED
 - CST solver: NO
 - optimization: NO
-- L-band scaling: NO
 - LNA integration: NO
+- CST251 staging: NO
 - hardware release: NO
+
+R0 is closed source-limited; R1A1 and R1A2 build-only gates have passed.
+R1A3 must stop after fresh reopen and preservation of the canonical CST artifact for explicit human review.
 
 ## Architecture control
 

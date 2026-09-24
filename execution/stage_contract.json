@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2",
+  "schema_version": "0.2.4",
   "global_protocol": {
     "repository": "Dingo-infinity2020/SimulationOps",
     "document": "GLOBAL_DC_SIMULATION_PROTOCOL.md",
@@ -8,51 +8,58 @@
   },
   "project": {
     "name": "GNSS_Lband_Active_Array",
-    "model_identity": "CHARTS_GNSS_R1A2_FEED_REFERENCE_V01",
+    "model_identity": "CHARTS_GNSS_R1A3_MATERIALIZED_FR4_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "0e50f3de509e156bc70b8b7545168fb73ac48fac"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_BUILD_PREFLIGHT"
   },
   "toolchain": {
     "simulator": "CST Studio Suite",
     "simulator_version": "2022.5",
-    "builder_or_adapter": "source/cst/R1A2_CHARTS_FEED_REFERENCE_BUILD_ONLY_V01.mcr",
+    "builder_or_adapter": "source/cst/R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.mcr",
     "build_host_alias": "NW",
     "solve_host_alias": "CST251-C",
     "container": ""
   },
   "scientific_freeze": {
-    "geometry_manifest": "em/cst/R1_CHARTS_LBAND/parameters_r1a2_feed.csv",
-    "material_table": "R1A1 PEC topology proxy + non-physical PEC reference overlays; no substrate",
+    "geometry_manifest": "em/cst/R1_CHARTS_LBAND/parameters_r1a3_materialized_fr4.csv",
+    "design_freeze": "docs/R1A3_SCIENTIFIC_FREEZE.md",
+    "material_table": "FR4_COST_BASELINE er=4.2 tanD=0.018 t=1.00mm; top conductor 0.035mm PEC for BUILD_ONLY",
     "source_modes": [],
-    "frequency_range": "target 1.15-1.65 GHz; no solver in R1A2",
+    "ports": [],
+    "frequency_range": "target 1.15-1.65 GHz; no solver in R1A3",
     "required_outputs": [
       "object_inventory",
       "parameter_inventory",
-      "symmetry_audit",
       "top_view",
       "oblique_view",
       "fresh_reopen_inventory",
-      "cst_sha256"
+      "fresh_reopen_view",
+      "macro_sha256",
+      "cst_sha256",
+      "cst_bytes",
+      "source_head"
     ],
-    "pass_gate": "PASS_R1A2_FEED_REFERENCE_BUILD_ONLY",
+    "pass_gate": "PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW",
     "hold_conditions": [
       "static_audit_failure",
-      "CST_transform_runtime_failure",
-      "reference_shape_count_mismatch",
-      "rotation_volume_symmetry_mismatch",
+      "CST_runtime_failure",
+      "physical_layer_missing",
+      "slot_or_gap_tool_residue",
       "fresh_reopen_mismatch"
     ],
-    "stop_boundary": "fresh-reopen + rotational symmetry audit; solver forbidden"
+    "stop_boundary": "manual user review of canonical CST; solver and staging forbidden"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": false
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": false,
+    "HUMAN_CST_REVIEW_REQUIRED": true
   },
   "execution": {
-    "current_stage": "DESIGN_R1A3_MATERIALIZATION",
+    "current_stage": "BUILD_ONLY_R1A3",
     "last_completed_stage": "BUILD_ONLY_R1A2",
     "last_status": "PASS_R1A2_FEED_REFERENCE_BUILD_ONLY",
+    "static_audit": "PASS_R1A3_STATIC_AUDIT",
     "one_shot_required": true,
     "silent_retry_allowed": false,
     "fresh_run_directory_required": false,
@@ -60,31 +67,30 @@
   },
   "artifacts": {
     "source_bundle": "repository source/cst + em/cst/R1_CHARTS_LBAND + execution",
-    "build_artifact": "D:\\GNSS_Lband_Active_Array\\_r1a2_feed_reference_work\\R1A2_CHARTS_FEED_REFERENCE_BUILD_ONLY_V01.cst",
+    "build_artifact": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work\\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst",
     "staging_artifact": "",
     "run_directory": "",
-    "qualification_output": "evidence/r1a2_dc_nw_20260924_1127/",
+    "qualification_output": "evidence/r1a3_dc_nw_20260924_build01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "evidence": {
-    "source_sha256": "macro:314c41f1c247d7bd4a7bc5066d295d4c7487955d53e94c56d143c150cc4009ae",
-    "build_sha256": "a75f7c48e73f4461ceaedd5f0ebf1c4f118cd764843a98401cd8470444ca7193",
-    "staging_sha256": "",
-    "run_sha256": "",
-    "exact_invocation": "NW/DC CST bundled Python 3.6 -> scripts/run_r1a2_build_only_dc.py; exact 90-degree Transform copies; no solver",
-    "status_classification": "PASS"
+    "source_sha256": "",
+    "build_sha256": "",
+    "build_bytes": null,
+    "exact_invocation": "",
+    "status_classification": "READY_FOR_BUILD_ONLY"
   },
   "exceptions": [],
   "workspace": {
     "host_alias": "NW",
     "working_path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "record_path": "execution/workspace_record_NW_R1A1.json",
-    "state": "CHECKPOINTED",
-    "archive_mode": "REFERENCE_ONLY",
-    "archive_trigger": "R1A2 PASS; return to materialization design",
-    "archive_destination": "remote Git + evidence; CST build artifact hash-recorded",
+    "record_path": "execution/workspace_record_NW_R1A3.json",
+    "state": "ACTIVE",
+    "archive_mode": "PROTECTED_IN_PLACE",
+    "archive_trigger": "R1A3 PASS/HOLD",
+    "archive_destination": "canonical CST build work directory on NW + remote Git compact evidence",
     "purge_allowed": false,
     "cleanup_completed": false,
-    "cleanup_evidence": "R1A2 evidence committed at 7cace83d85eb55fe4a970ce2285abf15bad76d1e"
+    "cleanup_evidence": ""
   }
 }
