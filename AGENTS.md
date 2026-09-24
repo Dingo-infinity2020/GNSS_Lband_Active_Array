@@ -1,3 +1,5 @@
+[Reading 152 lines from start (total: 152 lines, 0 remaining)]
+
 [Reading 149 lines from start (total: 149 lines, 0 remaining)]
 
 [Reading 144 lines from start (total: 144 lines, 0 remaining)]
@@ -37,7 +39,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1A5M2-DESIGN-MAXPASS-EXTENSION**
+Current task: **R1A5M2-MAXPASS8-RECOVERY-SOLVE-NW**
 
 Authoritative current execution state is defined by:
 - `PROJECT_HANDOFF.md`
@@ -45,14 +47,15 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- inspect R1A5M adaptive HOLD evidence: YES
-- design/document R1A5M2 recovery: YES
-- run any new CST solver: NO
+- copy the hash-locked R1A4 CST into fresh R1A5M2 work: YES
+- apply the frozen MaxPasses=8 recovery config: YES
+- run one NW adaptive recovery solve: YES
 - modify geometry/materials/ports: NO
+- change any adaptive setting other than MaxPasses 6 -> 8: NO
 - optimization/material A-B/production solve/CST251: NO
+- automatic further extension: NO
 
-R1A5M stopped at MaxPasses=6 with Delta-S sequence trending below the 0.02 threshold only on the final pass.
-R1A5M2 may change only the allowed maximum adaptation pass count after a new explicit freeze/authorization.
+R1A5M2 is a distinct recovery stage, not a silent retry.
 
 ## Architecture control
 
@@ -132,6 +135,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
