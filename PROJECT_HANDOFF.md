@@ -3,16 +3,16 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=41
+HANDOFF_VERSION=42
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E0C-FIRST-SCAN-SOLVE
-CURRENT_TASK_ID=R1E0C-B-C60P45-SCAN-SOLVE-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_SOLVE
+CURRENT_TASK_ID=R1E0C-B-C60P135-DESIGN-SCAN-SOLVE
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=YES_R1E0C_B_C60P45_ONLY
+SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
@@ -329,34 +329,61 @@ Movement versus broadside:
 
 The solved C45P45 artifact is PROTECTED_IN_PLACE.
 
-## Current authorization
+## R1E0C-B C60P45 closed stage
 
-Authorized state:
-`C60P45`
+Status:
+`PASS_R1E0C_B_C60P45_SCAN_SOLVE`
 
-Scan:
-theta=60 deg, phi=45 deg, outward
-
-BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=YES_R1E0C_B_C60P45_ONLY
-
-Authorized source:
-`D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01\R1E0C_C60P45_SCANSTATE_BUILD_ONLY_V01.cst`
-
-Required source SHA256:
-`94360ee2c40d4e5236b7b7a1fee79b46739da2aaec70054e4aa707a123853e01`
-
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1e0c_b_c60p45_scan_solve_work`
-
-Fresh evidence:
-`evidence/r1e0c_b_c60p45_dc_nw_20260924_solve01/`
+Formal source commit:
+`4df0ac815b4b0c4134634a3e540ff3c48f2061e0`
 
 Formal invocation count:
 1
 
-Silent retry:
-NO
+Runtime:
+76.68 s
 
-C60P135 remains unauthorized.
+Solved artifact:
+`D:\GNSS_Lband_Active_Array\_r1e0c_b_c60p45_scan_solve_work\R1E0C_B_C60P45_SCAN_SMOKE_V01.cst`
+
+Solved artifact SHA256:
+`58018c0ffa058c46a16fdca92948a6477ff77124960b027f0a2d071b4f368828`
+
+Native convergence:
+0.0500864 -> 0.0284443 -> 0.0175831 -> 0.0157380
+
+Termination:
+desired accuracy limit reached
+
+Broadband sweep:
+PASS after 8 frequency samples
+
+Physics alerts:
+NONE
+
+Science-band active-impedance range:
+- Re(Z_active): 55.42 to 77.84 ohm
+- Im(Z_active): -13.42 to +103.03 ohm
+- max |Z_active|: 129.13 ohm
+
+Movement versus broadside:
+- max complex Delta S11 = 0.82410
+- max |Delta Z_active| = 209.36 ohm
+
+The solved C60P45 artifact is PROTECTED_IN_PLACE.
+
+## Current authorization
+
+Next intended state:
+`C60P135`
+
+Role:
+60-deg orthogonal-plane sentinel
+
+Current task is DESIGN ONLY.
+
+BUILD_AUTHORIZED=NO
+SOLVER_PERMISSION=NO
+
+C60P135 is not yet solver-authorized.
 No pitch/material/LNA/CST251 work is authorized.
