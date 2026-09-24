@@ -4,31 +4,37 @@
     "project": "GNSS_Lband_Active_Array",
     "task_id": "R1E0C-B-C45P45-SCAN-SOLVE-NW",
     "stage": "R1E0C_B_C45P45_SCAN_SOLVE",
-    "status": "READY_FOR_SOLVE"
+    "status": "PASS_R1E0C_B_C45P45_SCAN_SOLVE"
   },
   "workspace": {
     "host_alias": "NW",
-    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "ACTIVE"
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e0c_b_c45p45_scan_solve_work",
+    "state": "PROTECTED"
   },
   "source": {
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AT_PREFLIGHT",
-    "head_on_trusted_remote": false
+    "formal_source_commit": "8b45ac4aad13d61cf8cb9494fb232f0eca22db41"
   },
-  "execution": {
-    "mode": "ONE_SHOT_NW_SCAN_SOLVE",
-    "formal_invocation_count": 0,
-    "silent_retry_allowed": false
+  "result": {
+    "formal_invocation_count": 1,
+    "exit_code": 0,
+    "runtime_seconds": 114.18,
+    "solved_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0c_b_c45p45_scan_solve_work\\R1E0C_B_C45P45_SCAN_SMOKE_V01.cst",
+    "solved_cst_sha256": "c36861d616af18d06ad3dddba11ef50112646bc77181aeb54e7a23a1052eb7f1",
+    "physics_alert": false
   },
   "archive": {
-    "mode": "CHECKPOINTED",
-    "completed": false,
+    "mode": "PROTECTED_IN_PLACE",
+    "critical_artifacts": [
+      "D:\\GNSS_Lband_Active_Array\\_r1e0c_b_c45p45_scan_solve_work\\R1E0C_B_C45P45_SCAN_SMOKE_V01.cst",
+      "evidence/r1e0c_b_c45p45_dc_nw_20260924_solve01/"
+    ],
+    "completed": true,
     "purge_allowed": false
   },
   "closeout": {
-    "task_node": "",
+    "task_node": "C45P45 scan solve PASS / baton to C60P45 design",
     "handoff_written": true,
     "purge_allowed": false,
     "purged": false
