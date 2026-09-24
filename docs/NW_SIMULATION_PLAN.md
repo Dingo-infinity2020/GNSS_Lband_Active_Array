@@ -1,5 +1,3 @@
-[Reading 107 lines from start (total: 107 lines, 0 remaining)]
-
 # NW Simulation / Execution Plan
 
 SimulationOps protocol: **0.2.4**
@@ -123,5 +121,3 @@ At every PASS/HOLD:
 - classify build work directories,
 - retain only what the next stage requires,
 - mark reproducible temporary CST workspaces PURGE_READY before deletion.
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]

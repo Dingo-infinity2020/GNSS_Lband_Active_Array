@@ -1,5 +1,3 @@
-[Reading 111 lines from start (total: 111 lines, 0 remaining)]
-
 # R1A5F Split Single-Port Differential Feed Plan
 
 Status: DESIGN FROZEN FOR BUILD-ONLY QUALIFICATION — SOLVER NOT AUTHORIZED
@@ -111,5 +109,3 @@ Far-field monitors and efficiency outputs would be added only in a separate expl
 R1A5F design is frozen for a separate SimulationOps build-only authorization.
 
 The build gate may create/fresh-reopen the two single-port CST artifacts and audit geometry/port symmetry. A solver remains separately forbidden until a later isolated-equivalence contract is frozen.
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]

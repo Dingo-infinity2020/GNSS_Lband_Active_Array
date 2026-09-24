@@ -1,45 +1,3 @@
-[Reading 204 lines from start (total: 204 lines, 0 remaining)]
-
-[Reading 199 lines from start (total: 199 lines, 0 remaining)]
-
-[Reading 196 lines from start (total: 196 lines, 0 remaining)]
-
-[Reading 192 lines from start (total: 192 lines, 0 remaining)]
-
-[Reading 190 lines from start (total: 190 lines, 0 remaining)]
-
-[Reading 185 lines from start (total: 185 lines, 0 remaining)]
-
-[Reading 180 lines from start (total: 180 lines, 0 remaining)]
-
-[Reading 176 lines from start (total: 176 lines, 0 remaining)]
-
-[Reading 170 lines from start (total: 170 lines, 0 remaining)]
-
-[Reading 161 lines from start (total: 161 lines, 0 remaining)]
-
-[Reading 157 lines from start (total: 157 lines, 0 remaining)]
-
-[Reading 152 lines from start (total: 152 lines, 0 remaining)]
-
-[Reading 149 lines from start (total: 149 lines, 0 remaining)]
-
-[Reading 144 lines from start (total: 144 lines, 0 remaining)]
-
-[Reading 141 lines from start (total: 141 lines, 0 remaining)]
-
-[Reading 139 lines from start (total: 139 lines, 0 remaining)]
-
-[Reading 138 lines from start (total: 138 lines, 0 remaining)]
-
-[Reading 131 lines from start (total: 131 lines, 0 remaining)]
-
-[Reading 127 lines from start (total: 127 lines, 0 remaining)]
-
-[Reading 124 lines from start (total: 124 lines, 0 remaining)]
-
-[Reading 120 lines from start (total: 120 lines, 0 remaining)]
-
 # Agent Instructions
 
 This repository is a staged scientific hardware project.
@@ -48,161 +6,136 @@ This repository is a staged scientific hardware project.
 
 Before changing any scientific or engineering artifact, read:
 
-1. `PROJECT_MAINLINE.md` — highest-level scientific/simulation roadmap
+1. `PROJECT_MAINLINE.md` - highest-level scientific/simulation roadmap
 2. `docs/PROJECT_RULES.md`
 3. `docs/DECISIONS.md`
 4. `docs/REQUIREMENTS_v0.1.md`
-5. `PROJECT_HANDOFF.md` — canonical current execution baton
-6. the document for the current gate
-7. relevant parameter/provenance manifests
+5. `PROJECT_HANDOFF.md` - canonical current execution baton
+6. `docs/SIM_EXECUTION.md`
+7. `execution/stage_contract.json`
+8. the document for the current gate and relevant parameter/provenance manifests
 
-`PROJECT_MAINLINE.md` is the long-horizon authority for the project sequence. In particular, it locks the array-first transition: clean feed -> periodic unit cell -> active-impedance atlas -> finite-array validation -> LNA/antenna co-design. Do not silently redirect the project into prolonged isolated-element optimization.
+`PROJECT_MAINLINE.md` controls the long-horizon scientific sequence.
+`PROJECT_HANDOFF.md` controls the current execution baton and permissions.
+`docs/PROJECT_RULES.md` is the anti-divergence charter.
 
-`docs/PROJECT_RULES.md` is the anti-divergence charter. Its rules apply unless an explicit human-approved architecture decision supersedes them.
-
-`PROJECT_HANDOFF.md` is the only operational task-exchange document between design review and execution hosts. It controls the current permissions but must remain consistent with `PROJECT_MAINLINE.md`. Do not execute a task copied from an old chat or local note if it conflicts with either authority.
+Do not execute an old chat instruction or local note if it conflicts with these authorities.
 
 ## Current gate
 
-Current task: **R1E0B-R1-READONLY-RESULT-RECOVERY**
-
-Authoritative current execution state is defined by:
-- `PROJECT_MAINLINE.md`
-- `PROJECT_HANDOFF.md`
-- `docs/SIM_EXECUTION.md`
-- `execution/stage_contract.json`
+Current task: **R1E0C-A-DESIGN-SCANSTATE-BUILD-ONLY**
 
 Current permissions:
-- read the solved R1E0B CST through cst.results: YES
-- verify artifact hash and existing periodic evidence: YES
-- export compact active S11 / Z_active qualification data: YES
-- correct future result-path recognition in the harness: YES
-- use DesignEnvironment/modeler: NO
-- rerun solver: NO
-- scan sweep / pitch-material trade / LNA / CST251: NO
+- inspect R1E0B broadside periodic PASS evidence: YES
+- design/audit R1E0C scan-state build-only bundle: YES
+- generate deterministic scan-state macros: YES
+- run R1E0C build: NO
+- run any scan solver: NO
+- modify pitch/material/geometry/feed: NO
+- LNA integration: NO
+- CST251 production solve: NO
 
-The original formal invocation remains HOLD in provenance.
-This ticket may only recover/qualify the already solved result.
+R1E0B is closed PASS.
+R1E0C-A is design-only until a separate build authorization is frozen.
 
 ## Architecture control
 
 Current MAINLINE:
-- CHARTS-inspired planar balanced element with feed-point differential active frontend;
-- transition to periodic/unit-cell active-impedance physics immediately after the clean-feed gate;
-- LNA input matching remains unfrozen until the scan-dependent array source-impedance locus is established.
+- CHARTS-inspired planar balanced element
+- clean differential feed representation
+- periodic/unit-cell active-impedance physics
+- pitch/material array trade
+- scan-dependent active-impedance atlas
+- finite-array validation
+- LNA/antenna co-design
+- active periodic/finite-array validation
 
 Current FIRST_BACKUP:
 - PUMA / unbalanced tightly-coupled element with LNA behind the ground plane.
 
-All other architectures are REFERENCE_ONLY unless promoted through the replacement test defined in `docs/PROJECT_RULES.md`.
+Other architectures remain REFERENCE_ONLY unless promoted through the replacement test in `docs/PROJECT_RULES.md`.
 
-New literature or component ideas must first go to `docs/IDEA_BACKLOG.md`.
 Do not silently redirect the project toward a newly discovered architecture.
 
-## Hard rules for R0
+## Non-negotiable scientific rules
 
-- Do not run a CST solver unless the task explicitly authorizes it.
-- Build-only means geometry construction and validation only.
-- Do not add QPL9547, active PCB, shield, Bias-Tee, array periodic boundaries, or L-band optimization during R0.
-- Do not claim an exact CHARTS replica.
-- Never convert a visually inferred dimension into a paper-explicit dimension.
-- Every geometry parameter must exist in the parameter manifest with one provenance class:
-  - PAPER_EXPLICIT
-  - FIGURE_DERIVED_UNVERIFIED
-  - ASSUMPTION
-  - MEASURED
-  - OPTIMIZED (not allowed in initial R0 build)
-- If a required dimension is unknown, keep it visibly unknown until a documented reconstruction assumption is approved.
-- Preserve source/reference metadata; do not copy entire copyrighted papers into the repository.
-- Do not edit multiple scientific layers at once (for example geometry + LNA + conclusions) unless the gate explicitly requires a co-design step.
+- Isolated-element S11 is not the final system objective.
+- Build and Solve permissions are separate.
+- No solver runs without explicit stage authorization.
+- No silent retries.
+- Preserve HOLD/FAIL evidence.
+- Do not change acceptance thresholds after seeing results.
+- Do not optimize unrelated variables inside a gate.
+- Do not force the antenna to 50 or 100 ohm merely for convenience.
+- Do not freeze the LNA input match before the scan-dependent active-impedance locus is established.
+- Periodic/unit-cell results must later be checked against finite-array center/edge/corner behavior.
+- A HOLD is an acceptable scientific outcome.
+
+## Current array-physics interpretation
+
+The 94-mm broadside periodic model has already shown that the array environment materially changes source impedance relative to the isolated element.
+
+Therefore:
+- do not reopen isolated-element matching optimization;
+- continue scan-dependent active-impedance qualification;
+- use array impedance, not isolated impedance, as the future LNA source environment.
+
+## SimulationOps discipline
+
+Follow the global SimulationOps protocol.
+
+Normal CST flow:
+Scientific Freeze -> Source Bundle -> Build-Only -> Hash Lock -> Fresh Solve -> Read-Only Qualification -> Scientific Gate.
+
+For every formal execution:
+- record exact source commit/hash
+- use fresh work/evidence paths
+- record invocation
+- do not overwrite historical results
+- do not automatically retry
+- checkpoint/protect artifacts at task nodes
+
+NW is the default control/build/lightweight-smoke host.
+CST251 is reserved for explicitly authorized heavier production solves.
 
 ## Change discipline
 
 Any electromagnetic geometry change must report:
-- parameter,
-- old value,
-- new value,
-- provenance,
-- reason,
-- expected physical effect.
+- parameter
+- old value
+- new value
+- provenance
+- reason
+- expected physical effect
 
 Any design-decision reversal must update `docs/DECISIONS.md`.
 
-Any new candidate architecture/component must update `docs/IDEA_BACKLOG.md` before entering the mainline.
+Any new candidate architecture/component should enter `docs/IDEA_BACKLOG.md` before mainline promotion.
 
 ## Expected engineering style
 
-- parameterized scripts/macros over opaque manual edits,
-- deterministic builds,
-- small commits,
-- one scientific question per gate,
-- build reports before solver reports,
-- explicit PASS/HOLD/FAIL status,
-- no silent auto-tuning to match a paper plot,
-- preserve failed evidence rather than rewriting history,
-- stop optimization when a gate's acceptance criteria are met.
+- parameterized scripts/macros over opaque manual edits
+- deterministic builds
+- small commits
+- one scientific question per gate
+- build reports before solver reports
+- explicit PASS/HOLD status
+- no silent auto-tuning
+- preserve failed evidence rather than rewriting history
+- stop optimization when the gate question is answered
 
 ## Primary tools
 
-- CST: antenna/full-wave geometry and later periodic/finite-array EM
+- CST: antenna/full-wave and periodic/finite-array EM
 - ADS: later LNA/noise/stability and EM-circuit co-design
 - HFSS: optional independent cross-check
 - Python: post-processing and parameter bookkeeping
 
-## Execution hosts
-
-Registered hosts and their verified toolchains are tracked in `docs/HOST_ENVIRONMENT.md`.
-Registration records capability only; it does not grant any gate permission.
-
 ## Stop rules
 
 Stop and document instead of guessing when:
-- a source ambiguity materially changes geometry,
-- a new idea would require changing architecture mid-gate,
-- a solver result cannot be traced to a parameter manifest,
-- an optimization objective has not been frozen,
-- a proposed added feature has no quantified problem it solves.
-
-A HOLD is an acceptable scientific outcome.
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
-
-[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
+- a source ambiguity materially changes geometry
+- a new idea would change architecture mid-gate
+- a solver result cannot be traced to a frozen source
+- an optimization objective has not been frozen
+- a proposed feature has no quantified problem it solves
