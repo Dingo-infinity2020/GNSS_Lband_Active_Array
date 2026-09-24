@@ -23,17 +23,19 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E0C-B-C60P135-DESIGN-SCAN-SOLVE**
+Current task: **R1E0C-B-C60P135-SCAN-SOLVE-NW**
 
 Current permissions:
-- inspect completed C30P45/C45P45/C60P45 scan-solve evidence: YES
-- design/audit the final C60P135 orthogonal-plane sentinel solve ticket: YES
-- run C60P135: NO
+- use the qualified C60P135 scan-state CST as immutable source: YES
+- run exactly one C60P135 one-shot sentinel solve on NW: YES
+- extract/qualify active S11 and Z_active for C60P135: YES
+- compare C60P135 versus C60P45 read-only after the solve: YES
 - modify pitch/material/geometry/feed: NO
 - LNA integration/CST251: NO
+- silent retry: NO
 
-R1E0C-B principal-plane core scan through 60 deg is closed PASS with no frozen physics alert.
-C60P135 is the final sentinel but remains solver-unauthorized.
+R1E0C-B principal-plane core scan through 60 deg is closed PASS.
+Only C60P135 is authorized in the current solve ticket.
 
 ## Architecture control
 

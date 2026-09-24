@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E0C-B - principal-plane core scan through 60 deg PASS; C60P135 sentinel next.**
+**R1E0C-B/C60P135 - authorized 60-deg orthogonal-plane sentinel solve on NW.**
 
 The isolated-element passive phase is closed.
 
@@ -62,7 +62,7 @@ This is why the LNA match is not frozen yet.
 
 ## Current execution
 
-R1E0C-A and the principal-plane C30P45/C45P45/C60P45 scan solves are closed PASS. Current work is **C60P135 orthogonal-plane sentinel DESIGN ONLY**; its solver remains unauthorized.
+R1E0C-A and the principal-plane C30P45/C45P45/C60P45 solves are closed PASS. Current work is the single authorized **C60P135 orthogonal-plane sentinel solve**.
 
 Prepared scan states:
 - theta=30, phi=45
@@ -72,7 +72,7 @@ Prepared scan states:
 
 Current permissions:
 - BUILD_AUTHORIZED=NO
-- SOLVER_PERMISSION=NO
+- SOLVER_PERMISSION=YES_R1E0C_B_C60P135_ONLY
 
 Read `PROJECT_HANDOFF.md` for the exact baton.
 
