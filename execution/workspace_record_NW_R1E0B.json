@@ -4,31 +4,39 @@
     "project": "GNSS_Lband_Active_Array",
     "task_id": "R1E0B-BROADSIDE-PERIODIC-SMOKE-SOLVE-NW",
     "stage": "R1E0B_BROADSIDE_PERIODIC_SMOKE_SOLVE",
-    "status": "READY_FOR_SOLVE"
+    "status": "PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "ACTIVE"
+    "state": "CHECKPOINTED"
   },
   "source": {
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AT_PREFLIGHT",
-    "head_on_trusted_remote": false
+    "formal_source_commit": "10b50b0102cd50a4f21ed2d5ee07da80e9c01a63"
   },
-  "execution": {
-    "mode": "ONE_SHOT_NW_SMOKE_SOLVE",
-    "formal_invocation_count": 0,
-    "silent_retry_allowed": false
+  "result": {
+    "original_formal_status": "HOLD_R1E0B_RESULT_PATH_QUALIFICATION",
+    "hold_classification": "PERIODIC_RESULT_PATH_NAMING_MISMATCH",
+    "recovery_status": "PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE_READONLY_RECOVERY",
+    "canonical_status": "PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE",
+    "formal_solver_invocation_count": 1,
+    "solver_rerun_during_recovery": false,
+    "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e0b_broadside_smoke_work\\R1E0B_POLA_PERIODIC_BROADSIDE_SMOKE_V01.cst",
+    "artifact_sha256": "339021e580efa6aae6dfcfa229e4194b4dcf0bbef854398d44a0efed65aac7ad"
   },
   "archive": {
-    "mode": "CHECKPOINTED",
-    "completed": false,
+    "mode": "PROTECTED_IN_PLACE",
+    "critical_artifacts": [
+      "D:\\GNSS_Lband_Active_Array\\_r1e0b_broadside_smoke_work\\R1E0B_POLA_PERIODIC_BROADSIDE_SMOKE_V01.cst",
+      "evidence/r1e0b_dc_nw_20260924_smoke01/"
+    ],
+    "completed": true,
     "purge_allowed": false
   },
   "closeout": {
-    "task_node": "",
+    "task_node": "R1E0B PASS / baton to R1E0C-A design",
     "handoff_written": true,
     "purge_allowed": false,
     "purged": false

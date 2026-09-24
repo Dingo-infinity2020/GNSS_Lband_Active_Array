@@ -7,53 +7,67 @@
 
 ## Current stage
 
-R1E0B_R1_READONLY_RESULT_RECOVERY
+DESIGN_R1E0C_A_SCANSTATE_BUILD_ONLY
 
 BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Original formal solve
+## Last completed stage
 
-Status:
-HOLD_R1E0B_RESULT_PATH_QUALIFICATION
+R1E0B broadside periodic active-impedance smoke
 
-Source commit:
-10b50b0102cd50a4f21ed2d5ee07da80e9c01a63
+Canonical status:
+PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE
 
-Artifact:
+Formal solver invocation:
+1
+
+Read-only recovery:
+PASS
+
+Solver rerun:
+none
+
+## Broadside reference
+
+Solved CST:
 D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work\R1E0B_POLA_PERIODIC_BROADSIDE_SMOKE_V01.cst
 
 SHA256:
 339021e580efa6aae6dfcfa229e4194b4dcf0bbef854398d44a0efed65aac7ad
 
-Runtime:
-99.99 s
+Compact active result:
+evidence/r1e0b_dc_nw_20260924_smoke01/active_s11_and_zactive.csv
 
-Solver itself:
-completed adaptive convergence and broadband sweep.
+## Clean source for R1E0C scan-state builds
 
-Formal harness failure:
-periodic result-path naming mismatch.
+D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst
 
-## Actual periodic driven-port result path
+SHA256:
+48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223
 
-1D Results\S-Parameters\S1(1),1(1)
+## R1E0C-A design
 
-## Recovery
+States:
+- 30/45
+- 45/45
+- 60/45
+- 60/135
 
-Qualifier:
-scripts/qualify_r1e0b_existing_periodic_result.py
+Generator:
+scripts/generate_r1e0c_scan_state_macros.py
 
-Recovery mode:
-read-only.
+Static audit:
+PASS_R1E0C_SCAN_MACRO_STATIC_AUDIT
 
-No DesignEnvironment.
-No modeler.
-No solver.
+Harness:
+scripts/run_r1e0c_scanstate_build_only_dc.py
 
-## Stop
+No build is currently authorized.
 
-Read-only qualification only.
+## Later R1E0C-B
 
-On PASS, move to R1E0C first-scan DESIGN.
+Scan solves will be separately authorized one-shot cases.
+
+No solver action is currently permitted.

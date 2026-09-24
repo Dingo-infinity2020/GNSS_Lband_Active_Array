@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=31
+HANDOFF_VERSION=32
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
-CURRENT_GATE=R1E0B-BROADSIDE-PERIODIC-SMOKE-RECOVERY
-CURRENT_TASK_ID=R1E0B-R1-READONLY-RESULT-RECOVERY
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_READONLY_QUALIFICATION
+CURRENT_GATE=R1E0C-FIRST-SCAN-QUALIFICATION
+CURRENT_TASK_ID=R1E0C-A-DESIGN-SCANSTATE-BUILD-ONLY
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -24,104 +24,131 @@ CST251_PERMISSION=NO
 
 Read `PROJECT_MAINLINE.md` first.
 
-R1E0B solver authorization has been consumed by exactly one formal invocation.
+The project is now in actual periodic-array physics.
 
-No solver rerun is authorized.
+Mainline:
+R1E0 scan qualification -> R1E1 pitch/material trade -> R1E2 active-impedance atlas -> active-front-end co-design.
 
-## Original formal R1E0B invocation
+Do not return to isolated-element S11 optimization unless a later array result provides a quantified reason.
 
-Source HEAD:
-`10b50b0102cd50a4f21ed2d5ee07da80e9c01a63`
+## R1E0B closed stage
 
-Formal status:
+Original formal status:
 `HOLD_R1E0B_RESULT_PATH_QUALIFICATION`
 
-Invocation count:
+Original HOLD classification:
+`PERIODIC_RESULT_PATH_NAMING_MISMATCH`
+
+Read-only recovery status:
+`PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE_READONLY_RECOVERY`
+
+Canonical stage conclusion:
+`PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE`
+
+Formal solver invocation count:
 1
 
-Exit code:
-1
+Solver rerun during recovery:
+NO
 
-Runtime:
-99.99 s
+## Protected solved broadside artifact
 
-Solved artifact:
 `D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work\R1E0B_POLA_PERIODIC_BROADSIDE_SMOKE_V01.cst`
 
 SHA256:
 `339021e580efa6aae6dfcfa229e4194b4dcf0bbef854398d44a0efed65aac7ad`
 
-## Solver evidence already established
-
-Periodic adaptation:
-- 0.0453805
-- 0.0552784
-- 0.0530417
-- 0.0204615
-- 0.0179226
-- 0.0185901
-
-Final two Delta-S values are below 0.02.
-
-CST termination:
-desired accuracy limit reached.
-
-Broadband sweep:
-converged after 7 frequency samples.
-
-The solver recognized:
-Theta=0, Phi=45.
-
-Pre-solver periodic metadata remained valid.
-
-## HOLD classification
-
-The formal harness expected isolated result path:
-
-`1D Results\S-Parameters\S1,1`
-
-The periodic result tree uses:
-
+Periodic driven-port result path:
 `1D Results\S-Parameters\S1(1),1(1)`
 
-Classification:
-`PERIODIC_RESULT_PATH_NAMING_MISMATCH`
+Native adaptation:
+0.0453805 -> 0.0552784 -> 0.0530417 -> 0.0204615 -> 0.0179226 -> 0.0185901
 
-This is a post-solve qualification HOLD, not a solver/physics failure.
+Final two Delta-S values < 0.02:
+PASS
 
-## R1E0B-R1 recovery
+Termination:
+desired accuracy limit reached
 
-Mode:
-READ ONLY.
+Broadband sweep:
+PASS after 7 frequency samples
 
-Qualifier:
-`scripts/qualify_r1e0b_existing_periodic_result.py`
+## Broadside 94-mm array result
 
-Allowed:
-- read solved CST through cst.results;
-- verify solved artifact hash;
-- read the actual periodic S11 path;
-- export compact S11/Z_active CSV;
-- re-parse existing native convergence;
-- compare against isolated clean Pol-A context;
-- preserve result-tree/warning evidence.
+Science band:
+1.15–1.65 GHz
 
-Forbidden:
-- DesignEnvironment/modeler use;
-- CST modification;
-- rebuild;
-- solver rerun;
-- scan/pitch/material/LNA work.
+Broadside active-impedance range:
+- Re(Z_active): 85.05 to 264.39 ohm
+- Im(Z_active): -84.19 to +141.95 ohm
+- |Z_active|: 105.33 to 266.79 ohm
 
-The future R1E0B harness has been corrected to recognize periodic and isolated driven-port result names, but it will not be rerun in this stage.
+Broadside S11 range:
+approximately -5.24 to -9.70 dB
 
-## Stop boundary
+Representative anchors:
+- 1.1768 GHz: 132.0+j141.1 ohm
+- 1.2272 GHz: 182.8+j136.5 ohm
+- 1.2784 GHz: 234.1+j104.2 ohm
+- 1.4000 GHz: 243.8-j37.5 ohm
+- 1.5608 GHz: 125.3-j80.8 ohm
+- 1.5752 GHz: 117.4-j78.5 ohm
+- 1.6024 GHz: 104.1-j73.2 ohm
 
-If read-only recovery PASS:
-- close R1E0B broadside periodic smoke as canonical PASS;
-- open R1E0C first-scan DESIGN only.
+Maximum complex S11 difference versus clean isolated Pol-A over the science band:
+0.70508
 
-If recovery HOLD:
-- return to DESIGN.
+This is accepted as physical mutual-coupling evidence, not a failure.
 
-No solver is currently authorized.
+## System implication
+
+The array environment has already moved the antenna source impedance far away from a single nominal 100-ohm point.
+
+Therefore:
+- do not freeze LNA input matching now;
+- do not force the radiator back toward isolated 100-ohm matching;
+- continue scan-dependent active-impedance mapping first.
+
+## Current R1E0C design
+
+Plan:
+`docs/R1E0C_FIRST_SCAN_QUALIFICATION_PLAN.md`
+
+### R1E0C-A future BUILD-ONLY states
+
+- C30P45: theta=30, phi=45
+- C45P45: theta=45, phi=45
+- C60P45: theta=60, phi=45
+- C60P135: theta=60, phi=135
+
+Broadside theta=0 reference is R1E0B and is not re-solved.
+
+Canonical scan-state generator:
+`scripts/generate_r1e0c_scan_state_macros.py`
+
+Static audit:
+`PASS_R1E0C_SCAN_MACRO_STATIC_AUDIT`
+
+Build-only harness:
+`scripts/run_r1e0c_scanstate_build_only_dc.py`
+
+Runbook:
+`em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E0C_SCANSTATE_BUILD_ONLY.md`
+
+All four macros contain:
+- zero boundary-type changes;
+- zero geometry changes;
+- zero material changes;
+- zero port changes;
+- zero solver commands.
+
+## Current authorization
+
+R1E0C-A remains DESIGN ONLY.
+
+No build is authorized.
+No scan solver is authorized.
+
+A future build authorization must freeze fresh work/evidence paths and the exact source HEAD.
+
+R1E0C-B scan solves require a separate later solver authorization.
