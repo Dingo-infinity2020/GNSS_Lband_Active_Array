@@ -1,3 +1,5 @@
+[Reading 199 lines from start (total: 199 lines, 0 remaining)]
+
 [Reading 196 lines from start (total: 196 lines, 0 remaining)]
 
 [Reading 192 lines from start (total: 192 lines, 0 remaining)]
@@ -60,7 +62,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1E0B-DESIGN-BROADSIDE-PERIODIC-SMOKE**
+Current task: **R1E0B-BROADSIDE-PERIODIC-SMOKE-SOLVE-NW**
 
 Authoritative current execution state is defined by:
 - `PROJECT_MAINLINE.md`
@@ -69,15 +71,16 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- inspect the qualified R1E0A periodic artifact/evidence: YES
-- design/audit the R1E0B broadside periodic smoke bundle: YES
-- run any CST solver: NO
-- modify periodic boundary metadata: NO
+- use the qualified R1E0A periodic CST as immutable source: YES
+- copy it into fresh R1E0B work: YES
+- apply the frozen boundary-preserving numerical solver config: YES
+- run one formal NW broadside periodic smoke solve: YES
+- modify boundary metadata: NO
 - modify geometry/materials/feed port: NO
-- scan sweep / pitch-material trade / LNA integration / CST251: NO
+- scan sweep / pitch-material trade / LNA / CST251: NO
+- silent retry or automatic rerun: NO
 
-R1E0A is closed PASS through read-only recovery.
-R1E0B is design-only until a separate solver authorization is frozen.
+This authorization is R1E0B-only and is consumed by one formal invocation.
 
 ## Architecture control
 
@@ -159,6 +162,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

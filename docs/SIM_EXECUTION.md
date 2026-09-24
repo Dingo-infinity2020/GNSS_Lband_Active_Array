@@ -7,58 +7,67 @@
 
 ## Current stage
 
-DESIGN_R1E0B_BROADSIDE_PERIODIC_SMOKE
+R1E0B_BROADSIDE_PERIODIC_SMOKE_SOLVE
 
 BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: false
+SOLVE_AUTHORIZED: true
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Last completed stage
+## Host
 
-R1E0A periodic configuration qualification
+NW / DESKTOP-GBTI6Q4
 
-Canonical status:
-PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY
+This is a lightweight smoke solve, not a CST251 production run.
 
-Recovery mode:
-read-only; no CST rerun
-
-## Qualified source for R1E0B
+## Immutable source
 
 D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst
 
 SHA256:
 48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223
 
-## R1E0B design
+## Solver config
 
-Contract:
-docs/R1E0B_BROADSIDE_PERIODIC_SMOKE_CONTRACT.md
-
-Config:
 source/cst/R1E0B_PERIODIC_BROADSIDE_SOLVER_CONFIG_V01.mcr
-
-Harness:
-scripts/run_r1e0b_broadside_periodic_smoke_dc.py
 
 Static audit:
 PASS_R1E0B_STATIC_AUDIT
 
 Important:
-the R1E0B solver config contains no Boundary commands.
+Boundary commands = 0.
 
-## Intended solver when separately authorized
+## Numerical formulation
 
-- HF Frequency Domain
-- tetrahedral second order
-- adaptive HighFrequencyTet / ExpertSystem
-- MaxDeltaS 0.02
-- two consecutive checks
-- 1.0–1.8 GHz
-- existing unit-cell boundary/scan metadata retained
+HF Frequency Domain
+tetrahedral second order
+curvature order 3
+General purpose
+HighFrequencyTet / ExpertSystem adaptive
+MinPasses 3
+MaxPasses 8
+MaxDeltaS 0.02
+two Delta-S checks
+1.0–1.8 GHz
 
-## Required result
+## Fresh execution paths
 
-Broadside active S11 and Z_active for the 94-mm infinite periodic array.
+Work:
+D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work
 
-No solver action is currently permitted.
+Evidence:
+evidence/r1e0b_dc_nw_20260924_smoke01/
+
+## Primary output
+
+Broadside periodic active differential impedance:
+
+Z_active = 100*(1+S11)/(1-S11)
+
+## Stop
+
+Exactly one formal invocation.
+No silent retry.
+No scan sweep.
+No pitch/material variation.
+No LNA.
+No CST251 migration.

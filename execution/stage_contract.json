@@ -7,14 +7,15 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "mainline_authority": "PROJECT_MAINLINE.md",
-    "model_identity": "CHARTS_GNSS_R1E0B_BROADSIDE_PERIODIC_SMOKE_DESIGN",
+    "model_identity": "CHARTS_GNSS_R1E0B_BROADSIDE_PERIODIC_SMOKE_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_AT_CLOSEOUT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": true,
+    "scope": "R1E0B_BROADSIDE_PERIODIC_SMOKE_ONLY",
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
@@ -22,32 +23,34 @@
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "r1e0a_status": "PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY",
-    "r1e0a_recovery_mode": "READ_ONLY",
-    "r1e0a_artifact": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst",
-    "r1e0a_artifact_sha256": "48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223",
-    "r1e0b_contract": "docs/R1E0B_BROADSIDE_PERIODIC_SMOKE_CONTRACT.md",
-    "r1e0b_solver_config": "source/cst/R1E0B_PERIODIC_BROADSIDE_SOLVER_CONFIG_V01.mcr",
-    "r1e0b_static_audit": "PASS_R1E0B_STATIC_AUDIT",
-    "r1e0b_boundary_commands": 0,
-    "r1e0b_primary_output": "broadside active differential impedance",
-    "next_execution_contract": "NOT_AUTHORIZED"
+    "contract": "docs/R1E0B_BROADSIDE_PERIODIC_SMOKE_CONTRACT.md",
+    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst",
+    "source_sha256": "48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223",
+    "solver_config": "source/cst/R1E0B_PERIODIC_BROADSIDE_SOLVER_CONFIG_V01.mcr",
+    "static_audit": "PASS_R1E0B_STATIC_AUDIT",
+    "boundary_commands_in_solver_config": 0,
+    "scan_theta_deg": 0.0,
+    "scan_phi_deg": 45.0,
+    "pitch_mm": 94.0,
+    "primary_output": "broadside active differential impedance",
+    "pass_gate": "PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE",
+    "stop_boundary": "one NW broadside smoke solve then return to design"
   },
   "execution": {
-    "current_stage": "DESIGN_R1E0B_BROADSIDE_PERIODIC_SMOKE",
-    "last_completed_stage": "R1E0A_PERIODIC_CONFIG_BUILD_ONLY",
-    "last_status": "PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY",
+    "current_stage": "R1E0B_BROADSIDE_PERIODIC_SMOKE_SOLVE",
+    "formal_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "r1e0a_evidence": "evidence/r1e0a_dc_nw_20260924_build01/",
+    "work": "D:\\GNSS_Lband_Active_Array\\_r1e0b_broadside_smoke_work",
+    "evidence": "evidence/r1e0b_dc_nw_20260924_smoke01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
     "record_path": "execution/workspace_record_NW_R1E0B.json",
-    "state": "CHECKPOINTED",
+    "state": "ACTIVE",
     "purge_allowed": false
   }
 }

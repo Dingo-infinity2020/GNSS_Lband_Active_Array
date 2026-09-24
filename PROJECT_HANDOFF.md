@@ -3,16 +3,16 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=29
+HANDOFF_VERSION=30
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E0B-BROADSIDE-PERIODIC-SMOKE
-CURRENT_TASK_ID=R1E0B-DESIGN-BROADSIDE-PERIODIC-SMOKE
-TASK_OWNER=DESIGN
-TASK_STATUS=READY_FOR_DESIGN
+CURRENT_TASK_ID=R1E0B-BROADSIDE-PERIODIC-SMOKE-SOLVE-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=READY_FOR_SOLVE
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=NO
+SOLVER_PERMISSION=YES_R1E0B_ONLY
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
@@ -24,51 +24,34 @@ CST251_PERMISSION=NO
 
 Read `PROJECT_MAINLINE.md` first.
 
-The isolated-element passive stage is closed.
+R1E0B is the first actual solve of the infinite periodic array environment.
 
-The project is now on the array-first mainline:
-R1E0 periodic unit cell -> R1E1 pitch/material trade -> R1E2 active-impedance atlas -> active-front-end co-design.
+The authorization in this handoff is limited to one NW broadside periodic smoke solve.
 
-## R1E0A closed stage
+It does not authorize:
+- R1E0C scan sweep;
+- pitch/material variation;
+- LNA integration;
+- geometry optimization;
+- CST251 production solve.
 
-Original formal status:
-`HOLD_R1E0A_PERIODIC_CONFIG_AUDIT`
-
-Original HOLD classification:
-`AUDIT_BOOLEAN_ENCODING_MISMATCH`
-
-Read-only recovery status:
-`PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY_READONLY_RECOVERY`
-
-Canonical stage conclusion:
-`PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY`
-
-No CST rerun was performed during recovery.
-
-No solver was run.
-
-## Qualified periodic artifact
+## Qualified periodic source
 
 `D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst`
 
-SHA256:
+Required SHA256:
 `48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223`
 
-Qualified persisted metadata:
+Persisted periodic metadata:
 - one clean Pol-A differential port
-- Xmin/Xmax = unit cell
-- Ymin/Ymax = unit cell
-- Zmin/Zmax = expanded open
-- 94 x 94 mm unit-cell metadata
+- X/Y = unit cell
+- Z = expanded open
+- 94 x 94 mm cell
 - theta = 0 deg
 - phi = 45 deg
-- outward scan direction
-- geometry unchanged from clean R1A5F Pol-A
-- no solver output
+- direction = outward
 
-This artifact is PROTECTED_IN_PLACE because R1E0B consumes it.
-
-## Current R1E0B design
+## R1E0B frozen contract
 
 Contract:
 `docs/R1E0B_BROADSIDE_PERIODIC_SMOKE_CONTRACT.md`
@@ -82,12 +65,11 @@ Static audit:
 Harness:
 `scripts/run_r1e0b_broadside_periodic_smoke_dc.py`
 
-Critical design rule:
-R1E0B solver config contains no Boundary commands.
+Critical invariant:
+the solver config contains zero Boundary commands.
 
-The qualified R1E0A periodic metadata must remain untouched.
+## Authorized numerical formulation
 
-Numerical formulation:
 - HF Frequency Domain
 - tetrahedral second order
 - curvature order 3
@@ -96,34 +78,55 @@ Numerical formulation:
 - MinPasses 3
 - MaxPasses 8
 - MaxDeltaS 0.02
-- two Delta-S checks
+- NumberOfDeltaSChecks 2
+- LinearGrowthLimitation 40
 - 1.0–1.8 GHz
 
-Primary output:
-broadside active differential impedance
+## Formal execution
 
-Z_active = 100 * (1 + S11) / (1 - S11)
+Host:
+NW / DESKTOP-GBTI6Q4
 
-Broadside periodic Z_active is not required to equal isolated Zin.
+Fresh work:
+`D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work`
 
-## Current authorization
+Fresh evidence:
+`evidence/r1e0b_dc_nw_20260924_smoke01/`
 
-R1E0B is DESIGN ONLY.
+Expected result CST:
+`D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work\R1E0B_POLA_PERIODIC_BROADSIDE_SMOKE_V01.cst`
 
-No solver is currently authorized.
+Formal invocation count:
+1
 
-A future R1E0B solver authorization must freeze:
-- exact source HEAD;
-- fresh work/evidence paths;
-- one-shot invocation;
-- NW resource boundary;
-- PASS/HOLD gate from the current contract.
+Silent retry:
+NO
 
-## Next stage after R1E0B PASS
+## PASS gate
 
-R1E0C first scan qualification:
-- theta = 0, 30, 45, 60 deg
-- primary Pol-A scan plane phi=45 deg
-- orthogonal sentinel at theta=60 deg, phi=135 deg
+`PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE` requires:
+- source/copy hash gates pass;
+- pre-solver periodic metadata remains valid;
+- geometry remains unchanged;
+- one discrete port remains;
+- solver completes;
+- non-empty finite S11;
+- finite derived Z_active;
+- final two native Delta-S <= 0.02;
+- desired-accuracy termination;
+- no max-pass termination;
+- broadband sweep converged;
+- no solver error lines.
 
-No scan solver is authorized yet.
+The isolated clean Pol-A curve is contextual only and has no equality threshold.
+
+## Stop boundary
+
+After this one broadside periodic smoke:
+- return to DESIGN;
+- do not launch theta sweep;
+- do not change pitch/material;
+- do not integrate LNA;
+- do not migrate to CST251 automatically.
+
+On PASS, open R1E0C first-scan DESIGN only.
