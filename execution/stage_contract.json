@@ -1,59 +1,45 @@
 {
   "schema_version": "0.2.4",
-  "global_protocol": {
-    "repository": "Dingo-infinity2020/SimulationOps",
-    "protocol_version": "0.2.4"
-  },
   "project": {
     "name": "GNSS_Lband_Active_Array",
-    "mainline_authority": "PROJECT_MAINLINE.md",
-    "model_identity": "CHARTS_GNSS_R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE_DESIGN",
-    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_AT_CLOSEOUT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false,
+    "scope": "R1E1A0_R1_PITCH_READY_SOURCE_ONLY",
     "production_solve_authorized": false,
-    "optimization_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "r1e0c_status": "PASS_R1E0C_SCAN_QUALIFICATION",
-    "r1e1a0_formal_status": "HOLD_R1E1A0_SOURCE_HISTORY_PARAMETER_DECLARATION",
-    "r1e1a0_formal_source_commit": "750a036761c3b10a37830c95415b96c1436f3d29",
-    "r1e1a0_endpoint_artifacts": {
-      "P088": "65b649a28e148c8c373f06357caff36a8a4a65b06b898bf8abb96c196a3c688a",
-      "P100": "3746c521ffc628eddd257f96323980ac60b5183a36f536dc77876d99b1e5f779"
-    },
-    "r1e1a0_sole_failed_predicate": "no_pitch_history_warning",
-    "r1e1a0_root_cause": "historical R1A3 StoreParameter declaration for mutable pitch",
-    "current_task": "R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE_DESIGN",
+    "current_task": "R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY",
+    "source_commit_before_authorization": "2dff5aae377009c84352583cde008322ec20d810",
+    "generator_sha256": "615e715ae88dd2fe35840adc396aa30d68729ffa94ab8001ea445021927960ec",
+    "harness_sha256": "c0c4be4b189f9238ab5bcb05bddc26c213d439e4caf1c19bea6b04c89a206536",
+    "derived_geometry_macro_sha256": "6f54dc6b7e73160f48a974e214fa481773f0d342a80bdb1242d0316fa39be6b7",
+    "frozen_port_macro_sha256": "f2b4555413005596f5fa8ceefacc64b7cadbba2cce1c430f0c9c713a6f7aead9",
+    "derived_periodic_macro_sha256": "b96469c62337f1dab9cb71a0bcdb7a7666e8ec558ee4f937c565d75a66e0de54",
     "contract": "docs/R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_CONTRACT.md",
     "runbook": "em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0R1_PITCH_READY_SOURCE_BUILD_ONLY.md",
-    "generator": "scripts/generate_r1e1a0r1_pitch_ready_macros.py",
-    "harness": "scripts/run_r1e1a0r1_pitch_ready_source_build_only_dc.py",
-    "static_audit": "PASS_R1E1A0R1_STATIC_AUDIT",
-    "next_execution_contract": "NOT_AUTHORIZED"
+    "stop_boundary": "one 94-mm canonical source; no endpoint mutation; no solver"
   },
   "execution": {
-    "current_stage": "DESIGN_R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE",
-    "last_completed_stage": "R1E1A0_ENDPOINT_PROOF",
-    "last_status": "HOLD_R1E1A0_SOURCE_HISTORY_PARAMETER_DECLARATION",
+    "current_stage": "R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY",
+    "formal_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "prior_hold_evidence": "evidence/r1e1a0_dc_nw_20260924_build01/",
-    "handoff": "PROJECT_HANDOFF.md"
+    "work": "D:\\GNSS_Lband_Active_Array\\_r1e1a0r1_pitch_ready_source_work",
+    "evidence": "evidence/r1e1a0r1_dc_nw_20260924_build01/"
   },
   "workspace": {
     "host_alias": "NW",
     "record_path": "execution/workspace_record_NW_R1E1A0_R1.json",
-    "state": "CHECKPOINTED",
+    "state": "ACTIVE",
     "purge_allowed": false
   }
 }

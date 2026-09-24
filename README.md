@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E1A0-R1 - pitch-ready canonical-source recovery DESIGN after endpoint-proof HOLD.**
+**R1E1A0-R1 - authorized 94-mm pitch-ready canonical-source BUILD-ONLY recovery on NW.**
 
 The isolated-element passive phase is closed.
 
@@ -67,13 +67,13 @@ The first R1E1A0 P088/P100 endpoint proof is formally:
 Both endpoint geometries and periodic metadata were correct; the sole failed predicate was the protected-parameter history warning inherited from the historical R1A3 source.
 
 Current work:
-**R1E1A0-R1 pitch-ready 94-mm canonical-source DESIGN ONLY**.
+**R1E1A0-R1 authorized 94-mm pitch-ready canonical-source BUILD-ONLY recovery**.
 
 Recovery principle:
 derive new macros with `MakeSureParameterExists`, preserve historical macros/artifacts unchanged, rebuild a fresh 94-mm Pol-A periodic source, then reopen endpoint proof as a separate R2 ticket.
 
 Current permissions:
-- BUILD_AUTHORIZED=NO
+- BUILD_AUTHORIZED=YES_R1E1A0_R1_PITCH_READY_SOURCE_ONLY
 - SOLVER_PERMISSION=NO
 
 Read `PROJECT_HANDOFF.md` for the exact baton.

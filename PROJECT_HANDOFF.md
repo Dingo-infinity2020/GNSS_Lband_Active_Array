@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=47
+HANDOFF_VERSION=48
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
-CURRENT_TASK_ID=R1E1-A0-R1-DESIGN-PITCH-READY-CANONICAL-SOURCE
-TASK_OWNER=DESIGN
-TASK_STATUS=READY_FOR_DESIGN
+CURRENT_TASK_ID=R1E1-A0-R1-PITCH-READY-CANONICAL-SOURCE-BUILD-ONLY-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=READY_FOR_BUILD
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=NO
+BUILD_AUTHORIZED=YES_R1E1A0_R1_PITCH_READY_SOURCE_ONLY
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -481,24 +481,64 @@ source-history/tooling HOLD; not a geometry or physics failure.
 Evidence:
 `evidence/r1e1a0_dc_nw_20260924_build01/`
 
-## Current recovery design
+## Current R1E1A0-R1 recovery BUILD-ONLY authorization
 
 Task:
-`R1E1-A0-R1-DESIGN-PITCH-READY-CANONICAL-SOURCE`
+`R1E1-A0-R1-PITCH-READY-CANONICAL-SOURCE-BUILD-ONLY-NW`
 
 Recovery architecture:
-1. derive a new R1A3 geometry macro with `MakeSureParameterExists` for `unit_cell_pitch_nominal` and `ground_reference_span`;
-2. reuse the already-qualified R1A5F Pol-A single-port macro unchanged;
-3. derive a parameter-ready periodic macro with `MakeSureParameterExists` for pitch metadata and scan theta/phi;
-4. build a fresh 94-mm periodic Pol-A canonical source;
-5. qualify geometry/port/boundary equivalence and zero parameter-history warnings;
-6. only then open a separate R1E1A0-R2 endpoint-proof ticket.
+1. derived R1A3 geometry macro with `MakeSureParameterExists` for mutable pitch/span;
+2. frozen qualified R1A5F Pol-A single-port macro unchanged;
+3. derived parameter-ready periodic broadside macro;
+4. one fresh 94-mm periodic Pol-A canonical source;
+5. fresh-reopen equivalence + warning qualification;
+6. stop before endpoint mutation.
+
+Frozen source commit before formal build:
+`2dff5aae377009c84352583cde008322ec20d810`
+
+Generator SHA256:
+`615e715ae88dd2fe35840adc396aa30d68729ffa94ab8001ea445021927960ec`
+
+Harness SHA256:
+`c0c4be4b189f9238ab5bcb05bddc26c213d439e4caf1c19bea6b04c89a206536`
+
+Audit SHA256:
+`48e19e7d439b5c19dda9f5c32732142098e1db7e8cdd5a496baf5ba20135d34d`
+
+Derived geometry macro SHA256:
+`6f54dc6b7e73160f48a974e214fa481773f0d342a80bdb1242d0316fa39be6b7`
+
+Frozen Pol-A port macro SHA256:
+`f2b4555413005596f5fa8ceefacc64b7cadbba2cce1c430f0c9c713a6f7aead9`
+
+Derived periodic macro SHA256:
+`b96469c62337f1dab9cb71a0bcdb7a7666e8ec558ee4f937c565d75a66e0de54`
+
+Contract SHA256:
+`fcf663be0eba4570a2955e36ac6b55e13c8b91380e1a48fc6b57794ed12698c2`
+
+Runbook SHA256:
+`6d6313900452418f0d0b5831b3ffa4ac592a9e3b1d8ce0773cf10da86fffcf03`
+
+Fresh work:
+`D:\GNSS_Lband_Active_Array\_r1e1a0r1_pitch_ready_source_work`
+
+Fresh evidence:
+`evidence/r1e1a0r1_dc_nw_20260924_build01/`
+
+Formal invocation count:
+1
+
+Silent retry:
+NO
 
 Historical macros/artifacts remain untouched.
 
-BUILD_AUTHORIZED=NO
+BUILD_AUTHORIZED=YES_R1E1A0_R1_PITCH_READY_SOURCE_ONLY
 SOLVER_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
 
-No recovery build is authorized yet.
+This ticket ends after the 94-mm canonical source qualification.
+R1E1A0-R2 endpoint mutation requires a separate ticket even though the user pre-authorized the next build-only task.

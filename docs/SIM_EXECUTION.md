@@ -1,90 +1,48 @@
 # SIM_EXECUTION
 
-## Authority
-
-- Mainline: PROJECT_MAINLINE.md
-- SimulationOps: 0.2.4
-
 ## Current stage
+R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY
 
-DESIGN_R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE
-
-BUILD_AUTHORIZED: false
+BUILD_AUTHORIZED: true
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 MATERIAL_AB_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 
-## Last formal execution
+## Formal scope
+Host: NW / DESKTOP-GBTI6Q4
+Mode: ONE_SHOT_BUILD_ONLY
 
-R1E1A0 endpoint pitch-parameterization BUILD-ONLY proof
+Source commit:
+2dff5aae377009c84352583cde008322ec20d810
 
-Formal status:
-HOLD_R1E1A0_SOURCE_HISTORY_PARAMETER_DECLARATION
+Generator SHA256:
+615e715ae88dd2fe35840adc396aa30d68729ffa94ab8001ea445021927960ec
 
-Formal source commit:
-750a036761c3b10a37830c95415b96c1436f3d29
+Harness SHA256:
+c0c4be4b189f9238ab5bcb05bddc26c213d439e4caf1c19bea6b04c89a206536
 
-Formal invocation count:
-1
+Derived geometry macro SHA256:
+6f54dc6b7e73160f48a974e214fa481773f0d342a80bdb1242d0316fa39be6b7
 
-Runtime:
-99.32 s
+Frozen port macro SHA256:
+f2b4555413005596f5fa8ceefacc64b7cadbba2cce1c430f0c9c713a6f7aead9
 
-Solver:
-NOT RUN
+Derived periodic macro SHA256:
+b96469c62337f1dab9cb71a0bcdb7a7666e8ec558ee4f937c565d75a66e0de54
 
-Endpoint artifacts:
-- P088 SHA256: 65b649a28e148c8c373f06357caff36a8a4a65b06b898bf8abb96c196a3c688a
-- P100 SHA256: 3746c521ffc628eddd257f96323980ac60b5183a36f536dc77876d99b1e5f779
-
-Passed:
-- pitch persistence
-- structure span / UnitCellDs1/Ds2
-- non-ground geometry invariance
-- one-port / broadside periodic metadata
-- fresh reopen
-- no solver markers / results
-
-Sole failed predicate:
-no_pitch_history_warning
-
-Root cause:
-historical R1A3 model history contains StoreParameter for unit_cell_pitch_nominal=94, so CST emits a protected-parameter warning during parametric rebuild even though the requested pitch persists correctly.
-
-Classification:
-source-history/tooling HOLD; not a geometry or physics failure
+Work:
+D:\GNSS_Lband_Active_Array\_r1e1a0r1_pitch_ready_source_work
 
 Evidence:
-evidence/r1e1a0_dc_nw_20260924_build01/
+evidence/r1e1a0r1_dc_nw_20260924_build01/
 
-## Current recovery stage
-
-Task:
-R1E1A0-R1 pitch-ready 94-mm canonical source
-
-Contract:
-docs/R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_CONTRACT.md
-
-Runbook:
-em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0R1_PITCH_READY_SOURCE_BUILD_ONLY.md
-
-Generator:
-scripts/generate_r1e1a0r1_pitch_ready_macros.py
-
-Harness:
-scripts/run_r1e1a0r1_pitch_ready_source_build_only_dc.py
-
-Static audit:
-PASS_R1E1A0R1_STATIC_AUDIT
-
-Recovery architecture:
-derived pitch-ready R1A3 geometry macro + frozen R1A5F Pol-A single-port macro + derived parameter-ready periodic broadside macro
+Formal invocation count: 1
+Silent retry: NO
 
 ## Stop
-
-R1 recovery build is not yet authorized in this closeout state.
-No endpoint rerun.
+Build exactly one 94-mm pitch-ready canonical source.
+No 88/100 mutation.
 No solver.
 No material A/B.
 No LNA integration.

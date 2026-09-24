@@ -23,21 +23,20 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A0-R1-DESIGN-PITCH-READY-CANONICAL-SOURCE**
+Current task: **R1E1-A0-R1-PITCH-READY-CANONICAL-SOURCE-BUILD-ONLY-NW**
 
 Current permissions:
-- inspect the formal R1E1A0 HOLD evidence: YES
-- design/audit the R1E1A0-R1 pitch-ready canonical-source bundle: YES
-- generate/check deterministic derived macros: YES
-- run the R1 recovery build: NO
-- rerun 88/100 endpoint proof: NO
+- use the frozen R1E1A0-R1 recovery bundle: YES
+- run exactly one 94-mm pitch-ready canonical-source BUILD-ONLY invocation on NW: YES
+- fresh-reopen geometry/port/boundary/parameter-warning qualification: YES
+- rerun 88/100 endpoint proof in this ticket: NO
 - run any R1E1 solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO
+- silent retry: NO
 
-R1E0C is closed PASS.
 R1E1A0 endpoint proof is formally HOLD on source-history parameter declaration.
-R1E1A0-R1 remains DESIGN ONLY until a separate recovery build authorization is frozen.
+Only the R1 canonical-source recovery build is authorized.
 
 ## Architecture control
 
