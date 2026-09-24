@@ -8,11 +8,11 @@
 HANDOFF_VERSION=5
 CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R1-CHARTS-GNSS-DERIVATIVE
-CURRENT_TASK_ID=R1A2-DESIGN-FEED-SYMMETRY-FREEZE
-TASK_OWNER=DESIGN
-TASK_STATUS=READY_FOR_DESIGN
+CURRENT_TASK_ID=R1A2-FEED-REFERENCE-BUILD-ONLY-DC-NW
+TASK_OWNER=DESIGN_DC
+TASK_STATUS=EXECUTION_READY
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=NO
+BUILD_AUTHORIZED=YES
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 L_BAND_SCALING_PERMISSION=R1A1_FROZEN_SCALE_ONLY
@@ -195,3 +195,42 @@ FRESH_REOPEN=PASS
 R1A1 is closed. The baton returns to DESIGN for R1A2 center-feed geometry freeze.
 
 NW remains the preferred build host once R1A2 BUILD_ONLY is explicitly authorized.
+
+
+## 10. R1A2 NW/DC build authorization
+
+Task:
+`R1A2-FEED-REFERENCE-BUILD-ONLY-DC-NW`
+
+Authorized:
+- CST BUILD-ONLY on NW,
+- exact-rotation feed-gap/terminal reference overlays,
+- fresh reopen,
+- runtime symmetry audit.
+
+Source bundle:
+- `source/cst/R1A2_CHARTS_FEED_REFERENCE_BUILD_ONLY_V01.mcr`
+- `scripts/audit_r1a2_feed_reference.py`
+- `scripts/run_r1a2_build_only_dc.py`
+- `em/cst/R1_CHARTS_LBAND/parameters_r1a2_feed.csv`
+- `em/cst/R1_CHARTS_LBAND/RUNBOOK_R1A2_BUILD_ONLY.md`
+
+Expected:
+- 10 final solids,
+- 4 gap references from one master + Transform copies,
+- 4 terminal references from one master + Transform copies,
+- equal group volumes to numerical tolerance,
+- 0 ports,
+- no solver.
+
+Reference overlay solids are non-physical and are not subtracted from the aperture in R1A2.
+
+Stop after fresh-reopen/symmetry audit.
+
+Still forbidden:
+- physical ports,
+- materialization/substrate,
+- solver,
+- optimizer,
+- LNA,
+- CST251 staging.
