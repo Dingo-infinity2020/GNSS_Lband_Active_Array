@@ -8,85 +8,53 @@
   },
   "project": {
     "name": "GNSS_Lband_Active_Array",
-    "model_identity": "CHARTS_GNSS_R1A3_MATERIALIZED_FR4_V01",
+    "model_identity": "CHARTS_GNSS_R1A4_DIFFERENTIAL_PORT_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "dbd879fd81c8a7b19ef2139ce03c620625c07084"
+    "source_commit": "RESOLVE_AFTER_R1A4_DESIGN_FREEZE"
   },
   "toolchain": {
     "simulator": "CST Studio Suite",
     "simulator_version": "2022.5",
-    "builder_or_adapter": "source/cst/R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.mcr",
+    "builder_or_adapter": "NOT_FROZEN_YET",
     "build_host_alias": "NW",
-    "solve_host_alias": "CST251-C",
+    "solve_host_alias": "",
     "container": ""
   },
   "scientific_freeze": {
-    "geometry_manifest": "em/cst/R1_CHARTS_LBAND/parameters_r1a3_materialized_fr4.csv",
-    "design_freeze": "docs/R1A3_SCIENTIFIC_FREEZE.md",
-    "material_table": "FR4_COST_BASELINE er=4.2 tanD=0.018 t=1.00mm; top conductor 0.035mm PEC for BUILD_ONLY",
+    "immutable_geometry_source": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work\\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst",
+    "immutable_geometry_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+    "port_contract": "R1A4 design pending freeze",
     "source_modes": [],
-    "ports": [],
-    "frequency_range": "target 1.15-1.65 GHz; no solver in R1A3",
-    "required_outputs": [
-      "object_inventory",
-      "parameter_inventory",
-      "top_view",
-      "oblique_view",
-      "fresh_reopen_inventory",
-      "fresh_reopen_view",
-      "macro_sha256",
-      "cst_sha256",
-      "cst_bytes",
-      "source_head"
-    ],
-    "pass_gate": "PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW",
-    "stop_boundary": "manual user review of canonical CST; solver and staging forbidden"
+    "frequency_range": "none; solver forbidden",
+    "pass_gate": "NOT_FROZEN_YET",
+    "stop_boundary": "R1A4 design/static audit only"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": false,
-    "HUMAN_CST_REVIEW_REQUIRED": true
+    "SOLVE_AUTHORIZED": false
   },
   "execution": {
-    "current_stage": "HUMAN_REVIEW_R1A3",
-    "last_completed_stage": "BUILD_ONLY_R1A3",
-    "last_status": "PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW",
-    "static_audit": "PASS_R1A3_STATIC_AUDIT",
-    "formal_invocation_count": 1,
-    "formal_invocation_exit_code": 0,
-    "formal_invocation_runtime_seconds": 76.10,
+    "current_stage": "DESIGN_R1A4_DIFFERENTIAL_PORT",
+    "last_completed_stage": "HUMAN_REVIEW_R1A3",
+    "last_status": "PASS_R1A3_HUMAN_REVIEW",
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "build_artifact": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work\\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst",
-    "staging_artifact": "",
-    "run_directory": "",
-    "qualification_output": "evidence/r1a3_dc_nw_20260924_build01/",
+    "build_artifact": "",
+    "qualification_output": "",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "evidence": {
-    "source_sha256": "macro:1e5bb3188c5d19146b673ec54372d0c35ae572abc775512529f71db71cfad5be",
-    "build_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
-    "build_bytes": 48527,
-    "exact_invocation": "evidence/r1a3_dc_nw_20260924_build01/exact_invocation.txt",
-    "status_classification": "PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW",
-    "fresh_reopen": "PASS",
-    "shape_count": 3,
-    "tool_residue": []
+    "status_classification": "READY_FOR_R1A4_DESIGN"
   },
   "exceptions": [],
   "workspace": {
     "host_alias": "NW",
     "working_path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "record_path": "execution/workspace_record_NW_R1A3.json",
-    "state": "PROTECTED",
+    "state": "ACTIVE",
     "archive_mode": "PROTECTED_IN_PLACE",
-    "archive_trigger": "R1A3 build-only PASS; human review pending",
-    "archive_destination": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work",
-    "purge_allowed": false,
-    "cleanup_completed": false,
-    "cleanup_evidence": "Canonical CST retained for explicit user review."
+    "purge_allowed": false
   }
 }

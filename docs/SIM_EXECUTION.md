@@ -1,75 +1,50 @@
 # SIM_EXECUTION
 
-## 1. Global Protocol
+## Global protocol
 
-- Repository: Dingo-infinity2020/SimulationOps
-- Protocol version: 0.2.4
-- Host registry: infrastructure/HOSTS.md
-- Workspace lifecycle: WORKSPACE_LIFECYCLE.md
-- Adoption commit: 45fcb8c89445f05a696cde524d762641ea7ea961
+- SimulationOps: Dingo-infinity2020/SimulationOps
+- protocol version: 0.2.4
+- host registry: infrastructure/HOSTS.md
+- workspace lifecycle: WORKSPACE_LIFECYCLE.md
+- adoption commit: 45fcb8c89445f05a696cde524d762641ea7ea961
 
-## 2. Project Identity
+## Project state
 
 - Project: GNSS L-band Active Array
-- Current model identity: CHARTS_GNSS_R1A3_MATERIALIZED_FR4_V01
-- Repository: Dingo-infinity2020/GNSS_Lband_Active_Array
+- Current model identity: CHARTS_GNSS_R1A4_DIFFERENTIAL_PORT_V01
 - Source branch: project/r0-charts-scaffold
-- Build source commit: dbd879fd81c8a7b19ef2139ce03c620625c07084
-
-## 3. Toolchain
-
-- Simulator: CST Studio Suite 2022.5
-- Builder: source/cst/R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.mcr
-- Harness: scripts/run_r1a3_build_only_dc.py
-- Build host: NW
-- Solve host: CST251-C reserved only for a later explicit solve authorization
-- Runtime: CST bundled Python 3.6 / cst.interface
-
-## 4. Artifact Locations
-
-- Canonical CST: D:\GNSS_Lband_Active_Array\_r1a3_materialized_fr4_work\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst
-- CST SHA256: b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa
-- CST bytes: 48527
-- Evidence: evidence/r1a3_dc_nw_20260924_build01/
-- Staging artifact: NOT AUTHORIZED
-- Solve directory: NOT AUTHORIZED
-
-## 5. Scientific Freeze
-
-- Geometry manifest: em/cst/R1_CHARTS_LBAND/parameters_r1a3_materialized_fr4.csv
-- Design freeze: docs/R1A3_SCIENTIFIC_FREEZE.md
-- Material: FR4_COST_BASELINE er=4.2 tanD=0.018 t=1.00 mm
-- Top conductor: 0.035 mm PEC build-only geometry
-- Ports: none
-- LNA: none
-- Frequency target: 1.15-1.65 GHz; no solver result exists
-- PASS: PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW
-- Stop boundary: explicit user review of canonical CST
-
-## 6. Execution State
-
-- Current stage: HUMAN_REVIEW_R1A3
+- Current stage: DESIGN_R1A4_DIFFERENTIAL_PORT
 - BUILD_AUTHORIZED: false
 - SOLVE_AUTHORIZED: false
-- Last completed stage: BUILD_ONLY_R1A3
-- Last status: PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW
-- Formal invocation count: 1
-- Formal invocation exit code: 0
-- Fresh reopen: PASS
-- Silent retry: NO
+- Last completed stage: HUMAN_REVIEW_R1A3
+- Last status: PASS_R1A3_HUMAN_REVIEW
 
-## 7. Workspace Lifecycle
+## Immutable geometry source
 
-- Host: NW
-- Repository workspace: D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold
-- Record: execution/workspace_record_NW_R1A3.json
-- Canonical build work: D:\GNSS_Lband_Active_Array\_r1a3_materialized_fr4_work
-- State: PROTECTED
-- Archive mode: PROTECTED_IN_PLACE
-- Purge allowed: false
-- Reason: user-requested manual CST review is pending
+Reviewed R1A3 CST:
+D:\GNSS_Lband_Active_Array\_r1a3_materialized_fr4_work\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst
 
-## 8. Recovery Notes
+SHA256:
+b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa
 
-The R1A3 canonical CST file is not ordinary temporary build output.
-Do not delete, overwrite, manually edit, stage, or solve it before explicit user review.
+R1A4 must copy this artifact into a fresh work directory. It must not rebuild or overwrite R1A3 geometry.
+
+## Planned R1A4 build host
+
+- Build host: NW
+- Simulator: CST Studio Suite 2022.5
+- Runtime: CST bundled Python 3.6 / cst.interface
+- Solve host: none at this stage
+- Solver: forbidden
+
+## Planned gate
+
+R1A4 build-only shall prove:
+- exactly 2 discrete differential ports;
+- 100 ohm reference per differential port;
+- Pol-B is +90 degree rotation of Pol-A;
+- fresh reopen preserves port count;
+- shape inventory is unchanged from reviewed R1A3;
+- no solver is started.
+
+Until the source bundle and static audit are frozen, BUILD_AUTHORIZED remains false.
