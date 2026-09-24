@@ -23,11 +23,12 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E0C-A-SCANSTATE-BUILD-ONLY-NW**
+Current task: **R1E0C-A-R1-RECOVERY-BUILD-ONLY-NW**
 
 Current permissions:
-- use the qualified clean R1E0A periodic source: YES
-- run exactly one R1E0C-A four-state BUILD-ONLY task on NW: YES
+- preserve the original R1E0C-A HOLD evidence/workspace: YES
+- use a fresh recovery work/evidence path: YES
+- run exactly one R1E0C-A-R1 recovery BUILD-ONLY task on NW: YES
 - save/fresh-reopen/hash/audit all four scan-state CSTs: YES
 - run any scan solver: NO
 - modify pitch/material/geometry/feed: NO
@@ -35,8 +36,8 @@ Current permissions:
 - CST251 production solve: NO
 - silent retry: NO
 
-R1E0B is closed PASS.
-R1E0C-A build-only is the current authorized execution gate.
+The original formal R1E0C-A invocation is HOLD due to a pre-build harness path-format bug.
+R1E0C-A-R1 is a separately frozen recovery build-only ticket.
 
 ## Architecture control
 

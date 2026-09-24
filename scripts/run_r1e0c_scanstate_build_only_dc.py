@@ -121,7 +121,7 @@ def run_one(repo,evidence,work,source,state,theta,phi,source_shapes):
     pre_sha=sha(dst)
     if pre_sha!=SOURCE_SHA:
         raise RuntimeError("HOLD_R1E0C_%s_COPY_HASH_MISMATCH"%state)
-    macro=os.path.join(repo,"source","cst","R1E0C_%s_SCANSTATE_BUILD_ONLY_V01.mcr")
+    macro=os.path.join(repo,"source","cst","R1E0C_%s_SCANSTATE_BUILD_ONLY_V01.mcr"%state)
 
     bshape=os.path.join(edir,"build_object_inventory.txt")
     bstatus=os.path.join(edir,"build_periodic_status.txt")
@@ -177,6 +177,12 @@ def run(repo,evidence,work,source):
         raise RuntimeError("HOLD_R1E0C_SOURCE_MISSING")
     if sha(source)!=SOURCE_SHA:
         raise RuntimeError("HOLD_R1E0C_SOURCE_HASH_MISMATCH")
+
+    # Preflight every generated macro before creating any execution directory.
+    for state,theta,phi in STATES:
+        macro=os.path.join(repo,"source","cst","R1E0C_%s_SCANSTATE_BUILD_ONLY_V01.mcr"%state)
+        if not os.path.isfile(macro):
+            raise RuntimeError("HOLD_R1E0C_MACRO_MISSING_"+state)
 
     os.makedirs(evidence); os.makedirs(work)
     source_shapes=shape_lines(os.path.join(repo,"evidence","r1e0a_dc_nw_20260924_build01","reopen_object_inventory.txt"))

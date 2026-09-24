@@ -4,31 +4,37 @@
     "project": "GNSS_Lband_Active_Array",
     "task_id": "R1E0C-A-SCANSTATE-BUILD-ONLY-NW",
     "stage": "R1E0C_A_SCANSTATE_BUILD_ONLY",
-    "status": "READY_FOR_BUILD_ONLY"
+    "status": "HOLD_R1E0C_A_HARNESS_MACRO_PATH_FORMAT"
   },
   "workspace": {
     "host_alias": "NW",
-    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "ACTIVE"
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_work",
+    "state": "CHECKPOINTED"
   },
   "source": {
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AT_PREFLIGHT",
-    "head_on_trusted_remote": false
+    "formal_source_commit": "746b34d35e6ae4ee948a6fc510bc6c072584e654"
   },
-  "execution": {
-    "mode": "ONE_SHOT_BUILD_ONLY",
-    "formal_invocation_count": 0,
-    "silent_retry_allowed": false
+  "result": {
+    "formal_invocation_count": 1,
+    "exit_code": 1,
+    "runtime_seconds": 24.23,
+    "solver_run": false,
+    "partial_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_work\\R1E0C_C30P45_SCANSTATE_BUILD_ONLY_V01.cst",
+    "partial_cst_sha256": "48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223",
+    "failure_class": "PRE_BUILD_HARNESS_MACRO_PATH_FORMAT"
   },
   "archive": {
     "mode": "CHECKPOINTED",
-    "completed": false,
+    "critical_artifacts": [
+      "evidence/r1e0c_dc_nw_20260924_build01/"
+    ],
+    "completed": true,
     "purge_allowed": false
   },
   "closeout": {
-    "task_node": "",
+    "task_node": "formal build HOLD / recovery ticket opened",
     "handoff_written": true,
     "purge_allowed": false,
     "purged": false

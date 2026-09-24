@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=33
+HANDOFF_VERSION=34
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E0C-FIRST-SCAN-QUALIFICATION
-CURRENT_TASK_ID=R1E0C-A-SCANSTATE-BUILD-ONLY-NW
+CURRENT_TASK_ID=R1E0C-A-R1-RECOVERY-BUILD-ONLY-NW
 TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_BUILD_ONLY
+TASK_STATUS=READY_FOR_RECOVERY_BUILD
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_R1E0C_A_ONLY
+BUILD_AUTHORIZED=YES_R1E0C_A_RECOVERY_ONLY
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -142,26 +142,43 @@ All four macros contain:
 - zero port changes;
 - zero solver commands.
 
-## Current authorization
+## Original R1E0C-A formal invocation
 
-R1E0C-A BUILD-ONLY is authorized for one formal NW invocation.
+Status:
+`HOLD_R1E0C_A_HARNESS_MACRO_PATH_FORMAT`
 
-Authorized actions:
-- copy the qualified clean R1E0A periodic source into four fresh state models;
-- apply only the frozen theta/phi scan metadata;
-- save each CST;
-- close and fresh-reopen each CST;
-- verify geometry/port/boundary/cell/scan metadata;
-- hash each artifact;
-- record evidence.
+Source commit:
+`746b34d35e6ae4ee948a6fc510bc6c072584e654`
 
-Formal work path:
-`D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_work`
+Invocation count:
+1
 
-Formal evidence path:
-`evidence/r1e0c_dc_nw_20260924_build01/`
+Exit code:
+1
 
-Formal invocation count:
+Runtime:
+24.23 s
+
+Failure class:
+pre-build harness path-format bug; no scan metadata applied and no solver run.
+
+Original failed work/evidence are preserved and are not reused.
+
+## Current recovery authorization
+
+R1E0C-A-R1 recovery BUILD-ONLY is authorized for one fresh NW invocation.
+
+Recovery fix:
+- format the scan-state macro filename with the actual state id;
+- preflight all four macro files before creating recovery execution directories.
+
+Fresh recovery work path:
+`D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01`
+
+Fresh recovery evidence path:
+`evidence/r1e0c_dc_nw_20260924_recovery01/`
+
+Recovery invocation count:
 1
 
 Silent retry:
@@ -169,4 +186,4 @@ NO
 
 SOLVER_PERMISSION remains NO.
 
-R1E0C-B scan solves require a separate later solver authorization.
+R1E0C-B scan solves still require a separate later solver authorization.

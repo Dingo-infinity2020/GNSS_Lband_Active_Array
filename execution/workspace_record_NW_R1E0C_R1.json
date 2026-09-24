@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1E0C-A-R1-RECOVERY-BUILD-ONLY-NW",
+    "stage": "R1E0C_A_R1_RECOVERY_BUILD_ONLY",
+    "status": "READY_FOR_RECOVERY_BUILD"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "state": "ACTIVE"
+  },
+  "source": {
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "branch": "project/r0-charts-scaffold",
+    "head_commit": "RESOLVE_AT_RECOVERY_PREFLIGHT",
+    "head_on_trusted_remote": false
+  },
+  "execution": {
+    "mode": "ONE_SHOT_RECOVERY_BUILD_ONLY",
+    "recovery_invocation_count": 0,
+    "silent_retry_allowed": false
+  },
+  "archive": {
+    "mode": "CHECKPOINTED",
+    "completed": false,
+    "purge_allowed": false
+  },
+  "closeout": {
+    "task_node": "",
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}
