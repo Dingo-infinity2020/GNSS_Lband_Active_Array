@@ -11,7 +11,7 @@
     "model_identity": "CHARTS_GNSS_R1A3_MATERIALIZED_FR4_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_BUILD_PREFLIGHT"
+    "source_commit": "dbd879fd81c8a7b19ef2139ce03c620625c07084"
   },
   "toolchain": {
     "simulator": "CST Studio Suite",
@@ -41,32 +41,25 @@
       "source_head"
     ],
     "pass_gate": "PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW",
-    "hold_conditions": [
-      "static_audit_failure",
-      "CST_runtime_failure",
-      "physical_layer_missing",
-      "slot_or_gap_tool_residue",
-      "fresh_reopen_mismatch"
-    ],
     "stop_boundary": "manual user review of canonical CST; solver and staging forbidden"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": false,
     "HUMAN_CST_REVIEW_REQUIRED": true
   },
   "execution": {
-    "current_stage": "BUILD_ONLY_R1A3",
-    "last_completed_stage": "BUILD_ONLY_R1A2",
-    "last_status": "PASS_R1A2_FEED_REFERENCE_BUILD_ONLY",
+    "current_stage": "HUMAN_REVIEW_R1A3",
+    "last_completed_stage": "BUILD_ONLY_R1A3",
+    "last_status": "PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW",
     "static_audit": "PASS_R1A3_STATIC_AUDIT",
-    "one_shot_required": true,
+    "formal_invocation_count": 1,
+    "formal_invocation_exit_code": 0,
+    "formal_invocation_runtime_seconds": 76.10,
     "silent_retry_allowed": false,
-    "fresh_run_directory_required": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "source_bundle": "repository source/cst + em/cst/R1_CHARTS_LBAND + execution",
     "build_artifact": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work\\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst",
     "staging_artifact": "",
     "run_directory": "",
@@ -74,23 +67,26 @@
     "handoff": "PROJECT_HANDOFF.md"
   },
   "evidence": {
-    "source_sha256": "",
-    "build_sha256": "",
-    "build_bytes": null,
-    "exact_invocation": "",
-    "status_classification": "READY_FOR_BUILD_ONLY"
+    "source_sha256": "macro:1e5bb3188c5d19146b673ec54372d0c35ae572abc775512529f71db71cfad5be",
+    "build_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+    "build_bytes": 48527,
+    "exact_invocation": "evidence/r1a3_dc_nw_20260924_build01/exact_invocation.txt",
+    "status_classification": "PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW",
+    "fresh_reopen": "PASS",
+    "shape_count": 3,
+    "tool_residue": []
   },
   "exceptions": [],
   "workspace": {
     "host_alias": "NW",
     "working_path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
     "record_path": "execution/workspace_record_NW_R1A3.json",
-    "state": "ACTIVE",
+    "state": "PROTECTED",
     "archive_mode": "PROTECTED_IN_PLACE",
-    "archive_trigger": "R1A3 PASS/HOLD",
-    "archive_destination": "canonical CST build work directory on NW + remote Git compact evidence",
+    "archive_trigger": "R1A3 build-only PASS; human review pending",
+    "archive_destination": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work",
     "purge_allowed": false,
     "cleanup_completed": false,
-    "cleanup_evidence": ""
+    "cleanup_evidence": "Canonical CST retained for explicit user review."
   }
 }
