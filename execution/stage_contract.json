@@ -3,43 +3,42 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
+    "source_commit": "RESOLVE_AT_CLOSEOUT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": false,
-    "scope": "R1E1A0_R1_PITCH_READY_SOURCE_ONLY",
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "current_task": "R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY",
-    "source_commit_before_authorization": "2dff5aae377009c84352583cde008322ec20d810",
-    "generator_sha256": "615e715ae88dd2fe35840adc396aa30d68729ffa94ab8001ea445021927960ec",
-    "harness_sha256": "c0c4be4b189f9238ab5bcb05bddc26c213d439e4caf1c19bea6b04c89a206536",
-    "derived_geometry_macro_sha256": "6f54dc6b7e73160f48a974e214fa481773f0d342a80bdb1242d0316fa39be6b7",
-    "frozen_port_macro_sha256": "f2b4555413005596f5fa8ceefacc64b7cadbba2cce1c430f0c9c713a6f7aead9",
-    "derived_periodic_macro_sha256": "b96469c62337f1dab9cb71a0bcdb7a7666e8ec558ee4f937c565d75a66e0de54",
-    "contract": "docs/R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_CONTRACT.md",
-    "runbook": "em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0R1_PITCH_READY_SOURCE_BUILD_ONLY.md",
-    "stop_boundary": "one 94-mm canonical source; no endpoint mutation; no solver"
+    "r1_status": "PASS_R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY",
+    "canonical_source": "D:\\GNSS_Lband_Active_Array\\_r1e1a0r1_pitch_ready_source_work\\R1E1A0R1_POLA_PERIODIC_PITCH_READY_94MM_V01.cst",
+    "canonical_source_sha256": "585929d5bf9cbf46c4a6d0ae40b42baa8e2efff673f79c1026dcff33cb014fc2",
+    "current_task": "R1E1A0_R2_ENDPOINT_PROOF_DESIGN",
+    "endpoints_mm": [
+      88,
+      100
+    ],
+    "contract": "docs/R1E1A0R2_ENDPOINT_PROOF_CONTRACT.md",
+    "runbook": "em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0R2_ENDPOINT_PROOF_BUILD_ONLY.md",
+    "harness": "scripts/run_r1e1a0r2_pitch_endpoint_proof_build_only_dc.py",
+    "static_audit": "PASS_R1E1A0R2_STATIC_AUDIT",
+    "next_execution_contract": "NOT_AUTHORIZED"
   },
   "execution": {
-    "current_stage": "R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY",
-    "formal_invocation_count": 0,
+    "current_stage": "DESIGN_R1E1A0_R2_ENDPOINT_PROOF",
+    "last_completed_stage": "R1E1A0_R1",
+    "last_status": "PASS_R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY",
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
-  "artifacts": {
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1e1a0r1_pitch_ready_source_work",
-    "evidence": "evidence/r1e1a0r1_dc_nw_20260924_build01/"
-  },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1E1A0_R1.json",
-    "state": "ACTIVE",
+    "record_path": "execution/workspace_record_NW_R1E1A0_R2.json",
+    "state": "CHECKPOINTED",
     "purge_allowed": false
   }
 }

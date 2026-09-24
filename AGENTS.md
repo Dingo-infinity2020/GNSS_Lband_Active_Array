@@ -23,20 +23,18 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A0-R1-PITCH-READY-CANONICAL-SOURCE-BUILD-ONLY-NW**
+Current task: **R1E1-A0-R2-DESIGN-ENDPOINT-PROOF**
 
 Current permissions:
-- use the frozen R1E1A0-R1 recovery bundle: YES
-- run exactly one 94-mm pitch-ready canonical-source BUILD-ONLY invocation on NW: YES
-- fresh-reopen geometry/port/boundary/parameter-warning qualification: YES
-- rerun 88/100 endpoint proof in this ticket: NO
+- inspect the completed R1 canonical-source PASS evidence: YES
+- design/audit the R2 88/100-mm endpoint-proof bundle: YES
+- run R2 endpoint proof: NO
 - run any R1E1 solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO
-- silent retry: NO
 
-R1E1A0 endpoint proof is formally HOLD on source-history parameter declaration.
-Only the R1 canonical-source recovery build is authorized.
+R1E1A0-R1 is closed PASS.
+R1E1A0-R2 is DESIGN ONLY until its separate build ticket is frozen.
 
 ## Architecture control
 

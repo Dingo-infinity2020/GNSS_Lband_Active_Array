@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=48
+HANDOFF_VERSION=49
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
-CURRENT_TASK_ID=R1E1-A0-R1-PITCH-READY-CANONICAL-SOURCE-BUILD-ONLY-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_BUILD
+CURRENT_TASK_ID=R1E1-A0-R2-DESIGN-ENDPOINT-PROOF
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_R1E1A0_R1_PITCH_READY_SOURCE_ONLY
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -481,64 +481,71 @@ source-history/tooling HOLD; not a geometry or physics failure.
 Evidence:
 `evidence/r1e1a0_dc_nw_20260924_build01/`
 
-## Current R1E1A0-R1 recovery BUILD-ONLY authorization
+## R1E1A0-R1 closed stage
 
-Task:
-`R1E1-A0-R1-PITCH-READY-CANONICAL-SOURCE-BUILD-ONLY-NW`
+Status:
+`PASS_R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY`
 
-Recovery architecture:
-1. derived R1A3 geometry macro with `MakeSureParameterExists` for mutable pitch/span;
-2. frozen qualified R1A5F Pol-A single-port macro unchanged;
-3. derived parameter-ready periodic broadside macro;
-4. one fresh 94-mm periodic Pol-A canonical source;
-5. fresh-reopen equivalence + warning qualification;
-6. stop before endpoint mutation.
-
-Frozen source commit before formal build:
-`2dff5aae377009c84352583cde008322ec20d810`
-
-Generator SHA256:
-`615e715ae88dd2fe35840adc396aa30d68729ffa94ab8001ea445021927960ec`
-
-Harness SHA256:
-`c0c4be4b189f9238ab5bcb05bddc26c213d439e4caf1c19bea6b04c89a206536`
-
-Audit SHA256:
-`48e19e7d439b5c19dda9f5c32732142098e1db7e8cdd5a496baf5ba20135d34d`
-
-Derived geometry macro SHA256:
-`6f54dc6b7e73160f48a974e214fa481773f0d342a80bdb1242d0316fa39be6b7`
-
-Frozen Pol-A port macro SHA256:
-`f2b4555413005596f5fa8ceefacc64b7cadbba2cce1c430f0c9c713a6f7aead9`
-
-Derived periodic macro SHA256:
-`b96469c62337f1dab9cb71a0bcdb7a7666e8ec558ee4f937c565d75a66e0de54`
-
-Contract SHA256:
-`fcf663be0eba4570a2955e36ac6b55e13c8b91380e1a48fc6b57794ed12698c2`
-
-Runbook SHA256:
-`6d6313900452418f0d0b5831b3ffa4ac592a9e3b1d8ce0773cf10da86fffcf03`
-
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1e1a0r1_pitch_ready_source_work`
-
-Fresh evidence:
-`evidence/r1e1a0r1_dc_nw_20260924_build01/`
+Formal source commit:
+`0241a840819847b1b8e9332d4436eb17e58e3307`
 
 Formal invocation count:
 1
 
-Silent retry:
-NO
+Runtime:
+42.93 s
 
-Historical macros/artifacts remain untouched.
+Solver:
+NOT RUN
 
-BUILD_AUTHORIZED=YES_R1E1A0_R1_PITCH_READY_SOURCE_ONLY
+Canonical source:
+`D:\GNSS_Lband_Active_Array\_r1e1a0r1_pitch_ready_source_work\R1E1A0R1_POLA_PERIODIC_PITCH_READY_94MM_V01.cst`
+
+SHA256:
+`585929d5bf9cbf46c4a6d0ae40b42baa8e2efff673f79c1026dcff33cb014fc2`
+
+Qualification:
+- R1A3 geometry exact;
+- frozen R1A5F Pol-A port exact;
+- 94-mm broadside periodic metadata exact;
+- pitch/span dependent expressions preserved;
+- no sweep-parameter history warning;
+- no solver markers/results;
+- fresh reopen PASS.
+
+The canonical source is PROTECTED_IN_PLACE.
+
+Evidence:
+`evidence/r1e1a0r1_dc_nw_20260924_build01/`
+
+## Current R1E1A0-R2 design
+
+Task:
+`R1E1-A0-R2-DESIGN-ENDPOINT-PROOF`
+
+Source:
+`D:\GNSS_Lband_Active_Array\_r1e1a0r1_pitch_ready_source_work\R1E1A0R1_POLA_PERIODIC_PITCH_READY_94MM_V01.cst`
+
+Source SHA256:
+`585929d5bf9cbf46c4a6d0ae40b42baa8e2efff673f79c1026dcff33cb014fc2`
+
+Endpoints:
+- P088 = 88 mm;
+- P100 = 100 mm.
+
+Static audit:
+`PASS_R1E1A0R2_STATIC_AUDIT`
+
+Contract:
+`docs/R1E1A0R2_ENDPOINT_PROOF_CONTRACT.md`
+
+Runbook:
+`em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0R2_ENDPOINT_PROOF_BUILD_ONLY.md`
+
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
 
-This ticket ends after the 94-mm canonical source qualification.
-R1E1A0-R2 endpoint mutation requires a separate ticket even though the user pre-authorized the next build-only task.
+R2 endpoint proof requires its own BUILD-ONLY ticket.
+The user has pre-authorized the next build-only task, but no solver is implied.
