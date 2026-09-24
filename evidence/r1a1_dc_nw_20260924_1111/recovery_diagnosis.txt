@@ -1,0 +1,4 @@
+﻿CST_BUNDLED_PYTHON=D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\python.exe
+CST_BUNDLED_PYTHON_VERSION=3.6.0
+CST_IMPORT_CHECK=CST_IMPORT_OK
+RECOVERY_RECOMMENDATION=Use CST bundled Python in an explicitly issued successor task
