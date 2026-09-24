@@ -23,19 +23,19 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A0-DESIGN-PITCH-PARAMETERIZATION**
+Current task: **R1E1-A0-PITCH-PARAMETERIZATION-BUILD-ONLY-NW**
 
 Current permissions:
-- inspect R1E0C closeout evidence: YES
-- design/audit the R1E1A0 pitch-parameterization build-only bundle: YES
-- inspect CST Parameter List / VBA API behavior read-only: YES
-- run R1E1A0 build: NO
+- use the clean R1E0A broadside periodic CST as immutable source: YES
+- run exactly one R1E1A0 endpoint-proof BUILD-ONLY invocation on NW: YES
+- generate P088 and P100 endpoint CSTs and fresh-reopen audit them: YES
 - run any R1E1 solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO
+- silent retry: NO
 
 R1E0C is closed PASS.
-R1E1A0 is DESIGN ONLY until a separate build authorization is frozen.
+R1E1A0 endpoint proof is the only authorized execution.
 
 ## Architecture control
 

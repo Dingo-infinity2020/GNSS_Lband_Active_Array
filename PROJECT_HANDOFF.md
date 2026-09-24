@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=44
+HANDOFF_VERSION=46
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
-CURRENT_TASK_ID=R1E1-A0-DESIGN-PITCH-PARAMETERIZATION
-TASK_OWNER=DESIGN
-TASK_STATUS=READY_FOR_DESIGN
+CURRENT_TASK_ID=R1E1-A0-PITCH-PARAMETERIZATION-BUILD-ONLY-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=READY_FOR_BUILD
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=NO
+BUILD_AUTHORIZED=YES_R1E1A0_ENDPOINT_PROOF_ONLY
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -446,13 +446,13 @@ final LNA input matching remains blocked.
 Closeout evidence:
 `evidence/r1e0c_closeout_20260924/`
 
-## Current R1E1 design
+## Current R1E1A0 endpoint-proof BUILD-ONLY authorization
 
 Plan:
 `docs/R1E1_PITCH_MATERIAL_TRADE_PLAN.md`
 
 Current task:
-`R1E1-A0-DESIGN-PITCH-PARAMETERIZATION`
+`R1E1-A0-PITCH-PARAMETERIZATION-BUILD-ONLY-NW`
 
 Purpose:
 prove a Parameter-List-safe way to change `unit_cell_pitch_nominal` and rebuild the periodic ground tile without changing radiator/substrate/feed geometry.
@@ -463,12 +463,47 @@ Frozen mutation path:
 Static audit:
 `PASS_R1E1A0_STATIC_AUDIT`
 
-Initial proof endpoints:
-88 mm and 100 mm.
+Immutable source:
+`D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst`
 
-BUILD_AUTHORIZED=NO
+Source SHA256:
+`48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223`
+
+Harness SHA256:
+`6d4e71ee018c22f70f5a72ad61b2d488ae53b8ae7ec25acd505a350b1ff7882e`
+
+Audit SHA256:
+`9a188b128bdbabf9df5dc24358ba42b8c549f753f230e31ede488f90fcc969f6`
+
+Contract SHA256:
+`bc08ba1fcc6ab8e4737884637393f0478387b360d3c160703f970c36590954a3`
+
+Runbook SHA256:
+`4b6a8d00d95257f59a608b34b47504d78f9d7c4d3832a07f96a626357743ebe0`
+
+Plan SHA256:
+`0def999ea0d0c9894dd4f7c1054aac170f3166799aedaf43ac538a82a0ae1e5e`
+
+Endpoint proof:
+- P088 = 88 mm;
+- P100 = 100 mm.
+
+Fresh work path:
+`D:\GNSS_Lband_Active_Array\_r1e1a0_pitch_parameterization_work`
+
+Fresh evidence path:
+`evidence/r1e1a0_dc_nw_20260924_build01/`
+
+Formal invocation count:
+1
+
+Silent retry:
+NO
+
+BUILD_AUTHORIZED=YES_R1E1A0_ENDPOINT_PROOF_ONLY
 SOLVER_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
 
-No R1E1 build or solve is authorized by this closeout.
+This authorization covers only the two endpoint build-only variants.
+No solver is implied or authorized.

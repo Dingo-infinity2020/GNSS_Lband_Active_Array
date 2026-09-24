@@ -7,9 +7,9 @@
 
 ## Current stage
 
-DESIGN_R1E1A0_PITCH_PARAMETERIZATION
+R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY
 
-BUILD_AUTHORIZED: false
+BUILD_AUTHORIZED: true
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 MATERIAL_AB_AUTHORIZED: false
@@ -81,9 +81,26 @@ Endpoint proof candidates:
 - 88 mm
 - 100 mm
 
+## Authorized execution
+
+Endpoint proof only:
+- P088 = 88 mm
+- P100 = 100 mm
+
+Fresh work:
+D:\GNSS_Lband_Active_Array\_r1e1a0_pitch_parameterization_work
+
+Fresh evidence:
+evidence/r1e1a0_dc_nw_20260924_build01/
+
+Formal invocation count:
+1
+
+Silent retry:
+NO
+
 ## Stop
 
-R1E1A0 build is not authorized.
 No R1E1 solver is authorized.
 No material A/B is authorized.
 No LNA integration is authorized.

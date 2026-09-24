@@ -2,20 +2,25 @@
   "schema_version": "0.2.4",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A0-DESIGN-PITCH-PARAMETERIZATION",
-    "stage": "DESIGN_R1E1A0_PITCH_PARAMETERIZATION",
-    "status": "READY_FOR_DESIGN"
+    "task_id": "R1E1-A0-PITCH-PARAMETERIZATION-BUILD-ONLY-NW",
+    "stage": "R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY",
+    "status": "READY_FOR_BUILD"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "CHECKPOINTED"
+    "state": "ACTIVE"
   },
   "source": {
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AT_CLOSEOUT",
+    "head_commit": "RESOLVE_AT_PREFLIGHT",
     "head_on_trusted_remote": false
+  },
+  "execution": {
+    "mode": "ONE_SHOT_NW_BUILD_ONLY_ENDPOINT_PROOF",
+    "formal_invocation_count": 0,
+    "silent_retry_allowed": false
   },
   "archive": {
     "mode": "CHECKPOINTED",

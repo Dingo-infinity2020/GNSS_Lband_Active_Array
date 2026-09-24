@@ -7,14 +7,15 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "mainline_authority": "PROJECT_MAINLINE.md",
-    "model_identity": "CHARTS_GNSS_R1E1A0_PITCH_PARAMETERIZATION_DESIGN",
+    "model_identity": "CHARTS_GNSS_R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_AT_CLOSEOUT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false,
+    "scope": "R1E1A0_ENDPOINT_PROOF_ONLY",
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
@@ -23,16 +24,15 @@
   },
   "scientific_freeze": {
     "r1e0c_status": "PASS_R1E0C_SCAN_QUALIFICATION",
-    "r1e0c_closeout": "evidence/r1e0c_closeout_20260924/",
-    "principal_core_scan_status": "PASS_THROUGH_60_DEG_NO_FROZEN_SEVERE_ALERT",
-    "orthogonal_60_status": "PASS_NO_FROZEN_SEVERE_ALERT",
-    "plane60_max_complex_delta_s11": 0.6702315800171013,
-    "plane60_max_abs_delta_zactive_ohm": 208.97687581823746,
-    "lna_match_freeze": "NOT_READY",
     "r1e1_plan": "docs/R1E1_PITCH_MATERIAL_TRADE_PLAN.md",
-    "current_task": "R1E1A0_PITCH_PARAMETERIZATION",
+    "current_task": "R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY",
     "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst",
     "source_sha256": "48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223",
+    "harness_sha256": "6d4e71ee018c22f70f5a72ad61b2d488ae53b8ae7ec25acd505a350b1ff7882e",
+    "audit_sha256": "9a188b128bdbabf9df5dc24358ba42b8c549f753f230e31ede488f90fcc969f6",
+    "contract_sha256": "bc08ba1fcc6ab8e4737884637393f0478387b360d3c160703f970c36590954a3",
+    "runbook_sha256": "4b6a8d00d95257f59a608b34b47504d78f9d7c4d3832a07f96a626357743ebe0",
+    "plan_sha256": "0def999ea0d0c9894dd4f7c1054aac170f3166799aedaf43ac538a82a0ae1e5e",
     "endpoint_pitches_mm": [
       88,
       100
@@ -50,25 +50,24 @@
     "contract": "docs/R1E1A0_PITCH_PARAMETERIZATION_CONTRACT.md",
     "runbook": "em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY.md",
     "harness": "scripts/run_r1e1a0_pitch_parameterization_build_only_dc.py",
-    "static_audit": "scripts/audit_r1e1a0_pitch_parameterization.py",
-    "next_execution_contract": "NOT_AUTHORIZED",
-    "static_audit_status": "PASS_R1E1A0_STATIC_AUDIT"
+    "static_audit": "PASS_R1E1A0_STATIC_AUDIT",
+    "stop_boundary": "two endpoint build-only variants; no solver"
   },
   "execution": {
-    "current_stage": "DESIGN_R1E1A0_PITCH_PARAMETERIZATION",
-    "last_completed_stage": "R1E0C_SCAN_QUALIFICATION",
-    "last_status": "PASS_R1E0C_SCAN_QUALIFICATION",
+    "current_stage": "R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY",
+    "formal_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "r1e0c_closeout": "evidence/r1e0c_closeout_20260924/",
+    "work": "D:\\GNSS_Lband_Active_Array\\_r1e1a0_pitch_parameterization_work",
+    "evidence": "evidence/r1e1a0_dc_nw_20260924_build01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
     "record_path": "execution/workspace_record_NW_R1E1A0.json",
-    "state": "CHECKPOINTED",
+    "state": "ACTIVE",
     "purge_allowed": false
   }
 }

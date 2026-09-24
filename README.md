@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E1A0 - pitch-parameterization BUILD-ONLY design after R1E0C PASS.**
+**R1E1A0 - authorized pitch-parameterization endpoint BUILD-ONLY proof on NW.**
 
 The isolated-element passive phase is closed.
 
@@ -59,7 +59,7 @@ Therefore the pitch/material trade is now the current mainline, and the final LN
 
 ## Current execution
 
-R1E0C scan qualification is closed PASS, including the 60-deg orthogonal-plane sentinel. Current work is **R1E1A0 pitch-parameterization DESIGN ONLY**.
+R1E0C scan qualification is closed PASS, including the 60-deg orthogonal-plane sentinel. Current work is the authorized **R1E1A0 P088/P100 endpoint BUILD-ONLY proof**.
 
 R1E1A0 endpoint proof:
 - pitch = 88 mm
@@ -69,7 +69,7 @@ Parameter update under test:
 `StoreParameter` through direct VBA + `RebuildForParametricChange`
 
 Current permissions:
-- BUILD_AUTHORIZED=NO
+- BUILD_AUTHORIZED=YES_R1E1A0_ENDPOINT_PROOF_ONLY
 - SOLVER_PERMISSION=NO
 
 Read `PROJECT_HANDOFF.md` for the exact baton.
