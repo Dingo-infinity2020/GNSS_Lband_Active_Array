@@ -8,49 +8,51 @@
   },
   "project": {
     "name": "GNSS_Lband_Active_Array",
-    "model_identity": "CHARTS_GNSS_R1A1_SCALED_APERTURE_V01",
+    "model_identity": "CHARTS_GNSS_R1A2_FEED_REFERENCE_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "bc06173084cf9c62f99f52c4cfee33afdade9770"
+    "source_commit": "RESOLVE_AT_BUILD_PREFLIGHT"
   },
   "toolchain": {
     "simulator": "CST Studio Suite",
     "simulator_version": "2022.5",
-    "builder_or_adapter": "source/cst/R1A1_CHARTS_SCALED_APERTURE_BUILD_ONLY_V01.mcr",
+    "builder_or_adapter": "source/cst/R1A2_CHARTS_FEED_REFERENCE_BUILD_ONLY_V01.mcr",
     "build_host_alias": "NW",
     "solve_host_alias": "CST251-C",
     "container": ""
   },
   "scientific_freeze": {
-    "geometry_manifest": "em/cst/R1_CHARTS_LBAND/parameters_r1a1.csv",
-    "material_table": "PEC topology proxy only; substrate/material deferred",
+    "geometry_manifest": "em/cst/R1_CHARTS_LBAND/parameters_r1a2_feed.csv",
+    "material_table": "R1A1 PEC topology proxy + non-physical PEC reference overlays; no substrate",
     "source_modes": [],
-    "frequency_range": "target 1.15-1.65 GHz; no solver in R1A1",
+    "frequency_range": "target 1.15-1.65 GHz; no solver in R1A2",
     "required_outputs": [
       "object_inventory",
       "parameter_inventory",
+      "symmetry_audit",
       "top_view",
       "oblique_view",
       "fresh_reopen_inventory",
       "cst_sha256"
     ],
-    "pass_gate": "PASS_R1A1_SCALED_APERTURE_BUILD_ONLY",
+    "pass_gate": "PASS_R1A2_FEED_REFERENCE_BUILD_ONLY",
     "hold_conditions": [
-      "manifest_or_static_audit_failure",
-      "CST_runtime_syntax_failure",
-      "slot_topology_mismatch",
+      "static_audit_failure",
+      "CST_transform_runtime_failure",
+      "reference_shape_count_mismatch",
+      "rotation_volume_symmetry_mismatch",
       "fresh_reopen_mismatch"
     ],
-    "stop_boundary": "fresh-reopen audit; solver forbidden"
+    "stop_boundary": "fresh-reopen + rotational symmetry audit; solver forbidden"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false
   },
   "execution": {
-    "current_stage": "DESIGN_R1A2_FEED_FREEZE",
+    "current_stage": "BUILD_ONLY_R1A2",
     "last_completed_stage": "BUILD_ONLY_R1A1",
-    "last_status": "PASS_R1A1_SCALED_APERTURE_BUILD_ONLY",
+    "last_status": "READY_FOR_NW_BUILD_ONLY",
     "one_shot_required": true,
     "silent_retry_allowed": false,
     "fresh_run_directory_required": false,
@@ -58,31 +60,31 @@
   },
   "artifacts": {
     "source_bundle": "repository source/cst + em/cst/R1_CHARTS_LBAND + execution",
-    "build_artifact": "D:\\GNSS_Lband_Active_Array\\_r1a1_scaled_aperture_work_recovery\\R1A1_CHARTS_SCALED_APERTURE_BUILD_ONLY_V01.cst",
+    "build_artifact": "D:\\GNSS_Lband_Active_Array\\_r1a2_feed_reference_work\\R1A2_CHARTS_FEED_REFERENCE_BUILD_ONLY_V01.cst",
     "staging_artifact": "",
     "run_directory": "",
-    "qualification_output": "evidence/r1a1_recovery_dc_nw_20260924_1113/",
+    "qualification_output": "evidence/r1a2_dc_nw_<timestamp>/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "evidence": {
-    "source_sha256": "macro:7382b6baa62f86c2e6b49fd6f74eeff6fd1187bd7dec41824309e9d55d2084ad",
-    "build_sha256": "fc039106312861674d13e92983688672e0fce05d77fbcec6712a075fc2343253",
+    "source_sha256": "",
+    "build_sha256": "",
     "staging_sha256": "",
     "run_sha256": "",
-    "exact_invocation": "NW/DC successor build: CST bundled Python 3.6 -> scripts/run_r1a1_build_only_dc.py; static audit passed; no solver",
-    "status_classification": "PASS"
+    "exact_invocation": "",
+    "status_classification": "READY_FOR_BUILD"
   },
   "exceptions": [],
   "workspace": {
     "host_alias": "NW",
     "working_path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
     "record_path": "execution/workspace_record_NW_R1A1.json",
-    "state": "CHECKPOINTED",
+    "state": "ACTIVE",
     "archive_mode": "REFERENCE_ONLY",
-    "archive_trigger": "R1A1 PASS reached; checkout retained for direct R1A2 design/build successor",
+    "archive_trigger": "R1A2 PASS/HOLD task node",
     "archive_destination": "remote Git + evidence; CST build artifact hash-recorded",
     "purge_allowed": false,
     "cleanup_completed": false,
-    "cleanup_evidence": "Evidence committed at 094f11a25e153d5705f9b68d118b4d5ffb0dad9d; active task processes checked none."
+    "cleanup_evidence": ""
   }
 }
