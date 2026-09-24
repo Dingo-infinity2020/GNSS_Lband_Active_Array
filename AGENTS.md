@@ -23,18 +23,19 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A1-DESIGN-SIX-PITCH-FR4-SOURCE-SET**
+Current task: **R1E1-A1-SIX-PITCH-FR4-SOURCE-SET-BUILD-ONLY-NW**
 
 Current permissions:
-- inspect completed R1E1A0 PASS evidence: YES
-- design/audit the A1 six-pitch FR4 source-set bundle: YES
-- run A1 build: NO
+- use the pitch-ready 94-mm canonical source as immutable input: YES
+- run exactly one six-pitch FR4 BUILD-ONLY invocation on NW: YES
+- generate/fresh-reopen P088/P090/P092/P094/P096/P100: YES
 - run any R1E1B solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO
+- silent retry: NO
 
 R1E1A0 is closed PASS.
-R1E1A1 is DESIGN ONLY until its build ticket is frozen.
+Only the R1E1A1 six-pitch source-set build is authorized.
 
 ## Architecture control
 

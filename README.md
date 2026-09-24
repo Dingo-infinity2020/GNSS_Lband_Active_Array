@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E1A1 - six-pitch FR4 source-set DESIGN after R1E1A0 PASS.**
+**R1E1A1 - authorized six-pitch FR4 source-set BUILD-ONLY on NW.**
 
 The isolated-element passive phase is closed.
 
@@ -70,13 +70,13 @@ Canonical status:
 `PASS_R1E1A0_PITCH_PARAMETERIZATION_MECHANISM`.
 
 Current work:
-**R1E1A1 six-pitch FR4 source-set DESIGN ONLY**.
+**R1E1A1 authorized six-pitch FR4 source-set BUILD-ONLY**.
 
 Pitch set:
 88 / 90 / 92 / 94 / 96 / 100 mm
 
 Current permissions:
-- BUILD_AUTHORIZED=NO
+- BUILD_AUTHORIZED=YES_R1E1A1_SIX_PITCH_SOURCE_SET_ONLY
 - SOLVER_PERMISSION=NO
 
 Read `PROJECT_HANDOFF.md` for the exact baton.

@@ -3,11 +3,12 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_AT_CLOSEOUT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false,
+    "scope": "R1E1A1_SIX_PITCH_SOURCE_SET_ONLY",
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
@@ -17,7 +18,7 @@
     "r1e1a0_status": "PASS_R1E1A0_PITCH_PARAMETERIZATION_MECHANISM",
     "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a0r1_pitch_ready_source_work\\R1E1A0R1_POLA_PERIODIC_PITCH_READY_94MM_V01.cst",
     "source_sha256": "585929d5bf9cbf46c4a6d0ae40b42baa8e2efff673f79c1026dcff33cb014fc2",
-    "current_task": "R1E1A1_SIX_PITCH_FR4_SOURCE_SET_DESIGN",
+    "harness_sha256": "e42e05e150222fc4b04fa64edd63baa9c19cc41604a1fe93ce783b90cbca1b6b",
     "pitch_set_mm": [
       88,
       90,
@@ -28,21 +29,23 @@
     ],
     "contract": "docs/R1E1A1_SIX_PITCH_FR4_SOURCE_SET_CONTRACT.md",
     "runbook": "em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A1_SIX_PITCH_FR4_BUILD_ONLY.md",
-    "harness": "scripts/run_r1e1a1_six_pitch_source_set_build_only_dc.py",
     "static_audit": "PASS_R1E1A1_STATIC_AUDIT",
-    "next_execution_contract": "NOT_AUTHORIZED"
+    "stop_boundary": "six broadside FR4 sources; no solver"
   },
   "execution": {
-    "current_stage": "DESIGN_R1E1A1_SIX_PITCH_FR4_SOURCE_SET",
-    "last_completed_stage": "R1E1A0_R2_ENDPOINT_PROOF",
-    "last_status": "PASS_R1E1A0_PITCH_PARAMETERIZATION_MECHANISM",
+    "current_stage": "R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY",
+    "formal_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
+  },
+  "artifacts": {
+    "work": "D:\\GNSS_Lband_Active_Array\\_r1e1a1_six_pitch_fr4_work",
+    "evidence": "evidence/r1e1a1_dc_nw_20260924_build01/"
   },
   "workspace": {
     "host_alias": "NW",
     "record_path": "execution/workspace_record_NW_R1E1A1.json",
-    "state": "CHECKPOINTED",
+    "state": "ACTIVE",
     "purge_allowed": false
   }
 }

@@ -2,14 +2,19 @@
   "schema_version": "0.2.4",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A1-DESIGN-SIX-PITCH-FR4-SOURCE-SET",
-    "stage": "DESIGN_R1E1A1_SIX_PITCH_FR4_SOURCE_SET",
-    "status": "READY_FOR_DESIGN"
+    "task_id": "R1E1-A1-SIX-PITCH-FR4-SOURCE-SET-BUILD-ONLY-NW",
+    "stage": "R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY",
+    "status": "READY_FOR_BUILD"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "CHECKPOINTED"
+    "state": "ACTIVE"
+  },
+  "execution": {
+    "mode": "ONE_SHOT_NW_BUILD_ONLY_SIX_PITCH",
+    "formal_invocation_count": 0,
+    "silent_retry_allowed": false
   },
   "archive": {
     "mode": "CHECKPOINTED",
