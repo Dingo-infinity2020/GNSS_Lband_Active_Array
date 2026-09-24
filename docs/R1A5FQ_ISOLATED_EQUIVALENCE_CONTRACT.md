@@ -1,6 +1,8 @@
+[Reading 104 lines from start (total: 104 lines, 0 remaining)]
+
 # R1A5FQ Clean-Feed Isolated Equivalence Contract
 
-Status: DESIGN FROZEN — SOLVER NOT AUTHORIZED
+Status: FROZEN FOR ONE NW EQUIVALENCE SOLVE
 
 ## Mainline role
 
@@ -102,3 +104,5 @@ On PASS:
 - next primary physics gate is R1E0 94-mm periodic unit-cell baseline.
 
 No geometry optimization, material A/B, or far-field production study is allowed inside R1A5FQ.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]

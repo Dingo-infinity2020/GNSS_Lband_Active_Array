@@ -7,20 +7,13 @@
 
 ## Current stage
 
-DESIGN_R1A5FQ_ISOLATED_EQUIVALENCE
+R1A5FQ_CLEAN_FEED_EQUIVALENCE_SOLVE
 
 BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: false
+SOLVE_AUTHORIZED: true
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Last completed stage
-
-R1A5F split single-port BUILD_ONLY
-
-Status:
-PASS_R1A5F_SPLIT_SINGLE_PORT_BUILD_ONLY
-
-## Clean-feed artifacts
+## Inputs
 
 A:
 D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLA_SINGLE_PORT_V01.cst
@@ -34,10 +27,34 @@ D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLB_SINGLE_PORT_
 SHA256:
 11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf
 
-## Current contract
+Baseline:
+evidence/r1a5m2_dc_nw_20260924_recovery01/sparameters_and_zin.csv
 
-docs/R1A5FQ_ISOLATED_EQUIVALENCE_CONTRACT.md
+## Solver
 
-No solver action is permitted until a new explicit R1A5FQ authorization is frozen.
+HF Frequency Domain
+tetrahedral second order
+curvature order 3
+General purpose
+HighFrequencyTet / ExpertSystem adaptive
+MinPasses 3
+MaxPasses 8
+MaxDeltaS 0.02
+Delta-S checks 2
+1.0–1.8 GHz
+open boundaries + 50 mm background
 
-On equivalence PASS, move directly to R1E0 periodic unit-cell design.
+## Paths
+
+Work:
+D:\GNSS_Lband_Active_Array\_r1a5fq_equivalence_work
+
+Evidence:
+evidence/r1a5fq_dc_nw_20260924_equiv01/
+
+## Stop
+
+One formal A+B sequential equivalence invocation only.
+No geometry/material/port changes.
+No optimization.
+No periodic solver in this stage.

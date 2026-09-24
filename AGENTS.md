@@ -1,3 +1,5 @@
+[Reading 180 lines from start (total: 180 lines, 0 remaining)]
+
 [Reading 176 lines from start (total: 176 lines, 0 remaining)]
 
 [Reading 170 lines from start (total: 170 lines, 0 remaining)]
@@ -50,7 +52,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1A5FQ-DESIGN-ISOLATED-EQUIVALENCE**
+Current task: **R1A5FQ-CLEAN-FEED-EQUIVALENCE-SOLVE-NW**
 
 Authoritative current execution state is defined by:
 - `PROJECT_MAINLINE.md`
@@ -59,16 +61,17 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- inspect the protected R1A5F Pol-A/Pol-B CST artifacts and compact evidence: YES
-- design/document the short isolated-equivalence solver contract: YES
-- run any new CST solver: NO
-- modify radiator geometry/materials/ports: NO
+- copy the protected R1A5F Pol-A/Pol-B CSTs into fresh R1A5FQ work: YES
+- apply the frozen R1A5M2-equivalent solver configuration: YES
+- run one formal sequential A+B NW equivalence task: YES
+- modify geometry/materials/ports: NO
 - isolated-element optimization: NO
-- periodic/unit-cell solver work: NO until R1A5FQ closes
-- optimization/material A-B/production solve/CST251: NO
+- periodic/unit-cell solver work: NO in this task
+- material A-B/far-field production/CST251: NO
+- silent retry or partial rerun: NO
 
-R1A5F build-only is closed PASS.
-R1A5FQ is the final isolated-element equivalence gate before R1E0 periodic unit-cell physics.
+R1A5FQ is the final isolated-element equivalence gate.
+On PASS the project must move to R1E0 periodic unit-cell DESIGN.
 
 ## Architecture control
 
@@ -150,6 +153,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
