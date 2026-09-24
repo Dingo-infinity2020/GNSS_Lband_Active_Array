@@ -2,20 +2,25 @@
   "schema_version": "0.2.4",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E0C-B-C60P45-DESIGN-SCAN-SOLVE",
-    "stage": "DESIGN_R1E0C_B_C60P45_SCAN_SOLVE",
-    "status": "READY_FOR_DESIGN"
+    "task_id": "R1E0C-B-C60P45-SCAN-SOLVE-NW",
+    "stage": "R1E0C_B_C60P45_SCAN_SOLVE",
+    "status": "READY_FOR_SOLVE"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "CHECKPOINTED"
+    "state": "ACTIVE"
   },
   "source": {
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AT_CLOSEOUT",
+    "head_commit": "RESOLVE_AT_PREFLIGHT",
     "head_on_trusted_remote": false
+  },
+  "execution": {
+    "mode": "ONE_SHOT_NW_SCAN_SOLVE",
+    "formal_invocation_count": 0,
+    "silent_retry_allowed": false
   },
   "archive": {
     "mode": "CHECKPOINTED",
