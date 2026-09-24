@@ -1,0 +1,9 @@
+Set-Location "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold"; & "D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\python.exe" "scripts\run_r1a5_smoke_dc.py" --repo "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold" --evidence "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold\evidence\r1a5_dc_nw_20260924_smoke01" --work "D:\GNSS_Lband_Active_Array\_r1a5_diagnostic_smoke_work" --base-cst "D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst"
+
+SOURCE_HEAD=f8cda7b8366047e28fbce2c3370546d38605d9cc
+CONFIG_SHA256=c9e91e475f63bddcb30e2e5e3c0e3ccb9fe21c520d1db2d659ccfa99ae67a598
+HARNESS_SHA256=8ae0066a6049f77ccaa9c3deeb7637dee21526735859fddc7b717f50e48a7f1a
+EXIT_CODE=0
+RUNTIME_SECONDS=27.92
+FORMAL_INVOCATION_COUNT=1
+SILENT_RETRY=NO

@@ -6,7 +6,7 @@
   },
   "project": {
     "name": "GNSS_Lband_Active_Array",
-    "model_identity": "CHARTS_GNSS_R1A5_DIAGNOSTIC_SMOKE_V01",
+    "model_identity": "CHARTS_GNSS_R1A5R_SECOND_ORDER_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
     "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
@@ -14,41 +14,39 @@
   "authorization": {
     "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": true,
-    "scope": "R1A5_DIAGNOSTIC_SMOKE_ONLY",
+    "scope": "R1A5R_SECOND_ORDER_ONLY",
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "contract": "docs/R1A5_SMOKE_SOLVE_CONTRACT.md",
+    "contract": "docs/R1A5R_SYMMETRY_CONVERGENCE_CONTRACT.md",
     "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1a4_differential_ports_work\\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst",
     "source_sha256": "4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
-    "solver_config": "source/cst/R1A5_SMOKE_SOLVER_CONFIG_V01.mcr",
-    "static_audit": "PASS_R1A5_STATIC_AUDIT",
+    "solver_config": "source/cst/R1A5R_SECOND_ORDER_SOLVER_CONFIG_V01.mcr",
+    "static_audit": "PASS_R1A5R_STATIC_AUDIT",
+    "baseline_max_pol_asym_db": 1.5040245374128496,
     "solver": "HF Frequency Domain",
-    "mesh": "tetrahedral first order; no adaptation",
-    "frequency_range_ghz": [1.0, 1.8],
-    "boundary": "open all six faces; 50 mm background all directions",
-    "required_outputs": ["S11","S12","S21","S22","derived_Zin1","derived_Zin2","anchor_samples","symmetry","reciprocity"],
-    "port_model_limit": "S21 near/below -50 dB is qualitative/port-model-limited",
-    "pass_gate": "PASS_R1A5_DIAGNOSTIC_SMOKE",
-    "stop_boundary": "return to design after one smoke solve"
+    "mesh": "tetrahedral second order; curvature order 3; general purpose; adaptation off",
+    "frequency_range_ghz": [1.0,1.8],
+    "pass_gate": "PASS_R1A5R_SYMMETRY_CONVERGED",
+    "stop_boundary": "one second-order solve then return to design"
   },
   "execution": {
-    "current_stage": "R1A5_DIAGNOSTIC_SMOKE_SOLVE",
+    "current_stage": "R1A5R_SECOND_ORDER_SYMMETRY_CONVERGENCE",
     "formal_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1a5_diagnostic_smoke_work",
-    "evidence": "evidence/r1a5_dc_nw_20260924_smoke01/",
-    "handoff": "PROJECT_HANDOFF.md"
+    "work": "D:\\GNSS_Lband_Active_Array\\_r1a5r_second_order_work",
+    "evidence": "evidence/r1a5r_dc_nw_20260924_second01/",
+    "prior_r1a5_evidence": "evidence/r1a5_dc_nw_20260924_smoke01/"
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1A5.json",
+    "record_path": "execution/workspace_record_NW_R1A5R.json",
     "state": "ACTIVE",
     "purge_allowed": false
   }

@@ -3,81 +3,82 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=15
+HANDOFF_VERSION=16
 CANONICAL_BRANCH=project/r0-charts-scaffold
-CURRENT_GATE=R1-CHARTS-GNSS-DERIVATIVE
-CURRENT_TASK_ID=R1A5-DIAGNOSTIC-SMOKE-SOLVE-NW
+CURRENT_GATE=R1A5R-NUMERICAL-SYMMETRY-CONVERGENCE
+CURRENT_TASK_ID=R1A5R-SECOND-ORDER-SOLVE-NW
 TASK_OWNER=DC_NW
 TASK_STATUS=READY_FOR_SOLVE
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=YES_COPY_AND_CONFIG_ONLY
-SOLVER_PERMISSION=YES_R1A5_SMOKE_ONLY
+SOLVER_PERMISSION=YES_R1A5R_ONLY
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## Prerequisites
+## R1A5 attempt-1
 
-R1A4:
-PASS_R1A4_DIFFERENTIAL_PORT_BUILD_ONLY
+Status:
+`HOLD_R1A5_DIAGNOSTIC_INTEGRITY`
 
-R1A4Q:
-PASS_R1A4Q_NO_HARD_SHORT_WITH_PARASITIC_COUPLING
+Solver completed successfully.
+Only failed gate:
+max |S11_dB-S22_dB| <= 1.0 dB.
 
-R1A4 hash-locked input:
+Observed:
+- max asymmetry = 1.504024537 dB @ 1.4136 GHz
+- best Pol-A = -18.593128 dB @ 1.3976 GHz
+- best Pol-B = -17.137847 dB @ 1.3936 GHz
+- reciprocity error = 1.71625e-4
+- all four S curves complete, 1001 points
+- geometry/ports/hash provenance PASS
+
+Evidence:
+`evidence/r1a5_dc_nw_20260924_smoke01/`
+
+## R1A5R purpose
+
+Test numerical convergence before any physical design change.
+
+Immutable input remains the original R1A4 CST:
 `D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst`
 
 Required SHA256:
 `4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364`
 
-## R1A5 frozen contract
+R1A5R changes only numerical tetrahedral settings:
+- second-order basis
+- curvature order 3
+- General purpose tetrahedral method
+- adaptation OFF
 
-Authoritative design:
-`docs/R1A5_SMOKE_SOLVE_CONTRACT.md`
+Unchanged:
+- geometry
+- ports
+- boundary
+- 50 mm background
+- 1.0–1.8 GHz
+- solver family
+- materials
 
-Solver configuration:
-`source/cst/R1A5_SMOKE_SOLVER_CONFIG_V01.mcr`
+Authoritative contract:
+`docs/R1A5R_SYMMETRY_CONVERGENCE_CONTRACT.md`
 
 Static audit:
-`PASS_R1A5_STATIC_AUDIT`
-
-Configuration:
-- HF Frequency Domain
-- tetrahedral first order
-- mesh adaptation OFF
-- 1.0–1.8 GHz
-- all six boundaries open
-- 50 mm background space in all six directions
-- existing two 100 ohm differential ports unchanged
-- no far-field monitors
-- no optimization
-- no parameter sweep
-
-## Port-model interpretation limit
-
-R1A4Q showed that crossed discrete-edge ports do not hard-short in the qualified FD/tetra solver, but add an artificial coupling floor.
-
-Therefore:
-- S11/S22, resonance and Pol-A/B symmetry are primary smoke diagnostics;
-- S21/S12 are qualitative only;
-- coupling around/below roughly -50 dB is PORT_MODEL_LIMITED;
-- no production polarization-isolation claim is allowed.
+`PASS_R1A5R_STATIC_AUDIT`
 
 ## Authorized execution
 
 Host:
-NW / DESKTOP-GBTI6Q4
+NW
 
 Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1a5_diagnostic_smoke_work`
+`D:\GNSS_Lband_Active_Array\_r1a5r_second_order_work`
 
 Fresh evidence:
-`evidence/r1a5_dc_nw_20260924_smoke01/`
-
-Expected CST:
-`D:\GNSS_Lband_Active_Array\_r1a5_diagnostic_smoke_work\R1A5_DIAGNOSTIC_SMOKE_V01.cst`
+`evidence/r1a5r_dc_nw_20260924_second01/`
 
 Formal invocation:
 one shot only.
@@ -85,27 +86,12 @@ one shot only.
 Silent retry:
 NO.
 
-## PASS gate
+## PASS/HOLD
 
-PASS_R1A5_DIAGNOSTIC_SMOKE requires:
-- exact input hash;
-- byte-identical copy before config;
-- geometry unchanged;
-- port count remains 2;
-- all four S curves exist;
-- no NaN/Inf;
-- max complex reciprocity error <= 1e-3;
-- max |S11_dB - S22_dB| <= 1.0 dB.
+PASS_R1A5R_SYMMETRY_CONVERGED if:
+- normal provenance/result gates pass;
+- max |S11_dB-S22_dB| <= 1.0 dB.
 
-Return-loss magnitude itself is diagnostic, not a PASS threshold.
+Otherwise classify the numerical trend and return to DESIGN.
 
-## Hard stop
-
-After smoke result interpretation:
-- no automatic geometry edit;
-- no second smoke invocation;
-- no material A/B;
-- no production solve;
-- no CST251 staging.
-
-Return baton to DESIGN.
+No geometry change, adaptation follow-up, optimization, material A/B, production solve or CST251 is pre-authorized.
