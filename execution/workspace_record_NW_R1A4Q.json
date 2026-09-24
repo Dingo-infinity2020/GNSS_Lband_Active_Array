@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1A4Q-CROSSED-DISCRETE-PORT-QUALIFICATION",
+    "stage": "R1A4Q_TOY_PORT_TOPOLOGY_QUALIFICATION",
+    "status": "PASS_R1A4Q_NO_HARD_SHORT_WITH_PARASITIC_COUPLING"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "last_used_at": "2026-09-24",
+    "state": "CHECKPOINTED"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "HOLD_R1A4Q_HARNESS_RUNTIME_BEFORE_SOLVER",
+      "solver_run": false,
+      "work": "D:\\GNSS_Lband_Active_Array\\_r1a4q_crossed_port_test"
+    },
+    {
+      "attempt": 2,
+      "status": "HOLD_R1A4Q_POSTPROCESS_RUNTIME_AFTER_CROSS_SOLVE",
+      "cross_solver_run": true,
+      "lifted_solver_run": false,
+      "work": "D:\\GNSS_Lband_Active_Array\\_r1a4q_crossed_port_test_attempt2"
+    },
+    {
+      "attempt": 3,
+      "status": "PASS_LIFTED_REFERENCE_SOLVE",
+      "cross_rerun": false,
+      "lifted_solver_run": true,
+      "work": "D:\\GNSS_Lband_Active_Array\\_r1a4q_lifted_reference_attempt3"
+    }
+  ],
+  "result": {
+    "cross_s21_db_1p4": -59.402249,
+    "lifted_s21_db_1p4": -78.090662,
+    "crossing_penalty_db_1p4": 18.688413,
+    "direct_galvanic_short_observed": false,
+    "crossed_port_extra_coupling_observed": true
+  },
+  "archive": {
+    "mode": "CHECKPOINTED",
+    "critical_artifacts": [
+      "evidence/r1a4q_dc_nw_20260924/",
+      "evidence/r1a4q_dc_nw_20260924_attempt2/",
+      "evidence/r1a4q_dc_nw_20260924_attempt3/"
+    ],
+    "purge_allowed": false,
+    "completed": true
+  },
+  "closeout": {
+    "task_node": "R1A4Q PASS / return baton to R1A5 design",
+    "project_owned_active_solver_sessions": false,
+    "unrelated_active_session_observed": "NW PID 13516 belongs to separate dingoKID/sonnet251 task; not touched",
+    "handoff_written": true
+  }
+}

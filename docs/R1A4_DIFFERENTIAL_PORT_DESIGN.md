@@ -82,3 +82,28 @@ PASS status:
 PASS_R1A4_DIFFERENTIAL_PORT_BUILD_ONLY
 
 This PASS does not authorize a smoke solve.
+
+
+## R1A4Q solver-safety qualification addendum — 2026-09-24
+
+The crossed diagonal discrete-edge-port representation has been qualified with an isolated toy-model A/B test.
+
+Result:
+- no direct galvanic short observed in CST 2022.5 HF Frequency Domain / tetrahedral mesh;
+- CROSS S21 at 1.4 GHz = -59.40 dB;
+- non-intersecting lifted reference S21 at 1.4 GHz = -78.09 dB;
+- crossing adds about 18.69 dB of artificial inter-port coupling at 1.4 GHz;
+- crossing penalty over 0.5–2.0 GHz is about 17.1–21.3 dB.
+
+Therefore the R1A4 crossed ports are conditionally qualified only for:
+- lightweight diagnostic smoke;
+- HF Frequency Domain;
+- tetrahedral mesh;
+- qualitative resonance / gross S-parameter checks.
+
+They are not the final production feed model and must not be used as the sole basis for high-dynamic-range polarization-isolation claims.
+
+Transient/hexahedral use remains unqualified.
+
+See:
+`evidence/r1a4q_dc_nw_20260924_attempt3/RETURN_REPORT.md`

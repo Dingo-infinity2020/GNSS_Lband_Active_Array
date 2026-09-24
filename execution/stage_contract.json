@@ -6,43 +6,45 @@
   },
   "project": {
     "name": "GNSS_Lband_Active_Array",
-    "model_identity": "R1A4Q_LIFTED_REFERENCE_TOY_TEST_ATTEMPT3",
+    "model_identity": "CHARTS_GNSS_R1A4_DIFFERENTIAL_PORT_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
+    "source_commit": "RESOLVE_AT_CLOSEOUT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
-    "SOLVE_AUTHORIZED": true,
-    "scope": "R1A4Q_ATTEMPT3_LIFTED_REFERENCE_ONLY",
-    "cross_rerun_authorized": false,
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
     "production_model_solve_authorized": false,
     "optimization_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "design": "docs/R1A4Q_CROSSED_DISCRETE_PORT_TEST.md",
-    "model": "LIFTED_REFERENCE",
-    "frequency_range_ghz": [0.5, 2.0],
-    "solver": "HF Frequency Domain",
-    "mesh": "tetrahedral first order; no adaptation",
-    "required_outputs": ["S11","S22","S21","S12"],
-    "comparison_source_cross": "attempt2 read-only CROSS result",
-    "stop_boundary": "complete A/B comparison and return to design"
+    "r1a4_cst": "D:\\GNSS_Lband_Active_Array\\_r1a4_differential_ports_work\\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst",
+    "r1a4_cst_sha256": "4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
+    "r1a4q_status": "PASS_R1A4Q_NO_HARD_SHORT_WITH_PARASITIC_COUPLING",
+    "cross_s21_db_1p4": -59.402249,
+    "lifted_s21_db_1p4": -78.090662,
+    "crossing_penalty_db_1p4": 18.688413,
+    "qualified_solver_scope": "HF Frequency Domain / tetrahedral only",
+    "transient_hexahedral_qualified": false,
+    "next_contract": "R1A5 smoke-solve design not frozen"
   },
   "execution": {
-    "current_stage": "R1A4Q_ATTEMPT3_LIFTED_REFERENCE_SOLVE",
+    "current_stage": "DESIGN_R1A5_SMOKE_SOLVE_CONTRACT",
+    "last_completed_stage": "R1A4Q_TOY_PORT_TOPOLOGY_QUALIFICATION",
+    "last_status": "PASS_R1A4Q_NO_HARD_SHORT_WITH_PARASITIC_COUPLING",
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1a4q_lifted_reference_attempt3",
-    "evidence": "evidence/r1a4q_dc_nw_20260924_attempt3/"
+    "r1a4q_attempt1_evidence": "evidence/r1a4q_dc_nw_20260924/",
+    "r1a4q_attempt2_evidence": "evidence/r1a4q_dc_nw_20260924_attempt2/",
+    "r1a4q_attempt3_evidence": "evidence/r1a4q_dc_nw_20260924_attempt3/",
+    "handoff": "PROJECT_HANDOFF.md"
   },
-  "exceptions": [],
   "workspace": {
     "host_alias": "NW",
-    "state": "ACTIVE",
+    "state": "CHECKPOINTED",
     "purge_allowed": false
   }
 }

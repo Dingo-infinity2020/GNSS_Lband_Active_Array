@@ -1,64 +1,58 @@
 # SIM_EXECUTION
 
-## Current stage
-
-R1A4Q_ATTEMPT2_TOY_PORT_TOPOLOGY_SOLVE
+## Global protocol
 
 SimulationOps version: 0.2.4
 
-BUILD_AUTHORIZED: toy models only
-SOLVE_AUTHORIZED: toy models only
+## Current state
+
+Current stage:
+DESIGN_R1A5_SMOKE_SOLVE_CONTRACT
+
+BUILD_AUTHORIZED: false
+SOLVE_AUTHORIZED: false
 PRODUCTION_MODEL_SOLVE_AUTHORIZED: false
 
-## Attempt history
+Last completed qualification:
+R1A4Q crossed-discrete-port solver-safety test
 
-Attempt 1:
-- source cc76c1c3d18b3e54df9267e6bdddb6f3269fe9ea
-- exit 1
-- solver_run=false
-- HOLD_R1A4Q_HARNESS_RUNTIME_BEFORE_SOLVER
-- preserved work: D:\GNSS_Lband_Active_Array\_r1a4q_crossed_port_test
-- preserved evidence: evidence/r1a4q_dc_nw_20260924/
+Final R1A4Q status:
+PASS_R1A4Q_NO_HARD_SHORT_WITH_PARASITIC_COUPLING
 
-Attempt 2:
-- harness fixed only for pre-solver port-count audit
-- fresh work/evidence required
-- formal invocation count for attempt 2 starts at zero
+## Hash-locked R1A4 candidate
 
-## Attempt-2 paths
-
-Work:
-D:\GNSS_Lband_Active_Array\_r1a4q_crossed_port_test_attempt2
-
-Evidence:
-evidence/r1a4q_dc_nw_20260924_attempt2/
-
-## Frozen diagnostic
-
-Models:
-- CROSS
-- LIFTED_REFERENCE
-
-Solver:
-HF Frequency Domain
-
-Frequency:
-0.5–2.0 GHz
-
-Mesh:
-tetrahedral first order, adaptation off
-
-Compare:
-S11, S22, S21, S12.
-
-## Production protection
-
-R1A4 GNSS CST:
 D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst
 
 SHA256:
 4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364
 
-It must not be solved in R1A4Q.
+## R1A4Q constraint
 
-No R1A5 antenna solve is authorized.
+Tested solver:
+CST 2022.5 HF Frequency Domain
+
+Mesh:
+tetrahedral first order
+
+Crossed-port artificial S21:
+approximately -69 to -55 dB over 0.5–2.0 GHz.
+
+At 1.4 GHz:
+- crossed = -59.40 dB
+- lifted reference = -78.09 dB
+- crossing penalty = +18.69 dB
+
+No direct short was observed.
+
+This does not qualify transient/hexahedral use.
+
+## R1A5 design boundary
+
+R1A5 may only be authorized later as:
+- HF Frequency Domain;
+- tetrahedral mesh;
+- diagnostic smoke;
+- no optimization;
+- no production-isolation claim.
+
+No current solver invocation is permitted.
