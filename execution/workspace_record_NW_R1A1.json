@@ -4,21 +4,21 @@
     "project": "GNSS_Lband_Active_Array",
     "task_id": "R1A1-SCALED-APERTURE-BUILD-ONLY-DC-NW",
     "stage": "BUILD_ONLY_R1A1",
-    "status": "READY"
+    "status": "RECOVERY_BUILD_AUTHORIZED"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
     "created_at": "existing checkout",
     "last_used_at": "2026-09-24",
-    "state": "ACTIVE"
+    "state": "CHECKPOINTED"
   },
   "source": {
     "type": "git",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "remote_url": "https://github.com/Dingo-infinity2020/GNSS_Lband_Active_Array.git",
     "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AFTER_SYNC",
+    "head_commit": "RESOLVE_AFTER_RECOVERY_SYNC",
     "head_on_trusted_remote": true,
     "dirty": false,
     "untracked_present": false,
@@ -28,17 +28,19 @@
     "mode": "REFERENCE_ONLY",
     "destination": "remote Git + project evidence",
     "manifest_path": "execution/workspace_record_NW_R1A1.json",
-    "critical_artifacts": [],
+    "critical_artifacts": [
+      "evidence/r1a1_dc_nw_20260924_1111/"
+    ],
     "recovery_method": "git fetch + checkout canonical branch; rebuild from source macro",
     "completed": false
   },
   "closeout": {
-    "task_node": "R1A1 PASS/HOLD",
-    "active_processes_checked": false,
-    "downstream_dependency_checked": false,
-    "handoff_written": false,
+    "task_node": "Attempt1 HOLD_ENVIRONMENT recorded; successor recovery authorized",
+    "active_processes_checked": true,
+    "downstream_dependency_checked": true,
+    "handoff_written": true,
     "purge_allowed": false,
     "purged": false,
-    "cleanup_evidence": ""
+    "cleanup_evidence": "evidence/r1a1_dc_nw_20260924_1111/"
   }
 }
