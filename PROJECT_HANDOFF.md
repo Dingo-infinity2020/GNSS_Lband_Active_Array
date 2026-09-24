@@ -1,10 +1,13 @@
+[Reading 80 lines from start (total: 91 lines, 11 remaining)]
+
 # PROJECT_HANDOFF.md
 
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=21
+HANDOFF_VERSION=22
 CANONICAL_BRANCH=project/r0-charts-scaffold
+MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1-CHARTS-GNSS-DERIVATIVE
 CURRENT_TASK_ID=R1A5F-DESIGN-SPLIT-SINGLE-PORT-FEED
 TASK_OWNER=DESIGN
@@ -17,6 +20,13 @@ OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
+
+
+## Long-horizon authority
+
+Before interpreting this handoff, read `PROJECT_MAINLINE.md`.
+
+The handoff controls the current execution baton; `PROJECT_MAINLINE.md` controls the scientific/simulation sequence and blocks silent drift back into isolated-element optimization.
 
 ## Closed numerical qualification
 
@@ -78,14 +88,5 @@ create two separate single-port differential models from the human-reviewed R1A3
 
 This removes the central port-port crossing while preserving the exact polarization basis and 90-degree symmetry.
 
-Direct two-port isolation is deferred to a future physically meaningful multi-conductor/active feed model.
 
-No build or solver is currently authorized.
-
-## Protected/checkpointed artifacts
-
-Keep:
-- R1A3 reviewed geometry
-- R1A5M2 converged CST and compact evidence
-
-Earlier R1A5/R1A5R/R1A5M workspaces remain checkpointed until a later dedicated host-hygiene closeout decides purge eligibility.
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]

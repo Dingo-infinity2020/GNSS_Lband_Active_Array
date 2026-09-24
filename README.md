@@ -1,38 +1,60 @@
 # GNSS L-band Active Array
 
-Low-noise, dual-polarized active antenna array development for full L-band GNSS reception.
+Low-noise, dual-polarized **active antenna array** development for full L-band GNSS reception.
 
-## Start here on an execution host
+## Start here
 
-Synchronize `project/r0-charts-scaffold`, then read **`PROJECT_HANDOFF.md`**. It is the canonical current task/return document; do not rely on copied chat prompts.
+The project has two root-level authorities:
 
+1. **`PROJECT_MAINLINE.md`** — highest-level scientific/simulation roadmap; prevents architecture and simulation drift.
+2. **`PROJECT_HANDOFF.md`** — canonical current execution baton, permissions, artifact hashes and stop boundary.
 
-## Current phase
+Every new agent/session must read both before changing scientific artifacts.
 
-**R0-CHARTS-RECON-PASSIVE** — literature-traceable passive reconstruction only.
+## Current scientific phase
 
-No solver-derived claims are accepted yet. Geometry provenance, assumptions, and build-only validation must be reviewed before any optimization or active-LNA integration.
+**R1A5F — clean non-crossing passive-feed transition before periodic-array work.**
+
+The isolated-element passive radiator has already reached a numerically converged diagnostic baseline.
+
+The mainline is now:
+
+**clean feed -> periodic unit cell -> pitch/material array trade -> active-impedance/embedded-pattern atlas -> finite passive array -> LNA/antenna co-design -> active periodic/finite array.**
+
+Do **not** redirect the project into prolonged isolated-element S11 optimization.
 
 ## Target system envelope
 
 - RF coverage: **1.15–1.65 GHz**
 - Two independent linear-polarization outputs per element
-- Digital RHCP/LHCP synthesis; no analog 90° hybrid in the first generation
-- Array-aware design: active impedance and scan behavior are first-class requirements
-- Core scan region: **0–60° from zenith**; 60–75° is an extended target
-- Low-cost manufacturability: standard PCB/SMT, compact shielded active hub, Bias-Tee powering
-- LNA must be placed as close to the balanced feed as practical; pre-LNA passive loss is minimized
-- QPL9547 is a **reference LNA candidate**, not a frozen production choice
+- Digital RHCP/LHCP synthesis; no analog 90-degree hybrid in generation 1
+- Core scan region: **0–60 deg from zenith**
+- Extended scan investigation: **60–75 deg**
+- Initial pitch search: **88–100 mm**, with **94 mm** as the first periodic baseline
+- Low-cost PCB/SMT construction
+- Feed-point low-noise frontend
+- Minimal pre-LNA passive loss
+- QPL9547 is a reference LNA candidate, not a frozen final choice
 
-## Development gates
+## Key system rule
 
-1. **R0** — CHARTS passive reconstruction at the published 300–500 MHz scale
-2. **R1** — Maxwell-scaled L-band reference, initially ~1.05–1.75 GHz
-3. **R2** — true dual-polarization model and mixed-mode validation
-4. **R3** — periodic/finite-array active-impedance and scan study
-5. **R4** — differential LNA study (QPL9547 reference + alternative candidates)
-6. **R5** — CST/ADS antenna-array-LNA co-design
-7. **R6** — full-EM central active hub, shield and real feed integration
-8. **R7** — first hardware prototype
+The isolated-element return loss is not the design objective.
 
-See `docs/REQUIREMENTS_v0.1.md` and `docs/R0_CHARTS_RECON_PASSIVE.md` for the frozen first-stage requirements and acceptance gates.
+Before the LNA input network is frozen, the project must establish the array's scan-dependent **active differential impedance** and embedded-element behavior.
+
+Preliminary LNA circuit/model validation may proceed in parallel with periodic-array work, but true active-antenna co-design begins only after the array source-impedance locus is available.
+
+## Current execution
+
+Read `PROJECT_HANDOFF.md`.
+
+Current work is R1A5F design/build qualification only; solver permission is controlled independently by the handoff and SimulationOps stage contract.
+
+## Core documents
+
+- `PROJECT_MAINLINE.md` — long-horizon scientific/simulation authority
+- `PROJECT_HANDOFF.md` — current execution authority
+- `docs/PROJECT_RULES.md` — anti-divergence/change discipline
+- `docs/REQUIREMENTS_v0.1.md` — system requirements
+- `docs/R1_CHARTS_GNSS_DERIVATIVE_PLAN.md` — R1 design origin/history
+- `docs/SIM_EXECUTION.md` — current SimulationOps execution state

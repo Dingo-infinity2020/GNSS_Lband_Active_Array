@@ -1,3 +1,5 @@
+[Reading 161 lines from start (total: 161 lines, 0 remaining)]
+
 [Reading 157 lines from start (total: 157 lines, 0 remaining)]
 
 [Reading 152 lines from start (total: 152 lines, 0 remaining)]
@@ -28,16 +30,19 @@ This repository is a staged scientific hardware project.
 
 Before changing any scientific or engineering artifact, read:
 
-1. `docs/PROJECT_RULES.md`
-2. `docs/DECISIONS.md`
-3. `docs/REQUIREMENTS_v0.1.md`
-4. `PROJECT_HANDOFF.md` — canonical current execution baton
-5. the document for the current gate
-6. relevant parameter/provenance manifests
+1. `PROJECT_MAINLINE.md` — highest-level scientific/simulation roadmap
+2. `docs/PROJECT_RULES.md`
+3. `docs/DECISIONS.md`
+4. `docs/REQUIREMENTS_v0.1.md`
+5. `PROJECT_HANDOFF.md` — canonical current execution baton
+6. the document for the current gate
+7. relevant parameter/provenance manifests
+
+`PROJECT_MAINLINE.md` is the long-horizon authority for the project sequence. In particular, it locks the array-first transition: clean feed -> periodic unit cell -> active-impedance atlas -> finite-array validation -> LNA/antenna co-design. Do not silently redirect the project into prolonged isolated-element optimization.
 
 `docs/PROJECT_RULES.md` is the anti-divergence charter. Its rules apply unless an explicit human-approved architecture decision supersedes them.
 
-`PROJECT_HANDOFF.md` is the only operational task-exchange document between design review and execution hosts. Do not execute a task copied from an old chat or local note if it conflicts with the current handoff.
+`PROJECT_HANDOFF.md` is the only operational task-exchange document between design review and execution hosts. It controls the current permissions but must remain consistent with `PROJECT_MAINLINE.md`. Do not execute a task copied from an old chat or local note if it conflicts with either authority.
 
 ## Current gate
 
@@ -62,7 +67,9 @@ R1A5F is design-only until a new explicit build authorization is committed.
 ## Architecture control
 
 Current MAINLINE:
-- CHARTS-inspired planar balanced element with feed-point differential active frontend.
+- CHARTS-inspired planar balanced element with feed-point differential active frontend;
+- transition to periodic/unit-cell active-impedance physics immediately after the clean-feed gate;
+- LNA input matching remains unfrozen until the scan-dependent array source-impedance locus is established.
 
 Current FIRST_BACKUP:
 - PUMA / unbalanced tightly-coupled element with LNA behind the ground plane.
@@ -137,6 +144,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
