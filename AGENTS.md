@@ -23,17 +23,19 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E0C-B-C45P45-DESIGN-SCAN-SOLVE**
+Current task: **R1E0C-B-C45P45-SCAN-SOLVE-NW**
 
 Current permissions:
-- inspect the completed C30P45 scan-solve evidence: YES
-- design/audit the next C45P45 scan-solve ticket: YES
-- run C45P45/C60P45/C60P135: NO
+- use the qualified C45P45 scan-state CST as immutable source: YES
+- run exactly one C45P45 one-shot scan solve on NW: YES
+- extract/qualify active S11 and Z_active for C45P45: YES
+- run C60P45/C60P135: NO
 - modify pitch/material/geometry/feed: NO
 - LNA integration/CST251: NO
+- silent retry: NO
 
 R1E0C-B C30P45 is closed PASS.
-C45P45 is the next intended state but remains solver-unauthorized.
+Only C45P45 is authorized in the current solve ticket.
 
 ## Architecture control
 

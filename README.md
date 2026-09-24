@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E0C-B - C30P45 PASS; C45P45 next scan-solve design.**
+**R1E0C-B/C45P45 - authorized second scan-dependent active-impedance solve on NW.**
 
 The isolated-element passive phase is closed.
 
@@ -62,7 +62,7 @@ This is why the LNA match is not frozen yet.
 
 ## Current execution
 
-R1E0C-A is closed PASS. C30P45 scan solve is also PASS and protected. Current work is **C45P45 DESIGN ONLY**; all remaining scan solvers are unauthorized.
+R1E0C-A and C30P45 are closed PASS. Current work is the single authorized **C45P45 one-shot scan solve**; C60P45/C60P135 remain unauthorized.
 
 Prepared scan states:
 - theta=30, phi=45
@@ -72,7 +72,7 @@ Prepared scan states:
 
 Current permissions:
 - BUILD_AUTHORIZED=NO
-- SOLVER_PERMISSION=NO
+- SOLVER_PERMISSION=YES_R1E0C_B_C45P45_ONLY
 
 Read `PROJECT_HANDOFF.md` for the exact baton.
 

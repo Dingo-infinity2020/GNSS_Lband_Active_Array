@@ -3,16 +3,16 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=38
+HANDOFF_VERSION=39
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E0C-FIRST-SCAN-SOLVE
-CURRENT_TASK_ID=R1E0C-B-C45P45-DESIGN-SCAN-SOLVE
-TASK_OWNER=DESIGN
-TASK_STATUS=READY_FOR_DESIGN
+CURRENT_TASK_ID=R1E0C-B-C45P45-SCAN-SOLVE-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=READY_FOR_SOLVE
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=NO
+SOLVER_PERMISSION=YES_R1E0C_B_C45P45_ONLY
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
@@ -288,13 +288,32 @@ The solved C30P45 artifact is PROTECTED_IN_PLACE.
 
 ## Current authorization
 
-Next intended state:
+Authorized state:
 `C45P45`
 
-Current task is DESIGN ONLY.
+Scan:
+theta=45 deg, phi=45 deg, outward
 
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=NO
+SOLVER_PERMISSION=YES_R1E0C_B_C45P45_ONLY
 
-C45P45 / C60P45 / C60P135 are not yet solver-authorized.
+Authorized source:
+`D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01\R1E0C_C45P45_SCANSTATE_BUILD_ONLY_V01.cst`
+
+Required source SHA256:
+`ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed`
+
+Fresh work:
+`D:\GNSS_Lband_Active_Array\_r1e0c_b_c45p45_scan_solve_work`
+
+Fresh evidence:
+`evidence/r1e0c_b_c45p45_dc_nw_20260924_solve01/`
+
+Formal invocation count:
+1
+
+Silent retry:
+NO
+
+C60P45 / C60P135 remain unauthorized.
 No pitch/material/LNA/CST251 work is authorized.
