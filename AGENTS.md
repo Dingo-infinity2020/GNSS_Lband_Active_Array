@@ -1,3 +1,5 @@
+[Reading 185 lines from start (total: 185 lines, 0 remaining)]
+
 [Reading 180 lines from start (total: 180 lines, 0 remaining)]
 
 [Reading 176 lines from start (total: 176 lines, 0 remaining)]
@@ -52,7 +54,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1A5FQ-CLEAN-FEED-EQUIVALENCE-SOLVE-NW**
+Current task: **R1E0-DESIGN-PERIODIC-UNIT-CELL-94MM**
 
 Authoritative current execution state is defined by:
 - `PROJECT_MAINLINE.md`
@@ -61,17 +63,18 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- copy the protected R1A5F Pol-A/Pol-B CSTs into fresh R1A5FQ work: YES
-- apply the frozen R1A5M2-equivalent solver configuration: YES
-- run one formal sequential A+B NW equivalence task: YES
-- modify geometry/materials/ports: NO
-- isolated-element optimization: NO
-- periodic/unit-cell solver work: NO in this task
-- material A-B/far-field production/CST251: NO
-- silent retry or partial rerun: NO
+- inspect the closed R1A5F/R1A5FQ clean-feed artifacts/evidence: YES
+- design/document the first 94-mm periodic unit-cell workflow: YES
+- inspect CST 2022.5 installed examples/macros for exact boundary/scan API: YES
+- run any periodic CST solver: NO
+- modify radiator geometry/materials/ports: NO
+- reopen isolated-element optimization: NO
+- pitch/material sweep: NO
+- LNA integration: NO
+- production solve/CST251: NO
 
-R1A5FQ is the final isolated-element equivalence gate.
-On PASS the project must move to R1E0 periodic unit-cell DESIGN.
+The isolated-element passive stage is closed.
+R1E0 is the first primary array-physics gate and must focus on active differential impedance under periodic scan.
 
 ## Architecture control
 
@@ -153,6 +156,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

@@ -4,27 +4,45 @@
     "project": "GNSS_Lband_Active_Array",
     "task_id": "R1A5FQ-CLEAN-FEED-EQUIVALENCE-SOLVE-NW",
     "stage": "R1A5FQ_CLEAN_FEED_EQUIVALENCE_SOLVE",
-    "status": "READY_FOR_SOLVE"
+    "status": "PASS_R1A5FQ_CLEAN_FEED_EQUIVALENT"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "ACTIVE"
+    "state": "CHECKPOINTED"
   },
   "source": {
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AT_PREFLIGHT",
-    "head_on_trusted_remote": false
+    "head_commit": "9d4d7dbf0741df2776298c2be51fa8df26ff3427",
+    "head_on_trusted_remote": true
+  },
+  "result": {
+    "runtime_seconds": 180.64,
+    "formal_invocation_count": 1,
+    "model_A_result_sha256": "0afc37b65b65d6f17746b7e04a7d4aec239f395ec38351fbfaa1502a4ec87e2a",
+    "model_B_result_sha256": "f78d87dda909af55844ce645c4593cea2d2e9d0f5de4e492a5bd66d42fed5c0f",
+    "max_complex_A_vs_baseline": 0.008537500391679288,
+    "max_complex_B_vs_baseline": 0.008399948817370568,
+    "max_complex_A_vs_B": 0.012309051547414,
+    "max_db_A_vs_B": 0.45646892857619825
   },
   "archive": {
-    "mode": "CHECKPOINTED",
-    "destination": "remote Git + R1A5FQ work after run",
-    "critical_artifacts": [],
-    "completed": false
+    "mode": "PROTECTED_IN_PLACE",
+    "destination": "D:\\GNSS_Lband_Active_Array\\_r1a5fq_equivalence_work",
+    "critical_artifacts": [
+      "D:\\GNSS_Lband_Active_Array\\_r1a5fq_equivalence_work\\R1A5FQ_A_EQUIVALENCE_V01.cst",
+      "D:\\GNSS_Lband_Active_Array\\_r1a5fq_equivalence_work\\R1A5FQ_B_EQUIVALENCE_V01.cst",
+      "evidence/r1a5fq_dc_nw_20260924_equiv01/"
+    ],
+    "completed": true,
+    "purge_allowed": false
   },
   "closeout": {
-    "task_node": "",
+    "task_node": "R1A5FQ PASS / isolated passive stage closed / baton to R1E0 design",
+    "active_processes_checked": true,
+    "project_modeler_process_active": false,
+    "unrelated_active_session_observed": "NW PID 13516 belongs to separate dingoKID/Sonnet SSH task and was not touched",
     "handoff_written": true,
     "purge_allowed": false,
     "purged": false

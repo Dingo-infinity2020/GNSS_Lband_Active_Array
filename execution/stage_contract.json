@@ -7,53 +7,42 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "mainline_authority": "PROJECT_MAINLINE.md",
-    "model_identity": "CHARTS_GNSS_R1A5FQ_CLEAN_FEED_EQUIVALENCE_V01",
+    "model_identity": "CHARTS_GNSS_R1E0_PERIODIC_UNIT_CELL_94MM_DESIGN",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
+    "source_commit": "RESOLVE_AT_CLOSEOUT"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": true,
-    "scope": "R1A5FQ_CLEAN_FEED_EQUIVALENCE_ONLY",
+    "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "contract": "docs/R1A5FQ_ISOLATED_EQUIVALENCE_CONTRACT.md",
-    "model_A_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5f_split_single_port_work\\R1A5F_POLA_SINGLE_PORT_V01.cst",
-    "model_A_sha256": "74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce",
-    "model_B_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5f_split_single_port_work\\R1A5F_POLB_SINGLE_PORT_V01.cst",
-    "model_B_sha256": "11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf",
-    "baseline_csv": "evidence/r1a5m2_dc_nw_20260924_recovery01/sparameters_and_zin.csv",
-    "solver_config": "source/cst/R1A5FQ_EQUIVALENCE_SOLVER_CONFIG_V01.mcr",
-    "static_audit": "PASS_R1A5FQ_STATIC_AUDIT",
-    "science_band_ghz": [1.15,1.65],
-    "max_complex_delta_A_vs_baseline": 0.03,
-    "max_complex_delta_B_vs_baseline": 0.03,
-    "max_complex_delta_A_vs_B": 0.02,
-    "max_db_delta_A_vs_B": 0.5,
-    "pass_gate": "PASS_R1A5FQ_CLEAN_FEED_EQUIVALENT",
-    "next_gate_on_pass": "R1E0_PERIODIC_UNIT_CELL_94MM",
-    "stop_boundary": "one A+B equivalence task then return to design"
+    "r1a5fq_status": "PASS_R1A5FQ_CLEAN_FEED_EQUIVALENT",
+    "clean_model_A_sha256": "74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce",
+    "clean_model_B_sha256": "11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf",
+    "next_gate": "R1E0_PERIODIC_UNIT_CELL_94MM",
+    "pitch_mm_initial": 94,
+    "array_physics": "active differential impedance under periodic scan phase",
+    "contract": "NOT_YET_FROZEN"
   },
   "execution": {
-    "current_stage": "R1A5FQ_CLEAN_FEED_EQUIVALENCE_SOLVE",
-    "formal_invocation_count": 0,
+    "current_stage": "DESIGN_R1E0_PERIODIC_UNIT_CELL_94MM",
+    "last_completed_stage": "R1A5FQ_CLEAN_FEED_EQUIVALENCE_SOLVE",
+    "last_status": "PASS_R1A5FQ_CLEAN_FEED_EQUIVALENT",
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1a5fq_equivalence_work",
-    "evidence": "evidence/r1a5fq_dc_nw_20260924_equiv01/",
+    "r1a5fq_evidence": "evidence/r1a5fq_dc_nw_20260924_equiv01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1A5FQ.json",
-    "state": "ACTIVE",
+    "state": "CHECKPOINTED",
     "purge_allowed": false
   }
 }

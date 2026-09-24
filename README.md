@@ -1,3 +1,5 @@
+[Reading 68 lines from start (total: 68 lines, 0 remaining)]
+
 [Reading 64 lines from start (total: 64 lines, 0 remaining)]
 
 [Reading 60 lines from start (total: 60 lines, 0 remaining)]
@@ -17,7 +19,7 @@ Every new agent/session must read both before changing scientific artifacts.
 
 ## Current scientific phase
 
-**R1A5FQ — final clean-feed isolated-equivalence design before periodic-array work.**
+**R1E0 — first 94-mm periodic unit-cell baseline for array active-impedance physics.**
 
 The isolated-element passive radiator has already reached a numerically converged diagnostic baseline.
 
@@ -52,7 +54,7 @@ Preliminary LNA circuit/model validation may proceed in parallel with periodic-a
 
 Read `PROJECT_HANDOFF.md`.
 
-Current work is the single authorized R1A5FQ clean-feed isolated-equivalence solve. On PASS, isolated-element qualification closes and the next primary physics gate is R1E0 94-mm periodic unit cell.
+Isolated-element passive qualification is closed. Current work is R1E0 periodic-unit-cell DESIGN ONLY; no periodic solver is authorized until the boundary/scan convention and acceptance gate are frozen.
 
 ## Core documents
 
@@ -62,6 +64,8 @@ Current work is the single authorized R1A5FQ clean-feed isolated-equivalence sol
 - `docs/REQUIREMENTS_v0.1.md` — system requirements
 - `docs/R1_CHARTS_GNSS_DERIVATIVE_PLAN.md` — R1 design origin/history
 - `docs/SIM_EXECUTION.md` — current SimulationOps execution state
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

@@ -3,16 +3,16 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=25
+HANDOFF_VERSION=26
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
-CURRENT_GATE=R1A5FQ-CLEAN-FEED-EQUIVALENCE
-CURRENT_TASK_ID=R1A5FQ-CLEAN-FEED-EQUIVALENCE-SOLVE-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_SOLVE
+CURRENT_GATE=R1E0-PERIODIC-UNIT-CELL-BASELINE
+CURRENT_TASK_ID=R1E0-DESIGN-PERIODIC-UNIT-CELL-94MM
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=YES_R1A5FQ_ONLY
+SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
@@ -23,100 +23,84 @@ CST251_PERMISSION=NO
 
 Read `PROJECT_MAINLINE.md` first.
 
-R1A5FQ is the final isolated-element equivalence gate.
+The isolated-element passive qualification is now CLOSED.
 
-On PASS:
-- close isolated passive element qualification;
-- next primary physics gate = R1E0 94-mm periodic unit cell.
+The active-array mainline has moved to:
+R1E0 periodic unit cell -> R1E1 pitch/material array trade -> R1E2 active-impedance atlas.
 
-No isolated optimization is permitted.
+Do not reopen isolated-element S11 optimization unless a later array result demonstrates a quantified need.
 
-## Inputs
+## Closed R1A5FQ stage
 
-Model A:
+Final status:
+`PASS_R1A5FQ_CLEAN_FEED_EQUIVALENT`
+
+Formal source HEAD:
+`9d4d7dbf0741df2776298c2be51fa8df26ff3427`
+
+Formal invocation count:
+1
+
+Exit:
+0
+
+Runtime:
+180.64 s
+
+Key equivalence:
+- A vs R1A5M2 max complex delta = 0.008537500
+- B vs R1A5M2 max complex delta = 0.008399949
+- clean A vs clean B max complex delta = 0.012309052
+- clean A vs clean B max dB difference = 0.456468929 dB
+
+All frozen equivalence gates PASS.
+
+## Clean passive feed basis
+
+Canonical periodic-array starting sources remain the clean R1A5F no-result CSTs:
+
+Pol-A:
 `D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLA_SINGLE_PORT_V01.cst`
 
 SHA256:
 `74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce`
 
-Model B:
+Pol-B:
 `D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLB_SINGLE_PORT_V01.cst`
 
 SHA256:
 `11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf`
 
-Baseline:
-`evidence/r1a5m2_dc_nw_20260924_recovery01/sparameters_and_zin.csv`
+R1A5FQ result CSTs and compact evidence remain checkpointed/protected for provenance, but periodic design should derive from the clean R1A5F source models rather than solver-result-bearing copies.
 
-## Frozen contract
+## Current task: R1E0 design
 
-`docs/R1A5FQ_ISOLATED_EQUIVALENCE_CONTRACT.md`
+Scientific goal:
+establish the first periodic/unit-cell workflow for the actual array environment.
 
-Static audit:
-`PASS_R1A5FQ_STATIC_AUDIT`
+Initial baseline from PROJECT_MAINLINE.md:
+- square lattice
+- pitch = 94 mm
+- FR4 baseline
+- clean single differential polarization per model
+- x/y periodic or unit-cell phase boundaries
+- radiating/open z direction
+- scan-dependent active differential impedance
+- no LNA yet
 
-Solver config:
-`source/cst/R1A5FQ_EQUIVALENCE_SOLVER_CONFIG_V01.mcr`
+First R1E0 qualification set should remain small:
+- broadside
+- theta = 30 deg
+- theta = 45 deg
+- theta = 60 deg
+- representative low/mid/high L-band frequencies
 
-Harness:
-`scripts/run_r1a5fq_clean_feed_equivalence_dc.py`
+Before authorizing a solver:
+- verify CST 2022.5 boundary/scan API from installed examples/documented macros;
+- freeze exact phase/sign convention;
+- freeze whether model A alone is sufficient for first workflow proof or whether A/B both are required;
+- define broadside sanity relation to the clean isolated baseline;
+- define scan-blindness/anomaly metrics;
+- define lightweight NW versus CST251 routing.
 
-## Numerical formulation
-
-Identical to converged R1A5M2:
-- HF Frequency Domain
-- tetrahedral second order
-- curvature order 3
-- General purpose
-- HighFrequencyTet adaptive
-- ExpertSystem
-- MinPasses 3
-- MaxPasses 8
-- MaxDeltaS 0.02
-- two Delta-S checks
-- 1.0–1.8 GHz
-- open all six faces
-- 50 mm background
-
-No geometry, material, or port changes.
-
-## PASS gate over 1.15–1.65 GHz
-
-`PASS_R1A5FQ_CLEAN_FEED_EQUIVALENT` requires:
-
-- A and B native adaptive convergence by desired accuracy;
-- no max-pass termination;
-- complete finite curves;
-- max complex delta A vs R1A5M2 S11 <= 0.03;
-- max complex delta B vs R1A5M2 S22 <= 0.03;
-- max complex delta A vs B <= 0.02;
-- max A/B dB difference <= 0.5 dB.
-
-## Execution
-
-Host:
-NW / DESKTOP-GBTI6Q4
-
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1a5fq_equivalence_work`
-
-Fresh evidence:
-`evidence/r1a5fq_dc_nw_20260924_equiv01/`
-
-One formal harness invocation only.
-The harness solves A then B sequentially.
-
-Silent retry:
-NO.
-
-## Stop boundary
-
-After equivalence interpretation:
-- return to DESIGN;
-- no isolated optimization;
-- no material A/B;
-- no far-field production study;
-- no periodic solve inside this task;
-- no CST251 staging.
-
-If PASS, open R1E0 periodic unit-cell DESIGN.
+No periodic build or solver is currently authorized.
