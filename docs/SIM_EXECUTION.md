@@ -7,67 +7,59 @@
 
 ## Current stage
 
-R1E0C_B_C30P45_SCAN_SOLVE
+DESIGN_R1E0C_B_C45P45_SCAN_SOLVE
 
 BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: true
+SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Host
+## Last completed solve
 
-NW / DESKTOP-GBTI6Q4
+State:
+C30P45
 
-Mode:
-ONE_SHOT_SCAN_SOLVE
+Status:
+PASS_R1E0C_B_C30P45_SCAN_SOLVE
 
-## Immutable source
+Formal source commit:
+046ccc660e70f4ab4c9ddfd6026111c6a140ad24
 
-D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01\R1E0C_C30P45_SCANSTATE_BUILD_ONLY_V01.cst
+Solved CST:
+D:\GNSS_Lband_Active_Array\_r1e0c_b_c30p45_scan_solve_work\R1E0C_B_C30P45_SCAN_SMOKE_V01.cst
 
 SHA256:
-e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2
+068665b01c0cdea5338662a43fd70f1675e623ef205dbf0b910f45b40526823c
 
-Scan state:
-theta=30 deg, phi=45 deg, outward
+Runtime:
+112.60 s
 
-## Solver bundle
+Native convergence:
+PASS
 
-Contract:
-docs/R1E0C_B_SCAN_SOLVE_CONTRACT.md
+Broadband sweep:
+PASS
 
-Config:
-source/cst/R1E0C_B_SCAN_SOLVER_CONFIG_V01.mcr
+Physics alert:
+NO
 
-Static audit:
-PASS_R1E0C_B_SCAN_SOLVER_STATIC_AUDIT
+## Current intended next state
 
-Harness:
-scripts/run_r1e0c_scan_solve_dc.py
+C45P45: theta=45 deg, phi=45 deg
 
-## Fresh paths
+Qualified source:
+D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01\R1E0C_C45P45_SCANSTATE_BUILD_ONLY_V01.cst
 
-Work:
-D:\GNSS_Lband_Active_Array\_r1e0c_b_c30p45_scan_solve_work
+SHA256:
+ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed
 
-Evidence:
-evidence/r1e0c_b_c30p45_dc_nw_20260924_solve01/
+Solver bundle remains:
+- docs/R1E0C_B_SCAN_SOLVE_CONTRACT.md
+- source/cst/R1E0C_B_SCAN_SOLVER_CONFIG_V01.mcr
+- scripts/run_r1e0c_scan_solve_dc.py
+- em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E0C_B_SCAN_SOLVE.md
 
-## Numerical formulation
+## Stop
 
-HF Frequency Domain
-tetrahedral second order
-curvature order 3
-General purpose
-HighFrequencyTet / ExpertSystem
-MinPasses 3
-MaxPasses 8
-MaxDeltaS 0.02
-two Delta-S checks
-1.0-1.8 GHz
-
-## Stop boundary
-
-Exactly one formal C30P45 solve invocation.
-No silent retry.
-C45P45/C60P45/C60P135 remain unauthorized.
+C45P45 solver is not authorized.
+C60P45/C60P135 are not authorized.
 No pitch/material/LNA/CST251 work.

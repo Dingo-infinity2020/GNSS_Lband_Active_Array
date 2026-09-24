@@ -3,16 +3,16 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=37
+HANDOFF_VERSION=38
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E0C-FIRST-SCAN-SOLVE
-CURRENT_TASK_ID=R1E0C-B-C30P45-SCAN-SOLVE-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_SOLVE
+CURRENT_TASK_ID=R1E0C-B-C45P45-DESIGN-SCAN-SOLVE
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=YES_R1E0C_B_C30P45_ONLY
+SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
@@ -243,29 +243,58 @@ Each scan state must be a separate formal one-shot solve with fresh work/evidenc
 Suggested order:
 C30P45 -> C45P45 -> C60P45 -> C60P135.
 
-Current authorization:
-`C30P45` one-shot scan solve on NW only.
+## R1E0C-B C30P45 closed stage
 
-BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=YES_R1E0C_B_C30P45_ONLY
+Status:
+`PASS_R1E0C_B_C30P45_SCAN_SOLVE`
 
-Authorized source:
-`D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01\R1E0C_C30P45_SCANSTATE_BUILD_ONLY_V01.cst`
-
-Required source SHA256:
-`e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2`
-
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1e0c_b_c30p45_scan_solve_work`
-
-Fresh evidence:
-`evidence/r1e0c_b_c30p45_dc_nw_20260924_solve01/`
+Formal source commit:
+`046ccc660e70f4ab4c9ddfd6026111c6a140ad24`
 
 Formal invocation count:
 1
 
-Silent retry:
-NO
+Runtime:
+112.60 s
 
-C45P45 / C60P45 / C60P135 remain unauthorized.
-No pitch/material/LNA/CST251 work is authorized by this ticket.
+Solved artifact:
+`D:\GNSS_Lband_Active_Array\_r1e0c_b_c30p45_scan_solve_work\R1E0C_B_C30P45_SCAN_SMOKE_V01.cst`
+
+Solved artifact SHA256:
+`068665b01c0cdea5338662a43fd70f1675e623ef205dbf0b910f45b40526823c`
+
+Native convergence:
+0.0534035 -> 0.0428105 -> 0.0459950 -> 0.0447652 -> 0.0130888 -> 0.0198328
+
+Termination:
+desired accuracy limit reached
+
+Broadband sweep:
+PASS after 8 frequency samples
+
+Physics alerts:
+NONE
+
+Science-band active-impedance range:
+- Re(Z_active): 93.21 to 191.35 ohm
+- Im(Z_active): -30.20 to +103.55 ohm
+- max |Z_active|: 195.49 ohm
+
+Movement versus broadside:
+- max complex Delta S11 = 0.22935
+- max |Delta Z_active| = 73.84 ohm
+
+The solved C30P45 artifact is PROTECTED_IN_PLACE.
+
+## Current authorization
+
+Next intended state:
+`C45P45`
+
+Current task is DESIGN ONLY.
+
+BUILD_AUTHORIZED=NO
+SOLVER_PERMISSION=NO
+
+C45P45 / C60P45 / C60P135 are not yet solver-authorized.
+No pitch/material/LNA/CST251 work is authorized.
