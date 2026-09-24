@@ -57,3 +57,33 @@ After deletion:
 - verify each path is absent,
 - verify project Git checkout remains present and clean after sync,
 - record completion below / in a successor commit.
+
+
+## Cleanup completion
+
+Completed on NW via Desktop Commander after pulling the authorization record.
+
+Purged and verified absent:
+
+- `D:\GNSS_Lband_Active_Array\_r0_1a_h01_work`
+- `D:\GNSS_Lband_Active_Array\_r0_1a2_h01_work`
+- `D:\GNSS_Lband_Active_Array\_r0_1a3_h01_work`
+- `D:\GNSS_Lband_Active_Array\_ref_cui_r0b_work`
+- `D:\GNSS_Lband_Active_Array\_r1a1_scaled_aperture_work_recovery`
+
+Post-cleanup checks:
+
+```text
+all_target_paths_exist=false
+project_checkout_exists=true
+project_checkout_clean=true
+active_task_process_dependency=none
+```
+
+Lifecycle result:
+
+```text
+BUILD_WORKDIR_STATE=PURGED
+PROJECT_CHECKOUT_STATE=CHECKPOINTED
+PURGE_COMPLETED=true
+```
