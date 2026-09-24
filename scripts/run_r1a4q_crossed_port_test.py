@@ -92,8 +92,9 @@ def get_s(cstfile):
             raise RuntimeError("missing result "+item)
         raw=p3.get_result_item(item).get_data()
         vals=[]
-        for x,y in raw:
-            c=complex(y)
+        for row in raw:
+            x=row[0]
+            c=complex(row[1])
             vals.append((float(x),float(abs(c)),float(20*math.log10(max(abs(c),1e-300)))))
         data["S%d%d"%(i,j)]=vals
     return data
@@ -162,15 +163,24 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--work",required=True)
     ap.add_argument("--evidence",required=True)
+    ap.add_argument("--only",choices=["both","cross","lifted"],default="both")
     a=ap.parse_args()
     if os.path.exists(a.work) or os.path.exists(a.evidence):
         raise RuntimeError("fresh work/evidence required")
     os.makedirs(a.work)
     os.makedirs(a.evidence)
-    cross=run_model(os.path.join(a.work,"cross"),"CROSS",False)
-    lifted=run_model(os.path.join(a.work,"lifted"),"LIFTED_REFERENCE",True)
-    report={"cross":cross,"lifted":lifted}
-    # coupling contrast at 1.4 GHz
+    report={}
+    if a.only in ("both","cross"):
+        report["cross"]=run_model(os.path.join(a.work,"cross"),"CROSS",False)
+    if a.only in ("both","lifted"):
+        report["lifted"]=run_model(os.path.join(a.work,"lifted"),"LIFTED_REFERENCE",True)
+    if a.only!="both":
+        with open(os.path.join(a.evidence,"summary.json"),"w") as f:
+            json.dump(report,f,indent=2)
+        print(json.dumps(report,sort_keys=True))
+        return
+    cross=report["cross"]
+    lifted=report["lifted"]
     c=cross["summary"]["S21"]["samples"]["1.4"]["db"]
     l=lifted["summary"]["S21"]["samples"]["1.4"]["db"]
     report["s21_1p4_cross_db"]=c
