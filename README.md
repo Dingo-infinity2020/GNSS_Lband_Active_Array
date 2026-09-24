@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E0C-A - first-scan periodic scan-state BUILD-ONLY design.**
+**R1E0C-A - authorized first-scan periodic scan-state BUILD-ONLY on NW.**
 
 The isolated-element passive phase is closed.
 
@@ -62,7 +62,7 @@ This is why the LNA match is not frozen yet.
 
 ## Current execution
 
-R1E0C-A scan-state BUILD-ONLY is **design-ready but not authorized**.
+R1E0C-A scan-state BUILD-ONLY is **authorized for one NW build-only invocation**.
 
 Prepared scan states:
 - theta=30, phi=45
@@ -71,7 +71,7 @@ Prepared scan states:
 - theta=60, phi=135
 
 Current permissions:
-- BUILD_AUTHORIZED=NO
+- BUILD_AUTHORIZED=YES_R1E0C_A_ONLY
 - SOLVER_PERMISSION=NO
 
 Read `PROJECT_HANDOFF.md` for the exact baton.

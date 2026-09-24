@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=32
+HANDOFF_VERSION=33
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E0C-FIRST-SCAN-QUALIFICATION
-CURRENT_TASK_ID=R1E0C-A-DESIGN-SCANSTATE-BUILD-ONLY
-TASK_OWNER=DESIGN
-TASK_STATUS=READY_FOR_DESIGN
+CURRENT_TASK_ID=R1E0C-A-SCANSTATE-BUILD-ONLY-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=READY_FOR_BUILD_ONLY
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=NO
+BUILD_AUTHORIZED=YES_R1E0C_A_ONLY
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -144,11 +144,29 @@ All four macros contain:
 
 ## Current authorization
 
-R1E0C-A remains DESIGN ONLY.
+R1E0C-A BUILD-ONLY is authorized for one formal NW invocation.
 
-No build is authorized.
-No scan solver is authorized.
+Authorized actions:
+- copy the qualified clean R1E0A periodic source into four fresh state models;
+- apply only the frozen theta/phi scan metadata;
+- save each CST;
+- close and fresh-reopen each CST;
+- verify geometry/port/boundary/cell/scan metadata;
+- hash each artifact;
+- record evidence.
 
-A future build authorization must freeze fresh work/evidence paths and the exact source HEAD.
+Formal work path:
+`D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_work`
+
+Formal evidence path:
+`evidence/r1e0c_dc_nw_20260924_build01/`
+
+Formal invocation count:
+1
+
+Silent retry:
+NO
+
+SOLVER_PERMISSION remains NO.
 
 R1E0C-B scan solves require a separate later solver authorization.

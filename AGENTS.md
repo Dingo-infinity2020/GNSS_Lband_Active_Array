@@ -23,20 +23,20 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E0C-A-DESIGN-SCANSTATE-BUILD-ONLY**
+Current task: **R1E0C-A-SCANSTATE-BUILD-ONLY-NW**
 
 Current permissions:
-- inspect R1E0B broadside periodic PASS evidence: YES
-- design/audit R1E0C scan-state build-only bundle: YES
-- generate deterministic scan-state macros: YES
-- run R1E0C build: NO
+- use the qualified clean R1E0A periodic source: YES
+- run exactly one R1E0C-A four-state BUILD-ONLY task on NW: YES
+- save/fresh-reopen/hash/audit all four scan-state CSTs: YES
 - run any scan solver: NO
 - modify pitch/material/geometry/feed: NO
 - LNA integration: NO
 - CST251 production solve: NO
+- silent retry: NO
 
 R1E0B is closed PASS.
-R1E0C-A is design-only until a separate build authorization is frozen.
+R1E0C-A build-only is the current authorized execution gate.
 
 ## Architecture control
 

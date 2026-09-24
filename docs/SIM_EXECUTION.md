@@ -7,53 +7,40 @@
 
 ## Current stage
 
-DESIGN_R1E0C_A_SCANSTATE_BUILD_ONLY
+R1E0C_A_SCANSTATE_BUILD_ONLY
 
-BUILD_AUTHORIZED: false
+BUILD_AUTHORIZED: true
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Last completed stage
+## Host
 
-R1E0B broadside periodic active-impedance smoke
+NW / DESKTOP-GBTI6Q4
 
-Canonical status:
-PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE
+Mode:
+BUILD_ONLY
 
-Formal solver invocation:
-1
-
-Read-only recovery:
-PASS
-
-Solver rerun:
-none
-
-## Broadside reference
-
-Solved CST:
-D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work\R1E0B_POLA_PERIODIC_BROADSIDE_SMOKE_V01.cst
-
-SHA256:
-339021e580efa6aae6dfcfa229e4194b4dcf0bbef854398d44a0efed65aac7ad
-
-Compact active result:
-evidence/r1e0b_dc_nw_20260924_smoke01/active_s11_and_zactive.csv
-
-## Clean source for R1E0C scan-state builds
+## Immutable source
 
 D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst
 
 SHA256:
 48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223
 
-## R1E0C-A design
+## Authorized scan states
 
-States:
-- 30/45
-- 45/45
-- 60/45
-- 60/135
+- C30P45: theta=30 deg, phi=45 deg
+- C45P45: theta=45 deg, phi=45 deg
+- C60P45: theta=60 deg, phi=45 deg
+- C60P135: theta=60 deg, phi=135 deg
+
+Direction:
+outward
+
+## Frozen source bundle
+
+Plan:
+docs/R1E0C_FIRST_SCAN_QUALIFICATION_PLAN.md
 
 Generator:
 scripts/generate_r1e0c_scan_state_macros.py
@@ -64,10 +51,36 @@ PASS_R1E0C_SCAN_MACRO_STATIC_AUDIT
 Harness:
 scripts/run_r1e0c_scanstate_build_only_dc.py
 
-No build is currently authorized.
+Runbook:
+em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E0C_SCANSTATE_BUILD_ONLY.md
 
-## Later R1E0C-B
+## Invariants
 
-Scan solves will be separately authorized one-shot cases.
+For all four states:
+- boundary type unchanged;
+- X/Y remain unit cell;
+- Z remains expanded open;
+- cell remains 94 x 94 mm;
+- geometry unchanged;
+- material unchanged;
+- one discrete differential port remains;
+- only theta/phi scan metadata change;
+- no solver output.
 
-No solver action is currently permitted.
+## Formal execution paths
+
+Work:
+D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_work
+
+Evidence:
+evidence/r1e0c_dc_nw_20260924_build01/
+
+## Stop boundary
+
+Exactly one formal build-only invocation.
+Any state failure => HOLD.
+No silent retry.
+No R1E0C-B solver.
+No pitch/material variation.
+No LNA integration.
+No CST251 staging.
