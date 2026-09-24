@@ -4,27 +4,43 @@
     "project": "GNSS_Lband_Active_Array",
     "task_id": "R1A5M2-MAXPASS8-RECOVERY-SOLVE-NW",
     "stage": "R1A5M2_MAXPASS8_ADAPTIVE_RECOVERY",
-    "status": "READY_FOR_SOLVE"
+    "status": "PASS_R1A5M2_NATIVE_AND_ABSOLUTE_CONVERGED"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "ACTIVE"
+    "state": "CHECKPOINTED"
   },
   "source": {
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AT_PREFLIGHT",
-    "head_on_trusted_remote": false
+    "head_commit": "165707fe2da53e5c5ccf9b7e8d775f45017ec8b2",
+    "head_on_trusted_remote": true
+  },
+  "result": {
+    "r1a5m2_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5m2_maxpass8_work\\R1A5M2_ADAPTIVE_MAXPASS8_V01.cst",
+    "r1a5m2_cst_sha256": "1f904290293b49d4ad39d71cf3d3ddda86c81c2c202305e95f43b50ed477428e",
+    "runtime_seconds": 108.72,
+    "native_last_two_delta_s": [0.0173367,0.017589],
+    "native_termination": "desired accuracy reached",
+    "max_pol_asym_db": 0.013107094436062283,
+    "max_reciprocity_error": 0.00007966782484269627
   },
   "archive": {
-    "mode": "CHECKPOINTED",
-    "destination": "remote Git + R1A5M2 work after run",
-    "critical_artifacts": [],
-    "completed": false
+    "mode": "PROTECTED_IN_PLACE",
+    "destination": "D:\\GNSS_Lband_Active_Array\\_r1a5m2_maxpass8_work",
+    "critical_artifacts": [
+      "D:\\GNSS_Lband_Active_Array\\_r1a5m2_maxpass8_work\\R1A5M2_ADAPTIVE_MAXPASS8_V01.cst",
+      "evidence/r1a5m2_dc_nw_20260924_recovery01/"
+    ],
+    "completed": true,
+    "purge_allowed": false
   },
   "closeout": {
-    "task_node": "",
+    "task_node": "R1A5M2 PASS / return baton to R1A5F design",
+    "active_processes_checked": true,
+    "project_modeler_process_active": false,
+    "unrelated_active_session_observed": "NW PID 13516 belongs to separate dingoKID/Sonnet SSH task and was not touched",
     "handoff_written": true,
     "purge_allowed": false,
     "purged": false

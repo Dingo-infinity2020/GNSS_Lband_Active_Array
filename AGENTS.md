@@ -1,3 +1,5 @@
+[Reading 157 lines from start (total: 157 lines, 0 remaining)]
+
 [Reading 152 lines from start (total: 152 lines, 0 remaining)]
 
 [Reading 149 lines from start (total: 149 lines, 0 remaining)]
@@ -39,7 +41,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1A5M2-MAXPASS8-RECOVERY-SOLVE-NW**
+Current task: **R1A5F-DESIGN-SPLIT-SINGLE-PORT-FEED**
 
 Authoritative current execution state is defined by:
 - `PROJECT_HANDOFF.md`
@@ -47,15 +49,15 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- copy the hash-locked R1A4 CST into fresh R1A5M2 work: YES
-- apply the frozen MaxPasses=8 recovery config: YES
-- run one NW adaptive recovery solve: YES
-- modify geometry/materials/ports: NO
-- change any adaptive setting other than MaxPasses 6 -> 8: NO
+- inspect R1A5M2 converged evidence: YES
+- design/document split single-port production-passive feed models: YES
+- run any new CST build or solver: NO
+- modify geometry/materials: NO
 - optimization/material A-B/production solve/CST251: NO
-- automatic further extension: NO
 
-R1A5M2 is a distinct recovery stage, not a silent retry.
+R1A5M2 has closed PASS with native adaptive convergence.
+The crossed two-port model remains diagnostic-only for isolation.
+R1A5F is design-only until a new explicit build authorization is committed.
 
 ## Architecture control
 
@@ -135,6 +137,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

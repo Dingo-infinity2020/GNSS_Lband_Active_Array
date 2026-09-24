@@ -6,54 +6,43 @@
   },
   "project": {
     "name": "GNSS_Lband_Active_Array",
-    "model_identity": "CHARTS_GNSS_R1A5M2_MAXPASS8_V01",
+    "model_identity": "CHARTS_GNSS_R1A5F_SPLIT_SINGLE_PORT_DESIGN",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
+    "source_commit": "RESOLVE_AT_CLOSEOUT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
-    "SOLVE_AUTHORIZED": true,
-    "scope": "R1A5M2_MAXPASS8_RECOVERY_ONLY",
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "contract": "docs/R1A5M2_MAXPASS_RECOVERY_CONTRACT.md",
-    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1a4_differential_ports_work\\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst",
-    "source_sha256": "4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
-    "solver_config": "source/cst/R1A5M2_ADAPTIVE_MAXPASS8_CONFIG_V01.mcr",
-    "static_audit": "PASS_R1A5M2_STATIC_AUDIT",
-    "incremental_baseline_csv": "evidence/r1a5m_dc_nw_20260924_adapt01/sparameters_and_zin.csv",
-    "only_allowed_delta": "MaxPasses 6 -> 8",
-    "native_pass": {
-      "last_two_delta_s_lte": 0.02,
-      "maxpass_termination_forbidden": true,
-      "broadband_convergence_required": true
-    },
-    "external_science_band_ghz": [1.15,1.65],
-    "external_max_complex_delta_s11": 0.03,
-    "external_max_complex_delta_s22": 0.03,
-    "pass_gate": "PASS_R1A5M2_NATIVE_AND_ABSOLUTE_CONVERGED",
-    "stop_boundary": "one recovery run then return to design"
+    "r1a5m2_status": "PASS_R1A5M2_NATIVE_AND_ABSOLUTE_CONVERGED",
+    "r1a5m2_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5m2_maxpass8_work\\R1A5M2_ADAPTIVE_MAXPASS8_V01.cst",
+    "r1a5m2_cst_sha256": "1f904290293b49d4ad39d71cf3d3ddda86c81c2c202305e95f43b50ed477428e",
+    "r1a5m2_native_last_two_delta_s": [0.0173367,0.017589],
+    "r1a5m2_native_termination": "desired accuracy reached",
+    "r1a5m2_max_pol_asym_db": 0.013107094436062283,
+    "next_plan": "docs/R1A5F_SPLIT_SINGLE_PORT_FEED_PLAN.md",
+    "r1a5f_geometry_source_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa"
   },
   "execution": {
-    "current_stage": "R1A5M2_MAXPASS8_ADAPTIVE_RECOVERY",
-    "formal_invocation_count": 0,
+    "current_stage": "DESIGN_R1A5F_SPLIT_SINGLE_PORT_FEED",
+    "last_completed_stage": "R1A5M2_MAXPASS8_ADAPTIVE_RECOVERY",
+    "last_status": "PASS_R1A5M2_NATIVE_AND_ABSOLUTE_CONVERGED",
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1a5m2_maxpass8_work",
-    "evidence": "evidence/r1a5m2_dc_nw_20260924_recovery01/",
+    "r1a5m2_evidence": "evidence/r1a5m2_dc_nw_20260924_recovery01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1A5M2.json",
-    "state": "ACTIVE",
+    "state": "CHECKPOINTED",
     "purge_allowed": false
   }
 }

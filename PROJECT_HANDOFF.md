@@ -3,116 +3,89 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=20
+HANDOFF_VERSION=21
 CANONICAL_BRANCH=project/r0-charts-scaffold
-CURRENT_GATE=R1A5M2-ADAPTIVE-CONVERGENCE-RECOVERY
-CURRENT_TASK_ID=R1A5M2-MAXPASS8-RECOVERY-SOLVE-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_SOLVE
+CURRENT_GATE=R1-CHARTS-GNSS-DERIVATIVE
+CURRENT_TASK_ID=R1A5F-DESIGN-SPLIT-SINGLE-PORT-FEED
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_COPY_AND_CONFIG_ONLY
-SOLVER_PERMISSION=YES_R1A5M2_ONLY
+BUILD_AUTHORIZED=NO
+SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## Trigger
+## Closed numerical qualification
 
-R1A5M:
-HOLD_R1A5M_ADAPTIVE_NOT_CONVERGED
-
-Native Delta-S:
-0.0673917 -> 0.0497934 -> 0.0274924 -> 0.0203932 -> 0.0173369
-
-CST stopped because MaxPasses=6 was reached before two consecutive checks were below 0.02.
-
-## R1A5M2 scientific freeze
-
-Contract:
-`docs/R1A5M2_MAXPASS_RECOVERY_CONTRACT.md`
-
-Config:
-`source/cst/R1A5M2_ADAPTIVE_MAXPASS8_CONFIG_V01.mcr`
-
-Harness:
-`scripts/run_r1a5m2_maxpass_recovery_dc.py`
-
-Static audit:
-`PASS_R1A5M2_STATIC_AUDIT`
-
-Exactly one permitted solver-setting change:
-- MaxPasses: 6 -> 8
-
-Everything else remains identical to R1A5M:
-- HF Frequency Domain
-- tetrahedral second order
-- curvature order 3
-- General purpose
-- HighFrequencyTet / ExpertSystem
-- MinPasses 3
-- MaxDeltaS 0.02
-- NumberOfDeltaSChecks 2
-- LinearGrowthLimitation 40
-- 1.0–1.8 GHz
-- open boundaries
-- 50 mm background
-- unchanged geometry/materials/ports
-
-## Immutable physical source
-
-R1A4:
-`D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst`
-
-SHA256:
-`4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364`
-
-## Incremental baseline
-
-R1A5M pass-6 final compact result:
-`evidence/r1a5m_dc_nw_20260924_adapt01/sparameters_and_zin.csv`
-
-R1A5M CST SHA256:
-`67b44e77aa88709287caf194c8e89cc2535951e1fab66b7c679df9e398a62c9b`
-
-## PASS gate
-
-Native:
-- final two consecutive Delta-S values <= 0.02;
-- no max-pass termination;
-- broadband sweep converged;
-- no solver error lines.
-
-External over 1.15–1.65 GHz:
-- max complex delta S11 vs R1A5M pass6 <= 0.03;
-- max complex delta S22 vs R1A5M pass6 <= 0.03;
-- max Pol-A/B dB asymmetry <= 1.0;
-- reciprocity <= 1e-3;
-- complete finite curves.
-
-PASS:
+R1A5M2 final status:
 `PASS_R1A5M2_NATIVE_AND_ABSOLUTE_CONVERGED`
 
-## Execution
+Source HEAD:
+`165707fe2da53e5c5ccf9b7e8d775f45017ec8b2`
 
-Host:
-NW / DESKTOP-GBTI6Q4
+R1A5M2 CST:
+`D:\GNSS_Lband_Active_Array\_r1a5m2_maxpass8_work\R1A5M2_ADAPTIVE_MAXPASS8_V01.cst`
 
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1a5m2_maxpass8_work`
+SHA256:
+`1f904290293b49d4ad39d71cf3d3ddda86c81c2c202305e95f43b50ed477428e`
 
-Fresh evidence:
-`evidence/r1a5m2_dc_nw_20260924_recovery01/`
+Runtime:
+108.72 s
 
-Exactly one formal invocation.
-No silent retry.
+Native adaptation:
+- pass 6 Delta-S = 0.0173367
+- pass 7 Delta-S = 0.0175890
+- two consecutive checks below 0.02
+- termination by desired accuracy, not max passes
+- broadband sweep convergence PASS
 
-## Stop boundary
+Incremental convergence versus R1A5M pass6:
+- max complex delta S11 = 0.015124122
+- max complex delta S22 = 0.015189754
+- frozen threshold = 0.03
 
-After this recovery solve:
-- return to DESIGN;
-- no further automatic pass extension;
-- no material A/B;
-- no geometry optimization;
-- no CST251 staging.
+Symmetry:
+- max Pol-A/B dB asymmetry = 0.013107094 dB
+
+Reciprocity:
+- max complex error = 7.96678e-05
+
+## Converged diagnostic FR4 baseline
+
+Sampled -10 dB matching:
+- Pol-A: 1.1600 GHz through 1.8000 GHz sweep limit
+- Pol-B: 1.1600 GHz through 1.8000 GHz sweep limit
+
+At 1.15 GHz:
+approximately -9.09 dB for both polarizations.
+
+The current crossed two-port model remains diagnostic-only for S21/isolation.
+
+## Current next task
+
+R1A5F is DESIGN only.
+
+Plan:
+`docs/R1A5F_SPLIT_SINGLE_PORT_FEED_PLAN.md`
+
+Direction:
+create two separate single-port differential models from the human-reviewed R1A3 geometry:
+- Model A: NE -> SW only
+- Model B: NW -> SE only
+
+This removes the central port-port crossing while preserving the exact polarization basis and 90-degree symmetry.
+
+Direct two-port isolation is deferred to a future physically meaningful multi-conductor/active feed model.
+
+No build or solver is currently authorized.
+
+## Protected/checkpointed artifacts
+
+Keep:
+- R1A3 reviewed geometry
+- R1A5M2 converged CST and compact evidence
+
+Earlier R1A5/R1A5R/R1A5M workspaces remain checkpointed until a later dedicated host-hygiene closeout decides purge eligibility.

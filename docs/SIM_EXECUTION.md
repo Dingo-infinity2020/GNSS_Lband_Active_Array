@@ -1,68 +1,43 @@
 # SIM_EXECUTION
 
-## Current stage
-
-R1A5M2_MAXPASS8_ADAPTIVE_RECOVERY
+## Current state
 
 SimulationOps version: 0.2.4
 
-BUILD_AUTHORIZED: copy/config only
-SOLVE_AUTHORIZED: true
+Current stage:
+DESIGN_R1A5F_SPLIT_SINGLE_PORT_FEED
+
+BUILD_AUTHORIZED: false
+SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Immutable source
+## Last completed stage
 
-D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst
+R1A5M2 adaptive convergence
+
+Status:
+PASS_R1A5M2_NATIVE_AND_ABSOLUTE_CONVERGED
+
+Converged CST:
+D:\GNSS_Lband_Active_Array\_r1a5m2_maxpass8_work\R1A5M2_ADAPTIVE_MAXPASS8_V01.cst
 
 SHA256:
-4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364
+1f904290293b49d4ad39d71cf3d3ddda86c81c2c202305e95f43b50ed477428e
 
-## Recovery delta
+## Current design direction
 
-Only:
-MaxPasses 6 -> 8
+R1A5F split single-port production-passive feed.
 
-Unchanged:
-- second-order tetrahedral
-- curvature order 3
-- General purpose
-- HighFrequencyTet
-- ExpertSystem
-- MinPasses 3
-- MaxDeltaS 0.02
-- Delta-S checks 2
-- LinearGrowthLimitation 40
-- 1.0–1.8 GHz
-- boundaries/background/ports/materials/geometry
+Immutable geometry source:
+D:\GNSS_Lband_Active_Array\_r1a3_materialized_fr4_work\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst
 
-## Incremental baseline
+R1A3 SHA256:
+b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa
 
-evidence/r1a5m_dc_nw_20260924_adapt01/sparameters_and_zin.csv
+Proposed variants:
+- Pol-A single differential port only
+- Pol-B single differential port only
 
-## Native PASS
+No central port crossing exists in either variant.
 
-- last two Delta-S <= 0.02
-- no max-pass termination
-- broadband sweep convergence
-- no solver errors
-
-## External PASS
-
-Science band 1.15–1.65 GHz:
-- max complex delta S11 <= 0.03
-- max complex delta S22 <= 0.03
-- Pol-A/B asymmetry <= 1.0 dB
-- reciprocity <= 1e-3
-
-## Paths
-
-Work:
-D:\GNSS_Lband_Active_Array\_r1a5m2_maxpass8_work
-
-Evidence:
-evidence/r1a5m2_dc_nw_20260924_recovery01/
-
-## Stop
-
-One recovery solve only.
-No further automatic extension.
+No build/solver action is currently allowed.
