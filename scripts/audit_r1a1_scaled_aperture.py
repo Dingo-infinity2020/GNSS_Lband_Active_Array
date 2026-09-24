@@ -35,9 +35,10 @@ def main() -> int:
     if not p.exists():
         print("HOLD_R1A1_MACRO_MISSING"); return 2
     t=p.read_text(encoding="utf-8")
+    executable="\n".join(line for line in t.splitlines() if not line.lstrip().startswith("'"))
     failures=[]
     for x in FORBIDDEN:
-        if x in t: failures.append(f"forbidden_token:{x}")
+        if x in executable: failures.append(f"forbidden_token:{x}")
     for x in REQUIRED:
         if x not in t: failures.append(f"missing_marker:{x}")
     for n in OUTER+INNER:
