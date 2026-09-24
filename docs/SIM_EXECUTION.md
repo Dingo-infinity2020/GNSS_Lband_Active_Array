@@ -1,56 +1,50 @@
 # SIM_EXECUTION
 
-## Global protocol
+## Current stage
 
-- SimulationOps version: 0.2.4
-- Build/control host: NW
-- Simulator: CST Studio Suite 2022.5
-- Runtime: CST bundled Python 3.6 / cst.interface
-- Production solve host: CST251-C only after a future explicit production authorization
+R1A4Q_TOY_PORT_TOPOLOGY_SOLVE
 
-## Current state
+SimulationOps version: 0.2.4
 
-Model identity:
-CHARTS_GNSS_R1A4_DIFFERENTIAL_PORT_V01
+BUILD_AUTHORIZED: toy models only
+SOLVE_AUTHORIZED: toy models only
+PRODUCTION_MODEL_SOLVE_AUTHORIZED: false
 
-Current stage:
-DESIGN_R1A5_SMOKE_SOLVE_CONTRACT
+## Host/toolchain
 
-BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: false
+Host: NW
+CST: 2022.5
+Runtime: CST bundled Python 3.6 / cst.interface
+Solver: HF Frequency Domain
+Mesh order: first
+Adaptive mesh: off
+Frequency: 0.5–2.0 GHz
 
-Last completed stage:
-BUILD_ONLY_R1A4
+## Test objects
 
-Last status:
-PASS_R1A4_DIFFERENTIAL_PORT_BUILD_ONLY
+Fresh isolated work:
+D:\GNSS_Lband_Active_Array\_r1a4q_crossed_port_test
 
-## Hash-locked R1A4 candidate source
+A:
+CROSS.cst
 
+B:
+LIFTED_REFERENCE.cst
+
+Neither model contains the GNSS radiator.
+
+## Production protection
+
+R1A4 GNSS CST remains:
 D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst
 
 SHA256:
 4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364
 
-Ports:
-- Pol-A NE->SW
-- Pol-B NW->SE
-- 100 ohm differential reference
-- fresh-reopen count = 2
+It must not be opened for solver execution in R1A4Q.
 
-Geometry identity to R1A3:
-PASS
+## Stop boundary
 
-## R1A5 boundary
+Return A/B S-parameter diagnostics and classify the crossed topology.
 
-R1A5 smoke solve is not authorized yet.
-
-Before any solver invocation, freeze:
-- solver/boundary/mesh/frequency contract;
-- exact diagnostic outputs;
-- smoke PASS/HOLD logic;
-- one-shot invocation;
-- no optimization;
-- no broad sweep.
-
-No solver may start from the current state.
+No R1A5 antenna solve is authorized.

@@ -1,3 +1,5 @@
+[Reading 127 lines from start (total: 127 lines, 0 remaining)]
+
 [Reading 124 lines from start (total: 124 lines, 0 remaining)]
 
 [Reading 120 lines from start (total: 120 lines, 0 remaining)]
@@ -23,7 +25,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1A5-DESIGN-SMOKE-SOLVE-CONTRACT**
+Current task: **R1A4Q-TOY-PORT-TOPOLOGY-SOLVE-NW**
 
 Authoritative current execution state is defined by:
 - `PROJECT_HANDOFF.md`
@@ -31,17 +33,17 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- use hash-locked R1A4 two-port CST as design input: YES
-- design/document a smoke-solve contract: YES
-- CST build action: NO
-- CST solver: NO
+- create two isolated toy PEC-pad models on NW: YES
+- run the explicitly frozen R1A4Q toy A/B solver: YES
+- open/run solver on GNSS R1A4 CST: NO
+- modify GNSS R1A4 CST: NO
+- R1A5 antenna smoke solve: NO
 - optimization: NO
-- LNA integration: NO
 - CST251 staging: NO
 - hardware release: NO
 
-R1A1-R1A4 are closed PASS; R1A3 human CST review is PASS.
-R1A5 is design-only until a new explicit solver authorization is recorded.
+R1A4 build/persistence PASS remains recorded, but its crossed-port topology is under solver-safety qualification.
+The production antenna model is protected from the R1A4Q toy solve.
 
 ## Architecture control
 
@@ -121,6 +123,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

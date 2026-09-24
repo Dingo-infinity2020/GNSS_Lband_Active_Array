@@ -1,77 +1,64 @@
 # PROJECT_HANDOFF.md
 
-> Canonical operational handoff for GNSS L-band Active Array.
-
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=10
+HANDOFF_VERSION=11
 CANONICAL_BRANCH=project/r0-charts-scaffold
-CURRENT_GATE=R1-CHARTS-GNSS-DERIVATIVE
-CURRENT_TASK_ID=R1A5-DESIGN-SMOKE-SOLVE-CONTRACT
-TASK_OWNER=DESIGN
-TASK_STATUS=READY_FOR_DESIGN
+CURRENT_GATE=R1A4Q-CROSSED-DISCRETE-PORT-QUALIFICATION
+CURRENT_TASK_ID=R1A4Q-TOY-PORT-TOPOLOGY-SOLVE-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=READY_FOR_ISOLATED_DIAGNOSTIC
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=NO
+BUILD_AUTHORIZED=YES_TOY_ONLY
+SOLVER_PERMISSION=YES_TOY_ONLY
+PRODUCTION_MODEL_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
-LNA_INTEGRATION_PERMISSION=NO
-HARDWARE_PERMISSION=NO
+CST251_PERMISSION=NO
 ```
 
-## Closed stages
+## Reason for reopening port qualification
 
-- R1A1: PASS_R1A1_SCALED_APERTURE_BUILD_ONLY
-- R1A2: PASS_R1A2_FEED_REFERENCE_BUILD_ONLY
-- R1A3: PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW
-- R1A3 human review: PASS
-- R1A4: PASS_R1A4_DIFFERENTIAL_PORT_BUILD_ONLY
+The user identified a credible short-circuit risk in the R1A4 crossed diagonal discrete-port arrangement.
 
-## R1A4 closeout
+CST 2022.5 local documentation confirms that discrete edge ports are represented using perfect-conducting wire sections plus a central lumped/source element.
 
-Formal source HEAD:
-`80648b960d7d3ce91e6af99f52b9913637b1e820`
+Therefore:
+- R1A4 persistence/build PASS remains valid as a software-object result;
+- R1A4 is NOT yet accepted as a solver-safe production feed model;
+- R1A5 antenna smoke solve is suspended.
 
-R1A4 CST:
-`D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst`
+## Authorized diagnostic
 
-SHA256:
-`4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364`
+Document:
+`docs/R1A4Q_CROSSED_DISCRETE_PORT_TEST.md`
 
-Bytes:
-`47220`
+Host:
+NW / DESKTOP-GBTI6Q4
 
-Port count:
-- build = 2
-- fresh reopen = 2
+Work:
+`D:\GNSS_Lband_Active_Array\_r1a4q_crossed_port_test`
 
-Geometry identity:
-- exact shape-inventory match to reviewed R1A3 = PASS
-- no geometry commands existed in the R1A4 port-only macro
+Models:
+- CROSS.cst
+- LIFTED_REFERENCE.cst
+
+Frequency:
+0.5–2.0 GHz
 
 Solver:
-- NOT RUN
+HF Frequency Domain, first-order tetrahedral, mesh adaptation off.
 
-Evidence:
-`evidence/r1a4_dc_nw_20260924_build01/`
+Purpose:
+compare crossed discrete-port behavior against a non-intersecting lifted reference.
 
-## Current next stage
+## Hard stop
 
-R1A5 is DESIGN only.
+This authorization does NOT permit:
+- opening the GNSS R1A4 CST in a solver;
+- modifying GNSS R1A4 geometry;
+- R1A5 smoke solve;
+- CST251 staging;
+- optimization.
 
-Goal:
-freeze a lightweight isolated-element smoke-solve contract for the hash-locked R1A4 CST.
-
-The smoke stage must define before authorization:
-- solver family;
-- boundary conditions;
-- frequency window;
-- mesh policy;
-- excitation policy;
-- diagnostic outputs;
-- PASS/HOLD criteria;
-- exact stop boundary.
-
-No solver is authorized by this handoff.
-
-The R1A4 CST remains checkpointed and purge_allowed=false because it is the candidate immutable source for R1A5.
+After A/B diagnostics, return to DESIGN with results and recommendation.
