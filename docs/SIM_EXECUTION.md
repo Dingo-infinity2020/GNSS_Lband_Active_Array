@@ -7,72 +7,70 @@
 
 ## Current stage
 
-R1E0C_A_R2_READONLY_QUALIFICATION
+DESIGN_R1E0C_B_SCAN_SOLVE
 
 BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Original formal R1E0C-A invocation
+## Last completed stage
 
-Status:
-HOLD_R1E0C_A_HARNESS_MACRO_PATH_FORMAT
+R1E0C-A scan-state build-only qualification
 
-Source commit:
-746b34d35e6ae4ee948a6fc510bc6c072584e654
+Canonical status:
+PASS_R1E0C_SCANSTATE_BUILD_ONLY
 
-Runtime:
-24.23 s
+Read-only qualification:
+PASS_R1E0C_SCANSTATE_BUILD_ONLY_READONLY_QUALIFICATION
 
-## Recovery R1E0C-A-R1 invocation
+## Qualified scan-state inputs
 
-Status:
-HOLD_R1E0C_A_RECOVERY_NO_SOLVER_PREDICATE
+Root:
+D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01
 
-Source commit:
-cde5f8827d82473750c1a6e92510ac617d3835ab
+- C30P45: e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2
+- C45P45: ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed
+- C60P45: 94360ee2c40d4e5236b7b7a1fee79b46739da2aaec70054e4aa707a123853e01
+- C60P135: c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1
 
-Runtime:
-197.31 s
+All four are PROTECTED_IN_PLACE.
 
-Exit code:
-0
+## R1E0C-B design bundle
 
-All four CSTs were generated and fresh-reopened.
+Contract:
+docs/R1E0C_B_SCAN_SOLVE_CONTRACT.md
 
-Geometry/boundary/scan checks passed for every state.
+Solver config:
+source/cst/R1E0C_B_SCAN_SOLVER_CONFIG_V01.mcr
 
-Formal artifact hashes:
-- C30P45 e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2
-- C45P45 ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed
-- C60P45 94360ee2c40d4e5236b7b7a1fee79b46739da2aaec70054e4aa707a123853e01
-- C60P135 c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1
+Static audit:
+PASS_R1E0C_B_SCAN_SOLVER_STATIC_AUDIT
 
-HOLD reason:
-the harness treated Result/output.txt existence as solver execution.
+Harness:
+scripts/run_r1e0c_scan_solve_dc.py
 
-Read-only inspection already shows no solver markers and no solver-generated result-tree items.
+Runbook:
+em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E0C_B_SCAN_SOLVE.md
 
-## Current read-only qualifier
+## Solver-config invariants
 
-scripts/qualify_r1e0c_existing_scanstate_artifacts.py
+- Boundary commands = 0
+- geometry/material/port changes = 0
+- YZ postprocessor = 0
+- solver-start commands in config = 0
 
-Inputs:
-- work: D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01
-- evidence: evidence/r1e0c_dc_nw_20260924_recovery01/
+## Future solve discipline
 
-Qualifier checks:
-- artifact hashes;
-- build/reopen shape inventories;
-- periodic boundary and scan metadata;
-- persisted R1E0_scan_theta_deg/R1E0_scan_phi_deg parameters;
-- message log solver markers;
-- solver-generated result-tree items.
+One state per formal invocation.
+Fresh work/evidence per state.
+No silent retry.
 
-## Stop boundary
+Suggested order:
+C30P45 -> C45P45 -> C60P45 -> C60P135
 
-Read-only qualification only.
-No rebuild.
-No solver.
-No R1E0C-B execution.
-On PASS, close R1E0C-A and move to R1E0C-B DESIGN only.
+## Stop
+
+No scan solve is currently authorized.
+No pitch/material variation.
+No LNA integration.
+No CST251 production solve.

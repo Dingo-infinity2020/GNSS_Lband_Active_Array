@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=35
+HANDOFF_VERSION=36
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
-CURRENT_GATE=R1E0C-FIRST-SCAN-QUALIFICATION
-CURRENT_TASK_ID=R1E0C-A-R2-READONLY-QUALIFICATION
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_READONLY_QUALIFICATION
+CURRENT_GATE=R1E0C-FIRST-SCAN-SOLVE
+CURRENT_TASK_ID=R1E0C-B-DESIGN-SCAN-SOLVE
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -194,27 +194,59 @@ HOLD classification:
 
 CST created `Result\output.txt` as a message log containing parameter-history warnings. Read-only inspection found no solver execution markers and zero S-Parameter/Adaptive-Meshing/Power-Excitation result-tree items.
 
-## Current read-only qualification
+## R1E0C-A canonical closeout
 
-Qualifier:
-`scripts/qualify_r1e0c_existing_scanstate_artifacts.py`
+Read-only qualification:
+`PASS_R1E0C_SCANSTATE_BUILD_ONLY_READONLY_QUALIFICATION`
 
-Mode:
-READ ONLY
+Canonical stage conclusion:
+`PASS_R1E0C_SCANSTATE_BUILD_ONLY`
 
-Allowed:
-- verify the four artifact hashes;
-- verify build/reopen geometry and periodic metadata;
-- verify persisted scan parameter values;
-- inspect message logs for solver execution markers;
-- inspect result trees for solver-generated results;
-- write compact qualification evidence.
+Qualified artifact root:
+`D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01`
 
-Forbidden:
-- rebuild any CST;
-- modify any CST;
-- run any solver;
-- begin R1E0C-B scan solves.
+Immutable scan-state hashes:
+- C30P45: `e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2`
+- C45P45: `ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed`
+- C60P45: `94360ee2c40d4e5236b7b7a1fee79b46739da2aaec70054e4aa707a123853e01`
+- C60P135: `c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1`
+
+All four artifacts are PROTECTED_IN_PLACE and are the only authorized R1E0C-B scan inputs.
+
+Parameter-history warnings are preserved in evidence. They are accepted because project parameters and fresh-reopen Boundary scan metadata agree exactly, and no solver-generated results exist in the build artifacts.
+
+## Current R1E0C-B design
+
+Contract:
+`docs/R1E0C_B_SCAN_SOLVE_CONTRACT.md`
+
+Solver config:
+`source/cst/R1E0C_B_SCAN_SOLVER_CONFIG_V01.mcr`
+
+Static audit:
+`PASS_R1E0C_B_SCAN_SOLVER_STATIC_AUDIT`
+
+Harness:
+`scripts/run_r1e0c_scan_solve_dc.py`
+
+Runbook:
+`em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E0C_B_SCAN_SOLVE.md`
+
+Critical solver-config invariants:
+- Boundary commands = 0;
+- geometry/material/port changes = 0;
+- YZ-matrix postprocessor = 0;
+- solver-start commands inside config = 0.
+
+Each scan state must be a separate formal one-shot solve with fresh work/evidence.
+
+Suggested order:
+C30P45 -> C45P45 -> C60P45 -> C60P135.
+
+Current authorization:
+DESIGN ONLY.
 
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
+
+No scan solve may start until a separate R1E0C-B solver authorization is frozen.

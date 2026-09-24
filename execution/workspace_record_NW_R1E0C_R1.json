@@ -4,12 +4,12 @@
     "project": "GNSS_Lband_Active_Array",
     "task_id": "R1E0C-A-R1-RECOVERY-BUILD-ONLY-NW",
     "stage": "R1E0C_A_R1_RECOVERY_BUILD_ONLY",
-    "status": "HOLD_R1E0C_A_RECOVERY_NO_SOLVER_PREDICATE"
+    "status": "PASS_R1E0C_SCANSTATE_BUILD_ONLY"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01",
-    "state": "CHECKPOINTED"
+    "state": "PROTECTED"
   },
   "source": {
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
@@ -17,11 +17,10 @@
     "formal_source_commit": "cde5f8827d82473750c1a6e92510ac617d3835ab"
   },
   "result": {
-    "recovery_invocation_count": 1,
-    "exit_code": 0,
-    "runtime_seconds": 197.31,
+    "formal_status": "HOLD_R1E0C_A_RECOVERY_NO_SOLVER_PREDICATE",
+    "read_only_qualification": "PASS_R1E0C_SCANSTATE_BUILD_ONLY_READONLY_QUALIFICATION",
+    "canonical_status": "PASS_R1E0C_SCANSTATE_BUILD_ONLY",
     "solver_run": false,
-    "hold_classification": "NO_SOLVER_PREDICATE_FILE_EXISTENCE_MISMATCH",
     "artifact_hashes": {
       "C30P45": "e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2",
       "C45P45": "ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed",
@@ -39,7 +38,7 @@
     "purge_allowed": false
   },
   "closeout": {
-    "task_node": "recovery build HOLD / read-only qualification opened",
+    "task_node": "R1E0C-A PASS / immutable scan inputs protected",
     "handoff_written": true,
     "purge_allowed": false,
     "purged": false

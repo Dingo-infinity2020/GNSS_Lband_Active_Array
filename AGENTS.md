@@ -23,20 +23,18 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E0C-A-R2-READONLY-QUALIFICATION**
+Current task: **R1E0C-B-DESIGN-SCAN-SOLVE**
 
 Current permissions:
-- read the four existing R1E0C scan-state CST artifacts: YES
-- verify hashes, build/reopen evidence and persisted scan parameters: YES
-- inspect CST message logs/result trees read-only: YES
-- write compact qualification evidence: YES
-- rebuild any CST: NO
-- run any solver: NO
+- inspect the four qualified R1E0C-A scan-state CST artifacts: YES
+- design/audit the R1E0C-B one-state scan-solve bundle: YES
+- maintain the generic one-state solver harness and runbook: YES
+- run any scan solver: NO
 - modify pitch/material/geometry/feed: NO
 - LNA integration/CST251: NO
 
-R1E0C-A formal build history contains two preserved HOLD tickets.
-R1E0C-A-R2 is read-only qualification of the already built artifacts.
+R1E0C-A is closed PASS and its four CST inputs are PROTECTED_IN_PLACE.
+R1E0C-B remains DESIGN ONLY until a separate solver authorization is frozen.
 
 ## Architecture control
 

@@ -4,32 +4,26 @@
     "project": "GNSS_Lband_Active_Array",
     "task_id": "R1E0C-A-R2-READONLY-QUALIFICATION",
     "stage": "R1E0C_A_R2_READONLY_QUALIFICATION",
-    "status": "READY_FOR_READONLY_QUALIFICATION"
+    "status": "PASS_R1E0C_SCANSTATE_BUILD_ONLY_READONLY_QUALIFICATION"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "ACTIVE"
-  },
-  "source": {
-    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
-    "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AT_QUALIFICATION_PREFLIGHT",
-    "head_on_trusted_remote": false
+    "state": "CHECKPOINTED"
   },
   "qualification": {
     "mode": "READ_ONLY_EXISTING_ARTIFACT_QUALIFICATION",
     "cst_rebuild": false,
     "solver_run": false,
-    "qualifier": "scripts/qualify_r1e0c_existing_scanstate_artifacts.py"
+    "summary": "evidence/r1e0c_dc_nw_20260924_recovery01/read_only_qualification.json"
   },
   "archive": {
-    "mode": "CHECKPOINTED",
-    "completed": false,
+    "mode": "REFERENCE_ONLY",
+    "completed": true,
     "purge_allowed": false
   },
   "closeout": {
-    "task_node": "",
+    "task_node": "read-only qualification PASS / R1E0C-A closed",
     "handoff_written": true,
     "purge_allowed": false,
     "purged": false

@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E0C-A-R2 - read-only qualification of the built scan-state CST artifacts.**
+**R1E0C-B - first scan-dependent active-impedance solve DESIGN.**
 
 The isolated-element passive phase is closed.
 
@@ -62,7 +62,7 @@ This is why the LNA match is not frozen yet.
 
 ## Current execution
 
-The four R1E0C scan-state CSTs already exist. Current work is a **read-only qualification** of those artifacts; no rebuild or solver is authorized.
+R1E0C-A is closed PASS with four protected scan-state CSTs. Current work is **R1E0C-B scan-solve DESIGN ONLY**; no solver is authorized.
 
 Prepared scan states:
 - theta=30, phi=45
