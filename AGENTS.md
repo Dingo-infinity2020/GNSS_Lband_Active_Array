@@ -1,3 +1,5 @@
+[Reading 170 lines from start (total: 170 lines, 0 remaining)]
+
 [Reading 161 lines from start (total: 161 lines, 0 remaining)]
 
 [Reading 157 lines from start (total: 157 lines, 0 remaining)]
@@ -46,23 +48,25 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1A5F-DESIGN-SPLIT-SINGLE-PORT-FEED**
+Current task: **R1A5F-SPLIT-SINGLE-PORT-BUILD-ONLY-NW**
 
 Authoritative current execution state is defined by:
+- `PROJECT_MAINLINE.md`
 - `PROJECT_HANDOFF.md`
 - `docs/SIM_EXECUTION.md`
 - `execution/stage_contract.json`
 
 Current permissions:
-- inspect R1A5M2 converged evidence: YES
-- design/document split single-port production-passive feed models: YES
-- run any new CST build or solver: NO
-- modify geometry/materials: NO
+- copy the human-reviewed R1A3 CST into fresh A/B work artifacts: YES
+- add one generated differential DiscretePort to each copy: YES
+- save, close, fresh reopen and audit A/B: YES
+- run any CST solver: NO
+- modify radiator geometry/materials: NO
+- periodic/unit-cell solver work: NO
 - optimization/material A-B/production solve/CST251: NO
 
-R1A5M2 has closed PASS with native adaptive convergence.
-The crossed two-port model remains diagnostic-only for isolation.
-R1A5F is design-only until a new explicit build authorization is committed.
+This is M1 of the array-first mainline.
+R1A5F must stop after clean-feed build/fresh-reopen qualification.
 
 ## Architecture control
 
@@ -144,6 +148,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

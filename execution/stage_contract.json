@@ -6,43 +6,48 @@
   },
   "project": {
     "name": "GNSS_Lband_Active_Array",
-    "model_identity": "CHARTS_GNSS_R1A5F_SPLIT_SINGLE_PORT_DESIGN",
+    "mainline_authority": "PROJECT_MAINLINE.md",
+    "model_identity": "CHARTS_GNSS_R1A5F_SPLIT_SINGLE_PORT_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_AT_CLOSEOUT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_BUILD_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false,
+    "scope": "R1A5F_SPLIT_SINGLE_PORT_BUILD_ONLY",
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "r1a5m2_status": "PASS_R1A5M2_NATIVE_AND_ABSOLUTE_CONVERGED",
-    "r1a5m2_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5m2_maxpass8_work\\R1A5M2_ADAPTIVE_MAXPASS8_V01.cst",
-    "r1a5m2_cst_sha256": "1f904290293b49d4ad39d71cf3d3ddda86c81c2c202305e95f43b50ed477428e",
-    "r1a5m2_native_last_two_delta_s": [0.0173367,0.017589],
-    "r1a5m2_native_termination": "desired accuracy reached",
-    "r1a5m2_max_pol_asym_db": 0.013107094436062283,
-    "next_plan": "docs/R1A5F_SPLIT_SINGLE_PORT_FEED_PLAN.md",
-    "r1a5f_geometry_source_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa"
+    "plan": "docs/R1A5F_SPLIT_SINGLE_PORT_FEED_PLAN.md",
+    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work\\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst",
+    "source_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+    "manifest": "em/cst/R1_CHARTS_LBAND/parameters_r1a5f_single_ports.csv",
+    "generator": "scripts/generate_r1a5f_single_port_macros.py",
+    "static_audit": "PASS_R1A5F_STATIC_AUDIT",
+    "model_A": "Pol-A NE->SW, one 100 ohm differential port",
+    "model_B": "Pol-B NW->SE, exact Rz(+90deg) of A, one 100 ohm differential port",
+    "pass_gate": "PASS_R1A5F_SPLIT_SINGLE_PORT_BUILD_ONLY",
+    "stop_boundary": "fresh reopen and build-only audit; solver forbidden"
   },
   "execution": {
-    "current_stage": "DESIGN_R1A5F_SPLIT_SINGLE_PORT_FEED",
-    "last_completed_stage": "R1A5M2_MAXPASS8_ADAPTIVE_RECOVERY",
-    "last_status": "PASS_R1A5M2_NATIVE_AND_ABSOLUTE_CONVERGED",
+    "current_stage": "R1A5F_SPLIT_SINGLE_PORT_BUILD_ONLY",
+    "formal_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "r1a5m2_evidence": "evidence/r1a5m2_dc_nw_20260924_recovery01/",
+    "work": "D:\\GNSS_Lband_Active_Array\\_r1a5f_split_single_port_work",
+    "evidence": "evidence/r1a5f_dc_nw_20260924_build01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
-    "state": "CHECKPOINTED",
+    "record_path": "execution/workspace_record_NW_R1A5F.json",
+    "state": "ACTIVE",
     "purge_allowed": false
   }
 }
