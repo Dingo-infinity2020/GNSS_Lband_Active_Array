@@ -11,7 +11,7 @@
     "model_identity": "CHARTS_GNSS_R1A2_FEED_REFERENCE_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_AT_BUILD_PREFLIGHT"
+    "source_commit": "0e50f3de509e156bc70b8b7545168fb73ac48fac"
   },
   "toolchain": {
     "simulator": "CST Studio Suite",
@@ -46,13 +46,13 @@
     "stop_boundary": "fresh-reopen + rotational symmetry audit; solver forbidden"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": false
   },
   "execution": {
-    "current_stage": "BUILD_ONLY_R1A2",
-    "last_completed_stage": "BUILD_ONLY_R1A1",
-    "last_status": "READY_FOR_NW_BUILD_ONLY",
+    "current_stage": "DESIGN_R1A3_MATERIALIZATION",
+    "last_completed_stage": "BUILD_ONLY_R1A2",
+    "last_status": "PASS_R1A2_FEED_REFERENCE_BUILD_ONLY",
     "one_shot_required": true,
     "silent_retry_allowed": false,
     "fresh_run_directory_required": false,
@@ -63,28 +63,28 @@
     "build_artifact": "D:\\GNSS_Lband_Active_Array\\_r1a2_feed_reference_work\\R1A2_CHARTS_FEED_REFERENCE_BUILD_ONLY_V01.cst",
     "staging_artifact": "",
     "run_directory": "",
-    "qualification_output": "evidence/r1a2_dc_nw_<timestamp>/",
+    "qualification_output": "evidence/r1a2_dc_nw_20260924_1127/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "evidence": {
-    "source_sha256": "",
-    "build_sha256": "",
+    "source_sha256": "macro:314c41f1c247d7bd4a7bc5066d295d4c7487955d53e94c56d143c150cc4009ae",
+    "build_sha256": "a75f7c48e73f4461ceaedd5f0ebf1c4f118cd764843a98401cd8470444ca7193",
     "staging_sha256": "",
     "run_sha256": "",
-    "exact_invocation": "",
-    "status_classification": "READY_FOR_BUILD"
+    "exact_invocation": "NW/DC CST bundled Python 3.6 -> scripts/run_r1a2_build_only_dc.py; exact 90-degree Transform copies; no solver",
+    "status_classification": "PASS"
   },
   "exceptions": [],
   "workspace": {
     "host_alias": "NW",
     "working_path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
     "record_path": "execution/workspace_record_NW_R1A1.json",
-    "state": "ACTIVE",
+    "state": "CHECKPOINTED",
     "archive_mode": "REFERENCE_ONLY",
-    "archive_trigger": "R1A2 PASS/HOLD task node",
+    "archive_trigger": "R1A2 PASS; return to materialization design",
     "archive_destination": "remote Git + evidence; CST build artifact hash-recorded",
     "purge_allowed": false,
     "cleanup_completed": false,
-    "cleanup_evidence": ""
+    "cleanup_evidence": "R1A2 evidence committed at 7cace83d85eb55fe4a970ce2285abf15bad76d1e"
   }
 }
