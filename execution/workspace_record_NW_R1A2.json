@@ -36,11 +36,11 @@
   },
   "closeout": {
     "task_node": "R1A2 PASS",
-    "active_processes_checked": false,
+    "active_processes_checked": true,
     "downstream_dependency_checked": true,
     "handoff_written": true,
     "purge_allowed": true,
-    "purged": false,
-    "cleanup_evidence": "R1A2 build workdir is reproducible; compact evidence committed at 7cace83."
+    "purged": true,
+    "cleanup_evidence": "R1A2 evidence committed at 7cace83; D:\\GNSS_Lband_Active_Array\\_r1a2_feed_reference_work deleted and verified absent via DC after checkout sync."
   }
 }
