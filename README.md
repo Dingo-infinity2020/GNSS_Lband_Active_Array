@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E1A0-R2 - authorized 88/100-mm endpoint BUILD-ONLY proof on NW.**
+**R1E1A1 - six-pitch FR4 source-set DESIGN after R1E1A0 PASS.**
 
 The isolated-element passive phase is closed.
 
@@ -61,22 +61,22 @@ Therefore the pitch/material trade is now the current mainline, and the final LN
 
 R1E0C scan qualification is closed PASS.
 
-The first R1E1A0 P088/P100 endpoint proof is formally:
-`HOLD_R1E1A0_SOURCE_HISTORY_PARAMETER_DECLARATION`.
+R1E1A0 parameterization mechanism is now closed PASS after:
+- initial formal HOLD on historical `StoreParameter` semantics;
+- R1 pitch-ready canonical-source recovery PASS;
+- R2 88/100-mm endpoint proof PASS with no protected-parameter warnings.
 
-Both endpoint geometries and periodic metadata were correct; the sole failed predicate was the protected-parameter history warning inherited from the historical R1A3 source.
-
-R1E1A0-R1 result:
-`PASS_R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY`.
+Canonical status:
+`PASS_R1E1A0_PITCH_PARAMETERIZATION_MECHANISM`.
 
 Current work:
-**R1E1A0-R2 authorized 88/100-mm endpoint BUILD-ONLY proof**.
+**R1E1A1 six-pitch FR4 source-set DESIGN ONLY**.
 
-Source:
-`R1E1A0R1_POLA_PERIODIC_PITCH_READY_94MM_V01.cst`
+Pitch set:
+88 / 90 / 92 / 94 / 96 / 100 mm
 
 Current permissions:
-- BUILD_AUTHORIZED=YES_R1E1A0_R2_ENDPOINT_PROOF_ONLY
+- BUILD_AUTHORIZED=NO
 - SOLVER_PERMISSION=NO
 
 Read `PROJECT_HANDOFF.md` for the exact baton.

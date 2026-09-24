@@ -23,19 +23,18 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A0-R2-ENDPOINT-PROOF-BUILD-ONLY-NW**
+Current task: **R1E1-A1-DESIGN-SIX-PITCH-FR4-SOURCE-SET**
 
 Current permissions:
-- use the pitch-ready 94-mm canonical source as immutable input: YES
-- run exactly one R2 P088/P100 endpoint-proof BUILD-ONLY invocation on NW: YES
-- fresh-reopen endpoint qualification: YES
-- run any R1E1 solver: NO
+- inspect completed R1E1A0 PASS evidence: YES
+- design/audit the A1 six-pitch FR4 source-set bundle: YES
+- run A1 build: NO
+- run any R1E1B solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO
-- silent retry: NO
 
-R1E1A0-R1 is closed PASS.
-Only the R2 endpoint-proof build is authorized.
+R1E1A0 is closed PASS.
+R1E1A1 is DESIGN ONLY until its build ticket is frozen.
 
 ## Architecture control
 

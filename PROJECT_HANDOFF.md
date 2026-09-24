@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=50
+HANDOFF_VERSION=51
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
-CURRENT_TASK_ID=R1E1-A0-R2-ENDPOINT-PROOF-BUILD-ONLY-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_BUILD
+CURRENT_TASK_ID=R1E1-A1-DESIGN-SIX-PITCH-FR4-SOURCE-SET
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_R1E1A0_R2_ENDPOINT_PROOF_ONLY
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -518,10 +518,41 @@ The canonical source is PROTECTED_IN_PLACE.
 Evidence:
 `evidence/r1e1a0r1_dc_nw_20260924_build01/`
 
-## Current R1E1A0-R2 endpoint-proof BUILD-ONLY authorization
+## R1E1A0-R2 closed stage
+
+Status:
+`PASS_R1E1A0R2_PITCH_PARAMETERIZATION_BUILD_ONLY`
+
+Canonical R1E1A0 status:
+`PASS_R1E1A0_PITCH_PARAMETERIZATION_MECHANISM`
+
+Formal source commit:
+`063d3b467c5b149e1a818daf0a0e585a1ea1b5c9`
+
+Formal invocation count:
+1
+
+Runtime:
+91.57 s
+
+Solver:
+NOT RUN
+
+P088 SHA256:
+`089fdcfd7a2339a3504b8fb3b9542a586265549773e7c13ac4b20ef483e37b3a`
+
+P100 SHA256:
+`8ffd74b176ad2f139770afbb5aa2201ae60e1a4f0e1fb38cf05a2254966e5a03`
+
+Both endpoints passed pitch persistence, periodic span, non-ground geometry invariance, fresh reopen and zero protected-parameter warning.
+
+Evidence:
+`evidence/r1e1a0r2_dc_nw_20260924_build01/`
+
+## Current R1E1A1 design
 
 Task:
-`R1E1-A0-R2-ENDPOINT-PROOF-BUILD-ONLY-NW`
+`R1E1-A1-DESIGN-SIX-PITCH-FR4-SOURCE-SET`
 
 Source:
 `D:\GNSS_Lband_Active_Array\_r1e1a0r1_pitch_ready_source_work\R1E1A0R1_POLA_PERIODIC_PITCH_READY_94MM_V01.cst`
@@ -529,38 +560,22 @@ Source:
 Source SHA256:
 `585929d5bf9cbf46c4a6d0ae40b42baa8e2efff673f79c1026dcff33cb014fc2`
 
-Harness SHA256:
-`08d71066a7038518a398adbb153d5450ab04cd2e3c30d4991aeb67ed3f644be5`
+Pitch set:
+88, 90, 92, 94, 96, 100 mm.
 
-Audit SHA256:
-`a3b2e772366213d90c9ddb40605cf9cdbf3417dc4c954044cd1851dcd5c38423`
+Static audit:
+`PASS_R1E1A1_STATIC_AUDIT`
 
-Contract SHA256:
-`830913f53c70d6a7d3a7c133a2b8318c4ea4d72d5f52478a15308307fbcf5b41`
+Contract:
+`docs/R1E1A1_SIX_PITCH_FR4_SOURCE_SET_CONTRACT.md`
 
-Runbook SHA256:
-`db5e1bf784002510e1ada6dfca2c47df4aebe673de247125e8808dba4443e56f`
+Runbook:
+`em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A1_SIX_PITCH_FR4_BUILD_ONLY.md`
 
-Endpoints:
-- P088 = 88 mm;
-- P100 = 100 mm.
-
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1e1a0r2_pitch_endpoint_work`
-
-Fresh evidence:
-`evidence/r1e1a0r2_dc_nw_20260924_build01/`
-
-Formal invocation count:
-1
-
-Silent retry:
-NO
-
-BUILD_AUTHORIZED=YES_R1E1A0_R2_ENDPOINT_PROOF_ONLY
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
 
-This ticket ends after endpoint qualification.
-No solver is implied or authorized.
+A1 source-set build requires a separate BUILD-ONLY ticket.
+No R1E1B solver is authorized.
