@@ -3,7 +3,6 @@
 No ports, monitors or solver. Produces build/reopen evidence only.
 """
 
-from __future__ import annotations
 import argparse, hashlib, json, os, sys
 
 LIBS = r"D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python_cst_libraries"
