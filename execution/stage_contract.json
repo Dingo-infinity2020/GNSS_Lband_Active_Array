@@ -7,14 +7,15 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "mainline_authority": "PROJECT_MAINLINE.md",
-    "model_identity": "CHARTS_GNSS_R1E0C_B_SCAN_SOLVE_DESIGN",
+    "model_identity": "CHARTS_GNSS_R1E0C_B_C30P45_SCAN_SOLVE",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_AT_CLOSEOUT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": true,
+    "scope": "R1E0C_B_C30P45_ONLY",
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
@@ -22,52 +23,34 @@
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "r1e0c_a_status": "PASS_R1E0C_SCANSTATE_BUILD_ONLY",
-    "scan_artifact_root": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01",
-    "scan_artifacts": {
-      "C30P45": {
-        "theta_deg": 30,
-        "phi_deg": 45,
-        "sha256": "e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2"
-      },
-      "C45P45": {
-        "theta_deg": 45,
-        "phi_deg": 45,
-        "sha256": "ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed"
-      },
-      "C60P45": {
-        "theta_deg": 60,
-        "phi_deg": 45,
-        "sha256": "94360ee2c40d4e5236b7b7a1fee79b46739da2aaec70054e4aa707a123853e01"
-      },
-      "C60P135": {
-        "theta_deg": 60,
-        "phi_deg": 135,
-        "sha256": "c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1"
-      }
-    },
+    "state": "C30P45",
+    "theta_deg": 30,
+    "phi_deg": 45,
+    "direction": "outward",
+    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01\\R1E0C_C30P45_SCANSTATE_BUILD_ONLY_V01.cst",
+    "source_sha256": "e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2",
     "contract": "docs/R1E0C_B_SCAN_SOLVE_CONTRACT.md",
     "solver_config": "source/cst/R1E0C_B_SCAN_SOLVER_CONFIG_V01.mcr",
     "static_audit": "PASS_R1E0C_B_SCAN_SOLVER_STATIC_AUDIT",
     "harness": "scripts/run_r1e0c_scan_solve_dc.py",
-    "solve_semantics": "one state per formal one-shot invocation",
-    "next_execution_contract": "NOT_AUTHORIZED"
+    "pass_gate": "PASS_R1E0C_B_C30P45_SCAN_SOLVE",
+    "stop_boundary": "one C30P45 solve then return to design"
   },
   "execution": {
-    "current_stage": "DESIGN_R1E0C_B_SCAN_SOLVE",
-    "last_completed_stage": "R1E0C_A_SCANSTATE_BUILD_ONLY",
-    "last_status": "PASS_R1E0C_SCANSTATE_BUILD_ONLY",
+    "current_stage": "R1E0C_B_C30P45_SCAN_SOLVE",
+    "formal_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "r1e0c_a_evidence": "evidence/r1e0c_dc_nw_20260924_recovery01/",
+    "work": "D:\\GNSS_Lband_Active_Array\\_r1e0c_b_c30p45_scan_solve_work",
+    "evidence": "evidence/r1e0c_b_c30p45_dc_nw_20260924_solve01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1E0C_B.json",
-    "state": "CHECKPOINTED",
+    "record_path": "execution/workspace_record_NW_R1E0C_B_C30P45.json",
+    "state": "ACTIVE",
     "purge_allowed": false
   }
 }
