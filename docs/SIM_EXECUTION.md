@@ -7,9 +7,9 @@
 
 ## Current stage
 
-R1E0C_A_R1_RECOVERY_BUILD_ONLY
+R1E0C_A_R2_READONLY_QUALIFICATION
 
-BUILD_AUTHORIZED: true
+BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 
@@ -24,51 +24,55 @@ Source commit:
 Runtime:
 24.23 s
 
+## Recovery R1E0C-A-R1 invocation
+
+Status:
+HOLD_R1E0C_A_RECOVERY_NO_SOLVER_PREDICATE
+
+Source commit:
+cde5f8827d82473750c1a6e92510ac617d3835ab
+
+Runtime:
+197.31 s
+
 Exit code:
-1
+0
 
-Failure:
-macro filename was not formatted with the state id before file open.
+All four CSTs were generated and fresh-reopened.
 
-No scan metadata was applied.
-No solver ran.
+Geometry/boundary/scan checks passed for every state.
 
-## Recovery fix
+Formal artifact hashes:
+- C30P45 e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2
+- C45P45 ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed
+- C60P45 94360ee2c40d4e5236b7b7a1fee79b46739da2aaec70054e4aa707a123853e01
+- C60P135 c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1
 
-- macro path now formats `% state`;
-- all four macro files are checked before any recovery work/evidence directory is created.
+HOLD reason:
+the harness treated Result/output.txt existence as solver execution.
 
-## Immutable source
+Read-only inspection already shows no solver markers and no solver-generated result-tree items.
 
-D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst
+## Current read-only qualifier
 
-SHA256:
-48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223
+scripts/qualify_r1e0c_existing_scanstate_artifacts.py
 
-## Recovery states
+Inputs:
+- work: D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01
+- evidence: evidence/r1e0c_dc_nw_20260924_recovery01/
 
-- C30P45: theta=30 deg, phi=45 deg
-- C45P45: theta=45 deg, phi=45 deg
-- C60P45: theta=60 deg, phi=45 deg
-- C60P135: theta=60 deg, phi=135 deg
-
-Direction:
-outward
-
-## Fresh recovery paths
-
-Work:
-D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01
-
-Evidence:
-evidence/r1e0c_dc_nw_20260924_recovery01/
+Qualifier checks:
+- artifact hashes;
+- build/reopen shape inventories;
+- periodic boundary and scan metadata;
+- persisted R1E0_scan_theta_deg/R1E0_scan_phi_deg parameters;
+- message log solver markers;
+- solver-generated result-tree items.
 
 ## Stop boundary
 
-Exactly one recovery build-only invocation.
-Any state failure => HOLD.
-No silent retry.
-No R1E0C-B solver.
-No pitch/material variation.
-No LNA integration.
-No CST251 staging.
+Read-only qualification only.
+No rebuild.
+No solver.
+No R1E0C-B execution.
+On PASS, close R1E0C-A and move to R1E0C-B DESIGN only.

@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E0C-A-R1 - authorized recovery scan-state BUILD-ONLY on NW.**
+**R1E0C-A-R2 - read-only qualification of the built scan-state CST artifacts.**
 
 The isolated-element passive phase is closed.
 
@@ -62,7 +62,7 @@ This is why the LNA match is not frozen yet.
 
 ## Current execution
 
-The original R1E0C-A invocation is preserved as a pre-build harness HOLD. R1E0C-A-R1 is **authorized for one fresh NW recovery build-only invocation**.
+The four R1E0C scan-state CSTs already exist. Current work is a **read-only qualification** of those artifacts; no rebuild or solver is authorized.
 
 Prepared scan states:
 - theta=30, phi=45
@@ -71,7 +71,7 @@ Prepared scan states:
 - theta=60, phi=135
 
 Current permissions:
-- BUILD_AUTHORIZED=YES_R1E0C_A_RECOVERY_ONLY
+- BUILD_AUTHORIZED=NO
 - SOLVER_PERMISSION=NO
 
 Read `PROJECT_HANDOFF.md` for the exact baton.

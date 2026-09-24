@@ -4,31 +4,42 @@
     "project": "GNSS_Lband_Active_Array",
     "task_id": "R1E0C-A-R1-RECOVERY-BUILD-ONLY-NW",
     "stage": "R1E0C_A_R1_RECOVERY_BUILD_ONLY",
-    "status": "READY_FOR_RECOVERY_BUILD"
+    "status": "HOLD_R1E0C_A_RECOVERY_NO_SOLVER_PREDICATE"
   },
   "workspace": {
     "host_alias": "NW",
-    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "ACTIVE"
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01",
+    "state": "CHECKPOINTED"
   },
   "source": {
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AT_RECOVERY_PREFLIGHT",
-    "head_on_trusted_remote": false
+    "formal_source_commit": "cde5f8827d82473750c1a6e92510ac617d3835ab"
   },
-  "execution": {
-    "mode": "ONE_SHOT_RECOVERY_BUILD_ONLY",
-    "recovery_invocation_count": 0,
-    "silent_retry_allowed": false
+  "result": {
+    "recovery_invocation_count": 1,
+    "exit_code": 0,
+    "runtime_seconds": 197.31,
+    "solver_run": false,
+    "hold_classification": "NO_SOLVER_PREDICATE_FILE_EXISTENCE_MISMATCH",
+    "artifact_hashes": {
+      "C30P45": "e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2",
+      "C45P45": "ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed",
+      "C60P45": "94360ee2c40d4e5236b7b7a1fee79b46739da2aaec70054e4aa707a123853e01",
+      "C60P135": "c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1"
+    }
   },
   "archive": {
-    "mode": "CHECKPOINTED",
-    "completed": false,
+    "mode": "PROTECTED_IN_PLACE",
+    "critical_artifacts": [
+      "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01",
+      "evidence/r1e0c_dc_nw_20260924_recovery01/"
+    ],
+    "completed": true,
     "purge_allowed": false
   },
   "closeout": {
-    "task_node": "",
+    "task_node": "recovery build HOLD / read-only qualification opened",
     "handoff_written": true,
     "purge_allowed": false,
     "purged": false

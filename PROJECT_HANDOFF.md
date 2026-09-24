@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=34
+HANDOFF_VERSION=35
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E0C-FIRST-SCAN-QUALIFICATION
-CURRENT_TASK_ID=R1E0C-A-R1-RECOVERY-BUILD-ONLY-NW
+CURRENT_TASK_ID=R1E0C-A-R2-READONLY-QUALIFICATION
 TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_RECOVERY_BUILD
+TASK_STATUS=READY_FOR_READONLY_QUALIFICATION
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_R1E0C_A_RECOVERY_ONLY
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -164,26 +164,57 @@ pre-build harness path-format bug; no scan metadata applied and no solver run.
 
 Original failed work/evidence are preserved and are not reused.
 
-## Current recovery authorization
+## R1E0C-A-R1 recovery invocation
 
-R1E0C-A-R1 recovery BUILD-ONLY is authorized for one fresh NW invocation.
+Status:
+`HOLD_R1E0C_A_RECOVERY_NO_SOLVER_PREDICATE`
 
-Recovery fix:
-- format the scan-state macro filename with the actual state id;
-- preflight all four macro files before creating recovery execution directories.
+Source commit:
+`cde5f8827d82473750c1a6e92510ac617d3835ab`
 
-Fresh recovery work path:
-`D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01`
-
-Fresh recovery evidence path:
-`evidence/r1e0c_dc_nw_20260924_recovery01/`
-
-Recovery invocation count:
+Invocation count:
 1
 
-Silent retry:
-NO
+Exit code:
+0
 
-SOLVER_PERMISSION remains NO.
+Runtime:
+197.31 s
 
-R1E0C-B scan solves still require a separate later solver authorization.
+All four scan-state CSTs were generated, fresh-reopened, and passed geometry/boundary/scan metadata checks.
+
+Formal artifact hashes:
+- C30P45: `e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2`
+- C45P45: `ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed`
+- C60P45: `94360ee2c40d4e5236b7b7a1fee79b46739da2aaec70054e4aa707a123853e01`
+- C60P135: `c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1`
+
+HOLD classification:
+`NO_SOLVER_PREDICATE_FILE_EXISTENCE_MISMATCH`
+
+CST created `Result\output.txt` as a message log containing parameter-history warnings. Read-only inspection found no solver execution markers and zero S-Parameter/Adaptive-Meshing/Power-Excitation result-tree items.
+
+## Current read-only qualification
+
+Qualifier:
+`scripts/qualify_r1e0c_existing_scanstate_artifacts.py`
+
+Mode:
+READ ONLY
+
+Allowed:
+- verify the four artifact hashes;
+- verify build/reopen geometry and periodic metadata;
+- verify persisted scan parameter values;
+- inspect message logs for solver execution markers;
+- inspect result trees for solver-generated results;
+- write compact qualification evidence.
+
+Forbidden:
+- rebuild any CST;
+- modify any CST;
+- run any solver;
+- begin R1E0C-B scan solves.
+
+BUILD_AUTHORIZED=NO
+SOLVER_PERMISSION=NO

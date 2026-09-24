@@ -23,21 +23,20 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E0C-A-R1-RECOVERY-BUILD-ONLY-NW**
+Current task: **R1E0C-A-R2-READONLY-QUALIFICATION**
 
 Current permissions:
-- preserve the original R1E0C-A HOLD evidence/workspace: YES
-- use a fresh recovery work/evidence path: YES
-- run exactly one R1E0C-A-R1 recovery BUILD-ONLY task on NW: YES
-- save/fresh-reopen/hash/audit all four scan-state CSTs: YES
-- run any scan solver: NO
+- read the four existing R1E0C scan-state CST artifacts: YES
+- verify hashes, build/reopen evidence and persisted scan parameters: YES
+- inspect CST message logs/result trees read-only: YES
+- write compact qualification evidence: YES
+- rebuild any CST: NO
+- run any solver: NO
 - modify pitch/material/geometry/feed: NO
-- LNA integration: NO
-- CST251 production solve: NO
-- silent retry: NO
+- LNA integration/CST251: NO
 
-The original formal R1E0C-A invocation is HOLD due to a pre-build harness path-format bug.
-R1E0C-A-R1 is a separately frozen recovery build-only ticket.
+R1E0C-A formal build history contains two preserved HOLD tickets.
+R1E0C-A-R2 is read-only qualification of the already built artifacts.
 
 ## Architecture control
 

@@ -92,6 +92,22 @@ def boolish(v):
 def close(a,b,tol=1e-9):
     return abs(a-b)<=tol
 
+def solver_execution_detected(cstfile):
+    stem=os.path.splitext(cstfile)[0]
+    p=os.path.join(stem,"Result","output.txt")
+    if not os.path.isfile(p):
+        return False
+    text=open(p,encoding="utf-8",errors="ignore").read().lower()
+    markers=(
+      "meshing successful",
+      "adaptive mesh refinement pass",
+      "mesh adaptation sample",
+      "excitation: port",
+      "all broadband sweep convergence criteria",
+      "running solver",
+    )
+    return any(m in text for m in markers)
+
 def check_status(st,theta,phi):
     xspan=float(st["STRUCTURE_XMAX"])-float(st["STRUCTURE_XMIN"])
     yspan=float(st["STRUCTURE_YMAX"])-float(st["STRUCTURE_YMIN"])
@@ -149,8 +165,7 @@ def run_one(repo,evidence,work,source,state,theta,phi,source_shapes):
     bs=shape_lines(bshape); rs=shape_lines(rshape)
     bst=parse_status(bstatus); rst=parse_status(rstatus)
     bc=check_status(bst,theta,phi); rc=check_status(rst,theta,phi)
-    stem=os.path.splitext(dst)[0]
-    output_exists=os.path.isfile(os.path.join(stem,"Result","output.txt"))
+    solver_detected=solver_execution_detected(dst)
     checks={
       "pre_copy_hash_match":pre_sha==SOURCE_SHA,
       "build_geometry_unchanged":bs==source_shapes,
@@ -158,7 +173,7 @@ def run_one(repo,evidence,work,source,state,theta,phi,source_shapes):
       "build_status_pass":all(bc.values()),
       "reopen_status_pass":all(rc.values()),
       "build_reopen_status_identical":bst==rst,
-      "no_solver_output":not output_exists,
+      "no_solver_execution_detected":not solver_detected,
     }
     checks["pass"]=all(checks.values())
     return {

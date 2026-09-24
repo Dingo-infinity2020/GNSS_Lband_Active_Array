@@ -7,15 +7,15 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "mainline_authority": "PROJECT_MAINLINE.md",
-    "model_identity": "CHARTS_GNSS_R1E0C_A_RECOVERY_BUILD_ONLY",
+    "model_identity": "CHARTS_GNSS_R1E0C_A_READONLY_QUALIFICATION",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_RECOVERY_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_QUALIFICATION_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": false,
-    "scope": "R1E0C_A_R1_RECOVERY_BUILD_ONLY_ONLY",
+    "scope": "R1E0C_A_R2_READONLY_QUALIFICATION_ONLY",
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
@@ -24,53 +24,36 @@
   },
   "scientific_freeze": {
     "original_formal_status": "HOLD_R1E0C_A_HARNESS_MACRO_PATH_FORMAT",
-    "original_source_commit": "746b34d35e6ae4ee948a6fc510bc6c072584e654",
-    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst",
-    "source_sha256": "48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223",
-    "scan_states": [
-      {
-        "id": "C30P45",
-        "theta_deg": 30,
-        "phi_deg": 45
-      },
-      {
-        "id": "C45P45",
-        "theta_deg": 45,
-        "phi_deg": 45
-      },
-      {
-        "id": "C60P45",
-        "theta_deg": 60,
-        "phi_deg": 45
-      },
-      {
-        "id": "C60P135",
-        "theta_deg": 60,
-        "phi_deg": 135
-      }
-    ],
-    "direction": "outward",
-    "harness_fix": "format macro path with state id and preflight all macro files",
-    "pass_gate": "PASS_R1E0C_SCANSTATE_BUILD_ONLY",
-    "stop_boundary": "fresh four-state recovery build/fresh-reopen qualification only; solver forbidden"
+    "recovery_formal_status": "HOLD_R1E0C_A_RECOVERY_NO_SOLVER_PREDICATE",
+    "hold_classification": "NO_SOLVER_PREDICATE_FILE_EXISTENCE_MISMATCH",
+    "qualifier": "scripts/qualify_r1e0c_existing_scanstate_artifacts.py",
+    "recovery_work": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01",
+    "recovery_evidence": "evidence/r1e0c_dc_nw_20260924_recovery01/",
+    "expected_artifacts": {
+      "C30P45": "e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2",
+      "C45P45": "ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed",
+      "C60P45": "94360ee2c40d4e5236b7b7a1fee79b46739da2aaec70054e4aa707a123853e01",
+      "C60P135": "c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1"
+    },
+    "pass_gate": "PASS_R1E0C_SCANSTATE_BUILD_ONLY_READONLY_QUALIFICATION",
+    "stop_boundary": "read-only qualification; then return to design"
   },
   "execution": {
-    "current_stage": "R1E0C_A_R1_RECOVERY_BUILD_ONLY",
+    "current_stage": "R1E0C_A_R2_READONLY_QUALIFICATION",
     "original_formal_invocation_count": 1,
-    "recovery_invocation_count": 0,
+    "recovery_build_invocation_count": 1,
+    "read_only_qualification_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "original_failed_work": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_work",
     "original_failed_evidence": "evidence/r1e0c_dc_nw_20260924_build01/",
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01",
-    "evidence": "evidence/r1e0c_dc_nw_20260924_recovery01/",
+    "recovery_evidence": "evidence/r1e0c_dc_nw_20260924_recovery01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1E0C_R1.json",
+    "record_path": "execution/workspace_record_NW_R1E0C_R2.json",
     "state": "ACTIVE",
     "purge_allowed": false
   }
