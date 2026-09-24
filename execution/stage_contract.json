@@ -6,58 +6,41 @@
   },
   "project": {
     "name": "GNSS_Lband_Active_Array",
-    "model_identity": "CHARTS_GNSS_R1A5M_ADAPTIVE_SECOND_ORDER_V01",
+    "model_identity": "CHARTS_GNSS_R1A5M2_RECOVERY_DESIGN",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
+    "source_commit": "RESOLVE_AT_CLOSEOUT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
-    "SOLVE_AUTHORIZED": true,
-    "scope": "R1A5M_ADAPTIVE_CONVERGENCE_ONLY",
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "contract": "docs/R1A5M_ADAPTIVE_MESH_CONVERGENCE_CONTRACT.md",
-    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1a4_differential_ports_work\\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst",
-    "source_sha256": "4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
-    "solver_config": "source/cst/R1A5M_ADAPTIVE_SECOND_ORDER_CONFIG_V01.mcr",
-    "static_audit": "PASS_R1A5M_STATIC_AUDIT",
-    "baseline_csv": "evidence/r1a5r_dc_nw_20260924_second01/sparameters_and_zin.csv",
-    "solver": "HF Frequency Domain",
-    "mesh": "tetrahedral second order adaptive; curvature order 3; general purpose",
-    "adaptation": {
-      "type": "HighFrequencyTet",
-      "strategy": "ExpertSystem",
-      "min_passes": 3,
-      "max_passes": 6,
-      "max_delta_s": 0.02,
-      "number_of_delta_s_checks": 2,
-      "linear_growth_limitation": 40
-    },
-    "frequency_range_ghz": [1.0,1.8],
-    "science_compare_band_ghz": [1.15,1.65],
-    "pass_gate": "PASS_R1A5M_ABSOLUTE_MESH_CONVERGED",
-    "stop_boundary": "one adaptive run then return to design"
+    "r1a5m_status": "HOLD_R1A5M_ADAPTIVE_NOT_CONVERGED",
+    "r1a5m_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5m_adaptive_work\\R1A5M_ADAPTIVE_SECOND_ORDER_V01.cst",
+    "r1a5m_cst_sha256": "67b44e77aa88709287caf194c8e89cc2535951e1fab66b7c679df9e398a62c9b",
+    "native_delta_s": [0.0673917,0.0497934,0.0274924,0.0203932,0.0173369],
+    "native_termination": "maximum number of passes reached",
+    "proposed_recovery": "MaxPasses 6 -> 8 only"
   },
   "execution": {
-    "current_stage": "R1A5M_ADAPTIVE_ABSOLUTE_MESH_CONVERGENCE",
-    "formal_invocation_count": 0,
+    "current_stage": "DESIGN_R1A5M2_MAXPASS_EXTENSION",
+    "last_completed_stage": "R1A5M_ADAPTIVE_ABSOLUTE_MESH_CONVERGENCE",
+    "last_status": "HOLD_R1A5M_ADAPTIVE_NOT_CONVERGED",
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1a5m_adaptive_work",
-    "evidence": "evidence/r1a5m_dc_nw_20260924_adapt01/",
+    "r1a5m_evidence": "evidence/r1a5m_dc_nw_20260924_adapt01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1A5M.json",
-    "state": "ACTIVE",
+    "state": "CHECKPOINTED",
     "purge_allowed": false
   }
 }

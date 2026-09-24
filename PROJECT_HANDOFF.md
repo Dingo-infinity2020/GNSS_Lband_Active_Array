@@ -3,115 +3,87 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=18
+HANDOFF_VERSION=19
 CANONICAL_BRANCH=project/r0-charts-scaffold
-CURRENT_GATE=R1A5M-ABSOLUTE-MESH-CONVERGENCE
-CURRENT_TASK_ID=R1A5M-ADAPTIVE-SECOND-ORDER-SOLVE-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_SOLVE
+CURRENT_GATE=R1A5M2-ADAPTIVE-CONVERGENCE-RECOVERY
+CURRENT_TASK_ID=R1A5M2-DESIGN-MAXPASS-EXTENSION
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_COPY_AND_CONFIG_ONLY
-SOLVER_PERMISSION=YES_R1A5M_ONLY
+BUILD_AUTHORIZED=NO
+SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## Background
+## R1A5M result
 
-R1A5 first-order diagnostic smoke:
-- solver completed;
-- symmetry gate HOLD at 1.504 dB max S11/S22 difference.
+Final status:
+`HOLD_R1A5M_ADAPTIVE_NOT_CONVERGED`
 
-R1A5R second-order:
-- PASS_R1A5R_SYMMETRY_CONVERGED;
-- max S11/S22 difference reduced to 0.558 dB;
-- reciprocity PASS;
-- absolute first-vs-second S-parameter agreement still insufficient.
+Formal source:
+`1563c64bc55b9c72e23b61d7be110d334a34cf71`
 
-Therefore R1A5M fixes the second-order formulation and tests native h-refinement convergence.
+R1A5M CST:
+`D:\GNSS_Lband_Active_Array\_r1a5m_adaptive_work\R1A5M_ADAPTIVE_SECOND_ORDER_V01.cst`
 
-## Immutable physical source
+SHA256:
+`67b44e77aa88709287caf194c8e89cc2535951e1fab66b7c679df9e398a62c9b`
 
-R1A4 CST:
-`D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst`
+Solver/runtime:
+- exit 0
+- runtime 81.54 s
+- S-parameter results complete
+- geometry/ports/provenance PASS
+- Pol-A/B max asymmetry 0.179711978 dB
+- reciprocity PASS
 
-Required SHA256:
-`4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364`
+## Native adaptation sequence
 
-## R1A5M frozen contract
-
-Contract:
-`docs/R1A5M_ADAPTIVE_MESH_CONVERGENCE_CONTRACT.md`
-
-Config:
-`source/cst/R1A5M_ADAPTIVE_SECOND_ORDER_CONFIG_V01.mcr`
-
-Harness:
-`scripts/run_r1a5m_adaptive_convergence_dc.py`
-
-Static audit:
-`PASS_R1A5M_STATIC_AUDIT`
-
-Fixed:
-- HF Frequency Domain
-- second-order tetrahedral
-- curvature order 3
-- General purpose method
-- 1.0–1.8 GHz
-- open all six boundaries
-- 50 mm background all directions
-- unchanged geometry/materials/ports
-
-Adaptive settings:
-- HighFrequencyTet
-- ExpertSystem
+Configured:
 - MinPasses 3
 - MaxPasses 6
 - MaxDeltaS 0.02
 - NumberOfDeltaSChecks 2
-- LinearGrowthLimitation 40
-- FDSolver.MeshAdaptionTet=True
 
-## Baseline comparison
+Observed:
+- pass 2: 0.0673917
+- pass 3: 0.0497934
+- pass 4: 0.0274924
+- pass 5: 0.0203932
+- pass 6: 0.0173369
 
-R1A5R compact baseline:
-`evidence/r1a5r_dc_nw_20260924_second01/sparameters_and_zin.csv`
+CST termination:
+`Mesh adaptation terminated because the maximum number of passes is reached.`
 
-External convergence gate over 1.15–1.65 GHz:
-- max complex delta S11 <= 0.05
-- max complex delta S22 <= 0.05
-- final max |S11_dB-S22_dB| <= 1.0 dB
-- reciprocity <= 1e-3
+Interpretation:
+- monotonic convergence trend;
+- pass 6 is below threshold;
+- pass 5 is slightly above;
+- required two consecutive below-threshold checks were not achieved before MaxPasses=6.
 
-## Authorized execution
+## Recovery direction
 
-Host:
-NW / DESKTOP-GBTI6Q4
+R1A5M2 is DESIGN only.
 
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1a5m_adaptive_work`
+Allowed scientific change:
+increase MaxPasses from 6 to 8.
 
-Fresh evidence:
-`evidence/r1a5m_dc_nw_20260924_adapt01/`
+Everything else must remain identical:
+- physical model
+- materials
+- ports
+- second-order basis
+- curvature order 3
+- General purpose tetra method
+- ExpertSystem adaptive strategy
+- MaxDeltaS 0.02
+- NumberOfDeltaSChecks 2
+- 1.0–1.8 GHz
+- boundary/background
 
-Expected CST:
-`D:\GNSS_Lband_Active_Array\_r1a5m_adaptive_work\R1A5M_ADAPTIVE_SECOND_ORDER_V01.cst`
+R1A5M2 must use fresh work/evidence and a new explicit solver authorization.
 
-Formal invocation:
-exactly one.
-
-Silent retry:
-NO.
-
-## Stop boundary
-
-After this adaptive convergence qualification:
-- return to DESIGN;
-- no automatic second adaptive run;
-- no material A/B;
-- no geometry optimization;
-- no CST251 staging.
-
-If the adaptive run becomes unexpectedly heavy, classify HOLD and stop rather than silently migrating hosts.
+No solver is currently authorized.
