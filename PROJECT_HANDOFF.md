@@ -8,7 +8,7 @@
 HANDOFF_VERSION=5
 CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R1-CHARTS-GNSS-DERIVATIVE
-CURRENT_TASK_ID=R1A1-SCALED-APERTURE-BUILD-ONLY-DC-NW
+CURRENT_TASK_ID=R1A1-RECOVERY-CSTPY-BUILD-ONLY-DC-NW
 TASK_OWNER=DESIGN_DC
 TASK_STATUS=EXECUTION_READY
 SIMULATIONOPS_PROTOCOL=0.2.4
@@ -145,3 +145,34 @@ Pre-execution repository HEAD before this handoff update:
 `d1176b310affc9968b3c78f66926258f2345a00d`
 
 DC must record the actual pulled HEAD at preflight and use that as the source identity.
+
+
+## 8. Recovery note — 2026-09-24
+
+Attempt 1 is preserved as:
+- `HOLD_ENVIRONMENT`
+- `evidence/r1a1_dc_nw_20260924_1111/`
+
+The successor task is explicitly authorized:
+
+`R1A1-RECOVERY-CSTPY-BUILD-ONLY-DC-NW`
+
+Execution interpreter:
+`D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\python.exe`
+
+Reason:
+- Python 3.6.0
+- `import cst, cst.interface` verified
+- no scientific/model changes
+
+See:
+`docs/RECOVERY_R1A1_NW_CST_PYTHON_20260924.md`
+
+Still forbidden:
+- solver
+- ports
+- feed
+- substrate/materialization
+- LNA
+- optimization
+- staging to CST251
