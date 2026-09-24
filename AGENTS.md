@@ -1,3 +1,5 @@
+[Reading 120 lines from start (total: 120 lines, 0 remaining)]
+
 # Agent Instructions
 
 This repository is a staged scientific hardware project.
@@ -19,7 +21,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1A3-MATERIALIZED-FR4-BUILD-ONLY-DC-NW**
+Current task: **R1A4-DIFFERENTIAL-PORT-BUILD-ONLY-DC-NW**
 
 Authoritative current execution state is defined by:
 - `PROJECT_HANDOFF.md`
@@ -27,18 +29,18 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- R1A3 literature/provenance/manifest work: YES
-- frozen R1A1 scale reuse: YES
-- R1A3 NW CST BUILD_ONLY: YES
-- canonical CST artifact retention for human review: REQUIRED
+- immutable R1A3 geometry reuse: YES
+- R1A4 port-only CST BUILD_ONLY on NW: YES
+- modify R1A3 reviewed source artifact: NO
+- geometry creation/Boolean changes in R1A4 port macro: NO
 - CST solver: NO
 - optimization: NO
 - LNA integration: NO
 - CST251 staging: NO
 - hardware release: NO
 
-R0 is closed source-limited; R1A1 and R1A2 build-only gates have passed.
-R1A3 must stop after fresh reopen and preservation of the canonical CST artifact for explicit human review.
+R1A1, R1A2, and R1A3 are closed PASS; R1A3 human CST review is PASS.
+R1A4 must stop after two-port persistence/geometry-identity audit.
 
 ## Architecture control
 
@@ -118,3 +120,5 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]

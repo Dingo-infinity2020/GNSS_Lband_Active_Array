@@ -11,12 +11,12 @@
     "model_identity": "CHARTS_GNSS_R1A4_DIFFERENTIAL_PORT_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_AFTER_R1A4_DESIGN_FREEZE"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_BUILD_PREFLIGHT"
   },
   "toolchain": {
     "simulator": "CST Studio Suite",
     "simulator_version": "2022.5",
-    "builder_or_adapter": "NOT_FROZEN_YET",
+    "builder_or_adapter": "source/cst/R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.mcr",
     "build_host_alias": "NW",
     "solve_host_alias": "",
     "container": ""
@@ -24,37 +24,59 @@
   "scientific_freeze": {
     "immutable_geometry_source": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work\\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst",
     "immutable_geometry_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
-    "port_contract": "R1A4 design pending freeze",
-    "source_modes": [],
+    "port_manifest": "em/cst/R1_CHARTS_LBAND/parameters_r1a4_ports.csv",
+    "port_design": "docs/R1A4_DIFFERENTIAL_PORT_DESIGN.md",
+    "source_modes": ["Pol-A differential", "Pol-B differential"],
     "frequency_range": "none; solver forbidden",
-    "pass_gate": "NOT_FROZEN_YET",
-    "stop_boundary": "R1A4 design/static audit only"
+    "required_outputs": [
+      "base_hash",
+      "pre_port_copy_hash",
+      "build_port_count",
+      "reopen_port_count",
+      "geometry_identity",
+      "top_view",
+      "oblique_view",
+      "r1a4_cst_sha256"
+    ],
+    "pass_gate": "PASS_R1A4_DIFFERENTIAL_PORT_BUILD_ONLY",
+    "hold_conditions": [
+      "base_hash_mismatch",
+      "copy_hash_mismatch",
+      "CST_port_creation_failure",
+      "port_count_not_2",
+      "fresh_reopen_port_mismatch",
+      "geometry_inventory_changed"
+    ],
+    "stop_boundary": "fresh reopen port/geometry audit; solver forbidden"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false
   },
   "execution": {
-    "current_stage": "DESIGN_R1A4_DIFFERENTIAL_PORT",
+    "current_stage": "BUILD_ONLY_R1A4",
     "last_completed_stage": "HUMAN_REVIEW_R1A3",
     "last_status": "PASS_R1A3_HUMAN_REVIEW",
+    "static_audit": "PASS_R1A4_STATIC_AUDIT",
+    "formal_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "build_artifact": "",
-    "qualification_output": "",
+    "build_artifact": "D:\\GNSS_Lband_Active_Array\\_r1a4_differential_ports_work\\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst",
+    "qualification_output": "evidence/r1a4_dc_nw_20260924_build01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "evidence": {
-    "status_classification": "READY_FOR_R1A4_DESIGN"
+    "status_classification": "READY_FOR_BUILD_ONLY"
   },
   "exceptions": [],
   "workspace": {
     "host_alias": "NW",
     "working_path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "record_path": "execution/workspace_record_NW_R1A4.json",
     "state": "ACTIVE",
-    "archive_mode": "PROTECTED_IN_PLACE",
+    "archive_mode": "CHECKPOINTED",
     "purge_allowed": false
   }
 }

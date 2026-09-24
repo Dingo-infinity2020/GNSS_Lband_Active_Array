@@ -5,69 +5,100 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=8
+HANDOFF_VERSION=9
 CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R1-CHARTS-GNSS-DERIVATIVE
-CURRENT_TASK_ID=R1A4-DESIGN-DIFFERENTIAL-PORT-FREEZE
-TASK_OWNER=DESIGN
-TASK_STATUS=READY_FOR_DESIGN
+CURRENT_TASK_ID=R1A4-DIFFERENTIAL-PORT-BUILD-ONLY-DC-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=READY_FOR_BUILD_ONLY
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=NO
+BUILD_AUTHORIZED=YES
 SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
 HARDWARE_PERMISSION=NO
 ```
 
-## Closed stages
+## Prerequisite closure
 
-- R1A1: PASS_R1A1_SCALED_APERTURE_BUILD_ONLY
-- R1A2: PASS_R1A2_FEED_REFERENCE_BUILD_ONLY
-- R1A3: PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW
-- R1A3 human CST review: PASS on 2026-09-24
+R1A3 human CST review: PASS.
+Record: `docs/R1A3_HUMAN_REVIEW_20260924.md`.
 
-Reviewed immutable R1A3 source:
+Immutable reviewed source:
 `D:\GNSS_Lband_Active_Array\_r1a3_materialized_fr4_work\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst`
 
-SHA256:
+Required SHA256:
 `b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa`
 
-Human-review record:
-`docs/R1A3_HUMAN_REVIEW_20260924.md`
+## R1A4 frozen contract
 
-## R1A4 objective
+Design:
+`docs/R1A4_DIFFERENTIAL_PORT_DESIGN.md`
 
-Qualify an ideal balanced two-port excitation without changing the reviewed R1A3 geometry.
+Manifest:
+`em/cst/R1_CHARTS_LBAND/parameters_r1a4_ports.csv`
 
-R1A4 shall:
-- copy the reviewed R1A3 CST into a fresh R1A4 work directory;
-- never overwrite the reviewed R1A3 artifact;
-- add only two ideal discrete differential ports;
-- save, close, fresh reopen, and audit port persistence;
-- prove shape inventory remains identical to R1A3;
-- stop before any solver.
+Port 1 / Pol-A:
+- NE -> SW
+- 100 ohm differential reference
 
-Proposed port contract:
-- Port 1 / Pol-A: NE -> SW;
-- Port 2 / Pol-B: NW -> SE;
-- Port 2 is exact +90 degree rotation of Port 1;
-- terminal radius = 3.00 mm;
-- terminal z = top-copper surface;
-- differential reference impedance = 100 ohm;
-- no ground-referenced single-ended feed.
+Port 2 / Pol-B:
+- NW -> SE
+- exact +90 degree rotation of Port 1
+- 100 ohm differential reference
 
-## Current boundary
+Both endpoints use R1A2 terminal_r=3.00 mm and the R1A3 top-copper surface.
+No ground reference is used.
 
-R1A4 is DESIGN only.
+Static audit:
+`PASS_R1A4_STATIC_AUDIT`
 
-BUILD_AUTHORIZED=NO
-SOLVE_AUTHORIZED=NO
+The R1A4 macro is PORT-ONLY:
+- 2 DiscretePort blocks
+- 0 geometry commands
+- 0 solver commands
 
-Next authorized transition requires:
-- port design document;
-- port parameter manifest;
-- port-only builder/macro;
-- static audit PASS;
-- updated stage contract explicitly setting BUILD_AUTHORIZED=YES.
+## Authorized task
 
-No solver is pre-authorized.
+Host:
+NW / DESKTOP-GBTI6Q4
+
+Source bundle:
+- source/cst/R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.mcr
+- scripts/audit_r1a4_differential_ports.py
+- scripts/run_r1a4_port_build_only_dc.py
+- em/cst/R1_CHARTS_LBAND/parameters_r1a4_ports.csv
+- em/cst/R1_CHARTS_LBAND/RUNBOOK_R1A4_PORT_BUILD_ONLY.md
+
+Fresh work:
+`D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work`
+
+Expected CST:
+`D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst`
+
+Evidence:
+`evidence/r1a4_dc_nw_20260924_build01/`
+
+## PASS gate
+
+Required:
+- source R1A3 hash exact match;
+- fresh copied CST initially has identical hash;
+- exactly 2 ports after build;
+- exactly 2 ports after fresh reopen;
+- shape inventory exactly matches R1A3;
+- no solver.
+
+Allowed final status:
+`PASS_R1A4_DIFFERENTIAL_PORT_BUILD_ONLY`
+
+On any formal runtime failure:
+- preserve evidence;
+- classify HOLD;
+- no silent retry;
+- do not alter port coordinates or invent ground reference.
+
+## Stop boundary
+
+Build authorization applies only to this port qualification.
+No smoke solve is authorized by this handoff.

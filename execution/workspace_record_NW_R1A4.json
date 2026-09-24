@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1A4-DIFFERENTIAL-PORT-BUILD-ONLY-DC-NW",
+    "stage": "BUILD_ONLY_R1A4",
+    "status": "READY_FOR_BUILD_ONLY"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "created_at": "existing checkout",
+    "last_used_at": "2026-09-24",
+    "state": "ACTIVE"
+  },
+  "source": {
+    "type": "git",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "branch": "project/r0-charts-scaffold",
+    "head_commit": "RESOLVE_AT_PREFLIGHT",
+    "head_on_trusted_remote": false,
+    "dirty": true,
+    "untracked_present": true,
+    "local_only_commits_present": false
+  },
+  "archive": {
+    "mode": "CHECKPOINTED",
+    "destination": "remote Git + R1A4 CST work directory after build",
+    "manifest_path": "execution/workspace_record_NW_R1A4.json",
+    "critical_artifacts": [],
+    "recovery_method": "use recorded Git HEAD plus immutable R1A3 CST hash",
+    "completed": false
+  },
+  "closeout": {
+    "task_node": "",
+    "active_processes_checked": false,
+    "downstream_dependency_checked": false,
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false,
+    "cleanup_evidence": ""
+  }
+}
