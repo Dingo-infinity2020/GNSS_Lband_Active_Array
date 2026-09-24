@@ -3,12 +3,12 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=11
+HANDOFF_VERSION=12
 CANONICAL_BRANCH=project/r0-charts-scaffold
 CURRENT_GATE=R1A4Q-CROSSED-DISCRETE-PORT-QUALIFICATION
-CURRENT_TASK_ID=R1A4Q-TOY-PORT-TOPOLOGY-SOLVE-NW
+CURRENT_TASK_ID=R1A4Q-ATTEMPT2-TOY-PORT-TOPOLOGY-SOLVE-NW
 TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_ISOLATED_DIAGNOSTIC
+TASK_STATUS=READY_FOR_FRESH_ATTEMPT2
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=YES_TOY_ONLY
 SOLVER_PERMISSION=YES_TOY_ONLY
@@ -17,48 +17,60 @@ OPTIMIZATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## Reason for reopening port qualification
+## Attempt-1 record
 
-The user identified a credible short-circuit risk in the R1A4 crossed diagonal discrete-port arrangement.
+Attempt-1 source:
+cc76c1c3d18b3e54df9267e6bdddb6f3269fe9ea
 
-CST 2022.5 local documentation confirms that discrete edge ports are represented using perfect-conducting wire sections plus a central lumped/source element.
+Status:
+HOLD_R1A4Q_HARNESS_RUNTIME_BEFORE_SOLVER
 
-Therefore:
-- R1A4 persistence/build PASS remains valid as a software-object result;
-- R1A4 is NOT yet accepted as a solver-safe production feed model;
-- R1A5 antenna smoke solve is suspended.
+Reason:
+unsupported Python API call `modeler.evaluate()`.
 
-## Authorized diagnostic
+Important:
+- CROSS toy model was saved;
+- failure occurred before `run_solver()`;
+- solver_run=NO;
+- no electromagnetic conclusion was produced;
+- no silent retry was performed.
 
-Document:
-`docs/R1A4Q_CROSSED_DISCRETE_PORT_TEST.md`
+Evidence:
+`evidence/r1a4q_dc_nw_20260924/`
 
-Host:
-NW / DESKTOP-GBTI6Q4
-
-Work:
+Attempt-1 work is preserved:
 `D:\GNSS_Lband_Active_Array\_r1a4q_crossed_port_test`
 
-Models:
-- CROSS.cst
-- LIFTED_REFERENCE.cst
+## Attempt-2 correction
 
-Frequency:
-0.5–2.0 GHz
+Only harness-control code changes:
+- replace unsupported Python `modeler.evaluate()`;
+- use a CST VBA history command to write `Solver.GetNumberOfPorts()` to a text file;
+- require port count = 2 before solver.
 
-Solver:
-HF Frequency Domain, first-order tetrahedral, mesh adaptation off.
+The frozen A/B geometry, port coordinates, solver type, frequency range, boundaries, and diagnostic logic are unchanged.
 
-Purpose:
-compare crossed discrete-port behavior against a non-intersecting lifted reference.
+## Attempt-2 fresh paths
 
-## Hard stop
+Work:
+`D:\GNSS_Lband_Active_Array\_r1a4q_crossed_port_test_attempt2`
 
-This authorization does NOT permit:
-- opening the GNSS R1A4 CST in a solver;
-- modifying GNSS R1A4 geometry;
-- R1A5 smoke solve;
-- CST251 staging;
+Evidence:
+`evidence/r1a4q_dc_nw_20260924_attempt2/`
+
+## Scope
+
+Authorized only:
+- CROSS toy model;
+- LIFTED_REFERENCE toy model;
+- HF Frequency Domain 0.5–2.0 GHz on NW;
+- no adaptive mesh.
+
+Forbidden:
+- GNSS R1A4 CST solver;
+- modification of GNSS R1A4 CST;
+- R1A5 antenna solve;
+- CST251;
 - optimization.
 
-After A/B diagnostics, return to DESIGN with results and recommendation.
+Attempt-2 is a new explicit invocation, not a silent retry.

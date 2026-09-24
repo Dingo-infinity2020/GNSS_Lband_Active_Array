@@ -114,9 +114,26 @@ def summarize(data):
         }
     return out
 
+def port_count_history(path):
+    return "\n".join([
+      "On Error Resume Next",
+      "Dim f As Integer",
+      "f=FreeFile",
+      'Open "%s" For Output As #f'%path,
+      'Print #f, "PORT_COUNT=" & CStr(Solver.GetNumberOfPorts())',
+      "Close #f",
+      "On Error GoTo 0"])
+
+def read_port_count(path):
+    for line in open(path,encoding="utf-8").read().splitlines():
+        if line.startswith("PORT_COUNT="):
+            return int(line.split("=",1)[1])
+    raise RuntimeError("missing port count audit")
+
 def run_model(outdir,name,lifted):
     os.makedirs(outdir)
     cstfile=os.path.join(outdir,name+".cst")
+    portfile=os.path.join(outdir,"pre_solver_port_count.txt")
     de=ci.DesignEnvironment()
     de.set_quiet_mode(True)
     prj=None
@@ -124,7 +141,10 @@ def run_model(outdir,name,lifted):
         prj=de.new_mws()
         prj.modeler.add_to_history(name+" geometry and ports",vba_geometry(lifted))
         prj.save(cstfile)
-        pre_ports=prj.modeler.evaluate("Solver.GetNumberOfPorts()")
+        prj.modeler.add_to_history(name+" pre-solver port audit",port_count_history(portfile))
+        pre_ports=read_port_count(portfile)
+        if pre_ports != 2:
+            raise RuntimeError("pre-solver port count is not 2")
         prj.modeler.run_solver()
         prj.save()
     finally:

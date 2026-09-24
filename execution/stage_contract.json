@@ -6,7 +6,7 @@
   },
   "project": {
     "name": "GNSS_Lband_Active_Array",
-    "model_identity": "R1A4Q_CROSSED_DISCRETE_PORT_TOY_TEST",
+    "model_identity": "R1A4Q_CROSSED_DISCRETE_PORT_TOY_TEST_ATTEMPT2",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
     "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
@@ -14,7 +14,7 @@
   "authorization": {
     "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": true,
-    "scope": "R1A4Q_TOY_MODELS_ONLY",
+    "scope": "R1A4Q_ATTEMPT2_TOY_MODELS_ONLY",
     "production_model_solve_authorized": false,
     "optimization_authorized": false,
     "cst251_authorized": false
@@ -29,14 +29,22 @@
     "stop_boundary": "toy A/B result classification only"
   },
   "execution": {
-    "current_stage": "R1A4Q_TOY_PORT_TOPOLOGY_SOLVE",
-    "formal_invocation_count": 0,
+    "current_stage": "R1A4Q_ATTEMPT2_TOY_PORT_TOPOLOGY_SOLVE",
+    "prior_attempts": [
+      {
+        "attempt": 1,
+        "status": "HOLD_R1A4Q_HARNESS_RUNTIME_BEFORE_SOLVER",
+        "solver_run": false,
+        "source_commit": "cc76c1c3d18b3e54df9267e6bdddb6f3269fe9ea"
+      }
+    ],
+    "formal_invocation_count_attempt2": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1a4q_crossed_port_test",
-    "evidence": "evidence/r1a4q_dc_nw_20260924/"
+    "work": "D:\\GNSS_Lband_Active_Array\\_r1a4q_crossed_port_test_attempt2",
+    "evidence": "evidence/r1a4q_dc_nw_20260924_attempt2/"
   },
   "exceptions": [],
   "workspace": {
