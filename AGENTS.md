@@ -1,3 +1,5 @@
+[Reading 138 lines from start (total: 138 lines, 0 remaining)]
+
 [Reading 131 lines from start (total: 131 lines, 0 remaining)]
 
 [Reading 127 lines from start (total: 127 lines, 0 remaining)]
@@ -27,7 +29,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1A5-DESIGN-SMOKE-SOLVE-CONTRACT**
+Current task: **R1A5-DIAGNOSTIC-SMOKE-SOLVE-NW**
 
 Authoritative current execution state is defined by:
 - `PROJECT_HANDOFF.md`
@@ -35,20 +37,17 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- use hash-locked R1A4 CST as a design input: YES
-- design/document R1A5 smoke-solve contract: YES
-- antenna CST solver: NO
-- production solver: NO
-- optimization: NO
-- CST251 staging: NO
+- copy the hash-locked R1A4 CST into fresh R1A5 work: YES
+- apply the frozen R1A5 solver/boundary config: YES
+- run one NW diagnostic HF Frequency Domain smoke solve: YES
+- modify GNSS geometry or ports: NO
+- run optimization or parameter sweeps: NO
+- material A/B: NO
+- production solve / CST251 staging: NO
 - hardware release: NO
 
-R1A4Q result:
-- no hard short observed for crossed ports in HF Frequency Domain / tetrahedral;
-- crossed port creates measurable artificial coupling (~17-21 dB above lifted reference);
-- transient/hexahedral use is not qualified.
-
-R1A5 remains design-only until a new explicit solver authorization is committed.
+R1A4Q qualified the crossed ports only for HF Frequency Domain / tetrahedral diagnostic use.
+S21 near/below roughly -50 dB is port-model-limited and cannot be treated as production polarization isolation.
 
 ## Architecture control
 
@@ -128,6 +127,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

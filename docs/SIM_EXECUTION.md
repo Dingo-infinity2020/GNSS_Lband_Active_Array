@@ -4,55 +4,67 @@
 
 SimulationOps version: 0.2.4
 
-## Current state
+## Current stage
 
-Current stage:
-DESIGN_R1A5_SMOKE_SOLVE_CONTRACT
+R1A5_DIAGNOSTIC_SMOKE_SOLVE
 
-BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: false
-PRODUCTION_MODEL_SOLVE_AUTHORIZED: false
+BUILD_AUTHORIZED: copy/config only
+SOLVE_AUTHORIZED: true
+PRODUCTION_SOLVE_AUTHORIZED: false
 
-Last completed qualification:
-R1A4Q crossed-discrete-port solver-safety test
+## Toolchain
 
-Final R1A4Q status:
-PASS_R1A4Q_NO_HARD_SHORT_WITH_PARASITIC_COUPLING
+Host: NW
+Simulator: CST Studio Suite 2022.5
+Runtime: CST bundled Python 3.6 / cst.interface
+Solver: HF Frequency Domain
+Mesh: tetrahedral first order
+Adaptation: false
 
-## Hash-locked R1A4 candidate
+## Immutable source
 
 D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst
 
 SHA256:
 4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364
 
-## R1A4Q constraint
+## Solver freeze
 
-Tested solver:
-CST 2022.5 HF Frequency Domain
+Frequency:
+1.0–1.8 GHz
 
-Mesh:
-tetrahedral first order
+Boundary:
+open on all six faces
 
-Crossed-port artificial S21:
-approximately -69 to -55 dB over 0.5–2.0 GHz.
+Background:
+50 mm all six directions
 
-At 1.4 GHz:
-- crossed = -59.40 dB
-- lifted reference = -78.09 dB
-- crossing penalty = +18.69 dB
+Ports:
+unchanged R1A4 two-port differential representation
 
-No direct short was observed.
+Far-field monitors:
+none
 
-This does not qualify transient/hexahedral use.
+Optimization:
+none
 
-## R1A5 design boundary
+## Artifact paths
 
-R1A5 may only be authorized later as:
-- HF Frequency Domain;
-- tetrahedral mesh;
-- diagnostic smoke;
-- no optimization;
-- no production-isolation claim.
+Work:
+D:\GNSS_Lband_Active_Array\_r1a5_diagnostic_smoke_work
 
-No current solver invocation is permitted.
+Evidence:
+evidence/r1a5_dc_nw_20260924_smoke01/
+
+## Interpretation caveat
+
+R1A4Q crossed-port parasitic coupling is about -69 to -55 dB over 0.5–2.0 GHz.
+
+Any smoke S21 near/below roughly -50 dB is port-model-limited and must not be claimed as physical polarization isolation.
+
+## Stop boundary
+
+One formal smoke invocation only.
+No silent retry.
+No production solve.
+No automatic optimization.
