@@ -1,3 +1,5 @@
+[Reading 124 lines from start (total: 124 lines, 0 remaining)]
+
 [Reading 120 lines from start (total: 120 lines, 0 remaining)]
 
 # Agent Instructions
@@ -21,7 +23,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1A4-DIFFERENTIAL-PORT-BUILD-ONLY-DC-NW**
+Current task: **R1A5-DESIGN-SMOKE-SOLVE-CONTRACT**
 
 Authoritative current execution state is defined by:
 - `PROJECT_HANDOFF.md`
@@ -29,18 +31,17 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- immutable R1A3 geometry reuse: YES
-- R1A4 port-only CST BUILD_ONLY on NW: YES
-- modify R1A3 reviewed source artifact: NO
-- geometry creation/Boolean changes in R1A4 port macro: NO
+- use hash-locked R1A4 two-port CST as design input: YES
+- design/document a smoke-solve contract: YES
+- CST build action: NO
 - CST solver: NO
 - optimization: NO
 - LNA integration: NO
 - CST251 staging: NO
 - hardware release: NO
 
-R1A1, R1A2, and R1A3 are closed PASS; R1A3 human CST review is PASS.
-R1A4 must stop after two-port persistence/geometry-identity audit.
+R1A1-R1A4 are closed PASS; R1A3 human CST review is PASS.
+R1A5 is design-only until a new explicit solver authorization is recorded.
 
 ## Architecture control
 
@@ -120,5 +121,7 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]

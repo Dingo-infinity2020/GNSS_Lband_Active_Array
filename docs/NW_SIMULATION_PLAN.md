@@ -1,3 +1,5 @@
+[Reading 107 lines from start (total: 107 lines, 0 remaining)]
+
 # NW Simulation / Execution Plan
 
 SimulationOps protocol: **0.2.4**
@@ -59,15 +61,31 @@ NW actions:
 - no production solver,
 - port geometry may still remain absent unless separately authorized.
 
-### R1A4 — isolated-element smoke solve
+### R1A4 — differential-port BUILD-ONLY
+
+Status:
+`PASS_R1A4_DIFFERENTIAL_PORT_BUILD_ONLY`
+
+Completed on NW:
+- immutable copy of human-reviewed R1A3 CST;
+- 2 ideal balanced differential ports;
+- Pol-A NE->SW;
+- Pol-B NW->SE;
+- 100 ohm differential normalization;
+- fresh reopen port count = 2;
+- geometry inventory unchanged;
+- no solver.
+
+### R1A5 — isolated-element smoke solve
 
 **Not currently authorized.**
 
 If later explicitly authorized:
-- NW may run a narrow, lightweight smoke solve for API/port sanity,
-- no optimization,
-- no broad parameter sweep,
-- results are qualification only, not production science.
+- NW may run one lightweight smoke solve on the hash-locked R1A4 CST;
+- no optimization;
+- no broad parameter sweep;
+- diagnostic/qualification outputs only;
+- production science remains a later separately authorized stage.
 
 ### R1B — periodic-array build
 
@@ -105,3 +123,5 @@ At every PASS/HOLD:
 - classify build work directories,
 - retain only what the next stage requires,
 - mark reproducible temporary CST workspaces PURGE_READY before deletion.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]

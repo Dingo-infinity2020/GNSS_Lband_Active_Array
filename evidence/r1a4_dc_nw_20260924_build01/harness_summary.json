@@ -1,0 +1,29 @@
+{
+  "base_cst": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work\\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst",
+  "base_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+  "pre_port_copy_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+  "port_macro_sha256": "19dd27589f980b5a7622c7ae6a7b3a422a08a4bb41353070eabd58408732bfec",
+  "r1a4_cst": "D:\\GNSS_Lband_Active_Array\\_r1a4_differential_ports_work\\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst",
+  "r1a4_cst_sha256": "4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
+  "r1a4_cst_bytes": 47220,
+  "build_port_count": 2,
+  "reopen_port_count": 2,
+  "checks": {
+    "base_hash_match": true,
+    "copy_hash_match_before_port": true,
+    "build_port_count_2": true,
+    "reopen_port_count_2": true,
+    "geometry_unchanged_vs_r1a3": true,
+    "fresh_reopen_geometry_same": true,
+    "pass": true
+  },
+  "log": [
+    "BASE_CST_SHA256=b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+    "PRE_PORT_COPY_SHA256=b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+    "PORT_MACRO_SHA256=19dd27589f980b5a7622c7ae6a7b3a422a08a4bb41353070eabd58408732bfec",
+    "PORT_BUILD_SAVE_PASS",
+    "BUILD_AUDIT_PASS",
+    "FRESH_REOPEN_AUDIT_PASS"
+  ],
+  "solver_run": false
+}

@@ -3,60 +3,54 @@
 ## Global protocol
 
 - SimulationOps version: 0.2.4
-- Build host: NW
+- Build/control host: NW
 - Simulator: CST Studio Suite 2022.5
 - Runtime: CST bundled Python 3.6 / cst.interface
-- Solver host: not authorized for current stage
+- Production solve host: CST251-C only after a future explicit production authorization
 
-## Current model
+## Current state
 
 Model identity:
 CHARTS_GNSS_R1A4_DIFFERENTIAL_PORT_V01
 
-Stage:
-BUILD_ONLY_R1A4
+Current stage:
+DESIGN_R1A5_SMOKE_SOLVE_CONTRACT
 
-BUILD_AUTHORIZED: true
+BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
 
-## Immutable geometry source
+Last completed stage:
+BUILD_ONLY_R1A4
 
-R1A3 reviewed CST:
-D:\GNSS_Lband_Active_Array\_r1a3_materialized_fr4_work\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst
+Last status:
+PASS_R1A4_DIFFERENTIAL_PORT_BUILD_ONLY
 
-SHA256:
-b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa
-
-R1A4 harness must copy this file and verify its hash before adding ports.
-
-## Port freeze
-
-- Port 1 / Pol-A: NE -> SW
-- Port 2 / Pol-B: NW -> SE
-- exact +90 degree rotational relation
-- terminal_r = 3.00 mm
-- terminal z = copper_top_z
-- reference impedance = 100 ohm per differential port
-- port type = SParameter
-- ground reference = none
-
-## Build artifact
+## Hash-locked R1A4 candidate source
 
 D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst
 
-Evidence:
-evidence/r1a4_dc_nw_20260924_build01/
+SHA256:
+4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364
 
-PASS:
-PASS_R1A4_DIFFERENTIAL_PORT_BUILD_ONLY
+Ports:
+- Pol-A NE->SW
+- Pol-B NW->SE
+- 100 ohm differential reference
+- fresh-reopen count = 2
 
-## Hard stop
+Geometry identity to R1A3:
+PASS
 
-- no geometry changes
-- no solver
-- no frequency sweep
-- no monitors
-- no optimization
-- no CST251 staging
+## R1A5 boundary
 
-Fresh reopen + port count + geometry identity is the stop boundary.
+R1A5 smoke solve is not authorized yet.
+
+Before any solver invocation, freeze:
+- solver/boundary/mesh/frequency contract;
+- exact diagnostic outputs;
+- smoke PASS/HOLD logic;
+- one-shot invocation;
+- no optimization;
+- no broad sweep.
+
+No solver may start from the current state.
