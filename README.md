@@ -1,3 +1,5 @@
+[Reading 60 lines from start (total: 60 lines, 0 remaining)]
+
 # GNSS L-band Active Array
 
 Low-noise, dual-polarized **active antenna array** development for full L-band GNSS reception.
@@ -13,7 +15,7 @@ Every new agent/session must read both before changing scientific artifacts.
 
 ## Current scientific phase
 
-**R1A5F — clean non-crossing passive-feed transition before periodic-array work.**
+**R1A5FQ — final clean-feed isolated-equivalence design before periodic-array work.**
 
 The isolated-element passive radiator has already reached a numerically converged diagnostic baseline.
 
@@ -48,7 +50,7 @@ Preliminary LNA circuit/model validation may proceed in parallel with periodic-a
 
 Read `PROJECT_HANDOFF.md`.
 
-Current work is R1A5F design/build qualification only; solver permission is controlled independently by the handoff and SimulationOps stage contract.
+Current work is R1A5FQ isolated-equivalence DESIGN ONLY; no solver is currently authorized. On PASS, the next primary physics gate is R1E0 94-mm periodic unit cell.
 
 ## Core documents
 
@@ -58,3 +60,5 @@ Current work is R1A5F design/build qualification only; solver permission is cont
 - `docs/REQUIREMENTS_v0.1.md` — system requirements
 - `docs/R1_CHARTS_GNSS_DERIVATIVE_PLAN.md` — R1 design origin/history
 - `docs/SIM_EXECUTION.md` — current SimulationOps execution state
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]

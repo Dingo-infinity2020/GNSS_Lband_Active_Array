@@ -4,27 +4,44 @@
     "project": "GNSS_Lband_Active_Array",
     "task_id": "R1A5F-SPLIT-SINGLE-PORT-BUILD-ONLY-NW",
     "stage": "R1A5F_SPLIT_SINGLE_PORT_BUILD_ONLY",
-    "status": "READY_FOR_BUILD_ONLY"
+    "status": "PASS_R1A5F_SPLIT_SINGLE_PORT_BUILD_ONLY"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "ACTIVE"
+    "state": "CHECKPOINTED"
   },
   "source": {
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AT_PREFLIGHT",
-    "head_on_trusted_remote": false
+    "head_commit": "b914822134ca6d3e2cc4cdca9de801e38d13863a",
+    "head_on_trusted_remote": true
+  },
+  "result": {
+    "runtime_seconds": 113.17,
+    "formal_invocation_count": 1,
+    "solver_run": false,
+    "model_A_sha256": "74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce",
+    "model_B_sha256": "11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf",
+    "runtime_exact_rz90_relation": true
   },
   "archive": {
-    "mode": "CHECKPOINTED",
-    "destination": "remote Git + R1A5F work after build",
-    "critical_artifacts": [],
-    "completed": false
+    "mode": "PROTECTED_IN_PLACE",
+    "destination": "D:\\GNSS_Lband_Active_Array\\_r1a5f_split_single_port_work",
+    "critical_artifacts": [
+      "D:\\GNSS_Lband_Active_Array\\_r1a5f_split_single_port_work\\R1A5F_POLA_SINGLE_PORT_V01.cst",
+      "D:\\GNSS_Lband_Active_Array\\_r1a5f_split_single_port_work\\R1A5F_POLB_SINGLE_PORT_V01.cst",
+      "evidence/r1a5f_dc_nw_20260924_build01/"
+    ],
+    "completed": true,
+    "purge_allowed": false
   },
   "closeout": {
-    "task_node": "",
+    "task_node": "R1A5F PASS / return baton to R1A5FQ design",
+    "active_processes_checked": true,
+    "project_modeler_process_active": false,
+    "unrelated_active_session_observed": "NW PID 13516 belongs to separate dingoKID/Sonnet SSH task and was not touched",
+    "postcloseout_integrity_quarantine": "D:\\GNSS_Lband_Active_Array\\_quarantine_postcloseout_20260924_r1a5m2",
     "handoff_written": true,
     "purge_allowed": false,
     "purged": false

@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=23
+HANDOFF_VERSION=24
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
-CURRENT_GATE=R1A5F-CLEAN-NONCROSSING-FEED
-CURRENT_TASK_ID=R1A5F-SPLIT-SINGLE-PORT-BUILD-ONLY-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_BUILD_ONLY
+CURRENT_GATE=R1A5FQ-CLEAN-FEED-EQUIVALENCE
+CURRENT_TASK_ID=R1A5FQ-DESIGN-ISOLATED-EQUIVALENCE
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_R1A5F_BUILD_ONLY
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -23,106 +23,72 @@ CST251_PERMISSION=NO
 
 Read `PROJECT_MAINLINE.md` first.
 
-This handoff executes M1 of the array-first mainline:
-clean non-crossing passive feed -> short isolated equivalence -> R1E0 periodic unit cell.
+The array-first route is:
+R1A5FQ short isolated equivalence -> R1E0 periodic unit cell -> R1E1 pitch/material trade -> R1E2 active-impedance atlas.
 
-Do not expand this gate into isolated-element optimization.
+Do not expand R1A5FQ into isolated-element optimization.
 
-## Prerequisite
+## R1A5F closed stage
 
-R1A5M2:
-`PASS_R1A5M2_NATIVE_AND_ABSOLUTE_CONVERGED`
+Final status:
+`PASS_R1A5F_SPLIT_SINGLE_PORT_BUILD_ONLY`
 
-The crossed two-port model is a converged diagnostic baseline but is not the production feed representation for isolation.
+Formal source HEAD:
+`b914822134ca6d3e2cc4cdca9de801e38d13863a`
 
-## Immutable geometry source
+Formal invocation count:
+1
 
-Human-reviewed R1A3 CST:
-`D:\GNSS_Lband_Active_Array\_r1a3_materialized_fr4_work\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst`
+Exit:
+0
 
-Required SHA256:
-`b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa`
+Runtime:
+113.17 s
 
-## R1A5F frozen design
+Solver:
+NOT RUN
 
-Plan:
-`docs/R1A5F_SPLIT_SINGLE_PORT_FEED_PLAN.md`
+## Protected clean-feed artifacts
 
-Manifest:
-`em/cst/R1_CHARTS_LBAND/parameters_r1a5f_single_ports.csv`
-
-Canonical macro generator:
-`scripts/generate_r1a5f_single_port_macros.py`
-
-Static audit:
-`PASS_R1A5F_STATIC_AUDIT`
-
-Generated model A:
-- Pol-A
-- one 100 ohm differential discrete port
-- NE -> SW
-- no Pol-B port
-
-Generated model B:
-- Pol-B
-- one 100 ohm differential discrete port
-- NW -> SE
-- exact Rz(+90 deg) rotation of model A
-- no Pol-A port
-
-Each model contains only one diagonal port, so no port-port crossing exists.
-
-## Authorized build-only execution
-
-Host:
-NW / DESKTOP-GBTI6Q4
-
-Runbook:
-`em/cst/R1_CHARTS_LBAND/RUNBOOK_R1A5F_SPLIT_SINGLE_PORT_BUILD_ONLY.md`
-
-Harness:
-`scripts/run_r1a5f_split_single_port_build_only_dc.py`
-
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work`
-
-Fresh evidence:
-`evidence/r1a5f_dc_nw_20260924_build01/`
-
-Expected CST A:
+Model A / Pol-A / NE->SW:
 `D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLA_SINGLE_PORT_V01.cst`
 
-Expected CST B:
+SHA256:
+`74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce`
+
+Model B / Pol-B / NW->SE:
 `D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLB_SINGLE_PORT_V01.cst`
 
-## PASS gate
+SHA256:
+`11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf`
 
-`PASS_R1A5F_SPLIT_SINGLE_PORT_BUILD_ONLY` requires:
+R1A5F checks:
+- one port per model after fresh reopen: PASS
+- A/B geometry identical to R1A3: PASS
+- exact runtime +90 deg endpoint relation: PASS
+- same 100 ohm differential normalization: PASS
+- no simultaneous port crossing: PASS
 
-For A and B:
-- byte-identical R1A3 copy before port insertion;
-- exactly one port after build;
-- exactly one port after fresh reopen;
-- shape inventory exactly equal to R1A3;
-- no solver.
+Evidence:
+`evidence/r1a5f_dc_nw_20260924_build01/`
 
-Cross-model:
-- A/B geometry inventories identical;
-- runtime endpoint parameters satisfy exact +90 degree rotation;
-- both remain 100 ohm differential references.
+Both CST artifacts are retained and purge is forbidden while R1A5FQ/R1E0 may consume them.
 
-## Formal execution discipline
+## Current R1A5FQ design
 
-- one formal harness invocation;
-- no silent retry;
-- preserve any HOLD evidence;
-- no solver commands;
-- no CST251 staging.
+Contract:
+`docs/R1A5FQ_ISOLATED_EQUIVALENCE_CONTRACT.md`
 
-## Stop boundary
+Scientific question:
+confirm that the two clean single-port models reproduce the already converged R1A5M2 passive self-response.
 
-Stop after build/fresh-reopen qualification.
+This gate is the final isolated-element equivalence check.
 
-The next gate, if R1A5F passes, is a separately authorized **short isolated equivalence solve** only to confirm the clean single-port representation reproduces the converged passive baseline.
+No solver is currently authorized.
 
-Do not begin periodic unit-cell solver work automatically in this task.
+## Next mainline gate after R1A5FQ PASS
+
+R1E0:
+94-mm periodic unit-cell baseline.
+
+The project must move to scan-dependent active impedance after equivalence closure rather than continue isolated S11 optimization.

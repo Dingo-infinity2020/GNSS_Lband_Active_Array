@@ -7,57 +7,37 @@
 
 ## Current stage
 
-R1A5F_SPLIT_SINGLE_PORT_BUILD_ONLY
+DESIGN_R1A5FQ_ISOLATED_EQUIVALENCE
 
-BUILD_AUTHORIZED: true
+BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Host/toolchain
+## Last completed stage
 
-Host: NW
-CST: 2022.5
-Runtime: CST bundled Python 3.6 / cst.interface
-Mode: BUILD_ONLY
+R1A5F split single-port BUILD_ONLY
 
-## Immutable source
+Status:
+PASS_R1A5F_SPLIT_SINGLE_PORT_BUILD_ONLY
 
-D:\GNSS_Lband_Active_Array\_r1a3_materialized_fr4_work\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst
-
-SHA256:
-b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa
-
-## Models
+## Clean-feed artifacts
 
 A:
-- Pol-A
-- NE -> SW
-- one 100 ohm differential port
+D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLA_SINGLE_PORT_V01.cst
+
+SHA256:
+74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce
 
 B:
-- Pol-B
-- NW -> SE
-- exact +90 deg rotation of A
-- one 100 ohm differential port
+D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLB_SINGLE_PORT_V01.cst
 
-Both are generated from one canonical endpoint definition.
+SHA256:
+11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf
 
-## Paths
+## Current contract
 
-Work:
-D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work
+docs/R1A5FQ_ISOLATED_EQUIVALENCE_CONTRACT.md
 
-Evidence:
-evidence/r1a5f_dc_nw_20260924_build01/
+No solver action is permitted until a new explicit R1A5FQ authorization is frozen.
 
-## Hard stop
-
-- no solver
-- no frequency configuration
-- no far-field monitors
-- no material changes
-- no geometry changes
-- no optimization
-- no periodic boundary work
-
-Fresh reopen + one-port persistence + geometry identity + runtime rotational symmetry is the stop boundary.
+On equivalence PASS, move directly to R1E0 periodic unit-cell design.
