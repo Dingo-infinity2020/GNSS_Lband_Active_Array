@@ -23,19 +23,21 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A0-PITCH-PARAMETERIZATION-BUILD-ONLY-NW**
+Current task: **R1E1-A0-R1-DESIGN-PITCH-READY-CANONICAL-SOURCE**
 
 Current permissions:
-- use the clean R1E0A broadside periodic CST as immutable source: YES
-- run exactly one R1E1A0 endpoint-proof BUILD-ONLY invocation on NW: YES
-- generate P088 and P100 endpoint CSTs and fresh-reopen audit them: YES
+- inspect the formal R1E1A0 HOLD evidence: YES
+- design/audit the R1E1A0-R1 pitch-ready canonical-source bundle: YES
+- generate/check deterministic derived macros: YES
+- run the R1 recovery build: NO
+- rerun 88/100 endpoint proof: NO
 - run any R1E1 solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO
-- silent retry: NO
 
 R1E0C is closed PASS.
-R1E1A0 endpoint proof is the only authorized execution.
+R1E1A0 endpoint proof is formally HOLD on source-history parameter declaration.
+R1E1A0-R1 remains DESIGN ONLY until a separate recovery build authorization is frozen.
 
 ## Architecture control
 

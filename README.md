@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E1A0 - authorized pitch-parameterization endpoint BUILD-ONLY proof on NW.**
+**R1E1A0-R1 - pitch-ready canonical-source recovery DESIGN after endpoint-proof HOLD.**
 
 The isolated-element passive phase is closed.
 
@@ -59,17 +59,21 @@ Therefore the pitch/material trade is now the current mainline, and the final LN
 
 ## Current execution
 
-R1E0C scan qualification is closed PASS, including the 60-deg orthogonal-plane sentinel. Current work is the authorized **R1E1A0 P088/P100 endpoint BUILD-ONLY proof**.
+R1E0C scan qualification is closed PASS.
 
-R1E1A0 endpoint proof:
-- pitch = 88 mm
-- pitch = 100 mm
+The first R1E1A0 P088/P100 endpoint proof is formally:
+`HOLD_R1E1A0_SOURCE_HISTORY_PARAMETER_DECLARATION`.
 
-Parameter update under test:
-`StoreParameter` through direct VBA + `RebuildForParametricChange`
+Both endpoint geometries and periodic metadata were correct; the sole failed predicate was the protected-parameter history warning inherited from the historical R1A3 source.
+
+Current work:
+**R1E1A0-R1 pitch-ready 94-mm canonical-source DESIGN ONLY**.
+
+Recovery principle:
+derive new macros with `MakeSureParameterExists`, preserve historical macros/artifacts unchanged, rebuild a fresh 94-mm Pol-A periodic source, then reopen endpoint proof as a separate R2 ticket.
 
 Current permissions:
-- BUILD_AUTHORIZED=YES_R1E1A0_ENDPOINT_PROOF_ONLY
+- BUILD_AUTHORIZED=NO
 - SOLVER_PERMISSION=NO
 
 Read `PROJECT_HANDOFF.md` for the exact baton.

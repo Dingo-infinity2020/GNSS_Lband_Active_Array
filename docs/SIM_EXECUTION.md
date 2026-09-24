@@ -7,100 +7,84 @@
 
 ## Current stage
 
-R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY
+DESIGN_R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE
 
-BUILD_AUTHORIZED: true
+BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 MATERIAL_AB_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 
-## Last completed array-physics gate
+## Last formal execution
 
-R1E0C scan qualification
+R1E1A0 endpoint pitch-parameterization BUILD-ONLY proof
 
-Canonical status:
-PASS_R1E0C_SCAN_QUALIFICATION
+Formal status:
+HOLD_R1E1A0_SOURCE_HISTORY_PARAMETER_DECLARATION
 
-Qualified states:
-- broadside reference
-- C30P45
-- C45P45
-- C60P45
-- C60P135
-
-Frozen severe-mismatch alerts:
-none triggered in any scan state
-
-60-deg plane comparison:
-- max complex Delta S11 = 0.67023
-- max |Delta Z_active| = 208.98 ohm
-
-Interpretation:
-94-mm baseline is numerically viable through the required 0-60 deg gate, but active impedance is strongly scan-angle/scan-plane dependent.
-
-LNA final input-match freeze:
-NOT READY
-
-R1E0C closeout evidence:
-evidence/r1e0c_closeout_20260924/
-
-## Current R1E1A0 design
-
-Plan:
-docs/R1E1_PITCH_MATERIAL_TRADE_PLAN.md
-
-Contract:
-docs/R1E1A0_PITCH_PARAMETERIZATION_CONTRACT.md
-
-Runbook:
-em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY.md
-
-Harness:
-scripts/run_r1e1a0_pitch_parameterization_build_only_dc.py
-
-Static audit:
-PASS_R1E1A0_STATIC_AUDIT
-
-Audit script:
-scripts/audit_r1e1a0_pitch_parameterization.py
-
-Clean source:
-D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst
-
-Source SHA256:
-48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223
-
-Pitch chain:
-unit_cell_pitch_nominal -> ground_reference_span -> UNITCELL_GROUND_REFERENCE -> periodic bounding box
-
-Parameter mutation path under test:
-project.schematic.execute_vba_code with direct StoreParameter, followed by CST RebuildForParametricChange
-
-Endpoint proof candidates:
-- 88 mm
-- 100 mm
-
-## Authorized execution
-
-Endpoint proof only:
-- P088 = 88 mm
-- P100 = 100 mm
-
-Fresh work:
-D:\GNSS_Lband_Active_Array\_r1e1a0_pitch_parameterization_work
-
-Fresh evidence:
-evidence/r1e1a0_dc_nw_20260924_build01/
+Formal source commit:
+750a036761c3b10a37830c95415b96c1436f3d29
 
 Formal invocation count:
 1
 
-Silent retry:
-NO
+Runtime:
+99.32 s
+
+Solver:
+NOT RUN
+
+Endpoint artifacts:
+- P088 SHA256: 65b649a28e148c8c373f06357caff36a8a4a65b06b898bf8abb96c196a3c688a
+- P100 SHA256: 3746c521ffc628eddd257f96323980ac60b5183a36f536dc77876d99b1e5f779
+
+Passed:
+- pitch persistence
+- structure span / UnitCellDs1/Ds2
+- non-ground geometry invariance
+- one-port / broadside periodic metadata
+- fresh reopen
+- no solver markers / results
+
+Sole failed predicate:
+no_pitch_history_warning
+
+Root cause:
+historical R1A3 model history contains StoreParameter for unit_cell_pitch_nominal=94, so CST emits a protected-parameter warning during parametric rebuild even though the requested pitch persists correctly.
+
+Classification:
+source-history/tooling HOLD; not a geometry or physics failure
+
+Evidence:
+evidence/r1e1a0_dc_nw_20260924_build01/
+
+## Current recovery stage
+
+Task:
+R1E1A0-R1 pitch-ready 94-mm canonical source
+
+Contract:
+docs/R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_CONTRACT.md
+
+Runbook:
+em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0R1_PITCH_READY_SOURCE_BUILD_ONLY.md
+
+Generator:
+scripts/generate_r1e1a0r1_pitch_ready_macros.py
+
+Harness:
+scripts/run_r1e1a0r1_pitch_ready_source_build_only_dc.py
+
+Static audit:
+PASS_R1E1A0R1_STATIC_AUDIT
+
+Recovery architecture:
+derived pitch-ready R1A3 geometry macro + frozen R1A5F Pol-A single-port macro + derived parameter-ready periodic broadside macro
 
 ## Stop
 
-No R1E1 solver is authorized.
-No material A/B is authorized.
-No LNA integration is authorized.
+R1 recovery build is not yet authorized in this closeout state.
+No endpoint rerun.
+No solver.
+No material A/B.
+No LNA integration.

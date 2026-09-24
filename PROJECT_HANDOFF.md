@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=46
+HANDOFF_VERSION=47
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
-CURRENT_TASK_ID=R1E1-A0-PITCH-PARAMETERIZATION-BUILD-ONLY-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_BUILD
+CURRENT_TASK_ID=R1E1-A0-R1-DESIGN-PITCH-READY-CANONICAL-SOURCE
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_R1E1A0_ENDPOINT_PROOF_ONLY
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -446,64 +446,59 @@ final LNA input matching remains blocked.
 Closeout evidence:
 `evidence/r1e0c_closeout_20260924/`
 
-## Current R1E1A0 endpoint-proof BUILD-ONLY authorization
+## R1E1A0 endpoint-proof formal HOLD
 
-Plan:
-`docs/R1E1_PITCH_MATERIAL_TRADE_PLAN.md`
+Status:
+`HOLD_R1E1A0_SOURCE_HISTORY_PARAMETER_DECLARATION`
 
-Current task:
-`R1E1-A0-PITCH-PARAMETERIZATION-BUILD-ONLY-NW`
-
-Purpose:
-prove a Parameter-List-safe way to change `unit_cell_pitch_nominal` and rebuild the periodic ground tile without changing radiator/substrate/feed geometry.
-
-Frozen mutation path:
-`project.schematic.execute_vba_code(StoreParameter)` + CST `RebuildForParametricChange`.
-
-Static audit:
-`PASS_R1E1A0_STATIC_AUDIT`
-
-Immutable source:
-`D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst`
-
-Source SHA256:
-`48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223`
-
-Harness SHA256:
-`6d4e71ee018c22f70f5a72ad61b2d488ae53b8ae7ec25acd505a350b1ff7882e`
-
-Audit SHA256:
-`9a188b128bdbabf9df5dc24358ba42b8c549f753f230e31ede488f90fcc969f6`
-
-Contract SHA256:
-`bc08ba1fcc6ab8e4737884637393f0478387b360d3c160703f970c36590954a3`
-
-Runbook SHA256:
-`4b6a8d00d95257f59a608b34b47504d78f9d7c4d3832a07f96a626357743ebe0`
-
-Plan SHA256:
-`0def999ea0d0c9894dd4f7c1054aac170f3166799aedaf43ac538a82a0ae1e5e`
-
-Endpoint proof:
-- P088 = 88 mm;
-- P100 = 100 mm.
-
-Fresh work path:
-`D:\GNSS_Lband_Active_Array\_r1e1a0_pitch_parameterization_work`
-
-Fresh evidence path:
-`evidence/r1e1a0_dc_nw_20260924_build01/`
+Formal source commit:
+`750a036761c3b10a37830c95415b96c1436f3d29`
 
 Formal invocation count:
 1
 
-Silent retry:
-NO
+Runtime:
+99.32 s
 
-BUILD_AUTHORIZED=YES_R1E1A0_ENDPOINT_PROOF_ONLY
+Solver:
+NOT RUN
+
+Endpoint artifacts:
+- P088: `65b649a28e148c8c373f06357caff36a8a4a65b06b898bf8abb96c196a3c688a`;
+- P100: `3746c521ffc628eddd257f96323980ac60b5183a36f536dc77876d99b1e5f779`.
+
+All geometry / periodic metadata / pitch persistence checks passed for both endpoints.
+
+Sole failed predicate:
+`no_pitch_history_warning`.
+
+Root cause:
+the historical R1A3 lineage still contains `StoreParameter "unit_cell_pitch_nominal", 94.0` in model history, so parametric rebuild correctly preserves the user-updated pitch but emits CST's protected-parameter warning.
+
+Classification:
+source-history/tooling HOLD; not a geometry or physics failure.
+
+Evidence:
+`evidence/r1e1a0_dc_nw_20260924_build01/`
+
+## Current recovery design
+
+Task:
+`R1E1-A0-R1-DESIGN-PITCH-READY-CANONICAL-SOURCE`
+
+Recovery architecture:
+1. derive a new R1A3 geometry macro with `MakeSureParameterExists` for `unit_cell_pitch_nominal` and `ground_reference_span`;
+2. reuse the already-qualified R1A5F Pol-A single-port macro unchanged;
+3. derive a parameter-ready periodic macro with `MakeSureParameterExists` for pitch metadata and scan theta/phi;
+4. build a fresh 94-mm periodic Pol-A canonical source;
+5. qualify geometry/port/boundary equivalence and zero parameter-history warnings;
+6. only then open a separate R1E1A0-R2 endpoint-proof ticket.
+
+Historical macros/artifacts remain untouched.
+
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
 
-This authorization covers only the two endpoint build-only variants.
-No solver is implied or authorized.
+No recovery build is authorized yet.

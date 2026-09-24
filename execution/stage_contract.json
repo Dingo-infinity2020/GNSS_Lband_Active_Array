@@ -7,15 +7,14 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "mainline_authority": "PROJECT_MAINLINE.md",
-    "model_identity": "CHARTS_GNSS_R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY",
+    "model_identity": "CHARTS_GNSS_R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE_DESIGN",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
+    "source_commit": "RESOLVE_AT_CLOSEOUT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": false,
-    "scope": "R1E1A0_ENDPOINT_PROOF_ONLY",
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
@@ -24,50 +23,37 @@
   },
   "scientific_freeze": {
     "r1e0c_status": "PASS_R1E0C_SCAN_QUALIFICATION",
-    "r1e1_plan": "docs/R1E1_PITCH_MATERIAL_TRADE_PLAN.md",
-    "current_task": "R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY",
-    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst",
-    "source_sha256": "48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223",
-    "harness_sha256": "6d4e71ee018c22f70f5a72ad61b2d488ae53b8ae7ec25acd505a350b1ff7882e",
-    "audit_sha256": "9a188b128bdbabf9df5dc24358ba42b8c549f753f230e31ede488f90fcc969f6",
-    "contract_sha256": "bc08ba1fcc6ab8e4737884637393f0478387b360d3c160703f970c36590954a3",
-    "runbook_sha256": "4b6a8d00d95257f59a608b34b47504d78f9d7c4d3832a07f96a626357743ebe0",
-    "plan_sha256": "0def999ea0d0c9894dd4f7c1054aac170f3166799aedaf43ac538a82a0ae1e5e",
-    "endpoint_pitches_mm": [
-      88,
-      100
-    ],
-    "pitch_candidates_mm": [
-      88,
-      90,
-      92,
-      94,
-      96,
-      100
-    ],
-    "parameter_chain": "unit_cell_pitch_nominal -> ground_reference_span -> UNITCELL_GROUND_REFERENCE -> periodic bounding box",
-    "parameter_mutation_method": "schematic.execute_vba_code(StoreParameter) + RebuildForParametricChange",
-    "contract": "docs/R1E1A0_PITCH_PARAMETERIZATION_CONTRACT.md",
-    "runbook": "em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY.md",
-    "harness": "scripts/run_r1e1a0_pitch_parameterization_build_only_dc.py",
-    "static_audit": "PASS_R1E1A0_STATIC_AUDIT",
-    "stop_boundary": "two endpoint build-only variants; no solver"
+    "r1e1a0_formal_status": "HOLD_R1E1A0_SOURCE_HISTORY_PARAMETER_DECLARATION",
+    "r1e1a0_formal_source_commit": "750a036761c3b10a37830c95415b96c1436f3d29",
+    "r1e1a0_endpoint_artifacts": {
+      "P088": "65b649a28e148c8c373f06357caff36a8a4a65b06b898bf8abb96c196a3c688a",
+      "P100": "3746c521ffc628eddd257f96323980ac60b5183a36f536dc77876d99b1e5f779"
+    },
+    "r1e1a0_sole_failed_predicate": "no_pitch_history_warning",
+    "r1e1a0_root_cause": "historical R1A3 StoreParameter declaration for mutable pitch",
+    "current_task": "R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE_DESIGN",
+    "contract": "docs/R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_CONTRACT.md",
+    "runbook": "em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0R1_PITCH_READY_SOURCE_BUILD_ONLY.md",
+    "generator": "scripts/generate_r1e1a0r1_pitch_ready_macros.py",
+    "harness": "scripts/run_r1e1a0r1_pitch_ready_source_build_only_dc.py",
+    "static_audit": "PASS_R1E1A0R1_STATIC_AUDIT",
+    "next_execution_contract": "NOT_AUTHORIZED"
   },
   "execution": {
-    "current_stage": "R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY",
-    "formal_invocation_count": 0,
+    "current_stage": "DESIGN_R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE",
+    "last_completed_stage": "R1E1A0_ENDPOINT_PROOF",
+    "last_status": "HOLD_R1E1A0_SOURCE_HISTORY_PARAMETER_DECLARATION",
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1e1a0_pitch_parameterization_work",
-    "evidence": "evidence/r1e1a0_dc_nw_20260924_build01/",
+    "prior_hold_evidence": "evidence/r1e1a0_dc_nw_20260924_build01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1E1A0.json",
-    "state": "ACTIVE",
+    "record_path": "execution/workspace_record_NW_R1E1A0_R1.json",
+    "state": "CHECKPOINTED",
     "purge_allowed": false
   }
 }
