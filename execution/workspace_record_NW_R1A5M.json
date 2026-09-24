@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1A5M-ADAPTIVE-SECOND-ORDER-SOLVE-NW",
+    "stage": "R1A5M_ADAPTIVE_ABSOLUTE_MESH_CONVERGENCE",
+    "status": "READY_FOR_SOLVE"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "state": "ACTIVE"
+  },
+  "source": {
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "branch": "project/r0-charts-scaffold",
+    "head_commit": "RESOLVE_AT_PREFLIGHT",
+    "head_on_trusted_remote": false
+  },
+  "archive": {
+    "mode": "CHECKPOINTED",
+    "destination": "remote Git + R1A5M work after run",
+    "critical_artifacts": [],
+    "completed": false
+  },
+  "closeout": {
+    "task_node": "",
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}

@@ -1,3 +1,5 @@
+[Reading 144 lines from start (total: 144 lines, 0 remaining)]
+
 [Reading 141 lines from start (total: 141 lines, 0 remaining)]
 
 [Reading 139 lines from start (total: 139 lines, 0 remaining)]
@@ -33,7 +35,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1A5M-DESIGN-MESH-CONVERGENCE-CONTRACT**
+Current task: **R1A5M-ADAPTIVE-SECOND-ORDER-SOLVE-NW**
 
 Authoritative current execution state is defined by:
 - `PROJECT_HANDOFF.md`
@@ -41,14 +43,15 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- inspect/compare R1A5 and R1A5R results: YES
-- design/document R1A5M mesh-convergence contract: YES
-- run any new CST solver: NO
-- modify geometry or ports: NO
+- copy the hash-locked R1A4 CST into fresh R1A5M work: YES
+- apply the frozen adaptive second-order solver config: YES
+- run one NW adaptive HF Frequency Domain convergence solve: YES
+- modify geometry/materials/ports: NO
 - optimization/material A-B/production solve/CST251: NO
+- automatic second adaptive run: NO
 
-R1A5R closed PASS for polarization-symmetry convergence.
-Absolute S-parameter mesh/order convergence is not yet proven, so material comparison remains blocked.
+R1A5M fixes the second-order formulation and varies only native tetrahedral h-refinement.
+The run must stop after one formal adaptive convergence qualification.
 
 ## Architecture control
 
@@ -128,6 +131,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
