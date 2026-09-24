@@ -3,16 +3,16 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=43
+HANDOFF_VERSION=44
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
-CURRENT_GATE=R1E0C-FIRST-SCAN-SOLVE
-CURRENT_TASK_ID=R1E0C-B-C60P135-SCAN-SOLVE-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_SOLVE
+CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
+CURRENT_TASK_ID=R1E1-A0-DESIGN-PITCH-PARAMETERIZATION
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=YES_R1E0C_B_C60P135_ONLY
+SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
@@ -372,37 +372,103 @@ Movement versus broadside:
 
 The solved C60P45 artifact is PROTECTED_IN_PLACE.
 
-## Current authorization
+## R1E0C-B C60P135 closed stage
 
-Authorized state:
-`C60P135`
+Status:
+`PASS_R1E0C_B_C60P135_SCAN_SOLVE`
 
-Role:
-60-deg orthogonal-plane sentinel
-
-Scan:
-theta=60 deg, phi=135 deg, outward
-
-BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=YES_R1E0C_B_C60P135_ONLY
-
-Authorized source:
-`D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01\R1E0C_C60P135_SCANSTATE_BUILD_ONLY_V01.cst`
-
-Required source SHA256:
-`c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1`
-
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1e0c_b_c60p135_scan_solve_work`
-
-Fresh evidence:
-`evidence/r1e0c_b_c60p135_dc_nw_20260924_solve01/`
+Formal source commit:
+`b7768b99848da9053a52ac1b1a7cefe2fe782c59`
 
 Formal invocation count:
 1
 
-Silent retry:
-NO
+Runtime:
+115.29 s
 
-No pitch/material/LNA/CST251 work is authorized.
-After this solve, only read-only R1E0C comparison/closeout is allowed without new solve authorization.
+Solved artifact:
+`D:\GNSS_Lband_Active_Array\_r1e0c_b_c60p135_scan_solve_work\R1E0C_B_C60P135_SCAN_SMOKE_V01.cst`
+
+Solved artifact SHA256:
+`8107aff4f656c5013e9d6cf422f7d258ee4e045affa0311b7273c2889918d16c`
+
+Native convergence:
+0.0678618 -> 0.0451358 -> 0.0260878 -> 0.0274831 -> 0.0165357 -> 0.0145798
+
+Termination:
+desired accuracy limit reached
+
+Broadband sweep:
+PASS after 9 frequency samples
+
+Frozen severe-mismatch alerts:
+NONE
+
+Science-band active-impedance range:
+- Re(Z_active): 73.43 to 263.32 ohm
+- Im(Z_active): -63.82 to +137.07 ohm
+- max |Z_active|: 266.40 ohm
+
+The solved C60P135 artifact is PROTECTED_IN_PLACE.
+
+## R1E0C canonical closeout
+
+Status:
+`PASS_R1E0C_SCAN_QUALIFICATION`
+
+Qualified periodic states:
+- broadside reference;
+- C30P45;
+- C45P45;
+- C60P45;
+- C60P135.
+
+Principal-plane core scan through 60 deg:
+`PASS_NO_FROZEN_SEVERE_ALERT`
+
+Orthogonal 60-deg sentinel:
+`PASS_NO_FROZEN_SEVERE_ALERT`
+
+Read-only 60-deg plane comparison:
+- max complex Delta S11 = 0.67023;
+- RMS complex Delta S11 = 0.64286;
+- max |Delta Z_active| = 208.98 ohm;
+- RMS |Delta Z_active| = 173.71 ohm.
+
+No plane-divergence PASS/FAIL threshold was frozen before results, so no post-hoc threshold is applied.
+
+Scientific conclusion:
+the 94-mm baseline is numerically viable through the required 0-60 deg scan gate, but its active source impedance is strongly dependent on scan angle and scan plane.
+
+System consequence:
+final LNA input matching remains blocked.
+
+Closeout evidence:
+`evidence/r1e0c_closeout_20260924/`
+
+## Current R1E1 design
+
+Plan:
+`docs/R1E1_PITCH_MATERIAL_TRADE_PLAN.md`
+
+Current task:
+`R1E1-A0-DESIGN-PITCH-PARAMETERIZATION`
+
+Purpose:
+prove a Parameter-List-safe way to change `unit_cell_pitch_nominal` and rebuild the periodic ground tile without changing radiator/substrate/feed geometry.
+
+Frozen mutation path:
+`project.schematic.execute_vba_code(StoreParameter)` + CST `RebuildForParametricChange`.
+
+Static audit:
+`PASS_R1E1A0_STATIC_AUDIT`
+
+Initial proof endpoints:
+88 mm and 100 mm.
+
+BUILD_AUTHORIZED=NO
+SOLVER_PERMISSION=NO
+MATERIAL_AB_PERMISSION=NO
+LNA_INTEGRATION_PERMISSION=NO
+
+No R1E1 build or solve is authorized by this closeout.

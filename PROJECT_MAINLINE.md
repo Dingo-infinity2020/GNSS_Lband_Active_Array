@@ -81,7 +81,7 @@ Canonical converged diagnostic evidence:
 
 This result is a **baseline**, not a reason to keep optimizing the isolated element.
 
-### M1 — Clean non-crossing passive feed representation — CURRENT
+### M1 - Clean non-crossing passive feed representation - CLOSED
 
 Current gate family:
 `R1A5F`.
@@ -97,7 +97,7 @@ After build-only qualification, run only a short equivalence solve if needed to 
 
 **Do not start an isolated-element optimization campaign here.**
 
-### M2 — Periodic unit-cell baseline — NEXT PRIMARY PHYSICS GATE
+### M2 - Periodic unit-cell baseline - CLOSED PASS
 
 Working stage:
 `R1E0`.
@@ -125,7 +125,7 @@ Questions:
 - is there scan blindness or a strong impedance anomaly;
 - is the current pitch viable to 60 deg.
 
-### M3 — Periodic pitch/material trade — ARRAY ENVIRONMENT, NOT ISOLATED S11
+### M3 - Periodic pitch/material trade - CURRENT PRIMARY PHYSICS GATE
 
 Working stage:
 `R1E1`.
@@ -317,7 +317,7 @@ No stage inherits solver permission from the previous stage.
 
 As of the current handoff:
 
-`R1A5F clean feed build-only -> short isolated equivalence gate -> R1E0 94-mm periodic unit-cell baseline -> R1E1 pitch/material trade -> R1E2 active-impedance atlas`.
+`R1E0 94-mm periodic scan qualification CLOSED PASS -> R1E1 pitch/material trade CURRENT -> R1E2 active-impedance atlas -> R2 active-front-end co-design`.
 
 LNA model validation may proceed in parallel after the periodic workflow begins, but **final active-antenna input matching is blocked until R1E2 provides the scan-dependent active-impedance locus**.
 

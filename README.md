@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E0C-B/C60P135 - authorized 60-deg orthogonal-plane sentinel solve on NW.**
+**R1E1A0 - pitch-parameterization BUILD-ONLY design after R1E0C PASS.**
 
 The isolated-element passive phase is closed.
 
@@ -47,32 +47,30 @@ Preliminary LNA model/circuit research may proceed in parallel, but true active-
 
 ## Latest closed physics gate
 
-R1E0B broadside periodic smoke:
+R1E0C periodic scan qualification:
 
-`PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE`
+`PASS_R1E0C_SCAN_QUALIFICATION`
 
-At 94-mm pitch and broadside, the periodic array materially shifts the source impedance away from the isolated-element intuition.
+The 94-mm baseline numerically passed broadside, 30/45/60-deg principal-plane checks and the 60-deg orthogonal-plane sentinel under the frozen severe-mismatch gates.
 
-Science-band broadside range:
-- Re(Z_active): about 85-264 ohm
-- Im(Z_active): about -84 to +142 ohm
-- |Z_active|: about 105-267 ohm
+However, the two 60-deg planes differ by up to about 209 ohm in active impedance across the science band.
 
-This is why the LNA match is not frozen yet.
+Therefore the pitch/material trade is now the current mainline, and the final LNA input match is still not frozen.
 
 ## Current execution
 
-R1E0C-A and the principal-plane C30P45/C45P45/C60P45 solves are closed PASS. Current work is the single authorized **C60P135 orthogonal-plane sentinel solve**.
+R1E0C scan qualification is closed PASS, including the 60-deg orthogonal-plane sentinel. Current work is **R1E1A0 pitch-parameterization DESIGN ONLY**.
 
-Prepared scan states:
-- theta=30, phi=45
-- theta=45, phi=45
-- theta=60, phi=45
-- theta=60, phi=135
+R1E1A0 endpoint proof:
+- pitch = 88 mm
+- pitch = 100 mm
+
+Parameter update under test:
+`StoreParameter` through direct VBA + `RebuildForParametricChange`
 
 Current permissions:
 - BUILD_AUTHORIZED=NO
-- SOLVER_PERMISSION=YES_R1E0C_B_C60P135_ONLY
+- SOLVER_PERMISSION=NO
 
 Read `PROJECT_HANDOFF.md` for the exact baton.
 
@@ -84,4 +82,6 @@ Read `PROJECT_HANDOFF.md` for the exact baton.
 - `docs/REQUIREMENTS_v0.1.md`
 - `docs/R1E0_PERIODIC_UNIT_CELL_PLAN.md`
 - `docs/R1E0C_FIRST_SCAN_QUALIFICATION_PLAN.md`
+- `docs/R1E1_PITCH_MATERIAL_TRADE_PLAN.md`
+- `docs/R1E1A0_PITCH_PARAMETERIZATION_CONTRACT.md`
 - `docs/SIM_EXECUTION.md`

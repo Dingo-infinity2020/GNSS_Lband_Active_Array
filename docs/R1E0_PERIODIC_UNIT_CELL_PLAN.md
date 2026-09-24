@@ -1,6 +1,6 @@
 # R1E0 94-mm Periodic Unit-Cell Baseline Plan
 
-Status: R1E0A PASS; R1E0B PASS; R1E0C-A PASS; R1E0C-B DESIGN READY
+Status: R1E0A PASS; R1E0B PASS; R1E0C-A PASS; R1E0C-B PASS; R1E0 CLOSED
 
 ## Mainline role
 

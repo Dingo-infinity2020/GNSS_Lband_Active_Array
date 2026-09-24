@@ -23,19 +23,19 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E0C-B-C60P135-SCAN-SOLVE-NW**
+Current task: **R1E1-A0-DESIGN-PITCH-PARAMETERIZATION**
 
 Current permissions:
-- use the qualified C60P135 scan-state CST as immutable source: YES
-- run exactly one C60P135 one-shot sentinel solve on NW: YES
-- extract/qualify active S11 and Z_active for C60P135: YES
-- compare C60P135 versus C60P45 read-only after the solve: YES
-- modify pitch/material/geometry/feed: NO
+- inspect R1E0C closeout evidence: YES
+- design/audit the R1E1A0 pitch-parameterization build-only bundle: YES
+- inspect CST Parameter List / VBA API behavior read-only: YES
+- run R1E1A0 build: NO
+- run any R1E1 solver: NO
+- material A/B solve: NO
 - LNA integration/CST251: NO
-- silent retry: NO
 
-R1E0C-B principal-plane core scan through 60 deg is closed PASS.
-Only C60P135 is authorized in the current solve ticket.
+R1E0C is closed PASS.
+R1E1A0 is DESIGN ONLY until a separate build authorization is frozen.
 
 ## Architecture control
 
@@ -72,12 +72,15 @@ Do not silently redirect the project toward a newly discovered architecture.
 
 ## Current array-physics interpretation
 
-The 94-mm broadside periodic model has already shown that the array environment materially changes source impedance relative to the isolated element.
+R1E0C closed PASS for the 94-mm periodic baseline through the required 0-60 deg scan gate under the frozen severe-mismatch criteria.
+
+The scan-locus evidence also shows large scan-angle and scan-plane dependence, including about 209 ohm maximum active-impedance separation between the two 60-deg planes.
 
 Therefore:
 - do not reopen isolated-element matching optimization;
-- continue scan-dependent active-impedance qualification;
-- use array impedance, not isolated impedance, as the future LNA source environment.
+- move to R1E1 pitch/material trade;
+- do not freeze the LNA input match yet;
+- use the later R1E2 array impedance cloud as the authoritative frontend source environment.
 
 ## SimulationOps discipline
 

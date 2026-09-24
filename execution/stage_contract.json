@@ -7,15 +7,14 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "mainline_authority": "PROJECT_MAINLINE.md",
-    "model_identity": "CHARTS_GNSS_R1E0C_B_C60P135_SCAN_SOLVE",
+    "model_identity": "CHARTS_GNSS_R1E1A0_PITCH_PARAMETERIZATION_DESIGN",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
+    "source_commit": "RESOLVE_AT_CLOSEOUT"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": true,
-    "scope": "R1E0C_B_C60P135_ONLY",
+    "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
@@ -23,36 +22,53 @@
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "state": "C60P135",
-    "theta_deg": 60,
-    "phi_deg": 135,
-    "direction": "outward",
-    "role": "ORTHOGONAL_PLANE_SENTINEL",
-    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01\\R1E0C_C60P135_SCANSTATE_BUILD_ONLY_V01.cst",
-    "source_sha256": "c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1",
-    "comparison_reference": "evidence/r1e0c_b_c60p45_dc_nw_20260924_solve01/active_s11_and_zactive.csv",
-    "contract": "docs/R1E0C_B_SCAN_SOLVE_CONTRACT.md",
-    "solver_config": "source/cst/R1E0C_B_SCAN_SOLVER_CONFIG_V01.mcr",
-    "static_audit": "PASS_R1E0C_B_SCAN_SOLVER_STATIC_AUDIT",
-    "harness": "scripts/run_r1e0c_scan_solve_dc.py",
-    "pass_gate": "PASS_R1E0C_B_C60P135_SCAN_SOLVE",
-    "stop_boundary": "one C60P135 solve then read-only R1E0C comparison/closeout"
+    "r1e0c_status": "PASS_R1E0C_SCAN_QUALIFICATION",
+    "r1e0c_closeout": "evidence/r1e0c_closeout_20260924/",
+    "principal_core_scan_status": "PASS_THROUGH_60_DEG_NO_FROZEN_SEVERE_ALERT",
+    "orthogonal_60_status": "PASS_NO_FROZEN_SEVERE_ALERT",
+    "plane60_max_complex_delta_s11": 0.6702315800171013,
+    "plane60_max_abs_delta_zactive_ohm": 208.97687581823746,
+    "lna_match_freeze": "NOT_READY",
+    "r1e1_plan": "docs/R1E1_PITCH_MATERIAL_TRADE_PLAN.md",
+    "current_task": "R1E1A0_PITCH_PARAMETERIZATION",
+    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst",
+    "source_sha256": "48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223",
+    "endpoint_pitches_mm": [
+      88,
+      100
+    ],
+    "pitch_candidates_mm": [
+      88,
+      90,
+      92,
+      94,
+      96,
+      100
+    ],
+    "parameter_chain": "unit_cell_pitch_nominal -> ground_reference_span -> UNITCELL_GROUND_REFERENCE -> periodic bounding box",
+    "parameter_mutation_method": "schematic.execute_vba_code(StoreParameter) + RebuildForParametricChange",
+    "contract": "docs/R1E1A0_PITCH_PARAMETERIZATION_CONTRACT.md",
+    "runbook": "em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY.md",
+    "harness": "scripts/run_r1e1a0_pitch_parameterization_build_only_dc.py",
+    "static_audit": "scripts/audit_r1e1a0_pitch_parameterization.py",
+    "next_execution_contract": "NOT_AUTHORIZED",
+    "static_audit_status": "PASS_R1E1A0_STATIC_AUDIT"
   },
   "execution": {
-    "current_stage": "R1E0C_B_C60P135_SCAN_SOLVE",
-    "formal_invocation_count": 0,
+    "current_stage": "DESIGN_R1E1A0_PITCH_PARAMETERIZATION",
+    "last_completed_stage": "R1E0C_SCAN_QUALIFICATION",
+    "last_status": "PASS_R1E0C_SCAN_QUALIFICATION",
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1e0c_b_c60p135_scan_solve_work",
-    "evidence": "evidence/r1e0c_b_c60p135_dc_nw_20260924_solve01/",
+    "r1e0c_closeout": "evidence/r1e0c_closeout_20260924/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1E0C_B_C60P135.json",
-    "state": "ACTIVE",
+    "record_path": "execution/workspace_record_NW_R1E1A0.json",
+    "state": "CHECKPOINTED",
     "purge_allowed": false
   }
 }

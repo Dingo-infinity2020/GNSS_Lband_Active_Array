@@ -7,70 +7,83 @@
 
 ## Current stage
 
-R1E0C_B_C60P135_SCAN_SOLVE
+DESIGN_R1E1A0_PITCH_PARAMETERIZATION
 
 BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: true
+SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
+MATERIAL_AB_AUTHORIZED: false
+LNA_INTEGRATION_AUTHORIZED: false
 
-## Host
+## Last completed array-physics gate
 
-NW / DESKTOP-GBTI6Q4
+R1E0C scan qualification
 
-Mode:
-ONE_SHOT_SCAN_SOLVE
+Canonical status:
+PASS_R1E0C_SCAN_QUALIFICATION
 
-## Immutable source
+Qualified states:
+- broadside reference
+- C30P45
+- C45P45
+- C60P45
+- C60P135
 
-D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01\R1E0C_C60P135_SCANSTATE_BUILD_ONLY_V01.cst
+Frozen severe-mismatch alerts:
+none triggered in any scan state
 
-SHA256:
-c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1
+60-deg plane comparison:
+- max complex Delta S11 = 0.67023
+- max |Delta Z_active| = 208.98 ohm
 
-Scan state:
-theta=60 deg, phi=135 deg, outward
+Interpretation:
+94-mm baseline is numerically viable through the required 0-60 deg gate, but active impedance is strongly scan-angle/scan-plane dependent.
 
-Role:
-orthogonal-plane sentinel at the core-scan boundary
+LNA final input-match freeze:
+NOT READY
 
-## Solver bundle
+R1E0C closeout evidence:
+evidence/r1e0c_closeout_20260924/
+
+## Current R1E1A0 design
+
+Plan:
+docs/R1E1_PITCH_MATERIAL_TRADE_PLAN.md
 
 Contract:
-docs/R1E0C_B_SCAN_SOLVE_CONTRACT.md
+docs/R1E1A0_PITCH_PARAMETERIZATION_CONTRACT.md
 
-Config:
-source/cst/R1E0C_B_SCAN_SOLVER_CONFIG_V01.mcr
-
-Static audit:
-PASS_R1E0C_B_SCAN_SOLVER_STATIC_AUDIT
+Runbook:
+em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0_PITCH_PARAMETERIZATION_BUILD_ONLY.md
 
 Harness:
-scripts/run_r1e0c_scan_solve_dc.py
+scripts/run_r1e1a0_pitch_parameterization_build_only_dc.py
 
-## Fresh paths
+Static audit:
+PASS_R1E1A0_STATIC_AUDIT
 
-Work:
-D:\GNSS_Lband_Active_Array\_r1e0c_b_c60p135_scan_solve_work
+Audit script:
+scripts/audit_r1e1a0_pitch_parameterization.py
 
-Evidence:
-evidence/r1e0c_b_c60p135_dc_nw_20260924_solve01/
+Clean source:
+D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst
 
-## Numerical formulation
+Source SHA256:
+48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223
 
-HF Frequency Domain
-tetrahedral second order
-curvature order 3
-General purpose
-HighFrequencyTet / ExpertSystem
-MinPasses 3
-MaxPasses 8
-MaxDeltaS 0.02
-two Delta-S checks
-1.0-1.8 GHz
+Pitch chain:
+unit_cell_pitch_nominal -> ground_reference_span -> UNITCELL_GROUND_REFERENCE -> periodic bounding box
 
-## Stop boundary
+Parameter mutation path under test:
+project.schematic.execute_vba_code with direct StoreParameter, followed by CST RebuildForParametricChange
 
-Exactly one formal C60P135 solve invocation.
-No silent retry.
-After solve, read-only comparison against C60P45 is allowed.
-No pitch/material/LNA/CST251 work.
+Endpoint proof candidates:
+- 88 mm
+- 100 mm
+
+## Stop
+
+R1E1A0 build is not authorized.
+No R1E1 solver is authorized.
+No material A/B is authorized.
+No LNA integration is authorized.
