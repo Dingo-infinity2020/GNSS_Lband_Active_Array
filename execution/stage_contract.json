@@ -11,7 +11,7 @@
     "model_identity": "CHARTS_GNSS_R1A1_SCALED_APERTURE_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_AT_BUILD_PREFLIGHT"
+    "source_commit": "RESOLVE_AT_RECOVERY_PREFLIGHT"
   },
   "toolchain": {
     "simulator": "CST Studio Suite",
@@ -48,9 +48,9 @@
     "SOLVE_AUTHORIZED": false
   },
   "execution": {
-    "current_stage": "BUILD_ONLY_R1A1",
-    "last_completed_stage": "R0_CLOSED_SOURCE_LIMITED",
-    "last_status": "READY_FOR_NW_BUILD_ONLY",
+    "current_stage": "BUILD_ONLY_R1A1_RECOVERY",
+    "last_completed_stage": "BUILD_ONLY_R1A1_ATTEMPT1",
+    "last_status": "HOLD_ENVIRONMENT",
     "one_shot_required": true,
     "silent_retry_allowed": false,
     "fresh_run_directory_required": false,
@@ -69,20 +69,20 @@
     "build_sha256": "",
     "staging_sha256": "",
     "run_sha256": "",
-    "exact_invocation": "",
-    "status_classification": "READY_FOR_BUILD"
+    "exact_invocation": "Attempt1: Miniconda Python 3.13.9 harness import; failed before CST. Recovery: use CST bundled Python 3.6 after explicit HOLD.",
+    "status_classification": "RECOVERY_BUILD_AUTHORIZED"
   },
   "exceptions": [],
   "workspace": {
     "host_alias": "NW",
     "working_path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
     "record_path": "execution/workspace_record_NW_R1A1.json",
-    "state": "ACTIVE",
+    "state": "CHECKPOINTED",
     "archive_mode": "REFERENCE_ONLY",
     "archive_trigger": "R1A1 PASS/HOLD task node",
     "archive_destination": "remote Git + evidence; CST build artifact hash-recorded",
     "purge_allowed": false,
     "cleanup_completed": false,
-    "cleanup_evidence": ""
+    "cleanup_evidence": "Attempt1 HOLD evidence: evidence/r1a1_dc_nw_20260924_1111/"
   }
 }
