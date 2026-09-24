@@ -124,10 +124,15 @@ def zin(s):
 def read_s11(cstfile):
     pf=ProjectFile(cstfile,allow_interactive=True)
     p3=pf.get_3d()
-    path=r"1D Results\S-Parameters\S1,1"
-    if path not in p3.get_tree_items():
-        raise RuntimeError("missing S1,1")
-    return [(float(r[0]),complex(r[1])) for r in p3.get_result_item(path).get_data()]
+    tree=p3.get_tree_items()
+    candidates=[
+      r"1D Results\S-Parameters\S1(1),1(1)",
+      r"1D Results\S-Parameters\S1,1",
+    ]
+    for path in candidates:
+        if path in tree:
+            return [(float(r[0]),complex(r[1])) for r in p3.get_result_item(path).get_data()]
+    raise RuntimeError("missing driven-port self-reflection; tried: "+repr(candidates))
 
 def finite_complex(z):
     return math.isfinite(z.real) and math.isfinite(z.imag)

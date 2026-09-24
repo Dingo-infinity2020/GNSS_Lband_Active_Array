@@ -1,3 +1,5 @@
+[Reading 88 lines from start (total: 88 lines, 0 remaining)]
+
 [Reading 84 lines from start (total: 84 lines, 0 remaining)]
 
 [Reading 80 lines from start (total: 80 lines, 0 remaining)]
@@ -62,7 +64,7 @@ Preliminary LNA circuit/model validation may proceed in parallel with periodic-a
 
 Read `PROJECT_HANDOFF.md`.
 
-Isolated-element passive qualification is closed. Current work is the single authorized R1E0B NW broadside periodic smoke solve. No scan sweep, material trade, LNA integration or CST251 production solve is authorized.
+Isolated-element passive qualification is closed. Current work is R1E0B-R1 read-only result recovery. No CST solver rerun is authorized. On PASS, the next stage is R1E0C first-scan DESIGN.
 
 ## Core documents
 
@@ -72,6 +74,8 @@ Isolated-element passive qualification is closed. Current work is the single aut
 - `docs/REQUIREMENTS_v0.1.md` — system requirements
 - `docs/R1_CHARTS_GNSS_DERIVATIVE_PLAN.md` — R1 design origin/history
 - `docs/SIM_EXECUTION.md` — current SimulationOps execution state
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

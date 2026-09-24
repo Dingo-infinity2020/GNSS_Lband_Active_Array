@@ -1,3 +1,5 @@
+[Reading 204 lines from start (total: 204 lines, 0 remaining)]
+
 [Reading 199 lines from start (total: 199 lines, 0 remaining)]
 
 [Reading 196 lines from start (total: 196 lines, 0 remaining)]
@@ -62,7 +64,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1E0B-BROADSIDE-PERIODIC-SMOKE-SOLVE-NW**
+Current task: **R1E0B-R1-READONLY-RESULT-RECOVERY**
 
 Authoritative current execution state is defined by:
 - `PROJECT_MAINLINE.md`
@@ -71,16 +73,16 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- use the qualified R1E0A periodic CST as immutable source: YES
-- copy it into fresh R1E0B work: YES
-- apply the frozen boundary-preserving numerical solver config: YES
-- run one formal NW broadside periodic smoke solve: YES
-- modify boundary metadata: NO
-- modify geometry/materials/feed port: NO
+- read the solved R1E0B CST through cst.results: YES
+- verify artifact hash and existing periodic evidence: YES
+- export compact active S11 / Z_active qualification data: YES
+- correct future result-path recognition in the harness: YES
+- use DesignEnvironment/modeler: NO
+- rerun solver: NO
 - scan sweep / pitch-material trade / LNA / CST251: NO
-- silent retry or automatic rerun: NO
 
-This authorization is R1E0B-only and is consumed by one formal invocation.
+The original formal invocation remains HOLD in provenance.
+This ticket may only recover/qualify the already solved result.
 
 ## Architecture control
 
@@ -162,6 +164,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

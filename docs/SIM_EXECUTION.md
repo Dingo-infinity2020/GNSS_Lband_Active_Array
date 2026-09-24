@@ -7,67 +7,53 @@
 
 ## Current stage
 
-R1E0B_BROADSIDE_PERIODIC_SMOKE_SOLVE
+R1E0B_R1_READONLY_RESULT_RECOVERY
 
 BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: true
+SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Host
+## Original formal solve
 
-NW / DESKTOP-GBTI6Q4
+Status:
+HOLD_R1E0B_RESULT_PATH_QUALIFICATION
 
-This is a lightweight smoke solve, not a CST251 production run.
+Source commit:
+10b50b0102cd50a4f21ed2d5ee07da80e9c01a63
 
-## Immutable source
-
-D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst
+Artifact:
+D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work\R1E0B_POLA_PERIODIC_BROADSIDE_SMOKE_V01.cst
 
 SHA256:
-48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223
+339021e580efa6aae6dfcfa229e4194b4dcf0bbef854398d44a0efed65aac7ad
 
-## Solver config
+Runtime:
+99.99 s
 
-source/cst/R1E0B_PERIODIC_BROADSIDE_SOLVER_CONFIG_V01.mcr
+Solver itself:
+completed adaptive convergence and broadband sweep.
 
-Static audit:
-PASS_R1E0B_STATIC_AUDIT
+Formal harness failure:
+periodic result-path naming mismatch.
 
-Important:
-Boundary commands = 0.
+## Actual periodic driven-port result path
 
-## Numerical formulation
+1D Results\S-Parameters\S1(1),1(1)
 
-HF Frequency Domain
-tetrahedral second order
-curvature order 3
-General purpose
-HighFrequencyTet / ExpertSystem adaptive
-MinPasses 3
-MaxPasses 8
-MaxDeltaS 0.02
-two Delta-S checks
-1.0–1.8 GHz
+## Recovery
 
-## Fresh execution paths
+Qualifier:
+scripts/qualify_r1e0b_existing_periodic_result.py
 
-Work:
-D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work
+Recovery mode:
+read-only.
 
-Evidence:
-evidence/r1e0b_dc_nw_20260924_smoke01/
-
-## Primary output
-
-Broadside periodic active differential impedance:
-
-Z_active = 100*(1+S11)/(1-S11)
+No DesignEnvironment.
+No modeler.
+No solver.
 
 ## Stop
 
-Exactly one formal invocation.
-No silent retry.
-No scan sweep.
-No pitch/material variation.
-No LNA.
-No CST251 migration.
+Read-only qualification only.
+
+On PASS, move to R1E0C first-scan DESIGN.

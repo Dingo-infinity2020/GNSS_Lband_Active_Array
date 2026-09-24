@@ -3,16 +3,16 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=30
+HANDOFF_VERSION=31
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
-CURRENT_GATE=R1E0B-BROADSIDE-PERIODIC-SMOKE
-CURRENT_TASK_ID=R1E0B-BROADSIDE-PERIODIC-SMOKE-SOLVE-NW
+CURRENT_GATE=R1E0B-BROADSIDE-PERIODIC-SMOKE-RECOVERY
+CURRENT_TASK_ID=R1E0B-R1-READONLY-RESULT-RECOVERY
 TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_SOLVE
+TASK_STATUS=READY_FOR_READONLY_QUALIFICATION
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=YES_R1E0B_ONLY
+SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
@@ -24,109 +24,104 @@ CST251_PERMISSION=NO
 
 Read `PROJECT_MAINLINE.md` first.
 
-R1E0B is the first actual solve of the infinite periodic array environment.
+R1E0B solver authorization has been consumed by exactly one formal invocation.
 
-The authorization in this handoff is limited to one NW broadside periodic smoke solve.
+No solver rerun is authorized.
 
-It does not authorize:
-- R1E0C scan sweep;
-- pitch/material variation;
-- LNA integration;
-- geometry optimization;
-- CST251 production solve.
+## Original formal R1E0B invocation
 
-## Qualified periodic source
+Source HEAD:
+`10b50b0102cd50a4f21ed2d5ee07da80e9c01a63`
 
-`D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst`
+Formal status:
+`HOLD_R1E0B_RESULT_PATH_QUALIFICATION`
 
-Required SHA256:
-`48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223`
-
-Persisted periodic metadata:
-- one clean Pol-A differential port
-- X/Y = unit cell
-- Z = expanded open
-- 94 x 94 mm cell
-- theta = 0 deg
-- phi = 45 deg
-- direction = outward
-
-## R1E0B frozen contract
-
-Contract:
-`docs/R1E0B_BROADSIDE_PERIODIC_SMOKE_CONTRACT.md`
-
-Solver config:
-`source/cst/R1E0B_PERIODIC_BROADSIDE_SOLVER_CONFIG_V01.mcr`
-
-Static audit:
-`PASS_R1E0B_STATIC_AUDIT`
-
-Harness:
-`scripts/run_r1e0b_broadside_periodic_smoke_dc.py`
-
-Critical invariant:
-the solver config contains zero Boundary commands.
-
-## Authorized numerical formulation
-
-- HF Frequency Domain
-- tetrahedral second order
-- curvature order 3
-- General purpose
-- HighFrequencyTet / ExpertSystem adaptive
-- MinPasses 3
-- MaxPasses 8
-- MaxDeltaS 0.02
-- NumberOfDeltaSChecks 2
-- LinearGrowthLimitation 40
-- 1.0–1.8 GHz
-
-## Formal execution
-
-Host:
-NW / DESKTOP-GBTI6Q4
-
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work`
-
-Fresh evidence:
-`evidence/r1e0b_dc_nw_20260924_smoke01/`
-
-Expected result CST:
-`D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work\R1E0B_POLA_PERIODIC_BROADSIDE_SMOKE_V01.cst`
-
-Formal invocation count:
+Invocation count:
 1
 
-Silent retry:
-NO
+Exit code:
+1
 
-## PASS gate
+Runtime:
+99.99 s
 
-`PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE` requires:
-- source/copy hash gates pass;
-- pre-solver periodic metadata remains valid;
-- geometry remains unchanged;
-- one discrete port remains;
-- solver completes;
-- non-empty finite S11;
-- finite derived Z_active;
-- final two native Delta-S <= 0.02;
-- desired-accuracy termination;
-- no max-pass termination;
-- broadband sweep converged;
-- no solver error lines.
+Solved artifact:
+`D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work\R1E0B_POLA_PERIODIC_BROADSIDE_SMOKE_V01.cst`
 
-The isolated clean Pol-A curve is contextual only and has no equality threshold.
+SHA256:
+`339021e580efa6aae6dfcfa229e4194b4dcf0bbef854398d44a0efed65aac7ad`
+
+## Solver evidence already established
+
+Periodic adaptation:
+- 0.0453805
+- 0.0552784
+- 0.0530417
+- 0.0204615
+- 0.0179226
+- 0.0185901
+
+Final two Delta-S values are below 0.02.
+
+CST termination:
+desired accuracy limit reached.
+
+Broadband sweep:
+converged after 7 frequency samples.
+
+The solver recognized:
+Theta=0, Phi=45.
+
+Pre-solver periodic metadata remained valid.
+
+## HOLD classification
+
+The formal harness expected isolated result path:
+
+`1D Results\S-Parameters\S1,1`
+
+The periodic result tree uses:
+
+`1D Results\S-Parameters\S1(1),1(1)`
+
+Classification:
+`PERIODIC_RESULT_PATH_NAMING_MISMATCH`
+
+This is a post-solve qualification HOLD, not a solver/physics failure.
+
+## R1E0B-R1 recovery
+
+Mode:
+READ ONLY.
+
+Qualifier:
+`scripts/qualify_r1e0b_existing_periodic_result.py`
+
+Allowed:
+- read solved CST through cst.results;
+- verify solved artifact hash;
+- read the actual periodic S11 path;
+- export compact S11/Z_active CSV;
+- re-parse existing native convergence;
+- compare against isolated clean Pol-A context;
+- preserve result-tree/warning evidence.
+
+Forbidden:
+- DesignEnvironment/modeler use;
+- CST modification;
+- rebuild;
+- solver rerun;
+- scan/pitch/material/LNA work.
+
+The future R1E0B harness has been corrected to recognize periodic and isolated driven-port result names, but it will not be rerun in this stage.
 
 ## Stop boundary
 
-After this one broadside periodic smoke:
-- return to DESIGN;
-- do not launch theta sweep;
-- do not change pitch/material;
-- do not integrate LNA;
-- do not migrate to CST251 automatically.
+If read-only recovery PASS:
+- close R1E0B broadside periodic smoke as canonical PASS;
+- open R1E0C first-scan DESIGN only.
 
-On PASS, open R1E0C first-scan DESIGN only.
+If recovery HOLD:
+- return to DESIGN.
+
+No solver is currently authorized.
