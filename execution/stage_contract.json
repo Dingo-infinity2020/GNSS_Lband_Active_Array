@@ -11,7 +11,7 @@
     "model_identity": "CHARTS_GNSS_R1A1_SCALED_APERTURE_V01",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_AT_RECOVERY_PREFLIGHT"
+    "source_commit": "bc06173084cf9c62f99f52c4cfee33afdade9770"
   },
   "toolchain": {
     "simulator": "CST Studio Suite",
@@ -44,13 +44,13 @@
     "stop_boundary": "fresh-reopen audit; solver forbidden"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": false
   },
   "execution": {
-    "current_stage": "BUILD_ONLY_R1A1_RECOVERY",
-    "last_completed_stage": "BUILD_ONLY_R1A1_ATTEMPT1",
-    "last_status": "HOLD_ENVIRONMENT",
+    "current_stage": "DESIGN_R1A2_FEED_FREEZE",
+    "last_completed_stage": "BUILD_ONLY_R1A1",
+    "last_status": "PASS_R1A1_SCALED_APERTURE_BUILD_ONLY",
     "one_shot_required": true,
     "silent_retry_allowed": false,
     "fresh_run_directory_required": false,
@@ -58,19 +58,19 @@
   },
   "artifacts": {
     "source_bundle": "repository source/cst + em/cst/R1_CHARTS_LBAND + execution",
-    "build_artifact": "D:\\GNSS_Lband_Active_Array\\_r1a1_scaled_aperture_work\\R1A1_CHARTS_SCALED_APERTURE_BUILD_ONLY_V01.cst",
+    "build_artifact": "D:\\GNSS_Lband_Active_Array\\_r1a1_scaled_aperture_work_recovery\\R1A1_CHARTS_SCALED_APERTURE_BUILD_ONLY_V01.cst",
     "staging_artifact": "",
     "run_directory": "",
-    "qualification_output": "evidence/r1a1_dc_nw_<timestamp>/",
+    "qualification_output": "evidence/r1a1_recovery_dc_nw_20260924_1113/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "evidence": {
-    "source_sha256": "",
-    "build_sha256": "",
+    "source_sha256": "macro:7382b6baa62f86c2e6b49fd6f74eeff6fd1187bd7dec41824309e9d55d2084ad",
+    "build_sha256": "fc039106312861674d13e92983688672e0fce05d77fbcec6712a075fc2343253",
     "staging_sha256": "",
     "run_sha256": "",
-    "exact_invocation": "Attempt1: Miniconda Python 3.13.9 harness import; failed before CST. Recovery: use CST bundled Python 3.6 after explicit HOLD.",
-    "status_classification": "RECOVERY_BUILD_AUTHORIZED"
+    "exact_invocation": "NW/DC successor build: CST bundled Python 3.6 -> scripts/run_r1a1_build_only_dc.py; static audit passed; no solver",
+    "status_classification": "PASS"
   },
   "exceptions": [],
   "workspace": {
@@ -79,10 +79,10 @@
     "record_path": "execution/workspace_record_NW_R1A1.json",
     "state": "CHECKPOINTED",
     "archive_mode": "REFERENCE_ONLY",
-    "archive_trigger": "R1A1 PASS/HOLD task node",
+    "archive_trigger": "R1A1 PASS reached; checkout retained for direct R1A2 design/build successor",
     "archive_destination": "remote Git + evidence; CST build artifact hash-recorded",
     "purge_allowed": false,
     "cleanup_completed": false,
-    "cleanup_evidence": "Attempt1 HOLD evidence: evidence/r1a1_dc_nw_20260924_1111/"
+    "cleanup_evidence": "Evidence committed at 094f11a25e153d5705f9b68d118b4d5ffb0dad9d; active task processes checked none."
   }
 }
