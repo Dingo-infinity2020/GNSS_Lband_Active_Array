@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1E0A-R1-READONLY-AUDIT-RECOVERY",
+    "stage": "R1E0A_R1_READONLY_AUDIT_RECOVERY",
+    "status": "READY_FOR_READONLY_QUALIFICATION"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "state": "ACTIVE"
+  },
+  "source": {
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "branch": "project/r0-charts-scaffold",
+    "head_commit": "RESOLVE_AT_PREFLIGHT",
+    "head_on_trusted_remote": false
+  },
+  "recovery": {
+    "mode": "READ_ONLY",
+    "formal_cst_rerun": false,
+    "original_evidence": "evidence/r1e0a_dc_nw_20260924_build01/",
+    "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst"
+  },
+  "archive": {
+    "mode": "CHECKPOINTED",
+    "completed": false,
+    "purge_allowed": false
+  },
+  "closeout": {
+    "task_node": "",
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}

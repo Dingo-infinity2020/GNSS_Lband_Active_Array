@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=27
+HANDOFF_VERSION=28
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
-CURRENT_GATE=R1E0-PERIODIC-UNIT-CELL-BASELINE
-CURRENT_TASK_ID=R1E0A-PERIODIC-CONFIG-BUILD-ONLY-NW
+CURRENT_GATE=R1E0A-PERIODIC-CONFIG-RECOVERY
+CURRENT_TASK_ID=R1E0A-R1-READONLY-AUDIT-RECOVERY
 TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_BUILD_ONLY
+TASK_STATUS=READY_FOR_READONLY_QUALIFICATION
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_R1E0A_CONFIG_ONLY
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -24,97 +24,83 @@ CST251_PERMISSION=NO
 
 Read `PROJECT_MAINLINE.md` first.
 
-The isolated-element passive stage is closed.
+R1E0 remains the first primary array-physics gate.
 
-R1E0 is now the first primary array-physics gate.
+## R1E0A formal invocation
 
-## R1E0 design
+Source HEAD:
+`814fbffb850d7cc35541ce61213c97c436bd6a2c`
 
-Plan:
-`docs/R1E0_PERIODIC_UNIT_CELL_PLAN.md`
+Formal status:
+`HOLD_R1E0A_PERIODIC_CONFIG_AUDIT`
 
-CST API notes:
-`docs/R1E0_CST_UNIT_CELL_API_NOTES.md`
+Formal invocation count:
+1
 
-Initial lattice:
-- square
-- pitch 94 mm
-- Pol-A clean feed
-- FR4 baseline
+Exit:
+0
 
-## R1E0A authorized build-only task
+Runtime:
+48.46 s
 
-Purpose:
-validate that the actual clean antenna CST can persist the intended unit-cell boundary and scan metadata.
+Solver:
+NOT RUN
 
-Input:
-`D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLA_SINGLE_PORT_V01.cst`
-
-Required SHA256:
-`74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce`
-
-Config:
-`source/cst/R1E0A_PERIODIC_BROADSIDE_BUILD_ONLY_V01.mcr`
-
-Static audit:
-`PASS_R1E0A_STATIC_AUDIT`
-
-Runbook:
-`em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E0A_PERIODIC_BUILD_ONLY.md`
-
-Harness:
-`scripts/run_r1e0a_periodic_build_only_dc.py`
-
-## Frozen periodic metadata
-
-- Xmin/Xmax = unit cell
-- Ymin/Ymax = unit cell
-- Zmin/Zmax = expanded open
-- OpenAddSpaceFactor = 0.5
-- UnitCellFitToBoundingBox = True
-- structure x/y span expected = 94 mm
-- theta = 0 deg
-- phi = 45 deg
-- direction = outward
-- no Floquet ports
-- retained discrete differential port count = 1
-- HF Frequency Domain selected
-- no solver start
-
-## Formal execution
-
-Host:
-NW / DESKTOP-GBTI6Q4
-
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work`
-
-Fresh evidence:
-`evidence/r1e0a_dc_nw_20260924_build01/`
-
-Expected CST:
+Artifact:
 `D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst`
 
-One formal invocation only.
-No silent retry.
+SHA256:
+`48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223`
 
-## PASS gate
+## HOLD classification
 
-`PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY` requires:
+The only failed check was the harness representation of the unit-cell scan-valid Boolean.
 
-- source/copy hash locked;
-- geometry identical to R1A5F Pol-A;
-- port count remains 1;
-- fresh reopen succeeds;
-- x/y boundaries read back as unit cell;
-- z boundaries read back as expanded open;
-- structure x/y spans read back as 94 mm;
-- GetUnitCellScanAngle returns valid;
-- theta=0, phi=45, direction=outward;
-- no solver output.
+Fresh reopen returned:
+- SCAN_QUERY_ERR=0
+- SCAN_VALID=-1
+- theta=0
+- phi=45
+- direction=1 / outward
+
+CST/VBA COM Boolean convention uses nonzero, including -1, for True.
+
+All physical/configuration checks passed:
+- geometry unchanged
+- port count=1
+- x/y boundaries=unit cell
+- z boundaries=expanded open
+- 94x94 mm structure/cell metadata
+- no solver output
+
+Classification:
+`AUDIT_BOOLEAN_ENCODING_MISMATCH`
+
+## R1E0A-R1 recovery
+
+Recovery is read-only.
+
+Qualifier:
+`scripts/qualify_r1e0a_existing_evidence.py`
+
+Allowed actions:
+- read the existing build/reopen evidence;
+- re-hash the existing CST artifact;
+- interpret True/1/-1 as Boolean true;
+- produce a separate requalification summary.
+
+Forbidden:
+- reopen/modify CST for recovery;
+- rerun build;
+- start solver;
+- change boundary metadata.
+
+Future build harness parser has been corrected, but the formal CST invocation will not be repeated.
 
 ## Stop boundary
 
-Stop after metadata persistence qualification.
+After read-only qualification:
+- if PASS, close R1E0A and open R1E0B broadside periodic smoke DESIGN;
+- if HOLD, return to DESIGN.
 
-Do not run R1E0B broadside periodic solver in this task.
+No solver is currently authorized.

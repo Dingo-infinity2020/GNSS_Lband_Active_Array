@@ -1,3 +1,5 @@
+[Reading 192 lines from start (total: 192 lines, 0 remaining)]
+
 [Reading 190 lines from start (total: 190 lines, 0 remaining)]
 
 [Reading 185 lines from start (total: 185 lines, 0 remaining)]
@@ -56,7 +58,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1E0A-PERIODIC-CONFIG-BUILD-ONLY-NW**
+Current task: **R1E0A-R1-READONLY-AUDIT-RECOVERY**
 
 Authoritative current execution state is defined by:
 - `PROJECT_MAINLINE.md`
@@ -65,16 +67,16 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- copy the protected clean Pol-A R1A5F CST into fresh R1E0A work: YES
-- apply the frozen unit-cell/broadside boundary metadata: YES
-- save, close, fresh reopen and audit periodic metadata: YES
-- run any CST solver: NO
-- create Floquet ports: NO
-- modify geometry/materials/feed port: NO
-- scan sweep / pitch-material trade / LNA integration / CST251: NO
+- read the existing R1E0A artifact and evidence: YES
+- run the read-only recovery qualifier: YES
+- correct the future harness Boolean parser: YES
+- reopen/modify CST for recovery: NO
+- rerun R1E0A build: NO
+- run any solver: NO
+- pitch/material/LNA/CST251 work: NO
 
-This is the first array-physics configuration gate.
-Stop after periodic metadata persistence qualification.
+The original formal invocation remains HOLD in history.
+This recovery may only re-interpret existing evidence.
 
 ## Architecture control
 
@@ -156,6 +158,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

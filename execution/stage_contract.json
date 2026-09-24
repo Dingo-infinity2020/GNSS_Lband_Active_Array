@@ -7,15 +7,15 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "mainline_authority": "PROJECT_MAINLINE.md",
-    "model_identity": "CHARTS_GNSS_R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01",
+    "model_identity": "CHARTS_GNSS_R1E0A_READONLY_RECOVERY",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_BUILD_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_RECOVERY_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": false,
-    "scope": "R1E0A_PERIODIC_CONFIG_BUILD_ONLY",
+    "scope": "R1E0A_R1_READONLY_AUDIT_RECOVERY",
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
@@ -23,39 +23,31 @@
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "plan": "docs/R1E0_PERIODIC_UNIT_CELL_PLAN.md",
-    "api_notes": "docs/R1E0_CST_UNIT_CELL_API_NOTES.md",
-    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5f_split_single_port_work\\R1A5F_POLA_SINGLE_PORT_V01.cst",
-    "source_sha256": "74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce",
-    "config": "source/cst/R1E0A_PERIODIC_BROADSIDE_BUILD_ONLY_V01.mcr",
-    "static_audit": "PASS_R1E0A_STATIC_AUDIT",
-    "lattice": "square",
-    "pitch_mm": 94.0,
-    "scan_theta_deg": 0.0,
-    "scan_phi_deg": 45.0,
-    "scan_direction": "outward",
-    "xy_boundary": "unit cell",
-    "z_boundary": "expanded open",
-    "unitcell_fit_to_bounding_box": true,
-    "floquet_ports": false,
-    "retained_discrete_port_count": 1,
-    "pass_gate": "PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY",
-    "stop_boundary": "fresh-reopen periodic metadata qualification; solver forbidden"
+    "original_status": "HOLD_R1E0A_PERIODIC_CONFIG_AUDIT",
+    "hold_classification": "AUDIT_BOOLEAN_ENCODING_MISMATCH",
+    "formal_source_commit": "814fbffb850d7cc35541ce61213c97c436bd6a2c",
+    "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst",
+    "artifact_sha256": "48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223",
+    "qualifier": "scripts/qualify_r1e0a_existing_evidence.py",
+    "recovery_mode": "READ_ONLY",
+    "cst_rerun_authorized": false,
+    "pass_gate": "PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY_READONLY_RECOVERY",
+    "stop_boundary": "read-only qualification; then return to design"
   },
   "execution": {
-    "current_stage": "R1E0A_PERIODIC_CONFIG_BUILD_ONLY",
-    "formal_invocation_count": 0,
+    "current_stage": "R1E0A_R1_READONLY_AUDIT_RECOVERY",
+    "formal_cst_invocation_count": 1,
+    "recovery_cst_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work",
     "evidence": "evidence/r1e0a_dc_nw_20260924_build01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1E0A.json",
+    "record_path": "execution/workspace_record_NW_R1E0A_R1.json",
     "state": "ACTIVE",
     "purge_allowed": false
   }

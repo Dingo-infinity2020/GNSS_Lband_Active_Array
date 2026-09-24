@@ -160,7 +160,7 @@ def run(repo,evidence,work,base_cst):
       "structure_x_span_94mm":close(xspan,94.0,1e-6),
       "structure_y_span_94mm":close(yspan,94.0,1e-6),
       "scan_query_ok":int(st["SCAN_QUERY_ERR"])==0,
-      "scan_valid":st["SCAN_VALID"].lower()=="true",
+      "scan_valid":st["SCAN_VALID"].strip().lower() in ("true","1","-1"),
       "theta_0":close(fval(st,"SCAN_THETA_DEG"),0.0,1e-9),
       "phi_45":close(fval(st,"SCAN_PHI_DEG"),45.0,1e-9),
       "direction_outward":int(st["SCAN_DIRECTION"])==1,
