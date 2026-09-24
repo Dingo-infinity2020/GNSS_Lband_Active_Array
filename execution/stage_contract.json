@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.2",
+  "global_protocol": {
+    "repository": "Dingo-infinity2020/SimulationOps",
+    "document": "GLOBAL_DC_SIMULATION_PROTOCOL.md",
+    "protocol_version": "0.2.4",
+    "minimum_compatible_version": "0.2"
+  },
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "model_identity": "CHARTS_GNSS_R1A1_SCALED_APERTURE_V01",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_branch": "project/r0-charts-scaffold",
+    "source_commit": "RESOLVE_AT_BUILD_PREFLIGHT"
+  },
+  "toolchain": {
+    "simulator": "CST Studio Suite",
+    "simulator_version": "2022.5",
+    "builder_or_adapter": "source/cst/R1A1_CHARTS_SCALED_APERTURE_BUILD_ONLY_V01.mcr",
+    "build_host_alias": "NW",
+    "solve_host_alias": "CST251-C",
+    "container": ""
+  },
+  "scientific_freeze": {
+    "geometry_manifest": "em/cst/R1_CHARTS_LBAND/parameters_r1a1.csv",
+    "material_table": "PEC topology proxy only; substrate/material deferred",
+    "source_modes": [],
+    "frequency_range": "target 1.15-1.65 GHz; no solver in R1A1",
+    "required_outputs": [
+      "object_inventory",
+      "parameter_inventory",
+      "top_view",
+      "oblique_view",
+      "fresh_reopen_inventory",
+      "cst_sha256"
+    ],
+    "pass_gate": "PASS_R1A1_SCALED_APERTURE_BUILD_ONLY",
+    "hold_conditions": [
+      "manifest_or_static_audit_failure",
+      "CST_runtime_syntax_failure",
+      "slot_topology_mismatch",
+      "fresh_reopen_mismatch"
+    ],
+    "stop_boundary": "fresh-reopen audit; solver forbidden"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": false
+  },
+  "execution": {
+    "current_stage": "BUILD_ONLY_R1A1",
+    "last_completed_stage": "R0_CLOSED_SOURCE_LIMITED",
+    "last_status": "READY_FOR_NW_BUILD_ONLY",
+    "one_shot_required": true,
+    "silent_retry_allowed": false,
+    "fresh_run_directory_required": false,
+    "hash_lock_required": true
+  },
+  "artifacts": {
+    "source_bundle": "repository source/cst + em/cst/R1_CHARTS_LBAND + execution",
+    "build_artifact": "D:\\GNSS_Lband_Active_Array\\_r1a1_scaled_aperture_work\\R1A1_CHARTS_SCALED_APERTURE_BUILD_ONLY_V01.cst",
+    "staging_artifact": "",
+    "run_directory": "",
+    "qualification_output": "evidence/r1a1_dc_nw_<timestamp>/",
+    "handoff": "PROJECT_HANDOFF.md"
+  },
+  "evidence": {
+    "source_sha256": "",
+    "build_sha256": "",
+    "staging_sha256": "",
+    "run_sha256": "",
+    "exact_invocation": "",
+    "status_classification": "READY_FOR_BUILD"
+  },
+  "exceptions": [],
+  "workspace": {
+    "host_alias": "NW",
+    "working_path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "record_path": "execution/workspace_record_NW_R1A1.json",
+    "state": "ACTIVE",
+    "archive_mode": "REFERENCE_ONLY",
+    "archive_trigger": "R1A1 PASS/HOLD task node",
+    "archive_destination": "remote Git + evidence; CST build artifact hash-recorded",
+    "purge_allowed": false,
+    "cleanup_completed": false,
+    "cleanup_evidence": ""
+  }
+}
