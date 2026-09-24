@@ -3,42 +3,44 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_AT_CLOSEOUT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false,
+    "scope": "R1E1A0_R2_ENDPOINT_PROOF_ONLY",
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "r1_status": "PASS_R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY",
-    "canonical_source": "D:\\GNSS_Lband_Active_Array\\_r1e1a0r1_pitch_ready_source_work\\R1E1A0R1_POLA_PERIODIC_PITCH_READY_94MM_V01.cst",
-    "canonical_source_sha256": "585929d5bf9cbf46c4a6d0ae40b42baa8e2efff673f79c1026dcff33cb014fc2",
-    "current_task": "R1E1A0_R2_ENDPOINT_PROOF_DESIGN",
+    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a0r1_pitch_ready_source_work\\R1E1A0R1_POLA_PERIODIC_PITCH_READY_94MM_V01.cst",
+    "source_sha256": "585929d5bf9cbf46c4a6d0ae40b42baa8e2efff673f79c1026dcff33cb014fc2",
+    "harness_sha256": "08d71066a7038518a398adbb153d5450ab04cd2e3c30d4991aeb67ed3f644be5",
     "endpoints_mm": [
       88,
       100
     ],
     "contract": "docs/R1E1A0R2_ENDPOINT_PROOF_CONTRACT.md",
     "runbook": "em/cst/R1_CHARTS_LBAND/RUNBOOK_R1E1A0R2_ENDPOINT_PROOF_BUILD_ONLY.md",
-    "harness": "scripts/run_r1e1a0r2_pitch_endpoint_proof_build_only_dc.py",
     "static_audit": "PASS_R1E1A0R2_STATIC_AUDIT",
-    "next_execution_contract": "NOT_AUTHORIZED"
+    "stop_boundary": "two endpoint build-only variants; no solver"
   },
   "execution": {
-    "current_stage": "DESIGN_R1E1A0_R2_ENDPOINT_PROOF",
-    "last_completed_stage": "R1E1A0_R1",
-    "last_status": "PASS_R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY",
+    "current_stage": "R1E1A0_R2_ENDPOINT_PROOF_BUILD_ONLY",
+    "formal_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
+  },
+  "artifacts": {
+    "work": "D:\\GNSS_Lband_Active_Array\\_r1e1a0r2_pitch_endpoint_work",
+    "evidence": "evidence/r1e1a0r2_dc_nw_20260924_build01/"
   },
   "workspace": {
     "host_alias": "NW",
     "record_path": "execution/workspace_record_NW_R1E1A0_R2.json",
-    "state": "CHECKPOINTED",
+    "state": "ACTIVE",
     "purge_allowed": false
   }
 }

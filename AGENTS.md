@@ -23,18 +23,19 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A0-R2-DESIGN-ENDPOINT-PROOF**
+Current task: **R1E1-A0-R2-ENDPOINT-PROOF-BUILD-ONLY-NW**
 
 Current permissions:
-- inspect the completed R1 canonical-source PASS evidence: YES
-- design/audit the R2 88/100-mm endpoint-proof bundle: YES
-- run R2 endpoint proof: NO
+- use the pitch-ready 94-mm canonical source as immutable input: YES
+- run exactly one R2 P088/P100 endpoint-proof BUILD-ONLY invocation on NW: YES
+- fresh-reopen endpoint qualification: YES
 - run any R1E1 solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO
+- silent retry: NO
 
 R1E1A0-R1 is closed PASS.
-R1E1A0-R2 is DESIGN ONLY until its separate build ticket is frozen.
+Only the R2 endpoint-proof build is authorized.
 
 ## Architecture control
 

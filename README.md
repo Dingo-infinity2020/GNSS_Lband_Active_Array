@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E1A0-R2 - 88/100-mm endpoint proof DESIGN after pitch-ready source PASS.**
+**R1E1A0-R2 - authorized 88/100-mm endpoint BUILD-ONLY proof on NW.**
 
 The isolated-element passive phase is closed.
 
@@ -70,13 +70,13 @@ R1E1A0-R1 result:
 `PASS_R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY`.
 
 Current work:
-**R1E1A0-R2 88/100-mm endpoint-proof DESIGN ONLY**.
+**R1E1A0-R2 authorized 88/100-mm endpoint BUILD-ONLY proof**.
 
 Source:
 `R1E1A0R1_POLA_PERIODIC_PITCH_READY_94MM_V01.cst`
 
 Current permissions:
-- BUILD_AUTHORIZED=NO
+- BUILD_AUTHORIZED=YES_R1E1A0_R2_ENDPOINT_PROOF_ONLY
 - SOLVER_PERMISSION=NO
 
 Read `PROJECT_HANDOFF.md` for the exact baton.

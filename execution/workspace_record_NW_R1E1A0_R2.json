@@ -2,14 +2,19 @@
   "schema_version": "0.2.4",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A0-R2-DESIGN-ENDPOINT-PROOF",
-    "stage": "DESIGN_R1E1A0_R2_ENDPOINT_PROOF",
-    "status": "READY_FOR_DESIGN"
+    "task_id": "R1E1-A0-R2-ENDPOINT-PROOF-BUILD-ONLY-NW",
+    "stage": "R1E1A0_R2_ENDPOINT_PROOF_BUILD_ONLY",
+    "status": "READY_FOR_BUILD"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "CHECKPOINTED"
+    "state": "ACTIVE"
+  },
+  "execution": {
+    "mode": "ONE_SHOT_NW_BUILD_ONLY_ENDPOINT_PROOF",
+    "formal_invocation_count": 0,
+    "silent_retry_allowed": false
   },
   "archive": {
     "mode": "CHECKPOINTED",
