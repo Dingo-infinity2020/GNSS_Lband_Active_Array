@@ -1,3 +1,5 @@
+[Reading 196 lines from start (total: 196 lines, 0 remaining)]
+
 [Reading 192 lines from start (total: 192 lines, 0 remaining)]
 
 [Reading 190 lines from start (total: 190 lines, 0 remaining)]
@@ -58,7 +60,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1E0A-R1-READONLY-AUDIT-RECOVERY**
+Current task: **R1E0B-DESIGN-BROADSIDE-PERIODIC-SMOKE**
 
 Authoritative current execution state is defined by:
 - `PROJECT_MAINLINE.md`
@@ -67,16 +69,15 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- read the existing R1E0A artifact and evidence: YES
-- run the read-only recovery qualifier: YES
-- correct the future harness Boolean parser: YES
-- reopen/modify CST for recovery: NO
-- rerun R1E0A build: NO
-- run any solver: NO
-- pitch/material/LNA/CST251 work: NO
+- inspect the qualified R1E0A periodic artifact/evidence: YES
+- design/audit the R1E0B broadside periodic smoke bundle: YES
+- run any CST solver: NO
+- modify periodic boundary metadata: NO
+- modify geometry/materials/feed port: NO
+- scan sweep / pitch-material trade / LNA integration / CST251: NO
 
-The original formal invocation remains HOLD in history.
-This recovery may only re-interpret existing evidence.
+R1E0A is closed PASS through read-only recovery.
+R1E0B is design-only until a separate solver authorization is frozen.
 
 ## Architecture control
 
@@ -158,6 +159,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

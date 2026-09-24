@@ -7,56 +7,58 @@
 
 ## Current stage
 
-R1E0A_R1_READONLY_AUDIT_RECOVERY
+DESIGN_R1E0B_BROADSIDE_PERIODIC_SMOKE
 
 BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Original formal R1E0A invocation
+## Last completed stage
 
-Status:
-HOLD_R1E0A_PERIODIC_CONFIG_AUDIT
+R1E0A periodic configuration qualification
 
-Source commit:
-814fbffb850d7cc35541ce61213c97c436bd6a2c
+Canonical status:
+PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY
 
-Artifact:
+Recovery mode:
+read-only; no CST rerun
+
+## Qualified source for R1E0B
+
 D:\GNSS_Lband_Active_Array\_r1e0a_periodic_build_only_work\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst
 
 SHA256:
 48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223
 
-Runtime:
-48.46 s
+## R1E0B design
 
-Solver:
-not run
+Contract:
+docs/R1E0B_BROADSIDE_PERIODIC_SMOKE_CONTRACT.md
 
-## HOLD reason
+Config:
+source/cst/R1E0B_PERIODIC_BROADSIDE_SOLVER_CONFIG_V01.mcr
 
-Only the original harness Boolean parser failed:
-SCAN_VALID=-1 was not accepted as True.
+Harness:
+scripts/run_r1e0b_broadside_periodic_smoke_dc.py
 
-All boundary, geometry, pitch, scan-angle and no-solver checks passed.
+Static audit:
+PASS_R1E0B_STATIC_AUDIT
 
-## Recovery
+Important:
+the R1E0B solver config contains no Boundary commands.
 
-Read-only qualifier:
-scripts/qualify_r1e0a_existing_evidence.py
+## Intended solver when separately authorized
 
-No CST invocation is authorized.
+- HF Frequency Domain
+- tetrahedral second order
+- adaptive HighFrequencyTet / ExpertSystem
+- MaxDeltaS 0.02
+- two consecutive checks
+- 1.0–1.8 GHz
+- existing unit-cell boundary/scan metadata retained
 
-The recovery may only inspect:
-- existing artifact hash/size;
-- existing build/reopen inventories;
-- existing periodic metadata;
-- absence of solver output.
+## Required result
 
-## Stop
+Broadside active S11 and Z_active for the 94-mm infinite periodic array.
 
-No rebuild.
-No solver.
-No R1E0B execution.
-
-On PASS, move to R1E0B DESIGN only.
+No solver action is currently permitted.

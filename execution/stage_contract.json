@@ -7,15 +7,14 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "mainline_authority": "PROJECT_MAINLINE.md",
-    "model_identity": "CHARTS_GNSS_R1E0A_READONLY_RECOVERY",
+    "model_identity": "CHARTS_GNSS_R1E0B_BROADSIDE_PERIODIC_SMOKE_DESIGN",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_RECOVERY_PREFLIGHT"
+    "source_commit": "RESOLVE_AT_CLOSEOUT"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": false,
-    "scope": "R1E0A_R1_READONLY_AUDIT_RECOVERY",
     "production_solve_authorized": false,
     "optimization_authorized": false,
     "material_ab_authorized": false,
@@ -23,32 +22,32 @@
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "original_status": "HOLD_R1E0A_PERIODIC_CONFIG_AUDIT",
-    "hold_classification": "AUDIT_BOOLEAN_ENCODING_MISMATCH",
-    "formal_source_commit": "814fbffb850d7cc35541ce61213c97c436bd6a2c",
-    "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst",
-    "artifact_sha256": "48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223",
-    "qualifier": "scripts/qualify_r1e0a_existing_evidence.py",
-    "recovery_mode": "READ_ONLY",
-    "cst_rerun_authorized": false,
-    "pass_gate": "PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY_READONLY_RECOVERY",
-    "stop_boundary": "read-only qualification; then return to design"
+    "r1e0a_status": "PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY",
+    "r1e0a_recovery_mode": "READ_ONLY",
+    "r1e0a_artifact": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst",
+    "r1e0a_artifact_sha256": "48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223",
+    "r1e0b_contract": "docs/R1E0B_BROADSIDE_PERIODIC_SMOKE_CONTRACT.md",
+    "r1e0b_solver_config": "source/cst/R1E0B_PERIODIC_BROADSIDE_SOLVER_CONFIG_V01.mcr",
+    "r1e0b_static_audit": "PASS_R1E0B_STATIC_AUDIT",
+    "r1e0b_boundary_commands": 0,
+    "r1e0b_primary_output": "broadside active differential impedance",
+    "next_execution_contract": "NOT_AUTHORIZED"
   },
   "execution": {
-    "current_stage": "R1E0A_R1_READONLY_AUDIT_RECOVERY",
-    "formal_cst_invocation_count": 1,
-    "recovery_cst_invocation_count": 0,
+    "current_stage": "DESIGN_R1E0B_BROADSIDE_PERIODIC_SMOKE",
+    "last_completed_stage": "R1E0A_PERIODIC_CONFIG_BUILD_ONLY",
+    "last_status": "PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY",
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "artifacts": {
-    "evidence": "evidence/r1e0a_dc_nw_20260924_build01/",
+    "r1e0a_evidence": "evidence/r1e0a_dc_nw_20260924_build01/",
     "handoff": "PROJECT_HANDOFF.md"
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1E0A_R1.json",
-    "state": "ACTIVE",
+    "record_path": "execution/workspace_record_NW_R1E0B.json",
+    "state": "CHECKPOINTED",
     "purge_allowed": false
   }
 }

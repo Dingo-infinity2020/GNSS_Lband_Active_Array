@@ -1,6 +1,8 @@
+[Reading 40 lines from start (total: 170 lines, 130 remaining)]
+
 # R1E0 94-mm Periodic Unit-Cell Baseline Plan
 
-Status: DESIGN BASELINE
+Status: R1E0A PASS; R1E0B DESIGN FROZEN
 
 ## Mainline role
 
@@ -38,6 +40,9 @@ Initial pitch:
 
 Implementation:
 Boundary.UnitCellFitToBoundingBox = True.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)][Reading 130 lines from line 40 (total: 170 lines, 0 remaining)]
+
 
 The structure x/y bounding box is fixed by the 94-mm square ground/reference, so the repeated unit cell is 94 mm x 94 mm.
 
@@ -168,3 +173,5 @@ R1E0 does not:
 - optimize the radiator.
 
 Those belong to R1E1/R1E2 and later active-frontend stages.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]

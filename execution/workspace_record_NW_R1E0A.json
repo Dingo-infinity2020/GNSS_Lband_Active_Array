@@ -4,27 +4,38 @@
     "project": "GNSS_Lband_Active_Array",
     "task_id": "R1E0A-PERIODIC-CONFIG-BUILD-ONLY-NW",
     "stage": "R1E0A_PERIODIC_CONFIG_BUILD_ONLY",
-    "status": "READY_FOR_BUILD_ONLY"
+    "status": "PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
-    "state": "ACTIVE"
+    "state": "CHECKPOINTED"
   },
   "source": {
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "branch": "project/r0-charts-scaffold",
-    "head_commit": "RESOLVE_AT_PREFLIGHT",
-    "head_on_trusted_remote": false
+    "formal_source_commit": "814fbffb850d7cc35541ce61213c97c436bd6a2c"
+  },
+  "result": {
+    "original_formal_status": "HOLD_R1E0A_PERIODIC_CONFIG_AUDIT",
+    "hold_classification": "AUDIT_BOOLEAN_ENCODING_MISMATCH",
+    "recovery_status": "PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY_READONLY_RECOVERY",
+    "recovery_cst_rerun": false,
+    "solver_run": false,
+    "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst",
+    "artifact_sha256": "48dfee8146575cae657b9fcb2e52b27920aec7253809c185c435db2d80191223"
   },
   "archive": {
-    "mode": "CHECKPOINTED",
-    "destination": "remote Git + R1E0A build artifact after execution",
-    "critical_artifacts": [],
-    "completed": false
+    "mode": "PROTECTED_IN_PLACE",
+    "critical_artifacts": [
+      "D:\\GNSS_Lband_Active_Array\\_r1e0a_periodic_build_only_work\\R1E0A_POLA_PERIODIC_BROADSIDE_BUILD_ONLY_V01.cst",
+      "evidence/r1e0a_dc_nw_20260924_build01/"
+    ],
+    "completed": true,
+    "purge_allowed": false
   },
   "closeout": {
-    "task_node": "",
+    "task_node": "R1E0A PASS / baton to R1E0B design",
     "handoff_written": true,
     "purge_allowed": false,
     "purged": false
