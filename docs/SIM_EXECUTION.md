@@ -1,54 +1,53 @@
 # SIM_EXECUTION
 
-## Current stage
-
-R1A5R_SECOND_ORDER_SYMMETRY_CONVERGENCE
+## Current state
 
 SimulationOps version: 0.2.4
 
-BUILD_AUTHORIZED: copy/config only
-SOLVE_AUTHORIZED: true
+Current stage:
+DESIGN_R1A5M_MESH_CONVERGENCE_CONTRACT
+
+BUILD_AUTHORIZED: false
+SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 
-## Attempt history
+## Last completed solve
 
-R1A5 first-order:
-- solver completed
-- HOLD only on polarization symmetry
-- max S11/S22 dB difference = 1.504024537
-- reciprocity PASS
-- source/geometry/ports PASS
+R1A5R second-order HF Frequency Domain
 
-## R1A5R numerical delta
+Final status:
+PASS_R1A5R_SYMMETRY_CONVERGED
 
-Only change:
-- tetra first-order -> second-order
-- curvature order 3
-- general-purpose tetra method
+Source HEAD:
+73391ffa61cb1fb7f3b8cc5cb785b9c1a3d0ecc6
 
-Unchanged:
-- source CST hash
-- geometry
-- ports
-- HF Frequency Domain
-- 1.0–1.8 GHz
-- open boundaries
-- 50 mm background
-- adaptation OFF
+R1A5R CST:
+D:\GNSS_Lband_Active_Array\_r1a5r_second_order_work\R1A5R_SECOND_ORDER_V01.cst
 
-## Paths
+SHA256:
+f2254cffe07312270d115e95f5526d5841411a865571dfc22c8a3321a98e24e0
 
-Input:
-D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst
+## Numerical findings
 
-Work:
-D:\GNSS_Lband_Active_Array\_r1a5r_second_order_work
+First-order max Pol-A/B asymmetry:
+1.504024537 dB
 
-Evidence:
-evidence/r1a5r_dc_nw_20260924_second01/
+Second-order max Pol-A/B asymmetry:
+0.558463159 dB
 
-## Stop
+Symmetry convergence:
+PASS
 
-Exactly one second-order solve.
-No automatic adaptation follow-up.
-No geometry edit.
+Absolute S-parameter convergence:
+NOT YET PROVEN
+
+Reason:
+first- versus second-order S curves differ materially, especially above 1.5 GHz.
+
+## R1A5M boundary
+
+R1A5M is design-only.
+
+No solver invocation is permitted until a mesh-convergence contract is frozen and explicitly authorized.
+
+Material A/B and production science remain blocked on R1A5M.

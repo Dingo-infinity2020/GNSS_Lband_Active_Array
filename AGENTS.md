@@ -1,3 +1,5 @@
+[Reading 141 lines from start (total: 141 lines, 0 remaining)]
+
 [Reading 139 lines from start (total: 139 lines, 0 remaining)]
 
 [Reading 138 lines from start (total: 138 lines, 0 remaining)]
@@ -31,7 +33,7 @@ Before changing any scientific or engineering artifact, read:
 
 ## Current gate
 
-Current task: **R1A5R-SECOND-ORDER-SOLVE-NW**
+Current task: **R1A5M-DESIGN-MESH-CONVERGENCE-CONTRACT**
 
 Authoritative current execution state is defined by:
 - `PROJECT_HANDOFF.md`
@@ -39,15 +41,14 @@ Authoritative current execution state is defined by:
 - `execution/stage_contract.json`
 
 Current permissions:
-- copy the hash-locked R1A4 CST into fresh R1A5R work: YES
-- apply the frozen second-order numerical config: YES
-- run one NW second-order HF Frequency Domain solve: YES
+- inspect/compare R1A5 and R1A5R results: YES
+- design/document R1A5M mesh-convergence contract: YES
+- run any new CST solver: NO
 - modify geometry or ports: NO
-- enable mesh adaptation: NO
 - optimization/material A-B/production solve/CST251: NO
 
-R1A5 first-order completed but is HOLD only on the <=1 dB Pol-A/B symmetry integrity gate.
-R1A5R changes numerical tetrahedral order/method only.
+R1A5R closed PASS for polarization-symmetry convergence.
+Absolute S-parameter mesh/order convergence is not yet proven, so material comparison remains blocked.
 
 ## Architecture control
 
@@ -127,6 +128,8 @@ Stop and document instead of guessing when:
 - a proposed added feature has no quantified problem it solves.
 
 A HOLD is an acceptable scientific outcome.
+
+[executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 
 [executed on device: DESKTOP-GBTI6Q4 (fb6fe085-c539-483b-9729-1bab7aadce3f)]
 

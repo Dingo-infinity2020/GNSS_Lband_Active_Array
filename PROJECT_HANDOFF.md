@@ -3,95 +3,98 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=16
+HANDOFF_VERSION=17
 CANONICAL_BRANCH=project/r0-charts-scaffold
-CURRENT_GATE=R1A5R-NUMERICAL-SYMMETRY-CONVERGENCE
-CURRENT_TASK_ID=R1A5R-SECOND-ORDER-SOLVE-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_SOLVE
+CURRENT_GATE=R1-CHARTS-GNSS-DERIVATIVE
+CURRENT_TASK_ID=R1A5M-DESIGN-MESH-CONVERGENCE-CONTRACT
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_COPY_AND_CONFIG_ONLY
-SOLVER_PERMISSION=YES_R1A5R_ONLY
+BUILD_AUTHORIZED=NO
+SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## R1A5 attempt-1
+## Closed stages
 
-Status:
-`HOLD_R1A5_DIAGNOSTIC_INTEGRITY`
+- R1A1: PASS_R1A1_SCALED_APERTURE_BUILD_ONLY
+- R1A2: PASS_R1A2_FEED_REFERENCE_BUILD_ONLY
+- R1A3: PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW
+- R1A3 human review: PASS
+- R1A4: PASS_R1A4_DIFFERENTIAL_PORT_BUILD_ONLY
+- R1A4Q: PASS_R1A4Q_NO_HARD_SHORT_WITH_PARASITIC_COUPLING
+- R1A5: HOLD_R1A5_DIAGNOSTIC_INTEGRITY
+- R1A5R: PASS_R1A5R_SYMMETRY_CONVERGED
 
-Solver completed successfully.
-Only failed gate:
-max |S11_dB-S22_dB| <= 1.0 dB.
+## R1A5 / R1A5R result
 
-Observed:
-- max asymmetry = 1.504024537 dB @ 1.4136 GHz
-- best Pol-A = -18.593128 dB @ 1.3976 GHz
-- best Pol-B = -17.137847 dB @ 1.3936 GHz
-- reciprocity error = 1.71625e-4
-- all four S curves complete, 1001 points
-- geometry/ports/hash provenance PASS
+R1A5 first-order tetra:
+- max Pol-A/B dB asymmetry = 1.504024537 dB
+- best S11 = -18.593128 dB @ 1.3976 GHz
+- best S22 = -17.137847 dB @ 1.3936 GHz
+- formal result = HOLD on the pre-frozen <=1.0 dB symmetry gate
 
-Evidence:
-`evidence/r1a5_dc_nw_20260924_smoke01/`
+R1A5R second-order tetra:
+- max Pol-A/B dB asymmetry = 0.558463159 dB
+- best S11 = -19.145166 dB @ 1.7520 GHz
+- best S22 = -19.703624 dB @ 1.7520 GHz
+- reciprocity PASS
+- all result/provenance gates PASS
 
-## R1A5R purpose
+Conclusion:
+the first-order polarization asymmetry was primarily numerical/discretization-related.
 
-Test numerical convergence before any physical design change.
+## Important absolute-convergence limitation
 
-Immutable input remains the original R1A4 CST:
+The first- and second-order absolute S-parameter curves are not sufficiently similar to claim mesh/order convergence.
+
+Observed sampled -10 dB bands:
+
+First-order:
+- Pol-A 1.2144–1.6176 GHz
+- Pol-B 1.2248–1.5904 GHz
+
+Second-order:
+- Pol-A 1.1816 GHz through the 1.8 GHz sweep limit
+- Pol-B 1.1776 GHz through the 1.8 GHz sweep limit
+
+Maximum first-vs-second dB differences:
+- S11 ~12.25 dB
+- S22 ~13.15 dB
+- S21 ~16.31 dB
+
+Therefore second-order is the preferred diagnostic baseline for symmetry, but absolute antenna performance is still provisional.
+
+## Current next task
+
+R1A5M is DESIGN only.
+
+Goal:
+define a controlled mesh-convergence study around the second-order HF Frequency Domain model without changing physical geometry, ports, materials, boundary family, or frequency band.
+
+The R1A5M contract must define:
+- refinement variable(s);
+- number of allowed refinement levels/passes;
+- convergence metrics for S11/S22 and resonance locations;
+- mesh/resource limits on NW;
+- when to escalate to CST251 if needed;
+- exact PASS/HOLD criteria;
+- artifact lifecycle.
+
+No solve is currently authorized.
+
+## Protected/checkpointed artifacts
+
+R1A4 source:
 `D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst`
 
-Required SHA256:
-`4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364`
+R1A5 first-order result:
+`D:\GNSS_Lband_Active_Array\_r1a5_diagnostic_smoke_work\R1A5_DIAGNOSTIC_SMOKE_V01.cst`
 
-R1A5R changes only numerical tetrahedral settings:
-- second-order basis
-- curvature order 3
-- General purpose tetrahedral method
-- adaptation OFF
+R1A5R second-order result:
+`D:\GNSS_Lband_Active_Array\_r1a5r_second_order_work\R1A5R_SECOND_ORDER_V01.cst`
 
-Unchanged:
-- geometry
-- ports
-- boundary
-- 50 mm background
-- 1.0–1.8 GHz
-- solver family
-- materials
-
-Authoritative contract:
-`docs/R1A5R_SYMMETRY_CONVERGENCE_CONTRACT.md`
-
-Static audit:
-`PASS_R1A5R_STATIC_AUDIT`
-
-## Authorized execution
-
-Host:
-NW
-
-Fresh work:
-`D:\GNSS_Lband_Active_Array\_r1a5r_second_order_work`
-
-Fresh evidence:
-`evidence/r1a5r_dc_nw_20260924_second01/`
-
-Formal invocation:
-one shot only.
-
-Silent retry:
-NO.
-
-## PASS/HOLD
-
-PASS_R1A5R_SYMMETRY_CONVERGED if:
-- normal provenance/result gates pass;
-- max |S11_dB-S22_dB| <= 1.0 dB.
-
-Otherwise classify the numerical trend and return to DESIGN.
-
-No geometry change, adaptation follow-up, optimization, material A/B, production solve or CST251 is pre-authorized.
+Do not purge these before the R1A5M contract decides which are required for convergence comparison.
