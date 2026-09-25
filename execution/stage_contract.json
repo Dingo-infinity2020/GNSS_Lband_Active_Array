@@ -3,12 +3,12 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_SOLVE_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": true,
-    "scope": "R1E1A2_SUPPORT_BUILD_4_PLUS_R1E1A3_SUPPORT_SOLVE_4_ONLY",
+    "scope": "R1E1A3_SUPPORT_SOLVE_4_ONE_SHOT_ONLY",
     "production_solve_authorized": true,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
@@ -17,15 +17,19 @@
   "scientific_freeze": {
     "contract": "docs/R1E1A2A3_SUPPORT_SENSITIVITY_CONTRACT.md",
     "material_table": "em/cst/R1_CHARTS_LBAND/materials_r1e1a2_support.csv",
-    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a1_six_pitch_fr4_work\\R1E1A1_P094_PITCH_BUILD_ONLY_V01.cst",
-    "source_sha256": "fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e",
-    "build_matrix": ["S1_BONDED_B0","S1_BONDED_C60P45","S1_BONDED_C60P135","S4_PEC_B0"],
-    "solve_matrix": ["S1_BONDED_B0","S1_BONDED_C60P45","S1_BONDED_C60P135","S4_PEC_B0"],
-    "stop_boundary": "close support sensitivity gate; do not start R1E1B"
+    "r1e1a2_canonical_status": "PASS_R1E1A2_SUPPORT_BUILD_ONLY_READONLY_RECOVERY",
+    "solve_sources": {
+      "S1_BONDED_B0": {"path": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work\\R1E1A2_S1_BONDED_B0_BUILD_ONLY_V01.cst", "sha256": "addcd7a30fabdac49227b9f8ab8f05a6832266f0e00b58d288982abec13bae95"},
+      "S1_BONDED_C60P45": {"path": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work\\R1E1A2_S1_BONDED_C60P45_BUILD_ONLY_V01.cst", "sha256": "9c66bad44df42761aa09bacca835704dbc9d0e9eea458cd5088bb674d6ce8105"},
+      "S1_BONDED_C60P135": {"path": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work\\R1E1A2_S1_BONDED_C60P135_BUILD_ONLY_V01.cst", "sha256": "05ef5bb2ff7094072bae01895b2aa066d16abbf2213ef68e42202479745af789"},
+      "S4_PEC_B0": {"path": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work\\R1E1A2_S4_PEC_B0_BUILD_ONLY_V01.cst", "sha256": "3962a20eb07c3db0f920304a9f3fc90d33e6946c03c753a9f43e99f4ede3223c"}
+    },
+    "solve_order": ["S1_BONDED_B0","S1_BONDED_C60P45","S1_BONDED_C60P135","S4_PEC_B0"],
+    "stop_boundary": "close R1E1A3 support science gate; do not start R1E1B"
   },
   "execution": {
-    "current_stage": "R1E1A2A3_SUPPORT_BUILD_AND_SENSITIVITY",
-    "formal_build_invocation_count": 0,
+    "current_stage": "R1E1A3_SUPPORT_SENSITIVITY_SOLVE",
+    "formal_build_invocation_count": 1,
     "formal_solve_invocation_count": 0,
     "one_shot_required": true,
     "silent_retry_allowed": false,
@@ -38,7 +42,8 @@
   },
   "workspace": {
     "host_alias": "NW",
-    "state": "ACTIVE",
+    "record_path": "execution/workspace_record_NW_R1E1A2A3.json",
+    "state": "CHECKPOINTED",
     "purge_allowed": false
   }
 }

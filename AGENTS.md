@@ -27,8 +27,9 @@ Current task: **R1E1-A2A3-SUPPORT-BUILD-AND-SENSITIVITY-NW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array sources and evidence: YES
-- execute exactly the frozen four-state R1E1A2 support BUILD-ONLY matrix on NW: YES
-- after R1E1A2 BUILD PASS, execute exactly four independent R1E1A3 one-shot support-sensitivity solves on NW: YES
+- R1E1A2 support BUILD-ONLY authorization is consumed; do not rerun build
+- R1E1A2 canonical build status is PASS via read-only recovery
+- execute exactly four independent R1E1A3 one-shot support-sensitivity solves on NW: YES
 - run any R1E1B pitch-screen solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO
