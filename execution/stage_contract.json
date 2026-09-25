@@ -3,33 +3,31 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_RECOVERY_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_PREFLIGHT"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": true,
     "production_solve_authorized": true,
-    "scope": "R1E1A3R1_B0_RECOVERY_THEN_REMAINING_3_ONLY_IF_R1_PASS",
+    "scope": "R1E1A3R1_REMAINING_MATRIX_AFTER_B0_PASS",
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "last_build_status": "PASS_R1E1A2_SUPPORT_BUILD_ONLY_READONLY_RECOVERY",
-    "trigger_hold": "HOLD_R1E1A3_S1_BONDED_B0_NUMERICAL_MAXPASSES",
-    "recovery_plan": "docs/R1E1A3R1_NUMERICAL_RECOVERY_PLAN.md",
+    "b0_recovery_status": "PASS_R1E1A3R1_S1_BONDED_B0_SOLVE_AND_BENIGN_GATE",
+    "b0_result_sha256": "9ca14907abb5a839c399452ef88a7f949dd3df4476992918d1bba5b7c33b71a9",
     "solver_config": "source/cst/R1E1A3R1_SUPPORT_SOLVER_CONFIG_V02.mcr",
-    "sole_numerical_change": "MaxPasses 8 -> 12",
-    "recovery_source_sha256": "addcd7a30fabdac49227b9f8ab8f05a6832266f0e00b58d288982abec13bae95",
-    "conditional_remaining_states": ["S1_BONDED_C60P45","S1_BONDED_C60P135","S4_PEC_B0"],
+    "remaining_states": ["S1_BONDED_C60P45","S1_BONDED_C60P135","S4_PEC_B0"],
     "physical_gate": {"max_complex_delta_s11":0.05,"max_abs_delta_zactive_ohm":10.0},
     "stop_boundary": "stop on any HOLD; do not start R1E1B"
   },
   "execution": {
-    "current_stage": "R1E1A3R1_NUMERICAL_RECOVERY_SOLVE",
+    "current_stage": "R1E1A3R1_REMAINING_SUPPORT_MATRIX",
     "formal_build_invocation_count": 1,
-    "formal_solve_invocation_count_prior": 1,
-    "formal_recovery_invocation_count": 0,
+    "formal_original_solve_invocation_count": 1,
+    "formal_recovery_solve_invocation_count": 1,
+    "next_state": "S1_BONDED_C60P45",
     "one_shot_required": true,
     "silent_retry_allowed": false,
     "hash_lock_required": true

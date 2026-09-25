@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=58
+HANDOFF_VERSION=59
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
 CURRENT_TASK_ID=R1E1-A3-R1-NUMERICAL-RECOVERY-SOLVE-NW
 TASK_OWNER=DC_NW
-TASK_STATUS=AUTHORIZED_READY_FOR_PREFLIGHT
+TASK_STATUS=R1_PASS_CONTINUE_REMAINING_MATRIX
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=YES_R1_RECOVERY_PLUS_REMAINING_MATRIX_IF_R1_PASS
@@ -673,3 +673,13 @@ Scope is frozen as: first rerun only `S1_BONDED_B0` with `MaxPasses=12`; all oth
 
 Recovery harness snapshots and restores immutable R1E1A2 build-evidence files to neutralize CST history replay of absolute audit paths.
 No R1E1B, material A/B, LNA integration, or CST251 execution is authorized.
+
+## R1E1A3-R1 broadside recovery PASS
+
+`S1_BONDED_B0` recovery completed with strict numerical PASS and benign-gate PASS.
+Adaptive final two Delta-S values: 0.0164063, 0.0144292; desired-accuracy termination; broadband convergence PASS.
+Max support-vs-bare |Delta S11| = 0.02950756; max |Delta Z_active| = 5.58606 ohm.
+Solved SHA256: `9ca14907abb5a839c399452ef88a7f949dd3df4476992918d1bba5b7c33b71a9`.
+
+Conditional authorization now opens the remaining sequence:
+`S1_BONDED_C60P45 -> S1_BONDED_C60P135 -> S4_PEC_B0`, each one-shot under the identical MaxPasses=12 recovery config. Any HOLD stops the sequence.
