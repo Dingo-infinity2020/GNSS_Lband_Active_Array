@@ -261,7 +261,7 @@ def run(repo,evidence,work,source):
 
     summary={
       "mode":"R1E1A4A_H3A_V02_FR4_BRIDGED_MORTISE_BUILD_ONLY",
-      "simulationops":"0.2.5",
+      "simulationops":"0.2.6",
       "solver_run":False,
       "source_sha256":SOURCE_SHA,
       "result_cst":dst,

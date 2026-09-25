@@ -2,9 +2,9 @@
   "schema_version": "0.2.6",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A4A-H3A-V02-FR4-BRIDGED-MORTISE-BUILD-ONLY-NW",
-    "stage": "R1E1A4A_H3A_V02_FR4_BRIDGED_MORTISE_BUILD_ONLY",
-    "status": "AUTHORIZED_READY_FOR_PREFLIGHT"
+    "task_id": "R1E1-A4A-H3A-V02-HUMAN-3D-REVIEW",
+    "stage": "R1E1A4A_H3A_V02_HUMAN_3D_REVIEW",
+    "status": "PASS_BUILD_AWAIT_HUMAN_REVIEW"
   },
   "workspace": {
     "host_alias": "NW",
@@ -12,17 +12,18 @@
     "state": "CHECKPOINTED"
   },
   "h3a_v02": {
-    "build_invocation_count": 0,
-    "build_authorized": true,
-    "solve_authorized": false,
-    "active_device_authorized": false,
-    "intersection_gate_required": true,
-    "substrate_volume_proof_required": true,
-    "silent_retry_allowed": false
+    "build_invocation_count": 1,
+    "canonical_status": "PASS_R1E1A4A_H3A_V02_FR4_BRIDGED_MORTISE_BUILD_ONLY",
+    "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3a_v02_build_work\\R1E1A4A_H3A_ORTHOGONAL_STALK_BUILD_ONLY_V02.cst",
+    "artifact_sha256": "9e810560fc8fc759a88d4ac5fc39067863a1e078b6f01e6e343b004891201db5",
+    "protected_in_place": true,
+    "solver_run": false,
+    "intersection_gate_executed": true,
+    "substrate_volume_proved": true
   },
   "archive": {
     "mode": "PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE",
-    "completed": false,
+    "completed": true,
     "purge_allowed": false
   }
 }

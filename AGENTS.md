@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H3A-V02-FR4-BRIDGED-MORTISE-BUILD-ONLY-NW**
+Current task: **R1E1-A4A-H3A-V02-HUMAN-3D-REVIEW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -47,10 +47,11 @@ Current permissions:
 - qualified V0.2 artifact is protected in place with SHA256 4756a525c407bac9f6de1c42c9274b74825a45a6b3cae81e60f1e67e64494064
 - human review of H2A V0.2 found unintended geometry interference; the artifact is retained but is NOT an eligible solve source
 - SimulationOps >=0.2.5 requires CST Geometry Intersection Check after fresh reopen before BUILD PASS
-- H3A V0.1 BUILD-ONLY remains closed PASS and immutable, but human review found its top tenons lie inside the parent INNER_N/S/E/W FR4 through-slots, so V0.1 is not a mechanically valid tenon/mortise joint and is not solve-eligible
-- H3A V0.2 freezes four local dielectric-only FR4 bridges around the +/-12-mm top tenons, then cuts true 3.30 x 1.25-mm mortises through those bridges; top copper remains unfilled
-- exactly one H3A V0.2 BUILD-ONLY invocation on NW is authorized
-- V0.2 must satisfy SimulationOps >=0.2.6, CST intersection gate, and the expected radiator-substrate volume increase
+- H3A V0.1 remains immutable historical evidence but is not solve-eligible because its top tenons sat inside the parent FR4 through-slots without true mortise walls
+- H3A V0.2 FR4-bridged mortise BUILD-ONLY is closed PASS; formal V0.2 invocation count = 1; do not rebuild
+- V0.2 artifact SHA256 = 9e810560fc8fc759a88d4ac5fc39067863a1e078b6f01e6e343b004891201db5
+- fresh reopen proved substrate volume 4518.70408162357 mm^3, bridge helpers consumed, top copper unbridged, zero RF ports, no solver results, CST intersection gate executed
+- current task is H3A V0.2 human 3D/mechanical review only
 - no H3A solve, H3B continuation, active transistor/device integration, H1R solve, follow-on scan, S4 sentinel or R1E1B pitch-screen solver is authorized
 - material A/B solve: NO
 - physical LNA integration/CST251: NO
