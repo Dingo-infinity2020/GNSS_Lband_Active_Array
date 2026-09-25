@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H3B-T01-TRANSITION-COUPON-BUILD-ONLY-NW**
+Current task: **R1E1-A4A-H3B-T01-HUMAN-3D-REVIEW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -183,3 +183,10 @@ Stop and document instead of guessing when:
 - no antenna radiator, real LNA, input match, balun, filter, final connector or array geometry is present;
 - BUILD PASS requires SimulationOps 0.2.6 intersection gate;
 - no solve or optimization sweep is authorized.
+
+## H3B-T01 build closeout
+- H3B-T01 standalone coupon BUILD-ONLY is closed PASS; formal invocation count = 1; do not rebuild.
+- artifact SHA256 = f321b678d390470a2420df40fd6d0cf6553cc041f9219bfcd011c7e41fbadf3d.
+- fresh reopen verified 38 solids, zero RF ports, no solver results and completed CST intersection gate.
+- current task is human 3D/manufacturing review only.
+- no passive solve, optimization sweep, H3B-I01 integration or active-device execution is authorized.

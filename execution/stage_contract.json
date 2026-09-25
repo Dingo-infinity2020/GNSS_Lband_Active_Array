@@ -3,33 +3,36 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_H3B_T01_BUILD_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
-    "cst251_authorized": false,
-    "scope": "ONE_H3B_T01_TRANSITION_COUPON_BUILD_ONLY_ON_NW"
+    "cst251_authorized": false
   },
   "scientific_freeze": {
     "mechanical_baseline": "H3A_ORTHOGONAL_STALK_ASSEMBLY_V02_FR4_BRIDGED_MORTISE",
     "optimization_route": "docs/R1E1A4A_H3B_ACTIVE_ELEMENT_OPTIMIZATION_ROUTE_FREEZE_V01.md",
     "candidate": "H3B_T01_POST_LNA_ORTHOGONAL_TRANSITION_COUPON_V01",
-    "freeze_doc": "docs/R1E1A4A_H3B_T01_TRANSITION_COUPON_FREEZE_V01.md",
-    "standalone_coupon": true,
+    "build_status": "PASS_R1E1A4A_H3B_T01_TRANSITION_COUPON_BUILD_ONLY",
+    "artifact_sha256": "f321b678d390470a2420df40fd6d0cf6553cc041f9219bfcd011c7e41fbadf3d",
+    "shape_count": 38,
+    "port_count": 0,
+    "solver_run": false,
     "rp1": "HORIZONTAL_Y_PLUS_12MM",
     "rp2": "VERTICAL_Z_MINUS_12MM",
-    "rf_port_count_target": 0,
-    "active_device": "NONE",
-    "mandatory_build_gate": "FRESH_REOPEN_PLUS_CST_INTERSECTION_GATE",
-    "stop_boundary": "STOP_AFTER_T01_BUILD_QUALIFICATION_FOR_HUMAN_3D_REVIEW"
+    "intersection_gate_executed": true,
+    "human_review_required": true,
+    "review_guide": "docs/R1E1A4A_H3B_T01_3D_REVIEW_GUIDE.md",
+    "next_stage": "HUMAN_3D_REVIEW_BEFORE_T01_PASSIVE_SOLVE",
+    "stop_boundary": "AWAIT_HUMAN_3D_REVIEW; NO SOLVE"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01_TRANSITION_COUPON_BUILD_ONLY",
-    "formal_build_invocation_count": 0,
+    "current_stage": "R1E1A4A_H3B_T01_HUMAN_3D_REVIEW",
+    "formal_build_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
