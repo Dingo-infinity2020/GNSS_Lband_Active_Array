@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=73
+HANDOFF_VERSION=74
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H2A-V02-SERVICE-ARCHITECTURE-BUILD-ONLY-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=AUTHORIZED_BUILD_READY
+CURRENT_TASK_ID=R1E1-A4A-H2A-V02-HUMAN-3D-REVIEW
+TASK_OWNER=HUMAN_REVIEW
+TASK_STATUS=PASS_BUILD_AWAIT_HUMAN_REVIEW
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_ONE_H2AV02_BUILD_ONLY
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -884,3 +884,22 @@ V0.2 adds MHF4/U.FL-class board-side connector envelopes, 0.81-mm micro-coax ser
 The tube electrical-bond state is deliberately not frozen. T0/T1/T2 belongs to a later passive RF study. No solver, active LNA, matching network, bias network or H1R recovery is authorized.
 
 Stop after one fresh-reopen build qualification for human 3D review.
+
+## H2A V0.2 build-only closeout
+
+Canonical status: `PASS_R1E1A4A_H2A_V02_SERVICE_ARCH_BUILD_ONLY`.
+
+One formal build-only invocation was consumed on NW. Fresh reopen verified 56 solids, exact component-family counts, zero RF ports, no residual cutting tools, 94-mm unit-cell/broadside metadata and zero solver results/markers.
+
+Qualified artifact:
+`D:\GNSS_Lband_Active_Array\_r1e1a4a_h2av02_build_work\R1E1A4A_H2A_V02_SERVICE_ARCH_BUILD_ONLY_V01.cst`
+
+SHA256:
+`4756a525c407bac9f6de1c42c9274b74825a45a6b3cae81e60f1e67e64494064`
+
+Review guide:
+`docs/R1E1A4A_H2A_V02_3D_REVIEW_GUIDE.md`
+
+The V0.2 service architecture contains four MHF4/U.FL-class upper connector envelopes, four 0.81-mm micro-coax paths, four hollow copper service tubes, insulating top/bottom tube interfaces, backplane feedthroughs and four MMCX-class lower connector envelopes.
+
+Tube electrical bonding remains deliberately unfrozen. All permissions are closed pending human review.

@@ -1,0 +1,53 @@
+{
+  "mode": "R1E1A4A_H2A_V02_SERVICE_ARCH_BUILD_ONLY",
+  "solver_run": false,
+  "source_sha256": "fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e",
+  "result_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h2av02_build_work\\R1E1A4A_H2A_V02_SERVICE_ARCH_BUILD_ONLY_V01.cst",
+  "result_sha256": "4756a525c407bac9f6de1c42c9274b74825a45a6b3cae81e60f1e67e64494064",
+  "result_bytes": 77345,
+  "parent_evidence_rewrites_detected": [],
+  "shape_count": 56,
+  "component_counts": {
+    "UnitCellGround": 1,
+    "Substrate": 1,
+    "TopCopper": 1,
+    "H2A_FeedModule": 12,
+    "H2A_PopulationEnvelope": 4,
+    "H2A_Shield": 5,
+    "H2A_ServiceConnector": 8,
+    "H2A_ServiceRouting": 12,
+    "H2A_ServiceTube": 4,
+    "H2A_ServiceInterface": 8
+  },
+  "parameters": {
+    "h2av02_mhf_r": "9",
+    "h2av02_mhf_half": "1.2",
+    "h2av02_tube_r": "13.5",
+    "h2av02_tube_outer_half": "1.5",
+    "h2av02_tube_inner_half": "0.7",
+    "h2av02_spacer_t": "0.5",
+    "h2av02_feedthrough_half": "0.9",
+    "h2av02_cable_half": "0.405",
+    "h2av02_mmcx_half": "2.5"
+  },
+  "checks": {
+    "shape_count_56": true,
+    "component_counts_exact": true,
+    "no_old_carrier_component": true,
+    "no_tools_remaining": true,
+    "port_count_zero": true,
+    "unitcell_94": true,
+    "broadside": true,
+    "mhf_radius_9": true,
+    "tube_radius_13p5": true,
+    "tube_outer_3mm": true,
+    "tube_inner_1p4mm": true,
+    "microcoax_0p81": true,
+    "spacer_t_0p5": true,
+    "mmcx_envelope_5mm": true,
+    "no_solver_markers": true,
+    "no_solver_result_items": true,
+    "parent_evidence_restored": true,
+    "pass": true
+  }
+}

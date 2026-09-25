@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H2A-V02-SERVICE-ARCHITECTURE-BUILD-ONLY-NW**
+Current task: **R1E1-A4A-H2A-V02-HUMAN-3D-REVIEW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -43,9 +43,10 @@ Current permissions:
 - H2A V0.1 BUILD-ONLY is closed PASS; formal build invocation count = 1; do not rebuild
 - qualified H2A artifact is protected in place with SHA256 b8f9161d7530b194fec1f35cc69f3cb5c770fb9daaba8eaeb519fbf064da644b
 - H2A V0.1 human review accepted the overall concept but identified missing RF cable egress/service architecture
-- exactly one H2A V0.2 SERVICE-ARCHITECTURE BUILD-ONLY invocation on NW is authorized
-- V0.2 adds four MHF4/U.FL-class connector envelopes, four 0.81-mm micro-coax paths, four hollow copper service tubes, insulating top/bottom tube interfaces, four backplane feedthroughs and four MMCX-class lower connector envelopes
-- tube electrical bond state is intentionally unfrozen; T0/T1/T2 belongs to later passive RF study
+- H2A V0.2 SERVICE-ARCHITECTURE BUILD-ONLY is closed PASS; formal build invocation count = 1; do not rebuild
+- qualified V0.2 artifact is protected in place with SHA256 4756a525c407bac9f6de1c42c9274b74825a45a6b3cae81e60f1e67e64494064
+- current task is human 3D/manufacturing review of the connector/coax/tube/backplane service architecture
+- tube electrical bond state remains intentionally unfrozen; T0/T1/T2 belongs to later passive RF study
 - no H2A V0.2 solve, H2B/T0/T1/T2 solve, active LNA integration, H1R solve, follow-on scan, S4 sentinel or R1E1B pitch-screen solver
 - material A/B solve: NO
 - physical LNA integration/CST251: NO
