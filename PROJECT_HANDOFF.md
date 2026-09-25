@@ -514,3 +514,20 @@ Immediate next node:
 H3B_T01A_O0_REFERENCE_LINE_FREEZE.
 
 No BUILD/SOLVE permission is open.
+
+## H3B-to-active-array masterplan integration
+
+Master plan:
+docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md
+
+Key correction:
+- close T01-A locally before H3B-I01;
+- after H3B-I01, return to support/hub-inclusive R1E1B pitch/material trade and R1E2 active-impedance atlas;
+- H3C-LNA0 device qualification may proceed in parallel when separately authorized;
+- H3C-C01 final antenna/LNA co-design is blocked until R1E2 exists;
+- T01-C remains deferred.
+
+Immediate next node:
+H3B_T01A_O0_REFERENCE_LINE_FREEZE.
+
+No BUILD/SOLVE permission is open.
