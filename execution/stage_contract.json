@@ -3,36 +3,37 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_BUILD_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
-    "cst251_authorized": false
+    "cst251_authorized": false,
+    "scope": "ONE_R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_ON_NW"
   },
   "scientific_freeze": {
-    "last_em_status": "HOLD_R1E1A3_SUPPORT_SCIENCE_GATE_S1_C60P135_DELTA_Z",
-    "transparency_gate": "Gate_T_UNCHANGED",
-    "receiver_gate": "Gate_R_V0P1_FROZEN",
-    "receiver_gate_contract": "docs/R1E1A4A_GATE_R_RECEIVER_FREEZE_V01.md",
+    "parent_source_sha256": "fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e",
+    "gate_t": "UNCHANGED",
+    "gate_r": "V0P1_FROZEN",
     "active_hub_interface": "docs/R1E1A4A_ACTIVE_HUB_INTERFACE_V01.md",
-    "p1_mapping_status": "INTERFACE_FROZEN_MAPPING_NOT_YET_QUALIFIED",
-    "mixedmode_build_contract": "docs/R1E1A4A_MIXEDMODE_BUILD_ONLY_CONTRACT_DRAFT.md",
-    "qpl9547_noise_reference": "circuit/qpl9547/QPL9547_NOISE_REFERENCE_1P1_1P7.csv",
-    "qpl9547_sparam_reference": "circuit/qpl9547/QPL9547_SPARAM_REFERENCE_1P15_1P65.csv",
-    "next_em_stage": "R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_AFTER_SEPARATE_AUTHORIZATION",
-    "r1e1b_status": "BLOCKED_UNTIL_H0_P1_AND_CARRIER_ARCHITECTURE_QUALIFIED",
-    "stop_boundary": "AWAIT_EXPLICIT_BUILD_AUTHORIZATION; no CST execution"
+    "build_contract": "docs/R1E1A4A_MIXEDMODE_BUILD_ONLY_CONTRACT_DRAFT.md",
+    "build_macro": "source/cst/R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_V01.mcr",
+    "h0_local_ground_mm": [10.0,10.0],
+    "p1_ports": 2,
+    "p1_single_ended_ref_ohm": 50.0,
+    "mixed_mode_diff_ref_ohm": 100.0,
+    "support_geometry": "NONE",
+    "active_device": "NONE",
+    "stop_boundary": "STOP_AFTER_BUILD_CLOSEOUT; SOLVE REQUIRES NEW AUTHORIZATION"
   },
   "execution": {
-    "current_stage": "R1E1A4A_MIXEDMODE_BUILD_CONTRACT_READY",
-    "formal_build_invocation_count": 1,
-    "formal_original_solve_invocation_count": 1,
-    "formal_recovery_solve_invocation_count": 3,
-    "r1e1a4a_new_cst_invocation_count": 0,
+    "current_stage": "R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY",
+    "r1e1a4a_formal_build_invocation_count": 0,
+    "r1e1a4a_formal_solve_invocation_count": 0,
+    "one_shot_required": true,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },

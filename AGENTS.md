@@ -33,7 +33,8 @@ Current permissions:
 - perform receiver-shadow / LNA noise-S-parameter analysis using traceable data: YES
 - freeze P0/P1A/P1B reference planes, local-ground/common-mode assumptions and Gate R: YES
 - design the mandatory H0 active-hub interface plus C0 foam, C1 dielectric-tube/standoff and C2 PCB-frame carrier envelopes: YES
-- run any R1E1A4 build/solve, S4 sentinel or R1E1B pitch-screen solver: NO
+- exactly one R1E1A4A H0/P1 mixed-mode BUILD-ONLY invocation on NW is authorized; no rerun without new authority
+- run any R1E1A4A solve, support-carrier build/solve, S4 sentinel or R1E1B pitch-screen solver: NO
 - material A/B solve: NO
 - physical LNA integration/CST251: NO
 - do not assume each LNA sees Zdiff/2 unless the virtual-ground/reference-plane condition is explicitly qualified

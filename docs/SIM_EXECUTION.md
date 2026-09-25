@@ -1,50 +1,35 @@
 # SIM_EXECUTION
 
 ## Current stage
-R1E1A4A_MIXEDMODE_BUILD_CONTRACT_READY
+R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY
 
-BUILD_AUTHORIZED: false
+BUILD_AUTHORIZED: true — ONE FORMAL INVOCATION ONLY
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 MATERIAL_AB_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 CST251_AUTHORIZED: false
 
-## Last closed EM gate
-HOLD_R1E1A3_SUPPORT_SCIENCE_GATE_S1_C60P135_DELTA_Z
+## Frozen source
+Parent: qualified bare P094 periodic source.
+SHA256: fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e
 
-## R1E1A4A design/circuit closeout
-PASS_R1E1A4A_INTERFACE_GATE_AUDIT
+## Authorized mutation
+- remove existing one 100-ohm Pol-A differential discrete port;
+- add one centered 10x10-mm underside H0 local-ground island;
+- add exactly two 50-ohm single-ended P1A/P1B ports referenced to H0 ground;
+- preserve 94-mm periodic geometry, radiator, substrate, top copper, boundaries and broadside scan;
+- no support, shield, package, bias, output, transistor, solver or optimization.
 
-Frozen:
-- Gate T unchanged;
-- Gate R V0.1 frozen;
-- H0 backside active-hub/local-ground interface;
-- P1A/P1B two-single-ended-port receiver reference-plane concept;
-- QPL9547 G0 noise and S-parameter reference data;
-- carrier decomposition C0/C1/C2/C3.
-
-Not yet qualified:
-- the real P1 differential-to-branch mapping;
-- mixed-mode Sdd/Scc/Sdc/Scd with H0 local ground;
-- physical package/feed trace/shield;
-- any new mechanical carrier.
-
-## Next execution ticket
-Draft:
-docs/R1E1A4A_MIXEDMODE_BUILD_ONLY_CONTRACT_DRAFT.md
-
-Planned first CST action after separate BUILD authorization:
-- parent = qualified bare P094;
-- add 10x10-mm underside H0 local ground;
-- replace one 100-ohm Pol-A differential port by two 50-ohm P1A/P1B ports;
-- no support, package, shield, transistor, solver or optimization;
-- fresh-reopen BUILD-ONLY audit.
+## Formal build rules
+- one invocation only;
+- source hash lock before copy;
+- fresh work/evidence directories;
+- CST 2022 official `DiscretePort.GetProperties` and `GetCoordinates` used for port audit;
+- fresh reopen must reproduce shape/port/periodic predicates;
+- prior P094 evidence is byte-snapshotted and restored if CST history replay touches it;
+- no solver markers or solver result tree.
 
 ## Stop boundary
-Await explicit BUILD authorization.
-No CST execution is currently authorized.
-No solve.
-No S4 sentinel.
-No R1E1B pitch screen.
-No material A/B.
+After build closeout, BUILD authorization is consumed.
+Broadside mixed-mode solve requires separate explicit authorization.

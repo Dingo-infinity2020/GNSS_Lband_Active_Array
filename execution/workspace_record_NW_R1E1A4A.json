@@ -2,9 +2,9 @@
   "schema_version": "0.2.4",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A4A-H0-P1-MIXEDMODE-BUILD-CONTRACT",
-    "stage": "R1E1A4A_MIXEDMODE_BUILD_CONTRACT_READY",
-    "status": "READY_FOR_BUILD_AUTHORIZATION"
+    "task_id": "R1E1-A4A-H0-P1-MIXEDMODE-BUILD-ONLY-NW",
+    "stage": "R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY",
+    "status": "AUTHORIZED_READY_FOR_PREFLIGHT"
   },
   "workspace": {
     "host_alias": "NW",
@@ -12,28 +12,17 @@
     "state": "CHECKPOINTED"
   },
   "authority": {
-    "system_review": "docs/R1E1A4_SYSTEM_CO_DESIGN_REVIEW_20260925.md",
-    "receiver_shadow_plan": "docs/R1E1A4A_RECEIVER_SHADOW_PLAN.md",
-    "reference_plane_spec": "docs/R1E1A4A_REFERENCE_PLANE_AND_COSIM_SPEC.md",
-    "active_hub_interface": "docs/R1E1A4A_ACTIVE_HUB_INTERFACE_V01.md",
     "gate_r": "docs/R1E1A4A_GATE_R_RECEIVER_FREEZE_V01.md",
-    "build_contract_draft": "docs/R1E1A4A_MIXEDMODE_BUILD_ONLY_CONTRACT_DRAFT.md"
-  },
-  "analysis": {
-    "qpl9547_noise_reference_validated": true,
-    "qpl9547_sparam_reference_validated": true,
-    "ideal_oddmode_diagnostic_completed": true,
-    "ideal_oddmode_diagnostic_authoritative": false,
-    "gate_r_frozen": true,
-    "h0_p1_interface_frozen": true,
-    "differential_to_branch_mapping_qualified": false
+    "active_hub_interface": "docs/R1E1A4A_ACTIVE_HUB_INTERFACE_V01.md",
+    "build_contract": "docs/R1E1A4A_MIXEDMODE_BUILD_ONLY_CONTRACT_DRAFT.md"
   },
   "execution": {
-    "r1e1a4a_cst_build_invocations": 0,
-    "r1e1a4a_cst_solve_invocations": 0
+    "formal_build_invocation_count": 0,
+    "formal_solve_invocation_count": 0,
+    "silent_retry_allowed": false
   },
   "archive": {
-    "mode": "GIT_DESIGN_CHECKPOINT",
+    "mode": "PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE",
     "completed": false,
     "purge_allowed": false
   }
