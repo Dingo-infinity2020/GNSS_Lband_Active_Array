@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=72
+HANDOFF_VERSION=73
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H2A-HUMAN-3D-REVIEW
-TASK_OWNER=HUMAN_REVIEW
-TASK_STATUS=PASS_BUILD_AWAIT_HUMAN_REVIEW
+CURRENT_TASK_ID=R1E1-A4A-H2A-V02-SERVICE-ARCHITECTURE-BUILD-ONLY-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=AUTHORIZED_BUILD_READY
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=NO
+BUILD_AUTHORIZED=YES_ONE_H2AV02_BUILD_ONLY
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -872,3 +872,15 @@ Review guide:
 `docs/R1E1A4A_H2A_3D_REVIEW_GUIDE.md`
 
 All permissions are closed. Next step is human 3D/manufacturing review; no solve or follow-on build is authorized.
+
+## H2A V0.2 service-architecture build authorization
+
+Human review of H2A V0.1 accepted the universal center concept but identified that RF cable egress, connector placement and cable/support interaction must be part of the same structure gate.
+
+User explicitly authorized H2A V0.2 BUILD-ONLY.
+
+V0.2 adds MHF4/U.FL-class board-side connector envelopes, 0.81-mm micro-coax service paths, four hollow copper service tubes, insulating tube interfaces, backplane feedthroughs and MMCX-class lower service connector envelopes.
+
+The tube electrical-bond state is deliberately not frozen. T0/T1/T2 belongs to a later passive RF study. No solver, active LNA, matching network, bias network or H1R recovery is authorized.
+
+Stop after one fresh-reopen build qualification for human 3D review.

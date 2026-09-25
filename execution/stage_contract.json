@@ -3,31 +3,31 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_H2AV02_BUILD_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
-    "cst251_authorized": false
+    "cst251_authorized": false,
+    "scope": "ONE_H2A_V02_SERVICE_ARCHITECTURE_BUILD_ONLY_ON_NW"
   },
   "scientific_freeze": {
-    "h2a_status": "PASS_R1E1A4A_H2A_UNIVERSAL_CENTER_BUILD_ONLY",
-    "h2a_artifact_sha256": "b8f9161d7530b194fec1f35cc69f3cb5c770fb9daaba8eaeb519fbf064da644b",
-    "h2a_shape_count": 28,
-    "h2a_port_count": 0,
-    "h2a_solver_run": false,
-    "product_architecture_mainline": "H2_UNIVERSAL_PASSIVE_ACTIVE_CENTER_STRUCTURE",
-    "review_guide": "docs/R1E1A4A_H2A_3D_REVIEW_GUIDE.md",
-    "h1r_status": "DEFERRED_NOT_AUTHORIZED",
-    "next_stage": "HUMAN_3D_REVIEW_BEFORE_H2A_V0P2_OR_H2B",
-    "stop_boundary": "AWAIT_HUMAN_3D_REVIEW; NO SOLVE"
+    "h2a_v01_status": "PASS_R1E1A4A_H2A_UNIVERSAL_CENTER_BUILD_ONLY",
+    "h2a_v01_artifact_sha256": "b8f9161d7530b194fec1f35cc69f3cb5c770fb9daaba8eaeb519fbf064da644b",
+    "h2a_v02_design_doc": "docs/R1E1A4A_H2A_V02_SERVICE_ARCHITECTURE.md",
+    "h2a_v02_build_macro": "source/cst/R1E1A4A_H2A_V02_SERVICE_ARCH_BUILD_ONLY_V01.mcr",
+    "parent_source_sha256": "fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e",
+    "rf_port_count_target": 0,
+    "tube_bond_state": "UNFROZEN_T0_T1_T2_DEFERRED",
+    "active_device": "NONE",
+    "stop_boundary": "STOP_AFTER_FRESH_REOPEN_H2AV02_BUILD_QUALIFICATION_FOR_HUMAN_3D_REVIEW"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H2A_HUMAN_3D_REVIEW",
-    "h2a_formal_build_invocation_count": 1,
+    "current_stage": "R1E1A4A_H2A_V02_SERVICE_ARCHITECTURE_BUILD_ONLY",
+    "h2av02_formal_build_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },

@@ -334,3 +334,12 @@ H2A V0.1 freezes topology only, not RF-optimal dimensions. No post-result optimi
 
 Reference:
 `docs/R1E1A4A_H2A_UNIVERSAL_CENTER_STRUCTURE_V01.md`
+
+## D0016 — RF service routing joins the universal-center structure gate
+
+Decision:
+- RF-output connector class, cable egress, service tubes and backplane service interface are part of H2 structural architecture, not a late packaging detail.
+- H2A V0.2 therefore adds connector/cable/tube geometry before any passive RF solve.
+- board-side interface is frozen only to MHF4/U.FL class envelope; backplane interface only to MMCX class envelope. Exact vendor parts remain unfrozen.
+- four hollow copper service tubes replace the V0.1 PEEK carrier concept for this candidate.
+- tube bonding is explicitly deferred to T0/T1/T2 passive RF qualification; V0.2 uses insulating top/bottom interfaces and makes no RF-performance claim.
