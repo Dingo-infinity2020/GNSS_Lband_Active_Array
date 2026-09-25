@@ -18,6 +18,8 @@
     "last_source_commit": "5a270f525aef8d7fa6fab3f3bc636139a6804268",
     "current_task": "R1E1A2_MECHANICAL_SUPPORT_EM_BASELINE_DESIGN",
     "plan": "docs/R1E1A2_MECHANICAL_SUPPORT_EM_PLAN.md",
+    "assembly_plan": "docs/R1E1A2_ASSEMBLY_INTERFACE_PLAN.md",
+    "assembly_interface_required": true,
     "stop_boundary": "design only; no support build; no solver"
   },
   "execution": {

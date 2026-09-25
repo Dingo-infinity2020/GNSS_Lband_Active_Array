@@ -40,7 +40,7 @@ No architecture replacement is allowed without explicit human approval and the r
 7. Infinite periodic-array results must later be checked against finite-array center/edge/corner behavior.
 8. Cross-polar isolation claims require a physically meaningful multi-conductor/feed representation; the historical crossed discrete-edge-port model is diagnostic only.
 9. Production EM/circuit work must preserve deterministic provenance and SimulationOps build/solve separation.
-10. Mechanical supports, standoffs, shields and frames that occupy the element near field are electromagnetic objects and must be qualified before the array baseline is frozen.
+10. Mechanical supports, standoffs, shields, frames, joints and fasteners that occupy or define the element near field are electromagnetic objects and must be qualified before the array baseline is frozen.
 11. Stop once a gate answers its scientific question; do not optimize unrelated variables inside that gate.
 
 ## System requirements carried through the mainline

@@ -11,7 +11,12 @@ Any support placed in this volume is an electromagnetic object. Metal can carry 
 Therefore the support concept must be defined before the 18-case R1E1B pitch screen.
 
 Primary question:
-**Can a mechanically credible support be chosen whose EM perturbation is small and controlled enough to freeze before pitch screening?**
+**Can a mechanically credible support assembly be chosen whose EM perturbation is small and controlled enough to freeze before pitch screening?**
+
+The support body is not evaluated alone. The upper PCB joint, lower ground/backplane joint, fasteners, adhesive/bond line, mounting holes and geometric tolerances are part of the same RF/mechanical assembly.
+
+Assembly-interface detail:
+`docs/R1E1A2_ASSEMBLY_INTERFACE_PLAN.md`
 
 ## Candidate classes
 
@@ -47,6 +52,8 @@ The support must fit inside the minimum 88-mm cell without crossing periodic bou
 
 R1E1A2-DESIGN:
 - freeze candidate geometry families and real material-property sources;
+- freeze upper/lower joint topology, fastener policy, bond-line geometry and first tolerance variables;
+- keep bonded low-density support as the preferred first baseline and one serviceable dielectric-fastener assembly as the comparison candidate;
 - no CST build or solver.
 
 R1E1A2-BUILD-ONLY, only after a separate authorization:

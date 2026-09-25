@@ -3,7 +3,7 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=53
+HANDOFF_VERSION=54
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
@@ -611,5 +611,18 @@ Current next task:
 `R1E1-A2-MECHANICAL-SUPPORT-EM-BASELINE-DESIGN`
 
 The missing standoff/frame occupies the near-field volume between the radiator PCB and ground/backplane. Mechanical support must therefore be defined and later sensitivity-qualified before R1E1B.
+
+R1E1A2 explicitly includes the complete assembly interface:
+`radiator PCB -> upper joint -> support body -> lower joint -> ground/backplane`.
+Adhesive/bond-line, mounting holes, screws/clips/soldered features, stand-off height, tilt, warp and registration are part of the design state.
+
+Preferred first assembly candidate:
+four symmetric minimal-section low-density foam/low-permittivity supports with small bonded interfaces and no metal hardware projecting above the ground plane.
+
+Second candidate:
+serviceable dielectric standoff + dielectric fastener assembly.
+
+Assembly plan:
+`docs/R1E1A2_ASSEMBLY_INTERFACE_PLAN.md`
 
 No support build or solver is authorized.

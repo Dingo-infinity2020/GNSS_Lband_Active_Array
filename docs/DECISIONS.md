@@ -180,3 +180,24 @@ Evidence/reason:
 
 Reversal condition:
 - a mechanically credible support is demonstrated by frozen full-wave sensitivity criteria to be electromagnetically negligible across the required band/scan set, or a later integrated active-hub mechanical architecture supersedes it with quantified evidence.
+
+## D0010 — Qualify the support joint/fastener assembly together with the support body
+
+Decision:
+- The support is defined as `radiator PCB -> upper joint -> support body -> lower joint -> ground/backplane`.
+- Adhesive, screws, mounting holes, clips, soldered features and bond-line thickness are electromagnetic geometry, not invisible mechanical details.
+- First-pass preferred assembly is four symmetric minimal-section low-density foam/low-permittivity posts with small bonded interfaces and no metal hardware above the ground plane.
+- A serviceable dielectric-standoff / dielectric-fastener architecture is the second candidate, not the default baseline.
+- Soldered metal legs and exposed metal standoffs are not accepted as neutral support methods.
+- Assembly height, tilt, warp and registration are later tolerance variables because they alter the radiator-to-ground geometry.
+
+Reason:
+- a low-perturbation support material can be invalidated by conductive fasteners or a large/high-permittivity adhesive region;
+- through-holes or mounting pads change the already-qualified radiator geometry;
+- the support assembly sets the approximately 57.143-mm radiator-to-ground spacing and therefore also controls an RF-critical geometric dimension.
+
+Reference:
+`docs/R1E1A2_ASSEMBLY_INTERFACE_PLAN.md`
+
+Reversal condition:
+- later mechanical/EM evidence demonstrates a different joint architecture provides equal or lower RF perturbation with superior repeatability, serviceability or environmental robustness.
