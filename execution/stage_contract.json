@@ -3,36 +3,42 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_EXECUTION_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": false,
-    "production_solve_authorized": false,
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": true,
+    "scope": "R1E1A2_SUPPORT_BUILD_4_PLUS_R1E1A3_SUPPORT_SOLVE_4_ONLY",
+    "production_solve_authorized": true,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "last_status": "PASS_R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY",
-    "last_source_commit": "5a270f525aef8d7fa6fab3f3bc636139a6804268",
-    "current_task": "R1E1A2_MECHANICAL_SUPPORT_EM_BASELINE_DESIGN",
-    "plan": "docs/R1E1A2_MECHANICAL_SUPPORT_EM_PLAN.md",
-    "assembly_plan": "docs/R1E1A2_ASSEMBLY_INTERFACE_PLAN.md",
-    "assembly_interface_required": true,
-    "stop_boundary": "design only; no support build; no solver"
+    "contract": "docs/R1E1A2A3_SUPPORT_SENSITIVITY_CONTRACT.md",
+    "material_table": "em/cst/R1_CHARTS_LBAND/materials_r1e1a2_support.csv",
+    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a1_six_pitch_fr4_work\\R1E1A1_P094_PITCH_BUILD_ONLY_V01.cst",
+    "source_sha256": "fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e",
+    "build_matrix": ["S1_BONDED_B0","S1_BONDED_C60P45","S1_BONDED_C60P135","S4_PEC_B0"],
+    "solve_matrix": ["S1_BONDED_B0","S1_BONDED_C60P45","S1_BONDED_C60P135","S4_PEC_B0"],
+    "stop_boundary": "close support sensitivity gate; do not start R1E1B"
   },
   "execution": {
-    "current_stage": "DESIGN_R1E1A2_MECHANICAL_SUPPORT_EM_BASELINE",
-    "last_completed_stage": "R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY",
-    "formal_invocation_count": 0,
+    "current_stage": "R1E1A2A3_SUPPORT_BUILD_AND_SENSITIVITY",
+    "formal_build_invocation_count": 0,
+    "formal_solve_invocation_count": 0,
+    "one_shot_required": true,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
+  "artifacts": {
+    "build_work": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work",
+    "build_evidence": "evidence/r1e1a2_support_build_nw_20260925_01/",
+    "handoff": "PROJECT_HANDOFF.md"
+  },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1E1A1.json",
-    "state": "CHECKPOINTED",
+    "state": "ACTIVE",
     "purge_allowed": false
   }
 }

@@ -23,19 +23,19 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A2-MECHANICAL-SUPPORT-EM-BASELINE-DESIGN**
+Current task: **R1E1-A2A3-SUPPORT-BUILD-AND-SENSITIVITY-NW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array sources and evidence: YES
-- design the mechanical support / standoff EM baseline: YES
-- build a support variant: NO
-- run any support-sensitivity or R1E1B solver: NO
+- execute exactly the frozen four-state R1E1A2 support BUILD-ONLY matrix on NW: YES
+- after R1E1A2 BUILD PASS, execute exactly four independent R1E1A3 one-shot support-sensitivity solves on NW: YES
+- run any R1E1B pitch-screen solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO
 - silent retry: NO
 
 R1E1A1 is closed `PASS_R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY`.
-R1E1A2 is DESIGN ONLY; no build or solver authorization is active.
+R1E1A2/A3 scope is frozen in `docs/R1E1A2A3_SUPPORT_SENSITIVITY_CONTRACT.md`.
 
 ## Architecture control
 

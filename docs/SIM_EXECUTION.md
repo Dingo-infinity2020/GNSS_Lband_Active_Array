@@ -1,33 +1,23 @@
 # SIM_EXECUTION
 
 ## Current stage
-DESIGN_R1E1A2_MECHANICAL_SUPPORT_EM_BASELINE
+R1E1A2A3_SUPPORT_BUILD_AND_SENSITIVITY
 
-BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: false
-PRODUCTION_SOLVE_AUTHORIZED: false
+BUILD_AUTHORIZED: true
+SOLVE_AUTHORIZED: true
+PRODUCTION_SOLVE_AUTHORIZED: true
 MATERIAL_AB_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
+CST251_AUTHORIZED: false
 
-## Last completed stage
-R1E1A1 six-pitch FR4 support-free source-set build-only
+## Scientific freeze
+Contract: docs/R1E1A2A3_SUPPORT_SENSITIVITY_CONTRACT.md
+Material table: em/cst/R1_CHARTS_LBAND/materials_r1e1a2_support.csv
+Bare P094 SHA256: fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e
+Build matrix: S1 B0 / S1 C60P45 / S1 C60P135 / S4 B0
+Solve matrix: same four, each independent one-shot on NW
 
-Status:
-PASS_R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY
-
-Formal source commit:
-5a270f525aef8d7fa6fab3f3bc636139a6804268
-
-Evidence:
-evidence/r1e1a1_dc_nw_20260924_build01/
-Closeout: evidence/R1E1A1_CLOSEOUT_20260925.md
-
-## Current design task
-R1E1-A2-MECHANICAL-SUPPORT-EM-BASELINE-DESIGN
-Plan: docs/R1E1A2_MECHANICAL_SUPPORT_EM_PLAN.md
-
-## Stop
-No support build.
-No R1E1B solver.
-No material A/B solver.
-No LNA integration.
+## Stop boundary
+Close R1E1A3 support sensitivity gate.
+Do not start R1E1B pitch screen.
+No material A/B and no LNA integration.
