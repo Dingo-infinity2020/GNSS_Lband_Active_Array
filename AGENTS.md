@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H2A-V02-HUMAN-3D-REVIEW**
+Current task: **R1E1-A4A-H3-ORTHOGONAL-PCB-FEED-STALK-ARCHITECTURE-DESIGN**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -45,9 +45,11 @@ Current permissions:
 - H2A V0.1 human review accepted the overall concept but identified missing RF cable egress/service architecture
 - H2A V0.2 SERVICE-ARCHITECTURE BUILD-ONLY is closed PASS; formal build invocation count = 1; do not rebuild
 - qualified V0.2 artifact is protected in place with SHA256 4756a525c407bac9f6de1c42c9274b74825a45a6b3cae81e60f1e67e64494064
-- current task is human 3D/manufacturing review of the connector/coax/tube/backplane service architecture
-- tube electrical bond state remains intentionally unfrozen; T0/T1/T2 belongs to later passive RF study
-- no H2A V0.2 solve, H2B/T0/T1/T2 solve, active LNA integration, H1R solve, follow-on scan, S4 sentinel or R1E1B pitch-screen solver
+- human review of H2A V0.2 found unintended geometry interference; the artifact is retained but is NOT an eligible solve source
+- SimulationOps >=0.2.5 requires CST Geometry Intersection Check after fresh reopen before BUILD PASS
+- current task is H3 orthogonal-PCB feed-stalk/support architecture DESIGN/RESEARCH only
+- H3 investigates two mutually perpendicular vertical PCBs using slot/tab soldered board-in-board assembly, with support PCBs also available for post-LNA RF routing and later conversion/balun functions
+- no H3 build or solve is authorized; H2A V0.2 solve, H2B/T0/T1/T2 solve, active LNA integration, H1R solve, follow-on scan, S4 sentinel and R1E1B pitch-screen solver remain blocked
 - material A/B solve: NO
 - physical LNA integration/CST251: NO
 - do not assume each LNA sees Zdiff/2 unless the virtual-ground/reference-plane condition is explicitly qualified

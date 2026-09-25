@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.4",
+  "schema_version": "0.2.5",
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
@@ -14,20 +14,17 @@
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "h2a_v01_status": "PASS_R1E1A4A_H2A_UNIVERSAL_CENTER_BUILD_ONLY",
-    "h2a_v02_status": "PASS_R1E1A4A_H2A_V02_SERVICE_ARCH_BUILD_ONLY",
+    "h2a_v02_historical_status": "PASS_R1E1A4A_H2A_V02_SERVICE_ARCH_BUILD_ONLY",
+    "h2a_v02_postreview_status": "HOLD_H2AV02_GEOMETRY_INTERFERENCE",
     "h2a_v02_artifact_sha256": "4756a525c407bac9f6de1c42c9274b74825a45a6b3cae81e60f1e67e64494064",
-    "h2a_v02_shape_count": 56,
-    "h2a_v02_port_count": 0,
-    "h2a_v02_solver_run": false,
-    "tube_bond_state": "UNFROZEN_T0_T1_T2_DEFERRED",
-    "review_guide": "docs/R1E1A4A_H2A_V02_3D_REVIEW_GUIDE.md",
-    "next_stage": "HUMAN_3D_REVIEW_BEFORE_H2B_OR_V03",
-    "stop_boundary": "AWAIT_HUMAN_3D_REVIEW; NO SOLVE"
+    "h2a_v02_solve_eligible": false,
+    "mandatory_future_build_gate": "CST_GEOMETRY_INTERSECTION_CHECK_AFTER_FRESH_REOPEN",
+    "current_candidate": "H3_ORTHOGONAL_PCB_FEED_STALK_SUPPORT",
+    "current_candidate_status": "DESIGN_RESEARCH_ONLY",
+    "stop_boundary": "NO_BUILD_NO_SOLVE_UNTIL_H3_ARCHITECTURE_FREEZE_AND_NEW_EXPLICIT_AUTHORIZATION"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H2A_V02_HUMAN_3D_REVIEW",
-    "h2av02_formal_build_invocation_count": 1,
+    "current_stage": "R1E1A4A_H3_ORTHOGONAL_PCB_FEED_STALK_ARCHITECTURE_DESIGN",
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },

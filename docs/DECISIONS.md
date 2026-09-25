@@ -343,3 +343,22 @@ Decision:
 - board-side interface is frozen only to MHF4/U.FL class envelope; backplane interface only to MMCX class envelope. Exact vendor parts remain unfrozen.
 - four hollow copper service tubes replace the V0.1 PEEK carrier concept for this candidate.
 - tube bonding is explicitly deferred to T0/T1/T2 passive RF qualification; V0.2 uses insulating top/bottom interfaces and makes no RF-performance claim.
+
+## D0017 — Retain H2 V0.2; open H3 orthogonal-PCB feed-stalk architecture
+
+Decision:
+- retain the H2A V0.2 artifact and all evidence; do not delete or overwrite it;
+- post-closeout human review found geometry interference, so H2A V0.2 is blocked as a solve source;
+- adopt SimulationOps >=0.2.5 geometry-intersection check as a mandatory future build gate;
+- open H3 orthogonal-PCB feed-stalk/support as the next architecture-design candidate;
+- no H3 build or solve is authorized by this decision.
+
+H3 design preference:
+- two mutually perpendicular PCB stalks with deterministic slot/tab soldered assembly;
+- LNA remains on the radiator backside for the first candidate so the pre-LNA path stays shortest;
+- vertical stalks primarily carry post-LNA RF, bias and later combining/balun functions;
+- a LNA-at-stalk-top variant remains available for comparison but is not the baseline;
+- cross-board RF transitions must be physical GCPW/edge-pad/solder geometry, not ideal wires.
+
+Reference:
+`docs/R1E1A4A_H3_ORTHOGONAL_PCB_FEED_STALK_RESEARCH.md`

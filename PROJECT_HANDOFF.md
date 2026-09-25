@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=74
+HANDOFF_VERSION=75
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H2A-V02-HUMAN-3D-REVIEW
-TASK_OWNER=HUMAN_REVIEW
-TASK_STATUS=PASS_BUILD_AWAIT_HUMAN_REVIEW
+CURRENT_TASK_ID=R1E1-A4A-H3-ORTHOGONAL-PCB-FEED-STALK-ARCHITECTURE-DESIGN
+TASK_OWNER=DESIGN_RESEARCH
+TASK_STATUS=DESIGN_ONLY_H2AV02_INTERFERENCE_FOUND
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -903,3 +903,22 @@ Review guide:
 The V0.2 service architecture contains four MHF4/U.FL-class upper connector envelopes, four 0.81-mm micro-coax paths, four hollow copper service tubes, insulating top/bottom tube interfaces, backplane feedthroughs and four MMCX-class lower connector envelopes.
 
 Tube electrical bonding remains deliberately unfrozen. All permissions are closed pending human review.
+
+## H2A V0.2 post-closeout human review
+
+The H2A V0.2 artifact is retained and immutable, but human review identified unintended geometric interference. Under SimulationOps 0.2.5 it is not eligible as a solve source.
+
+Historical BUILD PASS evidence remains preserved because it reflects the protocol in force at execution time. The later human-review finding is recorded in:
+`evidence/r1e1a4a_h2av02_nw_20260925_build01/HUMAN_REVIEW_ADDENDUM.md`.
+
+Current design task:
+H3 orthogonal-PCB feed-stalk/support architecture research.
+
+Concept:
+- two mutually perpendicular vertical PCB support/feed stalks below the radiator;
+- slot/tab board-in-board mechanical registration plus solder fillets;
+- support PCBs may also carry RF networks after the first low-noise stage;
+- LNA placement near the radiator remains the baseline preference;
+- exact pre-LNA transition architecture and LNA-on-radiator vs LNA-on-stalk location remain unfrozen.
+
+All BUILD/SOLVE permissions remain closed.
