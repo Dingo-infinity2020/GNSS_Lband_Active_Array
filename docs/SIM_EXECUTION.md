@@ -1,40 +1,58 @@
 # SIM_EXECUTION
 
 ## Current stage
-R1E1A4A_H0_P1_BROADSIDE_MIXEDMODE_SOLVE
+R1E1A4A_H1_LOCAL_GROUND_REDESIGN_DESIGN
 
 BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: true — ONE BROADSIDE INVOCATION ONLY
-PRODUCTION_SOLVE_AUTHORIZED: true — R1E1A4A BROADSIDE ONLY
+SOLVE_AUTHORIZED: false
+PRODUCTION_SOLVE_AUTHORIZED: false
 MATERIAL_AB_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 CST251_AUTHORIZED: false
 
-## Locked source
-Artifact:
-D:\GNSS_Lband_Active_Array\_r1e1a4a_h0_p1_build_work\R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_V01.cst
+## Closed H0/P1 broadside solve
+Formal harness status:
+HOLD_R1E1A4A_H0_P1_BROADSIDE_POSTPROCESS_RESULT_PATH
 
-SHA256:
-d1ebb6f4a6e8b48f3484cc5459790dd5c9bbd29482832c491076c84f783b3deb
+Canonical science status:
+HOLD_R1E1A4A_H0_P1_GATE_R_RNF0
 
-Canonical build status:
-PASS_R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_READONLY_RECOVERY
+Formal solve invocation count: 1
+Solver rerun: NO
 
-## Solve scope
-- broadside only;
-- 2x50-ohm P1A/P1B source-facing ports;
-- extract S11/S12/S21/S22;
-- transform to Sdd/Sdc/Scd/Scc with frozen orthonormal mixed-mode convention;
-- compare Sdd/Zdd against old P0 100-ohm differential broadside reference;
-- apply frozen Gate-R mode-conversion and branch-symmetry limits;
-- no carrier, shield, package, transistor or optimization.
+Solved artifact SHA256:
+a95e18b66d5000b034807455c368abdf9b831e2c1395427edb33bd6de73fafab
 
-Solver config:
-source/cst/R1E1A4A_H0_P1_BROADSIDE_SOLVER_CONFIG_V01.mcr
+Numerical qualification: PASS.
+Mixed-mode Gate-R subchecks: PASS.
+- max |Sdc| = -42.3768 dB;
+- max |Scd| = -42.3671 dB;
+- max branch magnitude imbalance = 0.14287 dB;
+- max branch phase error = 0.37636 deg.
 
-Numerical configuration is identical to the qualified MaxPasses=12 recovery baseline.
+Receiver R-NF0: FAIL.
+- P1A max source-conditioned QPL9547 NF = 0.5646 dB;
+- P1B max = 0.5684 dB;
+- frozen limit = 0.40 dB;
+- failure begins near 1.386–1.387 GHz and persists through 1.6496 GHz.
+
+The H0/P1 reference-plane concept is retained; the continuous same-board 10x10-mm local ground is rejected as the next physical baseline.
+
+## Next design
+Primary plan:
+docs/R1E1A4A_H1_LOCAL_GROUND_REDESIGN_PLAN.md
+
+First proposed candidate:
+H1A_OFFSET_GROUND_G2P0
+- same 10x10-mm local-ground footprint;
+- move local-ground top surface 2.0 mm below the radiator-substrate underside;
+- preserve two 50-ohm P1A/P1B reference ports;
+- no support, daughterboard dielectric, package, shield or transistor;
+- BUILD-ONLY first after separate authorization.
 
 ## Stop boundary
-Any HOLD stops.
-No silent retry or MaxPasses increase.
-After broadside qualification, do not continue to C60P45/C60P135 or any carrier study without new authorization.
+DESIGN ONLY.
+No H1A build or solve.
+No follow-on scan solve.
+No carrier/shield/package/transistor.
+No R1E1B pitch screen.

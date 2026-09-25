@@ -269,3 +269,29 @@ Reference:
 
 Reversal condition:
 - build/solve evidence shows the H0 reference-plane abstraction is ill-posed or cannot produce a stable, reproducible mixed-mode mapping.
+
+## D0014 — Retain P1 mixed-mode interface; reject H0 V0.1 continuous same-board local ground
+
+Decision:
+- retain the two-single-ended P1A/P1B mixed-mode receiver-interface architecture;
+- retain Gate R V0.1 unchanged;
+- classify the H0 V0.1 broadside solver as numerically qualified and mixed-mode qualified but receiver-noise unacceptable;
+- reject the continuous 10x10-mm local ground directly on the radiator underside as the next physical active-hub baseline;
+- do not continue H0 V0.1 to scan states or carrier studies;
+- next design stage is H1 local-ground/feed-transition redesign, beginning with the H1A 2.0-mm offset-ground diagnostic after separate authorization.
+
+Evidence:
+- mixed-mode conversion <= about -42.4 dB over the science band;
+- branch imbalance <=0.143 dB / 0.376 deg;
+- max |Delta Zdd| vs P0 about 200 ohm;
+- QPL9547 source-conditioned NF exceeds the frozen 0.40-dB R-NF0 limit over roughly 53% of science-band samples and reaches about 0.568 dB.
+
+Interpretation:
+- the reference-plane decomposition is sound;
+- the dominant current problem is local-ground electromagnetic loading, not differential/common-mode symmetry.
+
+Reference:
+`docs/R1E1A4A_H1_LOCAL_GROUND_REDESIGN_PLAN.md`
+
+Reversal condition:
+- none for H0 V0.1 as currently defined. A materially different local-ground/feed-transition geometry is a new candidate, not a threshold change.

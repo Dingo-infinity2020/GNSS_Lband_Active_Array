@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=66
+HANDOFF_VERSION=67
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H0-P1-BROADSIDE-MIXEDMODE-SOLVE-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=AUTHORIZED_READY_FOR_PREFLIGHT
+CURRENT_TASK_ID=R1E1-A4A-H1-LOCAL-GROUND-REDESIGN-DESIGN
+TASK_OWNER=DESIGN_CIRCUIT
+TASK_STATUS=HOLD_GATE_R_RNF0
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=YES_H0_P1_BROADSIDE_ONE_SHOT
@@ -776,3 +776,23 @@ Qualified: four solids, H0 local ground 10x10x0.035 mm, two 50-ohm SParameter po
 A first read-only checker also HOLDed on two audit assumptions only: it expected component name `GroundReference` rather than the actual parent `UnitCellGround`, and failed to recognize VBA Boolean `-1` as True. Raw values were already correct; the corrected second read-only pass is canonical.
 
 Next task is DESIGN ONLY: `docs/R1E1A4A_H0_P1_BROADSIDE_SOLVE_CONTRACT_DRAFT.md`. Broadside solve requires separate explicit authorization.
+
+## R1E1A4A H0/P1 broadside solve closeout
+
+The one authorized H0/P1 broadside production solve was consumed on NW.
+
+Formal harness status: `HOLD_R1E1A4A_H0_P1_BROADSIDE_POSTPROCESS_RESULT_PATH`. The solver itself completed; the harness initially assumed ordinary two-port result names. The periodic result tree instead stores the four traces as `S1(1),1(1)`, `S1(1),2(1)`, `S2(1),1(1)`, `S2(1),2(1)`. No solver rerun occurred. Read-only post-processing recovered the complete 2-port result.
+
+Numerical status: PASS. Final accepted adaptive Delta-S pair 0.0194908, 0.010365; desired-accuracy termination; broadband convergence after 11 samples.
+
+Mixed-mode Gate-R subchecks: PASS. Max |Sdc|=-42.3768 dB, max |Scd|=-42.3671 dB, branch magnitude imbalance=0.14287 dB, branch phase error=0.37636 deg.
+
+However the continuous 10x10-mm same-board H0 local ground strongly loads the source environment. Versus old P0: max |Delta Sdd|=0.41099 and max |Delta Zdd|=199.97 ohm.
+
+Using actual qualified P1 branch impedances with the QPL9547 G0 noise model, frozen R-NF0 <=0.40 dB FAILs: P1A reaches 0.5646 dB and P1B 0.5684 dB; failure begins near 1.386–1.387 GHz and continues through the upper science band.
+
+Canonical status: `HOLD_R1E1A4A_H0_P1_GATE_R_RNF0`.
+
+Solved artifact SHA256: `a95e18b66d5000b034807455c368abdf9b831e2c1395427edb33bd6de73fafab`.
+
+The P1 mixed-mode interface is retained; the H0 V0.1 continuous same-board ground geometry is not. Next design: `docs/R1E1A4A_H1_LOCAL_GROUND_REDESIGN_PLAN.md`. No H1 build/solve is authorized.

@@ -10,10 +10,10 @@ from cst.results import ProjectFile
 SOURCE_SHA="d1ebb6f4a6e8b48f3484cc5459790dd5c9bbd29482832c491076c84f783b3deb"
 SCI_LO=1.15; SCI_HI=1.65
 ZSE=50.0; ZDIFF=100.0
-SPATH={(1,1):r"1D Results\S-Parameters\S1,1",
-       (1,2):r"1D Results\S-Parameters\S1,2",
-       (2,1):r"1D Results\S-Parameters\S2,1",
-       (2,2):r"1D Results\S-Parameters\S2,2"}
+SPATH={(1,1):r"1D Results\S-Parameters\S1(1),1(1)",
+       (1,2):r"1D Results\S-Parameters\S1(1),2(1)",
+       (2,1):r"1D Results\S-Parameters\S2(1),1(1)",
+       (2,2):r"1D Results\S-Parameters\S2(1),2(1)"}
 
 def sha(path):
     h=hashlib.sha256()
