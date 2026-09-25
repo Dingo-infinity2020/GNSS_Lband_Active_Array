@@ -3,36 +3,31 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_H2A_BUILD_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
-    "cst251_authorized": false,
-    "scope": "ONE_H2A_UNIVERSAL_CENTER_STRUCTURE_BUILD_ONLY_ON_NW"
+    "cst251_authorized": false
   },
   "scientific_freeze": {
-    "parent_source_sha256": "fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e",
-    "h1a_status": "DIAGNOSTIC_ONLY_NUMERICAL_HOLD",
+    "h2a_status": "PASS_R1E1A4A_H2A_UNIVERSAL_CENTER_BUILD_ONLY",
+    "h2a_artifact_sha256": "b8f9161d7530b194fec1f35cc69f3cb5c770fb9daaba8eaeb519fbf064da644b",
+    "h2a_shape_count": 28,
+    "h2a_port_count": 0,
+    "h2a_solver_run": false,
+    "product_architecture_mainline": "H2_UNIVERSAL_PASSIVE_ACTIVE_CENTER_STRUCTURE",
+    "review_guide": "docs/R1E1A4A_H2A_3D_REVIEW_GUIDE.md",
     "h1r_status": "DEFERRED_NOT_AUTHORIZED",
-    "product_architecture_mainline": "H2A_UNIVERSAL_PASSIVE_ACTIVE_CENTER_STRUCTURE",
-    "design_doc": "docs/R1E1A4A_H2A_UNIVERSAL_CENTER_STRUCTURE_V01.md",
-    "build_macro": "source/cst/R1E1A4A_H2A_UNIVERSAL_CENTER_BUILD_ONLY_V01.mcr",
-    "ground_outer_span_mm": 20.0,
-    "center_clear_span_mm": 8.0,
-    "shield_outer_span_mm": 18.0,
-    "carrier_outer_span_mm": 30.0,
-    "carrier_inner_span_mm": 21.0,
-    "active_device": "NONE",
-    "rf_port_count_target": 0,
-    "stop_boundary": "STOP_AFTER_FRESH_REOPEN_BUILD_QUALIFICATION_FOR_HUMAN_3D_REVIEW"
+    "next_stage": "HUMAN_3D_REVIEW_BEFORE_H2A_V0P2_OR_H2B",
+    "stop_boundary": "AWAIT_HUMAN_3D_REVIEW; NO SOLVE"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H2A_UNIVERSAL_CENTER_STRUCTURE_BUILD_ONLY",
-    "h2a_formal_build_invocation_count": 0,
+    "current_stage": "R1E1A4A_H2A_HUMAN_3D_REVIEW",
+    "h2a_formal_build_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },

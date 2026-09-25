@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=71
+HANDOFF_VERSION=72
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H2A-UNIVERSAL-CENTER-STRUCTURE-BUILD-ONLY-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=AUTHORIZED_BUILD_READY
+CURRENT_TASK_ID=R1E1-A4A-H2A-HUMAN-3D-REVIEW
+TASK_OWNER=HUMAN_REVIEW
+TASK_STATUS=PASS_BUILD_AWAIT_HUMAN_REVIEW
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_ONE_H2A_BUILD_ONLY
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -855,3 +855,20 @@ H2A V0.1 build scope:
 No feed trace, matching network, bias/output network, transistor, solver, scan continuation or optimization is authorized.
 
 Stop after fresh-reopen build qualification for human 3D review.
+
+## H2A build-only closeout
+
+Canonical status: `PASS_R1E1A4A_H2A_UNIVERSAL_CENTER_BUILD_ONLY`.
+
+One formal build-only invocation was consumed on NW. Fresh reopen verified 28 exact solids, zero RF ports, 94-mm unit-cell/broadside metadata, and zero solver results/markers.
+
+Qualified artifact:
+`D:\GNSS_Lband_Active_Array\_r1e1a4a_h2a_build_work\R1E1A4A_H2A_UNIVERSAL_CENTER_BUILD_ONLY_V01.cst`
+
+SHA256:
+`b8f9161d7530b194fec1f35cc69f3cb5c770fb9daaba8eaeb519fbf064da644b`
+
+Review guide:
+`docs/R1E1A4A_H2A_3D_REVIEW_GUIDE.md`
+
+All permissions are closed. Next step is human 3D/manufacturing review; no solve or follow-on build is authorized.

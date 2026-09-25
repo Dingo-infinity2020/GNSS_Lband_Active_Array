@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H2A-UNIVERSAL-CENTER-STRUCTURE-BUILD-ONLY-NW**
+Current task: **R1E1-A4A-H2A-HUMAN-3D-REVIEW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -40,10 +40,11 @@ Current permissions:
 - H1A broadside production solve authorization is consumed; canonical status is numerical HOLD at MaxPasses=12; do not rerun
 - H1R numerical recovery is DEFERRED; no H1R solve is authorized
 - user promoted H2A Universal Passive/Active Center Structure to the product-architecture mainline
-- exactly one H2A V0.1 BUILD-ONLY invocation on NW is authorized
-- H2A includes patterned same-board local ground, four signal pin/pad proxies, four dummy LNA package envelopes, shield-can envelope, and hollow PEEK carrier
-- H2A is mechanical/manufacturing review only: no RF trace, matching network, bias, active transistor, optimization, or solver
-- no H2A solve, H2B/H2C build, H1R solve, follow-on scan, S4 sentinel or R1E1B pitch-screen solver
+- H2A V0.1 BUILD-ONLY is closed PASS; formal build invocation count = 1; do not rebuild
+- qualified H2A artifact is protected in place with SHA256 b8f9161d7530b194fec1f35cc69f3cb5c770fb9daaba8eaeb519fbf064da644b
+- current task is human 3D/manufacturing review of the H2A assembly
+- H2A contains patterned same-board local ground, four signal pin/pad proxies, four dummy LNA package envelopes, shield-can envelope, and hollow PEEK carrier
+- no H2A solve, H2A V0.2/H2B/H2C build, H1R solve, follow-on scan, S4 sentinel or R1E1B pitch-screen solver
 - material A/B solve: NO
 - physical LNA integration/CST251: NO
 - do not assume each LNA sees Zdiff/2 unless the virtual-ground/reference-plane condition is explicitly qualified
