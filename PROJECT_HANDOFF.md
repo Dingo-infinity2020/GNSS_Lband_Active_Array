@@ -3,14 +3,14 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=78
+HANDOFF_VERSION=79
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H3A-HUMAN-3D-REVIEW
-TASK_OWNER=HUMAN_REVIEW
-TASK_STATUS=PASS_BUILD_AWAIT_HUMAN_REVIEW
-SIMULATIONOPS_PROTOCOL=0.2.5
+CURRENT_TASK_ID=R1E1-A4A-H3A-V02-FR4-BRIDGED-MORTISE-BUILD-ONLY-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=AUTHORIZED_BUILD_READY
+SIMULATIONOPS_PROTOCOL=0.2.6
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
@@ -976,3 +976,12 @@ Review guide:
 `docs/R1E1A4A_H3A_3D_REVIEW_GUIDE.md`
 
 All BUILD/SOLVE/active-device permissions are closed pending human review.
+
+## H3A V0.2 FR4-bridged mortise authorization
+
+Human review of H3A V0.1 identified a real mechanical error: all four top tenons are centered inside the parent radiator INNER_N/S/E/W FR4 through-slots. Therefore V0.1 is retained but is not solve-eligible as a mechanically valid top joint.
+
+H3A V0.2 freezes a dielectric-only repair: four local FR4 bridges are united into the radiator substrate at the +/-12-mm tenon sites, followed by true mortise cuts. Top copper remains unchanged.
+
+One V0.2 BUILD-ONLY invocation on NW is authorized. No solve is authorized.
+SimulationOps minimum protocol is 0.2.6.

@@ -375,3 +375,17 @@ Decision:
 
 Reference:
 `docs/R1E1A4A_H3A_ORTHOGONAL_STALK_ARCHITECTURE_FREEZE_V01.md`
+
+## D0019 — H3A V0.2 restores local FR4 around top mortises
+
+Human review of H3A V0.1 found that the +/-12-mm top tenons lie inside the parent INNER_N/S/E/W through-slots, so the V0.1 radiator mortises were cut in already-empty substrate.
+
+Decision:
+- preserve H3A V0.1 unchanged as historical build evidence;
+- V0.2 locally fills only the FR4 slot region around each tenon with a 5.50 x 2.571428571426 x 1.0-mm dielectric bridge;
+- unite each bridge into the radiator substrate and then cut the original 3.30 x 1.25-mm mortise;
+- do not restore top copper;
+- require substrate-volume proof plus the SimulationOps 0.2.6 intersection gate before BUILD PASS.
+
+Reference:
+docs/R1E1A4A_H3A_ORTHOGONAL_STALK_ARCHITECTURE_FREEZE_V02.md

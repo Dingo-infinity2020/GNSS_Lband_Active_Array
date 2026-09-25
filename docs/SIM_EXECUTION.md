@@ -1,42 +1,48 @@
 # SIM_EXECUTION
 
 ## Protocol
-Minimum compatible SimulationOps protocol: 0.2.5
+Minimum compatible SimulationOps protocol: 0.2.6
 
 ## Current stage
-R1E1A4A_H3A_HUMAN_3D_REVIEW
+R1E1A4A_H3A_V02_FR4_BRIDGED_MORTISE_BUILD_ONLY
 
-BUILD_AUTHORIZED: false
+BUILD_AUTHORIZED: true — ONE H3A V0.2 BUILD-ONLY INVOCATION
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 CST251_AUTHORIZED: false
 
-## Closed H3A build-only
-Canonical status:
-PASS_R1E1A4A_H3A_ORTHOGONAL_STALK_BUILD_ONLY
-
-Formal build invocation count: 1
-Solver run: NO
-
-Artifact:
-D:\GNSS_Lband_Active_Array\_r1e1a4a_h3a_build_work\R1E1A4A_H3A_ORTHOGONAL_STALK_BUILD_ONLY_V01.cst
+## Frozen source
+Parent:
+D:\GNSS_Lband_Active_Array\_r1e1a1_six_pitch_fr4_work\R1E1A1_P094_PITCH_BUILD_ONLY_V01.cst
 
 SHA256:
-3d15d5bf36c0d6f60a4d46d48fa5197818559890e27e0950556a0f14e2309043
+fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e
 
-Fresh-reopen qualification:
-- 126 solids / exact component counts;
-- 0 RF ports;
-- no solver result tree or solver markers;
-- 94-mm unit cell / broadside metadata preserved;
-- CST built-in intersection command executed after reopen;
-- critical clearance audit all positive;
-- protected artifact unchanged by qualification.
+Freeze:
+docs/R1E1A4A_H3A_ORTHOGONAL_STALK_ARCHITECTURE_FREEZE_V02.md
 
-3D review guide:
-docs/R1E1A4A_H3A_3D_REVIEW_GUIDE.md
+## V0.2 delta
+- H3A V0.1 remains immutable evidence.
+- Add four 5.50 x 2.571428571426 x 1.0 mm FR4 bridges inside the parent INNER_N/S/E/W substrate slots at the +/-12-mm tenon locations.
+- Unite each bridge into Substrate:FR4_BOARD.
+- Recut the frozen 3.30 x 1.25-mm true mortise through the bridge.
+- Do not restore top copper.
+- All stalk/LNA/shield/RF-transition/service geometry remains V0.1.
+
+Expected substrate volume after bridge-minus-mortise delta:
+4518.704081623642 mm^3
+
+## Mandatory qualification
+- fresh reopen;
+- shape/component inventory;
+- substrate volume proof;
+- bridge component fully consumed by union;
+- zero RF ports / no solver results;
+- CST EM auto-intersection during build;
+- CST CDCheckModelIntersections after fresh reopen;
+- all critical clearances positive.
 
 ## Stop boundary
-Await human 3D/manufacturing review.
-No solve, no H3B continuation and no active-device integration.
+Stop after H3A V0.2 human 3D review.
+No solve and no H3B continuation.
