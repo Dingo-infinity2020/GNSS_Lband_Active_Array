@@ -1,0 +1,48 @@
+{
+  "adaptation_frequency_ghz": 2,
+  "meshcells": [
+    43521,
+    51980,
+    61554,
+    74117,
+    78237,
+    82457,
+    88182,
+    98391
+  ],
+  "delta_all_s": [
+    {
+      "pass": 2,
+      "delta_s": 0.01769382979865032
+    },
+    {
+      "pass": 3,
+      "delta_s": 0.03638646659754746
+    },
+    {
+      "pass": 4,
+      "delta_s": 0.040690134067625505
+    },
+    {
+      "pass": 5,
+      "delta_s": 0.04450377185523114
+    },
+    {
+      "pass": 6,
+      "delta_s": 0.03740848724183173
+    },
+    {
+      "pass": 7,
+      "delta_s": 0.03207271602438143
+    },
+    {
+      "pass": 8,
+      "delta_s": 0.030945470024284067
+    }
+  ],
+  "frozen_max_delta_s": 0.02,
+  "frozen_max_passes": 8,
+  "max_passes_reached": true,
+  "last_two_below_threshold": false,
+  "numerical_convergence_pass": false
+}

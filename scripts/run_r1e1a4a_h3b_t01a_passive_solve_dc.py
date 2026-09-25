@@ -151,7 +151,7 @@ def run(repo,evidence,work,source):
       "decision_band_ghz":[1.15,1.65],
       "summary":summ,
       "scientific_diagnostics":scientific,
-      "numerical_pass":True
+      "numerical_pass":"DEFER_TO_NATIVE_ADAPTATION_QUALIFICATION"
     }
     with open(os.path.join(evidence,"summary.json"),"w") as f: json.dump(result,f,indent=2)
     with open(os.path.join(evidence,"FORMAL_STATUS.txt"),"w") as f: f.write("PASS_R1E1A4A_H3B_T01A_PASSIVE_BASELINE_SOLVE\n")

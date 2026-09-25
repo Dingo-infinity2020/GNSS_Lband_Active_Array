@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H3B-T01A-PASSIVE-BASELINE-SOLVE-NW**
+Current task: **R1E1-A4A-H3B-T01A-NUMERICAL-RECOVERY-AWAIT-AUTH**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -199,3 +199,13 @@ Stop and document instead of guessing when:
 - no geometry changes, no optimization sweep, no T01-C, no H3B-I01 integration, no active device.
 - solve range 1.0–2.0 GHz; decision band 1.15–1.65 GHz.
 - silent retry is forbidden.
+
+## H3B-T01A passive baseline solve closeout
+- one formal T01-A passive solve was consumed; do not retry silently;
+- solver returned a full 2-port result set, but native CST adaptive-mesh convergence FAILED the frozen criterion;
+- pass count reached 8/8; final two All-S DeltaS values were 0.0320727160 and 0.0309454700, both above 0.02;
+- canonical status: HOLD_R1E1A4A_H3B_T01A_ADAPTIVE_MAXPASS8_NOT_CONVERGED;
+- solved artifact SHA256 = 846919954fc99f541d8d0cfa3b4246fb49bf520d51b6c14de675d6fed54b0734;
+- current S-parameters are provisional diagnostics only, not science-qualified;
+- next action is numerical convergence recovery under a fresh explicit solve authorization;
+- no geometry optimization, T01-C, H3B-I01 or active-device work is authorized.

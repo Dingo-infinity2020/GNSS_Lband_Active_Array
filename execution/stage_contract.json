@@ -3,43 +3,45 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_T01A_SOLVE_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": true,
-    "production_solve_authorized": true,
+    "SOLVE_AUTHORIZED": false,
+    "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
-    "cst251_authorized": false,
-    "scope": "ONE_H3B_T01A_PASSIVE_BASELINE_SOLVE_ON_NW"
+    "cst251_authorized": false
   },
   "scientific_freeze": {
     "candidate": "H3B_T01A_GCPW_ORTHOGONAL_TRANSITION_PASSIVE_BASELINE",
-    "source_artifact": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01_build_work\\R1E1A4A_H3B_T01_ORTHOGONAL_TRANSITION_BUILD_ONLY_V01.cst",
-    "source_sha256": "f321b678d390470a2420df40fd6d0cf6553cc041f9219bfcd011c7e41fbadf3d",
-    "solve_freeze_doc": "docs/R1E1A4A_H3B_T01A_PASSIVE_SOLVE_FREEZE_V01.md",
-    "port_macro": "source/cst/R1E1A4A_H3B_T01A_PORTS_V01.mcr",
-    "solver_macro": "source/cst/R1E1A4A_H3B_T01A_SOLVER_CONFIG_V01.mcr",
-    "port_count_target": 2,
-    "port_impedance_ohm": 50,
-    "frequency_ghz": [
-      1,
-      2
+    "source_build_sha256": "f321b678d390470a2420df40fd6d0cf6553cc041f9219bfcd011c7e41fbadf3d",
+    "solve_execution_status": "PASS_SOLVER_RETURNED_COMPLETE_2PORT_RESULTS",
+    "numerical_qualification_status": "HOLD_R1E1A4A_H3B_T01A_ADAPTIVE_MAXPASS8_NOT_CONVERGED",
+    "solved_artifact_sha256": "846919954fc99f541d8d0cfa3b4246fb49bf520d51b6c14de675d6fed54b0734",
+    "adaptive_frequency_ghz": 2,
+    "adaptive_passes": 8,
+    "adaptive_meshcells": [
+      43521,
+      51980,
+      61554,
+      74117,
+      78237,
+      82457,
+      88182,
+      98391
     ],
-    "decision_band_ghz": [
-      1.15,
-      1.65
-    ],
-    "solver": "HF_FREQUENCY_DOMAIN_TET_SECOND_ORDER_ADAPTIVE",
-    "max_passes": 8,
-    "geometry_changes_allowed": false,
-    "optimization_sweep_allowed": false,
-    "stop_boundary": "STOP_AFTER_ONE_T01A_BASELINE_SOLVE_AND_READ_ONLY_QUALIFICATION"
+    "pass7_delta_s": 0.03207271602438143,
+    "pass8_delta_s": 0.030945470024284067,
+    "max_delta_s_required": 0.02,
+    "two_consecutive_checks_required": true,
+    "provisional_results_science_qualified": false,
+    "next_stage": "H3B_T01A_NUMERICAL_RECOVERY_FREEZE",
+    "stop_boundary": "HOLD; AWAIT NEW EXPLICIT SOLVE AUTHORIZATION"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01A_PASSIVE_BASELINE_SOLVE",
-    "formal_solve_invocation_count": 0,
+    "current_stage": "R1E1A4A_H3B_T01A_NUMERICAL_RECOVERY_AWAIT_AUTH",
+    "formal_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },

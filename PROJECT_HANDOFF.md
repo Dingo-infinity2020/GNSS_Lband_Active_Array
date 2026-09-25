@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=84
+HANDOFF_VERSION=85
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H3B-T01A-PASSIVE-BASELINE-SOLVE-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=AUTHORIZED_SOLVE_READY
+CURRENT_TASK_ID=R1E1-A4A-H3B-T01A-NUMERICAL-RECOVERY-AWAIT-AUTH
+TASK_OWNER=DESIGN_CONTROL
+TASK_STATUS=HOLD_ADAPTIVE_MAXPASS8_NOT_CONVERGED
 SIMULATIONOPS_PROTOCOL=0.2.6
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -1068,3 +1068,28 @@ Exactly one NW passive solve is authorized. The protected BUILD artifact remains
 - the frozen 1.0–2.0 GHz frequency-domain adaptive solver configuration.
 
 No geometry optimization, T01-C, H3B-I01 or active-device work is authorized.
+
+## H3B-T01A passive baseline solve closeout
+
+Formal solve execution produced full 2-port S-parameters, but native adaptive-mesh qualification failed.
+
+Canonical status:
+`HOLD_R1E1A4A_H3B_T01A_ADAPTIVE_MAXPASS8_NOT_CONVERGED`
+
+Solved artifact:
+D:\GNSS_Lband_Active_Array\_r1e1a4a_h3b_t01a_solve_work\R1E1A4A_H3B_T01A_PASSIVE_BASELINE_V01.cst
+
+SHA256:
+846919954fc99f541d8d0cfa3b4246fb49bf520d51b6c14de675d6fed54b0734
+
+Native adaptive evidence:
+- 8 passes executed;
+- mesh cells ended at 98,391;
+- pass-7 All-S DeltaS = 0.0320727160;
+- pass-8 All-S DeltaS = 0.0309454700;
+- frozen threshold = 0.02, two consecutive checks required;
+- therefore numerical convergence is not proven.
+
+Provisional S-parameter observations are retained for diagnostics only. No geometry or RF optimization is authorized until numerical recovery succeeds.
+
+All BUILD/SOLVE permissions are closed. A fresh explicit solve authorization is required for recovery.
