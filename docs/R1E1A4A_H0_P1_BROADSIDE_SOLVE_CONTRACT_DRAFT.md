@@ -1,6 +1,6 @@
 # R1E1A4A H0/P1 Broadside Mixed-Mode Solve Contract — Draft
 
-Status: DESIGN ONLY — SOLVE NOT AUTHORIZED
+Status: SOLVE AUTHORIZED — ONE FORMAL BROADSIDE INVOCATION; NO FOLLOW-ON SCAN/CARRIER SOLVES
 
 ## Input
 
@@ -53,6 +53,19 @@ Required outputs:
 
 Differential reference impedance is 100 ohm; common-mode reference impedance is 25 ohm.
 
+Frozen mixed-mode convention for equal 50-ohm single-ended references:
+- d = (port1 - port2)/sqrt(2);
+- c = (port1 + port2)/sqrt(2);
+- Sdd = (S11-S12-S21+S22)/2;
+- Sdc = (S11+S12-S21-S22)/2;
+- Scd = (S11-S12+S21-S22)/2;
+- Scc = (S11+S12+S21+S22)/2.
+
+For the branch-symmetry diagnostic, convert the 50-ohm single-ended S matrix to Z. Under an imposed odd branch-current pair I1=+I and I2=-I:
+- Zbranch1 = Z11-Z12;
+- Zbranch2 = Z22-Z21.
+Branch magnitude imbalance is 20log10(|Zbranch1|/|Zbranch2|); branch phase error is the wrapped phase difference between Zbranch1 and Zbranch2. These definitions are frozen before the solve result is viewed.
+
 ## Reference-plane questions
 
 The solve must answer, before any carrier study:
@@ -81,3 +94,27 @@ After a successful broadside solve, perform read-only mixed-mode qualification a
 Do NOT proceed automatically to C60P45/C60P135, support carrier, shield/package, or active transistor.
 
 Separate explicit solver authorization is required before this contract can execute.
+
+## Pre-result mapping / receiver-shadow predicates
+
+These are frozen before the solve result is viewed.
+
+### R-MAP — virtual-ground mapping qualification
+For each branch under pure differential incident excitation over 1.15–1.65 GHz:
+- `max |2*Zbranch_A - Zdd| <= 1.0 ohm`;
+- `max |2*Zbranch_B - Zdd| <= 1.0 ohm`;
+- max relative error for each branch <= 1.0%.
+
+Rationale: mapping uncertainty must remain at least an order of magnitude below the 10-ohm Gate-T support scale before `Zdiff/2` is used as a simplified receiver model.
+
+### R-NF0 broadside shadow
+Use the actual odd-mode branch source impedances from the solved two-port, not an assumed `Zdiff/2`, with the frozen QPL9547 G0 noise parameters.
+
+Each branch must satisfy:
+`NF_device_shadow <= 0.40 dB`
+for every science-band sample.
+
+This checks only source-conditioned device noise at P1. R-LOSS and integrated R-NF1 remain unqualified because physical feed/via/package loss is not yet present.
+
+### Common-mode resonance diagnostic
+Report max |Scc| and its frequency over the science band. No new pass/fail threshold is invented here; any near-unity or sharp common-mode resonance is escalated for design review before shield/carrier integration.

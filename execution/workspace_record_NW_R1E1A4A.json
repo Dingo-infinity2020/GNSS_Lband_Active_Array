@@ -2,9 +2,9 @@
   "schema_version": "0.2.4",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A4A-H0-P1-BROADSIDE-SOLVE-DESIGN",
-    "stage": "R1E1A4A_H0_P1_BROADSIDE_SOLVE_DESIGN",
-    "status": "BUILD_CLOSED_PASS_AWAIT_SOLVE_AUTHORIZATION"
+    "task_id": "R1E1-A4A-H0-P1-BROADSIDE-MIXEDMODE-SOLVE-NW",
+    "stage": "R1E1A4A_H0_P1_BROADSIDE_MIXEDMODE_SOLVE",
+    "status": "AUTHORIZED_READY_FOR_PREFLIGHT"
   },
   "workspace": {
     "host_alias": "NW",
@@ -13,20 +13,18 @@
   },
   "build": {
     "formal_invocation_count": 1,
-    "formal_status": "HOLD_R1E1A4A_H0_P1_BUILD_AUDIT_VBA_RESERVED_WORD",
     "canonical_status": "PASS_R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_READONLY_RECOVERY",
-    "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h0_p1_build_work\\R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_V01.cst",
-    "artifact_sha256": "d1ebb6f4a6e8b48f3484cc5459790dd5c9bbd29482832c491076c84f783b3deb",
-    "protected_in_place": true
+    "artifact_sha256": "d1ebb6f4a6e8b48f3484cc5459790dd5c9bbd29482832c491076c84f783b3deb"
   },
   "solve": {
     "formal_invocation_count": 0,
-    "authorized": false,
-    "next_contract": "docs/R1E1A4A_H0_P1_BROADSIDE_SOLVE_CONTRACT_DRAFT.md"
+    "authorized": true,
+    "scope": "ONE_BROADSIDE_ONLY",
+    "silent_retry_allowed": false
   },
   "archive": {
     "mode": "PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE",
-    "completed": true,
+    "completed": false,
     "purge_allowed": false
   }
 }
