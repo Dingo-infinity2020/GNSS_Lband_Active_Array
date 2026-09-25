@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=80
+HANDOFF_VERSION=81
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H3A-V02-HUMAN-3D-REVIEW
-TASK_OWNER=HUMAN_REVIEW
-TASK_STATUS=PASS_BUILD_AWAIT_HUMAN_REVIEW
+CURRENT_TASK_ID=R1E1-A4A-H3B-T01-OPTIMIZATION-ROUTE-FROZEN
+TASK_OWNER=DESIGN_CONTROL
+TASK_STATUS=ROUTE_FROZEN_AWAIT_T01_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.6
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -1006,3 +1006,20 @@ Review guide:
 docs/R1E1A4A_H3A_V02_3D_REVIEW_GUIDE.md
 
 All BUILD/SOLVE/active-device permissions are closed pending human review.
+
+## Active-element optimization route freeze
+
+H3A V0.2 human review is accepted as the mechanical baseline.
+
+Project-level optimization authority:
+docs/R1E1A4A_H3B_ACTIVE_ELEMENT_OPTIMIZATION_ROUTE_FREEZE_V01.md
+
+Frozen method: hierarchical modular co-design with system-level closure.
+Local modules are optimized/qualified independently enough to be trustworthy, but antenna/LNA/array interface variables remain coupled and are closed later against robust A_eff/T_sys or G/T.
+
+The antenna/LNA interface is not required to be 50 ohms. Scan-dependent active impedance becomes the eventual authoritative LNA source condition.
+
+Immediate next design node:
+H3B_T01_POST_LNA_ORTHOGONAL_TRANSITION_COUPON_FREEZE.
+
+No BUILD or SOLVE permission is implied by this route freeze.

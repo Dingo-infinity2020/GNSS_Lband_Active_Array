@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H3A-V02-HUMAN-3D-REVIEW**
+Current task: **R1E1-A4A-H3B-T01-OPTIMIZATION-ROUTE-FROZEN**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -165,3 +165,13 @@ Stop and document instead of guessing when:
 - a solver result cannot be traced to a frozen source
 - an optimization objective has not been frozen
 - a proposed feature has no quantified problem it solves
+
+## H3B optimization-route authority
+- H3A V0.2 is accepted as the mechanical baseline.
+- Optimization method is hierarchical modular co-design with system-level closure.
+- Do not force the antenna/LNA interface to 50 ohms.
+- Eventual authoritative LNA source condition is scan-dependent active array impedance.
+- Final system objective is robust A_eff/T_sys or G/T over the core frequency/scan domain.
+- Local proxy metrics such as S11/transition return loss cannot override system sensitivity.
+- Immediate next node is H3B_T01_POST_LNA_ORTHOGONAL_TRANSITION_COUPON_FREEZE.
+- No BUILD/SOLVE permission is currently open.

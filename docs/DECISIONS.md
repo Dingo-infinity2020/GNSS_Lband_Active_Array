@@ -389,3 +389,17 @@ Decision:
 
 Reference:
 docs/R1E1A4A_H3A_ORTHOGONAL_STALK_ARCHITECTURE_FREEZE_V02.md
+
+## D0020 — Freeze hierarchical active-element co-design route
+
+Decision:
+- use hierarchical modular co-design with system-level closure;
+- module boundaries exist for validation/debugging, not permanent electrical isolation;
+- do not force the antenna/LNA interface to 50 ohms;
+- use scan-dependent active impedance as the eventual authoritative LNA source condition;
+- optimize local modules first, then expose only a small Class-C cross-domain variable set;
+- final optimization objective is robust A_eff/T_sys or G/T across frequency/scan, not standalone S11;
+- H3B-T01 is the next narrow experiment: post-LNA horizontal-to-vertical PCB transition coupon only.
+
+Reference:
+docs/R1E1A4A_H3B_ACTIVE_ELEMENT_OPTIMIZATION_ROUTE_FREEZE_V01.md
