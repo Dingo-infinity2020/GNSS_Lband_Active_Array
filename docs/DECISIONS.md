@@ -416,3 +416,16 @@ Decision:
 
 Reference:
 docs/R1E1A4A_H3B_T01_TRANSITION_COUPON_FREEZE_V01.md
+## D0022 — Integrate T01-A optimization with array/LNA mainline
+
+Decision:
+- close T01-A locally before H3B-I01;
+- add straight-line O0 calibration before any line/junction sweep;
+- use SimulationOps 0.2.7 optimization/sweep freeze rules;
+- after H3B-I01, return to support/hub-inclusive R1E1B pitch/material trade and R1E2 active-impedance atlas;
+- H3C-LNA0 may proceed in parallel when separately authorized;
+- block H3C-C01 final antenna/LNA co-design until R1E2 exists;
+- keep T01-C deferred.
+
+Reference:
+docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md

@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H3B-T01A-LOCAL-RF-OPTIMIZATION-AWAIT-AUTH**
+Current task: **R1E1-A4A-H3B-T01A-O0-REFERENCE-LINE-AWAIT-AUTH**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -218,3 +218,13 @@ Stop and document instead of guessing when:
 - convergence authority is the CST Adaptive Meshing All-S Delta result tree, not output.txt alone;
 - no geometry/RF optimization or T01-C/H3B-I01/active-device work is authorized;
 - silent retry remains forbidden.
+## Integrated next-route authority
+- master plan: docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md
+- SimulationOps minimum: 0.2.7
+- next step is T01A-O0 straight-reference calibration, not an immediate geometry sweep
+- T01-C remains deferred
+- H3B-I01 is blocked until T01-A local RF freeze
+- R1E1B/R1E2 return to the mainline after H3B-I01
+- H3C-LNA0 may run in parallel only under separate authorization
+- H3C-C01 is blocked until R1E2 authoritative active-impedance atlas exists
+- no BUILD or SOLVE permission is currently open

@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.6",
+  "schema_version": "0.2.7",
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
@@ -23,11 +23,17 @@
     "pass12_delta_s": 0.01570656517587774,
     "max_delta_s_required": 0.02,
     "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
-    "next_stage": "H3B_T01A_LOCAL_RF_OPTIMIZATION_FREEZE",
-    "stop_boundary": "AWAIT NEW EXPLICIT AUTHORIZATION; NO OPTIMIZATION SWEEP"
+    "next_stage": "H3B_T01A_O0_REFERENCE_LINE_FREEZE",
+    "stop_boundary": "AWAIT O0 AUTHORIZATION; NO BUILD NO SOLVE",
+    "master_plan": "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
+    "simulationops_min": "0.2.7",
+    "t01c_status": "DEFERRED_NOT_AUTHORIZED",
+    "h3bi01_status": "BLOCKED_UNTIL_T01A_FREEZE",
+    "h3cc01_status": "BLOCKED_UNTIL_R1E2_ACTIVE_IMPEDANCE_ATLAS",
+    "h3clna0_status": "MAY_PROCEED_IN_PARALLEL_WHEN_SEPARATELY_AUTHORIZED"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01A_LOCAL_RF_OPTIMIZATION_AWAIT_AUTH",
+    "current_stage": "R1E1A4A_H3B_T01A_O0_REFERENCE_LINE_AWAIT_AUTH",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true

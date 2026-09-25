@@ -125,7 +125,7 @@ Purpose: establish the passive penalty of the real mechanical/RF architecture.
 Evaluate impedance/active-impedance change, radiation efficiency/pattern/polarization, common-mode/stalk current resonances and branch symmetry.
 Do not yet optimize a real active device.
 
-### H3C-LNA0 — first-stage LNA/noise model qualification
+### H3C-LNA0 — first-stage LNA/noise model qualification (may proceed in parallel after H3B-I01)
 Required data: S-parameters, noise parameters vs frequency, bias assumptions, stability and source-impedance sensitivity/source-pull where available.
 QPL9547 remains a reference candidate, not final authority.
 
@@ -136,9 +136,6 @@ Objectives: minimize robust receiver-noise penalty across core frequency/scan wh
 
 ### H3C-EMBACK — self-consistent EM/circuit closure
 Back-annotate optimized LNA input reflection/loading into the EM/array model, recompute active impedance/pattern/coupling, and iterate with H3C-C01 until source/load conditions converge within frozen thresholds.
-
-### R1E2 — authoritative active-impedance atlas
-After mechanics + passive RF + active loading stabilize, generate and lock the frequency/scan/polarization active-impedance atlas used by final receiver optimization.
 
 ### SYSOPT-1 — limited robust system optimization
 Expose only a small Class-C vector.
