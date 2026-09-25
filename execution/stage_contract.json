@@ -3,35 +3,34 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_BUILD_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_H1A_SOLVE_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
-    "SOLVE_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": true,
     "solve_authorized_after_build_pass": true,
-    "production_solve_authorized": false,
+    "production_solve_authorized": true,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
     "cst251_authorized": false,
-    "scope": "ONE_H1A_BUILD_ONLY_THEN_ONE_H1A_BROADSIDE_SOLVE_IF_BUILD_PASS"
+    "scope": "ONE_H1A_BROADSIDE_PRODUCTION_SOLVE_ON_NW_AFTER_CANONICAL_BUILD_PASS"
   },
   "scientific_freeze": {
-    "parent_source_sha256": "fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e",
+    "h0_status": "HOLD_R1E1A4A_H0_P1_GATE_R_RNF0",
+    "h1a_build_formal_status": "HOLD_R1E1A4A_H1A_BUILD_IN_SESSION_AUDIT_PERSISTENCE",
+    "h1a_build_canonical_status": "PASS_R1E1A4A_H1A_OFFSET_GROUND_BUILD_ONLY_READONLY_RECOVERY",
+    "h1a_source_sha256": "b903d678a7039105ad4d91bea2f82e9c1e5e9f8bbf5a5977360c85e34ced3b94",
+    "gate_t": "UNCHANGED",
+    "gate_r": "V0P1_UNCHANGED",
     "candidate": "H1A_OFFSET_GROUND_G2P0",
     "ground_footprint_mm": [10.0,10.0],
-    "ground_copper_thickness_mm": 0.035,
-    "air_gap_mm": 2.0,
-    "p1_ports": 2,
-    "p1_single_ended_ref_ohm": 50.0,
-    "gate_r": "V0P1_UNCHANGED",
-    "support_carrier": "NONE",
-    "daughterboard_dielectric": "NONE",
-    "package_shield_transistor": "NONE",
-    "stop_boundary": "STOP_AFTER_H1A_B0_CLOSEOUT; NO_SCAN_OR_H1B_CONTINUATION"
+    "ground_air_gap_mm": 2.0,
+    "required_outputs": ["S11","S12","S21","S22","Sdd","Sdc","Scd","Scc","P1A_NF","P1B_NF"],
+    "stop_boundary": "STOP_AFTER_H1A_BROADSIDE_READONLY_QUALIFICATION; NO FOLLOW-ON SCANS"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H1A_OFFSET_GROUND_BUILD_ONLY",
-    "h1a_formal_build_invocation_count": 0,
+    "current_stage": "R1E1A4A_H1A_BROADSIDE_MIXEDMODE_SOLVE",
+    "h1a_formal_build_invocation_count": 1,
     "h1a_formal_solve_invocation_count": 0,
     "one_shot_required": true,
     "silent_retry_allowed": false,
