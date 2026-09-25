@@ -18,10 +18,10 @@
   "solve": {
     "original_hold_count": 1,
     "recovery_pass_count": 1,
-    "last_state": "S1_BONDED_B0",
-    "last_status": "PASS_R1E1A3R1_S1_BONDED_B0_SOLVE_AND_BENIGN_GATE",
-    "last_result_sha256": "9ca14907abb5a839c399452ef88a7f949dd3df4476992918d1bba5b7c33b71a9",
-    "remaining_states": ["S1_BONDED_C60P45","S1_BONDED_C60P135","S4_PEC_B0"]
+    "last_state": "S1_BONDED_C60P45",
+    "last_status": "PASS_R1E1A3R1_S1_BONDED_C60P45_SOLVE_AND_BENIGN_GATE",
+    "last_result_sha256": "9e26e2ef4222a91aeeda983bd8f96c5ebe78aaf49e6a9ad6c6e7747ca4d74c49",
+    "remaining_states": ["S1_BONDED_C60P135","S4_PEC_B0"]
   },
   "archive": {"mode":"PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE","completed":false,"purge_allowed":false}
 }

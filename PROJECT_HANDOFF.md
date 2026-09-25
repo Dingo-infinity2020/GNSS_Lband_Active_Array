@@ -3,7 +3,7 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=59
+HANDOFF_VERSION=60
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
@@ -683,3 +683,11 @@ Solved SHA256: `9ca14907abb5a839c399452ef88a7f949dd3df4476992918d1bba5b7c33b71a9
 
 Conditional authorization now opens the remaining sequence:
 `S1_BONDED_C60P45 -> S1_BONDED_C60P135 -> S4_PEC_B0`, each one-shot under the identical MaxPasses=12 recovery config. Any HOLD stops the sequence.
+
+## R1E1A3-R1 S1 C60P45 PASS
+
+`S1_BONDED_C60P45` completed with strict numerical PASS and benign-gate PASS.
+Adaptive Delta-S final pair: 0.0116278, 0.00987295; desired-accuracy termination; broadband convergence PASS.
+Support-vs-bare max |Delta S11| = 0.00697213; max |Delta Z_active| = 0.982821 ohm.
+Solved SHA256: `9e26e2ef4222a91aeeda983bd8f96c5ebe78aaf49e6a9ad6c6e7747ca4d74c49`.
+Next authorized one-shot state: `S1_BONDED_C60P135`.

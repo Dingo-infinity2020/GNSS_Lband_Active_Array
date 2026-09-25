@@ -18,7 +18,7 @@
     "b0_recovery_status": "PASS_R1E1A3R1_S1_BONDED_B0_SOLVE_AND_BENIGN_GATE",
     "b0_result_sha256": "9ca14907abb5a839c399452ef88a7f949dd3df4476992918d1bba5b7c33b71a9",
     "solver_config": "source/cst/R1E1A3R1_SUPPORT_SOLVER_CONFIG_V02.mcr",
-    "remaining_states": ["S1_BONDED_C60P45","S1_BONDED_C60P135","S4_PEC_B0"],
+    "remaining_states": ["S1_BONDED_C60P135","S4_PEC_B0"],
     "physical_gate": {"max_complex_delta_s11":0.05,"max_abs_delta_zactive_ohm":10.0},
     "stop_boundary": "stop on any HOLD; do not start R1E1B"
   },
@@ -27,7 +27,7 @@
     "formal_build_invocation_count": 1,
     "formal_original_solve_invocation_count": 1,
     "formal_recovery_solve_invocation_count": 1,
-    "next_state": "S1_BONDED_C60P45",
+    "next_state": "S1_BONDED_C60P135",
     "one_shot_required": true,
     "silent_retry_allowed": false,
     "hash_lock_required": true
