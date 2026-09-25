@@ -3,14 +3,14 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=75
+HANDOFF_VERSION=76
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H3-ORTHOGONAL-PCB-FEED-STALK-ARCHITECTURE-DESIGN
-TASK_OWNER=DESIGN_RESEARCH
-TASK_STATUS=DESIGN_ONLY_H2AV02_INTERFERENCE_FOUND
-SIMULATIONOPS_PROTOCOL=0.2.4
+CURRENT_TASK_ID=R1E1-A4A-H3A-ORTHOGONAL-STALK-ARCHITECTURE-FROZEN-AWAIT-BUILD-AUTH
+TASK_OWNER=DESIGN_CONTROL
+TASK_STATUS=ARCHITECTURE_FROZEN_NO_BUILD_AUTH
+SIMULATIONOPS_PROTOCOL=0.2.5
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
@@ -922,3 +922,28 @@ Concept:
 - exact pre-LNA transition architecture and LNA-on-radiator vs LNA-on-stalk location remain unfrozen.
 
 All BUILD/SOLVE permissions remain closed.
+
+## H3A V0.1 architecture freeze
+
+H3A is now frozen sufficiently for deterministic build-only implementation, but no build is authorized.
+
+Frozen architecture:
+- two mutually perpendicular 1.0-mm FR4 stalk PCBs aligned to global X/Y axes;
+- two top insertion tenons and two bottom tenons per stalk;
+- half-depth cross-slot interlock between stalks;
+- 17 x 17 x 7-mm central electronics cavity;
+- radiator-backside first-stage LNA topology;
+- post-LNA NE/SW branch pair -> X-stalk; NW/SE -> Y-stalk;
+- RF transition centers at +/-9.4 mm; mechanical tenons at +/-12.0 mm;
+- bottom RF-ground connection remains configurable and is not forced by the mechanical joint.
+
+Canonical freeze document:
+`docs/R1E1A4A_H3A_ORTHOGONAL_STALK_ARCHITECTURE_FREEZE_V01.md`
+
+Machine-readable manifest:
+`execution/h3a_architecture_manifest_v01.json`
+
+Mandatory next-build gate:
+CST fresh reopen + Geometry Intersection Check with zero unresolved interference under SimulationOps >=0.2.5.
+
+Current permissions remain BUILD=NO, SOLVE=NO, ACTIVE_DEVICE=NO.

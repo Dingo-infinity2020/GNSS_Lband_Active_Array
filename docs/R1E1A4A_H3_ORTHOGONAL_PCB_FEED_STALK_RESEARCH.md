@@ -1,6 +1,6 @@
 # H3 Orthogonal-PCB Feed-Stalk / Support Architecture Research
 
-Status: DESIGN / RESEARCH ONLY — NO BUILD OR SOLVE AUTHORIZATION
+Status: RESEARCH BASIS — first build candidate frozen separately in `R1E1A4A_H3A_ORTHOGONAL_STALK_ARCHITECTURE_FREEZE_V01.md`; NO BUILD OR SOLVE AUTHORIZATION
 
 ## Why H3 exists
 

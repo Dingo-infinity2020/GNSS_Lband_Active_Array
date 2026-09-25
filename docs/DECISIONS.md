@@ -362,3 +362,16 @@ H3 design preference:
 
 Reference:
 `docs/R1E1A4A_H3_ORTHOGONAL_PCB_FEED_STALK_RESEARCH.md`
+
+## D0018 — Freeze H3A V0.1 orthogonal-stalk architecture
+
+Decision:
+- freeze X/Y-oriented orthogonal PCB stalks rather than +/-45-degree stalks because the accepted radiator already contains X/Y center-cross copper-isolation corridors;
+- use 1.0-mm FR4 stalks with two top tenons and two bottom tenons per stalk, plus a half-depth board-to-board cross interlock;
+- keep the first-stage LNAs on the radiator backside; place the 90-degree board transition after first-stage gain;
+- map NE/SW branch outputs to X-stalk and NW/SE to Y-stalk;
+- separate mechanical tenons from RF transition pads;
+- reserve a central electronics cavity and keep bottom RF-ground bonding configurable rather than hard-wired by the mechanical solder joint.
+
+Reference:
+`docs/R1E1A4A_H3A_ORTHOGONAL_STALK_ARCHITECTURE_FREEZE_V01.md`

@@ -4,7 +4,7 @@
 Minimum compatible SimulationOps protocol: 0.2.5
 
 ## Current stage
-R1E1A4A_H3_ORTHOGONAL_PCB_FEED_STALK_ARCHITECTURE_DESIGN
+R1E1A4A_H3A_ARCHITECTURE_FROZEN_AWAIT_BUILD_AUTH
 
 BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
@@ -13,33 +13,29 @@ MATERIAL_AB_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 CST251_AUTHORIZED: false
 
-## H2A V0.2 retained reference
-Historical execution status:
-PASS_R1E1A4A_H2A_V02_SERVICE_ARCH_BUILD_ONLY
+## Frozen candidate
+`H3A_ORTHOGONAL_STALK_ASSEMBLY_V01`
 
-Post-closeout human review status:
-HOLD_H2AV02_GEOMETRY_INTERFERENCE
+Freeze document:
+`docs/R1E1A4A_H3A_ORTHOGONAL_STALK_ARCHITECTURE_FREEZE_V01.md`
 
-Artifact remains protected:
-D:\GNSS_Lband_Active_Array\_r1e1a4a_h2av02_build_work\R1E1A4A_H2A_V02_SERVICE_ARCH_BUILD_ONLY_V01.cst
+Machine-readable manifest:
+`execution/h3a_architecture_manifest_v01.json`
 
-SHA256:
-4756a525c407bac9f6de1c42c9274b74825a45a6b3cae81e60f1e67e64494064
+Key frozen decisions:
+- X/Y-oriented 1.0-mm FR4 vertical stalks;
+- two top and two bottom tenons per stalk;
+- half-depth cross-slot interlock;
+- central 17 x 17 x 7-mm electronics cavity;
+- radiator-backside first-stage LNA topology;
+- NE/SW post-LNA branches -> X-stalk;
+- NW/SE post-LNA branches -> Y-stalk;
+- mechanical insertion and RF transition are separate features;
+- bottom RF-ground bond remains configurable.
 
-The artifact is NOT an eligible solve source.
+Mandatory build gate:
+Fresh reopen -> CST Geometry Intersection Check -> zero unresolved intersections.
 
-Reason:
-human 3D review identified unintended geometry interference after the original build closeout.
-
-## Mandatory future CST build qualification
-After fresh reopen, run CST `Intersection Check / Check Model Intersections` and preserve auditable evidence.
-Every detected overlap must be classified as:
-- UNINTENDED_INTERFERENCE;
-- INTENTIONAL_CONTACT;
-- INTENTIONAL_EM_OVERLAP.
-
-Unresolved or unclassified intersection => BUILD HOLD.
-No BUILD PASS without intersection-check evidence.
-
-## Current design task
-Research/freeze a new orthogonal-PCB feed-stalk/support architecture before any new build.
+## Stop boundary
+Await new explicit H3A BUILD authorization.
+No build, solve or active-device execution is currently allowed.

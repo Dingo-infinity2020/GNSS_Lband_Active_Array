@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H3-ORTHOGONAL-PCB-FEED-STALK-ARCHITECTURE-DESIGN**
+Current task: **R1E1-A4A-H3A-ORTHOGONAL-STALK-ARCHITECTURE-FROZEN-AWAIT-BUILD-AUTH**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -47,9 +47,12 @@ Current permissions:
 - qualified V0.2 artifact is protected in place with SHA256 4756a525c407bac9f6de1c42c9274b74825a45a6b3cae81e60f1e67e64494064
 - human review of H2A V0.2 found unintended geometry interference; the artifact is retained but is NOT an eligible solve source
 - SimulationOps >=0.2.5 requires CST Geometry Intersection Check after fresh reopen before BUILD PASS
-- current task is H3 orthogonal-PCB feed-stalk/support architecture DESIGN/RESEARCH only
-- H3 investigates two mutually perpendicular vertical PCBs using slot/tab soldered board-in-board assembly, with support PCBs also available for post-LNA RF routing and later conversion/balun functions
-- no H3 build or solve is authorized; H2A V0.2 solve, H2B/T0/T1/T2 solve, active LNA integration, H1R solve, follow-on scan, S4 sentinel and R1E1B pitch-screen solver remain blocked
+- H3A V0.1 orthogonal-stalk architecture is FROZEN and awaits new explicit BUILD authorization
+- stalks are aligned X/Y to exploit existing radiator center-cross copper isolation; each is 1.0-mm FR4 with explicit top/bottom tenons and half-depth cross interlock
+- H3A uses radiator-backside first-stage LNAs; post-LNA branch pairs map NE/SW to X-stalk and NW/SE to Y-stalk
+- mechanical tenons and RF transitions are separate features; central 17x17x7-mm electronics cavity is reserved for LNA/shield volume
+- future build MUST run CST Geometry Intersection Check after fresh reopen under SimulationOps >=0.2.5
+- no H3A build or solve is currently authorized; active LNA integration, H1R solve, follow-on scan, S4 sentinel and R1E1B pitch-screen solver remain blocked
 - material A/B solve: NO
 - physical LNA integration/CST251: NO
 - do not assume each LNA sees Zdiff/2 unless the virtual-ground/reference-plane condition is explicitly qualified
