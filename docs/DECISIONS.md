@@ -316,3 +316,21 @@ Reference:
 
 Reversal condition:
 - H1R numerical PASS followed by authoritative Gate-R classification, or H1R numerical HOLD.
+
+## D0015 — Promote H2 universal center structure; demote H1A to diagnostic evidence
+
+Decision:
+- H1A 2-mm offset-ground remains valuable diagnostic evidence but is not the product mechanical architecture.
+- Product-architecture mainline moves to H2: one passive/active-compatible center structure using the same radiator PCB, patterned same-board local ground, shared signal landing pads, shield envelope and mechanical carrier.
+- H2A V0.1 is BUILD-ONLY for human mechanical/manufacturing review before any EM solve.
+- Passive and active variants should preserve the same mechanical/RF interface; the active variant later populates LNA circuitry rather than requiring a different antenna-support architecture.
+
+Rationale:
+- H0 showed a continuous same-board 10x10-mm ground can over-load the source environment.
+- H1A showed ground coupling strength is a first-order variable but introduced a mechanically awkward suspended-ground architecture.
+- CHARTS, SKALA-class and EMBRACE implementations support integrating feed electronics, local ground/shield and mechanical assembly as a common feed-point module rather than treating support as a late add-on.
+
+H2A V0.1 freezes topology only, not RF-optimal dimensions. No post-result optimization is allowed inside the build-only gate.
+
+Reference:
+`docs/R1E1A4A_H2A_UNIVERSAL_CENTER_STRUCTURE_V01.md`

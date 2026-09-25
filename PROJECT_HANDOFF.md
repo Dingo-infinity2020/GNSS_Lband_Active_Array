@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=70
+HANDOFF_VERSION=71
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H1R-NUMERICAL-RECOVERY-DESIGN
-TASK_OWNER=DESIGN_CIRCUIT
-TASK_STATUS=HOLD_H1A_NUMERICAL_MAXPASSES
+CURRENT_TASK_ID=R1E1-A4A-H2A-UNIVERSAL-CENTER-STRUCTURE-BUILD-ONLY-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=AUTHORIZED_BUILD_READY
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=NO
+BUILD_AUTHORIZED=YES_ONE_H2A_BUILD_ONLY
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -830,3 +830,28 @@ This strongly suggests that 2-mm local-ground separation is a useful physical di
 
 Next task: `R1E1A4A_H1R_NUMERICAL_RECOVERY_DESIGN`.
 Frozen future recovery is numerical only, with sole allowed solver change `MaxPasses 12 -> 16`; no H1R solve is authorized yet.
+
+## H2A universal-center-structure authorization
+
+User explicitly authorized H2A BUILD-ONLY after reviewing the manufacturability discussion and literature-informed architecture direction.
+
+H1A/H1R status:
+- H1A offset-ground build PASS and broadside numerical HOLD remain preserved;
+- H1R MaxPasses recovery is deferred and not authorized;
+- H1A is diagnostic evidence, not the product architecture.
+
+Current product-architecture task:
+`R1E1-A4A-H2A-UNIVERSAL-CENTER-STRUCTURE-BUILD-ONLY-NW`.
+
+H2A V0.1 build scope:
+- immutable P094 bare parent;
+- same-board 20x20-mm patterned backside ground with 8x8-mm central clearance;
+- four 0.90-mm signal pads and four 0.30-mm vertical RF pin/via proxies;
+- four 2x2x0.6-mm dummy LNA population envelopes at radius 6.2 mm;
+- 18x18-mm shield-can envelope;
+- 30-mm outer / 21-mm inner hollow PEEK carrier to the parent main backplane;
+- old ideal differential port removed; target port count zero.
+
+No feed trace, matching network, bias/output network, transistor, solver, scan continuation or optimization is authorized.
+
+Stop after fresh-reopen build qualification for human 3D review.

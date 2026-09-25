@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H1R-NUMERICAL-RECOVERY-DESIGN**
+Current task: **R1E1-A4A-H2A-UNIVERSAL-CENTER-STRUCTURE-BUILD-ONLY-NW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -38,8 +38,12 @@ Current permissions:
 - canonical H0 V0.1 status is HOLD_GATE_R_RNF0 despite numerical/mixed-mode PASS
 - H1A OFFSET_GROUND_G2P0 build authorization is consumed; canonical build PASS via fresh-reopen recovery; do not rerun build
 - H1A broadside production solve authorization is consumed; canonical status is numerical HOLD at MaxPasses=12; do not rerun
-- current work is H1R numerical recovery DESIGN ONLY; future sole solver change is MaxPasses 12->16 if separately authorized
-- no H1A/H1R follow-on scan, H1B, support-carrier build/solve, S4 sentinel, shield/package/transistor or R1E1B pitch-screen solver
+- H1R numerical recovery is DEFERRED; no H1R solve is authorized
+- user promoted H2A Universal Passive/Active Center Structure to the product-architecture mainline
+- exactly one H2A V0.1 BUILD-ONLY invocation on NW is authorized
+- H2A includes patterned same-board local ground, four signal pin/pad proxies, four dummy LNA package envelopes, shield-can envelope, and hollow PEEK carrier
+- H2A is mechanical/manufacturing review only: no RF trace, matching network, bias, active transistor, optimization, or solver
+- no H2A solve, H2B/H2C build, H1R solve, follow-on scan, S4 sentinel or R1E1B pitch-screen solver
 - material A/B solve: NO
 - physical LNA integration/CST251: NO
 - do not assume each LNA sees Zdiff/2 unless the virtual-ground/reference-plane condition is explicitly qualified
