@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=85
+HANDOFF_VERSION=86
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H3B-T01A-NUMERICAL-RECOVERY-AWAIT-AUTH
-TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=HOLD_ADAPTIVE_MAXPASS8_NOT_CONVERGED
+CURRENT_TASK_ID=R1E1-A4A-H3B-T01A-NUMERICAL-RECOVERY-MAXPASS16-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=AUTHORIZED_SOLVE_READY
 SIMULATIONOPS_PROTOCOL=0.2.6
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -1093,3 +1093,12 @@ Native adaptive evidence:
 Provisional S-parameter observations are retained for diagnostics only. No geometry or RF optimization is authorized until numerical recovery succeeds.
 
 All BUILD/SOLVE permissions are closed. A fresh explicit solve authorization is required for recovery.
+
+## H3B-T01A maxpass16 numerical recovery authorization
+
+Exactly one recovery solve on NW is authorized.
+The only numerical change relative to the baseline solve is adaptive MaxPasses 8 -> 16.
+Source BUILD artifact, geometry, ports, frequency range, solver type, second-order tetra formulation, MaxDeltaS=0.02 and two-check convergence criterion remain unchanged.
+
+Convergence authority is the CST Adaptive Meshing / All-S Delta result tree.
+No geometry optimization, T01-C, H3B-I01 or active-device work is authorized.

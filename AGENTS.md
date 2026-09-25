@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H3B-T01A-NUMERICAL-RECOVERY-AWAIT-AUTH**
+Current task: **R1E1-A4A-H3B-T01A-NUMERICAL-RECOVERY-MAXPASS16-NW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -209,3 +209,12 @@ Stop and document instead of guessing when:
 - current S-parameters are provisional diagnostics only, not science-qualified;
 - next action is numerical convergence recovery under a fresh explicit solve authorization;
 - no geometry optimization, T01-C, H3B-I01 or active-device work is authorized.
+
+## H3B-T01A maxpass16 recovery authorization
+- exactly one numerical-recovery solve on NW is authorized;
+- source is the same protected T01 BUILD artifact;
+- the ONLY solver delta versus T01-A baseline is adaptive MaxPasses 8 -> 16;
+- ports, frequency range, mesh formulation, threshold and geometry remain frozen;
+- convergence authority is the CST Adaptive Meshing All-S Delta result tree, not output.txt alone;
+- no geometry/RF optimization or T01-C/H3B-I01/active-device work is authorized;
+- silent retry remains forbidden.
