@@ -3,36 +3,37 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_H1A_SOLVE_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": true,
-    "solve_authorized_after_build_pass": true,
-    "production_solve_authorized": true,
+    "SOLVE_AUTHORIZED": false,
+    "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
-    "cst251_authorized": false,
-    "scope": "ONE_H1A_BROADSIDE_PRODUCTION_SOLVE_ON_NW_AFTER_CANONICAL_BUILD_PASS"
+    "cst251_authorized": false
   },
   "scientific_freeze": {
     "h0_status": "HOLD_R1E1A4A_H0_P1_GATE_R_RNF0",
-    "h1a_build_formal_status": "HOLD_R1E1A4A_H1A_BUILD_IN_SESSION_AUDIT_PERSISTENCE",
-    "h1a_build_canonical_status": "PASS_R1E1A4A_H1A_OFFSET_GROUND_BUILD_ONLY_READONLY_RECOVERY",
-    "h1a_source_sha256": "b903d678a7039105ad4d91bea2f82e9c1e5e9f8bbf5a5977360c85e34ced3b94",
+    "h1a_build_status": "PASS_R1E1A4A_H1A_OFFSET_GROUND_BUILD_ONLY_READONLY_RECOVERY",
+    "h1a_solve_status": "HOLD_R1E1A4A_H1A_BROADSIDE_NUMERICAL_MAXPASSES",
+    "h1a_solved_artifact_sha256": "5960efbfe85a1f27ae29be987dc397a57c52d75129f9134a49372d898b64e930",
+    "h1a_final_delta_s": 0.0213176,
+    "h1a_broadband_converged": true,
+    "h1a_mixed_mode_trend": "PROVISIONAL_PASS_NOT_AUTHORITATIVE",
+    "h1a_receiver_shadow_trend": "PROVISIONAL_NEAR_PASS_NOT_AUTHORITATIVE",
     "gate_t": "UNCHANGED",
     "gate_r": "V0P1_UNCHANGED",
-    "candidate": "H1A_OFFSET_GROUND_G2P0",
-    "ground_footprint_mm": [10.0,10.0],
-    "ground_air_gap_mm": 2.0,
-    "required_outputs": ["S11","S12","S21","S22","Sdd","Sdc","Scd","Scc","P1A_NF","P1B_NF"],
-    "stop_boundary": "STOP_AFTER_H1A_BROADSIDE_READONLY_QUALIFICATION; NO FOLLOW-ON SCANS"
+    "next_plan": "docs/R1E1A4A_H1R_NUMERICAL_RECOVERY_PLAN.md",
+    "next_stage": "R1E1A4A_H1R_NUMERICAL_RECOVERY_DESIGN",
+    "sole_future_solver_change": "MaxPasses_12_to_16",
+    "stop_boundary": "DESIGN_ONLY; await fresh explicit solve authorization"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H1A_BROADSIDE_MIXEDMODE_SOLVE",
+    "current_stage": "R1E1A4A_H1R_NUMERICAL_RECOVERY_DESIGN",
     "h1a_formal_build_invocation_count": 1,
-    "h1a_formal_solve_invocation_count": 0,
-    "one_shot_required": true,
+    "h1a_formal_solve_invocation_count": 1,
+    "h1r_formal_solve_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },

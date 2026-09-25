@@ -295,3 +295,24 @@ Reference:
 
 Reversal condition:
 - none for H0 V0.1 as currently defined. A materially different local-ground/feed-transition geometry is a new candidate, not a threshold change.
+
+## D0015 — H1A offset-ground is directionally promising but numerically unqualified; freeze a one-step numerical recovery
+
+Decision:
+- preserve H1A `OFFSET_GROUND_G2P0` geometry exactly as solved;
+- do not classify H1A receiver performance from the MaxPasses=12 run;
+- retain the provisional result only as a diagnostic trend showing that 2-mm local-ground separation strongly changes the source environment and largely removes the H0 upper-band QPL9547 NF penalty;
+- freeze R1E1A4A-H1R as a numerical-only recovery with sole solver change MaxPasses 12 -> 16;
+- do not change Gate R, geometry, ports, materials, scan state, or mixed-mode definitions;
+- do not proceed to H1B/H1C or scan states until H1R is numerically qualified.
+
+Reason:
+- H1A final Delta-S = 0.0213176 at MaxPasses=12, narrowly above the frozen 0.02 criterion;
+- the late-pass sequence is monotonically decreasing, making a bounded numerical recovery appropriate;
+- provisional R-NF0 exceedance is confined to the low-band edge but cannot be treated as authoritative until numerical PASS.
+
+Reference:
+`docs/R1E1A4A_H1R_NUMERICAL_RECOVERY_PLAN.md`
+
+Reversal condition:
+- H1R numerical PASS followed by authoritative Gate-R classification, or H1R numerical HOLD.

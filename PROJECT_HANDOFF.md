@@ -3,17 +3,17 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=69
+HANDOFF_VERSION=70
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H1A-BROADSIDE-MIXEDMODE-SOLVE-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=BUILD_CANONICAL_PASS_SOLVE_AUTHORIZED
+CURRENT_TASK_ID=R1E1-A4A-H1R-NUMERICAL-RECOVERY-DESIGN
+TASK_OWNER=DESIGN_CIRCUIT
+TASK_STATUS=HOLD_H1A_NUMERICAL_MAXPASSES
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=YES_ONE_H1A_BROADSIDE_ONLY
-PRODUCTION_SOLVER_PERMISSION=YES_H1A_BROADSIDE_ONLY
+SOLVER_PERMISSION=NO
+PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
@@ -796,3 +796,37 @@ Canonical status: `HOLD_R1E1A4A_H0_P1_GATE_R_RNF0`.
 Solved artifact SHA256: `a95e18b66d5000b034807455c368abdf9b831e2c1395427edb33bd6de73fafab`.
 
 The P1 mixed-mode interface is retained; the H0 V0.1 continuous same-board ground geometry is not. Next design: `docs/R1E1A4A_H1_LOCAL_GROUND_REDESIGN_PLAN.md`. No H1 build/solve is authorized.
+
+## R1E1A4A-H1A 2-mm offset-ground build / solve closeout
+
+H1A build:
+- formal in-session audit status: `HOLD_R1E1A4A_H1A_BUILD_IN_SESSION_AUDIT_PERSISTENCE`;
+- canonical fresh-reopen status: `PASS_R1E1A4A_H1A_OFFSET_GROUND_BUILD_ONLY_READONLY_RECOVERY`;
+- build artifact SHA256: `b903d678a7039105ad4d91bea2f82e9c1e5e9f8bbf5a5977360c85e34ced3b94`.
+
+Fresh-reopen geometry is exactly the intended diagnostic model: 10x10x0.035-mm centered local-ground plane with its top 2.000 mm below the radiator-substrate underside; two 50-ohm P1A/P1B ports span 3.035 mm from top terminal plane to the offset ground; periodic cell remains 94 mm broadside; no solver results in build artifact.
+
+H1A broadside solve:
+- one authorized production solve consumed;
+- canonical status: `HOLD_R1E1A4A_H1A_BROADSIDE_NUMERICAL_MAXPASSES`;
+- final Delta-S = 0.0213176 at MaxPasses=12;
+- desired-accuracy termination = false;
+- broadband sweep PASS after 6 samples;
+- no solver errors;
+- solved artifact SHA256: `5960efbfe85a1f27ae29be987dc397a57c52d75129f9134a49372d898b64e930`.
+
+Because the numerical gate failed, no authoritative Gate-R classification is made from this solve.
+
+Provisional trend only — not a PASS claim:
+- max |Sdc| about -68.323 dB;
+- max |Scd| about -68.372 dB;
+- branch magnitude imbalance about 0.01083 dB;
+- branch phase error about 0.1623 deg;
+- max |Delta Zdd| vs old P0 about 68.98 ohm, much smaller than H0 V0.1's ~200-ohm loading;
+- QPL9547 R-NF0 provisional max about 0.421 dB at 1.1504 GHz;
+- only 30/625 science-band samples per branch provisionally exceed 0.40 dB, about 1.1504-1.1736 GHz.
+
+This strongly suggests that 2-mm local-ground separation is a useful physical direction, but the result must be numerically qualified before any scientific or architecture decision.
+
+Next task: `R1E1A4A_H1R_NUMERICAL_RECOVERY_DESIGN`.
+Frozen future recovery is numerical only, with sole allowed solver change `MaxPasses 12 -> 16`; no H1R solve is authorized yet.

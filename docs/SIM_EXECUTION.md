@@ -1,45 +1,55 @@
 # SIM_EXECUTION
 
 ## Current stage
-R1E1A4A_H1A_BROADSIDE_MIXEDMODE_SOLVE
+R1E1A4A_H1R_NUMERICAL_RECOVERY_DESIGN
 
 BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: true — ONE H1A BROADSIDE INVOCATION
-PRODUCTION_SOLVE_AUTHORIZED: true — H1A BROADSIDE ONLY
+SOLVE_AUTHORIZED: false
+PRODUCTION_SOLVE_AUTHORIZED: false
 MATERIAL_AB_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 CST251_AUTHORIZED: false
 
-## H1A build closeout
-Formal status:
-HOLD_R1E1A4A_H1A_BUILD_IN_SESSION_AUDIT_PERSISTENCE
-
+## H1A closed solve
 Canonical status:
-PASS_R1E1A4A_H1A_OFFSET_GROUND_BUILD_ONLY_READONLY_RECOVERY
+HOLD_R1E1A4A_H1A_BROADSIDE_NUMERICAL_MAXPASSES
 
-Artifact:
-D:\GNSS_Lband_Active_Array\_r1e1a4a_h1a_build_work\R1E1A4A_H1A_OFFSET_GROUND_BUILD_ONLY_V01.cst
+Formal solve invocation count: 1
+Solver rerun: NO
+
+Solved artifact:
+D:\GNSS_Lband_Active_Array\_r1e1a4a_h1a_b0_solve_work\R1E1A4A_H1A_BROADSIDE_SOLVE_V01.cst
 
 SHA256:
-b903d678a7039105ad4d91bea2f82e9c1e5e9f8bbf5a5977360c85e34ced3b94
+5960efbfe85a1f27ae29be987dc397a57c52d75129f9134a49372d898b64e930
 
-Fresh-reopen geometry:
-- 10x10x0.035-mm centered offset local ground;
-- exact 2.000-mm air gap below radiator substrate;
-- two 50-ohm P1A/P1B ports;
-- port length 3.035 mm;
-- 94-mm broadside periodic cell;
-- no solver results.
+Numerical status: HOLD.
+- final Delta-S = 0.0213176;
+- MaxPasses=12 reached;
+- desired-accuracy termination = false;
+- broadband sweep converged after 6 samples;
+- no solver errors.
 
-## Authorized solve
-- broadside only;
-- qualified MaxPasses=12 numerical baseline;
-- extract complete periodic 2-port;
-- compare H1A vs H0 V0.1 and old P0;
-- apply frozen mixed-mode Gate R;
-- calculate actual branch QPL9547 R-NF0;
-- no carrier, daughterboard dielectric, package, shield or transistor.
+Provisional diagnostics only:
+- mixed-mode symmetry would pass;
+- max |Sdc| about -68.32 dB;
+- branch magnitude imbalance about 0.0108 dB;
+- QPL9547 R-NF0 provisional max about 0.421 dB;
+- provisional exceedance only near 1.1504-1.1736 GHz.
+
+These are NOT authoritative because the numerical gate failed.
+
+## Next design
+Plan:
+docs/R1E1A4A_H1R_NUMERICAL_RECOVERY_PLAN.md
+
+Frozen future recovery:
+- H1A geometry unchanged;
+- broadside unchanged;
+- all Gate-R thresholds unchanged;
+- sole solver change: MaxPasses 12 -> 16.
 
 ## Stop boundary
-Stop after H1A broadside qualification.
-No C60P45/C60P135 or H1B without new authorization.
+DESIGN ONLY.
+Await fresh explicit H1R solve authorization.
+No H1B/H1C, scan continuation, carrier, shield/package or transistor work.

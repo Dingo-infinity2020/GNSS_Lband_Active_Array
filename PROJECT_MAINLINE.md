@@ -322,7 +322,7 @@ No stage inherits solver permission from the previous stage.
 
 As of the current handoff:
 
-`R1E0 94-mm periodic scan qualification CLOSED PASS -> R1E1A1 six-pitch bare source set CLOSED PASS -> R1E1A2 support build CLOSED PASS -> R1E1A3 support transparency HOLD_SCIENCE_GATE -> R1E1A4A receiver-shadow/interface freeze -> H0 V0.1 broadside mixed-mode PASS but Gate-R R-NF0 HOLD -> H1 local-ground/feed-transition redesign -> R1E1A4B/C targeted carrier/hub co-design -> R1E1 pitch/material trade with receiver-shadow metrics -> R1E2 authoritative active-impedance atlas on support/hub-inclusive geometry -> R2 active-front-end co-design`.
+`R1E0 94-mm periodic scan qualification CLOSED PASS -> R1E1A1 six-pitch bare source set CLOSED PASS -> R1E1A2 support build CLOSED PASS -> R1E1A3 support transparency HOLD_SCIENCE_GATE -> R1E1A4A receiver-shadow/interface freeze -> H0 V0.1 broadside mixed-mode PASS but Gate-R R-NF0 HOLD -> H1A 2-mm offset-ground BUILD PASS -> H1A broadside numerical HOLD at MaxPasses=12 -> H1R numerical-recovery DESIGN -> R1E1A4B/C targeted carrier/hub co-design -> R1E1 pitch/material trade with receiver-shadow metrics -> R1E2 authoritative active-impedance atlas on support/hub-inclusive geometry -> R2 active-front-end co-design`.
 
 LNA model validation may proceed in parallel after the periodic workflow begins, but **final active-antenna input matching is blocked until R1E2 provides the scan-dependent active-impedance locus**.
 
