@@ -4,24 +4,33 @@
 Minimum compatible SimulationOps protocol: 0.2.6
 
 ## Current stage
-R1E1A4A_H3B_T01A_NUMERICAL_RECOVERY_MAXPASS16
+R1E1A4A_H3B_T01A_LOCAL_RF_OPTIMIZATION_AWAIT_AUTH
 
 BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: true — ONE T01A MAXPASS16 RECOVERY
-PRODUCTION_SOLVE_AUTHORIZED: true
+SOLVE_AUTHORIZED: false
+PRODUCTION_SOLVE_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 CST251_AUTHORIZED: false
 
-## Recovery authority
-docs/R1E1A4A_H3B_T01A_NUMERICAL_RECOVERY_FREEZE_V01.md
+## T01-A recovery result
+Canonical status:
+PASS_R1E1A4A_H3B_T01A_NUMERICALLY_CONVERGED_MAXPASS16
 
-Source BUILD SHA256:
-f321b678d390470a2420df40fd6d0cf6553cc041f9219bfcd011c7e41fbadf3d
+Solved artifact SHA256:
+928400031803e62665df0a17890b2158b8d56b2673e9af1a9e0c7a7d171266df
 
-Only solver delta from the failed baseline:
-MaxPasses 8 -> 16.
+Native adaptive convergence reached at pass 12:
+- pass 11 DeltaS = 0.01971590799;
+- pass 12 DeltaS = 0.01570656518;
+- threshold = 0.02.
 
-Native PASS criterion:
-final two CST Adaptive Meshing / All-S Delta values <= 0.02.
+Core-band qualified baseline:
+- S11/S22: approximately -15.37 to -9.77 dB;
+- S21/S12: approximately -0.240 to -0.639 dB;
+- no sharp destructive notch;
+- reciprocity consistent.
 
-No geometry/RF optimization is authorized.
+## Next node
+H3B_T01A_LOCAL_RF_OPTIMIZATION_FREEZE
+
+No optimization sweep is currently authorized. T01-C remains deferred.

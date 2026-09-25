@@ -3,40 +3,37 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_T01A_RECOVERY_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": true,
-    "production_solve_authorized": true,
+    "SOLVE_AUTHORIZED": false,
+    "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
-    "cst251_authorized": false,
-    "scope": "ONE_H3B_T01A_MAXPASS16_RECOVERY_ON_NW"
+    "cst251_authorized": false
   },
   "scientific_freeze": {
-    "candidate": "H3B_T01A_GCPW_ORTHOGONAL_TRANSITION_NUMERICAL_RECOVERY_MAXPASS16",
+    "candidate": "H3B_T01A_GCPW_ORTHOGONAL_TRANSITION",
+    "numerical_qualification_status": "PASS_R1E1A4A_H3B_T01A_NUMERICALLY_CONVERGED_MAXPASS16",
     "source_build_sha256": "f321b678d390470a2420df40fd6d0cf6553cc041f9219bfcd011c7e41fbadf3d",
-    "prior_solved_sha256": "846919954fc99f541d8d0cfa3b4246fb49bf520d51b6c14de675d6fed54b0734",
-    "recovery_freeze_doc": "docs/R1E1A4A_H3B_T01A_NUMERICAL_RECOVERY_FREEZE_V01.md",
-    "port_macro": "source/cst/R1E1A4A_H3B_T01A_PORTS_V01.mcr",
-    "solver_macro": "source/cst/R1E1A4A_H3B_T01A_SOLVER_CONFIG_MAXPASS16_V01.mcr",
-    "max_passes": 16,
-    "max_delta_s": 0.02,
-    "two_consecutive_checks_required": true,
-    "geometry_changes_allowed": false,
-    "optimization_sweep_allowed": false,
-    "stop_boundary": "STOP_AFTER_ONE_MAXPASS16_RECOVERY_AND_READ_ONLY_QUALIFICATION"
+    "solved_artifact_sha256": "928400031803e62665df0a17890b2158b8d56b2673e9af1a9e0c7a7d171266df",
+    "adaptive_passes": 12,
+    "pass11_delta_s": 0.01971590799246139,
+    "pass12_delta_s": 0.01570656517587774,
+    "max_delta_s_required": 0.02,
+    "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
+    "next_stage": "H3B_T01A_LOCAL_RF_OPTIMIZATION_FREEZE",
+    "stop_boundary": "AWAIT NEW EXPLICIT AUTHORIZATION; NO OPTIMIZATION SWEEP"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01A_NUMERICAL_RECOVERY_MAXPASS16",
-    "formal_recovery_solve_invocation_count": 0,
+    "current_stage": "R1E1A4A_H3B_T01A_LOCAL_RF_OPTIMIZATION_AWAIT_AUTH",
+    "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1E1A4A.json",
     "state": "CHECKPOINTED",
     "purge_allowed": false
   }

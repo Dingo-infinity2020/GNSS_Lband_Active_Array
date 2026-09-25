@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H3B-T01A-NUMERICAL-RECOVERY-MAXPASS16-NW**
+Current task: **R1E1-A4A-H3B-T01A-LOCAL-RF-OPTIMIZATION-AWAIT-AUTH**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
