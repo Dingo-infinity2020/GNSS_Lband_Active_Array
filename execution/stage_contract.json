@@ -3,37 +3,37 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_BUILD_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false,
+    "solve_authorized_after_build_pass": true,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
-    "cst251_authorized": false
+    "cst251_authorized": false,
+    "scope": "ONE_H1A_BUILD_ONLY_THEN_ONE_H1A_BROADSIDE_SOLVE_IF_BUILD_PASS"
   },
   "scientific_freeze": {
-    "formal_solve_status": "HOLD_R1E1A4A_H0_P1_BROADSIDE_POSTPROCESS_RESULT_PATH",
-    "canonical_stage_status": "HOLD_R1E1A4A_H0_P1_GATE_R_RNF0",
-    "solved_artifact_sha256": "a95e18b66d5000b034807455c368abdf9b831e2c1395427edb33bd6de73fafab",
-    "numerical_status": "PASS",
-    "mixed_mode_status": "PASS",
-    "gate_r_mode_conversion_status": "PASS",
-    "gate_r_branch_symmetry_status": "PASS",
-    "gate_r_r_nf0_status": "FAIL",
-    "r_nf0_fail_band_ghz": [1.3864,1.6496],
-    "gate_t": "UNCHANGED",
+    "parent_source_sha256": "fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e",
+    "candidate": "H1A_OFFSET_GROUND_G2P0",
+    "ground_footprint_mm": [10.0,10.0],
+    "ground_copper_thickness_mm": 0.035,
+    "air_gap_mm": 2.0,
+    "p1_ports": 2,
+    "p1_single_ended_ref_ohm": 50.0,
     "gate_r": "V0P1_UNCHANGED",
-    "next_plan": "docs/R1E1A4A_H1_LOCAL_GROUND_REDESIGN_PLAN.md",
-    "next_candidate": "H1A_OFFSET_GROUND_G2P0",
-    "r1e1b_status": "BLOCKED",
-    "stop_boundary": "DESIGN_ONLY; await new BUILD authorization"
+    "support_carrier": "NONE",
+    "daughterboard_dielectric": "NONE",
+    "package_shield_transistor": "NONE",
+    "stop_boundary": "STOP_AFTER_H1A_B0_CLOSEOUT; NO_SCAN_OR_H1B_CONTINUATION"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H1_LOCAL_GROUND_REDESIGN_DESIGN",
-    "r1e1a4a_formal_build_invocation_count": 1,
-    "r1e1a4a_formal_solve_invocation_count": 1,
+    "current_stage": "R1E1A4A_H1A_OFFSET_GROUND_BUILD_ONLY",
+    "h1a_formal_build_invocation_count": 0,
+    "h1a_formal_solve_invocation_count": 0,
+    "one_shot_required": true,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },

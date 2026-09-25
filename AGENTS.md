@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H1-LOCAL-GROUND-REDESIGN-DESIGN**
+Current task: **R1E1-A4A-H1A-OFFSET-GROUND-BUILD-AND-B0-SOLVE-NW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -36,8 +36,9 @@ Current permissions:
 - R1E1A4A H0/P1 BUILD-ONLY authorization is consumed; canonical build PASS via read-only recovery; do not rerun build
 - H0/P1 broadside solve authorization is consumed; no retry and no follow-on scan solve
 - canonical H0 V0.1 status is HOLD_GATE_R_RNF0 despite numerical/mixed-mode PASS
-- current work is H1 local-ground/feed-transition redesign DESIGN ONLY
-- H1A build/solve, support-carrier build/solve, S4 sentinel, shield/package/transistor and R1E1B pitch-screen solver: NO
+- exactly one H1A OFFSET_GROUND_G2P0 build-only invocation on NW is authorized
+- if and only if H1A build canonical PASS, exactly one H1A broadside solve is pre-authorized by the user
+- no H1A follow-on scan, H1B, support-carrier build/solve, S4 sentinel, shield/package/transistor or R1E1B pitch-screen solver
 - material A/B solve: NO
 - physical LNA integration/CST251: NO
 - do not assume each LNA sees Zdiff/2 unless the virtual-ground/reference-plane condition is explicitly qualified
