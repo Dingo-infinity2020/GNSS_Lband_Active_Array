@@ -1,26 +1,24 @@
 # SIM_EXECUTION
 
 ## Current stage
-R1E1A3R1_NUMERICAL_RECOVERY_DESIGN
+R1E1A3R1_NUMERICAL_RECOVERY_SOLVE
 
 BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: false
-PRODUCTION_SOLVE_AUTHORIZED: false
+SOLVE_AUTHORIZED: true
+PRODUCTION_SOLVE_AUTHORIZED: true
+CST251_AUTHORIZED: false
 
-## Last completed execution
-R1E1A3 S1_BONDED_B0 one-shot solve
-Status: HOLD_R1E1A3_S1_BONDED_B0_NUMERICAL_MAXPASSES
-Formal solve invocation count: 1
-Solved SHA256: 55a55f56ad4981fb30d31624cc656f2a6f4affc5438d3879176531b633480ce3
+## Recovery scope
+First: S1_BONDED_B0 recovery only.
+Sole solver change: MaxPasses 8 -> 12.
+Config: source/cst/R1E1A3R1_SUPPORT_SOLVER_CONFIG_V02.mcr
+Harness: scripts/run_r1e1a3r1_support_recovery_solve_dc.py
+Evidence protection: snapshot/restore/verify prior immutable build evidence.
 
-Provisional movement versus bare:
-max |Delta S11| = 0.01111983
-max |Delta Z_active| = 4.27463 ohm
+If and only if recovery B0 PASSes:
+S1_BONDED_C60P45 -> S1_BONDED_C60P135 -> S4_PEC_B0
+under the identical recovery solver config.
 
-## Recovery
-Plan: docs/R1E1A3R1_NUMERICAL_RECOVERY_PLAN.md
-Proposed sole change: MaxPasses 8 -> 12.
-Recovery solve requires separate authorization.
-
-## Stop
-Do not start remaining support solves or R1E1B.
+Any HOLD stops the sequence.
+Physical benign thresholds remain unchanged: max |Delta S11| <= 0.05 and max |Delta Z_active| <= 10 ohm.
+No R1E1B pitch screen, material A/B, LNA integration or CST251 solve.

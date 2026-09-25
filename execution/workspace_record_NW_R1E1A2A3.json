@@ -2,9 +2,9 @@
   "schema_version": "0.2.4",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A3-R1-NUMERICAL-RECOVERY-DESIGN",
-    "stage": "R1E1A3R1_NUMERICAL_RECOVERY_DESIGN",
-    "status": "HOLD_R1E1A3_S1_BONDED_B0_NUMERICAL_MAXPASSES"
+    "task_id": "R1E1-A3-R1-NUMERICAL-RECOVERY-SOLVE-NW",
+    "stage": "R1E1A3R1_NUMERICAL_RECOVERY_SOLVE",
+    "status": "AUTHORIZED_READY_FOR_PREFLIGHT"
   },
   "workspace": {
     "host_alias": "NW",
@@ -17,12 +17,11 @@
     "work": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work"
   },
   "solve": {
-    "formal_invocation_count": 1,
-    "last_state": "S1_BONDED_B0",
-    "last_status": "HOLD_NUMERICAL_MAXPASSES",
-    "result": "D:\\GNSS_Lband_Active_Array\\_r1e1a3_s1_b0_solve_work\\R1E1A3_S1_BONDED_B0_SOLVE_V01.cst",
-    "result_sha256": "55a55f56ad4981fb30d31624cc656f2a6f4affc5438d3879176531b633480ce3",
-    "remaining_states_started": false
+    "prior_formal_invocation_count": 1,
+    "prior_status": "HOLD_R1E1A3_S1_BONDED_B0_NUMERICAL_MAXPASSES",
+    "recovery_authorized": true,
+    "recovery_formal_invocation_count": 0,
+    "conditional_remaining_states": ["S1_BONDED_C60P45","S1_BONDED_C60P135","S4_PEC_B0"]
   },
-  "archive": {"mode":"PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE","completed":true,"purge_allowed":false}
+  "archive": {"mode":"PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE","completed":false,"purge_allowed":false}
 }

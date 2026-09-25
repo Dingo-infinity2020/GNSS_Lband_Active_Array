@@ -29,8 +29,9 @@ Current permissions:
 - inspect the closed R1E1A1 bare-array sources and evidence: YES
 - R1E1A2 support BUILD-ONLY authorization is consumed; do not rerun build
 - R1E1A2 canonical build status is PASS via read-only recovery
-- one R1E1A3 S1_BONDED_B0 solve was consumed and closed HOLD_NUMERICAL
-- do not start the remaining three support solves until numerical recovery is separately authorized and passes
+- one original R1E1A3 S1_BONDED_B0 solve was consumed and closed HOLD_NUMERICAL
+- R1E1A3-R1 recovery broadside solve is authorized with MaxPasses=12 only
+- if and only if R1 PASSes, the remaining S1_C60P45, S1_C60P135 and S4_B0 states are authorized one-shot solves under the same recovery config
 - run any R1E1B pitch-screen solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO

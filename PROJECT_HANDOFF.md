@@ -3,17 +3,17 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=57
+HANDOFF_VERSION=58
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
-CURRENT_TASK_ID=R1E1-A3-R1-NUMERICAL-RECOVERY-DESIGN
-TASK_OWNER=DESIGN
-TASK_STATUS=HOLD_NUMERICAL
+CURRENT_TASK_ID=R1E1-A3-R1-NUMERICAL-RECOVERY-SOLVE-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=AUTHORIZED_READY_FOR_PREFLIGHT
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=NO_RECOVERY_NOT_AUTHORIZED
-PRODUCTION_SOLVER_PERMISSION=NO
+SOLVER_PERMISSION=YES_R1_RECOVERY_PLUS_REMAINING_MATRIX_IF_R1_PASS
+PRODUCTION_SOLVER_PERMISSION=YES_R1E1A3R1_SCOPE_ONLY
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
@@ -665,3 +665,11 @@ Broadband sweep converged, but desired-accuracy termination did not occur and Ma
 Provisional physical movement stayed inside the frozen benign limits: max |Delta S11|=0.01111983 and max |Delta Z_active|=4.27463 ohm. This is not a PASS claim because numerical qualification failed.
 
 Remaining three support solves were not started. Recovery design is `docs/R1E1A3R1_NUMERICAL_RECOVERY_PLAN.md`; no recovery solve is authorized.
+
+## R1E1A3-R1 recovery authorization
+
+User authorized solver continuation after the broadside numerical HOLD.
+Scope is frozen as: first rerun only `S1_BONDED_B0` with `MaxPasses=12`; all other numerical/physical settings unchanged. If and only if this recovery PASSes, continue `S1_BONDED_C60P45`, `S1_BONDED_C60P135`, and `S4_PEC_B0` as independent one-shot solves under the same config. Any HOLD stops the sequence.
+
+Recovery harness snapshots and restores immutable R1E1A2 build-evidence files to neutralize CST history replay of absolute audit paths.
+No R1E1B, material A/B, LNA integration, or CST251 execution is authorized.
