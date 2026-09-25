@@ -2,9 +2,9 @@
   "schema_version": "0.2.5",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A4A-H3A-ARCHITECTURE-FROZEN-AWAIT-BUILD-AUTH",
-    "stage": "R1E1A4A_H3A_ARCHITECTURE_FROZEN_AWAIT_BUILD_AUTH",
-    "status": "ARCHITECTURE_FROZEN_NO_EXECUTION_AUTH"
+    "task_id": "R1E1-A4A-H3A-ORTHOGONAL-STALK-ASSEMBLY-BUILD-ONLY-NW",
+    "stage": "R1E1A4A_H3A_ORTHOGONAL_STALK_ASSEMBLY_BUILD_ONLY",
+    "status": "AUTHORIZED_READY_FOR_PREFLIGHT"
   },
   "workspace": {
     "host_alias": "NW",
@@ -12,15 +12,16 @@
     "state": "CHECKPOINTED"
   },
   "h3a": {
-    "freeze_doc": "docs/R1E1A4A_H3A_ORTHOGONAL_STALK_ARCHITECTURE_FREEZE_V01.md",
-    "manifest": "execution/h3a_architecture_manifest_v01.json",
-    "build_authorized": false,
+    "build_invocation_count": 0,
+    "build_authorized": true,
     "solve_authorized": false,
-    "active_device_authorized": false
+    "active_device_authorized": false,
+    "intersection_gate_required": true,
+    "silent_retry_allowed": false
   },
   "archive": {
-    "mode": "GIT_CHECKPOINT_PLUS_PROTECTED_PRIOR_ARTIFACTS",
-    "completed": true,
+    "mode": "PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE",
+    "completed": false,
     "purge_allowed": false
   }
 }
