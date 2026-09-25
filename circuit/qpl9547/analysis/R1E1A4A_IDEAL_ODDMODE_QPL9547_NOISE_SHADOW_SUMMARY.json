@@ -1,0 +1,49 @@
+{
+  "status": "ASSUMPTION_DIAGNOSTIC_ONLY_NOT_GATE_R",
+  "assumption": "ideal virtual ground; each LNA sees Zdiff/2 directly at QPL9547 device-lead plane",
+  "noise_parameter_source": "QPL9547 Rev D anchor table in project",
+  "states": {
+    "B0": {
+      "sample_count": 625,
+      "bare_nf_db_min": 0.2776283016988827,
+      "bare_nf_db_max": 0.3257165028519502,
+      "s1_nf_db_min": 0.2693342446747037,
+      "s1_nf_db_max": 0.3313871084182687,
+      "max_abs_delta_nf_db": 0.014466644715807608,
+      "max_abs_delta_nf_db_signed": -0.014466644715807608,
+      "max_abs_delta_nf_freq_ghz": 1.6496,
+      "max_abs_delta_te_k": 1.0295388850098703,
+      "max_abs_delta_te_k_signed": -1.0295388850098703,
+      "max_abs_delta_te_freq_ghz": 1.6496,
+      "mean_delta_te_k": -0.23486991416116615
+    },
+    "C60P45": {
+      "sample_count": 625,
+      "bare_nf_db_min": 0.2459592688219188,
+      "bare_nf_db_max": 0.28948276266635214,
+      "s1_nf_db_min": 0.24447768202432732,
+      "s1_nf_db_max": 0.2885934969070587,
+      "max_abs_delta_nf_db": 0.0020543480444265017,
+      "max_abs_delta_nf_db_signed": -0.0020543480444265017,
+      "max_abs_delta_nf_freq_ghz": 1.5824,
+      "max_abs_delta_te_k": 0.14568125277578048,
+      "max_abs_delta_te_k_signed": -0.14568125277578048,
+      "max_abs_delta_te_freq_ghz": 1.5856,
+      "mean_delta_te_k": -0.08712760872376084
+    },
+    "C60P135": {
+      "sample_count": 625,
+      "bare_nf_db_min": 0.26923881009991113,
+      "bare_nf_db_max": 0.33612201101333994,
+      "s1_nf_db_min": 0.2726301688446976,
+      "s1_nf_db_max": 0.3298150379812593,
+      "max_abs_delta_nf_db": 0.007870691249569628,
+      "max_abs_delta_nf_db_signed": -0.007870691249569628,
+      "max_abs_delta_nf_freq_ghz": 1.248,
+      "max_abs_delta_te_k": 0.5636984965682323,
+      "max_abs_delta_te_k_signed": -0.5636984965682323,
+      "max_abs_delta_te_freq_ghz": 1.2456,
+      "mean_delta_te_k": -0.2567370921110098
+    }
+  }
+}

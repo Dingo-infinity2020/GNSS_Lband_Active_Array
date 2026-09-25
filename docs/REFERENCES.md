@@ -64,3 +64,31 @@ ASTRON / EMBRACE / low-noise tiles:
 
 Do not copy copyrighted PDFs or large source extracts into this repository.
 Store metadata, source URLs/DOIs, project notes, and parameter provenance.
+
+## Receiver co-design references added for R1E1A4
+
+**Warnick, K. F. et al. (2011), "Design and Characterization of an Active Impedance Matched Low-Noise Phased Array Feed", IEEE Transactions on Antennas and Propagation 59(6), 1876-1885.**
+DOI: 10.1109/TAP.2011.2122223
+Role: L-band radio-astronomy precedent for optimizing array/LNA performance around active impedance rather than isolated passive match.
+
+**Maaskant, R. et al. (2007), "Applying the active antenna impedance to achieve noise match in receiving array antennas", IEEE APS.**
+DOI: 10.1109/APS.2007.4396892
+Role: theoretical/array-receiver precedent that active antenna impedance is the relevant low-noise source condition in coupled receiving arrays.
+
+**Alekseev, K. et al. (2025), "Q-Band LNA-Antenna Co-Design: Exploiting Antenna Matching for System Noise Figure Optimization", IEEE Journal of Microwaves 5(5), 1107-1119.**
+DOI: 10.1109/JMW.2025.3588491
+Role: modern antenna/LNA co-design workflow showing that eliminating an arbitrary 50-ohm interface can improve receiver-level noise performance.
+
+## Mechanical-support / low-density-foam evidence added for R1E1A4
+
+**"Design, Development, and Qualification of a Broadband Compact S-Band Antenna for a CubeSat Constellation" (Sensors, 2025).**
+DOI: 10.3390/s25041237
+Role: peer-reviewed example of Rohacell spacers providing structural integrity while acting approximately as an air-like dielectric in a multilayer antenna stack.
+
+**Ghalib et al. (2021), "Collocated MIMO travelling wave SIW slot array antennas for millimetre waves", IET Microwaves, Antennas & Propagation.**
+DOI: 10.1049/mia2.12110
+Role: explicit Rohacell 51 IG-F plus thin 3M VHB adhesive fabrication example; confirms foam+adhesive is a real antenna assembly technique, though in a laminated/sandwich form rather than the project's discrete-post geometry.
+
+**"High-Efficiency Broadband Planar Array Antenna with Suspended Microstrip Slab for X-Band SAR Onboard Small Satellites" (Sensors, 2022).**
+DOI: 10.3390/s22010252
+Role: Rohacell plus adhesive-film multilayer array example and reminder that foam/support layers can be part of the intended EM stack rather than merely invisible mechanics.

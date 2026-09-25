@@ -221,3 +221,28 @@ Reference:
 
 Reversal condition:
 - a mechanically credible revised support assembly passes the unchanged three-state support gate with qualified numerics.
+
+## D0012 — Reframe support selection as mechanical/receiver co-design; introduce receiver shadow before more CST solves
+
+Decision:
+- Preserve the R1E1A3 10-ohm Delta-Z transparency gate as Gate T. The current S1 four-post bonded foam assembly remains a Gate-T FAIL at C60P135.
+- Do not interpret Gate-T failure as automatic rejection from the final active antenna.
+- Introduce Gate R for receiver/system acceptability using a frozen balanced antenna-to-LNA reference plane, QPL9547 reference noise/stability data, and scan-dependent active source impedance.
+- Make R1E1A4A receiver-shadow / interface freeze the next task before any additional support solve.
+- Reclassify low-density foam as a valid low-epsilon reference/possible architecture, but not the assumed production default.
+- Carry three mechanically credible non-metal families into design: bonded low-density foam reference (M0), serviceable dielectric standoff such as PTFE-class (M1), and structural active-hub / vertical-PCB architecture (M2).
+- Treat grounded aluminium/metal support (M3) as an intentional RF structure if pursued, not as neutral mechanics.
+- Require passive active-hub PCB/local-ground/shield geometry to enter full-wave EM on the final shortlist before the array baseline is frozen; the transistor itself remains a circuit/noise model until later co-design.
+
+Reason:
+- receiver-array literature shows that active impedance and LNA noise match are coupled system quantities;
+- QPL9547 publishes in-band noise parameters, so a receiver shadow can be built now without adding a physical transistor model to CST;
+- CHARTS-inspired architecture already assumes balanced feed-point LNAs and a local active hub/shield;
+- literature confirms Rohacell/foam + bonding is used in antenna construction, but usually as sheets/sandwich cores rather than the project's four discrete bonded posts;
+- a mechanically robust structure that predictably shifts Z_active can be a valid co-designed RF structure even when it is not electromagnetically transparent.
+
+Reference:
+`docs/R1E1A4_SYSTEM_CO_DESIGN_REVIEW_20260925.md`
+
+Reversal condition:
+- system-level modeling or hardware evidence shows that enforcing near-transparent support is required for noise/stability/manufacturability, or that a different architecture dominates the Pareto trade.

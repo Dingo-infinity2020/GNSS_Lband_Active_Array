@@ -7,12 +7,26 @@ Trigger:
 
 The four-post bonded S1 assembly is numerically valid and benign at broadside and C60P45, but fails the pre-frozen 10-ohm Delta-Z gate at C60P135 over a broad upper-band region. The threshold is not relaxed.
 
-Primary question:
-**Is the C60P135 perturbation dominated by the foam support body, by the conservative adhesive surrogate / bond volume, or by support placement relative to the scanned near field?**
+This file now serves as the EM-diagnostic sub-plan under the higher-level system review:
+`docs/R1E1A4_SYSTEM_CO_DESIGN_REVIEW_20260925.md`.
 
-## Minimal diagnostic sequence
+The immediate next task is NOT a CST solve. R1E1A4A first freezes the balanced antenna-to-LNA reference plane, receiver shadow model and system-level Gate R.
 
-Use C60P135 first because it is the failing sentinel. Do not re-run broadside or C60P45 until a candidate passes C60P135.
+After R1E1A4A, the first EM question remains:
+**At the known failing C60P135 sentinel, how much of the S1 perturbation comes from the conservative adhesive surrogate versus the foam body / support placement, and how do more conventional serviceable support architectures compare at receiver level?**
+
+## Prerequisite — R1E1A4A receiver shadow
+
+Before any new EM solve:
+- freeze differential-to-per-LNA impedance mapping;
+- import QPL9547 reference S/noise parameters;
+- replay existing S0/S1 impedance loci;
+- freeze receiver-level Gate R;
+- freeze M0/M1/M2 mechanical envelopes.
+
+## Minimal EM diagnostic sequence — R1E1A4B
+
+Use C60P135 first because it is the failing sentinel. Do not re-run broadside or C60P45 until a candidate survives C60P135.
 
 D1 — FOAM_ONLY attribution:
 - same four 4x4-mm posts at (+/-30,+/-30) mm;
@@ -24,6 +38,18 @@ D2 — REDUCED_BOND attribution:
 - same foam posts;
 - reduce adhesive volume only, with geometry frozen before results;
 - purpose: test whether the current 5x5x0.10-mm, epsilon_r=4, tan_delta=0.03 bond surrogate drives the upper-band shift.
+
+M1 — serviceable dielectric-standoff candidate:
+- PTFE-class or another characterized low-loss engineering dielectric;
+- actual material grade/properties frozen before build;
+- explicit hole/fastener geometry;
+- no assumption of EM transparency.
+
+M2 — structural active-hub / PCB-support skeleton:
+- mechanically support the radiator while also defining the future balanced feed/LNA carrier;
+- include only passive PCB/local-ground/shield-envelope geometry at this gate;
+- no transistor or active circuit inside CST yet;
+- preserve source-facing terminal symmetry unless a quantified exception is frozen.
 
 Decision logic:
 - if D1 fails the unchanged 10-ohm gate, the support body/placement itself is not benign and placement/body geometry must be redesigned;
@@ -40,18 +66,26 @@ If later placement redesign is needed, prefer a small discrete set of mechanical
 
 ## Gates
 
-Keep the existing R1E1A3 physical benign gate unchanged:
+Keep the existing R1E1A3 transparency gate (Gate T) unchanged:
 - max complex |Delta S11| <= 0.05;
 - max |Delta Z_active| <= 10 ohm;
 - no severe mismatch alerts.
+
+Gate T answers whether the support can be treated as electromagnetically negligible. It is not the sole production-architecture gate.
+
+R1E1A4A must freeze a receiver/system gate (Gate R) using the actual balanced-to-LNA reference plane and QPL9547 reference noise/stability model before new candidate results are viewed.
+
+A mechanically credible candidate may fail Gate T yet remain viable under Gate R; such a candidate is classified as a co-designed RF/mechanical structure, not as a transparent support.
 
 Use the numerically qualified MaxPasses=12 recovery solver ceiling as the current solver baseline unless a new numerical HOLD occurs.
 
 ## Stop boundary
 
 DESIGN ONLY.
+Next: R1E1A4A receiver-shadow / interface freeze.
 No R1E1A4 build.
 No R1E1A4 solve.
 No S4 sentinel solve.
 No R1E1B pitch screen.
-No material A/B or LNA integration.
+No material A/B solve.
+No physical LNA CST integration.

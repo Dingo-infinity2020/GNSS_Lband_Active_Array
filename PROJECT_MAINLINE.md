@@ -41,6 +41,8 @@ No architecture replacement is allowed without explicit human approval and the r
 8. Cross-polar isolation claims require a physically meaningful multi-conductor/feed representation; the historical crossed discrete-edge-port model is diagnostic only.
 9. Production EM/circuit work must preserve deterministic provenance and SimulationOps build/solve separation.
 10. Mechanical supports, standoffs, shields, frames, joints and fasteners that occupy or define the element near field are electromagnetic objects and must be qualified before the array baseline is frozen.
+11. A mechanical structure does not need to be electromagnetically transparent to be viable; if it materially changes active impedance it becomes part of the antenna/LNA co-design and must be judged at receiver/system level.
+12. Bring the LNA source environment into design early through a circuit/noise 'receiver shadow'; delay full transistor/package-in-CST integration until the balanced reference plane and passive support/hub architecture are controlled.
 11. Stop once a gate answers its scientific question; do not optimize unrelated variables inside that gate.
 
 ## System requirements carried through the mainline
@@ -320,7 +322,7 @@ No stage inherits solver permission from the previous stage.
 
 As of the current handoff:
 
-`R1E0 94-mm periodic scan qualification CLOSED PASS -> R1E1A1 six-pitch bare source set CLOSED PASS -> R1E1A2 support build CLOSED PASS -> R1E1A3 support sensitivity HOLD_SCIENCE_GATE -> R1E1A4 support co-design diagnostic DESIGN -> support baseline freeze -> R1E1 pitch/material trade -> R1E2 active-impedance atlas -> R2 active-front-end co-design`.
+`R1E0 94-mm periodic scan qualification CLOSED PASS -> R1E1A1 six-pitch bare source set CLOSED PASS -> R1E1A2 support build CLOSED PASS -> R1E1A3 support transparency HOLD_SCIENCE_GATE -> R1E1A4A receiver-shadow + mechanical-interface freeze -> R1E1A4B/C targeted support/hub co-design -> R1E1 pitch/material trade with receiver-shadow metrics -> R1E2 authoritative active-impedance atlas on support/hub-inclusive geometry -> R2 active-front-end co-design`.
 
 LNA model validation may proceed in parallel after the periodic workflow begins, but **final active-antenna input matching is blocked until R1E2 provides the scan-dependent active-impedance locus**.
 

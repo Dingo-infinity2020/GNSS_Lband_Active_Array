@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=61
+HANDOFF_VERSION=62
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
-CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
-CURRENT_TASK_ID=R1E1-A4-SUPPORT-CO-DESIGN-DIAGNOSTIC-DESIGN
-TASK_OWNER=DESIGN
-TASK_STATUS=HOLD_SCIENCE_GATE
+CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
+CURRENT_TASK_ID=R1E1-A4A-RECEIVER-SHADOW-INTERFACE-FREEZE
+TASK_OWNER=DESIGN_CIRCUIT
+TASK_STATUS=READY_FOR_DESIGN_ANALYSIS
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -27,7 +27,7 @@ Read `PROJECT_MAINLINE.md` first.
 The project is now in actual periodic-array physics.
 
 Mainline:
-R1E0 scan qualification -> R1E1 pitch/material trade -> R1E2 active-impedance atlas -> active-front-end co-design.
+R1E0 scan qualification -> R1E1A support/mechanical gate -> R1E1A4A receiver-shadow + interface freeze -> targeted support/hub co-design -> support/hub-inclusive pitch/material trade -> R1E2 authoritative active-impedance atlas -> active-front-end co-design.
 
 Do not return to isolated-element S11 optimization unless a later array result provides a quantified reason.
 
@@ -704,3 +704,43 @@ C60P135 exceeds the frozen 10-ohm Delta-Z gate over 297/625 science-band samples
 Canonical stage status: `HOLD_R1E1A3_SUPPORT_SCIENCE_GATE_S1_C60P135_DELTA_Z`.
 S4_PEC_B0 was not started after the HOLD. R1E1B remains blocked.
 Next task is DESIGN ONLY: `docs/R1E1A4_SUPPORT_CO_DESIGN_DIAGNOSTIC_PLAN.md`.
+
+## R1E1A4 system-level replanning after literature review
+
+The R1E1A3 Gate-T failure remains valid: the current four-post S1 bonded foam assembly is not electromagnetically transparent at C60P135 under the pre-frozen 10-ohm Delta-Z criterion.
+
+New interpretation:
+Gate-T failure does not automatically reject a mechanically credible structure from the final active antenna. If support/hub geometry materially changes active impedance, it becomes part of the antenna/LNA co-design and must additionally be judged by a separately frozen receiver/system Gate R.
+
+Literature review confirms low-density Rohacell/foam + adhesive is a real antenna construction method, but commonly in sheet/spacer/sandwich form rather than four discrete bonded posts. Therefore M0 foam remains a low-epsilon reference/possible architecture, not the assumed product default.
+
+Mechanical families now carried:
+- M0 bonded low-density foam reference;
+- M1 serviceable PTFE-class or other characterized low-loss dielectric standoff;
+- M2 structural active-hub / vertical-PCB support integrating mechanics with the future feed/LNA carrier;
+- M3 grounded metal support only as an intentional RF structure, not neutral mechanics.
+
+The next task is `R1E1A4A_RECEIVER_SHADOW_INTERFACE_FREEZE`, defined in `docs/R1E1A4A_RECEIVER_SHADOW_PLAN.md` and `docs/R1E1A4_SYSTEM_CO_DESIGN_REVIEW_20260925.md`.
+
+R1E1A4A is DESIGN/CIRCUIT ANALYSIS ONLY. It must freeze the P0 differential antenna plane, P1A/P1B LNA input planes, common-mode/local-ground assumptions, a traceable QPL9547 G0 noise/stability receiver shadow, Gate R, and manufacturable M0/M1/M2 geometry envelopes before any new CST support solve.
+
+Do not assume each LNA sees Zdiff/2 until the symmetric virtual-ground/reference-plane condition is explicitly qualified.
+
+No CST build/solve, S4 sentinel, R1E1B pitch screen, material A/B, or physical transistor integration is authorized.
+
+## R1E1A4A preliminary receiver-shadow diagnostic
+
+A non-authoritative ideal-odd-mode diagnostic has been completed using the traceable QPL9547 Rev-D noise-parameter anchors.
+Assumption: perfect virtual ground, no feed transformation/loss, and each first-stage LNA sees `Z_diff/2` directly at its device-lead plane.
+
+Illustrative support-induced maximum branch-noise changes over 1.15–1.65 GHz:
+- B0: |Delta NF| ~0.01447 dB, |Delta Te| ~1.03 K;
+- C60P45: |Delta NF| ~0.00205 dB, |Delta Te| ~0.146 K;
+- C60P135: |Delta NF| ~0.00787 dB, |Delta Te| ~0.564 K.
+
+Thus the C60P135 Gate-T failure does not automatically imply a large LNA noise penalty. This result is diagnostic only and MUST NOT be used as Gate R because the real local ground, common mode, feed/hub transition, gain and stability are not represented.
+
+Next design authority:
+`docs/R1E1A4A_REFERENCE_PLANE_AND_COSIM_SPEC.md`.
+
+The next passive EM model, after separate future authorization, should expose two single-ended ports at the LNA input planes relative to a physically defined local RF ground and derive mixed-mode differential/common-mode quantities. The active transistor remains in the circuit/noise domain rather than inside CST.

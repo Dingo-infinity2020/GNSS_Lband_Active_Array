@@ -3,7 +3,7 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_STAGE"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
@@ -14,25 +14,30 @@
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "last_build_status": "PASS_R1E1A2_SUPPORT_BUILD_ONLY_READONLY_RECOVERY",
-    "last_solve_status": "HOLD_R1E1A3_SUPPORT_SCIENCE_GATE_S1_C60P135_DELTA_Z",
-    "support_gate_closeout": "evidence/R1E1A3_SUPPORT_GATE_CLOSEOUT_20260925.md",
-    "next_plan": "docs/R1E1A4_SUPPORT_CO_DESIGN_DIAGNOSTIC_PLAN.md",
-    "s4_status": "NOT_STARTED_AFTER_HOLD",
-    "r1e1b_status": "BLOCKED",
-    "stop_boundary": "DESIGN ONLY; await new build/solve authorization"
+    "last_em_status": "HOLD_R1E1A3_SUPPORT_SCIENCE_GATE_S1_C60P135_DELTA_Z",
+    "transparency_gate_name": "Gate_T",
+    "transparency_gate_unchanged": true,
+    "receiver_gate_name": "Gate_R",
+    "receiver_gate_status": "NOT_YET_FROZEN",
+    "system_review": "docs/R1E1A4_SYSTEM_CO_DESIGN_REVIEW_20260925.md",
+    "receiver_shadow_plan": "docs/R1E1A4A_RECEIVER_SHADOW_PLAN.md",
+    "qpl9547_reference": "circuit/qpl9547/QPL9547_NOISE_REFERENCE_1P1_1P7.csv",
+    "next_em_stage": "R1E1A4B_TARGETED_C60P135_SUPPORT_HUB_SCREEN_AFTER_SEPARATE_AUTHORIZATION",
+    "r1e1b_status": "BLOCKED_UNTIL_R1E1A4_SUPPORT_HUB_AND_GATE_R_FREEZE",
+    "stop_boundary": "DESIGN/CIRCUIT ANALYSIS ONLY; no CST build/solve"
   },
   "execution": {
-    "current_stage": "R1E1A4_SUPPORT_CO_DESIGN_DIAGNOSTIC_DESIGN",
+    "current_stage": "R1E1A4A_RECEIVER_SHADOW_INTERFACE_FREEZE",
     "formal_build_invocation_count": 1,
     "formal_original_solve_invocation_count": 1,
     "formal_recovery_solve_invocation_count": 3,
+    "new_cst_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
   "workspace": {
     "host_alias": "NW",
-    "record_path": "execution/workspace_record_NW_R1E1A2A3.json",
+    "record_path": "execution/workspace_record_NW_R1E1A4A.json",
     "state": "CHECKPOINTED",
     "purge_allowed": false
   }

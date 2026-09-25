@@ -23,19 +23,20 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A2A3-SUPPORT-BUILD-AND-SENSITIVITY-NW**
+Current task: **R1E1-A4A-RECEIVER-SHADOW-INTERFACE-FREEZE**
 
 Current permissions:
-- inspect the closed R1E1A1 bare-array sources and evidence: YES
-- R1E1A2 support BUILD-ONLY authorization is consumed; do not rerun build
+- inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
 - R1E1A2 canonical build status is PASS via read-only recovery
-- one original R1E1A3 S1_BONDED_B0 solve was consumed and closed HOLD_NUMERICAL
-- R1E1A3-R1 broadside and C60P45 passed; C60P135 passed numerically but failed the frozen Delta-Z science gate
-- S4_B0 was not started after the science HOLD
-- current work is R1E1A4 support co-design diagnostic DESIGN ONLY
-- run any R1E1A4 build/solve or R1E1B pitch-screen solver: NO
+- R1E1A3-R1 broadside and C60P45 passed; C60P135 passed numerically but failed the frozen Gate-T Delta-Z criterion
+- preserve Gate T unchanged; do not reinterpret the current S1 support as transparent
+- perform receiver-shadow / LNA noise-S-parameter analysis using traceable data: YES
+- freeze P0/P1A/P1B reference planes, local-ground/common-mode assumptions and Gate R: YES
+- design manufacturable M0 foam, M1 dielectric-standoff and M2 structural active-hub/PCB envelopes: YES
+- run any R1E1A4 build/solve, S4 sentinel or R1E1B pitch-screen solver: NO
 - material A/B solve: NO
-- LNA integration/CST251: NO
+- physical LNA integration/CST251: NO
+- do not assume each LNA sees Zdiff/2 unless the virtual-ground/reference-plane condition is explicitly qualified
 - silent retry: NO
 
 R1E1A1 is closed `PASS_R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY`.

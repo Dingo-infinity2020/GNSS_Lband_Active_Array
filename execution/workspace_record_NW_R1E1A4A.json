@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1E1-A4A-RECEIVER-SHADOW-INTERFACE-FREEZE",
+    "stage": "R1E1A4A_RECEIVER_SHADOW_INTERFACE_FREEZE",
+    "status": "DESIGN_ANALYSIS_ACTIVE"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "state": "CHECKPOINTED"
+  },
+  "authority": {
+    "system_review": "docs/R1E1A4_SYSTEM_CO_DESIGN_REVIEW_20260925.md",
+    "receiver_shadow_plan": "docs/R1E1A4A_RECEIVER_SHADOW_PLAN.md",
+    "reference_plane_spec": "docs/R1E1A4A_REFERENCE_PLANE_AND_COSIM_SPEC.md"
+  },
+  "analysis": {
+    "qpl9547_noise_reference_validated": true,
+    "ideal_oddmode_diagnostic_completed": true,
+    "ideal_oddmode_diagnostic_authoritative": false,
+    "gate_r_frozen": false,
+    "differential_to_branch_mapping_frozen": false
+  },
+  "execution": {
+    "cst_build_invocations": 0,
+    "cst_solve_invocations": 0
+  },
+  "archive": {
+    "mode": "GIT_DESIGN_CHECKPOINT",
+    "completed": false,
+    "purge_allowed": false
+  }
+}

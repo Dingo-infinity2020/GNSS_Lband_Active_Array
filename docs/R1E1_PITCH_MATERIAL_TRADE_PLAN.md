@@ -147,10 +147,14 @@ Minimum scan set:
 Acceptance/transparency thresholds must be frozen before results are viewed.
 If support perturbation is benign, freeze the support and derive support-inclusive six-pitch sources. If it is material, support geometry becomes a co-design variable and R1E1B remains blocked.
 
-## R1E1B — FR4 pitch screen
+## R1E1B — support/hub-inclusive FR4 pitch screen
+
+Entry condition:
+- R1E1A4 has frozen a mechanically credible support / passive-hub architecture or a documented Pareto pair;
+- the R1E1A4A receiver shadow and Gate R are frozen.
 
 Purpose:
-screen pitch before paying for material/far-field expansion.
+screen pitch before paying for material/far-field expansion while retaining both antenna-level and receiver-shadow metrics.
 
 Minimal scan states per pitch:
 - broadside;
@@ -218,19 +222,26 @@ Close R1E1 with:
 
 ## LNA relationship
 
-Preliminary LNA model/circuit research may proceed in parallel now.
+R1E1A3 changed the sequencing assumption.
 
-Allowed:
-- QPL9547 model validation;
-- S/noise parameter checks;
-- bias/stability work;
-- source-impedance/noise sensitivity sweeps.
+Preliminary LNA model/circuit work is no longer merely optional parallel research. R1E1A4A must build a receiver-shadow model before further support/hub EM screening.
+
+Required before R1E1B:
+- freeze the balanced antenna / two-LNA electrical reference plane;
+- validate the QPL9547 S/noise-parameter anchor data;
+- map each qualified differential Z_active state into the source reflection coefficient actually seen by each LNA under the frozen topology;
+- calculate noise penalty / receiver-temperature proxy, mismatch/transducer-gain behavior, and stability metrics;
+- freeze receiver-level Gate R before viewing new support-architecture results.
+
+R1E1B shall therefore report receiver-shadow metrics in addition to active S11 and Z_active.
 
 Still blocked:
+- final LNA part selection;
 - final antenna/LNA matching-network freeze;
-- final receiver NF claim based on one scan state.
+- final receiver NF claim based on one scan state;
+- full transistor/package-in-CST integration.
 
-True antenna/LNA co-design remains after R1E2 provides the authoritative scan-dependent source-impedance cloud.
+R1E2 remains the authoritative full scan-dependent source-impedance atlas, but the receiver physics must influence architecture screening before R1E2 rather than only after it.
 
 ## Resource routing
 
