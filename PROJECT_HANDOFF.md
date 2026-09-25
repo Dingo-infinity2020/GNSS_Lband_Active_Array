@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=62
+HANDOFF_VERSION=63
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-RECEIVER-SHADOW-INTERFACE-FREEZE
+CURRENT_TASK_ID=R1E1-A4A-H0-P1-MIXEDMODE-BUILD-CONTRACT
 TASK_OWNER=DESIGN_CIRCUIT
-TASK_STATUS=READY_FOR_DESIGN_ANALYSIS
+TASK_STATUS=READY_FOR_BUILD_AUTHORIZATION
 SIMULATIONOPS_PROTOCOL=0.2.4
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -712,17 +712,18 @@ The R1E1A3 Gate-T failure remains valid: the current four-post S1 bonded foam as
 New interpretation:
 Gate-T failure does not automatically reject a mechanically credible structure from the final active antenna. If support/hub geometry materially changes active impedance, it becomes part of the antenna/LNA co-design and must additionally be judged by a separately frozen receiver/system Gate R.
 
-Literature review confirms low-density Rohacell/foam + adhesive is a real antenna construction method, but commonly in sheet/spacer/sandwich form rather than four discrete bonded posts. Therefore M0 foam remains a low-epsilon reference/possible architecture, not the assumed product default.
+Literature review confirms low-density Rohacell/foam + adhesive is a real antenna construction method, but commonly in sheet/spacer/sandwich form rather than four discrete bonded posts. Therefore the historical `S1_BONDED` geometry is retained as carrier reference C0, not the assumed product default.
 
-Mechanical families now carried:
-- M0 bonded low-density foam reference;
-- M1 serviceable PTFE-class or other characterized low-loss dielectric standoff;
-- M2 structural active-hub / vertical-PCB support integrating mechanics with the future feed/LNA carrier;
-- M3 grounded metal support only as an intentional RF structure, not neutral mechanics.
+Architecture decomposition now carried:
+- H0 mandatory centered backside active-hub / local-ground receiver interface;
+- C0 bonded low-density foam reference carrier;
+- C1 central PTFE-/PEEK-class dielectric tube or serviceable standoff carrier;
+- C2 structural PCB / printed-frame carrier beneath H0;
+- C3 grounded metal carrier only as an intentional RF structure, not neutral mechanics.
 
 The next task is `R1E1A4A_RECEIVER_SHADOW_INTERFACE_FREEZE`, defined in `docs/R1E1A4A_RECEIVER_SHADOW_PLAN.md` and `docs/R1E1A4_SYSTEM_CO_DESIGN_REVIEW_20260925.md`.
 
-R1E1A4A is DESIGN/CIRCUIT ANALYSIS ONLY. It must freeze the P0 differential antenna plane, P1A/P1B LNA input planes, common-mode/local-ground assumptions, a traceable QPL9547 G0 noise/stability receiver shadow, Gate R, and manufacturable M0/M1/M2 geometry envelopes before any new CST support solve.
+R1E1A4A is DESIGN/CIRCUIT ANALYSIS ONLY. It must freeze the P0 differential antenna plane, P1A/P1B LNA input planes, common-mode/local-ground assumptions, a traceable QPL9547 G0 noise/stability receiver shadow, Gate R, the mandatory H0 interface, and manufacturable C0/C1/C2 carrier envelopes before any new CST support solve.
 
 Do not assume each LNA sees Zdiff/2 until the symmetric virtual-ground/reference-plane condition is explicitly qualified.
 
@@ -744,3 +745,20 @@ Next design authority:
 `docs/R1E1A4A_REFERENCE_PLANE_AND_COSIM_SPEC.md`.
 
 The next passive EM model, after separate future authorization, should expose two single-ended ports at the LNA input planes relative to a physically defined local RF ground and derive mixed-mode differential/common-mode quantities. The active transistor remains in the circuit/noise domain rather than inside CST.
+
+## R1E1A4A interface / Gate-R design closeout
+
+Status: `PASS_R1E1A4A_INTERFACE_GATE_AUDIT`.
+
+Frozen before any new carrier result:
+- Gate R V0.1;
+- H0 mandatory backside active-hub/local-ground architecture;
+- 11x11-mm H0 source-facing envelope and 10x10-mm initial local-ground island;
+- P1A/P1B receiver-interface concept: two 50-ohm single-ended ports sharing H0 local ground, yielding 100-ohm differential mixed-mode reference;
+- QPL9547 G0 noise anchors and derived in-band S-parameter/stability anchors;
+- carrier nomenclature C0 foam reference, C1 dielectric tube/standoff, C2 PCB/printed frame, C3 intentional metal RF carrier.
+
+QPL9547 reference S2P in-band derived minima: K=1.2480, mu=1.3687, mu-prime=1.3873, max |Delta|=0.4437. Standalone in-band two-port stability is therefore PASS in the reference data, but assembled shield/ground feedback remains a separate Gate-R stability obligation.
+
+Next ticket: `docs/R1E1A4A_MIXEDMODE_BUILD_ONLY_CONTRACT_DRAFT.md`.
+No CST build or solve has been executed in R1E1A4A. BUILD_AUTHORIZED remains NO.

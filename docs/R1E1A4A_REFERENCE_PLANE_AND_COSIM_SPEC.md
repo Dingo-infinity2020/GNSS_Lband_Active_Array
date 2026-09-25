@@ -63,10 +63,11 @@ Later ADS implementation may replace the initial Python receiver shadow, but it 
 ## Mechanical prioritization
 
 For the next geometry design:
-- M2 structural active-hub / PCB support is elevated to the MAINLINE candidate because the final antenna already requires the local active PCB/ground and CHARTS explicitly places active electronics at the feed region;
-- M1 serviceable PTFE-class dielectric standoff is the CONVENTIONAL MECHANICAL COMPARATOR;
-- M0 bonded Rohacell foam remains the LOW-EPSILON REFERENCE / attribution case;
-- M3 metal support is deferred unless intentionally integrated into local ground/shield/common-mode control.
+- H0 backside active-hub / local-ground interface is mandatory in the mainline because the final antenna requires feed-point electronics and CHARTS explicitly places active electronics at the feed region;
+- C1 central dielectric tube / serviceable standoff is the conventional mechanical comparator;
+- C0 bonded Rohacell foam remains the low-epsilon reference / attribution case;
+- C2 PCB / printed frame is a structural alternative beneath H0;
+- C3 metal carrier is deferred unless intentionally integrated into local ground/shield/common-mode control.
 
 This ordering is a design priority, not a final winner declaration.
 
@@ -74,7 +75,7 @@ This ordering is a design priority, not a final winner declaration.
 
 1. Freeze a dimensioned local-ground / active-hub skeleton compatible with the existing four terminal contact zones and exact 90-degree polarization symmetry.
 2. Freeze P1A/P1B package-plane coordinates and the two-port port definition.
-3. Freeze M2 and M1 mechanical envelope drawings/parameters; retain M0 geometry as the existing reference.
+3. Freeze H0 and the C1/C2 mechanical envelope drawings/parameters; retain the historical S1 bonded-foam geometry as the C0 reference.
 4. Complete the QPL9547 receiver-shadow calculation and define Gate R from the receiver requirements.
 5. Only then prepare a separate BUILD-ONLY contract for the mixed-mode passive P094 model.
 

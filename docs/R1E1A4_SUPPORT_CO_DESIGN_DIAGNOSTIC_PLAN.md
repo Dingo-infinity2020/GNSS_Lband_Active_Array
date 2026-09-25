@@ -20,9 +20,9 @@ After R1E1A4A, the first EM question remains:
 Before any new EM solve:
 - freeze differential-to-per-LNA impedance mapping;
 - import QPL9547 reference S/noise parameters;
-- replay existing S0/S1 impedance loci;
+- replay existing bare/S1_BONDED impedance loci;
 - freeze receiver-level Gate R;
-- freeze M0/M1/M2 mechanical envelopes.
+- freeze H0 plus C0/C1/C2 carrier envelopes.
 
 ## Minimal EM diagnostic sequence — R1E1A4B
 
@@ -39,16 +39,16 @@ D2 — REDUCED_BOND attribution:
 - reduce adhesive volume only, with geometry frozen before results;
 - purpose: test whether the current 5x5x0.10-mm, epsilon_r=4, tan_delta=0.03 bond surrogate drives the upper-band shift.
 
-M1 — serviceable dielectric-standoff candidate:
-- PTFE-class or another characterized low-loss engineering dielectric;
+C1 — central dielectric-tube / serviceable standoff candidate:
+- PTFE-class, PEEK-class, or another characterized engineering dielectric;
 - actual material grade/properties frozen before build;
-- explicit hole/fastener geometry;
+- hollow symmetric carrier preferred if mechanically adequate;
 - no assumption of EM transparency.
 
-M2 — structural active-hub / PCB-support skeleton:
-- mechanically support the radiator while also defining the future balanced feed/LNA carrier;
-- include only passive PCB/local-ground/shield-envelope geometry at this gate;
-- no transistor or active circuit inside CST yet;
+C2 — structural PCB / printed-frame carrier candidate:
+- mechanically support the H0/radiator assembly;
+- any copper on the frame is an explicit RF object;
+- no transistor or active circuit inside CST;
 - preserve source-facing terminal symmetry unless a quantified exception is frozen.
 
 Decision logic:

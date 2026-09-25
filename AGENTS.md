@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-RECEIVER-SHADOW-INTERFACE-FREEZE**
+Current task: **R1E1-A4A-H0-P1-MIXEDMODE-BUILD-CONTRACT**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -32,7 +32,7 @@ Current permissions:
 - preserve Gate T unchanged; do not reinterpret the current S1 support as transparent
 - perform receiver-shadow / LNA noise-S-parameter analysis using traceable data: YES
 - freeze P0/P1A/P1B reference planes, local-ground/common-mode assumptions and Gate R: YES
-- design manufacturable M0 foam, M1 dielectric-standoff and M2 structural active-hub/PCB envelopes: YES
+- design the mandatory H0 active-hub interface plus C0 foam, C1 dielectric-tube/standoff and C2 PCB-frame carrier envelopes: YES
 - run any R1E1A4 build/solve, S4 sentinel or R1E1B pitch-screen solver: NO
 - material A/B solve: NO
 - physical LNA integration/CST251: NO

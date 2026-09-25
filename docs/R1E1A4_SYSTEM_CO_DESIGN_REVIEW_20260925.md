@@ -35,9 +35,14 @@ foam is commonly used as a continuous spacer, sandwich core, sheet or filled sup
 
 Therefore S1 remains a useful low-dielectric EM reference, but it should no longer be assumed to be the most likely production mechanical architecture.
 
-## Mechanical architecture families for the next design phase
+## Architecture decomposition for the next design phase
 
-### M0 — bonded low-density foam reference
+The active hub and the mechanical carrier are no longer treated as competing alternatives.
+
+H0 is the mandatory source-facing receiver interface: a centered backside active-hub/local-ground architecture.
+The support design then chooses one carrier family from H0/radiator to the main backplane.
+
+### C0 — bonded low-density foam reference
 Role:
 - lowest-permittivity support reference;
 - attribution / physics diagnostic;
@@ -45,7 +50,7 @@ Role:
 
 Do not discard it merely because it is less conventional.
 
-### M1 — serviceable dielectric standoff
+### C1 — serviceable dielectric tube / standoff
 Representative family:
 - PTFE-class or other characterized low-loss engineering dielectric standoff;
 - mechanically repeatable geometry;
@@ -54,19 +59,14 @@ Representative family:
 
 This family is more conventional mechanically, but its dielectric constant is materially higher than low-density foam and it is not assumed EM-transparent.
 
-### M2 — structural active-hub / vertical-PCB architecture
-Use one or more symmetric PCB structures to perform several jobs together:
-- support / registration;
-- balanced feed transition;
-- first-stage LNA carrier;
-- bias routing;
-- defined local ground / shield interface.
+### C2 — structural PCB / printed frame
+Use one or more symmetric PCB ribs / printed frame pieces for support and registration only where they provide a clear assembly or routing advantage.
 
-This is attractive because the final antenna already requires a feed-point active PCB. A separate "perfectly transparent" support may be unnecessary if the structural PCB is intentionally included in the RF design from the beginning.
+The H0 active hub remains source-facing and mandatory; S2 is the mechanical carrier beneath it, not a replacement for H0.
 
-FR4 or another PCB laminate is not treated as invisible; this is an integrated EM object.
+FR4 or another PCB laminate is not treated as invisible; any copper on the structural frame is an RF object.
 
-### M3 — grounded metal support / tube / post
+### C3 — grounded metal support / tube / post
 A metal support above the ground plane is an RF element, not a neutral fastener.
 
 It may still become a valid architecture if intentionally used as:
@@ -147,15 +147,15 @@ No CST solve.
 4. Build GammaOpt, Zopt, NF/noise-temperature penalty and mismatch/stability calculations.
 5. Replay the existing bare and S1 B0/C60P45/C60P135 source-impedance data through the receiver shadow.
 6. Freeze receiver-level acceptance metrics before any new mechanical candidate result is viewed.
-7. Freeze mechanically credible geometry envelopes for M0/M1/M2; keep M3 as an intentional-RF architecture, not a transparent-support candidate.
+7. Freeze mechanically credible geometry envelopes for C0/C1/C2; keep C3 as an intentional-RF architecture, not a transparent-support candidate.
 
 ### R1E1A4B — failing-plane attribution / architecture screen
 Only after separate build/solve authorization.
 
 Start only at C60P135:
-- D1 FOAM_ONLY: current M0 post geometry with the conservative adhesive dielectric removed, to identify glue versus foam/placement loading;
-- M1 serviceable dielectric-standoff candidate;
-- M2 structural active-hub / PCB-support skeleton candidate.
+- D1 FOAM_ONLY: current historical `S1_BONDED` post geometry with the conservative adhesive dielectric removed, to identify glue versus foam/placement loading;
+- C1 central dielectric-tube / serviceable standoff candidate;
+- C2 structural PCB / printed-frame carrier candidate, both used beneath the mandatory H0 active hub.
 
 Do not spend three scan states on every candidate.
 First eliminate candidates at the known failing C60P135 sentinel.

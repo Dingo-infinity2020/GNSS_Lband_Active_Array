@@ -230,8 +230,8 @@ Decision:
 - Introduce Gate R for receiver/system acceptability using a frozen balanced antenna-to-LNA reference plane, QPL9547 reference noise/stability data, and scan-dependent active source impedance.
 - Make R1E1A4A receiver-shadow / interface freeze the next task before any additional support solve.
 - Reclassify low-density foam as a valid low-epsilon reference/possible architecture, but not the assumed production default.
-- Carry three mechanically credible non-metal families into design: bonded low-density foam reference (M0), serviceable dielectric standoff such as PTFE-class (M1), and structural active-hub / vertical-PCB architecture (M2).
-- Treat grounded aluminium/metal support (M3) as an intentional RF structure if pursued, not as neutral mechanics.
+- Decompose the architecture into mandatory H0 active-hub / local-ground interface plus carrier families: C0 bonded low-density foam reference, C1 central dielectric tube/serviceable standoff, and C2 structural PCB/printed frame.
+- Treat grounded aluminium/metal carrier C3 as an intentional RF structure if pursued, not as neutral mechanics.
 - Require passive active-hub PCB/local-ground/shield geometry to enter full-wave EM on the final shortlist before the array baseline is frozen; the transistor itself remains a circuit/noise model until later co-design.
 
 Reason:
@@ -246,3 +246,26 @@ Reference:
 
 Reversal condition:
 - system-level modeling or hardware evidence shows that enforcing near-transparent support is required for noise/stability/manufacturability, or that a different architecture dominates the Pareto trade.
+
+## D0013 — Freeze H0/P1 mixed-mode receiver interface and Gate R before new support solves
+
+Decision:
+- Freeze H0 as a centered backside active-hub/local-ground interface; mechanical carrier families are C0/C1/C2/C3 beneath H0 rather than alternatives to the hub itself.
+- Freeze the first source-facing H0 envelope at 11 x 11 mm and the initial local-ground island at 10 x 10 mm, centered beneath the existing radiator terminal region.
+- Replace the next-generation Pol-A one-port abstraction with two 50-ohm single-ended P1A/P1B ports referenced to the same local ground; their mixed-mode differential reference is 100 ohm.
+- Keep the active QPL9547 transistor outside CST; CST owns the passive EM multiport, while Python/ADS owns device noise/gain/stability.
+- Freeze Gate R V0.1 before any new R1E1A4B carrier result: device-noise shadow <=0.40 dB, pre-LNA passive loss <=0.05 dB, nominal integrated first-stage estimate <=0.45 dB, structure-induced Delta-NF <=+0.05 dB, plus explicit mixed-mode/stability gates.
+- Do not assume `Z_branch=Z_diff/2` until the H0 two-port model qualifies the nominal virtual-ground condition.
+
+Reason:
+- current S1_BONDED Gate-T failure does not map monotonically to LNA noise in the preliminary ideal-odd-mode diagnostic;
+- QPL9547 reference data show strong in-band standalone 2-port stability, while real shield/ground feedback can still destabilize an assembly;
+- a two-port local-ground model is the smallest EM object that exposes differential/common mode, branch imbalance and a physical receiver reference plane.
+
+Reference:
+- `docs/R1E1A4A_ACTIVE_HUB_INTERFACE_V01.md`
+- `docs/R1E1A4A_GATE_R_RECEIVER_FREEZE_V01.md`
+- `docs/R1E1A4A_MIXEDMODE_BUILD_ONLY_CONTRACT_DRAFT.md`
+
+Reversal condition:
+- build/solve evidence shows the H0 reference-plane abstraction is ill-posed or cannot produce a stable, reproducible mixed-mode mapping.

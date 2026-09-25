@@ -91,12 +91,13 @@ Numeric Gate-R limits must come from the project receiver/noise budget, not from
 ## Mechanical architecture freeze performed in the same stage
 
 Prepare dimensioned, manufacturable concept envelopes for:
-- M0 bonded low-density foam reference;
-- M1 serviceable PTFE-class / characterized dielectric standoff;
-- M2 structural active-hub / vertical-PCB support;
-- M3 optional grounded-metal intentional-RF architecture.
+- H0 mandatory backside active-hub / local-ground receiver interface;
+- C0 bonded low-density foam reference carrier;
+- C1 serviceable central dielectric tube / characterized standoff carrier;
+- C2 structural PCB / printed-frame carrier;
+- C3 optional grounded-metal intentional-RF carrier.
 
-For M2, define a passive geometry envelope now for:
+For H0, define the passive source-facing geometry envelope now for:
 - PCB thickness / orientation;
 - attachment points;
 - local ground;
@@ -112,7 +113,7 @@ R1E1A4A closes only when:
 - QPL9547 reference shadow is reproducible;
 - existing S0/S1 states have receiver-shadow metrics;
 - Gate R is frozen;
-- M0/M1/M2 geometry envelopes are ready for later build-only.
+- H0 and C0/C1/C2 geometry envelopes are ready for later build-only.
 
 Only then request authorization for R1E1A4B C60P135 builds/solves.
 
