@@ -2,9 +2,9 @@
   "schema_version": "0.2.4",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A2A3-SUPPORT-BUILD-AND-SENSITIVITY-NW",
-    "stage": "R1E1A3_SUPPORT_SENSITIVITY_SOLVE",
-    "status": "READY_FOR_SOLVE_PREFLIGHT"
+    "task_id": "R1E1-A3-R1-NUMERICAL-RECOVERY-DESIGN",
+    "stage": "R1E1A3R1_NUMERICAL_RECOVERY_DESIGN",
+    "status": "HOLD_R1E1A3_S1_BONDED_B0_NUMERICAL_MAXPASSES"
   },
   "workspace": {
     "host_alias": "NW",
@@ -13,19 +13,16 @@
   },
   "build": {
     "formal_invocation_count": 1,
-    "formal_status": "HOLD_R1E1A2_SUPPORT_BUILD_ONLY_IN_SESSION_AUDIT_PERSISTENCE",
     "canonical_status": "PASS_R1E1A2_SUPPORT_BUILD_ONLY_READONLY_RECOVERY",
-    "work": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work",
-    "evidence": "evidence/r1e1a2_support_build_nw_20260925_01/"
+    "work": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work"
   },
   "solve": {
-    "authorized": true,
-    "formal_invocation_count": 0,
-    "order": ["S1_BONDED_B0","S1_BONDED_C60P45","S1_BONDED_C60P135","S4_PEC_B0"]
+    "formal_invocation_count": 1,
+    "last_state": "S1_BONDED_B0",
+    "last_status": "HOLD_NUMERICAL_MAXPASSES",
+    "result": "D:\\GNSS_Lband_Active_Array\\_r1e1a3_s1_b0_solve_work\\R1E1A3_S1_BONDED_B0_SOLVE_V01.cst",
+    "result_sha256": "55a55f56ad4981fb30d31624cc656f2a6f4affc5438d3879176531b633480ce3",
+    "remaining_states_started": false
   },
-  "archive": {
-    "mode": "PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE",
-    "completed": false,
-    "purge_allowed": false
-  }
+  "archive": {"mode":"PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE","completed":true,"purge_allowed":false}
 }

@@ -29,7 +29,8 @@ Current permissions:
 - inspect the closed R1E1A1 bare-array sources and evidence: YES
 - R1E1A2 support BUILD-ONLY authorization is consumed; do not rerun build
 - R1E1A2 canonical build status is PASS via read-only recovery
-- execute exactly four independent R1E1A3 one-shot support-sensitivity solves on NW: YES
+- one R1E1A3 S1_BONDED_B0 solve was consumed and closed HOLD_NUMERICAL
+- do not start the remaining three support solves until numerical recovery is separately authorized and passes
 - run any R1E1B pitch-screen solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO

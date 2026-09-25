@@ -3,17 +3,17 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=56
+HANDOFF_VERSION=57
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
-CURRENT_TASK_ID=R1E1-A3-SUPPORT-SENSITIVITY-SOLVE-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_SOLVE_PREFLIGHT
+CURRENT_TASK_ID=R1E1-A3-R1-NUMERICAL-RECOVERY-DESIGN
+TASK_OWNER=DESIGN
+TASK_STATUS=HOLD_NUMERICAL
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=NO_BUILD_CONSUMED
-SOLVER_PERMISSION=YES_R1E1A3_SUPPORT_SOLVE_4_ONE_SHOT_ONLY
-PRODUCTION_SOLVER_PERMISSION=YES_R1E1A3_SCOPE_ONLY
+BUILD_AUTHORIZED=NO
+SOLVER_PERMISSION=NO_RECOVERY_NOT_AUTHORIZED
+PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
@@ -652,3 +652,16 @@ Immutable solve sources:
 - S4_PEC_B0: `3962a20eb07c3db0f920304a9f3fc90d33e6946c03c753a9f43e99f4ede3223c`
 
 Solve order is fixed as listed above. Each solve is an independent one-shot NW invocation. Build authorization is consumed; R1E1B remains forbidden.
+
+## R1E1A3 first solve HOLD
+
+Consumed solve: `S1_BONDED_B0` only.
+Status: `HOLD_R1E1A3_S1_BONDED_B0_NUMERICAL_MAXPASSES`.
+Result SHA256: `55a55f56ad4981fb30d31624cc656f2a6f4affc5438d3879176531b633480ce3`.
+
+Adaptive Delta-S: 0.0344858 -> 0.0434797 -> 0.0306481 -> 0.0224755 -> 0.0130842 -> 0.0202292 -> 0.021505.
+Broadband sweep converged, but desired-accuracy termination did not occur and MaxPasses=8 was reached.
+
+Provisional physical movement stayed inside the frozen benign limits: max |Delta S11|=0.01111983 and max |Delta Z_active|=4.27463 ohm. This is not a PASS claim because numerical qualification failed.
+
+Remaining three support solves were not started. Recovery design is `docs/R1E1A3R1_NUMERICAL_RECOVERY_PLAN.md`; no recovery solve is authorized.
