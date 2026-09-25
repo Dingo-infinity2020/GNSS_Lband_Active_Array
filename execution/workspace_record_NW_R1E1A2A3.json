@@ -2,9 +2,9 @@
   "schema_version": "0.2.4",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A3-R1-REMAINING-SUPPORT-MATRIX-NW",
-    "stage": "R1E1A3R1_REMAINING_SUPPORT_MATRIX",
-    "status": "R1_B0_PASS_CONTINUE"
+    "task_id": "R1E1-A4-SUPPORT-CO-DESIGN-DIAGNOSTIC-DESIGN",
+    "stage": "R1E1A4_SUPPORT_CO_DESIGN_DIAGNOSTIC_DESIGN",
+    "status": "HOLD_R1E1A3_SUPPORT_SCIENCE_GATE_S1_C60P135_DELTA_Z"
   },
   "workspace": {
     "host_alias": "NW",
@@ -17,11 +17,14 @@
   },
   "solve": {
     "original_hold_count": 1,
-    "recovery_pass_count": 1,
-    "last_state": "S1_BONDED_C60P45",
-    "last_status": "PASS_R1E1A3R1_S1_BONDED_C60P45_SOLVE_AND_BENIGN_GATE",
-    "last_result_sha256": "9e26e2ef4222a91aeeda983bd8f96c5ebe78aaf49e6a9ad6c6e7747ca4d74c49",
-    "remaining_states": ["S1_BONDED_C60P135","S4_PEC_B0"]
+    "recovery_solve_count": 3,
+    "qualified_states": ["S1_BONDED_B0","S1_BONDED_C60P45","S1_BONDED_C60P135"],
+    "science_gate": "FAIL_S1_C60P135_DELTA_Z_15P09084_OHM",
+    "s4_status": "NOT_STARTED_AFTER_HOLD"
   },
-  "archive": {"mode":"PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE","completed":false,"purge_allowed":false}
+  "archive": {
+    "mode": "PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE",
+    "completed": true,
+    "purge_allowed": false
+  }
 }

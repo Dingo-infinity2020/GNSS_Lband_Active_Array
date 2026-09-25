@@ -201,3 +201,23 @@ Reference:
 
 Reversal condition:
 - later mechanical/EM evidence demonstrates a different joint architecture provides equal or lower RF perturbation with superior repeatability, serviceability or environmental robustness.
+
+## D0011 — Do not relax the support-transparency gate after C60P135; enter support co-design
+
+Decision:
+- Keep the pre-frozen support benign thresholds unchanged after observing the R1E1A3 results.
+- Do not freeze the current four-post S1 bonded assembly because C60P135 reaches max |Delta Z_active| = 15.09084 ohm versus the 10-ohm gate.
+- Treat this as a support science-gate HOLD, not a numerical failure and not a radiator failure.
+- Do not run the queued S4 metal sentinel after this HOLD.
+- Insert R1E1A4 support co-design diagnostics before any R1E1B pitch screen.
+
+Reason:
+- broadside and C60P45 support perturbations are small, but C60P135 shows a broad upper-band loading effect rather than a single-point outlier;
+- changing the threshold after viewing results would invalidate the scientific gate;
+- the efficient next question is attribution of foam body / adhesive bond volume / support placement, not pitch optimization.
+
+Reference:
+`docs/R1E1A4_SUPPORT_CO_DESIGN_DIAGNOSTIC_PLAN.md`
+
+Reversal condition:
+- a mechanically credible revised support assembly passes the unchanged three-state support gate with qualified numerics.

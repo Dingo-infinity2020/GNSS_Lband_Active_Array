@@ -320,7 +320,7 @@ No stage inherits solver permission from the previous stage.
 
 As of the current handoff:
 
-`R1E0 94-mm periodic scan qualification CLOSED PASS -> R1E1A1 six-pitch bare source set CLOSED PASS -> R1E1A2 mechanical-support EM baseline DESIGN -> R1E1 pitch/material trade -> R1E2 active-impedance atlas -> R2 active-front-end co-design`.
+`R1E0 94-mm periodic scan qualification CLOSED PASS -> R1E1A1 six-pitch bare source set CLOSED PASS -> R1E1A2 support build CLOSED PASS -> R1E1A3 support sensitivity HOLD_SCIENCE_GATE -> R1E1A4 support co-design diagnostic DESIGN -> support baseline freeze -> R1E1 pitch/material trade -> R1E2 active-impedance atlas -> R2 active-front-end co-design`.
 
 LNA model validation may proceed in parallel after the periodic workflow begins, but **final active-antenna input matching is blocked until R1E2 provides the scan-dependent active-impedance locus**.
 

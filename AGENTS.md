@@ -30,9 +30,10 @@ Current permissions:
 - R1E1A2 support BUILD-ONLY authorization is consumed; do not rerun build
 - R1E1A2 canonical build status is PASS via read-only recovery
 - one original R1E1A3 S1_BONDED_B0 solve was consumed and closed HOLD_NUMERICAL
-- R1E1A3-R1 recovery broadside solve is authorized with MaxPasses=12 only
-- if and only if R1 PASSes, the remaining S1_C60P45, S1_C60P135 and S4_B0 states are authorized one-shot solves under the same recovery config
-- run any R1E1B pitch-screen solver: NO
+- R1E1A3-R1 broadside and C60P45 passed; C60P135 passed numerically but failed the frozen Delta-Z science gate
+- S4_B0 was not started after the science HOLD
+- current work is R1E1A4 support co-design diagnostic DESIGN ONLY
+- run any R1E1A4 build/solve or R1E1B pitch-screen solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO
 - silent retry: NO

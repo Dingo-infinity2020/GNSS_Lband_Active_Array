@@ -3,32 +3,30 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_STAGE"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": true,
-    "production_solve_authorized": true,
-    "scope": "R1E1A3R1_REMAINING_MATRIX_AFTER_B0_PASS",
+    "SOLVE_AUTHORIZED": false,
+    "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
     "cst251_authorized": false
   },
   "scientific_freeze": {
-    "b0_recovery_status": "PASS_R1E1A3R1_S1_BONDED_B0_SOLVE_AND_BENIGN_GATE",
-    "b0_result_sha256": "9ca14907abb5a839c399452ef88a7f949dd3df4476992918d1bba5b7c33b71a9",
-    "solver_config": "source/cst/R1E1A3R1_SUPPORT_SOLVER_CONFIG_V02.mcr",
-    "remaining_states": ["S1_BONDED_C60P135","S4_PEC_B0"],
-    "physical_gate": {"max_complex_delta_s11":0.05,"max_abs_delta_zactive_ohm":10.0},
-    "stop_boundary": "stop on any HOLD; do not start R1E1B"
+    "last_build_status": "PASS_R1E1A2_SUPPORT_BUILD_ONLY_READONLY_RECOVERY",
+    "last_solve_status": "HOLD_R1E1A3_SUPPORT_SCIENCE_GATE_S1_C60P135_DELTA_Z",
+    "support_gate_closeout": "evidence/R1E1A3_SUPPORT_GATE_CLOSEOUT_20260925.md",
+    "next_plan": "docs/R1E1A4_SUPPORT_CO_DESIGN_DIAGNOSTIC_PLAN.md",
+    "s4_status": "NOT_STARTED_AFTER_HOLD",
+    "r1e1b_status": "BLOCKED",
+    "stop_boundary": "DESIGN ONLY; await new build/solve authorization"
   },
   "execution": {
-    "current_stage": "R1E1A3R1_REMAINING_SUPPORT_MATRIX",
+    "current_stage": "R1E1A4_SUPPORT_CO_DESIGN_DIAGNOSTIC_DESIGN",
     "formal_build_invocation_count": 1,
     "formal_original_solve_invocation_count": 1,
-    "formal_recovery_solve_invocation_count": 1,
-    "next_state": "S1_BONDED_C60P135",
-    "one_shot_required": true,
+    "formal_recovery_solve_invocation_count": 3,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },

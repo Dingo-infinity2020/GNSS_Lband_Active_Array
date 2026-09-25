@@ -1,24 +1,25 @@
 # SIM_EXECUTION
 
 ## Current stage
-R1E1A3R1_NUMERICAL_RECOVERY_SOLVE
+R1E1A4_SUPPORT_CO_DESIGN_DIAGNOSTIC_DESIGN
 
 BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: true
-PRODUCTION_SOLVE_AUTHORIZED: true
+SOLVE_AUTHORIZED: false
+PRODUCTION_SOLVE_AUTHORIZED: false
+MATERIAL_AB_AUTHORIZED: false
+LNA_INTEGRATION_AUTHORIZED: false
 CST251_AUTHORIZED: false
 
-## Recovery scope
-First: S1_BONDED_B0 recovery only.
-Sole solver change: MaxPasses 8 -> 12.
-Config: source/cst/R1E1A3R1_SUPPORT_SOLVER_CONFIG_V02.mcr
-Harness: scripts/run_r1e1a3r1_support_recovery_solve_dc.py
-Evidence protection: snapshot/restore/verify prior immutable build evidence.
+## Last gate
+Canonical status: HOLD_R1E1A3_SUPPORT_SCIENCE_GATE_S1_C60P135_DELTA_Z
 
-If and only if recovery B0 PASSes:
-S1_BONDED_C60P45 -> S1_BONDED_C60P135 -> S4_PEC_B0
-under the identical recovery solver config.
+S1 B0: numerical PASS, benign PASS.
+S1 C60P45: numerical PASS, benign PASS.
+S1 C60P135: numerical PASS, benign FAIL because max |Delta Z_active| = 15.09084 ohm > frozen 10-ohm gate.
+S4_PEC_B0: NOT STARTED after HOLD.
 
-Any HOLD stops the sequence.
-Physical benign thresholds remain unchanged: max |Delta S11| <= 0.05 and max |Delta Z_active| <= 10 ohm.
-No R1E1B pitch screen, material A/B, LNA integration or CST251 solve.
+## Next design
+docs/R1E1A4_SUPPORT_CO_DESIGN_DIAGNOSTIC_PLAN.md
+
+No threshold relaxation is allowed.
+No R1E1B pitch screen until a passive support assembly passes the complete support gate.
