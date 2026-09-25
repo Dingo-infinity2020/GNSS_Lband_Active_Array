@@ -82,6 +82,10 @@ Before the sweep, freeze these local targets:
 
 Final candidate requires fresh-run provenance, geometry/intersection recheck if rebuilt, second-order tetrahedral adaptive convergence with two final DeltaS values <= 0.02, and the full 1.0–2.0 GHz result.
 
+Screening may retain PEC conductors to isolate impedance/topology behavior, but final O3 qualification must add a frozen finite-conductivity copper model and a physically explicit solder-conductor assumption before claiming physical insertion loss.
+
+Final O3 also requires a port-model sentinel: either straight-reference de-embedding with identical RP1/RP2 discrete ports or an equivalent waveguide-port/line-fixture cross-check, so that the selected transition is not an artifact of the discrete-port excitation.
+
 If no candidate meets the acceptable target without poor manufacturability/tolerance, HOLD. Do not open T01-C automatically.
 
 ## 7. T01A-O4 — tolerance sentinels
