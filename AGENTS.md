@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H3A-ORTHOGONAL-STALK-ASSEMBLY-BUILD-ONLY-NW**
+Current task: **R1E1-A4A-H3A-HUMAN-3D-REVIEW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -47,12 +47,12 @@ Current permissions:
 - qualified V0.2 artifact is protected in place with SHA256 4756a525c407bac9f6de1c42c9274b74825a45a6b3cae81e60f1e67e64494064
 - human review of H2A V0.2 found unintended geometry interference; the artifact is retained but is NOT an eligible solve source
 - SimulationOps >=0.2.5 requires CST Geometry Intersection Check after fresh reopen before BUILD PASS
-- H3A V0.1 orthogonal-stalk architecture is FROZEN and exactly one BUILD-ONLY invocation on NW is authorized
-- stalks are aligned X/Y to exploit existing radiator center-cross copper isolation; each is 1.0-mm FR4 with explicit top/bottom tenons and half-depth cross interlock
-- H3A uses radiator-backside first-stage LNA envelopes only; post-LNA branch pairs map NE/SW to X-stalk and NW/SE to Y-stalk
-- mechanical tenons and RF transitions are separate features; central 17x17x7-mm electronics cavity is reserved for LNA/shield volume
-- BUILD PASS requires fresh reopen plus CST `CDCheckModelIntersections` execution and zero unresolved geometry interference under SimulationOps >=0.2.5
-- no H3A solve, active transistor/device model, H1R solve, follow-on scan, S4 sentinel or R1E1B pitch-screen solver is authorized
+- H3A V0.1 BUILD-ONLY is closed PASS; formal build invocation count = 1; do not rebuild
+- qualified artifact is protected in place with SHA256 3d15d5bf36c0d6f60a4d46d48fa5197818559890e27e0950556a0f14e2309043
+- fresh reopen verified 126 solids, zero RF ports, no solver results and preserved 94-mm/broadside metadata
+- CST electromagnetic auto-intersection checking was enabled during build; `CDCheckModelIntersections` was executed after fresh reopen; all frozen critical-clearance predicates were positive
+- current task is human 3D/manufacturing review only
+- no H3A solve, H3B continuation, active transistor/device integration, H1R solve, follow-on scan, S4 sentinel or R1E1B pitch-screen solver is authorized
 - material A/B solve: NO
 - physical LNA integration/CST251: NO
 - do not assume each LNA sees Zdiff/2 unless the virtual-ground/reference-plane condition is explicitly qualified

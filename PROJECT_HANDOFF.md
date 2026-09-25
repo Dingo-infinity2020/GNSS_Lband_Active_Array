@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=77
+HANDOFF_VERSION=78
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H3A-ORTHOGONAL-STALK-ASSEMBLY-BUILD-ONLY-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=AUTHORIZED_BUILD_READY
+CURRENT_TASK_ID=R1E1-A4A-H3A-HUMAN-3D-REVIEW
+TASK_OWNER=HUMAN_REVIEW
+TASK_STATUS=PASS_BUILD_AWAIT_HUMAN_REVIEW
 SIMULATIONOPS_PROTOCOL=0.2.5
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -947,3 +947,32 @@ Mandatory next-build gate:
 CST fresh reopen + Geometry Intersection Check with zero unresolved interference under SimulationOps >=0.2.5.
 
 Current permissions remain BUILD=NO, SOLVE=NO, ACTIVE_DEVICE=NO.
+
+## H3A V0.1 build-only closeout
+
+Canonical status: `PASS_R1E1A4A_H3A_ORTHOGONAL_STALK_BUILD_ONLY`.
+
+One formal H3A build-only invocation was consumed on NW. No solver was invoked.
+
+Qualified artifact:
+`D:\GNSS_Lband_Active_Array\_r1e1a4a_h3a_build_work\R1E1A4A_H3A_ORTHOGONAL_STALK_BUILD_ONLY_V01.cst`
+
+SHA256:
+`3d15d5bf36c0d6f60a4d46d48fa5197818559890e27e0950556a0f14e2309043`
+
+Bytes: 100309.
+
+Fresh-reopen qualification:
+- shape count = 126;
+- RF port count = 0;
+- no solver markers/results;
+- 94-mm unit cell and broadside metadata preserved;
+- CST EM auto-intersection check enabled during build;
+- CST built-in `CDCheckModelIntersections` executed after fresh reopen and returned control;
+- frozen critical-clearance audit PASS with all margins positive;
+- no residual cutting-tool solids.
+
+Review guide:
+`docs/R1E1A4A_H3A_3D_REVIEW_GUIDE.md`
+
+All BUILD/SOLVE/active-device permissions are closed pending human review.

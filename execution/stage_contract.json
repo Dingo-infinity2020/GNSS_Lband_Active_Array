@@ -3,32 +3,32 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_H3A_BUILD_PREFLIGHT"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
     "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
-    "cst251_authorized": false,
-    "scope": "ONE_H3A_ORTHOGONAL_STALK_ASSEMBLY_BUILD_ONLY_ON_NW"
+    "cst251_authorized": false
   },
   "scientific_freeze": {
     "candidate": "H3A_ORTHOGONAL_STALK_ASSEMBLY_V01",
-    "freeze_doc": "docs/R1E1A4A_H3A_ORTHOGONAL_STALK_ARCHITECTURE_FREEZE_V01.md",
-    "manifest": "execution/h3a_architecture_manifest_v01.json",
-    "parent_source_sha256": "fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e",
-    "stalk_orientation": ["X", "Y"],
-    "lna_topology": "H3_L1_RADIATOR_BACKSIDE_ENVELOPES_ONLY",
-    "rf_port_count_target": 0,
-    "active_device": "NONE",
-    "mandatory_build_gate": "FRESH_REOPEN_PLUS_CST_CDCheckModelIntersections_PLUS_ZERO_UNRESOLVED_INTERFERENCE",
-    "stop_boundary": "STOP_AFTER_BUILD_QUALIFICATION_FOR_HUMAN_3D_REVIEW"
+    "build_status": "PASS_R1E1A4A_H3A_ORTHOGONAL_STALK_BUILD_ONLY",
+    "artifact_sha256": "3d15d5bf36c0d6f60a4d46d48fa5197818559890e27e0950556a0f14e2309043",
+    "shape_count": 126,
+    "port_count": 0,
+    "solver_run": false,
+    "intersection_gate": "CST_AUTO_INTERSECTION_DURING_BUILD_PLUS_CDCheckModelIntersections_AFTER_FRESH_REOPEN_PLUS_POSITIVE_CLEARANCE_AUDIT",
+    "human_review_required": true,
+    "review_guide": "docs/R1E1A4A_H3A_3D_REVIEW_GUIDE.md",
+    "next_stage": "HUMAN_3D_REVIEW_BEFORE_ANY_PASSIVE_RF_SOLVE",
+    "stop_boundary": "AWAIT_HUMAN_3D_REVIEW; NO SOLVE"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3A_ORTHOGONAL_STALK_ASSEMBLY_BUILD_ONLY",
-    "formal_build_invocation_count": 0,
+    "current_stage": "R1E1A4A_H3A_HUMAN_3D_REVIEW",
+    "formal_build_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },
