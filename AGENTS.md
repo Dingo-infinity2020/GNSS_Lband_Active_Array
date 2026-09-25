@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H3B-T01-HUMAN-3D-REVIEW**
+Current task: **R1E1-A4A-H3B-T01A-PASSIVE-BASELINE-SOLVE-NW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -190,3 +190,12 @@ Stop and document instead of guessing when:
 - fresh reopen verified 38 solids, zero RF ports, no solver results and completed CST intersection gate.
 - current task is human 3D/manufacturing review only.
 - no passive solve, optimization sweep, H3B-I01 integration or active-device execution is authorized.
+
+## H3B-T01A passive solve authorization
+- T01-A geometry human review is accepted.
+- exactly one passive baseline solve on NW is authorized.
+- source is the protected T01 BUILD artifact with SHA256 f321b678d390470a2420df40fd6d0cf6553cc041f9219bfcd011c7e41fbadf3d.
+- only two 50-ohm discrete ports at frozen RP1/RP2 and the frozen solver configuration may be added to the solve copy.
+- no geometry changes, no optimization sweep, no T01-C, no H3B-I01 integration, no active device.
+- solve range 1.0–2.0 GHz; decision band 1.15–1.65 GHz.
+- silent retry is forbidden.

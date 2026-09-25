@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=83
+HANDOFF_VERSION=84
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H3B-T01-HUMAN-3D-REVIEW
-TASK_OWNER=HUMAN_REVIEW
-TASK_STATUS=PASS_BUILD_AWAIT_HUMAN_REVIEW
+CURRENT_TASK_ID=R1E1-A4A-H3B-T01A-PASSIVE-BASELINE-SOLVE-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=AUTHORIZED_SOLVE_READY
 SIMULATIONOPS_PROTOCOL=0.2.6
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -1057,3 +1057,14 @@ Review guide:
 docs/R1E1A4A_H3B_T01_3D_REVIEW_GUIDE.md
 
 All BUILD/SOLVE permissions are closed pending human review.
+
+## H3B-T01A passive baseline solve authorization
+
+Human 3D review accepted the T01-A GCPW coupon geometry.
+
+Exactly one NW passive solve is authorized. The protected BUILD artifact remains immutable. A solve copy may add only:
+- 50-ohm discrete Port 1 at RP1 y=+12 mm, signal-to-backing-ground;
+- 50-ohm discrete Port 2 at RP2 z=-12 mm, signal-to-backing-ground;
+- the frozen 1.0–2.0 GHz frequency-domain adaptive solver configuration.
+
+No geometry optimization, T01-C, H3B-I01 or active-device work is authorized.
