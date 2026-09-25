@@ -1,35 +1,52 @@
 # SIM_EXECUTION
 
 ## Current stage
-R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY
+R1E1A4A_H0_P1_BROADSIDE_SOLVE_DESIGN
 
-BUILD_AUTHORIZED: true — ONE FORMAL INVOCATION ONLY
+BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 MATERIAL_AB_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 CST251_AUTHORIZED: false
 
-## Frozen source
-Parent: qualified bare P094 periodic source.
-SHA256: fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e
+## Closed build
+Formal status:
+HOLD_R1E1A4A_H0_P1_BUILD_AUDIT_VBA_RESERVED_WORD
 
-## Authorized mutation
-- remove existing one 100-ohm Pol-A differential discrete port;
-- add one centered 10x10-mm underside H0 local-ground island;
-- add exactly two 50-ohm single-ended P1A/P1B ports referenced to H0 ground;
-- preserve 94-mm periodic geometry, radiator, substrate, top copper, boundaries and broadside scan;
-- no support, shield, package, bias, output, transistor, solver or optimization.
+Canonical status:
+PASS_R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_READONLY_RECOVERY
 
-## Formal build rules
-- one invocation only;
-- source hash lock before copy;
-- fresh work/evidence directories;
-- CST 2022 official `DiscretePort.GetProperties` and `GetCoordinates` used for port audit;
-- fresh reopen must reproduce shape/port/periodic predicates;
-- prior P094 evidence is byte-snapshotted and restored if CST history replay touches it;
+Formal build invocation count: 1
+Build rerun: NO
+Solver run: NO
+
+Qualified artifact:
+D:\GNSS_Lband_Active_Array\_r1e1a4a_h0_p1_build_work\R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_V01.cst
+
+SHA256:
+d1ebb6f4a6e8b48f3484cc5459790dd5c9bbd29482832c491076c84f783b3deb
+
+Qualified invariants:
+- 4 solids including one 10x10x0.035-mm H0 local ground;
+- exactly two 50-ohm SParameter ports;
+- exact +/-180-degree P1A/P1B terminal symmetry;
+- 94-mm periodic cell and broadside preserved;
 - no solver markers or solver result tree.
 
+## Next design ticket
+Solve contract draft:
+docs/R1E1A4A_H0_P1_BROADSIDE_SOLVE_CONTRACT_DRAFT.md
+
+Solver config draft:
+source/cst/R1E1A4A_H0_P1_BROADSIDE_SOLVER_CONFIG_V01.mcr
+
+The future first solve is broadside only and must extract the complete 2-port S matrix before mixed-mode conversion.
+
 ## Stop boundary
-After build closeout, BUILD authorization is consumed.
-Broadside mixed-mode solve requires separate explicit authorization.
+Await explicit SOLVE authorization.
+No build rerun.
+No CST solve.
+No support carrier.
+No shield/package/transistor.
+No R1E1B pitch screen.

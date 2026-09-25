@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H0-P1-MIXEDMODE-BUILD-CONTRACT**
+Current task: **R1E1-A4A-H0-P1-BROADSIDE-SOLVE-DESIGN**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -33,7 +33,8 @@ Current permissions:
 - perform receiver-shadow / LNA noise-S-parameter analysis using traceable data: YES
 - freeze P0/P1A/P1B reference planes, local-ground/common-mode assumptions and Gate R: YES
 - design the mandatory H0 active-hub interface plus C0 foam, C1 dielectric-tube/standoff and C2 PCB-frame carrier envelopes: YES
-- exactly one R1E1A4A H0/P1 mixed-mode BUILD-ONLY invocation on NW is authorized; no rerun without new authority
+- R1E1A4A H0/P1 BUILD-ONLY authorization is consumed; canonical build PASS via read-only recovery; do not rerun build
+- next task is broadside mixed-mode solve DESIGN only
 - run any R1E1A4A solve, support-carrier build/solve, S4 sentinel or R1E1B pitch-screen solver: NO
 - material A/B solve: NO
 - physical LNA integration/CST251: NO

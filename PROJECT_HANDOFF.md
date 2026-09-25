@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=64
+HANDOFF_VERSION=65
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H0-P1-MIXEDMODE-BUILD-ONLY-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=AUTHORIZED_READY_FOR_PREFLIGHT
+CURRENT_TASK_ID=R1E1-A4A-H0-P1-BROADSIDE-SOLVE-DESIGN
+TASK_OWNER=DESIGN_CIRCUIT
+TASK_STATUS=BUILD_CLOSED_PASS_AWAIT_SOLVE_AUTHORIZATION
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_H0_P1_BUILD_ONLY_ONE_SHOT
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -762,3 +762,17 @@ QPL9547 reference S2P in-band derived minima: K=1.2480, mu=1.3687, mu-prime=1.38
 
 Next ticket: `docs/R1E1A4A_MIXEDMODE_BUILD_ONLY_CONTRACT_DRAFT.md`.
 No CST build or solve has been executed in R1E1A4A. BUILD_AUTHORIZED remains NO.
+
+## R1E1A4A H0/P1 BUILD-ONLY closeout
+
+The one authorized formal build invocation produced the H0/P1 artifact but the fresh-reopen audit harness used VBA variable `imp`, which is the reserved `Imp` logical operator. Formal status is preserved as `HOLD_R1E1A4A_H0_P1_BUILD_AUDIT_VBA_RESERVED_WORD`.
+
+No build rerun occurred. Query-only fresh-open recovery then qualified the persisted artifact. Canonical status is `PASS_R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_READONLY_RECOVERY`.
+
+Artifact SHA256: `d1ebb6f4a6e8b48f3484cc5459790dd5c9bbd29482832c491076c84f783b3deb`.
+
+Qualified: four solids, H0 local ground 10x10x0.035 mm, two 50-ohm SParameter ports, exact P1A/P1B coordinates and 180-degree symmetry, 94-mm cell, broadside, no solver markers/results.
+
+A first read-only checker also HOLDed on two audit assumptions only: it expected component name `GroundReference` rather than the actual parent `UnitCellGround`, and failed to recognize VBA Boolean `-1` as True. Raw values were already correct; the corrected second read-only pass is canonical.
+
+Next task is DESIGN ONLY: `docs/R1E1A4A_H0_P1_BROADSIDE_SOLVE_CONTRACT_DRAFT.md`. Broadside solve requires separate explicit authorization.

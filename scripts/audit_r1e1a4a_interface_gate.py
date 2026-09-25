@@ -30,7 +30,7 @@ for token in ("11.0 x 11.0 mm","10.0 x 10.0 mm","P1A","P1B","Z_branch = Z_diff/2
         fail.append("hub_missing:"+token)
 
 contract=(ROOT/"docs/R1E1A4A_MIXEDMODE_BUILD_ONLY_CONTRACT_DRAFT.md").read_text(encoding="utf-8")
-for token in ("BUILD NOT AUTHORIZED","exactly two 50-ohm single-ended discrete ports","Do not add support candidates"):
+for token in ("SOLVE NOT AUTHORIZED","exactly two 50-ohm single-ended discrete ports","Do not add support candidates"):
     if token not in contract:
         fail.append("contract_missing:"+token)
 

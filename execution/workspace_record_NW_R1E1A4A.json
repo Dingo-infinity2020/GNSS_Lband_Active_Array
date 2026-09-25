@@ -2,28 +2,31 @@
   "schema_version": "0.2.4",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A4A-H0-P1-MIXEDMODE-BUILD-ONLY-NW",
-    "stage": "R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY",
-    "status": "AUTHORIZED_READY_FOR_PREFLIGHT"
+    "task_id": "R1E1-A4A-H0-P1-BROADSIDE-SOLVE-DESIGN",
+    "stage": "R1E1A4A_H0_P1_BROADSIDE_SOLVE_DESIGN",
+    "status": "BUILD_CLOSED_PASS_AWAIT_SOLVE_AUTHORIZATION"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
     "state": "CHECKPOINTED"
   },
-  "authority": {
-    "gate_r": "docs/R1E1A4A_GATE_R_RECEIVER_FREEZE_V01.md",
-    "active_hub_interface": "docs/R1E1A4A_ACTIVE_HUB_INTERFACE_V01.md",
-    "build_contract": "docs/R1E1A4A_MIXEDMODE_BUILD_ONLY_CONTRACT_DRAFT.md"
+  "build": {
+    "formal_invocation_count": 1,
+    "formal_status": "HOLD_R1E1A4A_H0_P1_BUILD_AUDIT_VBA_RESERVED_WORD",
+    "canonical_status": "PASS_R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_READONLY_RECOVERY",
+    "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h0_p1_build_work\\R1E1A4A_H0_P1_MIXEDMODE_BUILD_ONLY_V01.cst",
+    "artifact_sha256": "d1ebb6f4a6e8b48f3484cc5459790dd5c9bbd29482832c491076c84f783b3deb",
+    "protected_in_place": true
   },
-  "execution": {
-    "formal_build_invocation_count": 0,
-    "formal_solve_invocation_count": 0,
-    "silent_retry_allowed": false
+  "solve": {
+    "formal_invocation_count": 0,
+    "authorized": false,
+    "next_contract": "docs/R1E1A4A_H0_P1_BROADSIDE_SOLVE_CONTRACT_DRAFT.md"
   },
   "archive": {
     "mode": "PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE",
-    "completed": false,
+    "completed": true,
     "purge_allowed": false
   }
 }
