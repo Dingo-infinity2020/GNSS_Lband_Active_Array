@@ -162,3 +162,21 @@ Mainline impact:
 
 Reversal condition:
 - only if a later CHARTS-specific blocker requires a reference solver benchmark that cannot be resolved directly.
+
+## D0009 — Freeze a mechanical-support EM gate before the R1E1B pitch screen
+
+Decision:
+- Treat the radiator standoff/frame as a first-class electromagnetic object rather than a post-simulation mechanical detail.
+- Insert R1E1A2 mechanical-support design and a later small P094 support-sensitivity qualification before the 18-case R1E1B pitch screen.
+- Preserve the six R1E1A1 support-free pitch models as immutable bare-array references.
+- Prefer a minimal-volume low-density RF-foam concept for first evaluation; do not assume it is perfectly transparent.
+- Treat aluminium/metal supports as high-risk RF structures requiring explicit modelling, grounding and symmetry.
+
+Evidence/reason:
+- current radiator PCB span is 70.714 mm and it is suspended about 57.143 mm above the ground/backplane;
+- the missing support therefore occupies the antenna/array near-field volume;
+- adding support only after pitch screening could change active impedance and invalidate pitch comparisons;
+- the project requirements already call for a ground/backplane and simple mechanical support.
+
+Reversal condition:
+- a mechanically credible support is demonstrated by frozen full-wave sensitivity criteria to be electromagnetically negligible across the required band/scan set, or a later integrated active-hub mechanical architecture supersedes it with quantified evidence.

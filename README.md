@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E1A1 - authorized six-pitch FR4 source-set BUILD-ONLY on NW.**
+**R1E1A2 - mechanical-support / standoff EM baseline DESIGN after R1E1A1 PASS.**
 
 The isolated-element passive phase is closed.
 
@@ -70,14 +70,17 @@ Canonical status:
 `PASS_R1E1A0_PITCH_PARAMETERIZATION_MECHANISM`.
 
 Current work:
-**R1E1A1 authorized six-pitch FR4 source-set BUILD-ONLY**.
+**R1E1A2 mechanical-support / standoff EM baseline DESIGN ONLY**.
+
+R1E1A1 is closed: `PASS_R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY`.
 
 Pitch set:
 88 / 90 / 92 / 94 / 96 / 100 mm
 
 Current permissions:
-- BUILD_AUTHORIZED=YES_R1E1A1_SIX_PITCH_SOURCE_SET_ONLY
+- BUILD_AUTHORIZED=NO
 - SOLVER_PERMISSION=NO
+- R1E1B remains blocked until the support baseline is defined and later sensitivity-qualified
 
 Read `PROJECT_HANDOFF.md` for the exact baton.
 

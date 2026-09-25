@@ -91,14 +91,17 @@ First validation endpoints:
 
 Endpoint proof is sufficient to validate the mutation mechanism before generating all candidate models.
 
-## R1E1A1 — six-pitch FR4 build-only source set
+## R1E1A1 — six-pitch FR4 build-only source set — CLOSED PASS
 
-After A0 PASS only.
+Canonical status:
+`PASS_R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY`
 
-Generate immutable FR4 periodic sources for:
+The six support-free sources remain immutable bare-array references.
+
+Generated FR4 periodic sources:
 88, 90, 92, 94, 96, 100 mm.
 
-Each source must retain:
+Each source retains:
 - same radiator geometry;
 - same FR4 1.00-mm baseline;
 - same copper/PEC representation;
@@ -107,7 +110,42 @@ Each source must retain:
 - same periodic/open boundary types;
 - only the periodic ground-tile/cell pitch changes.
 
-All six require unique CST hash and fresh-reopen evidence.
+All six passed unique-hash and fresh-reopen qualification.
+
+## R1E1A2 — mechanical support / standoff EM baseline
+
+DESIGN gate before production pitch screening.
+
+Purpose:
+- define how the 70.714-mm radiator PCB is held approximately 57.143 mm above the ground/backplane;
+- prevent a later support/frame addition from invalidating pitch comparisons;
+- prefer symmetric minimal-volume structures and actual material data.
+
+Candidate order:
+- low-density RF foam support first;
+- small-section dielectric posts second;
+- FR4 ribs as a manufacturability reference;
+- aluminium/metal posts only as an explicitly modelled high-risk reference.
+
+No material is assumed electromagnetically transparent.
+See `docs/R1E1A2_MECHANICAL_SUPPORT_EM_PLAN.md`.
+
+## R1E1A3 — P094 support-sensitivity qualification
+
+Only after separate BUILD and SOLVER authorizations.
+
+Minimum comparison:
+- support-free P094 reference;
+- preferred low-density support candidate;
+- only the most useful alternative/worst-case candidate if needed.
+
+Minimum scan set:
+- broadside;
+- theta=60, phi=45 deg;
+- theta=60, phi=135 deg.
+
+Acceptance/transparency thresholds must be frozen before results are viewed.
+If support perturbation is benign, freeze the support and derive support-inclusive six-pitch sources. If it is material, support geometry becomes a co-design variable and R1E1B remains blocked.
 
 ## R1E1B — FR4 pitch screen
 
@@ -199,6 +237,9 @@ True antenna/LNA co-design remains after R1E2 provides the authoritative scan-de
 R1E1A0/A1 build-only:
 NW.
 
+R1E1A2 support design/build-only and the later lightweight P094 support-sensitivity gate:
+NW unless the frozen model becomes materially heavier.
+
 R1E1B reduced periodic screen:
 NW is acceptable if per-case runtime remains comparable to R1E0C; each case remains separately authorized/recorded.
 
@@ -209,7 +250,9 @@ return to DESIGN and decide NW versus CST251 explicitly.
 
 R1E1 is DESIGN ONLY.
 
-No pitch model build is authorized.
+R1E1A1 is closed PASS.
+R1E1A2 is DESIGN ONLY.
+No mechanical-support build is authorized.
 No R1E1 solver is authorized.
 No material A/B solver is authorized.
 No LNA integration is authorized.

@@ -40,7 +40,8 @@ No architecture replacement is allowed without explicit human approval and the r
 7. Infinite periodic-array results must later be checked against finite-array center/edge/corner behavior.
 8. Cross-polar isolation claims require a physically meaningful multi-conductor/feed representation; the historical crossed discrete-edge-port model is diagnostic only.
 9. Production EM/circuit work must preserve deterministic provenance and SimulationOps build/solve separation.
-10. Stop once a gate answers its scientific question; do not optimize unrelated variables inside that gate.
+10. Mechanical supports, standoffs, shields and frames that occupy the element near field are electromagnetic objects and must be qualified before the array baseline is frozen.
+11. Stop once a gate answers its scientific question; do not optimize unrelated variables inside that gate.
 
 ## System requirements carried through the mainline
 
@@ -141,6 +142,8 @@ Upper-bound/failure references:
 Materials:
 - FR4 cost baseline;
 - low-loss 4350B-class reference.
+
+Before the production pitch screen, freeze a mechanically credible support/standoff baseline. Start from low-density RF foam or another minimal-volume symmetric dielectric support, but model its actual material properties; conductive aluminium/metal supports are not assumed benign. Use a small 94-mm support-sensitivity gate before propagating support geometry to all pitch candidates.
 
 Do not declare a material winner from isolated return loss alone.
 
@@ -317,7 +320,7 @@ No stage inherits solver permission from the previous stage.
 
 As of the current handoff:
 
-`R1E0 94-mm periodic scan qualification CLOSED PASS -> R1E1 pitch/material trade CURRENT -> R1E2 active-impedance atlas -> R2 active-front-end co-design`.
+`R1E0 94-mm periodic scan qualification CLOSED PASS -> R1E1A1 six-pitch bare source set CLOSED PASS -> R1E1A2 mechanical-support EM baseline DESIGN -> R1E1 pitch/material trade -> R1E2 active-impedance atlas -> R2 active-front-end co-design`.
 
 LNA model validation may proceed in parallel after the periodic workflow begins, but **final active-antenna input matching is blocked until R1E2 provides the scan-dependent active-impedance locus**.
 

@@ -1,6 +1,6 @@
 # R1E1A1 Six-Pitch FR4 BUILD-ONLY Runbook
 
-Status: DESIGN ONLY — BUILD NOT YET AUTHORIZED
+Status: CLOSED PASS — one formal BUILD-ONLY invocation completed; no solver
 
 Source SHA256:
 `585929d5bf9cbf46c4a6d0ae40b42baa8e2efff673f79c1026dcff33cb014fc2`

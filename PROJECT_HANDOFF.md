@@ -3,15 +3,15 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=52
+HANDOFF_VERSION=53
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1-PITCH-MATERIAL-TRADE
-CURRENT_TASK_ID=R1E1-A1-SIX-PITCH-FR4-SOURCE-SET-BUILD-ONLY-NW
-TASK_OWNER=DC_NW
-TASK_STATUS=READY_FOR_BUILD
+CURRENT_TASK_ID=R1E1-A2-MECHANICAL-SUPPORT-EM-BASELINE-DESIGN
+TASK_OWNER=DESIGN
+TASK_STATUS=READY_FOR_DESIGN
 SIMULATIONOPS_PROTOCOL=0.2.4
-BUILD_AUTHORIZED=YES_R1E1A1_SIX_PITCH_SOURCE_SET_ONLY
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
@@ -549,7 +549,7 @@ Both endpoints passed pitch persistence, periodic span, non-ground geometry inva
 Evidence:
 `evidence/r1e1a0r2_dc_nw_20260924_build01/`
 
-## Current R1E1A1 six-pitch FR4 BUILD-ONLY authorization
+## R1E1A1 six-pitch FR4 BUILD-ONLY closeout
 
 Task:
 `R1E1-A1-SIX-PITCH-FR4-SOURCE-SET-BUILD-ONLY-NW`
@@ -587,10 +587,29 @@ Formal invocation count:
 Silent retry:
 NO
 
-BUILD_AUTHORIZED=YES_R1E1A1_SIX_PITCH_SOURCE_SET_ONLY
+Canonical status:
+`PASS_R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY`
+
+Qualified hashes:
+- P088 `c0af9163d6d3c176b773f0e731b3ce2e1821affc307033da06b4bae3394203c1`
+- P090 `27b7aac39d3ca7952509a761a59823bc3bcd6a090879f7864b8f808431d36850`
+- P092 `58609d126e6f1198da1d94528e9afca15c59236ed32e9807547b68a75d60c008`
+- P094 `fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e`
+- P096 `0e949b8940baa92ab88534f45442ecbef71ec54a299ad6df14fc3dff10a8e8f2`
+- P100 `df8f1c52dd6406a068f699420c6c94c9c6692121329db2544efe608a7d8b1efd`
+
+Closeout evidence:
+`evidence/R1E1A1_CLOSEOUT_20260925.md`
+
+The A1 build authorization is consumed.
+BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
 
-This ticket generates six immutable broadside FR4 sources only.
-No R1E1B solver is authorized.
+Current next task:
+`R1E1-A2-MECHANICAL-SUPPORT-EM-BASELINE-DESIGN`
+
+The missing standoff/frame occupies the near-field volume between the radiator PCB and ground/backplane. Mechanical support must therefore be defined and later sensitivity-qualified before R1E1B.
+
+No support build or solver is authorized.

@@ -23,19 +23,19 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A1-SIX-PITCH-FR4-SOURCE-SET-BUILD-ONLY-NW**
+Current task: **R1E1-A2-MECHANICAL-SUPPORT-EM-BASELINE-DESIGN**
 
 Current permissions:
-- use the pitch-ready 94-mm canonical source as immutable input: YES
-- run exactly one six-pitch FR4 BUILD-ONLY invocation on NW: YES
-- generate/fresh-reopen P088/P090/P092/P094/P096/P100: YES
-- run any R1E1B solver: NO
+- inspect the closed R1E1A1 bare-array sources and evidence: YES
+- design the mechanical support / standoff EM baseline: YES
+- build a support variant: NO
+- run any support-sensitivity or R1E1B solver: NO
 - material A/B solve: NO
 - LNA integration/CST251: NO
 - silent retry: NO
 
-R1E1A0 is closed PASS.
-Only the R1E1A1 six-pitch source-set build is authorized.
+R1E1A1 is closed `PASS_R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY`.
+R1E1A2 is DESIGN ONLY; no build or solver authorization is active.
 
 ## Architecture control
 

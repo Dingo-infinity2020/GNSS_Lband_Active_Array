@@ -1,31 +1,33 @@
 # SIM_EXECUTION
 
 ## Current stage
-R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY
+DESIGN_R1E1A2_MECHANICAL_SUPPORT_EM_BASELINE
 
-BUILD_AUTHORIZED: true
+BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
 PRODUCTION_SOLVE_AUTHORIZED: false
 MATERIAL_AB_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 
-## Source
-D:\GNSS_Lband_Active_Array\_r1e1a0r1_pitch_ready_source_work\R1E1A0R1_POLA_PERIODIC_PITCH_READY_94MM_V01.cst
-SHA256: 585929d5bf9cbf46c4a6d0ae40b42baa8e2efff673f79c1026dcff33cb014fc2
+## Last completed stage
+R1E1A1 six-pitch FR4 support-free source-set build-only
 
-Pitch set: 88, 90, 92, 94, 96, 100 mm
+Status:
+PASS_R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY
 
-Harness SHA256: e42e05e150222fc4b04fa64edd63baa9c19cc41604a1fe93ce783b90cbca1b6b
-Static audit: PASS_R1E1A1_STATIC_AUDIT
+Formal source commit:
+5a270f525aef8d7fa6fab3f3bc636139a6804268
 
-Work: D:\GNSS_Lband_Active_Array\_r1e1a1_six_pitch_fr4_work
-Evidence: evidence/r1e1a1_dc_nw_20260924_build01/
+Evidence:
+evidence/r1e1a1_dc_nw_20260924_build01/
+Closeout: evidence/R1E1A1_CLOSEOUT_20260925.md
 
-Formal invocation count: 1
-Silent retry: NO
+## Current design task
+R1E1-A2-MECHANICAL-SUPPORT-EM-BASELINE-DESIGN
+Plan: docs/R1E1A2_MECHANICAL_SUPPORT_EM_PLAN.md
 
 ## Stop
-Generate six broadside FR4 sources only.
-No solver.
-No material A/B.
+No support build.
+No R1E1B solver.
+No material A/B solver.
 No LNA integration.
