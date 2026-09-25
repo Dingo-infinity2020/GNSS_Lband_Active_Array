@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=81
+HANDOFF_VERSION=82
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4-SUPPORT-RECEIVER-CODESIGN
-CURRENT_TASK_ID=R1E1-A4A-H3B-T01-OPTIMIZATION-ROUTE-FROZEN
-TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=ROUTE_FROZEN_AWAIT_T01_DESIGN
+CURRENT_TASK_ID=R1E1-A4A-H3B-T01-TRANSITION-COUPON-BUILD-ONLY-NW
+TASK_OWNER=DC_NW
+TASK_STATUS=AUTHORIZED_BUILD_READY
 SIMULATIONOPS_PROTOCOL=0.2.6
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -1023,3 +1023,20 @@ Immediate next design node:
 H3B_T01_POST_LNA_ORTHOGONAL_TRANSITION_COUPON_FREEZE.
 
 No BUILD or SOLVE permission is implied by this route freeze.
+
+## H3B-T01 standalone transition coupon build authorization
+
+One BUILD-ONLY invocation on NW is authorized for the frozen H3B-T01 coupon.
+
+Freeze:
+docs/R1E1A4A_H3B_T01_TRANSITION_COUPON_FREEZE_V01.md
+
+Scope:
+- fresh blank CST MWS;
+- horizontal and vertical 1.0-mm FR4 boards;
+- grounded-CPW-class G-S-G lines with local backing planes and plated via fences;
+- explicit horizontal/vertical transition pads, edge caps and solder fillet envelopes;
+- RP1/RP2 stored only as reference-plane parameters;
+- zero RF ports and no solver.
+
+Stop after BUILD qualification and human 3D review. No passive solve is authorized.

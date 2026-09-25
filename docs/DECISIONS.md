@@ -403,3 +403,16 @@ Decision:
 
 Reference:
 docs/R1E1A4A_H3B_ACTIVE_ELEMENT_OPTIMIZATION_ROUTE_FREEZE_V01.md
+
+## D0021 — Freeze H3B-T01 standalone orthogonal transition coupon
+
+Decision:
+- first H3B experiment is a standalone post-LNA PCB-to-PCB transition coupon;
+- use symmetric 1-mm FR4 horizontal/vertical boards with matched G-S-G controlled-line baselines;
+- include local backing grounds, plated via fences, explicit transition pads, edge caps and solder envelopes;
+- keep RP1/RP2 as stored parameters in build-only; ports are introduced only after human geometry review;
+- do not tune antenna geometry or LNA input matching in T01;
+- one BUILD-ONLY invocation is authorized; no solve.
+
+Reference:
+docs/R1E1A4A_H3B_T01_TRANSITION_COUPON_FREEZE_V01.md

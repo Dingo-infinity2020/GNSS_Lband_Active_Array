@@ -2,30 +2,30 @@
   "schema_version": "0.2.6",
   "task": {
     "project": "GNSS_Lband_Active_Array",
-    "task_id": "R1E1-A4A-H3B-T01-OPTIMIZATION-ROUTE-FROZEN",
-    "stage": "R1E1A4A_H3B_T01_OPTIMIZATION_ROUTE_FROZEN",
-    "status": "DESIGN_ROUTE_FROZEN_NO_EXECUTION_AUTH"
+    "task_id": "R1E1-A4A-H3B-T01-TRANSITION-COUPON-BUILD-ONLY-NW",
+    "stage": "R1E1A4A_H3B_T01_TRANSITION_COUPON_BUILD_ONLY",
+    "status": "AUTHORIZED_READY_FOR_PREFLIGHT"
   },
   "workspace": {
     "host_alias": "NW",
     "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
     "state": "CHECKPOINTED"
   },
+  "h3b_t01": {
+    "build_invocation_count": 0,
+    "build_authorized": true,
+    "solve_authorized": false,
+    "active_device_authorized": false,
+    "intersection_gate_required": true,
+    "silent_retry_allowed": false
+  },
   "retained_artifacts": {
-    "h3a_v02_artifact": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3a_v02_build_work\\R1E1A4A_H3A_ORTHOGONAL_STALK_BUILD_ONLY_V02.cst",
     "h3a_v02_sha256": "9e810560fc8fc759a88d4ac5fc39067863a1e078b6f01e6e343b004891201db5",
     "h3a_v02_status": "ACCEPTED_MECHANICAL_BASELINE"
   },
-  "optimization_route": {
-    "authority": "docs/R1E1A4A_H3B_ACTIVE_ELEMENT_OPTIMIZATION_ROUTE_FREEZE_V01.md",
-    "method": "HIERARCHICAL_MODULAR_CODESIGN_WITH_SYSTEM_LEVEL_CLOSURE",
-    "next_node": "H3B_T01_POST_LNA_ORTHOGONAL_TRANSITION_COUPON_FREEZE",
-    "build_authorized": false,
-    "solve_authorized": false
-  },
   "archive": {
-    "mode": "GIT_CHECKPOINT_PLUS_PROTECTED_PRIOR_ARTIFACTS",
-    "completed": true,
+    "mode": "PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE",
+    "completed": false,
     "purge_allowed": false
   }
 }

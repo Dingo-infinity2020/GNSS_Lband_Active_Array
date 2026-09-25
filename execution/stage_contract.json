@@ -3,32 +3,33 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
+    "source_commit": "RESOLVE_EXACT_HEAD_AT_H3B_T01_BUILD_PREFLIGHT"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
-    "cst251_authorized": false
+    "cst251_authorized": false,
+    "scope": "ONE_H3B_T01_TRANSITION_COUPON_BUILD_ONLY_ON_NW"
   },
   "scientific_freeze": {
     "mechanical_baseline": "H3A_ORTHOGONAL_STALK_ASSEMBLY_V02_FR4_BRIDGED_MORTISE",
-    "mechanical_build_status": "PASS_R1E1A4A_H3A_V02_FR4_BRIDGED_MORTISE_BUILD_ONLY",
-    "mechanical_artifact_sha256": "9e810560fc8fc759a88d4ac5fc39067863a1e078b6f01e6e343b004891201db5",
-    "h3a_v02_human_review": "ACCEPTED_MECHANICAL_BASELINE",
     "optimization_route": "docs/R1E1A4A_H3B_ACTIVE_ELEMENT_OPTIMIZATION_ROUTE_FREEZE_V01.md",
-    "optimization_method": "HIERARCHICAL_MODULAR_CODESIGN_WITH_SYSTEM_LEVEL_CLOSURE",
-    "final_system_metric": "ROBUST_AEFF_OVER_TSYS_OR_G_OVER_T_CORE_FREQUENCY_SCAN",
-    "antenna_lna_50ohm_required": false,
-    "eventual_authoritative_source_condition": "SCAN_DEPENDENT_ACTIVE_ARRAY_IMPEDANCE",
-    "variable_policy": "CLASS_A_HARD_FROZEN__CLASS_B_MODULE_LOCAL__CLASS_C_LIMITED_CROSS_DOMAIN",
-    "next_stage": "H3B_T01_POST_LNA_ORTHOGONAL_TRANSITION_COUPON_FREEZE",
-    "stop_boundary": "DESIGN_FREEZE_ONLY; NO BUILD NO SOLVE UNTIL NEW EXPLICIT AUTHORIZATION"
+    "candidate": "H3B_T01_POST_LNA_ORTHOGONAL_TRANSITION_COUPON_V01",
+    "freeze_doc": "docs/R1E1A4A_H3B_T01_TRANSITION_COUPON_FREEZE_V01.md",
+    "standalone_coupon": true,
+    "rp1": "HORIZONTAL_Y_PLUS_12MM",
+    "rp2": "VERTICAL_Z_MINUS_12MM",
+    "rf_port_count_target": 0,
+    "active_device": "NONE",
+    "mandatory_build_gate": "FRESH_REOPEN_PLUS_CST_INTERSECTION_GATE",
+    "stop_boundary": "STOP_AFTER_T01_BUILD_QUALIFICATION_FOR_HUMAN_3D_REVIEW"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01_OPTIMIZATION_ROUTE_FROZEN",
+    "current_stage": "R1E1A4A_H3B_T01_TRANSITION_COUPON_BUILD_ONLY",
+    "formal_build_invocation_count": 0,
     "silent_retry_allowed": false,
     "hash_lock_required": true
   },

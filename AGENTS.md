@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1-A4A-H3B-T01-OPTIMIZATION-ROUTE-FROZEN**
+Current task: **R1E1-A4A-H3B-T01-TRANSITION-COUPON-BUILD-ONLY-NW**
 
 Current permissions:
 - inspect the closed R1E1A1 bare-array and R1E1A2/A3 support evidence: YES
@@ -175,3 +175,11 @@ Stop and document instead of guessing when:
 - Local proxy metrics such as S11/transition return loss cannot override system sensitivity.
 - Immediate next node is H3B_T01_POST_LNA_ORTHOGONAL_TRANSITION_COUPON_FREEZE.
 - No BUILD/SOLVE permission is currently open.
+
+## H3B-T01 build authorization
+- exactly one standalone H3B-T01 transition-coupon BUILD-ONLY invocation on NW is authorized;
+- coupon contains only horizontal/vertical 1-mm FR4 boards, grounded-CPW-class lines, via fences, explicit edge pads/caps and solder envelopes;
+- RP1/RP2 are stored reference-plane parameters only; no RF ports are created in build-only;
+- no antenna radiator, real LNA, input match, balun, filter, final connector or array geometry is present;
+- BUILD PASS requires SimulationOps 0.2.6 intersection gate;
+- no solve or optimization sweep is authorized.
