@@ -3,11 +3,11 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "6e8b4264d72b02e8d01d5801d9311bf5cf89ac8c"
+    "source_commit": "20f2cd705ad647115640e4321fabafa5892d70d5"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": true,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
@@ -49,10 +49,26 @@
         0.01989424170914305,
         0.015183877170575425
       ]
-    }
+    },
+    "o1_released_variables": {
+      "Wsig_mm": [
+        1.5,
+        1.8,
+        2.1
+      ],
+      "Gcpw_mm": [
+        0.2,
+        0.3,
+        0.4
+      ]
+    },
+    "o1_fixed_variables": "O0 geometry/material/RP/via/ports/boundary; ground rail 2.2 mm; backing ground 8 mm",
+    "o1_screening_fidelity": "second-order tetrahedral; exactly 4 adaptive passes; PEC/FR4; 1-2 GHz",
+    "o1_qualification_fidelity": "O0 high-fidelity: second-order tetrahedral; MaxDeltaS 0.02; 2 checks; MaxPasses 16",
+    "o1_winner_rule": "screen top3 by lowest worst-core S11/S22 dB; tie by S21 then larger gap; final winner among numerically qualified candidates must meet >=12 dB worst-core return loss; prefer >=15 dB"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01A_O1_LINE_CROSS_SECTION_FREEZE_AWAIT_AUTH",
+    "current_stage": "R1E1A4A_H3B_T01A_O1_EXECUTING",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true,
