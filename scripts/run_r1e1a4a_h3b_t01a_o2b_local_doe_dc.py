@@ -85,8 +85,24 @@ def read_s(cst):
   return out
 def read_adapt(cst):
   p3=ProjectFile(str(cst),allow_interactive=True).get_3d(); tree=p3.get_tree_items(); hits=[x for x in tree if "Adaptive Meshing" in x and x.endswith(r"S-Parameters\Delta\All S-Parameters")]
-  if not hits: return []
-  return [{"pass":int(round(float(r[0]))),"delta_s":float(complex(r[1]).real)} for r in p3.get_result_item(hits[0]).get_data()]
+  if hits:
+    try:
+      return [{"pass":int(round(float(r[0]))),"delta_s":float(complex(r[1]).real)} for r in p3.get_result_item(hits[0]).get_data()]
+    except ValueError:
+      pass
+  # CST may delete run-id 0 after parameterized frequency-sample updates while leaving the native solver log authoritative.
+  import re
+  out=Path(os.path.splitext(str(cst))[0])/"Result"/"output.txt"
+  if not out.exists(): return []
+  seq=[]; cur=None
+  for line in out.read_text(encoding="utf-8",errors="ignore").splitlines():
+    m=re.search(r"Adaptive mesh refinement pass\s+(\d+)",line)
+    if m: cur=int(m.group(1)); continue
+    m=re.search(r"All S-Parameters\s*=\s*([0-9.eE+-]+)",line)
+    if m and cur is not None: seq.append({"pass":cur,"delta_s":float(m.group(1))})
+  dedup={}
+  for row in seq: dedup[row["pass"]]=row["delta_s"]
+  return [{"pass":p,"delta_s":dedup[p]} for p in sorted(dedup)]
 def interp(vals,x):
   vals=sorted(vals)
   if x<=vals[0][0]: return vals[0][1]
