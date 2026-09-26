@@ -3,11 +3,11 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "20f2cd705ad647115640e4321fabafa5892d70d5"
+    "source_commit": "b3c96db42abc347d20874efeb02d45cfed820929"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": true,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
@@ -393,10 +393,33 @@
       "core_s21_min_db": -0.2479370025182255,
       "preferred_15db_met": true,
       "solved_sha256": "2050bba69d0a21a2a295c378d0a36a5408ad80e7399ba7403025a94a5694a604"
+    },
+    "o2a_definition": "O1_W15G40_LINE_ON_ORIGINAL_T01A_JUNCTION",
+    "o2a_transform_rules": {
+      "StoreParameter \"h3b_t01_wsig\", 1.8": {
+        "new": "StoreParameter \"h3b_t01_wsig\", 1.5",
+        "count": 1
+      },
+      "StoreParameter \"h3b_t01_gap\", 0.3": {
+        "new": "StoreParameter \"h3b_t01_gap\", 0.4",
+        "count": 1
+      },
+      ".Xrange \"-0.9\", \"0.9\"": {
+        "new": ".Xrange \"-0.75\", \"0.75\"",
+        "count": 2
+      },
+      ".Xrange \"-3.4\", \"-1.2\"": {
+        "new": ".Xrange \"-3.35\", \"-1.15\"",
+        "count": 2
+      },
+      ".Xrange \"1.2\", \"3.4\"": {
+        "new": ".Xrange \"1.15\", \"3.35\"",
+        "count": 2
+      }
     }
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01A_O2_JUNCTION_OPTIMIZATION_FREEZE_AWAIT_AUTH",
+    "current_stage": "R1E1A4A_H3B_T01A_O2A_W15G40_EXECUTING",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true,
