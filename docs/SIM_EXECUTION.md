@@ -3,56 +3,60 @@
 ## 1. Global Protocol
 
 - Repository: Dingo-infinity2020/SimulationOps
-- Protocol: GLOBAL_DC_SIMULATION_PROTOCOL.md
 - Protocol version used: 0.2.8
 - Minimum compatible version: >=0.2.8
-- Host registry: infrastructure/HOSTS.md
-- Workspace lifecycle: WORKSPACE_LIFECYCLE.md
-- DC call policy: DC_CALL_EFFICIENCY.md
+- DC policy: GitHub/authority first; stage-level transactions only
 
 ## 2. Current stage
 
-R1E1A4A_H3B_C0_COMPLETE_PASSIVE_BUILD_ONLY_AWAIT_AUTH
+R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_AWAIT_AUTH
 
 - BUILD_AUTHORIZED: false
 - SOLVE_AUTHORIZED: false
+- LNA_INTEGRATION_AUTHORIZED: false
 
-## 3. Proven prerequisite
+## 3. Architecture decision
 
-T01-A = PASS_R1E1A4A_H3B_T01A_FREEZE
-H3A V0.2 = PASS_R1E1A4A_H3A_V02_FR4_BRIDGED_MORTISE_BUILD_ONLY
-
-## 4. H3B frozen route
+First priority:
+AR0-B0_STALK_TOP_TWIN_MSL_TWIN_LNA
 
 Authority:
-- docs/R1E1A4A_H3B_COMPLETE_PASSIVE_ROUTE_FREEZE_V01.md
-- docs/R1E1A4A_H3B_C0_BUILD_ONLY_PLAN_V01.md
-- docs/R1E1A4A_H3B_I01_PASSIVE_PILOT_PLAN_V01.md
-- execution/R1E1A4A_H3B_C0_REPLACEMENT_MAP_V01.json
+- docs/R1E1A4A_AR0_B0_STALK_TOP_TWIN_MSL_ARCHITECTURE_FREEZE_V01.md
+- execution/R1E1A4A_AR0_B0_ARCHITECTURE_MANIFEST_V01.json
+- docs/R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_PLAN_V01.md
 
-Route:
-H3B-C0 build-only -> human 3D review -> H3B-I01 six-state A/B passive pilot -> Passive Unit V1 freeze -> LNA-on-stalk A0.
+B0 hard rules:
+- balanced radiator remains ground-free on both faces;
+- stalk ground never contacts radiator copper;
+- two signal branches per polarization;
+- two QPL9547 first-stage candidates per polarization;
+- ordinary nominal 1.90-mm MSL begins after a 3.0-mm ground setback;
+- no passive pre-LNA balun;
+- old T01-A is post-LNA technology only.
 
-## 5. Immediate authorization boundary
+## 4. Superseded branch
 
-The next executable action is H3B-C0 BUILD-ONLY on NW.
+H3B-C0 status remains:
+HOLD_R1E1A4A_H3B_C0_GEOMETRY_OVERLAP
 
-Task packet:
-execution/task_packets/R1E1A4A_H3B_C0_task.json
+Its artifacts/evidence remain protected.
+No recovery build is authorized.
 
-C0 creates two fresh zero-port/zero-solver artifacts:
-A = H3A_MECH_ONLY_PHYSICALIZED
-B = H3B_COMPLETE_PASSIVE_V1
+## 5. Next executable node
 
-No solve, no LNA device, no A0, no pitch sweep.
+AR0-B0G feed-head BUILD-ONLY on NW after explicit authorization.
 
-## 6. DC Call Budget
+The build contains:
+- radiator;
+- two orthogonal fork-head stalks;
+- four signal-only tongues;
+- four nominal MSL traces;
+- stalk-only backside ground rails;
+- four nonconductive QPL9547 envelopes;
+- via-reserve predicates.
 
-GitHub/authority first.
-Target C0 execution: one batched build transaction + one task-node inspection.
-No periodic polling.
+No transistor, port, load, solve, or T01 antenna-feed geometry.
 
-## 7. Stop boundary
+## 6. Stop boundary
 
-Await explicit BUILD authorization for H3B-C0.
-I01 SOLVE remains separately unauthorized.
+AWAIT AR0-B0G BUILD-ONLY AUTHORIZATION.
