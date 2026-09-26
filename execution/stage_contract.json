@@ -6,8 +6,8 @@
     "source_commit": "b3c96db42abc347d20874efeb02d45cfed820929"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
-    "SOLVE_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
@@ -23,7 +23,7 @@
     "pass12_delta_s": 0.01570656517587774,
     "max_delta_s_required": 0.02,
     "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
-    "next_stage": "H3B_T01A_O2_JUNCTION_OPTIMIZATION_FREEZE",
+    "next_stage": "H3B_T01A_O2B_LOCAL_JUNCTION_DOE_FREEZE",
     "stop_boundary": "AWAIT NEXT-STAGE AUTHORIZATION; NO BUILD NO SOLVE",
     "master_plan": "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
     "simulationops_min": "0.2.7",
@@ -416,14 +416,31 @@
         "new": ".Xrange \"1.15\", \"3.35\"",
         "count": 2
       }
-    }
+    },
+    "o2a_status": "PASS_R1E1A4A_H3B_T01A_O2A_ACCEPTABLE",
+    "o2a_build_sha256": "290b8c1109706de6415ff342f2d83ce8aaca1162732ca69c60da79531d96521e",
+    "o2a_solved_sha256": "1fdf5475fda63bfd04627f4699925ee0e036442f4613bf73b5cfa9026769f207",
+    "o2a_metrics": {
+      "worst_core_return_db": -13.50509553248417,
+      "core_s21_min_db": -0.35047055893486173,
+      "core_s21_max_db": -0.1200314920695761,
+      "reciprocity_max_abs_db": 0.00010995879446584755
+    },
+    "o2a_excess_loss": {
+      "junction_excess_min_db": 0.014970808457893212,
+      "junction_excess_max_db": 0.10253355641663622,
+      "junction_excess_median_db": 0.04651931288341704
+    },
+    "o2a_preferred_gate": false,
+    "o2a_acceptable_gate": true
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01A_O2A_W15G40_EXECUTING",
+    "current_stage": "R1E1A4A_H3B_T01A_O2B_LOCAL_JUNCTION_DOE_FREEZE_AWAIT_AUTH",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true,
-    "formal_o0_solve_invocation_count": 1
+    "formal_o0_solve_invocation_count": 1,
+    "formal_o2a_solve_invocation_count": 1
   },
   "workspace": {
     "host_alias": "NW",
