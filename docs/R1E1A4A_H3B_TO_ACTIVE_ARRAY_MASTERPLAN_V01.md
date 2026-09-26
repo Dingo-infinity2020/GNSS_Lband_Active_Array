@@ -4,6 +4,11 @@ Status: PROJECT EXECUTION ROUTE — FROZEN / NO BUILD OR SOLVE AUTHORIZATION
 
 SimulationOps minimum: 0.2.7
 
+## 0. Post-O2B route amendment — authoritative
+
+The post-O2B route is frozen by `docs/R1E1A4A_POST_O2B_ROUTE_FREEZE_V02.md`.
+O2C nominal tuning is DEFERRED_CONTINGENCY_ONLY. The active mainline is O3 physical-fidelity verification → minimal O4 manufacturing sentinels → T01-A FREEZE → H3B Complete Passive Unit / H3B-I01 → LNA-on-stalk A0 → realistic periodic array → R1E2 active-impedance atlas → A1 final co-design → finite active array.
+
 ## 1. Current proven state
 
 H3A V0.2 mechanics are accepted. H3B-T01A GCPW 90-degree transition BUILD is accepted, and its maxpass16 numerical recovery converged at adaptive pass 12.
@@ -179,6 +184,6 @@ Every final winner requires fresh-run qualification and no-silent-retry semantic
 
 ## 15. Immediate next execution node
 
-H3B_T01A_O0_REFERENCE_LINE_FREEZE
+H3B_T01A_O3_PHYSICAL_FIDELITY_QUALIFICATION
 
-No BUILD or SOLVE authorization is currently open.
+O3 and O4 BUILD+SOLVE are authorized by the user under the post-O2B route freeze. O2C is contingency-only.
