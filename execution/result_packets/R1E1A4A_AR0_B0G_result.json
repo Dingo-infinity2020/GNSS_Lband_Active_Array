@@ -4,19 +4,28 @@
   "project": "GNSS_Lband_Active_Array",
   "stage": "R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY",
   "host": "NW",
-  "final_status": "HOLD_R1E1A4A_AR0_B0G_EXECUTION_EXCEPTION",
+  "final_status": "PASS_R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY",
   "actions": [
     {
       "action": "formal AR0-B0G build-only",
-      "exit_code": 1,
+      "exit_code": 0,
       "formal_build_invocations": 1,
       "solver_invocations": 0
+    },
+    {
+      "action": "audit-only recovery of existing fresh-reopened artifact",
+      "exit_code": 0,
+      "formal_build_invocations_added": 0,
+      "solver_invocations_added": 0
     }
   ],
   "evidence": {
     "outputs": [
+      "evidence/r1e1a4a_ar0_b0g_nw_20260926_build01/reopen_inventory.txt",
       "evidence/r1e1a4a_ar0_b0g_nw_20260926_build01/summary.json",
-      "evidence/r1e1a4a_ar0_b0g_nw_20260926_build01/HUMAN_3D_REVIEW.md"
+      "evidence/r1e1a4a_ar0_b0g_nw_20260926_build01/RECOVERY_AUDIT.md",
+      "evidence/r1e1a4a_ar0_b0g_nw_20260926_build01/HUMAN_3D_REVIEW.md",
+      "evidence/r1e1a4a_ar0_b0g_nw_20260926_build01/EXCEPTION.txt"
     ]
   },
   "authorization": {
@@ -27,5 +36,5 @@
     "state": "CHECKPOINTED",
     "record_path": "execution/workspace_records/R1E1A4A_AR0_B0G_workspace.json"
   },
-  "next_boundary": "AR0_B0G_REVIEW"
+  "next_boundary": "HUMAN_3D_REVIEW"
 }

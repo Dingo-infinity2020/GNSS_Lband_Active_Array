@@ -23,8 +23,8 @@
     "pass12_delta_s": 0.01570656517587774,
     "max_delta_s_required": 0.02,
     "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
-    "next_stage": "AR0_B0G_REVIEW",
-    "stop_boundary": "B0G HOLD; REVIEW EVIDENCE; NO SOLVE",
+    "next_stage": "AR0_B0G_HUMAN_3D_REVIEW",
+    "stop_boundary": "B0G BUILD PASS AFTER AUDIT-ONLY RECOVERY; AWAIT HUMAN 3D REVIEW; NO SOLVE",
     "master_plan": "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
     "simulationops_min": "0.2.8",
     "t01c_status": "DEFERRED_NOT_AUTHORIZED",
@@ -1440,7 +1440,7 @@
       "B_C60P135"
     ],
     "ar0_status": "ARCHITECTURE_FORK_ACTIVE",
-    "ar0_b0_status": "B0G_BUILD_HOLD_REVIEW_REQUIRED",
+    "ar0_b0_status": "B0G_BUILD_PASS_AWAIT_HUMAN_3D_REVIEW",
     "ar0_b0_architecture": "STALK_TOP_TWIN_MSL_TWIN_LNA",
     "ar0_b0_freeze_doc": "docs/R1E1A4A_AR0_B0_STALK_TOP_TWIN_MSL_ARCHITECTURE_FREEZE_V01.md",
     "ar0_b0_manifest": "execution/R1E1A4A_AR0_B0_ARCHITECTURE_MANIFEST_V01.json",
@@ -1450,10 +1450,10 @@
     "ar0_b0g_feedthrough_freeze": "docs/R1E1A4A_AR0_B0G_SIGNAL_FEEDTHROUGH_FREEZE_V01.md",
     "ar0_b0_slot_halfwidth_mm": 1,
     "ar0_b0_prebuild_static_collision_check": "PASS",
-    "ar0_b0g_status": "HOLD_R1E1A4A_AR0_B0G_EXECUTION_EXCEPTION"
+    "ar0_b0g_status": "PASS_R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY"
   },
   "execution": {
-    "current_stage": "R1E1A4A_AR0_B0G_REVIEW_AWAIT_USER",
+    "current_stage": "R1E1A4A_AR0_B0G_HUMAN_3D_REVIEW_AWAIT_USER",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true,
@@ -1461,8 +1461,8 @@
     "formal_o2a_solve_invocation_count": 1,
     "formal_o2b_screen_invocation_count": 9,
     "formal_o2b_qualification_invocation_count": 3,
-    "last_completed_stage": "R1E1A4A_H3B_T01A_O4_MINIMAL_TOLERANCE_SENTINELS",
-    "last_status": "HOLD_R1E1A4A_AR0_B0G_EXECUTION_EXCEPTION",
+    "last_completed_stage": "R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY",
+    "last_status": "PASS_R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY",
     "one_shot_required": true,
     "fresh_run_directory_required": true
   },
@@ -1476,7 +1476,7 @@
     "archive_destination": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b0g_build_work",
     "purge_allowed": false,
     "cleanup_completed": false,
-    "cleanup_evidence": "B0G build artifact protected pending architecture review."
+    "cleanup_evidence": "Existing B0G artifact protected for human 3D review; no rebuild during recovery."
   },
   "global_protocol": {
     "repository": "Dingo-infinity2020/SimulationOps",
@@ -1494,18 +1494,20 @@
   },
   "dc_call_budget": {
     "target_calls_per_routine_stage": 2,
-    "calls_used_current_stage": 1,
+    "calls_used_current_stage": 2,
     "task_packet_path": "execution/task_packets/R1E1A4A_AR0_B0G_task.json",
     "result_packet_path": "execution/result_packets/R1E1A4A_AR0_B0G_result.json",
     "preferred_runner": "scripts/run_r1e1a4a_ar0_b0g_build_only.py",
     "polling_policy": "single build transaction then inspect at task node",
-    "exception_reason": ""
+    "exception_reason": "Formal build artifact fresh-reopened successfully; original closeout failed only because CST 2022 lacks Solid.DoTheseGeometricallyIntersect. Second DC transaction was audit-only recovery; formal build count remains one."
   },
   "evidence": {
     "status_classification": "PASS_R1E1A4A_H3B_T01A_FREEZE",
     "source_commit_for_o3_o4": "00bea9de782eb36c1d3f118866edd283808b6233",
     "o3_nominal_solved_sha256": "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
     "o3_straight_reference_solved_sha256": "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
-    "o3_o4_compact_evidence": "evidence/r1e1a4a_h3b_t01a_o3_o4_nw_20260926_run01"
+    "o3_o4_compact_evidence": "evidence/r1e1a4a_h3b_t01a_o3_o4_nw_20260926_run01",
+    "ar0_b0g_artifact_sha256": "6b027162dd93d8613a0943df0fd96d6bf65d6721893e49c8d8bdc17f8f5eb698",
+    "ar0_b0g_compact_evidence": "evidence/r1e1a4a_ar0_b0g_nw_20260926_build01"
   }
 }
