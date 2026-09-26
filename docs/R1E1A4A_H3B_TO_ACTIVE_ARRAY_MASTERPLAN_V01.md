@@ -24,6 +24,22 @@ Key integration rules:
 - ordinary microstrip remains the intended A0 product-mainline direction; local T01-A GCPW is not promoted into the whole post-LNA route.
 - H3B does not optimize antenna-to-LNA matching.
 
+## 0B. AR0 active-feed architecture fork — authoritative
+
+The H3B-C0 grounded-T01 antenna integration is closed as architecture evidence after `HOLD_R1E1A4A_H3B_C0_GEOMETRY_OVERLAP`.
+
+First-priority architecture is now:
+`AR0-B0_STALK_TOP_TWIN_MSL_TWIN_LNA`
+
+Authority:
+- `docs/R1E1A4A_AR0_B0_STALK_TOP_TWIN_MSL_ARCHITECTURE_FREEZE_V01.md`
+- `execution/R1E1A4A_AR0_B0_ARCHITECTURE_MANIFEST_V01.json`
+
+Key change:
+balanced radiator terminals connect only to signal tongues. Ground belongs to the stalk, begins below a frozen setback, and never becomes radiator copper. T01-A is retained only for possible post-LNA grounded-board use.
+
+Architecture A (radiator-board electronics island) is deferred, not rejected.
+
 ## 1. Current proven state
 
 H3A V0.2 mechanics are accepted. H3B-T01A GCPW 90-degree transition BUILD is accepted, and its maxpass16 numerical recovery converged at adaptive pass 12.
@@ -199,11 +215,11 @@ Every final winner requires fresh-run qualification and no-silent-retry semantic
 
 ## 15. Immediate next execution node
 
-R1E1A4A_H3B_C0_COMPLETE_PASSIVE_BUILD_ONLY_AWAIT_AUTH
+R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_AWAIT_AUTH
 
 Authority:
-- docs/R1E1A4A_H3B_COMPLETE_PASSIVE_ROUTE_FREEZE_V01.md
-- docs/R1E1A4A_H3B_C0_BUILD_ONLY_PLAN_V01.md
-- execution/R1E1A4A_H3B_C0_REPLACEMENT_MAP_V01.json
+- docs/R1E1A4A_AR0_B0_STALK_TOP_TWIN_MSL_ARCHITECTURE_FREEZE_V01.md
+- docs/R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_PLAN_V01.md
+- execution/R1E1A4A_AR0_B0_ARCHITECTURE_MANIFEST_V01.json
 
 No BUILD or SOLVE authorization is currently open.
