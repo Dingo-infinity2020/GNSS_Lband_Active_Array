@@ -4,7 +4,7 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
-    "source_commit": "a11b94b3e14932714747e9f9600b2e79e5295ed3",
+    "source_commit": "7b9720d999f0bffe47895bae947c99f881df6ce6",
     "model_identity": "AR0_B0_STALK_TOP_TWIN_MSL_FEED_HEAD"
   },
   "stage": {
@@ -15,7 +15,7 @@
     "stop_boundary": "build-only + human 3D review; no solve"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false
   },
   "preflight": {
@@ -23,7 +23,8 @@
       "SimulationOps 0.2.8",
       "AR0-B0 architecture freeze unchanged",
       "qualified radiator parent available",
-      "H3B-C0 HOLD evidence preserved"
+      "H3B-C0 HOLD evidence preserved",
+      "B0G signal-only feedthrough implementation freeze V0.1"
     ],
     "fail_closed": true
   },
