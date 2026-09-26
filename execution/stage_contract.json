@@ -3,11 +3,11 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "299ec895a85250b996c5b186a06a94772048576b"
+    "source_commit": "f2a9c5d4438cc41966ec1ebca47f3877d669d679"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": true,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
@@ -23,8 +23,8 @@
     "pass12_delta_s": 0.01570656517587774,
     "max_delta_s_required": 0.02,
     "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
-    "next_stage": "H3B_T01A_O2C_GROUND_VIA_SOLDER_REVIEW_FREEZE",
-    "stop_boundary": "AWAIT NEXT-STAGE AUTHORIZATION; NO BUILD NO SOLVE",
+    "next_stage": "H3B_T01A_O3_PHYSICAL_FIDELITY_QUALIFICATION",
+    "stop_boundary": "O3/O4 AUTHORIZED; STOP AT T01A_FREEZE ON PASS OR HOLD AT FIRST FAILED ACCEPTABLE GATE",
     "master_plan": "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
     "simulationops_min": "0.2.7",
     "t01c_status": "DEFERRED_NOT_AUTHORIZED",
@@ -40,7 +40,7 @@
       "ref_s11_worst_db": -10.760769459285482,
       "ref_s21_min_db": -0.532985581425309,
       "ref_s21_max_db": -0.20359691665687338,
-      "reciprocity_max_abs_db": 8.831597447689354e-06,
+      "reciprocity_max_abs_db": 0.000008831597447689354,
       "junction_excess_min_db": 0.03648635564110472,
       "junction_excess_max_db": 0.10564100095048445,
       "junction_excess_median_db": 0.06602490595984728,
@@ -75,7 +75,7 @@
         "worst_core_return_db": -19.320911199651118,
         "core_s21_min_db": -0.18431461077257766,
         "core_s21_max_db": -0.10704860829176308,
-        "reciprocity_max_abs_db": 2.5211461834262483e-05,
+        "reciprocity_max_abs_db": 0.000025211461834262483,
         "solved_sha256": "ab44823f5afd52a174dc3867372756f0cbdfec4824b20fe998f318ee2f057b2b",
         "formal_solver_invocations": 1
       },
@@ -86,7 +86,7 @@
         "worst_core_return_db": -15.601718927170182,
         "core_s21_min_db": -0.2533286910881972,
         "core_s21_max_db": -0.14300217462777987,
-        "reciprocity_max_abs_db": 2.6623476555659442e-05,
+        "reciprocity_max_abs_db": 0.000026623476555659442,
         "solved_sha256": "778b2ffea999b836d0ddfcb10f21a43f58ba31e776636f7817e745c728910744",
         "formal_solver_invocations": 1
       },
@@ -97,7 +97,7 @@
         "worst_core_return_db": -14.284530144547048,
         "core_s21_min_db": -0.30189700853123896,
         "core_s21_max_db": -0.17834121993368057,
-        "reciprocity_max_abs_db": 3.926396830983281e-05,
+        "reciprocity_max_abs_db": 0.00003926396830983281,
         "solved_sha256": "b7adccbf1c08e316e6f2e300e8e67d6961b8f11df851eb0c747877cf40454f78",
         "formal_solver_invocations": 1
       },
@@ -108,7 +108,7 @@
         "worst_core_return_db": -12.213861424104273,
         "core_s21_min_db": -0.405691065975523,
         "core_s21_max_db": -0.2407059410220745,
-        "reciprocity_max_abs_db": 6.713394172130904e-06,
+        "reciprocity_max_abs_db": 0.000006713394172130904,
         "solved_sha256": "24c750bc87bc4329abe844eb6431e79542e42edf62537772326cbb4df5507384",
         "formal_solver_invocations": 1
       },
@@ -119,7 +119,7 @@
         "worst_core_return_db": -12.006639019642462,
         "core_s21_min_db": -0.41458968539410135,
         "core_s21_max_db": -0.2404593989731507,
-        "reciprocity_max_abs_db": 4.141990634665138e-05,
+        "reciprocity_max_abs_db": 0.00004141990634665138,
         "solved_sha256": "4598ef29f5106aeb033d2e9c2f76fbde574872e7dbac6809f0ed523ec3d78191",
         "formal_solver_invocations": 1
       },
@@ -130,7 +130,7 @@
         "worst_core_return_db": -11.25601137430661,
         "core_s21_min_db": -0.4794166962970181,
         "core_s21_max_db": -0.29842964095074703,
-        "reciprocity_max_abs_db": 1.9611666264740535e-05,
+        "reciprocity_max_abs_db": 0.000019611666264740535,
         "solved_sha256": "eff1449ddcf3974d9a23adac33bcd196334ef09c05de513e4de8fa18173e3b79",
         "formal_solver_invocations": 1
       },
@@ -141,7 +141,7 @@
         "worst_core_return_db": -9.966359355071933,
         "core_s21_min_db": -0.6025288722461064,
         "core_s21_max_db": -0.3820552136164757,
-        "reciprocity_max_abs_db": 4.41463783901197e-06,
+        "reciprocity_max_abs_db": 0.00000441463783901197,
         "solved_sha256": "b506922425c30879e5994ca3d84e3422fd7d93ef7b58c7177a848c5b6a221384",
         "formal_solver_invocations": 1
       },
@@ -152,7 +152,7 @@
         "worst_core_return_db": -9.809537931647391,
         "core_s21_min_db": -0.6163190611250207,
         "core_s21_max_db": -0.38122980110303323,
-        "reciprocity_max_abs_db": 9.47056923161771e-06,
+        "reciprocity_max_abs_db": 0.00000947056923161771,
         "solved_sha256": "047d0f479ee1676e513f8488a2b9990d186f37cd4c0683678c060d0cae66d980",
         "formal_solver_invocations": 1
       },
@@ -163,7 +163,7 @@
         "worst_core_return_db": -8.270332582356005,
         "core_s21_min_db": -0.8425973522600315,
         "core_s21_max_db": -0.5479937556151631,
-        "reciprocity_max_abs_db": 1.4354815665917897e-05,
+        "reciprocity_max_abs_db": 0.000014354815665917897,
         "solved_sha256": "a9dce89602112eaeb26b6d050aa819b2d4fc24ac89cde420427d687a0ceed9bb",
         "formal_solver_invocations": 1
       }
@@ -182,7 +182,7 @@
           "worst_core_return_db": -16.433750398716352,
           "core_s21_min_db": -0.2479370025182255,
           "core_s21_max_db": -0.10506068361168289,
-          "reciprocity_max_abs_db": 9.257737610013361e-06
+          "reciprocity_max_abs_db": 0.000009257737610013361
         },
         "adaptive_delta_sequence": [
           {
@@ -252,7 +252,7 @@
           "worst_core_return_db": -13.79095768204346,
           "core_s21_min_db": -0.332698626744911,
           "core_s21_max_db": -0.12295140897093285,
-          "reciprocity_max_abs_db": 3.0893890065886165e-05
+          "reciprocity_max_abs_db": 0.000030893890065886165
         },
         "adaptive_delta_sequence": [
           {
@@ -322,7 +322,7 @@
           "worst_core_return_db": -12.347029070927624,
           "core_s21_min_db": -0.41293267770814324,
           "core_s21_max_db": -0.15481678379244934,
-          "reciprocity_max_abs_db": 1.6637838954003392e-05
+          "reciprocity_max_abs_db": 0.000016637838954003392
         },
         "adaptive_delta_sequence": [
           {
@@ -435,7 +435,7 @@
     "o2a_acceptable_gate": true,
     "o2b_released_variables": {
       "signal_pad_width_mm": [
-        2.0,
+        2,
         2.4
       ],
       "pad_gap_mm": [
@@ -443,13 +443,13 @@
         0.3
       ],
       "transition_extension_mm": [
-        0.0,
+        0,
         0.3
       ],
       "baseline": [
         2.2,
         0.25,
-        0.0
+        0
       ]
     },
     "o2b_fixed": "O1 W15/G40 line; ground-pad width 2.4; solder y/z envelope; vias; boards; RP; FR4; PEC screening model",
@@ -461,84 +461,84 @@
     "o2b_screening_rank": [
       {
         "candidate": "P20_G30_E30",
-        "pad_width_mm": 2.0,
+        "pad_width_mm": 2,
         "pad_gap_mm": 0.3,
         "extension_mm": 0.3,
         "worst_core_return_db": -16.867960323517977,
         "core_s21_min_db": -0.22411983108702221,
         "core_s21_max_db": -0.12279665069166326,
-        "reciprocity_max_abs_db": 1.781769247477527e-05,
+        "reciprocity_max_abs_db": 0.00001781769247477527,
         "junction_excess_min_db": -0.023817171431203293,
         "junction_excess_max_db": 0.01994154269347731,
         "junction_excess_median_db": 0.015653486374989284,
-        "balance_score": 0.0,
+        "balance_score": 0,
         "solved_sha256": "059faf274ebcbdcd4632fecc889d22c3960f857b94fff1c44347b86ebf687b1c"
       },
       {
         "candidate": "P20_G30_E00",
-        "pad_width_mm": 2.0,
+        "pad_width_mm": 2,
         "pad_gap_mm": 0.3,
-        "extension_mm": 0.0,
+        "extension_mm": 0,
         "worst_core_return_db": -16.674587281541143,
         "core_s21_min_db": -0.2287508144836684,
         "core_s21_max_db": -0.12584361521210047,
-        "reciprocity_max_abs_db": 2.5553295699975997e-06,
+        "reciprocity_max_abs_db": 0.0000025553295699975997,
         "junction_excess_min_db": -0.0191861880345571,
         "junction_excess_max_db": 0.02348544832015348,
         "junction_excess_median_db": 0.019676876877693622,
-        "balance_score": 0.0,
+        "balance_score": 0,
         "solved_sha256": "90b97276bca556cd60fffc2229820c8456b819623a9561f4cadd944b31019de6"
       },
       {
         "candidate": "P22_G25_E00_BASE",
         "pad_width_mm": 2.2,
         "pad_gap_mm": 0.25,
-        "extension_mm": 0.0,
+        "extension_mm": 0,
         "worst_core_return_db": -15.914549905866458,
         "core_s21_min_db": -0.24757907718285627,
         "core_s21_max_db": -0.13353606475214824,
-        "reciprocity_max_abs_db": 2.93735970587905e-05,
+        "reciprocity_max_abs_db": 0.0000293735970587905,
         "junction_excess_min_db": -0.0003579253353692413,
         "junction_excess_max_db": 0.03386820016581582,
         "junction_excess_median_db": 0.030276784577331017,
-        "balance_score": 0.0,
+        "balance_score": 0,
         "solved_sha256": "e7470c859e4c0d7405aa271baddca3779afbe571e5df01f026794081affed05a"
       },
       {
         "candidate": "P20_G20_E00",
-        "pad_width_mm": 2.0,
+        "pad_width_mm": 2,
         "pad_gap_mm": 0.2,
-        "extension_mm": 0.0,
+        "extension_mm": 0,
         "worst_core_return_db": -15.854900247209633,
         "core_s21_min_db": -0.24904830164251365,
         "core_s21_max_db": -0.13410212387181975,
-        "reciprocity_max_abs_db": 7.602447495924647e-06,
+        "reciprocity_max_abs_db": 0.000007602447495924647,
         "junction_excess_min_db": 0.0011112991242881454,
         "junction_excess_max_db": 0.034653175366525096,
         "junction_excess_median_db": 0.031059990282148564,
-        "balance_score": 0.0,
+        "balance_score": 0,
         "solved_sha256": "2c9386fdd051b3c7c6547b633cf507fd0c648561f07fad2a79de8aa69ef06352"
       },
       {
         "candidate": "P20_G20_E30",
-        "pad_width_mm": 2.0,
+        "pad_width_mm": 2,
         "pad_gap_mm": 0.2,
         "extension_mm": 0.3,
         "worst_core_return_db": -15.674491614621985,
         "core_s21_min_db": -0.2534863936740544,
         "core_s21_max_db": -0.13507900762813638,
-        "reciprocity_max_abs_db": 1.7102553556719302e-05,
+        "reciprocity_max_abs_db": 0.000017102553556719302,
         "junction_excess_min_db": 0.005549391155828892,
         "junction_excess_max_db": 0.03649800198279493,
         "junction_excess_median_db": 0.03282288503217223,
-        "balance_score": 0.0,
+        "balance_score": 0,
         "solved_sha256": "9002d886e1939186ffc4aa973792895b9e7523ea4ff5c765314e5a538554a196"
       },
       {
         "candidate": "P24_G30_E00",
         "pad_width_mm": 2.4,
         "pad_gap_mm": 0.3,
-        "extension_mm": 0.0,
+        "extension_mm": 0,
         "worst_core_return_db": -0.015049288080764917,
         "core_s21_min_db": -40.94682467010665,
         "core_s21_max_db": -37.98181470921618,
@@ -553,7 +553,7 @@
         "candidate": "P24_G20_E00",
         "pad_width_mm": 2.4,
         "pad_gap_mm": 0.2,
-        "extension_mm": 0.0,
+        "extension_mm": 0,
         "worst_core_return_db": -0.015018773909309967,
         "core_s21_min_db": -41.19200633398254,
         "core_s21_max_db": -38.234577955852224,
@@ -609,7 +609,7 @@
           "worst_core_return_db": -14.381895326372362,
           "core_s21_min_db": -0.3118437032086416,
           "core_s21_max_db": -0.1124866595032671,
-          "reciprocity_max_abs_db": 5.299121555600583e-05,
+          "reciprocity_max_abs_db": 0.00005299121555600583,
           "junction_excess_min_db": 0.0074259758915842106,
           "junction_excess_max_db": 0.06390670069041607,
           "junction_excess_median_db": 0.026798370453714665
@@ -685,7 +685,7 @@
           0.012235242880097775
         ],
         "candidate": "P20_G30_E30",
-        "pad_width_mm": 2.0,
+        "pad_width_mm": 2,
         "pad_gap_mm": 0.3,
         "extension_mm": 0.3,
         "screen_rank": 1,
@@ -701,7 +701,7 @@
           "worst_core_return_db": -14.171675882306978,
           "core_s21_min_db": -0.32073024518946974,
           "core_s21_max_db": -0.1145475099786973,
-          "reciprocity_max_abs_db": 6.699367400075928e-05,
+          "reciprocity_max_abs_db": 0.00006699367400075928,
           "junction_excess_min_db": 0.009486826367014409,
           "junction_excess_max_db": 0.07279324267124423,
           "junction_excess_median_db": 0.031649401162676366
@@ -777,9 +777,9 @@
           0.011756422154227501
         ],
         "candidate": "P20_G30_E00",
-        "pad_width_mm": 2.0,
+        "pad_width_mm": 2,
         "pad_gap_mm": 0.3,
-        "extension_mm": 0.0,
+        "extension_mm": 0,
         "screen_rank": 2,
         "acceptable_gate": true,
         "preferred_gate": false,
@@ -871,7 +871,7 @@
         "candidate": "P22_G25_E00_BASE",
         "pad_width_mm": 2.2,
         "pad_gap_mm": 0.25,
-        "extension_mm": 0.0,
+        "extension_mm": 0,
         "screen_rank": 3,
         "acceptable_gate": true,
         "preferred_gate": false,
@@ -881,7 +881,7 @@
     "o2b_recovery_status": "PASS_RESULT_READER_RECOVERY_WITHOUT_RERUNNING_COMPLETED_SCREEN_CASES",
     "o2b_winner": {
       "candidate": "P20_G30_E30",
-      "pad_width_mm": 2.0,
+      "pad_width_mm": 2,
       "pad_gap_mm": 0.3,
       "extension_mm": 0.3,
       "preferred_gate": false,
@@ -889,10 +889,43 @@
       "junction_excess_max_db": 0.06390670069041607,
       "core_s21_min_db": -0.3118437032086416,
       "solved_sha256": "c80b704a257d9ead11c3465d43b907f1575708621d6f1a17a564c752f2b93bc7"
-    }
+    },
+    "route_freeze_doc": "docs/R1E1A4A_POST_O2B_ROUTE_FREEZE_V02.md",
+    "route_freeze_commit": "04f75309efcbc5d417b816d029427caca6b621ad",
+    "o2c_status": "DEFERRED_CONTINGENCY_ONLY",
+    "o2c_reopen_condition": "ONLY_IF_O3_OR_O4_FAIL_ACCEPTABLE_GATE_AND_FAILURE_IS_ATTRIBUTABLE_TO_RETURN_PATH_VIA_SOLDER",
+    "o3_status": "AUTHORIZED_NOT_YET_EXECUTED",
+    "o3_candidate": "P20_G30_E30",
+    "o3_material_model": {
+      "copper_sigma_s_per_m": 58000000,
+      "solder_proxy_sigma_s_per_m": 7000000,
+      "fr4": "FR4_COST_BASELINE"
+    },
+    "o3_acceptance": {
+      "core_band_ghz": [
+        1.15,
+        1.65
+      ],
+      "acceptable_worst_return_db": -12,
+      "preferred_worst_return_db": -15,
+      "acceptable_junction_excess_max_db": 0.15,
+      "preferred_junction_excess_max_db": 0.1,
+      "s21_notch_floor_db": -3,
+      "reciprocity_max_abs_db": 0.05,
+      "numerical": "two final DeltaS <=0.02; maxpass16"
+    },
+    "o4_status": "AUTHORIZED_NOT_YET_EXECUTED",
+    "o4_sentinels": [
+      "FAB_LOWZ_WSIG+0.10_GAP-0.05",
+      "FAB_HIGHZ_WSIG-0.10_GAP+0.05",
+      "ALIGN_P020_VERTICAL_BOARD_X+0.20MM",
+      "ALIGN_M020_VERTICAL_BOARD_X-0.20MM",
+      "SOLDER_SMALL_25PCT_INWARD",
+      "SOLDER_LARGE_25PCT_OUTWARD"
+    ]
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01A_O2C_GROUND_VIA_SOLDER_REVIEW_FREEZE_AWAIT_AUTH",
+    "current_stage": "R1E1A4A_H3B_T01A_O3_PHYSICAL_FIDELITY_QUALIFICATION_AUTHORIZED",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true,
