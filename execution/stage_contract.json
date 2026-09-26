@@ -3,7 +3,7 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "RESOLVE_EXACT_HEAD_AT_NEXT_AUTHORIZED_EXECUTION"
+    "source_commit": "6e8b4264d72b02e8d01d5801d9311bf5cf89ac8c"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
@@ -23,20 +23,40 @@
     "pass12_delta_s": 0.01570656517587774,
     "max_delta_s_required": 0.02,
     "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
-    "next_stage": "H3B_T01A_O0_REFERENCE_LINE_FREEZE",
-    "stop_boundary": "AWAIT O0 AUTHORIZATION; NO BUILD NO SOLVE",
+    "next_stage": "H3B_T01A_O1_LINE_CROSS_SECTION_FREEZE",
+    "stop_boundary": "AWAIT NEXT-STAGE AUTHORIZATION; NO BUILD NO SOLVE",
     "master_plan": "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
     "simulationops_min": "0.2.7",
     "t01c_status": "DEFERRED_NOT_AUTHORIZED",
     "h3bi01_status": "BLOCKED_UNTIL_T01A_FREEZE",
     "h3cc01_status": "BLOCKED_UNTIL_R1E2_ACTIVE_IMPEDANCE_ATLAS",
-    "h3clna0_status": "MAY_PROCEED_IN_PARALLEL_WHEN_SEPARATELY_AUTHORIZED"
+    "h3clna0_status": "MAY_PROCEED_IN_PARALLEL_WHEN_SEPARATELY_AUTHORIZED",
+    "o0_definition": "STRAIGHT_GCPW_SAME_CROSS_SECTION_FR4_BACKGROUND_VIA_RULE_RP_SPACING_24MM",
+    "o0_geometry_changes_allowed": false,
+    "o0_reference_status": "PASS_R1E1A4A_H3B_T01A_O0_STRAIGHT_REFERENCE",
+    "o0_build_sha256": "b628d4853a91c43119ca7e9524fc203bc43e9781f79dc1e5a5d4e9298ca6486b",
+    "o0_solved_sha256": "daef683e20130707273af64d2f0c02ba5484ebe9e84f89c8a1aca6cd0ed285f7",
+    "o0_metrics": {
+      "ref_s11_worst_db": -10.760769459285482,
+      "ref_s21_min_db": -0.532985581425309,
+      "ref_s21_max_db": -0.20359691665687338,
+      "reciprocity_max_abs_db": 8.831597447689354e-06,
+      "junction_excess_min_db": 0.03648635564110472,
+      "junction_excess_max_db": 0.10564100095048445,
+      "junction_excess_median_db": 0.06602490595984728,
+      "passes_executed": 12,
+      "final_two_delta_s": [
+        0.01989424170914305,
+        0.015183877170575425
+      ]
+    }
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01A_O0_REFERENCE_LINE_AWAIT_AUTH",
+    "current_stage": "R1E1A4A_H3B_T01A_O1_LINE_CROSS_SECTION_FREEZE_AWAIT_AUTH",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
-    "hash_lock_required": true
+    "hash_lock_required": true,
+    "formal_o0_solve_invocation_count": 1
   },
   "workspace": {
     "host_alias": "NW",
