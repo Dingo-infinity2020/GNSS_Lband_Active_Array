@@ -57,8 +57,8 @@ Exactly six sentinel cases are frozen:
 2. FAB_HIGHZ: Wsig -0.10 mm and Gcpw +0.05 mm
 3. ALIGN_P020: vertical-board lateral x offset +0.20 mm
 4. ALIGN_M020: vertical-board lateral x offset -0.20 mm
-5. SOLDER_SMALL: solder y/z envelope scaled inward by 25% about the nominal junction contact region
-6. SOLDER_LARGE: solder y/z envelope expanded outward by 25% within the existing board-intersection envelope
+5. SOLDER_SMALL: preserve both PCB contact faces; reduce only the free solder protrusion in +y and -z by 25% from nominal
+6. SOLDER_LARGE: preserve both PCB contact faces; increase only the free solder protrusion in +y and -z by 25% from nominal
 
 All other geometry is frozen. No candidate selection and no winner promotion are permitted.
 
