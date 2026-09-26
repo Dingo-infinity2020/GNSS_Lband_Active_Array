@@ -1,26 +1,30 @@
 # SIM_EXECUTION
 
-## Global Protocol
-SimulationOps 0.2.8.
+SimulationOps: 0.2.8
 
-## Current stage
-R1E1A4A_AR0_B0G_HUMAN_3D_REVIEW_AWAIT_USER
+Current stage:
+R1E1A4A_AR0_B1M_FULL_MECHANICAL_STALK_BUILD_ONLY_AUTHORIZED
 
-BUILD_AUTHORIZED: false
+BUILD_AUTHORIZED: true
 SOLVE_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 
-## AR0-B0G
-Status: PASS_R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY
-Formal build invocations total: 1
-Solver invocations total: 0
+Authority:
+- docs/R1E1A4A_AR0_B1M_FULL_MECHANICAL_STALK_FREEZE_V01.md
+- docs/R1E1A4A_AR0_B1M_BUILD_ONLY_PLAN_V01.md
+- execution/task_packets/R1E1A4A_AR0_B1M_task.json
 
-The formal artifact was built and fresh-reopened in the original transaction.
-The original exception was audit-tool-only: CST 2022 does not expose Solid.DoTheseGeometricallyIntersect.
-Recovery did not rebuild the model. It used the existing reopen inventory, artifact hash, empty solver-result-tree check, and deterministic analytic collision checks.
+Parent:
+PASS_R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY
+SHA256 6b027162dd93d8613a0943df0fd96d6bf65d6721893e49c8d8bdc17f8f5eb698
 
-Evidence:
-evidence/r1e1a4a_ar0_b0g_nw_20260926_build01/
+B1M scope:
+complete mechanical support only:
+radiator mortises -> orthogonal stalks -> center interlock -> reflector mortises.
 
-## Stop boundary
-Await human 3D review. No solve.
+The B0 feed head remains unchanged.
+Its abrupt 3-mm ground onset is a geometry placeholder and is not RF-qualified.
+
+Stop:
+after B1M build qualification and human 3D review.
+No solver.
