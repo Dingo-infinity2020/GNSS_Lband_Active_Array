@@ -3,11 +3,11 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "b3c96db42abc347d20874efeb02d45cfed820929"
+    "source_commit": "299ec895a85250b996c5b186a06a94772048576b"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": true,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
@@ -432,10 +432,33 @@
       "junction_excess_median_db": 0.04651931288341704
     },
     "o2a_preferred_gate": false,
-    "o2a_acceptable_gate": true
+    "o2a_acceptable_gate": true,
+    "o2b_released_variables": {
+      "signal_pad_width_mm": [
+        2.0,
+        2.4
+      ],
+      "pad_gap_mm": [
+        0.2,
+        0.3
+      ],
+      "transition_extension_mm": [
+        0.0,
+        0.3
+      ],
+      "baseline": [
+        2.2,
+        0.25,
+        0.0
+      ]
+    },
+    "o2b_fixed": "O1 W15/G40 line; ground-pad width 2.4; solder y/z envelope; vias; boards; RP; FR4; PEC screening model",
+    "o2b_screening_fidelity": "second-order tetrahedral exactly 4 adaptive passes; ranking only",
+    "o2b_qualification_fidelity": "second-order tetrahedral MaxDeltaS 0.02 x2; MaxPasses16",
+    "o2b_selection": "top3 by normalized max shortfall from frozen preferred return/excess gates; ties by return, excess, larger gap, smaller extension"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01A_O2B_LOCAL_JUNCTION_DOE_FREEZE_AWAIT_AUTH",
+    "current_stage": "R1E1A4A_H3B_T01A_O2B_EXECUTING",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true,
