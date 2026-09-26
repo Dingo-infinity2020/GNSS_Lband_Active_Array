@@ -4,7 +4,7 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
-    "source_commit": "63caaab075cad2ead70bab22066e00942eabc375",
+    "source_commit": "ff1740dcada376f11e1e8e26f9ffc9e8a8474f84",
     "model_identity": "H3B_COMPLETE_PASSIVE_C0"
   },
   "stage": {
@@ -15,7 +15,7 @@
     "stop_boundary": "C0 build-only + fresh-reopen/intersection + human 3D review; no solve"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false
   },
   "preflight": {
