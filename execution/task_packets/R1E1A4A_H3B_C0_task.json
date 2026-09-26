@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-H3B-C0-20260926",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "63caaab075cad2ead70bab22066e00942eabc375",
+    "model_identity": "H3B_COMPLETE_PASSIVE_C0"
+  },
+  "stage": {
+    "name": "R1E1A4A_H3B_C0_COMPLETE_PASSIVE_BUILD_ONLY",
+    "target_control_host": "NW",
+    "entrypoint": "scripts/run_r1e1a4a_h3b_c0_build_only.py",
+    "args": [],
+    "stop_boundary": "C0 build-only + fresh-reopen/intersection + human 3D review; no solve"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false
+  },
+  "preflight": {
+    "requirements": [
+      "SimulationOps 0.2.8 authority",
+      "clean project branch",
+      "H3A V0.2 parent SHA256 9e810560fc8fc759a88d4ac5fc39067863a1e078b6f01e6e343b004891201db5",
+      "T01-A freeze PASS",
+      "replacement map V0.1 unchanged"
+    ],
+    "fail_closed": true
+  },
+  "outputs": {
+    "expected": [
+      "A build artifact/audit",
+      "B build artifact/audit",
+      "replacement-map audit",
+      "3D review guide",
+      "workspace record"
+    ],
+    "result_packet_path": "execution/result_packets/R1E1A4A_H3B_C0_result.json"
+  },
+  "dc_call_budget": {
+    "target_calls": 2,
+    "polling_policy": "single build transaction then inspect at task node"
+  },
+  "execution": {
+    "silent_retry_allowed": false,
+    "dry_run": false,
+    "ticket_id": "GNSS-H3B-C0-20260926",
+    "lock_path": "execution/locks/GNSS-H3B-C0-20260926.lock"
+  }
+}
