@@ -3,7 +3,7 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "37cda8cd75a6ebaa6f899400ab77371c7863660d"
+    "source_commit": "a01feae892821d8d00208dd56c7e3dc23323075f"
   },
   "authorization": {
     "BUILD_AUTHORIZED": true,
@@ -1447,7 +1447,9 @@
     "ar0_b0g_plan": "docs/R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_PLAN_V01.md",
     "architecture_a_status": "DEFERRED_SENTINEL_NOT_REJECTED",
     "t01a_role": "POST_LNA_GROUNDED_BOARD_INTERCONNECT_ONLY",
-    "ar0_b0g_feedthrough_freeze": "docs/R1E1A4A_AR0_B0G_SIGNAL_FEEDTHROUGH_FREEZE_V01.md"
+    "ar0_b0g_feedthrough_freeze": "docs/R1E1A4A_AR0_B0G_SIGNAL_FEEDTHROUGH_FREEZE_V01.md",
+    "ar0_b0_slot_halfwidth_mm": 1,
+    "ar0_b0_prebuild_static_collision_check": "PASS"
   },
   "execution": {
     "current_stage": "R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_AUTHORIZED",
