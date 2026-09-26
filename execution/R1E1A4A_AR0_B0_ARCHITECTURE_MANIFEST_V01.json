@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1",
   "architecture": "AR0-B0_STALK_TOP_TWIN_MSL_TWIN_LNA",
-  "status": "FROZEN_AWAIT_BUILD_AUTH",
+  "status": "BUILD_AUTHORIZED",
   "parent": {
     "radiator_feed_authority": "R1A5F differential terminal geometry",
     "terminal_radius_mm": 3,
@@ -92,5 +92,13 @@
     "lower_stalk_body": true,
     "architecture_a": true
   },
-  "next_stage": "R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_AWAIT_AUTH"
+  "next_stage": "R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_AWAIT_AUTH",
+  "feedthrough": {
+    "type": "signal-only plated through feedthrough",
+    "outer_radius_mm": 0.2,
+    "inner_radius_mm": 0.1,
+    "substrate_hole_radius_mm": 0.2,
+    "ground_contact": false,
+    "freeze_doc": "docs/R1E1A4A_AR0_B0G_SIGNAL_FEEDTHROUGH_FREEZE_V01.md"
+  }
 }
