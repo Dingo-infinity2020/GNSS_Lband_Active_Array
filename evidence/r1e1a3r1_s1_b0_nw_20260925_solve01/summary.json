@@ -1,0 +1,100 @@
+{
+  "variant": "S1_BONDED",
+  "state": "B0",
+  "theta": 0.0,
+  "phi": 45.0,
+  "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work\\R1E1A2_S1_BONDED_B0_BUILD_ONLY_V01.cst",
+  "source_sha256": "addcd7a30fabdac49227b9f8ab8f05a6832266f0e00b58d288982abec13bae95",
+  "reference_csv": "evidence/r1e0b_dc_nw_20260924_smoke01/active_s11_and_zactive.csv",
+  "solver_config_sha256": "ee9ff4c2f65018652f809f1e014507ac49e5cbcd6f29758aac5e1e61ad41018b",
+  "result_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a3r1_s1_b0_recovery_work\\R1E1A3R1_S1_BONDED_B0_SOLVE_V02.cst",
+  "result_sha256": "9ca14907abb5a839c399452ef88a7f949dd3df4476992918d1bba5b7c33b71a9",
+  "result_bytes": 49919,
+  "comparison_vs_bare": {
+    "sample_count": 625,
+    "max_complex_delta_s11": 0.02950755982464835,
+    "max_complex_delta_s11_freq_ghz": 1.6496,
+    "rms_complex_delta_s11": 0.013616266873896039,
+    "max_abs_delta_zactive_ohm": 5.5860577965350515,
+    "max_abs_delta_zactive_freq_ghz": 1.6496,
+    "rms_abs_delta_zactive_ohm": 4.409208443321076
+  },
+  "protected_build_evidence_rewrites_detected": [
+    "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\evidence\\r1e1a2_support_build_nw_20260925_01\\S1_BONDED_B0\\build_shapes.txt",
+    "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\evidence\\r1e1a2_support_build_nw_20260925_01\\S1_BONDED_B0\\build_status.txt"
+  ],
+  "protected_build_evidence_restored": true,
+  "native": {
+    "delta_s_sequence": [
+      {
+        "pass": 2,
+        "delta_s": 0.034486
+      },
+      {
+        "pass": 3,
+        "delta_s": 0.0434795
+      },
+      {
+        "pass": 4,
+        "delta_s": 0.0306481
+      },
+      {
+        "pass": 5,
+        "delta_s": 0.0224759
+      },
+      {
+        "pass": 6,
+        "delta_s": 0.013084
+      },
+      {
+        "pass": 7,
+        "delta_s": 0.0209732
+      },
+      {
+        "pass": 8,
+        "delta_s": 0.0181843
+      },
+      {
+        "pass": 9,
+        "delta_s": 0.0205605
+      },
+      {
+        "pass": 10,
+        "delta_s": 0.0164063
+      },
+      {
+        "pass": 11,
+        "delta_s": 0.0144292
+      }
+    ],
+    "last_two_below_0p02": true,
+    "desired_accuracy": true,
+    "maxpasses": false,
+    "broadband_converged": true,
+    "errors": []
+  },
+  "physics_alerts": {
+    "abs_s11_ge_0p90": false,
+    "re_zactive_le_0": false,
+    "abs_zactive_ge_1000": false,
+    "max_abs_s11": 0.55538109314668,
+    "min_re_zactive_ohm": 85.5319202315938,
+    "max_abs_zactive_ohm": 267.71733292179704
+  },
+  "numerical_checks": {
+    "s11_present": true,
+    "nonempty": true,
+    "last_two_delta_s": true,
+    "desired_accuracy": true,
+    "not_maxpasses": true,
+    "broadband_converged": true,
+    "no_error_lines": true,
+    "pass": true
+  },
+  "pre_frozen_benign_gate": {
+    "max_complex_delta_s11_le": 0.05,
+    "max_abs_delta_zactive_ohm_le": 10.0,
+    "no_new_severe_alert": true
+  },
+  "benign_gate_pass": true
+}

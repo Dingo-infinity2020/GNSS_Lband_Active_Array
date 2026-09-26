@@ -1,0 +1,15 @@
+{
+  "candidate": "W15_G30",
+  "Wsig_mm": 1.5,
+  "Gcpw_mm": 0.3,
+  "build_sha256": "a931f488b0420945a6189083b56388ac87b4a547630e6ac35d30bc14ca9d4d83",
+  "checks": {
+    "shape_count_21": true,
+    "positive_volumes": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "hash_stable": true
+  }
+}

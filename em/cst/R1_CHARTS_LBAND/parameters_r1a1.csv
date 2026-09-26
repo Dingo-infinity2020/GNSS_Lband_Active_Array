@@ -1,0 +1,25 @@
+parameter,value,unit,provenance,status,source_note
+scale_factor,0.285714285714,,PROJECT_DERIVED,FROZEN,400 MHz source nominal center to 1.40 GHz project nominal center
+src_board_span,247.5,mm,FIGURE_DERIVED_UNVERIFIED,SOURCE_REFERENCE,accepted R0 V0.3 visible topology
+src_outer_slot_frame_span,227.5,mm,FIGURE_DERIVED_UNVERIFIED,SOURCE_REFERENCE,accepted R0 V0.3 visible topology
+src_outer_slot_width,5,mm,FIGURE_DERIVED_UNVERIFIED,SOURCE_REFERENCE,R0.1A3 photo estimate
+src_outer_mid_bridge,18,mm,FIGURE_DERIVED_UNVERIFIED,SOURCE_REFERENCE,R0.1A3 photo estimate
+src_outer_slot_segment_length,94.125,mm,FIGURE_DERIVED_UNVERIFIED,SOURCE_REFERENCE,R0.1A3 photo estimate
+src_inner_slot_width,9,mm,FIGURE_DERIVED_UNVERIFIED,SOURCE_REFERENCE,R0.1A3 photo estimate
+src_inner_slot_length,73,mm,FIGURE_DERIVED_UNVERIFIED,SOURCE_REFERENCE,R0.1A3 photo estimate
+src_inner_center_clear_span,60,mm,FIGURE_DERIVED_UNVERIFIED,SOURCE_REFERENCE,R0.1A3 photo estimate
+src_height_ground,200,mm,PAPER_EXPLICIT,SOURCE_REFERENCE,CHARTS paper
+src_fig40,40,mm,FIGURE_DERIVED_UNVERIFIED,SEMANTICS_UNRESOLVED,retained but unused
+board_span,70.714285714,mm,PROJECT_DERIVED,FROZEN,src_board_span*scale_factor
+outer_slot_frame_span,65.0,mm,PROJECT_DERIVED,FROZEN,src_outer_slot_frame_span*scale_factor
+outer_slot_width,1.428571429,mm,PROJECT_DERIVED,FROZEN,src_outer_slot_width*scale_factor
+outer_mid_bridge,5.142857143,mm,PROJECT_DERIVED,FROZEN,src_outer_mid_bridge*scale_factor
+outer_slot_segment_length,26.892857143,mm,PROJECT_DERIVED,FROZEN,src_outer_slot_segment_length*scale_factor
+inner_slot_width,2.571428571,mm,PROJECT_DERIVED,FROZEN,src_inner_slot_width*scale_factor
+inner_slot_length,20.857142857,mm,PROJECT_DERIVED,FROZEN,src_inner_slot_length*scale_factor
+inner_center_clear_span,17.142857143,mm,PROJECT_DERIVED,FROZEN,src_inner_center_clear_span*scale_factor
+height_ground,57.142857143,mm,PROJECT_DERIVED,FROZEN,src_height_ground*scale_factor
+scaled_fig40_unused,11.428571429,mm,PROJECT_DERIVED,UNUSED,semantics remain unresolved
+unit_cell_pitch_nominal,94.0,mm,PROJECT_DESIGN_BASELINE,FROZEN_FOR_BUILD_ONLY,center of prior 92-96 mm exploration range
+ground_reference_span,94.0,mm,PROJECT_DESIGN_BASELINE,FROZEN_FOR_BUILD_ONLY,nominal future unit-cell footprint only; not an isolated-element EM ground claim
+topology_proxy_t,0.10,mm,PROJECT_TOOLING,FROZEN_FOR_BUILD_ONLY,PEC build-only proxy thickness

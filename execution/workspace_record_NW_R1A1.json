@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1A1-SCALED-APERTURE-BUILD-ONLY-DC-NW",
+    "stage": "BUILD_ONLY_R1A1",
+    "status": "PASS_R1A1_SCALED_APERTURE_BUILD_ONLY"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "created_at": "existing checkout",
+    "last_used_at": "2026-09-24",
+    "state": "CHECKPOINTED"
+  },
+  "source": {
+    "type": "git",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "remote_url": "https://github.com/Dingo-infinity2020/GNSS_Lband_Active_Array.git",
+    "branch": "project/r0-charts-scaffold",
+    "head_commit": "094f11a25e153d5705f9b68d118b4d5ffb0dad9d",
+    "head_on_trusted_remote": true,
+    "dirty": false,
+    "untracked_present": false,
+    "local_only_commits_present": false
+  },
+  "archive": {
+    "mode": "REFERENCE_ONLY",
+    "destination": "remote Git + project evidence",
+    "manifest_path": "execution/workspace_record_NW_R1A1.json",
+    "critical_artifacts": [
+      "evidence/r1a1_dc_nw_20260924_1111/",
+      "evidence/r1a1_recovery_dc_nw_20260924_1113/"
+    ],
+    "recovery_method": "git checkout project/r0-charts-scaffold at remote HEAD; rebuild with source/cst/R1A1_CHARTS_SCALED_APERTURE_BUILD_ONLY_V01.mcr",
+    "completed": false
+  },
+  "closeout": {
+    "task_node": "R1A1 PASS",
+    "active_processes_checked": true,
+    "downstream_dependency_checked": true,
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false,
+    "cleanup_evidence": "No active task python/CST process at closeout; evidence pushed in commit 094f11a."
+  }
+}

@@ -1,0 +1,72 @@
+R0.1B2 CENTER/FEED — OFFICIAL PRIMARY SOURCE ACCESS LOG
+=========================================================
+
+Task      : R0.1B2-CENTER-FEED-SOURCE-RECOVERY-H01
+Host      : H01 (DESKTOP-GBTI6Q4)
+Date      : 2026-09-23
+Git head  : cb7e650 (project/r0-charts-scaffold)
+Toolchain : Miniconda CPython 3.13.9; Windows PowerShell 5.1; curl.exe; webfetch
+
+RESULT: AUTOMATED ACCESS TO THE OFFICIAL PDF FAILED (PUBLISHER AWS WAF CAPTCHA).
+        No PDF was obtained. No figure inspection was possible.
+
+Target URLs (from docs/R0_1B_SOURCE_RECOVERY_20260922.md and
+refs/charts2025/PROVENANCE.md):
+
+  Landing/summary:
+  https://www.ieice.org/publications/proceedings/summary.php?expandable=13&iconf=ISAP&number=1571143655&session_num=Pos1&year=2025
+
+  Direct publisher PDF:
+  https://www.ieice.org/publications/proceedings/bin/pdf_link.php?fname=1571143655.pdf&iconf=ISAP&lang=E&number=1571143655&vol=98&year=2025
+
+Attempts and results
+--------------------
+1) Invoke-WebRequest, no custom headers
+   -> HTTP 403 Forbidden (no body saved)
+
+2) Invoke-WebRequest with browser User-Agent + Referer + Accept: application/pdf
+   -> HTTP 403 Forbidden
+
+3) curl.exe -L with browser User-Agent + Referer (~Chrome/124)
+   -> HTTP 405, SIZE=2144
+   -> body is an AWS WAF "Human Verification" HTML page
+      (script src: ...token.awswaf.com/.../challenge.js and .../captcha.js;
+       CaptchaScript.renderCaptcha(...); <noscript> "solve a CAPTCHA puzzle")
+   -> saved to temp file (below)
+
+4) webfetch on landing/summary URL (format=markdown)
+   -> non-2xx (405)
+
+5) webfetch on direct PDF URL (format=text)
+   -> non-2xx (405)
+
+6) curl.exe on the landing/summary URL with browser UA and cookie jar
+   -> HTTP 405, SIZE=2144, same AWS WAF "Human Verification" challenge page
+
+Captured artifacts (local temp only; NOT committed)
+---------------------------------------------------
+temp dir : C:\Users\Administrator.DESKTOP-GBTI6Q4\AppData\Local\Temp\opencode\r0_1b2\
+file     : 1571143655.pdf   <- actually the 2144-byte WAF challenge HTML, not a PDF
+size     : 2144 bytes
+sha256   : 425048796B84A180E77696B8AF713DBC3EAABFB9E023C88F674E2BEE5E311E71
+file     : landing.html  (same challenge content, different WAF tokens)
+size     : 2144 bytes
+sha256   : A5D2C2F8D2F9B34EF018C1AEF82A8B08DB3C85B1223A462F93C30934E2C231A6
+
+Notes
+-----
+- The response is not the paper; it is a bot-mitigation challenge page. No
+  copyrighted publisher content was downloaded.
+- The challenge requires JavaScript execution plus a human CAPTCHA puzzle; it is
+  intentionally not bypassable by automated clients. H01 did not attempt to
+  defeat the CAPTCHA.
+- A prior local-machine search (R0.1B, evidence/r0_1b_h01_20260922_2253/) found no
+  local copy of the paper; no local copy exists now either.
+- DOI resolution still returns bibliographic metadata only (no full text link).
+
+Conclusion
+----------
+Primary source bytes are inaccessible to H01 through an automated, rule-compliant
+path. Figure-level center/feed extraction remains blocked.
+
+Final status: HOLD_R0_PRIMARY_SOURCE_ACCESS_FAILED.

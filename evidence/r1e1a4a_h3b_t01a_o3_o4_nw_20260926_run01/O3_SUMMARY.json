@@ -1,0 +1,179 @@
+{
+  "status": "PASS",
+  "preferred_gate": false,
+  "nominal": {
+    "build_sha256": "994fe6e597aeda51bfdf536ead2ec79affdcd5c5d2521d88dffe5f10e622e089",
+    "configured_sha256": "879550507eebeea71bdb4219cc9459c03a34698d12167a707391fc813c3de770",
+    "solved_sha256": "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
+    "formal_solver_invocations": 1,
+    "adaptive_delta_sequence": [
+      {
+        "pass": 2,
+        "delta_s": 0.016205210020768857,
+        "source": "api"
+      },
+      {
+        "pass": 3,
+        "delta_s": 0.03505886806501513,
+        "source": "api"
+      },
+      {
+        "pass": 4,
+        "delta_s": 0.03934263262632299,
+        "source": "api"
+      },
+      {
+        "pass": 5,
+        "delta_s": 0.041922118849295066,
+        "source": "api"
+      },
+      {
+        "pass": 6,
+        "delta_s": 0.03434616087951598,
+        "source": "api"
+      },
+      {
+        "pass": 7,
+        "delta_s": 0.031060488344089855,
+        "source": "api"
+      },
+      {
+        "pass": 8,
+        "delta_s": 0.029105380136037615,
+        "source": "api"
+      },
+      {
+        "pass": 9,
+        "delta_s": 0.02704940903500501,
+        "source": "api"
+      },
+      {
+        "pass": 10,
+        "delta_s": 0.024321616007519087,
+        "source": "api"
+      },
+      {
+        "pass": 11,
+        "delta_s": 0.019208817293375306,
+        "source": "api"
+      },
+      {
+        "pass": 12,
+        "delta_s": 0.014582954969815789,
+        "source": "api"
+      }
+    ],
+    "numerically_qualified": true,
+    "passes_executed": 12,
+    "final_two_delta_s": [
+      0.019208817293375306,
+      0.014582954969815789
+    ],
+    "metrics": {
+      "worst_core_return_db": -14.50728354080484,
+      "core_s21_min_db": -0.33484350609051866,
+      "core_s21_max_db": -0.13469059376966475,
+      "reciprocity_max_abs_db": 5.5114003117751054e-05,
+      "junction_excess_min_db": 0.009218326059481391,
+      "junction_excess_max_db": 0.06215459734903045,
+      "junction_excess_median_db": 0.028638205158501295
+    }
+  },
+  "straight_reference": {
+    "build_sha256": "ab1cc6fcf767523abefc159344f5bbd1126a80c810198b9a5ffa0560ccaa17da",
+    "configured_sha256": "8f978e7704007c5827246c4ec5cadab3839643e96887155191412b6f77769731",
+    "solved_sha256": "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
+    "formal_solver_invocations": 1,
+    "adaptive_delta_sequence": [
+      {
+        "pass": 2,
+        "delta_s": 0.03127667023178389,
+        "source": "api"
+      },
+      {
+        "pass": 3,
+        "delta_s": 0.04019545446808714,
+        "source": "api"
+      },
+      {
+        "pass": 4,
+        "delta_s": 0.036638952624553196,
+        "source": "api"
+      },
+      {
+        "pass": 5,
+        "delta_s": 0.03831156454879565,
+        "source": "api"
+      },
+      {
+        "pass": 6,
+        "delta_s": 0.02838321492271803,
+        "source": "api"
+      },
+      {
+        "pass": 7,
+        "delta_s": 0.03007866083421927,
+        "source": "api"
+      },
+      {
+        "pass": 8,
+        "delta_s": 0.028565444717600738,
+        "source": "api"
+      },
+      {
+        "pass": 9,
+        "delta_s": 0.027938515267941944,
+        "source": "api"
+      },
+      {
+        "pass": 10,
+        "delta_s": 0.022210386803962333,
+        "source": "api"
+      },
+      {
+        "pass": 11,
+        "delta_s": 0.017408730209904806,
+        "source": "api"
+      },
+      {
+        "pass": 12,
+        "delta_s": 0.01289551406473866,
+        "source": "api"
+      }
+    ],
+    "numerically_qualified": true,
+    "passes_executed": 12,
+    "final_two_delta_s": [
+      0.017408730209904806,
+      0.01289551406473866
+    ],
+    "metrics": {
+      "worst_core_return_db": -16.50181341457326,
+      "core_s21_min_db": -0.2726889087414882,
+      "core_s21_max_db": -0.12547226771018336,
+      "reciprocity_max_abs_db": 1.8498952697121318e-05
+    }
+  },
+  "materials": {
+    "source_head": "00bea9de782eb36c1d3f118866edd283808b6233",
+    "candidate": "P20_G30_E30",
+    "copper_sigma_s_per_m": 58000000.0,
+    "solder_proxy_sigma_s_per_m": 7000000.0,
+    "o3_acceptance": {
+      "acceptable_return_db": -12.0,
+      "preferred_return_db": -15.0,
+      "acceptable_excess_db": 0.15,
+      "preferred_excess_db": 0.1,
+      "s21_floor_db": -3.0,
+      "reciprocity_db": 0.05
+    },
+    "o4_cases": [
+      "FAB_LOWZ",
+      "FAB_HIGHZ",
+      "ALIGN_P020",
+      "ALIGN_M020",
+      "SOLDER_SMALL",
+      "SOLDER_LARGE"
+    ]
+  }
+}

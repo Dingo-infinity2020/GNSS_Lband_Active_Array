@@ -1,0 +1,48 @@
+{
+  "status": "PASS_R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY",
+  "recovery_type": "RESULT/AUDIT_ONLY_FROM_EXISTING_FORMAL_BUILD_ARTIFACT",
+  "formal_build_invocations_total": 1,
+  "solver_invocations_total": 0,
+  "artifact": {
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b0g_build_work\\R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_V01.cst",
+    "sha256": "6b027162dd93d8613a0943df0fd96d6bf65d6721893e49c8d8bdc17f8f5eb698"
+  },
+  "inventory": {
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\evidence\\r1e1a4a_ar0_b0g_nw_20260926_build01\\reopen_inventory.txt",
+    "shape_count": 23,
+    "component_counts": {
+      "UnitCellGround": 1,
+      "Substrate": 1,
+      "TopCopper": 1,
+      "B0_Stalk": 4,
+      "B0_MSL": 4,
+      "B0_BackGround": 4,
+      "B0_LNAEnvelope": 4,
+      "B0_SignalFeedthrough": 4
+    }
+  },
+  "solver_tree_matches": [],
+  "analytic_collision_records": [],
+  "z_separation": {
+    "ground_below_radiator": true,
+    "ground_vs_radiator_positive_gap_mm": 3.0,
+    "ground_vs_feedthrough_disjoint": true,
+    "feedthrough_spans_only_radiator_substrate": true
+  },
+  "checks": {
+    "artifact_exists": true,
+    "shape_count_23": true,
+    "component_counts_exact": true,
+    "all_volumes_positive": true,
+    "no_tool_shapes": true,
+    "port_count_zero": true,
+    "solver_result_tree_empty": true,
+    "analytic_cross_pol_collisions_zero": true,
+    "ground_setback_positive_3mm": true,
+    "ground_vs_feedthrough_disjoint": true,
+    "via_reserve_centers_inside_prong_fr4": true,
+    "msl_width_1p9mm": true,
+    "fork_slot_halfwidth_1p0mm": true
+  },
+  "original_exception": "unsupported CST 2022 Solid.DoTheseGeometricallyIntersect audit method; geometry artifact was already built and fresh-reopened"
+}

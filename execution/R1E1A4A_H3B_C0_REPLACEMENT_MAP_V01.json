@@ -1,0 +1,110 @@
+{
+  "schema_version": "0.1",
+  "parent_h3a_v02_sha256": "9e810560fc8fc759a88d4ac5fc39067863a1e078b6f01e6e343b004891201db5",
+  "t01a_freeze": "docs/R1E1A4A_H3B_T01A_FREEZE_V01.md",
+  "disposition": {
+    "keep_physical": [
+      "UnitCellGround",
+      "Substrate",
+      "TopCopper",
+      "H3A_Stalk",
+      "H3A_HubGround",
+      "H3A_Shield",
+      "H3A_MechLand",
+      "H3A_MechSolder"
+    ],
+    "keep_as_predicates_only": [
+      "H3A_LNAEnvelope",
+      "H3A_RouteEnvelope",
+      "H3A_ServiceEnvelope"
+    ],
+    "remove_and_replace": [
+      "H3A_RFTransition",
+      "H3A_RFSolder",
+      "H3A_StalkRF"
+    ]
+  },
+  "material_policy": {
+    "copper_sigma_s_per_m": 58000000,
+    "solder_proxy_sigma_s_per_m": 7000000,
+    "visual_surrogate_solids_in_formal_em": false
+  },
+  "integration_slice": {
+    "horizontal_handoff_distance_mm": 3,
+    "vertical_handoff_distance_mm": 3,
+    "rationale": "first frozen T01 via-fence station; avoids importing long coupon fixture"
+  },
+  "branches": [
+    {
+      "id": "X_POS_NE",
+      "center_mm": [
+        9.4,
+        0,
+        57.1428571428
+      ],
+      "vertical_face": "+Y",
+      "map": [
+        "x=9.4+xl",
+        "y=yl",
+        "z=z0+zl"
+      ],
+      "route_corridor": "ROUTE_ENV_NE"
+    },
+    {
+      "id": "X_NEG_SW",
+      "center_mm": [
+        -9.4,
+        0,
+        57.1428571428
+      ],
+      "vertical_face": "-Y",
+      "map": [
+        "x=-9.4+xl",
+        "y=-yl",
+        "z=z0+zl"
+      ],
+      "route_corridor": "ROUTE_ENV_SW"
+    },
+    {
+      "id": "Y_POS_NW",
+      "center_mm": [
+        0,
+        9.4,
+        57.1428571428
+      ],
+      "vertical_face": "-X",
+      "map": [
+        "x=-yl",
+        "y=9.4+xl",
+        "z=z0+zl"
+      ],
+      "route_corridor": "ROUTE_ENV_NW"
+    },
+    {
+      "id": "Y_NEG_SE",
+      "center_mm": [
+        0,
+        -9.4,
+        57.1428571428
+      ],
+      "vertical_face": "+X",
+      "map": [
+        "x=yl",
+        "y=-9.4+xl",
+        "z=z0+zl"
+      ],
+      "route_corridor": "ROUTE_ENV_SE"
+    }
+  ],
+  "c0_outputs": [
+    "H3A_MECH_ONLY_PHYSICALIZED",
+    "H3B_COMPLETE_PASSIVE_V1"
+  ],
+  "c0_forbidden": [
+    "RF ports",
+    "lumped loads",
+    "solver results",
+    "real LNA device",
+    "coupon FR4 board duplication"
+  ]
+}

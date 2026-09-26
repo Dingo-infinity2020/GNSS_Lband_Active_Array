@@ -1,0 +1,78 @@
+{
+  "status": "PASS_R1E1A4A_H3B_T01A_O2A_ACCEPTABLE",
+  "freeze_head": "81ec4ee4e204685d35b983304036f8bc7de51be6",
+  "formal_solver_invocations": 1,
+  "build_sha256": "290b8c1109706de6415ff342f2d83ce8aaca1162732ca69c60da79531d96521e",
+  "configured_sha256": "37704ea469221a19fc67a4898b30b307192ccca5c16339ce32ed615f5e362023",
+  "solved_sha256": "1fdf5475fda63bfd04627f4699925ee0e036442f4613bf73b5cfa9026769f207",
+  "reference_sha256": "2050bba69d0a21a2a295c378d0a36a5408ad80e7399ba7403025a94a5694a604",
+  "metrics": {
+    "worst_core_return_db": -13.50509553248417,
+    "core_s21_min_db": -0.35047055893486173,
+    "core_s21_max_db": -0.1200314920695761,
+    "reciprocity_max_abs_db": 0.00010995879446584755
+  },
+  "excess_loss": {
+    "junction_excess_min_db": 0.014970808457893212,
+    "junction_excess_max_db": 0.10253355641663622,
+    "junction_excess_median_db": 0.04651931288341704
+  },
+  "adaptive_delta_sequence": [
+    {
+      "pass": 2,
+      "delta_s": 0.022698757837099827
+    },
+    {
+      "pass": 3,
+      "delta_s": 0.03350358176306931
+    },
+    {
+      "pass": 4,
+      "delta_s": 0.040206078291463256
+    },
+    {
+      "pass": 5,
+      "delta_s": 0.04121729982257953
+    },
+    {
+      "pass": 6,
+      "delta_s": 0.035410382560366646
+    },
+    {
+      "pass": 7,
+      "delta_s": 0.0292464684399615
+    },
+    {
+      "pass": 8,
+      "delta_s": 0.02981669817759573
+    },
+    {
+      "pass": 9,
+      "delta_s": 0.027850729558818323
+    },
+    {
+      "pass": 10,
+      "delta_s": 0.0258109305555946
+    },
+    {
+      "pass": 11,
+      "delta_s": 0.02005199429130189
+    },
+    {
+      "pass": 12,
+      "delta_s": 0.015223756883173657
+    },
+    {
+      "pass": 13,
+      "delta_s": 0.011544180524711662
+    }
+  ],
+  "numerically_qualified": true,
+  "preferred_gate": false,
+  "acceptable_gate": true,
+  "passes_executed": 13,
+  "final_two_delta_s": [
+    0.015223756883173657,
+    0.011544180524711662
+  ]
+}

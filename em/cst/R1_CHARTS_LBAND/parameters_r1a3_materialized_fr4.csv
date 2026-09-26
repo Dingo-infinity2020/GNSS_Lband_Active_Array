@@ -1,0 +1,33 @@
+parameter,value,unit,provenance,status,note
+scale_factor,0.285714285714,,PROJECT_DERIVED,FROZEN,R1A1 frozen 400 MHz to 1.40 GHz scale
+board_span,70.714285714,mm,PROJECT_DERIVED,FROZEN,R1A1
+outer_slot_frame_span,65.0,mm,PROJECT_DERIVED,FROZEN,R1A1
+outer_slot_width,1.428571429,mm,PROJECT_DERIVED,FROZEN,R1A1
+outer_mid_bridge,5.142857143,mm,PROJECT_DERIVED,FROZEN,R1A1
+outer_slot_segment_length,26.892857143,mm,PROJECT_DERIVED,FROZEN,R1A1
+inner_slot_width,2.571428571,mm,PROJECT_DERIVED,FROZEN,R1A1
+inner_slot_length,20.857142857,mm,PROJECT_DERIVED,FROZEN,R1A1
+inner_center_clear_span,17.142857143,mm,PROJECT_DERIVED,FROZEN,R1A1
+height_ground,57.142857143,mm,PROJECT_DERIVED,FROZEN,R1A1
+unit_cell_pitch_nominal,94.0,mm,PROJECT_DESIGN_BASELINE,FROZEN_FOR_R1A3_BUILD_ONLY,ground reference footprint only
+substrate_material,FR4_COST_BASELINE,,PROJECT_DESIGN_BASELINE,FROZEN_FOR_R1A3_BUILD_ONLY,not final laminate choice
+fr4_er,4.2,,PROJECT_DESIGN_BASELINE,FROZEN_FOR_R1A3_BUILD_ONLY,generic low-cost nominal
+fr4_tand,0.018,,PROJECT_DESIGN_BASELINE,FROZEN_FOR_R1A3_BUILD_ONLY,generic low-cost nominal
+substrate_t,1.00,mm,PROJECT_DESIGN_BASELINE,FROZEN_FOR_R1A3_BUILD_ONLY,mechanical baseline
+copper_t,0.035,mm,PROJECT_DESIGN_BASELINE,FROZEN_FOR_R1A3_BUILD_ONLY,physical thickness; PEC used at build-only gate
+conductor_material,PEC,,PROJECT_TOOLING,FROZEN_FOR_R1A3_BUILD_ONLY,finite conductivity deferred until solver contract
+feed_gap_center_width,1.20,mm,PROJECT_DESIGN_BASELINE,FROZEN,R1A2 exact-rotation baseline
+feed_gap_outer_width,2.571428571,mm,PROJECT_DERIVED,FROZEN,matches inner_slot_width
+feed_gap_join_radius,8.571428571,mm,PROJECT_DERIVED,FROZEN,matches inner_slot_start_radius
+ring_gap_center_halfspan,32.5,mm,PROJECT_DERIVED,FROZEN_FOR_R1A3_BUILD_ONLY,matches outer slot frame centerline
+ring_gap_width,1.428571429,mm,PROJECT_DERIVED,FROZEN_FOR_R1A3_BUILD_ONLY,matches outer_slot_width
+ring_inner_edge,31.785714286,mm,PROJECT_DERIVED,FROZEN_FOR_R1A3_BUILD_ONLY,ring center halfspan minus half gap width
+terminal_r,3.00,mm,PROJECT_DESIGN_BASELINE,METADATA_ONLY_R1A3,R1A2 coordinate retained; no terminal solid
+terminal_len,2.00,mm,PROJECT_DESIGN_BASELINE,METADATA_ONLY_R1A3,R1A2 coordinate retained; no terminal solid
+terminal_w,1.60,mm,PROJECT_DESIGN_BASELINE,METADATA_ONLY_R1A3,R1A2 coordinate retained; no terminal solid
+mechanical_through_slots,12,count,PROJECT_DERIVED,FROZEN,8 outer plus 4 inner through substrate and copper
+center_cross_rule,one_master_plus_3x90deg,,PROJECT_DESIGN,FROZEN,exact rotational construction
+ring_gap_rule,one_master_plus_3x90deg,,PROJECT_DESIGN,FROZEN,exact rotational construction
+ports,NO,,PROJECT_GATE,FROZEN,no physical port in R1A3
+solver,NO,,PROJECT_GATE,FROZEN,no solver in R1A3
+human_cst_review,REQUIRED,,USER_GATE,FROZEN,canonical CST artifact must remain protected until user review

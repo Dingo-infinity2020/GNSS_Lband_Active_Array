@@ -1,0 +1,15 @@
+{
+  "macro": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\source\\cst\\R1A1_CHARTS_SCALED_APERTURE_BUILD_ONLY_V01.mcr",
+  "macro_sha256": "7382b6baa62f86c2e6b49fd6f74eeff6fd1187bd7dec41824309e9d55d2084ad",
+  "cst_project": "D:\\GNSS_Lband_Active_Array\\_r1a1_scaled_aperture_work_recovery\\R1A1_CHARTS_SCALED_APERTURE_BUILD_ONLY_V01.cst",
+  "cst_project_sha256": "fc039106312861674d13e92983688672e0fce05d77fbcec6712a075fc2343253",
+  "log": [
+    "DE_VERSION=This is CST DESIGN ENVIRONMENT 2022.5 Release from 2022-06-03 (change 981760)\r\nUsing install path: D:\\Program Files (x86)\\CST Studio Suite 2022\\\r\nUsing Qt 5.15.2 (compiled with 5.15.2)\r\n\r\n\r\n2022.5 Release from 2022-06-03 (change 981760)\r\nAccess is denied.\r\nAccess is denied.\r\n",
+    "MACRO_SHA256=7382b6baa62f86c2e6b49fd6f74eeff6fd1187bd7dec41824309e9d55d2084ad",
+    "NEW_MWS_OK",
+    "MACRO_BODY_LINES=227",
+    "SAVED=D:\\GNSS_Lband_Active_Array\\_r1a1_scaled_aperture_work_recovery\\R1A1_CHARTS_SCALED_APERTURE_BUILD_ONLY_V01.cst",
+    "EVIDENCE_OK",
+    "REOPEN_OK"
+  ]
+}

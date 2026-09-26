@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="960" viewBox="-140 -140 280 300">
+  <rect x="-123.75" y="-123.75" width="247.5" height="247.5" fill="#efefef" stroke="#222" stroke-width="1.2"/>
+  <g fill="#6d4a2f">
+    <!-- outer north -->
+    <rect x="-103.125" y="-116.25" width="94.125" height="5"/>
+    <rect x="9" y="-116.25" width="94.125" height="5"/>
+    <!-- outer south -->
+    <rect x="-103.125" y="111.25" width="94.125" height="5"/>
+    <rect x="9" y="111.25" width="94.125" height="5"/>
+    <!-- outer west -->
+    <rect x="-116.25" y="-103.125" width="5" height="94.125"/>
+    <rect x="-116.25" y="9" width="5" height="94.125"/>
+    <!-- outer east -->
+    <rect x="111.25" y="-103.125" width="5" height="94.125"/>
+    <rect x="111.25" y="9" width="5" height="94.125"/>
+    <!-- inner -->
+    <rect x="-4.5" y="-103" width="9" height="73"/>
+    <rect x="-4.5" y="30" width="9" height="73"/>
+    <rect x="-103" y="-4.5" width="73" height="9"/>
+    <rect x="30" y="-4.5" width="73" height="9"/>
+  </g>
+  <rect x="-30" y="-30" width="60" height="60" fill="none" stroke="#1976d2" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="-123" y="139" font-family="monospace" font-size="6">R0 V0.3 PHOTO-CONSTRAINED TOPOLOGY SCHEMATIC</text>
+  <text x="-123" y="148" font-family="monospace" font-size="5">12 disconnected slots; blue dashed 60 mm = visible center clear span estimate</text>
+  <text x="-123" y="156" font-family="monospace" font-size="5">NOT AN EM RESULT; 40 mm Fig.1 label remains semantics-unresolved</text>
+</svg>

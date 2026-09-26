@@ -1,0 +1,5 @@
+Set-Location "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold"; $env:PYTHONPATH="D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python_cst_libraries"; & "D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\python.exe" "scripts\qualify_r1e0c_existing_scanstate_artifacts.py" --repo "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold" --evidence "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold\evidence\r1e0c_dc_nw_20260924_recovery01" --work "D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01"
+
+MODE=READ_ONLY_EXISTING_ARTIFACT_QUALIFICATION
+CST_REBUILD=NO
+SOLVER_RUN=NO

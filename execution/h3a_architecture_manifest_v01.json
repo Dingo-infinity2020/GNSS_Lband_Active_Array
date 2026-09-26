@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "H3A_ORTHOGONAL_STALK_ASSEMBLY_V01",
+  "status": "ARCHITECTURE_FROZEN_NO_BUILD_NO_SOLVE",
+  "parent": {
+    "artifact": "R1E1A1_P094_PITCH_BUILD_ONLY_V01.cst",
+    "sha256": "fb4c6d39dafe7d9334c62528df3b7060f26b9501f6c7b1603157fcbd9bbaa32e",
+    "unit_cell_pitch_mm": 94.0,
+    "backplane_z_mm": [-0.5, 0.0],
+    "radiator_substrate_z_mm": [57.1428571428, 58.1428571428],
+    "top_copper_z_mm": [58.1428571428, 58.1778571428],
+    "board_span_mm": 70.7142857142
+  },
+  "stalks": {
+    "orientation": ["X", "Y"],
+    "substrate": "FR4_COST_BASELINE",
+    "thickness_mm": 1.0,
+    "copper_nominal_mm": 0.035,
+    "half_width_mm": 15.0,
+    "body_z_mm": [0.0, 57.1428571428],
+    "continuous_full_height_ground_plane": false
+  },
+  "electronics_cavity": {
+    "plan_clear_span_mm": 17.0,
+    "depth_mm": 7.0,
+    "notch_half_width_mm": 8.5,
+    "notch_bottom_z_mm": 50.1428571428,
+    "shield_envelope_max_mm": [16.0, 16.0, 5.5]
+  },
+  "cross_interlock": {
+    "slot_width_mm": 1.25,
+    "mid_z_mm": 25.0714285714,
+    "x_stalk_slot_z_mm": [0.0, 25.0714285714],
+    "y_stalk_slot_z_mm": [25.0714285714, 50.1428571428]
+  },
+  "top_tenons": {
+    "centers_mm": [-12.0, 12.0],
+    "length_mm": 3.0,
+    "thickness_mm": 1.0,
+    "insertion_height_mm": 1.0,
+    "radiator_slot_length_mm": 3.3,
+    "radiator_slot_width_mm": 1.25,
+    "solder_fillet_max_leg_mm": 0.6
+  },
+  "bottom_tenons": {
+    "centers_mm": [-12.0, 12.0],
+    "length_mm": 3.0,
+    "depth_mm": 0.5,
+    "backplane_slot_length_mm": 3.3,
+    "backplane_slot_width_mm": 1.25
+  },
+  "lna_envelopes": {
+    "architecture": "H3_L1_RADIATOR_BACKSIDE",
+    "count": 4,
+    "package_mm": [2.0, 2.0, 0.6],
+    "center_radius_mm": 6.2,
+    "real_active_device": false
+  },
+  "branch_mapping": {
+    "NE": "X_STALK_POSITIVE",
+    "SW": "X_STALK_NEGATIVE",
+    "NW": "Y_STALK_POSITIVE",
+    "SE": "Y_STALK_NEGATIVE"
+  },
+  "rf_transition": {
+    "centers_mm": [-9.4, 9.4],
+    "mechanical_and_rf_tabs_separate": true,
+    "topology": "POST_LNA_SIGNAL_PAD_PLUS_SYMMETRIC_GROUND_PADS_TO_STALK_GCPW_CLASS",
+    "impedance_qualified": false,
+    "route_envelope_width_mm": 3.0
+  },
+  "local_hub": {
+    "ground_shield_zone_max_mm": [20.0, 20.0],
+    "central_sensitive_clearance_min_mm": [8.0, 8.0],
+    "shield_side_egress_directions": ["+X", "-X", "+Y", "-Y"]
+  },
+  "service_interface": {
+    "connector_part_frozen": false,
+    "reserved_zone_per_branch_mm": [6.0, 8.0],
+    "recommended_center_z_mm": [8.0, 18.0],
+    "differential_to_single_ended_frozen": false
+  },
+  "intersection_gate": {
+    "required": true,
+    "simulationops_min_version": "0.2.5",
+    "expected_unresolved_intersections": 0,
+    "hold_code": "HOLD_H3A_GEOMETRY_INTERFERENCE"
+  },
+  "authorization": {
+    "build": false,
+    "solve": false,
+    "active_device": false
+  }
+}

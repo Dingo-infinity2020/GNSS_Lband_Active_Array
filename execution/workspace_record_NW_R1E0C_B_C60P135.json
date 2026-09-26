@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1E0C-B-C60P135-SCAN-SOLVE-NW",
+    "stage": "R1E0C_B_C60P135_SCAN_SOLVE",
+    "status": "PASS_R1E0C_B_C60P135_SCAN_SOLVE"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e0c_b_c60p135_scan_solve_work",
+    "state": "PROTECTED"
+  },
+  "source": {
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "branch": "project/r0-charts-scaffold",
+    "formal_source_commit": "b7768b99848da9053a52ac1b1a7cefe2fe782c59"
+  },
+  "result": {
+    "formal_invocation_count": 1,
+    "exit_code": 0,
+    "runtime_seconds": 115.29,
+    "solved_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0c_b_c60p135_scan_solve_work\\R1E0C_B_C60P135_SCAN_SMOKE_V01.cst",
+    "solved_cst_sha256": "8107aff4f656c5013e9d6cf422f7d258ee4e045affa0311b7273c2889918d16c",
+    "frozen_severe_mismatch_alert": false,
+    "canonical_r1e0c_status": "PASS_R1E0C_SCAN_QUALIFICATION"
+  },
+  "archive": {
+    "mode": "PROTECTED_IN_PLACE",
+    "critical_artifacts": [
+      "D:\\GNSS_Lband_Active_Array\\_r1e0c_b_c60p135_scan_solve_work\\R1E0C_B_C60P135_SCAN_SMOKE_V01.cst",
+      "evidence/r1e0c_b_c60p135_dc_nw_20260924_solve01/",
+      "evidence/r1e0c_closeout_20260924/"
+    ],
+    "completed": true,
+    "purge_allowed": false
+  },
+  "closeout": {
+    "task_node": "C60P135 PASS / R1E0C scan qualification CLOSED PASS",
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}

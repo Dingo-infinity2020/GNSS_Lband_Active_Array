@@ -1,0 +1,23 @@
+{
+  "cst": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work\\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst",
+  "cst_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+  "cst_bytes": 48527,
+  "macro_sha256": "1e5bb3188c5d19146b673ec54372d0c35ae572abc775512529f71db71cfad5be",
+  "shape_count": 3,
+  "checks": {
+    "ground": true,
+    "substrate": true,
+    "top_copper": true,
+    "no_tool_residue": true,
+    "fresh_reopen_same": true,
+    "pass": true
+  },
+  "tool_residue": [],
+  "log": [
+    "MACRO_SHA256=1e5bb3188c5d19146b673ec54372d0c35ae572abc775512529f71db71cfad5be",
+    "BUILD_SAVE_PASS",
+    "EVIDENCE_PASS",
+    "REOPEN_PASS"
+  ],
+  "manual_review_required": true
+}

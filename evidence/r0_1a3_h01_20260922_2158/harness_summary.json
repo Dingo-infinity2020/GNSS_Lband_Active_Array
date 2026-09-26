@@ -1,0 +1,13 @@
+{
+  "cst_project": "D:\\GNSS_Lband_Active_Array\\_r0_1a3_h01_work\\R0_1A3_12SLOT_BUILD_ONLY_H01.cst",
+  "cst_project_sha256": "8502c38da8eb66fe57d96c6a8dcecf449744618ca76e7b35044cd4e47581b491",
+  "macro": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\source\\cst\\R0_CHARTS_12SLOT_BUILD_ONLY_V03.mcr",
+  "macro_sha256": "08943e4208e3d852f38d154fb082bbc7fb734581a0ef4788c20a50e8f69d9e6d",
+  "screenshots": {
+    "top_view_full.png": "22b09b2cc1cd852f667a84de505a884799748eac73fbb6cbe600741557fcf48c",
+    "top_view_plate.png": "2cafeda201889f2ef819d4b61edad0969a3fe56b23724b1a8b2371404353ab3b",
+    "side_view_ground_gap.png": "8b14fde9d60b32755b123f8a6fd3a4ed36391a2ef70ee98c14d1e47d8bd8c1bc",
+    "oblique_view.png": "1d0dc87ad5c94460a5cfa224fbd8a0f8c60987ede83c3553697c4ed7c1418257",
+    "view_after_reopen.png": "9f35ed31daf0e8617cd9f28842d2f5f8141b8fc507040d9eddccdc69e704d7fb"
+  }
+}

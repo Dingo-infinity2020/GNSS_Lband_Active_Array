@@ -1,0 +1,6 @@
+Set-Location "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold"; & "D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\python.exe" "scripts\run_r1e0c_scan_solve_dc.py" --repo "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold" --evidence "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold\evidence\r1e0c_b_c45p45_dc_nw_20260924_solve01" --work "D:\GNSS_Lband_Active_Array\_r1e0c_b_c45p45_scan_solve_work" --source-cst "D:\GNSS_Lband_Active_Array\_r1e0c_scanstate_build_only_recovery01\R1E0C_C45P45_SCANSTATE_BUILD_ONLY_V01.cst" --state C45P45
+
+FORMAL_INVOCATION_COUNT=1
+EXIT_CODE=0
+RUNTIME_SECONDS=114.18
+SILENT_RETRY=NO
