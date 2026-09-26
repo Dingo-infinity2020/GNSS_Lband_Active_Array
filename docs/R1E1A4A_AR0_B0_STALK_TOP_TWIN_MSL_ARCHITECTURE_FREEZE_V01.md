@@ -86,10 +86,12 @@ Purpose:
 
 Nominal first-cut feed-head envelope:
 - outer half-width: 5.0 mm (10.0-mm total width);
-- central slot half-width: 0.75 mm (1.50-mm clear slot);
+- central slot half-width: 1.00 mm (2.00-mm clear slot);
 - feed-head depth: v = 0 to 12.0 mm.
 
-Thus each prong is wide enough to carry the terminal at u=+-3 mm, a nominal 1.9-mm MSL, and an LNA package zone.
+Static pre-build orthogonal-prong analysis showed that the earlier +/-0.75-mm slot caused a positive-area A+/B- collision for a 1.0-mm one-sided stalk thickness. The nominal slot is therefore corrected to +/-1.00 mm before any CST build is consumed.
+
+Thus each prong remains wide enough to carry the terminal at u=+-3 mm, a nominal 1.9-mm MSL, and an LNA package zone.
 
 Below v = 12 mm the board may widen into the electronics/support body. The exact lower-body/interlock geometry is NOT frozen by B0 and must not force a change to the feed head.
 
