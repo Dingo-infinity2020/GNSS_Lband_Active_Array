@@ -1,0 +1,15 @@
+{
+  "candidate": "W15_G20",
+  "Wsig_mm": 1.5,
+  "Gcpw_mm": 0.2,
+  "build_sha256": "0998ee0bc51d60de82a01b9e3bbeb68a7e702b921a951adca94e82234d10c225",
+  "checks": {
+    "shape_count_21": true,
+    "positive_volumes": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "hash_stable": true
+  }
+}

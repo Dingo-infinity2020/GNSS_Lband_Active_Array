@@ -6,8 +6,8 @@
     "source_commit": "20f2cd705ad647115640e4321fabafa5892d70d5"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": true,
-    "SOLVE_AUTHORIZED": true,
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
@@ -23,7 +23,7 @@
     "pass12_delta_s": 0.01570656517587774,
     "max_delta_s_required": 0.02,
     "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
-    "next_stage": "H3B_T01A_O1_LINE_CROSS_SECTION_FREEZE",
+    "next_stage": "H3B_T01A_O2_JUNCTION_OPTIMIZATION_FREEZE",
     "stop_boundary": "AWAIT NEXT-STAGE AUTHORIZATION; NO BUILD NO SOLVE",
     "master_plan": "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
     "simulationops_min": "0.2.7",
@@ -65,10 +65,338 @@
     "o1_fixed_variables": "O0 geometry/material/RP/via/ports/boundary; ground rail 2.2 mm; backing ground 8 mm",
     "o1_screening_fidelity": "second-order tetrahedral; exactly 4 adaptive passes; PEC/FR4; 1-2 GHz",
     "o1_qualification_fidelity": "O0 high-fidelity: second-order tetrahedral; MaxDeltaS 0.02; 2 checks; MaxPasses 16",
-    "o1_winner_rule": "screen top3 by lowest worst-core S11/S22 dB; tie by S21 then larger gap; final winner among numerically qualified candidates must meet >=12 dB worst-core return loss; prefer >=15 dB"
+    "o1_winner_rule": "screen top3 by lowest worst-core S11/S22 dB; tie by S21 then larger gap; final winner among numerically qualified candidates must meet >=12 dB worst-core return loss; prefer >=15 dB",
+    "o1_status": "PASS_R1E1A4A_H3B_T01A_O1_LINE_CROSS_SECTION",
+    "o1_screening_rank": [
+      {
+        "candidate": "W15_G40",
+        "Wsig_mm": 1.5,
+        "Gcpw_mm": 0.4,
+        "worst_core_return_db": -19.320911199651118,
+        "core_s21_min_db": -0.18431461077257766,
+        "core_s21_max_db": -0.10704860829176308,
+        "reciprocity_max_abs_db": 2.5211461834262483e-05,
+        "solved_sha256": "ab44823f5afd52a174dc3867372756f0cbdfec4824b20fe998f318ee2f057b2b",
+        "formal_solver_invocations": 1
+      },
+      {
+        "candidate": "W15_G30",
+        "Wsig_mm": 1.5,
+        "Gcpw_mm": 0.3,
+        "worst_core_return_db": -15.601718927170182,
+        "core_s21_min_db": -0.2533286910881972,
+        "core_s21_max_db": -0.14300217462777987,
+        "reciprocity_max_abs_db": 2.6623476555659442e-05,
+        "solved_sha256": "778b2ffea999b836d0ddfcb10f21a43f58ba31e776636f7817e745c728910744",
+        "formal_solver_invocations": 1
+      },
+      {
+        "candidate": "W18_G40",
+        "Wsig_mm": 1.8,
+        "Gcpw_mm": 0.4,
+        "worst_core_return_db": -14.284530144547048,
+        "core_s21_min_db": -0.30189700853123896,
+        "core_s21_max_db": -0.17834121993368057,
+        "reciprocity_max_abs_db": 3.926396830983281e-05,
+        "solved_sha256": "b7adccbf1c08e316e6f2e300e8e67d6961b8f11df851eb0c747877cf40454f78",
+        "formal_solver_invocations": 1
+      },
+      {
+        "candidate": "W18_G30",
+        "Wsig_mm": 1.8,
+        "Gcpw_mm": 0.3,
+        "worst_core_return_db": -12.213861424104273,
+        "core_s21_min_db": -0.405691065975523,
+        "core_s21_max_db": -0.2407059410220745,
+        "reciprocity_max_abs_db": 6.713394172130904e-06,
+        "solved_sha256": "24c750bc87bc4329abe844eb6431e79542e42edf62537772326cbb4df5507384",
+        "formal_solver_invocations": 1
+      },
+      {
+        "candidate": "W15_G20",
+        "Wsig_mm": 1.5,
+        "Gcpw_mm": 0.2,
+        "worst_core_return_db": -12.006639019642462,
+        "core_s21_min_db": -0.41458968539410135,
+        "core_s21_max_db": -0.2404593989731507,
+        "reciprocity_max_abs_db": 4.141990634665138e-05,
+        "solved_sha256": "4598ef29f5106aeb033d2e9c2f76fbde574872e7dbac6809f0ed523ec3d78191",
+        "formal_solver_invocations": 1
+      },
+      {
+        "candidate": "W21_G40",
+        "Wsig_mm": 2.1,
+        "Gcpw_mm": 0.4,
+        "worst_core_return_db": -11.25601137430661,
+        "core_s21_min_db": -0.4794166962970181,
+        "core_s21_max_db": -0.29842964095074703,
+        "reciprocity_max_abs_db": 1.9611666264740535e-05,
+        "solved_sha256": "eff1449ddcf3974d9a23adac33bcd196334ef09c05de513e4de8fa18173e3b79",
+        "formal_solver_invocations": 1
+      },
+      {
+        "candidate": "W21_G30",
+        "Wsig_mm": 2.1,
+        "Gcpw_mm": 0.3,
+        "worst_core_return_db": -9.966359355071933,
+        "core_s21_min_db": -0.6025288722461064,
+        "core_s21_max_db": -0.3820552136164757,
+        "reciprocity_max_abs_db": 4.41463783901197e-06,
+        "solved_sha256": "b506922425c30879e5994ca3d84e3422fd7d93ef7b58c7177a848c5b6a221384",
+        "formal_solver_invocations": 1
+      },
+      {
+        "candidate": "W18_G20",
+        "Wsig_mm": 1.8,
+        "Gcpw_mm": 0.2,
+        "worst_core_return_db": -9.809537931647391,
+        "core_s21_min_db": -0.6163190611250207,
+        "core_s21_max_db": -0.38122980110303323,
+        "reciprocity_max_abs_db": 9.47056923161771e-06,
+        "solved_sha256": "047d0f479ee1676e513f8488a2b9990d186f37cd4c0683678c060d0cae66d980",
+        "formal_solver_invocations": 1
+      },
+      {
+        "candidate": "W21_G20",
+        "Wsig_mm": 2.1,
+        "Gcpw_mm": 0.2,
+        "worst_core_return_db": -8.270332582356005,
+        "core_s21_min_db": -0.8425973522600315,
+        "core_s21_max_db": -0.5479937556151631,
+        "reciprocity_max_abs_db": 1.4354815665917897e-05,
+        "solved_sha256": "a9dce89602112eaeb26b6d050aa819b2d4fc24ac89cde420427d687a0ceed9bb",
+        "formal_solver_invocations": 1
+      }
+    ],
+    "o1_finalists": [
+      "W15_G40",
+      "W15_G30",
+      "W18_G40"
+    ],
+    "o1_qualification": [
+      {
+        "source_build_sha256": "85a27c3e4297bde65184ddda361208796efe789a030a8cfb0f310d122ac8e93c",
+        "configured_sha256": "a1972cb6bfe905c7f31c11b56553ca5c77d6967b54986939b0351cab9b88bba0",
+        "solved_sha256": "2050bba69d0a21a2a295c378d0a36a5408ad80e7399ba7403025a94a5694a604",
+        "metrics": {
+          "worst_core_return_db": -16.433750398716352,
+          "core_s21_min_db": -0.2479370025182255,
+          "core_s21_max_db": -0.10506068361168289,
+          "reciprocity_max_abs_db": 9.257737610013361e-06
+        },
+        "adaptive_delta_sequence": [
+          {
+            "pass": 2,
+            "delta_s": 0.03157837291491783
+          },
+          {
+            "pass": 3,
+            "delta_s": 0.04035279157463643
+          },
+          {
+            "pass": 4,
+            "delta_s": 0.035577170726500414
+          },
+          {
+            "pass": 5,
+            "delta_s": 0.04134804551564278
+          },
+          {
+            "pass": 6,
+            "delta_s": 0.029151587011829218
+          },
+          {
+            "pass": 7,
+            "delta_s": 0.029454521854578614
+          },
+          {
+            "pass": 8,
+            "delta_s": 0.029047895209332212
+          },
+          {
+            "pass": 9,
+            "delta_s": 0.02628777114429206
+          },
+          {
+            "pass": 10,
+            "delta_s": 0.02187113381773995
+          },
+          {
+            "pass": 11,
+            "delta_s": 0.017124265265065313
+          },
+          {
+            "pass": 12,
+            "delta_s": 0.01269419017440889
+          }
+        ],
+        "formal_solver_invocations": 1,
+        "numerically_qualified": true,
+        "final_two_delta_s": [
+          0.017124265265065313,
+          0.01269419017440889
+        ],
+        "passes_executed": 12,
+        "rf_acceptance_pass": true,
+        "candidate": "W15_G40",
+        "Wsig_mm": 1.5,
+        "Gcpw_mm": 0.4,
+        "screen_rank": 1,
+        "qualified_pass": true
+      },
+      {
+        "source_build_sha256": "a931f488b0420945a6189083b56388ac87b4a547630e6ac35d30bc14ca9d4d83",
+        "configured_sha256": "470b4e446590c5058e7cb4a670618e7301b5a89c2bde4cb7cc6095233feca096",
+        "solved_sha256": "6cbb5417441eb6211e972f8400b9a8eb5211263ec43305c1f4cf079f537beb0d",
+        "metrics": {
+          "worst_core_return_db": -13.79095768204346,
+          "core_s21_min_db": -0.332698626744911,
+          "core_s21_max_db": -0.12295140897093285,
+          "reciprocity_max_abs_db": 3.0893890065886165e-05
+        },
+        "adaptive_delta_sequence": [
+          {
+            "pass": 2,
+            "delta_s": 0.03154878187654339
+          },
+          {
+            "pass": 3,
+            "delta_s": 0.03794177039113156
+          },
+          {
+            "pass": 4,
+            "delta_s": 0.03288440719760439
+          },
+          {
+            "pass": 5,
+            "delta_s": 0.039764764679411105
+          },
+          {
+            "pass": 6,
+            "delta_s": 0.03244322658362452
+          },
+          {
+            "pass": 7,
+            "delta_s": 0.026526626119165057
+          },
+          {
+            "pass": 8,
+            "delta_s": 0.028407234620125985
+          },
+          {
+            "pass": 9,
+            "delta_s": 0.02886671987737621
+          },
+          {
+            "pass": 10,
+            "delta_s": 0.025574256449368466
+          },
+          {
+            "pass": 11,
+            "delta_s": 0.018643412900135128
+          },
+          {
+            "pass": 12,
+            "delta_s": 0.014882790885144442
+          }
+        ],
+        "formal_solver_invocations": 1,
+        "numerically_qualified": true,
+        "final_two_delta_s": [
+          0.018643412900135128,
+          0.014882790885144442
+        ],
+        "passes_executed": 12,
+        "rf_acceptance_pass": true,
+        "candidate": "W15_G30",
+        "Wsig_mm": 1.5,
+        "Gcpw_mm": 0.3,
+        "screen_rank": 2,
+        "qualified_pass": true
+      },
+      {
+        "source_build_sha256": "260ad665d48509d4a7ff5780667bb6f1af44e67da4c214556c54f139470074a4",
+        "configured_sha256": "fc3f7f02d2bb50093ac015ec34054be703cddcf9a0c6a06a86d7538a7aca1623",
+        "solved_sha256": "f5a709e7316aa7f92a6fc19f0bcb3c9ab1371b128f3fb35f1575a7d04127b4be",
+        "metrics": {
+          "worst_core_return_db": -12.347029070927624,
+          "core_s21_min_db": -0.41293267770814324,
+          "core_s21_max_db": -0.15481678379244934,
+          "reciprocity_max_abs_db": 1.6637838954003392e-05
+        },
+        "adaptive_delta_sequence": [
+          {
+            "pass": 2,
+            "delta_s": 0.03917329508140613
+          },
+          {
+            "pass": 3,
+            "delta_s": 0.03790851654531966
+          },
+          {
+            "pass": 4,
+            "delta_s": 0.04027220620582467
+          },
+          {
+            "pass": 5,
+            "delta_s": 0.0403343367071815
+          },
+          {
+            "pass": 6,
+            "delta_s": 0.0334725353017251
+          },
+          {
+            "pass": 7,
+            "delta_s": 0.027313608364600627
+          },
+          {
+            "pass": 8,
+            "delta_s": 0.029153397909028295
+          },
+          {
+            "pass": 9,
+            "delta_s": 0.027702946693936404
+          },
+          {
+            "pass": 10,
+            "delta_s": 0.027214567695227364
+          },
+          {
+            "pass": 11,
+            "delta_s": 0.019572286780481632
+          },
+          {
+            "pass": 12,
+            "delta_s": 0.014902469603766483
+          }
+        ],
+        "formal_solver_invocations": 1,
+        "numerically_qualified": true,
+        "final_two_delta_s": [
+          0.019572286780481632,
+          0.014902469603766483
+        ],
+        "passes_executed": 12,
+        "rf_acceptance_pass": true,
+        "candidate": "W18_G40",
+        "Wsig_mm": 1.8,
+        "Gcpw_mm": 0.4,
+        "screen_rank": 3,
+        "qualified_pass": true
+      }
+    ],
+    "o1_winner": {
+      "candidate": "W15_G40",
+      "Wsig_mm": 1.5,
+      "Gcpw_mm": 0.4,
+      "worst_core_return_db": -16.433750398716352,
+      "core_s21_min_db": -0.2479370025182255,
+      "preferred_15db_met": true,
+      "solved_sha256": "2050bba69d0a21a2a295c378d0a36a5408ad80e7399ba7403025a94a5694a604"
+    }
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_T01A_O1_EXECUTING",
+    "current_stage": "R1E1A4A_H3B_T01A_O2_JUNCTION_OPTIMIZATION_FREEZE_AWAIT_AUTH",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true,

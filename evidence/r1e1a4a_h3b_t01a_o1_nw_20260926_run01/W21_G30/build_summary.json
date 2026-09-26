@@ -1,0 +1,15 @@
+{
+  "candidate": "W21_G30",
+  "Wsig_mm": 2.1,
+  "Gcpw_mm": 0.3,
+  "build_sha256": "96962d5482c2fd42f5517d30d288f9a7b5db5c5b6d0c231bf86a628cfeef9ca7",
+  "checks": {
+    "shape_count_21": true,
+    "positive_volumes": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "hash_stable": true
+  }
+}
