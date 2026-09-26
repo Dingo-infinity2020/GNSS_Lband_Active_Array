@@ -29,9 +29,10 @@
   },
   "feed_head": {
     "half_width_mm": 5,
-    "central_slot_half_width_mm": 0.75,
+    "central_slot_half_width_mm": 1,
     "depth_mm": 12,
-    "ground_setback_mm": 3
+    "ground_setback_mm": 3,
+    "prebuild_static_collision_check": "PASS_AT_SLOT_HALF_WIDTH_1P0MM; FAIL_AT_0P75MM"
   },
   "msl": {
     "count_per_polarization": 2,
