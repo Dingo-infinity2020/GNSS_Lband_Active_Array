@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1M-20260926",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "d2bd94282257e60c036a4bbca24ed3f00eb9a4a7",
+    "model_identity": "AR0_B1M_FULL_MECHANICAL_STALK"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1M_FULL_MECHANICAL_STALK_BUILD_ONLY",
+    "target_control_host": "NW",
+    "entrypoint": "scripts/run_r1e1a4a_ar0_b1m_build_only.py",
+    "args": [],
+    "stop_boundary": "build-only + human 3D review; no solve"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": false
+  },
+  "preflight": {
+    "requirements": [
+      "SimulationOps 0.2.8",
+      "B0G artifact SHA256 exact",
+      "B1M freeze V0.1 unchanged",
+      "B0G feed-head remains untouched"
+    ],
+    "fail_closed": true
+  },
+  "outputs": {
+    "expected": [
+      "B1M CST artifact",
+      "fresh-reopen inventory",
+      "mechanical audit",
+      "human 3D review guide",
+      "workspace record"
+    ],
+    "result_packet_path": "execution/result_packets/R1E1A4A_AR0_B1M_result.json"
+  },
+  "dc_call_budget": {
+    "target_calls": 2,
+    "polling_policy": "single build transaction then task-node inspection"
+  },
+  "execution": {
+    "silent_retry_allowed": false,
+    "dry_run": false,
+    "ticket_id": "GNSS-AR0-B1M-20260926",
+    "lock_path": "execution/locks/GNSS-AR0-B1M-20260926.lock"
+  }
+}
