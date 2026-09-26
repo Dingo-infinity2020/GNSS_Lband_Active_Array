@@ -9,6 +9,21 @@ SimulationOps minimum: 0.2.8
 The post-O2B route is frozen by `docs/R1E1A4A_POST_O2B_ROUTE_FREEZE_V02.md`.
 O2C nominal tuning is DEFERRED_CONTINGENCY_ONLY. The active mainline is O3 physical-fidelity verification → minimal O4 manufacturing sentinels → T01-A FREEZE → H3B Complete Passive Unit / H3B-I01 → LNA-on-stalk A0 → realistic periodic array → R1E2 active-impedance atlas → A1 final co-design → finite active array.
 
+## 0A. H3B Complete Passive Unit amendment — authoritative
+
+After T01-A freeze, H3B follows `docs/R1E1A4A_H3B_COMPLETE_PASSIVE_ROUTE_FREEZE_V01.md`.
+
+Frozen route:
+H3B-C0 build-only A/B sources → human 3D review → H3B-I01 six-state A/B passive pilot → Passive Unit V1 freeze → LNA-on-stalk A0.
+
+Key integration rules:
+- H3A visual-surrogate LNA/route/service solids are keepout predicates only and are excluded from formal EM.
+- schematic H3A RFTransition/RFSolder/StalkRF placeholders are removed.
+- four local T01-A integration slices use quadrant-specific stalk faces and 3-mm handoff planes.
+- coupon long fixture lines/FR4 boards are not copied into the product model.
+- ordinary microstrip remains the intended A0 product-mainline direction; local T01-A GCPW is not promoted into the whole post-LNA route.
+- H3B does not optimize antenna-to-LNA matching.
+
 ## 1. Current proven state
 
 H3A V0.2 mechanics are accepted. H3B-T01A GCPW 90-degree transition BUILD is accepted, and its maxpass16 numerical recovery converged at adaptive pass 12.
@@ -184,6 +199,11 @@ Every final winner requires fresh-run qualification and no-silent-retry semantic
 
 ## 15. Immediate next execution node
 
-H3B_T01A_O3_PHYSICAL_FIDELITY_QUALIFICATION
+R1E1A4A_H3B_C0_COMPLETE_PASSIVE_BUILD_ONLY_AWAIT_AUTH
 
-O3 and O4 BUILD+SOLVE are authorized by the user under the post-O2B route freeze. O2C is contingency-only.
+Authority:
+- docs/R1E1A4A_H3B_COMPLETE_PASSIVE_ROUTE_FREEZE_V01.md
+- docs/R1E1A4A_H3B_C0_BUILD_ONLY_PLAN_V01.md
+- execution/R1E1A4A_H3B_C0_REPLACEMENT_MAP_V01.json
+
+No BUILD or SOLVE authorization is currently open.
