@@ -3,7 +3,7 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "f0ce856ea11d2ad3210c8bf59bab0cf59a535595"
+    "source_commit": "b201d47277a61d90768e23882cc17b44b9499c2a"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
@@ -23,8 +23,8 @@
     "pass12_delta_s": 0.01570656517587774,
     "max_delta_s_required": 0.02,
     "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
-    "next_stage": "H3B_C0_REVIEW",
-    "stop_boundary": "C0 HOLD; REVIEW EVIDENCE; NO SOLVE",
+    "next_stage": "AR0_B0G_FEED_HEAD_BUILD_ONLY",
+    "stop_boundary": "AWAIT AR0-B0G BUILD AUTHORIZATION; NO BUILD NO SOLVE",
     "master_plan": "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
     "simulationops_min": "0.2.8",
     "t01c_status": "DEFERRED_NOT_AUTHORIZED",
@@ -40,7 +40,7 @@
       "ref_s11_worst_db": -10.760769459285482,
       "ref_s21_min_db": -0.532985581425309,
       "ref_s21_max_db": -0.20359691665687338,
-      "reciprocity_max_abs_db": 8.831597447689354e-06,
+      "reciprocity_max_abs_db": 0.000008831597447689354,
       "junction_excess_min_db": 0.03648635564110472,
       "junction_excess_max_db": 0.10564100095048445,
       "junction_excess_median_db": 0.06602490595984728,
@@ -75,7 +75,7 @@
         "worst_core_return_db": -19.320911199651118,
         "core_s21_min_db": -0.18431461077257766,
         "core_s21_max_db": -0.10704860829176308,
-        "reciprocity_max_abs_db": 2.5211461834262483e-05,
+        "reciprocity_max_abs_db": 0.000025211461834262483,
         "solved_sha256": "ab44823f5afd52a174dc3867372756f0cbdfec4824b20fe998f318ee2f057b2b",
         "formal_solver_invocations": 1
       },
@@ -86,7 +86,7 @@
         "worst_core_return_db": -15.601718927170182,
         "core_s21_min_db": -0.2533286910881972,
         "core_s21_max_db": -0.14300217462777987,
-        "reciprocity_max_abs_db": 2.6623476555659442e-05,
+        "reciprocity_max_abs_db": 0.000026623476555659442,
         "solved_sha256": "778b2ffea999b836d0ddfcb10f21a43f58ba31e776636f7817e745c728910744",
         "formal_solver_invocations": 1
       },
@@ -97,7 +97,7 @@
         "worst_core_return_db": -14.284530144547048,
         "core_s21_min_db": -0.30189700853123896,
         "core_s21_max_db": -0.17834121993368057,
-        "reciprocity_max_abs_db": 3.926396830983281e-05,
+        "reciprocity_max_abs_db": 0.00003926396830983281,
         "solved_sha256": "b7adccbf1c08e316e6f2e300e8e67d6961b8f11df851eb0c747877cf40454f78",
         "formal_solver_invocations": 1
       },
@@ -108,7 +108,7 @@
         "worst_core_return_db": -12.213861424104273,
         "core_s21_min_db": -0.405691065975523,
         "core_s21_max_db": -0.2407059410220745,
-        "reciprocity_max_abs_db": 6.713394172130904e-06,
+        "reciprocity_max_abs_db": 0.000006713394172130904,
         "solved_sha256": "24c750bc87bc4329abe844eb6431e79542e42edf62537772326cbb4df5507384",
         "formal_solver_invocations": 1
       },
@@ -119,7 +119,7 @@
         "worst_core_return_db": -12.006639019642462,
         "core_s21_min_db": -0.41458968539410135,
         "core_s21_max_db": -0.2404593989731507,
-        "reciprocity_max_abs_db": 4.141990634665138e-05,
+        "reciprocity_max_abs_db": 0.00004141990634665138,
         "solved_sha256": "4598ef29f5106aeb033d2e9c2f76fbde574872e7dbac6809f0ed523ec3d78191",
         "formal_solver_invocations": 1
       },
@@ -130,7 +130,7 @@
         "worst_core_return_db": -11.25601137430661,
         "core_s21_min_db": -0.4794166962970181,
         "core_s21_max_db": -0.29842964095074703,
-        "reciprocity_max_abs_db": 1.9611666264740535e-05,
+        "reciprocity_max_abs_db": 0.000019611666264740535,
         "solved_sha256": "eff1449ddcf3974d9a23adac33bcd196334ef09c05de513e4de8fa18173e3b79",
         "formal_solver_invocations": 1
       },
@@ -141,7 +141,7 @@
         "worst_core_return_db": -9.966359355071933,
         "core_s21_min_db": -0.6025288722461064,
         "core_s21_max_db": -0.3820552136164757,
-        "reciprocity_max_abs_db": 4.41463783901197e-06,
+        "reciprocity_max_abs_db": 0.00000441463783901197,
         "solved_sha256": "b506922425c30879e5994ca3d84e3422fd7d93ef7b58c7177a848c5b6a221384",
         "formal_solver_invocations": 1
       },
@@ -152,7 +152,7 @@
         "worst_core_return_db": -9.809537931647391,
         "core_s21_min_db": -0.6163190611250207,
         "core_s21_max_db": -0.38122980110303323,
-        "reciprocity_max_abs_db": 9.47056923161771e-06,
+        "reciprocity_max_abs_db": 0.00000947056923161771,
         "solved_sha256": "047d0f479ee1676e513f8488a2b9990d186f37cd4c0683678c060d0cae66d980",
         "formal_solver_invocations": 1
       },
@@ -163,7 +163,7 @@
         "worst_core_return_db": -8.270332582356005,
         "core_s21_min_db": -0.8425973522600315,
         "core_s21_max_db": -0.5479937556151631,
-        "reciprocity_max_abs_db": 1.4354815665917897e-05,
+        "reciprocity_max_abs_db": 0.000014354815665917897,
         "solved_sha256": "a9dce89602112eaeb26b6d050aa819b2d4fc24ac89cde420427d687a0ceed9bb",
         "formal_solver_invocations": 1
       }
@@ -182,7 +182,7 @@
           "worst_core_return_db": -16.433750398716352,
           "core_s21_min_db": -0.2479370025182255,
           "core_s21_max_db": -0.10506068361168289,
-          "reciprocity_max_abs_db": 9.257737610013361e-06
+          "reciprocity_max_abs_db": 0.000009257737610013361
         },
         "adaptive_delta_sequence": [
           {
@@ -252,7 +252,7 @@
           "worst_core_return_db": -13.79095768204346,
           "core_s21_min_db": -0.332698626744911,
           "core_s21_max_db": -0.12295140897093285,
-          "reciprocity_max_abs_db": 3.0893890065886165e-05
+          "reciprocity_max_abs_db": 0.000030893890065886165
         },
         "adaptive_delta_sequence": [
           {
@@ -322,7 +322,7 @@
           "worst_core_return_db": -12.347029070927624,
           "core_s21_min_db": -0.41293267770814324,
           "core_s21_max_db": -0.15481678379244934,
-          "reciprocity_max_abs_db": 1.6637838954003392e-05
+          "reciprocity_max_abs_db": 0.000016637838954003392
         },
         "adaptive_delta_sequence": [
           {
@@ -467,7 +467,7 @@
         "worst_core_return_db": -16.867960323517977,
         "core_s21_min_db": -0.22411983108702221,
         "core_s21_max_db": -0.12279665069166326,
-        "reciprocity_max_abs_db": 1.781769247477527e-05,
+        "reciprocity_max_abs_db": 0.00001781769247477527,
         "junction_excess_min_db": -0.023817171431203293,
         "junction_excess_max_db": 0.01994154269347731,
         "junction_excess_median_db": 0.015653486374989284,
@@ -482,7 +482,7 @@
         "worst_core_return_db": -16.674587281541143,
         "core_s21_min_db": -0.2287508144836684,
         "core_s21_max_db": -0.12584361521210047,
-        "reciprocity_max_abs_db": 2.5553295699975997e-06,
+        "reciprocity_max_abs_db": 0.0000025553295699975997,
         "junction_excess_min_db": -0.0191861880345571,
         "junction_excess_max_db": 0.02348544832015348,
         "junction_excess_median_db": 0.019676876877693622,
@@ -497,7 +497,7 @@
         "worst_core_return_db": -15.914549905866458,
         "core_s21_min_db": -0.24757907718285627,
         "core_s21_max_db": -0.13353606475214824,
-        "reciprocity_max_abs_db": 2.93735970587905e-05,
+        "reciprocity_max_abs_db": 0.0000293735970587905,
         "junction_excess_min_db": -0.0003579253353692413,
         "junction_excess_max_db": 0.03386820016581582,
         "junction_excess_median_db": 0.030276784577331017,
@@ -512,7 +512,7 @@
         "worst_core_return_db": -15.854900247209633,
         "core_s21_min_db": -0.24904830164251365,
         "core_s21_max_db": -0.13410212387181975,
-        "reciprocity_max_abs_db": 7.602447495924647e-06,
+        "reciprocity_max_abs_db": 0.000007602447495924647,
         "junction_excess_min_db": 0.0011112991242881454,
         "junction_excess_max_db": 0.034653175366525096,
         "junction_excess_median_db": 0.031059990282148564,
@@ -527,7 +527,7 @@
         "worst_core_return_db": -15.674491614621985,
         "core_s21_min_db": -0.2534863936740544,
         "core_s21_max_db": -0.13507900762813638,
-        "reciprocity_max_abs_db": 1.7102553556719302e-05,
+        "reciprocity_max_abs_db": 0.000017102553556719302,
         "junction_excess_min_db": 0.005549391155828892,
         "junction_excess_max_db": 0.03649800198279493,
         "junction_excess_median_db": 0.03282288503217223,
@@ -609,7 +609,7 @@
           "worst_core_return_db": -14.381895326372362,
           "core_s21_min_db": -0.3118437032086416,
           "core_s21_max_db": -0.1124866595032671,
-          "reciprocity_max_abs_db": 5.299121555600583e-05,
+          "reciprocity_max_abs_db": 0.00005299121555600583,
           "junction_excess_min_db": 0.0074259758915842106,
           "junction_excess_max_db": 0.06390670069041607,
           "junction_excess_median_db": 0.026798370453714665
@@ -701,7 +701,7 @@
           "worst_core_return_db": -14.171675882306978,
           "core_s21_min_db": -0.32073024518946974,
           "core_s21_max_db": -0.1145475099786973,
-          "reciprocity_max_abs_db": 6.699367400075928e-05,
+          "reciprocity_max_abs_db": 0.00006699367400075928,
           "junction_excess_min_db": 0.009486826367014409,
           "junction_excess_max_db": 0.07279324267124423,
           "junction_excess_median_db": 0.031649401162676366
@@ -928,7 +928,7 @@
       "worst_core_return_db": -14.50728354080484,
       "core_s21_min_db": -0.33484350609051866,
       "core_s21_max_db": -0.13469059376966475,
-      "reciprocity_max_abs_db": 5.5114003117751054e-05,
+      "reciprocity_max_abs_db": 0.000055114003117751054,
       "junction_excess_min_db": 0.009218326059481391,
       "junction_excess_max_db": 0.06215459734903045,
       "junction_excess_median_db": 0.028638205158501295
@@ -1015,7 +1015,7 @@
           "worst_core_return_db": -12.4942118812037,
           "core_s21_min_db": -0.43361958648230514,
           "core_s21_max_db": -0.16034587168352668,
-          "reciprocity_max_abs_db": 4.2231449845275826e-05,
+          "reciprocity_max_abs_db": 0.000042231449845275826,
           "junction_excess_min_db": 0.034873603973343326,
           "junction_excess_max_db": 0.16093067774081693,
           "junction_excess_median_db": 0.08588332861783693
@@ -1095,7 +1095,7 @@
           "worst_core_return_db": -16.969799279299316,
           "core_s21_min_db": -0.2644012985137497,
           "core_s21_max_db": -0.1244398975074703,
-          "reciprocity_max_abs_db": 5.4789111128383805e-05,
+          "reciprocity_max_abs_db": 0.000054789111128383805,
           "junction_excess_min_db": -0.00967007947787954,
           "junction_excess_max_db": -0.0010323702027130593,
           "junction_excess_median_db": -0.008059178922120436
@@ -1175,7 +1175,7 @@
           "worst_core_return_db": -14.291020542730088,
           "core_s21_min_db": -0.3433496815235529,
           "core_s21_max_db": -0.13611284596157308,
-          "reciprocity_max_abs_db": 8.810310021617473e-05,
+          "reciprocity_max_abs_db": 0.00008810310021617473,
           "junction_excess_min_db": 0.010640578251389726,
           "junction_excess_max_db": 0.07066077278206467,
           "junction_excess_median_db": 0.032720400990105786
@@ -1255,7 +1255,7 @@
           "worst_core_return_db": -14.264297406650698,
           "core_s21_min_db": -0.34461661251879605,
           "core_s21_max_db": -0.13630712483948204,
-          "reciprocity_max_abs_db": 2.833006180374964e-05,
+          "reciprocity_max_abs_db": 0.00002833006180374964,
           "junction_excess_min_db": 0.010834857129298686,
           "junction_excess_max_db": 0.07192770377730784,
           "junction_excess_median_db": 0.03327584938666661
@@ -1335,7 +1335,7 @@
           "worst_core_return_db": -14.709635577810614,
           "core_s21_min_db": -0.3274728420522441,
           "core_s21_max_db": -0.13351351516171558,
-          "reciprocity_max_abs_db": 4.582569505101608e-05,
+          "reciprocity_max_abs_db": 0.00004582569505101608,
           "junction_excess_min_db": 0.00804124745153223,
           "junction_excess_max_db": 0.05478393331075587,
           "junction_excess_median_db": 0.025142285994851826
@@ -1415,7 +1415,7 @@
           "worst_core_return_db": -14.328127830177888,
           "core_s21_min_db": -0.3414936609539523,
           "core_s21_max_db": -0.13543982500601748,
-          "reciprocity_max_abs_db": 1.763628498069325e-05,
+          "reciprocity_max_abs_db": 0.00001763628498069325,
           "junction_excess_min_db": 0.009967557295834123,
           "junction_excess_max_db": 0.06880475221246407,
           "junction_excess_median_db": 0.03152748799306945
@@ -1429,8 +1429,8 @@
     "h3b_c0_plan": "docs/R1E1A4A_H3B_C0_BUILD_ONLY_PLAN_V01.md",
     "h3b_i01_plan": "docs/R1E1A4A_H3B_I01_PASSIVE_PILOT_PLAN_V01.md",
     "h3b_c0_replacement_map": "execution/R1E1A4A_H3B_C0_REPLACEMENT_MAP_V01.json",
-    "h3b_c0_status": "HOLD_R1E1A4A_H3B_C0_GEOMETRY_OVERLAP",
-    "h3b_i01_status": "BLOCKED_BY_C0_HOLD",
+    "h3b_c0_status": "HOLD_SUPERSEDED_BY_AR0_ARCHITECTURE_FORK",
+    "h3b_i01_status": "CANCELLED_FOR_OLD_T01_INTEGRATION_ROUTE",
     "h3b_i01_matrix": [
       "A_BROAD",
       "B_BROAD",
@@ -1438,10 +1438,18 @@
       "B_C60P45",
       "A_C60P135",
       "B_C60P135"
-    ]
+    ],
+    "ar0_status": "ARCHITECTURE_FORK_ACTIVE",
+    "ar0_b0_status": "FROZEN_AWAIT_BUILD_AUTH",
+    "ar0_b0_architecture": "STALK_TOP_TWIN_MSL_TWIN_LNA",
+    "ar0_b0_freeze_doc": "docs/R1E1A4A_AR0_B0_STALK_TOP_TWIN_MSL_ARCHITECTURE_FREEZE_V01.md",
+    "ar0_b0_manifest": "execution/R1E1A4A_AR0_B0_ARCHITECTURE_MANIFEST_V01.json",
+    "ar0_b0g_plan": "docs/R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_PLAN_V01.md",
+    "architecture_a_status": "DEFERRED_SENTINEL_NOT_REJECTED",
+    "t01a_role": "POST_LNA_GROUNDED_BOARD_INTERCONNECT_ONLY"
   },
   "execution": {
-    "current_stage": "R1E1A4A_H3B_C0_REVIEW_AWAIT_USER",
+    "current_stage": "R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_AWAIT_AUTH",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true,
@@ -1450,7 +1458,7 @@
     "formal_o2b_screen_invocation_count": 9,
     "formal_o2b_qualification_invocation_count": 3,
     "last_completed_stage": "R1E1A4A_H3B_T01A_O4_MINIMAL_TOLERANCE_SENTINELS",
-    "last_status": "HOLD_R1E1A4A_H3B_C0_GEOMETRY_OVERLAP",
+    "last_status": "AR0_B0_ARCHITECTURE_FROZEN",
     "one_shot_required": true,
     "fresh_run_directory_required": true
   },
@@ -1482,10 +1490,10 @@
   },
   "dc_call_budget": {
     "target_calls_per_routine_stage": 2,
-    "calls_used_current_stage": 1,
-    "task_packet_path": "execution/task_packets/R1E1A4A_H3B_C0_task.json",
-    "result_packet_path": "execution/result_packets/R1E1A4A_H3B_C0_result.json",
-    "preferred_runner": "scripts/run_r1e1a4a_h3b_c0_build_only.py",
+    "calls_used_current_stage": 0,
+    "task_packet_path": "execution/task_packets/R1E1A4A_AR0_B0G_task.json",
+    "result_packet_path": "execution/result_packets/R1E1A4A_AR0_B0G_result.json",
+    "preferred_runner": "scripts/run_r1e1a4a_ar0_b0g_build_only.py",
     "polling_policy": "single build transaction then inspect at task node",
     "exception_reason": ""
   },
