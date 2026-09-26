@@ -12,53 +12,47 @@
 
 ## 2. Current stage
 
-R1E1A4A_H3B_COMPLETE_PASSIVE_UNIT_FREEZE_AWAIT_AUTH
+R1E1A4A_H3B_C0_COMPLETE_PASSIVE_BUILD_ONLY_AWAIT_AUTH
 
 - BUILD_AUTHORIZED: false
 - SOLVE_AUTHORIZED: false
-- O2C: DEFERRED_CONTINGENCY_CLOSED_AFTER_O3_O4_PASS
-- T01-C: DEFERRED
 
-## 3. T01-A closure
+## 3. Proven prerequisite
 
-PASS_R1E1A4A_H3B_T01A_FREEZE
+T01-A = PASS_R1E1A4A_H3B_T01A_FREEZE
+H3A V0.2 = PASS_R1E1A4A_H3A_V02_FR4_BRIDGED_MORTISE_BUILD_ONLY
 
-O3 physical-fidelity:
-- status: PASS_R1E1A4A_H3B_T01A_O3_PHYSICAL_FIDELITY
-- finite-conductivity nominal worst core return: -14.5073 dB
-- core S21 minimum: -0.33484 dB
-- max junction excess versus paired copper straight reference: 0.06215 dB
-- final DeltaS: 0.0192088, 0.0145830
-- nominal solved SHA256: 5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f
-- straight-reference solved SHA256: 421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b
+## 4. H3B frozen route
 
-O4 minimal sentinels:
-- status: PASS_R1E1A4A_H3B_T01A_O4_MINIMAL_SENTINELS
-- all six cases: build PASS, exactly one formal solve, numerical PASS
-- weakest return-loss sentinel: FAB_LOWZ at -12.4942 dB, still above the frozen -12 dB acceptable gate
-- no sentinel has an S21 notch below -3 dB
-- reciprocity remains within the frozen gate
+Authority:
+- docs/R1E1A4A_H3B_COMPLETE_PASSIVE_ROUTE_FREEZE_V01.md
+- docs/R1E1A4A_H3B_C0_BUILD_ONLY_PLAN_V01.md
+- docs/R1E1A4A_H3B_I01_PASSIVE_PILOT_PLAN_V01.md
+- execution/R1E1A4A_H3B_C0_REPLACEMENT_MAP_V01.json
 
-Reconciliation:
-- no completed O3/O4 formal solve was rerun
-- compact evidence and Touchstone files are committed to Git
-- large/local solver artifacts remain protected in place on NW
+Route:
+H3B-C0 build-only -> human 3D review -> H3B-I01 six-state A/B passive pilot -> Passive Unit V1 freeze -> LNA-on-stalk A0.
 
-## 4. Workspace lifecycle
+## 5. Immediate authorization boundary
 
-- State: CHECKPOINTED
-- Archive mode: REFERENCE_ONLY_PLUS_PROTECTED_SOLVER_ARTIFACTS
-- Purge allowed: false
-- Reason: H3B Complete Passive Unit may still need the frozen transition artifacts directly.
+The next executable action is H3B-C0 BUILD-ONLY on NW.
 
-## 5. DC Call Budget
+Task packet:
+execution/task_packets/R1E1A4A_H3B_C0_task.json
 
-- Reconciliation calls used: 3
-- Budget exception: oversized first read-only packet plus one Python-3.6 Git-recovery compatibility stop
-- No high-frequency polling and no solver rerun occurred.
+C0 creates two fresh zero-port/zero-solver artifacts:
+A = H3A_MECH_ONLY_PHYSICALIZED
+B = H3B_COMPLETE_PASSIVE_V1
 
-## 6. Immediate next node
+No solve, no LNA device, no A0, no pitch sweep.
 
-H3B_COMPLETE_PASSIVE_UNIT_FREEZE
+## 6. DC Call Budget
 
-No BUILD or SOLVE authorization is currently open.
+GitHub/authority first.
+Target C0 execution: one batched build transaction + one task-node inspection.
+No periodic polling.
+
+## 7. Stop boundary
+
+Await explicit BUILD authorization for H3B-C0.
+I01 SOLVE remains separately unauthorized.
