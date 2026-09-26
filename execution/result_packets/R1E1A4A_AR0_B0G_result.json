@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B0G-20260926",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY",
+  "host": "NW",
+  "final_status": "HOLD_R1E1A4A_AR0_B0G_EXECUTION_EXCEPTION",
+  "actions": [
+    {
+      "action": "formal AR0-B0G build-only",
+      "exit_code": 1,
+      "formal_build_invocations": 1,
+      "solver_invocations": 0
+    }
+  ],
+  "evidence": {
+    "outputs": [
+      "evidence/r1e1a4a_ar0_b0g_nw_20260926_build01/summary.json",
+      "evidence/r1e1a4a_ar0_b0g_nw_20260926_build01/HUMAN_3D_REVIEW.md"
+    ]
+  },
+  "authorization": {
+    "build_authorization_consumed": true,
+    "solve_authorization_consumed": false
+  },
+  "workspace": {
+    "state": "CHECKPOINTED",
+    "record_path": "execution/workspace_records/R1E1A4A_AR0_B0G_workspace.json"
+  },
+  "next_boundary": "AR0_B0G_REVIEW"
+}

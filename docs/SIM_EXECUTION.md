@@ -1,62 +1,30 @@
 # SIM_EXECUTION
 
-## 1. Global Protocol
+## Global Protocol
+SimulationOps 0.2.8. GitHub/authority first. Stage-level DC transactions only.
 
-- Repository: Dingo-infinity2020/SimulationOps
-- Protocol version used: 0.2.8
-- Minimum compatible version: >=0.2.8
-- DC policy: GitHub/authority first; stage-level transactions only
+## Current stage
+R1E1A4A_AR0_B0G_REVIEW_AWAIT_USER
 
-## 2. Current stage
+BUILD_AUTHORIZED: false
+SOLVE_AUTHORIZED: false
+LNA_INTEGRATION_AUTHORIZED: false
 
-R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_AWAIT_AUTH
+## AR0-B0
+Architecture: STALK_TOP_TWIN_MSL_TWIN_LNA
+B0G status: HOLD_R1E1A4A_AR0_B0G_EXECUTION_EXCEPTION
 
-- BUILD_AUTHORIZED: false
-- SOLVE_AUTHORIZED: false
-- LNA_INTEGRATION_AUTHORIZED: false
-
-## 3. Architecture decision
-
-First priority:
-AR0-B0_STALK_TOP_TWIN_MSL_TWIN_LNA
-
-Authority:
-- docs/R1E1A4A_AR0_B0_STALK_TOP_TWIN_MSL_ARCHITECTURE_FREEZE_V01.md
-- execution/R1E1A4A_AR0_B0_ARCHITECTURE_MANIFEST_V01.json
-- docs/R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_PLAN_V01.md
-
-B0 hard rules:
-- balanced radiator remains ground-free on both faces;
-- stalk ground never contacts radiator copper;
-- two signal branches per polarization;
-- two QPL9547 first-stage candidates per polarization;
-- ordinary nominal 1.90-mm MSL begins after a 3.0-mm ground setback;
+Hard rules remain:
+- no radiator-PCB ground overlap;
+- signal-only radiator feedthroughs;
+- stalk ground begins below the frozen 3-mm setback;
 - no passive pre-LNA balun;
-- old T01-A is post-LNA technology only.
+- no T01-A in the pre-LNA path.
 
-## 4. Superseded branch
+## Build artifact
+Evidence: evidence/r1e1a4a_ar0_b0g_nw_20260926_build01/
+Workspace: D:\GNSS_Lband_Active_Array\_r1e1a4a_ar0_b0g_build_work
+Solver invocations: 0
 
-H3B-C0 status remains:
-HOLD_R1E1A4A_H3B_C0_GEOMETRY_OVERLAP
-
-Its artifacts/evidence remain protected.
-No recovery build is authorized.
-
-## 5. Next executable node
-
-AR0-B0G feed-head BUILD-ONLY on NW after explicit authorization.
-
-The build contains:
-- radiator;
-- two orthogonal fork-head stalks;
-- four signal-only tongues;
-- four nominal MSL traces;
-- stalk-only backside ground rails;
-- four nonconductive QPL9547 envelopes;
-- via-reserve predicates.
-
-No transistor, port, load, solve, or T01 antenna-feed geometry.
-
-## 6. Stop boundary
-
-AWAIT AR0-B0G BUILD-ONLY AUTHORIZATION.
+## Stop boundary
+Review B0G HOLD evidence; no solve.
