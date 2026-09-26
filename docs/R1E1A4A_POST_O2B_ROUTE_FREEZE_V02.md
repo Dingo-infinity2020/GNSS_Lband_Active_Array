@@ -2,6 +2,9 @@
 
 Status: FROZEN — O3/O4 BUILD+SOLVE AUTHORIZED
 
+SimulationOps: 0.2.8
+DC policy: stage transaction / task packet / result packet; GitHub-first evidence; launch-once / inspect-at-task-node; workspace closeout at PASS/HOLD.
+
 This document supersedes the old automatic continuation from O2B into O2C nominal tuning.
 
 ## Decision

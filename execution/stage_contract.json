@@ -1,9 +1,9 @@
 {
-  "schema_version": "0.2.7",
+  "schema_version": "0.2.8",
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "f2a9c5d4438cc41966ec1ebca47f3877d669d679"
+    "source_commit": "00bea9de782eb36c1d3f118866edd283808b6233"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
@@ -24,9 +24,9 @@
     "max_delta_s_required": 0.02,
     "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
     "next_stage": "H3B_COMPLETE_PASSIVE_UNIT_FREEZE",
-    "stop_boundary": "T01-A FROZEN; AWAIT H3B COMPLETE PASSIVE UNIT AUTHORIZATION",
+    "stop_boundary": "AWAIT H3B COMPLETE PASSIVE UNIT AUTHORIZATION; NO BUILD NO SOLVE",
     "master_plan": "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
-    "simulationops_min": "0.2.7",
+    "simulationops_min": "0.2.8",
     "t01c_status": "DEFERRED_NOT_AUTHORIZED",
     "h3bi01_status": "READY_AFTER_H3B_COMPLETE_PASSIVE_UNIT",
     "h3cc01_status": "BLOCKED_UNTIL_R1E2_ACTIVE_IMPEDANCE_ATLAS",
@@ -1423,7 +1423,8 @@
       }
     ],
     "t01a_freeze_status": "PASS_R1E1A4A_H3B_T01A_FREEZE",
-    "t01a_frozen_geometry": "P20_G30_E30_WITH_FINITE_COPPER_AND_EXPLICIT_SOLDER_PROXY"
+    "t01a_frozen_geometry": "P20_G30_E30_WITH_FINITE_COPPER_AND_EXPLICIT_SOLDER_PROXY",
+    "t01a_status": "PASS_R1E1A4A_H3B_T01A_FREEZE"
   },
   "execution": {
     "current_stage": "R1E1A4A_H3B_COMPLETE_PASSIVE_UNIT_FREEZE_AWAIT_AUTH",
@@ -1434,12 +1435,51 @@
     "formal_o2a_solve_invocation_count": 1,
     "formal_o2b_screen_invocation_count": 9,
     "formal_o2b_qualification_invocation_count": 3,
-    "formal_o3_solve_invocation_count": 2,
-    "formal_o4_solve_invocation_count": 6
+    "last_completed_stage": "R1E1A4A_H3B_T01A_O4_MINIMAL_TOLERANCE_SENTINELS",
+    "last_status": "PASS_R1E1A4A_H3B_T01A_FREEZE",
+    "one_shot_required": true,
+    "fresh_run_directory_required": true
   },
   "workspace": {
     "host_alias": "NW",
+    "working_path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "record_path": "execution/workspace_records/R1E1A4A_H3B_T01A_O3_O4_workspace.json",
     "state": "CHECKPOINTED",
-    "purge_allowed": false
+    "archive_mode": "REFERENCE_ONLY_PLUS_PROTECTED_SOLVER_ARTIFACTS",
+    "archive_trigger": "O3/O4 qualification complete",
+    "archive_destination": "NW solver artifacts protected in place; compact evidence in Git",
+    "purge_allowed": false,
+    "cleanup_completed": false,
+    "cleanup_evidence": "Scientific closeout committed; solver artifacts intentionally retained pending H3B integration."
+  },
+  "global_protocol": {
+    "repository": "Dingo-infinity2020/SimulationOps",
+    "document": "GLOBAL_DC_SIMULATION_PROTOCOL.md",
+    "protocol_version": "0.2.8",
+    "minimum_compatible_version": "0.2.8"
+  },
+  "toolchain": {
+    "simulator": "CST Studio Suite",
+    "simulator_version": "2022",
+    "builder_or_adapter": "project stage runner via CST bundled Python/API",
+    "build_host_alias": "NW",
+    "solve_host_alias": "project runner controlled; formal production routing follows SimulationOps/HOSTS",
+    "container": "CST251-C when remote production solve path is selected"
+  },
+  "dc_call_budget": {
+    "target_calls_per_routine_stage": 2,
+    "calls_used_current_stage": 3,
+    "task_packet_path": "execution/task_packets/R1E1A4A_H3B_T01A_O3_task.json",
+    "result_packet_path": "execution/result_packets/R1E1A4A_H3B_T01A_O3_result.json",
+    "preferred_runner": "scripts/run_r1e1a4a_h3b_t01a_o3_stage.py",
+    "polling_policy": "launch_once_inspect_at_task_node",
+    "exception_reason": "Reconciliation used 3 DC transactions: first read-only packet exceeded transport output size; second transaction reached a Git merge conflict and stopped on CST Python 3.6 incompatibility with subprocess text=; third transaction resolved Git/0.2.8 metadata only. No solver was rerun."
+  },
+  "evidence": {
+    "status_classification": "PASS_R1E1A4A_H3B_T01A_FREEZE",
+    "source_commit_for_o3_o4": "00bea9de782eb36c1d3f118866edd283808b6233",
+    "o3_nominal_solved_sha256": "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
+    "o3_straight_reference_solved_sha256": "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
+    "o3_o4_compact_evidence": "evidence/r1e1a4a_h3b_t01a_o3_o4_nw_20260926_run01"
   }
 }

@@ -2,7 +2,7 @@
 
 Status: PROJECT EXECUTION ROUTE — FROZEN / NO BUILD OR SOLVE AUTHORIZATION
 
-SimulationOps minimum: 0.2.7
+SimulationOps minimum: 0.2.8
 
 ## 0. Post-O2B route amendment — authoritative
 
@@ -164,7 +164,7 @@ After H3C convergence:
 
 Do not let heavy R1E1B/R1E2 work drift onto NW by inertia.
 
-## 14. SimulationOps 0.2.7 optimization contract
+## 14. SimulationOps 0.2.8 optimization contract
 
 Before any sweep/DOE, freeze:
 - converged baseline;
