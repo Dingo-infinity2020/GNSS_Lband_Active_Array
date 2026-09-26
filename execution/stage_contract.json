@@ -3,10 +3,10 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "b201d47277a61d90768e23882cc17b44b9499c2a"
+    "source_commit": "37cda8cd75a6ebaa6f899400ab77371c7863660d"
   },
   "authorization": {
-    "BUILD_AUTHORIZED": false,
+    "BUILD_AUTHORIZED": true,
     "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
@@ -24,7 +24,7 @@
     "max_delta_s_required": 0.02,
     "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
     "next_stage": "AR0_B0G_FEED_HEAD_BUILD_ONLY",
-    "stop_boundary": "AWAIT AR0-B0G BUILD AUTHORIZATION; NO BUILD NO SOLVE",
+    "stop_boundary": "B0G BUILD-ONLY AUTHORIZED; STOP AFTER BUILD QUALIFICATION/HUMAN 3D REVIEW; NO SOLVE",
     "master_plan": "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
     "simulationops_min": "0.2.8",
     "t01c_status": "DEFERRED_NOT_AUTHORIZED",
@@ -1440,16 +1440,17 @@
       "B_C60P135"
     ],
     "ar0_status": "ARCHITECTURE_FORK_ACTIVE",
-    "ar0_b0_status": "FROZEN_AWAIT_BUILD_AUTH",
+    "ar0_b0_status": "B0G_BUILD_AUTHORIZED",
     "ar0_b0_architecture": "STALK_TOP_TWIN_MSL_TWIN_LNA",
     "ar0_b0_freeze_doc": "docs/R1E1A4A_AR0_B0_STALK_TOP_TWIN_MSL_ARCHITECTURE_FREEZE_V01.md",
     "ar0_b0_manifest": "execution/R1E1A4A_AR0_B0_ARCHITECTURE_MANIFEST_V01.json",
     "ar0_b0g_plan": "docs/R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_PLAN_V01.md",
     "architecture_a_status": "DEFERRED_SENTINEL_NOT_REJECTED",
-    "t01a_role": "POST_LNA_GROUNDED_BOARD_INTERCONNECT_ONLY"
+    "t01a_role": "POST_LNA_GROUNDED_BOARD_INTERCONNECT_ONLY",
+    "ar0_b0g_feedthrough_freeze": "docs/R1E1A4A_AR0_B0G_SIGNAL_FEEDTHROUGH_FREEZE_V01.md"
   },
   "execution": {
-    "current_stage": "R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_AWAIT_AUTH",
+    "current_stage": "R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_AUTHORIZED",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true,
