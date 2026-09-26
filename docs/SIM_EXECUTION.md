@@ -4,7 +4,7 @@
 Minimum compatible SimulationOps protocol: 0.2.7
 
 ## Current stage
-R1E1A4A_H3B_T01A_O2B_LOCAL_JUNCTION_DOE_FREEZE_AWAIT_AUTH
+R1E1A4A_H3B_T01A_O2C_GROUND_VIA_SOLDER_REVIEW_FREEZE_AWAIT_AUTH
 
 BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
@@ -12,19 +12,16 @@ PRODUCTION_SOLVE_AUTHORIZED: false
 LNA_INTEGRATION_AUTHORIZED: false
 CST251_AUTHORIZED: false
 
-## O1 line freeze
-PASS_R1E1A4A_H3B_T01A_O1_LINE_CROSS_SECTION
-Wsig = 1.50 mm; Gcpw = 0.40 mm
-
-## O2A baseline
-PASS_R1E1A4A_H3B_T01A_O2A_ACCEPTABLE
-Worst core return: -13.5051 dB
-Junction excess max: 0.1025 dB
-Junction excess median: 0.0465 dB
+## O2B
+PASS_R1E1A4A_H3B_T01A_O2B_ACCEPTABLE
+Recovery: PASS — no completed screening solve was rerun.
+Winner: P20_G30_E30
+Worst core return: -14.3819 dB
+Max junction excess: 0.0639 dB
 Preferred gate: FAIL
 
 ## Immediate next node
-H3B_T01A_O2B_LOCAL_JUNCTION_DOE_FREEZE
+H3B_T01A_O2C_GROUND_VIA_SOLDER_REVIEW_FREEZE
 
 No BUILD or SOLVE authorization is currently open.
 T01-C remains deferred.

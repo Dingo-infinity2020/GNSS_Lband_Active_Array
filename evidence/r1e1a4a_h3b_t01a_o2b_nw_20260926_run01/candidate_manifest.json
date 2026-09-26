@@ -1,0 +1,74 @@
+[
+  {
+    "candidate": "P22_G25_E00_BASE",
+    "pad_width_mm": 2.2,
+    "pad_gap_mm": 0.25,
+    "extension_mm": 0.0,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o2b_build_work\\P22_G25_E00_BASE\\P22_G25_E00_BASE_BUILD_ONLY.cst",
+    "build_sha256": "35b41b380ab0529be69084dcf6515a8eb855ff1059eeeb25aef89132aae454d9"
+  },
+  {
+    "candidate": "P20_G20_E00",
+    "pad_width_mm": 2.0,
+    "pad_gap_mm": 0.2,
+    "extension_mm": 0.0,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o2b_build_work\\P20_G20_E00\\P20_G20_E00_BUILD_ONLY.cst",
+    "build_sha256": "f65710f720e214fab8b4341720b4d81552487a0018c2c886d071bb188264de32"
+  },
+  {
+    "candidate": "P20_G20_E30",
+    "pad_width_mm": 2.0,
+    "pad_gap_mm": 0.2,
+    "extension_mm": 0.3,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o2b_build_work\\P20_G20_E30\\P20_G20_E30_BUILD_ONLY.cst",
+    "build_sha256": "be488d7dc54878a7836dc19008d4b7bfe4f18e9abb203914fca039284eaed52d"
+  },
+  {
+    "candidate": "P20_G30_E00",
+    "pad_width_mm": 2.0,
+    "pad_gap_mm": 0.3,
+    "extension_mm": 0.0,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o2b_build_work\\P20_G30_E00\\P20_G30_E00_BUILD_ONLY.cst",
+    "build_sha256": "31df4252eb188f844756eb325220931291a1765d1d40a9194f5e357f25d219df"
+  },
+  {
+    "candidate": "P20_G30_E30",
+    "pad_width_mm": 2.0,
+    "pad_gap_mm": 0.3,
+    "extension_mm": 0.3,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o2b_build_work\\P20_G30_E30\\P20_G30_E30_BUILD_ONLY.cst",
+    "build_sha256": "25348e4d79e94d017b2de757a86babceeab9f341986f5034702aba4da587cb5e"
+  },
+  {
+    "candidate": "P24_G20_E00",
+    "pad_width_mm": 2.4,
+    "pad_gap_mm": 0.2,
+    "extension_mm": 0.0,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o2b_build_work\\P24_G20_E00\\P24_G20_E00_BUILD_ONLY.cst",
+    "build_sha256": "6607c5765bc1e2d4d11db1c34f7f75ed178da6bb4f302f45d166077de0061edc"
+  },
+  {
+    "candidate": "P24_G20_E30",
+    "pad_width_mm": 2.4,
+    "pad_gap_mm": 0.2,
+    "extension_mm": 0.3,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o2b_build_work\\P24_G20_E30\\P24_G20_E30_BUILD_ONLY.cst",
+    "build_sha256": "701c04bcb83bceca795d3137d6bae8e7a330b17934592512835535a64fe44b01"
+  },
+  {
+    "candidate": "P24_G30_E00",
+    "pad_width_mm": 2.4,
+    "pad_gap_mm": 0.3,
+    "extension_mm": 0.0,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o2b_build_work\\P24_G30_E00\\P24_G30_E00_BUILD_ONLY.cst",
+    "build_sha256": "10f2038ca3730aacf21bd2a8f3f90a2c86b209410c8d98e532200dbf913fd5c4"
+  },
+  {
+    "candidate": "P24_G30_E30",
+    "pad_width_mm": 2.4,
+    "pad_gap_mm": 0.3,
+    "extension_mm": 0.3,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o2b_build_work\\P24_G30_E30\\P24_G30_E30_BUILD_ONLY.cst",
+    "build_sha256": "dcc408315648dcbf52d66a8b3eed93b064108e0654034d5fdfda620ddf03f38b"
+  }
+]
