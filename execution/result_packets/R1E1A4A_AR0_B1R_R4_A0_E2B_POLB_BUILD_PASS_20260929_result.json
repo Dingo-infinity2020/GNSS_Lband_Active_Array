@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2B-POLB-BUILD-PASS-20260929",
+  "status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_BUILD_ONLY",
+  "formal_build_invocations": 1,
+  "solver_invocations": 0,
+  "parent_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+  "artifact": {
+    "path": "D:\\GNSS_R4A0E2B_20260929_BUILD\\R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_INTEGRATED_BUILD_ONLY_V01.cst",
+    "sha256": "002eb117b0716cf2a47856b4552dd96ef4567358c7dd5827cbe766d10a633f39",
+    "lifecycle_state": "PROTECTED_AWAIT_HUMAN_3D_REVIEW"
+  },
+  "checks": {
+    "shape_count_107": true,
+    "exact_shape_name_set": true,
+    "exact_component_counts": true,
+    "preserved_parent_signature_exact": true,
+    "removed_parent_objects_absent": true,
+    "eight_vias": true,
+    "drill_loss_matches_kernel_reference": true,
+    "ports_exact_12": true,
+    "history_persistent": true,
+    "result_tree_empty": true,
+    "fresh_reopen_hash_stable": true,
+    "builtin_intersection_command_returned": true,
+    "pairwise_zero_overlap_14_of_14": true,
+    "half_lap_unsupported_copper_absent": true
+  },
+  "mechanical_delta": {
+    "object": "E2B_N_BackGround:LOCAL_BACK_GROUND",
+    "notch": "u=-1.0 -> -1.125 for downstream v=12..13 mm",
+    "removed_volume_mm3": 0.004375,
+    "P_back_ground_volume_mm3": 1.4,
+    "N_back_ground_volume_mm3": 1.39562500000002
+  },
+  "authorization_after_build": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": true,
+    "production_solve_authorized": false,
+    "solve_activation_requires": "EXPLICIT_HUMAN_3D_REVIEW_PASS"
+  },
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_HUMAN_3D_REVIEW"
+}

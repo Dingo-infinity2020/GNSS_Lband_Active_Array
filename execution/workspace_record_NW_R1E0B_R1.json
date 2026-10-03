@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1E0B-R1-READONLY-RESULT-RECOVERY",
+    "stage": "R1E0B_R1_READONLY_RESULT_RECOVERY",
+    "status": "PASS_R1E0B_BROADSIDE_PERIODIC_SMOKE_READONLY_RECOVERY"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "state": "CHECKPOINTED"
+  },
+  "source": {
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "branch": "project/r0-charts-scaffold",
+    "recovery_source_commit": "e7971d5ff82608351eac7bb81286469a76b58e9b"
+  },
+  "recovery": {
+    "mode": "READ_ONLY_RESULT_QUALIFICATION",
+    "solver_rerun": false,
+    "summary": "evidence/r1e0b_dc_nw_20260924_smoke01/recovery_summary.json"
+  },
+  "archive": {
+    "mode": "REFERENCE_ONLY",
+    "completed": true,
+    "purge_allowed": false
+  },
+  "closeout": {
+    "task_node": "read-only result recovery PASS / R1E0B closed",
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "config_sha256": "42b5cb3a3055cc6c60c6350505def705eb847ee4c42e43409c0480e0e64fdcc2",
+  "baseline_csv": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\evidence\\r1a5m2_dc_nw_20260924_recovery01\\sparameters_and_zin.csv",
+  "baseline_csv_sha256": "e4413cf91a986006bc922611fb8e5a493fea260741d58a373a9d387151c888aa",
+  "science_band_ghz": [
+    1.15,
+    1.65
+  ],
+  "A": {
+    "label": "A",
+    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5f_split_single_port_work\\R1A5F_POLA_SINGLE_PORT_V01.cst",
+    "source_sha256": "74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce",
+    "pre_config_copy_sha256": "74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce",
+    "cst": "D:\\GNSS_Lband_Active_Array\\_r1a5fq_equivalence_work\\R1A5FQ_A_EQUIVALENCE_V01.cst",
+    "cst_sha256": "0afc37b65b65d6f17746b7e04a7d4aec239f395ec38351fbfaa1502a4ec87e2a",
+    "cst_bytes": 49096,
+    "point_count": 1001,
+    "invalid_complex_values": 0,
+    "best_s11": {
+      "f_ghz": 1.8,
+      "db": -19.425077520131634
+    },
+    "anchors": {
+      "1.17645": {
+        "f_ghz": 1.1768,
+        "s11_db": -11.684168927536419,
+        "zin_ohm": [
+          100.77408844713288,
+          -54.16390269167517
+        ]
+      },
+      "1.2276": {
+        "f_ghz": 1.2272,
+        "s11_db": -15.872189590973418,
+        "zin_ohm": [
+          77.44471863560774,
+          -17.717507107480653
+        ]
+      },
+      "1.27875": {
+        "f_ghz": 1.2784,
+        "s11_db": -15.596354109138561,
+        "zin_ohm": [
+          72.55896816341652,
+          8.349604086527863
+        ]
+      },
+      "1.4": {
+        "f_ghz": 1.4,
+        "s11_db": -12.12060338893025,
+        "zin_ohm": [
+          87.12483882792776,
+          45.964279726440274
+        ]
+      },
+      "1.5611": {
+        "f_ghz": 1.5608,
+        "s11_db": -12.07934966792729,
+        "zin_ohm": [
+          123.01910799578323,
+          52.15404546157807
+        ]
+      },
+      "1.57542": {
+        "f_ghz": 1.5752000000000002,
+        "s11_db": -12.243772774916685,
+        "zin_ohm": [
+          125.44466787409408,
+          50.35512616577285
+        ]
+      },
+      "1.602": {
+        "f_ghz": 1.6024,
+        "s11_db": -12.627793710973185,
+        "zin_ohm": [
+          129.10346937986782,
+          46.213132078812514
+        ]
+      }
+    },
+    "native": {
+      "delta_s_sequence": [
+        {
+          "pass": 2,
+          "delta_s": 0.0993532
+        },
+        {
+          "pass": 3,
+          "delta_s": 0.0268758
+        },
+        {
+          "pass": 4,
+          "delta_s": 0.022595
+        },
+        {
+          "pass": 5,
+          "delta_s": 0.0230506
+        },
+        {
+          "pass": 6,
+          "delta_s": 0.0212685
+        },
+        {
+          "pass": 7,
+          "delta_s": 0.0164832
+        },
+        {
+          "pass": 8,
+          "delta_s": 0.0145415
+        }
+      ],
+      "last_two_below_0p02": true,
+      "desired_accuracy_termination": true,
+      "max_passes_reached": false,
+      "broadband_sweep_converged": true,
+      "error_lines": []
+    },
+    "native_pass": true,
+    "warning_line_count": 5
+  },
+  "B": {
+    "label": "B",
+    "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5f_split_single_port_work\\R1A5F_POLB_SINGLE_PORT_V01.cst",
+    "source_sha256": "11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf",
+    "pre_config_copy_sha256": "11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf",
+    "cst": "D:\\GNSS_Lband_Active_Array\\_r1a5fq_equivalence_work\\R1A5FQ_B_EQUIVALENCE_V01.cst",
+    "cst_sha256": "f78d87dda909af55844ce645c4593cea2d2e9d0f5de4e492a5bd66d42fed5c0f",
+    "cst_bytes": 49122,
+    "point_count": 1001,
+    "invalid_complex_values": 0,
+    "best_s11": {
+      "f_ghz": 1.8,
+      "db": -20.505178789648745
+    },
+    "anchors": {
+      "1.17645": {
+        "f_ghz": 1.1768,
+        "s11_db": -11.463740477307855,
+        "zin_ohm": [
+          100.36928451948741,
+          -55.55417131920226
+        ]
+      },
+      "1.2276": {
+        "f_ghz": 1.2272,
+        "s11_db": -15.571764796769681,
+        "zin_ohm": [
+          77.3964516686451,
+          -19.28163705072888
+        ]
+      },
+      "1.27875": {
+        "f_ghz": 1.2784,
+        "s11_db": -15.764503996705985,
+        "zin_ohm": [
+          72.64974660592097,
+          6.601687419733477
+        ]
+      },
+      "1.4": {
+        "f_ghz": 1.4,
+        "s11_db": -12.516946197532121,
+        "zin_ohm": [
+          87.34554468711036,
+          43.73859016777806
+        ]
+      },
+      "1.5611": {
+        "f_ghz": 1.5608,
+        "s11_db": -12.48099857714093,
+        "zin_ohm": [
+          122.99006086037444,
+          49.15706327040856
+        ]
+      },
+      "1.57542": {
+        "f_ghz": 1.5752000000000002,
+        "s11_db": -12.650222923151876,
+        "zin_ohm": [
+          125.35821830745431,
+          47.300364837358316
+        ]
+      },
+      "1.602": {
+        "f_ghz": 1.6024,
+        "s11_db": -13.04687844982675,
+        "zin_ohm": [
+          128.89569612516846,
+          43.0660629014887
+        ]
+      }
+    },
+    "native": {
+      "delta_s_sequence": [
+        {
+          "pass": 2,
+          "delta_s": 0.0661009
+        },
+        {
+          "pass": 3,
+          "delta_s": 0.038394
+        },
+        {
+          "pass": 4,
+          "delta_s": 0.0272181
+        },
+        {
+          "pass": 5,
+          "delta_s": 0.0232756
+        },
+        {
+          "pass": 6,
+          "delta_s": 0.0179865
+        },
+        {
+          "pass": 7,
+          "delta_s": 0.0139052
+        }
+      ],
+      "last_two_below_0p02": true,
+      "desired_accuracy_termination": true,
+      "max_passes_reached": false,
+      "broadband_sweep_converged": true,
+      "error_lines": []
+    },
+    "native_pass": true,
+    "warning_line_count": 5
+  },
+  "comparisons": {
+    "A_vs_R1A5M2_S11": {
+      "sample_count": 625,
+      "max_complex_delta": 0.008537500391679288,
+      "max_complex_delta_freq_ghz": 1.324,
+      "max_db_delta": 0.2308695068715192,
+      "max_db_delta_freq_ghz": 1.6496
+    },
+    "B_vs_R1A5M2_S22": {
+      "sample_count": 625,
+      "max_complex_delta": 0.008399948817370568,
+      "max_complex_delta_freq_ghz": 1.1504,
+      "max_db_delta": 0.2228298584665378,
+      "max_db_delta_freq_ghz": 1.6496
+    },
+    "A_vs_B": {
+      "sample_count": 625,
+      "max_complex_delta": 0.012309051547414,
+      "max_complex_delta_freq_ghz": 1.3408,
+      "max_db_delta": 0.45646892857619825,
+      "max_db_delta_freq_ghz": 1.6496
+    }
+  },
+  "checks": {
+    "A_source_hash_match": true,
+    "B_source_hash_match": true,
+    "A_native_converged": true,
+    "B_native_converged": true,
+    "A_curve_complete_finite": true,
+    "B_curve_complete_finite": true,
+    "A_vs_R1A5M2_S11_pass": true,
+    "B_vs_R1A5M2_S22_pass": true,
+    "A_vs_B_complex_pass": true,
+    "A_vs_B_db_pass": true,
+    "pass": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1A3-MATERIALIZED-FR4-BUILD-ONLY-DC-NW",
+    "stage": "HUMAN_REVIEW_R1A3",
+    "status": "PASS_R1A3_BUILD_ONLY_AWAITING_HUMAN_REVIEW"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "created_at": "existing checkout",
+    "last_used_at": "2026-09-24",
+    "state": "PROTECTED"
+  },
+  "source": {
+    "type": "git",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "remote_url": "https://github.com/Dingo-infinity2020/GNSS_Lband_Active_Array.git",
+    "branch": "project/r0-charts-scaffold",
+    "head_commit": "dbd879fd81c8a7b19ef2139ce03c620625c07084",
+    "head_on_trusted_remote": true,
+    "dirty": false,
+    "untracked_present": false,
+    "local_only_commits_present": false
+  },
+  "archive": {
+    "mode": "PROTECTED_IN_PLACE",
+    "destination": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work",
+    "manifest_path": "execution/workspace_record_NW_R1A3.json",
+    "critical_artifacts": [
+      "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work\\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst",
+      "evidence/r1a3_dc_nw_20260924_build01/"
+    ],
+    "recovery_method": "Use source HEAD dbd879fd... and the frozen R1A3 harness; do not overwrite the protected canonical CST before review.",
+    "completed": true
+  },
+  "closeout": {
+    "task_node": "R1A3 BUILD_ONLY PASS / human review handoff",
+    "active_processes_checked": true,
+    "downstream_dependency_checked": true,
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false,
+    "cleanup_evidence": "Formal invocation exited 0; canonical CST SHA256 b921889a... retained in place for user review."
+  }
+}

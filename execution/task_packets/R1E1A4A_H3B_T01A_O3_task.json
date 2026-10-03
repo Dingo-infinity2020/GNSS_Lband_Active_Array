@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-H3B-T01A-O3-20260926",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "9324ea0600a7dd07c3b6b086200d8e4de74ef18c",
+    "model_identity": "H3B_T01A_P20_G30_E30_PHYSICAL_FIDELITY"
+  },
+  "stage": {
+    "name": "R1E1A4A_H3B_T01A_O3_PHYSICAL_FIDELITY_QUALIFICATION",
+    "target_control_host": "NW",
+    "entrypoint": "scripts/run_r1e1a4a_h3b_t01a_o3_stage.py",
+    "args": [],
+    "stop_boundary": "PASS -> O4; HOLD -> stop and preserve evidence"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": true
+  },
+  "preflight": {
+    "requirements": [
+      "GitHub branch project/r0-charts-scaffold at packet source commit or descendant containing unchanged O3 freeze",
+      "NW CST 2022 bundled Python available",
+      "NW -> CST251 passwordless Git OpenSSH route available if remote solve path is used",
+      "P20_G30_E30 O2B winner evidence present",
+      "no existing O3 formal result packet for this packet_id"
+    ],
+    "fail_closed": true
+  },
+  "outputs": {
+    "expected": [
+      "finite-conductivity transition build audit",
+      "finite-conductivity straight-reference build audit",
+      "fresh-run nominal transition solve",
+      "fresh-run straight-reference solve",
+      "O3 qualification summary",
+      "workspace lifecycle record"
+    ],
+    "result_packet_path": "execution/result_packets/R1E1A4A_H3B_T01A_O3_result.json"
+  },
+  "dc_call_budget": {
+    "target_calls": 2,
+    "polling_policy": "launch_once_inspect_at_task_node"
+  },
+  "execution": {
+    "silent_retry_allowed": false,
+    "dry_run": false,
+    "ticket_id": "GNSS-O3-20260926",
+    "lock_path": "execution/locks/GNSS-O3-20260926.lock"
+  }
+}

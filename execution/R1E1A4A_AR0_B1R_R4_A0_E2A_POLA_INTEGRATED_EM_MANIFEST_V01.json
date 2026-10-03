@@ -1,0 +1,231 @@
+{
+  "schema_version": "0.2.11",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-POLA-INTEGRATED-EM-FREEZE-20260928",
+  "project": "GNSS_Lband_Active_Array",
+  "status": "PASS_R4_A0_E2A_POLA_CONTRACT_FROZEN_SOURCE_IMPLEMENTATION_NEXT",
+  "remote_execution_authorized": false,
+  "build_authorized": false,
+  "solve_authorized": false,
+  "lna_integration_authorized": false,
+  "parent_authority": {
+    "geometry_parent": "R1E1A4A_AR0_B1R_T1R1_GROUND_PLACEMENT_CORRECTED_BUILD_ONLY_V01.cst",
+    "geometry_parent_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+    "landing_zone_source": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_BUILD_ONLY_V03.mcr",
+    "landing_zone_git_blob": "8066f693f7a3ba980cf015ef5d9554fd31dc7549",
+    "landing_zone_solve_status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E1_PASSIVE_EM_CHARACTERIZED",
+    "landing_zone_solved_sha256": "bd487a52e342284fe7cdf4b6a35c0a7fc23296e97560f9603451bbf6f0b6349c"
+  },
+  "geometry": {
+    "polarization": "Pol-A",
+    "full_radiator_retained": true,
+    "orthogonal_mechanical_dielectric_retained": true,
+    "inactive_polB_electrical_state": "OPEN_SIGNAL_STUB_THROUGH_V3_NO_E1_LANDING_ZONE_NO_REMOTE_GROUND",
+    "handoff_v_mm": 3,
+    "branch_centers_u_mm": [
+      3,
+      -3
+    ],
+    "e1_q_range_mm": [
+      -2,
+      2
+    ],
+    "active_v_range_mm": [
+      3,
+      13
+    ],
+    "transform": {
+      "branch_A": "u=+3+q; v=v; n=n",
+      "branch_B": "u=-3+q; v=v; n=n",
+      "q_orientation": "+q maps to +u for both branches",
+      "package_rotation": "same on both branches; no mirrored pinout"
+    },
+    "local_ground": "G-L0 branch-local only",
+    "branch_ground_common_merge": false,
+    "remote_D2_ground_merge": false,
+    "duplicated_e1_substrate": false,
+    "plated_vias_total": 8,
+    "active_device_inside_cst": false
+  },
+  "raw_em_ports": {
+    "count": 12,
+    "zref_ohm": 50,
+    "endpoint_rule": "signal n=0; local-ground n=-1; through FR4 only",
+    "ports": [
+      {
+        "n": 1,
+        "name": "A_E_UP",
+        "u_mm": 3,
+        "v_mm": 4.65
+      },
+      {
+        "n": 2,
+        "name": "A_P_IN",
+        "u_mm": 3,
+        "v_mm": 6.085,
+        "device_plane": "P1A_IN"
+      },
+      {
+        "n": 3,
+        "name": "A_P_OUT",
+        "u_mm": 3,
+        "v_mm": 7.915,
+        "device_plane": "P1A_OUT"
+      },
+      {
+        "n": 4,
+        "name": "A_E_DN",
+        "u_mm": 3,
+        "v_mm": 9.35
+      },
+      {
+        "n": 5,
+        "name": "A_B_VDD",
+        "u_mm": 4.45,
+        "v_mm": 9.8
+      },
+      {
+        "n": 6,
+        "name": "A_B_VBIAS",
+        "u_mm": 2.5,
+        "v_mm": 6.085
+      },
+      {
+        "n": 7,
+        "name": "B_E_UP",
+        "u_mm": -3,
+        "v_mm": 4.65
+      },
+      {
+        "n": 8,
+        "name": "B_P_IN",
+        "u_mm": -3,
+        "v_mm": 6.085,
+        "device_plane": "P1B_IN"
+      },
+      {
+        "n": 9,
+        "name": "B_P_OUT",
+        "u_mm": -3,
+        "v_mm": 7.915,
+        "device_plane": "P1B_OUT"
+      },
+      {
+        "n": 10,
+        "name": "B_E_DN",
+        "u_mm": -3,
+        "v_mm": 9.35
+      },
+      {
+        "n": 11,
+        "name": "B_B_VDD",
+        "u_mm": -1.55,
+        "v_mm": 9.8
+      },
+      {
+        "n": 12,
+        "name": "B_B_VBIAS",
+        "u_mm": -3.5,
+        "v_mm": 6.085
+      }
+    ]
+  },
+  "four_device_planes": [
+    "P1A_IN",
+    "P1A_OUT",
+    "P1B_IN",
+    "P1B_OUT"
+  ],
+  "circuit_partition": {
+    "raw_em_network_ports": 12,
+    "qpl9547_inserted_in_raw_em": false,
+    "passive_components_inserted_in_raw_em": false,
+    "C_IN": [
+      "E_UP",
+      "P_IN"
+    ],
+    "QPL9547": [
+      "P_IN",
+      "P_OUT"
+    ],
+    "C_OUT": [
+      "P_OUT",
+      "E_DN"
+    ],
+    "L1": [
+      "P_OUT",
+      "B_VDD"
+    ],
+    "C_RF": [
+      "B_VDD",
+      "local_ground"
+    ],
+    "R4": [
+      "B_VDD",
+      "B_VBIAS"
+    ],
+    "four_port_reduction_requires_qualified_passive_models": true
+  },
+  "build_gates": {
+    "parent_hash_exact": true,
+    "radiator_preserved": true,
+    "no_ground_to_radiator_contact": true,
+    "handoff_v_3_exact": true,
+    "legacy_conflicting_polA_rf_removed_not_overlaid": true,
+    "no_duplicate_e1_fr4": true,
+    "e1_dimensions_exact_both_branches": true,
+    "same_package_rotation_both_branches": true,
+    "eight_plated_vias": true,
+    "no_remote_ground_merge": true,
+    "zero_unintended_positive_volume_overlap": true,
+    "exact_12_ports_fresh_reopen": true,
+    "persistent_history": true,
+    "empty_result_tree": true,
+    "solver_invocations": 0
+  },
+  "solve_contract": {
+    "modeled_band_ghz": [
+      1,
+      1.8
+    ],
+    "decision_band_ghz": [
+      1.15,
+      1.65
+    ],
+    "reference_frequencies_ghz": {
+      "L5": 1.17645,
+      "L2": 1.2276,
+      "L1": 1.57542
+    },
+    "numerical": "HF Frequency Domain, second-order tetrahedral adaptive",
+    "final_two_native_delta_s_lte": 0.02,
+    "max_passes_lte": 16,
+    "full_smatrix_terms": 144,
+    "max_reciprocity_abs_complex_lte": 0.02,
+    "max_column_power_lte": 1.02,
+    "no_fatal_solver_error": true,
+    "no_mesh_corruption": true,
+    "optimizer": false,
+    "sweep": false
+  },
+  "diagnostics": {
+    "unintended_coupling_review_db": -20,
+    "unintended_coupling_severe_db": -10,
+    "resonance_review": " >=10 dB unintended-coupling change within <=50 MHz or coincident sharp multi-node feature",
+    "s11_product_gate": false,
+    "raw_em_source_impedance_authority": false
+  },
+  "polA_to_polB_promotion": {
+    "requires_build_pass": true,
+    "requires_human_geometry_pass": true,
+    "requires_raw_12port_solve_hard_pass": true,
+    "requires_no_severe_coupling": true,
+    "requires_no_unresolved_resonance": true,
+    "direct_promotion_requires_no_minus20db_review": true,
+    "if_review": "freeze Pol-A mechanism probe before Pol-B",
+    "if_hard_hold": "Pol-B blocked; recover Pol-A first",
+    "polB_changes_allowed": "accepted 90-degree polarization transform + complementary half-lap mechanical handedness only",
+    "retuning_before_AB_compare": false
+  },
+  "next_stage": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_SOURCE_IMPLEMENTATION",
+  "freeze_doc": "docs/R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_INTEGRATED_EM_FREEZE_V01.md"
+}

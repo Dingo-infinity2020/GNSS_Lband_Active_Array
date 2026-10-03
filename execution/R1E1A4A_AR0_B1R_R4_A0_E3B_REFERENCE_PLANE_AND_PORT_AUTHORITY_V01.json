@@ -1,0 +1,19 @@
+{
+  "schema_version": "gnss-e3b-port-authority-v0.1",
+  "status": "PASS_E3B_R7_REFERENCE_PLANE_AND_PORT_AUTHORITY",
+  "mode": "OFFLINE_ONLY",
+  "raw_port_count": 24,
+  "branch_count": 4,
+  "ports_per_branch": 6,
+  "all_port_lengths_mm": 1.0,
+  "all_segment_z_constant": true,
+  "device_plane_semantics": ["P_IN", "P_OUT"],
+  "device_plane_ports": [2,3,8,9,14,15,20,21],
+  "single_ended_reference": "branch-local backside ground",
+  "differential_physical_port_required": false,
+  "port_redesign_required": false,
+  "corrective_build_required": false,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false,
+  "next": "D0_QPL9547_DEVICE_AND_PASSIVE_COMPONENT_MODEL_AUTHORITY"
+}

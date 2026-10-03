@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1E1-A1-SIX-PITCH-FR4-SOURCE-SET-BUILD-ONLY-NW",
+    "stage": "R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY",
+    "status": "PASS_R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "state": "CHECKPOINTED"
+  },
+  "execution": {
+    "formal_source_commit": "5a270f525aef8d7fa6fab3f3bc636139a6804268",
+    "formal_invocation_count": 1,
+    "solver_run": false,
+    "silent_retry_allowed": false
+  },
+  "archive": {
+    "mode": "PROTECTED_IN_PLACE_PLUS_GIT_EVIDENCE",
+    "completed": true,
+    "purge_allowed": false
+  },
+  "closeout": {
+    "task_node": "R1E1A1 PASS / baton to R1E1A2 design",
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}

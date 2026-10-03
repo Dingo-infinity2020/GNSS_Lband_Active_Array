@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-S0L-STATIC-IMPLEMENTATION-20260929",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E2A_S0L_SELECTED_EXCITATION_IMPLEMENTATION",
+  "status": "PASS_R4_A0_E2A_S0L_STATIC_IMPLEMENTATION_READY_BLOCKED_BY_HUMAN_REVIEW",
+  "remote_calls": 0,
+  "formal_build_invocations": 0,
+  "formal_solver_invocations": 0,
+  "protected_source_sha256": "78c9d38e186e38b1d0398e7771758af34345fc5e8f780fdc8c7fade4a8705804",
+  "blobs": {
+    "config_macro": "a42d59e0aa6dae84c0d6ff4b5bf20193a71a9bf5",
+    "presolve_runner": "ca520ccbc48fb56baf725c0216c3b32cd718af0c",
+    "solve_runner": "9b944002dc65b5b21cad00c230ba041833c4de5e",
+    "inventory": "e10886a4c01d9aafd55a16d8126418b7e22025fd"
+  },
+  "static_checks": {
+    "config_port_delete_count": 6,
+    "config_port_rename_count": 3,
+    "config_add_excitation_count": 4,
+    "sources_exact_1_2_4_5": true,
+    "loads_3_6_not_excited": true,
+    "stimulation_list_list": true,
+    "stimulation_all_absent": true,
+    "config_has_no_solver_start": true,
+    "config_has_no_geometry_creation": true,
+    "presolve_runner_run_solver_calls": 0,
+    "presolve_geometry_identity_gate": true,
+    "presolve_six_port_gate": true,
+    "presolve_excitation_history_gate": true,
+    "presolve_empty_result_tree_gate": true,
+    "solve_runner_run_solver_calls": 1,
+    "solve_runner_auto_retry_zero": true,
+    "response_contract_24": true,
+    "full_6x6_not_required": true,
+    "full_12x12_not_required": true,
+    "native_convergence_authority": true
+  },
+  "blocked_by": "E2A_HUMAN_3D_REVIEW_NOT_YET_EXPLICITLY_PASSED",
+  "next_after_human_review": "R1E1A4A_AR0_B1R_R4_A0_E2A_S0L_PRESOLVE_CONFIG_AWAIT_AUTH",
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  }
+}

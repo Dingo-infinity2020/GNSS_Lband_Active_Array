@@ -1,0 +1,106 @@
+{
+  "status": "PASS_R1E1A4A_AR0_B1R_T2F_R2_FIXTURE_BUILD_ONLY",
+  "simulationops": "0.2.8",
+  "formal_build_invocations": 1,
+  "solver_invocations": 0,
+  "parent": {
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_t1_build_work\\R1E1A4A_AR0_B1R_T1_GROUND_ACQUISITION_BUILD_ONLY_V01.cst",
+    "sha256": "3144672323cbd4123d6413e7d9ae8f4842b78707d3a71b641748c7250ca2a8f6"
+  },
+  "port_macro": {
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\source\\cst\\R1E1A4A_AR0_B1R_T2F_R2_PORTS_V01.mcr",
+    "sha256": "0b10f05f7c50002a2262f3adf7b8d0d264222789fb3c7661e5e05c70e754d639"
+  },
+  "artifact": {
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_t2f_r2_build_work\\R1E1A4A_AR0_B1R_T2F_R2_CANONICAL_TRANSITION_FIXTURE_V01.cst",
+    "sha256": "ae3bc705fea01e3a8f1c4a52458f447726843ba32a22d247c085c62b8bb83a7b"
+  },
+  "retained_signature": {
+    "B0_Stalk:A_P_PRONG": [
+      "FR4_COST_BASELINE",
+      48.0
+    ],
+    "B0_MSL:A_P_MSL": [
+      "B0_COPPER",
+      0.798
+    ],
+    "B0_Stalk:A_N_PRONG": [
+      "FR4_COST_BASELINE",
+      48.0
+    ],
+    "B0_MSL:A_N_MSL": [
+      "B0_COPPER",
+      0.798
+    ],
+    "B1RT1_BackGround:A_P_GROUND_TAPER": [
+      "B0_COPPER",
+      1.134
+    ],
+    "B1RT1_BackGround:A_N_GROUND_TAPER": [
+      "B0_COPPER",
+      1.134
+    ]
+  },
+  "port_counts": {
+    "build": 3,
+    "reopen": 3
+  },
+  "runtime_endpoints": {
+    "t2f_r2_p1_x": 2.09657160621811,
+    "t2f_r2_p1_y": 2.14606908090117,
+    "t2f_r2_p2_x": -2.14606908090117,
+    "t2f_r2_p2_y": -2.09657160621811,
+    "t2f_r2_outp_sig_x": 2.12132034355964,
+    "t2f_r2_outp_sig_y": 2.12132034355964,
+    "t2f_r2_outp_gnd_x": 2.82842712474619,
+    "t2f_r2_outp_gnd_y": 1.4142135623731,
+    "t2f_r2_outn_sig_x": -2.12132034355964,
+    "t2f_r2_outn_sig_y": -2.12132034355964,
+    "t2f_r2_outn_gnd_x": -1.4142135623731,
+    "t2f_r2_outn_gnd_y": -2.82842712474619,
+    "t2f_r2_output_z": 47.1428571428
+  },
+  "expected_endpoints": {
+    "p1": [
+      2.096571606218113,
+      2.1460690809011718
+    ],
+    "p2": [
+      -2.1460690809011718,
+      -2.096571606218113
+    ],
+    "outp_sig": [
+      2.1213203435596424,
+      2.1213203435596424
+    ],
+    "outp_gnd": [
+      2.82842712474619,
+      1.414213562373095
+    ],
+    "outn_sig": [
+      -2.1213203435596424,
+      -2.1213203435596424
+    ],
+    "outn_gnd": [
+      -1.414213562373095,
+      -2.82842712474619
+    ],
+    "output_z": 47.1428571428
+  },
+  "solver_tree_matches": [],
+  "checks": {
+    "parent_hash_exact": true,
+    "six_retained_solids_only_build": true,
+    "six_retained_solids_only_reopen": true,
+    "retained_signature_parent_build_equal": true,
+    "retained_signature_parent_reopen_equal": true,
+    "build_port_count_3": true,
+    "reopen_port_count_3": true,
+    "runtime_endpoint_params_present_with_output_z_reopen_authority": true,
+    "runtime_endpoint_common_build_reopen_equal": true,
+    "runtime_endpoint_geometry_exact": true,
+    "fresh_reopen_hash_stable": true,
+    "solver_tree_empty": true
+  },
+  "interpretation": "canonical Pol-A transition-only 3-port fixture; no radiator/mechanics/LNA/RF-tenon; no solve"
+}

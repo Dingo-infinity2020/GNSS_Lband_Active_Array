@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.2.8",
+  "status": "PASS_R4_A0_E1_BUILD_SOURCE_STATIC_AUDIT_RECOVERY",
+  "recovery_type": "READ_ONLY_STATIC_AUDIT_REFINEMENT",
+  "rebuild": false,
+  "remote_calls": 0,
+  "prior_evidence": "evidence/r4_a0_e1_static_prebuild_20260927/R4_A0_E1_BUILD_SOURCE_STATIC_AUDIT.json",
+  "checks": {
+    "prior_hold_reason": "audit regex matched the word optimizer in a prohibition comment",
+    "actual_optimizer_command_absent": true,
+    "actual_solver_start_command_absent": true,
+    "monitor_true_absent": true,
+    "package_land_calls_8": true,
+    "grounded_spoke_calls_5": true,
+    "plated_via_calls_4": true,
+    "port_calls_6": true,
+    "via_drill_subtract_present": true,
+    "source_v02": true
+  }
+}

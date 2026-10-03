@@ -1,0 +1,274 @@
+1D Results\Adaptive Meshing\f=1.2\Meshcells
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\Delta\All S-Parameters
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S1,1
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S1,2
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S1,4
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S1,5
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S2,1
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S2,2
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S2,4
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S2,5
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S3,1
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S3,2
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S3,4
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S3,5
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S4,1
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S4,2
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S4,4
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S4,5
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S5,1
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S5,2
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S5,4
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S5,5
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S6,1
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S6,2
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S6,4
+1D Results\Adaptive Meshing\f=1.2\S-Parameters\S6,5
+1D Results\Adaptive Meshing\f=1.2\Solvertime
+1D Results\Adaptive Meshing\f=1.4\Meshcells
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\Delta\All S-Parameters
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S1,1
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S1,2
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S1,4
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S1,5
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S2,1
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S2,2
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S2,4
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S2,5
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S3,1
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S3,2
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S3,4
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S3,5
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S4,1
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S4,2
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S4,4
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S4,5
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S5,1
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S5,2
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S5,4
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S5,5
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S6,1
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S6,2
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S6,4
+1D Results\Adaptive Meshing\f=1.4\S-Parameters\S6,5
+1D Results\Adaptive Meshing\f=1.4\Solvertime
+1D Results\Adaptive Meshing\f=1.57542\Meshcells
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\Delta\All S-Parameters
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S1,1
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S1,2
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S1,4
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S1,5
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S2,1
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S2,2
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S2,4
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S2,5
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S3,1
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S3,2
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S3,4
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S3,5
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S4,1
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S4,2
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S4,4
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S4,5
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S5,1
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S5,2
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S5,4
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S5,5
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S6,1
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S6,2
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S6,4
+1D Results\Adaptive Meshing\f=1.57542\S-Parameters\S6,5
+1D Results\Adaptive Meshing\f=1.57542\Solvertime
+1D Results\Adaptive Meshing\f=1.6\Meshcells
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\Delta\All S-Parameters
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S1,1
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S1,2
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S1,4
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S1,5
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S2,1
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S2,2
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S2,4
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S2,5
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S3,1
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S3,2
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S3,4
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S3,5
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S4,1
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S4,2
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S4,4
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S4,5
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S5,1
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S5,2
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S5,4
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S5,5
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S6,1
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S6,2
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S6,4
+1D Results\Adaptive Meshing\f=1.6\S-Parameters\S6,5
+1D Results\Adaptive Meshing\f=1.6\Solvertime
+1D Results\Adaptive Meshing\f=1.8\Meshcells
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\Delta\All S-Parameters
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S1,1
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S1,2
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S1,4
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S1,5
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S2,1
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S2,2
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S2,4
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S2,5
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S3,1
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S3,2
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S3,4
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S3,5
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S4,1
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S4,2
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S4,4
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S4,5
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S5,1
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S5,2
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S5,4
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S5,5
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S6,1
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S6,2
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S6,4
+1D Results\Adaptive Meshing\f=1.8\S-Parameters\S6,5
+1D Results\Adaptive Meshing\f=1.8\Solvertime
+1D Results\Adaptive Meshing\f=1\Meshcells
+1D Results\Adaptive Meshing\f=1\S-Parameters\Delta\All S-Parameters
+1D Results\Adaptive Meshing\f=1\S-Parameters\S1,1
+1D Results\Adaptive Meshing\f=1\S-Parameters\S1,2
+1D Results\Adaptive Meshing\f=1\S-Parameters\S1,4
+1D Results\Adaptive Meshing\f=1\S-Parameters\S1,5
+1D Results\Adaptive Meshing\f=1\S-Parameters\S2,1
+1D Results\Adaptive Meshing\f=1\S-Parameters\S2,2
+1D Results\Adaptive Meshing\f=1\S-Parameters\S2,4
+1D Results\Adaptive Meshing\f=1\S-Parameters\S2,5
+1D Results\Adaptive Meshing\f=1\S-Parameters\S3,1
+1D Results\Adaptive Meshing\f=1\S-Parameters\S3,2
+1D Results\Adaptive Meshing\f=1\S-Parameters\S3,4
+1D Results\Adaptive Meshing\f=1\S-Parameters\S3,5
+1D Results\Adaptive Meshing\f=1\S-Parameters\S4,1
+1D Results\Adaptive Meshing\f=1\S-Parameters\S4,2
+1D Results\Adaptive Meshing\f=1\S-Parameters\S4,4
+1D Results\Adaptive Meshing\f=1\S-Parameters\S4,5
+1D Results\Adaptive Meshing\f=1\S-Parameters\S5,1
+1D Results\Adaptive Meshing\f=1\S-Parameters\S5,2
+1D Results\Adaptive Meshing\f=1\S-Parameters\S5,4
+1D Results\Adaptive Meshing\f=1\S-Parameters\S5,5
+1D Results\Adaptive Meshing\f=1\S-Parameters\S6,1
+1D Results\Adaptive Meshing\f=1\S-Parameters\S6,2
+1D Results\Adaptive Meshing\f=1\S-Parameters\S6,4
+1D Results\Adaptive Meshing\f=1\S-Parameters\S6,5
+1D Results\Adaptive Meshing\f=1\Solvertime
+1D Results\Balance\Balance [1]
+1D Results\Balance\Balance [2]
+1D Results\Balance\Balance [4]
+1D Results\Balance\Balance [5]
+1D Results\Convergence\Equation System Solver\Number of Iterations\[1]
+1D Results\Convergence\Equation System Solver\Number of Iterations\[2]
+1D Results\Convergence\Equation System Solver\Number of Iterations\[4]
+1D Results\Convergence\Equation System Solver\Number of Iterations\[5]
+1D Results\Convergence\Equation System Solver\Relative Residual\[1]
+1D Results\Convergence\Equation System Solver\Relative Residual\[2]
+1D Results\Convergence\Equation System Solver\Relative Residual\[4]
+1D Results\Convergence\Equation System Solver\Relative Residual\[5]
+1D Results\Convergence\S-Parameters\All S-Parameters
+1D Results\Materials\B0_COPPER\Surface Impedance\Z' (FD - Interpolated)
+1D Results\Materials\B0_COPPER\Surface Impedance\Z' (Fit)
+1D Results\Materials\B0_COPPER\Surface Impedance\Z' (Theory)
+1D Results\Materials\B0_COPPER\Surface Impedance\Z'' (FD - Interpolated)
+1D Results\Materials\B0_COPPER\Surface Impedance\Z'' (Fit)
+1D Results\Materials\B0_COPPER\Surface Impedance\Z'' (Theory)
+1D Results\Materials\B1RT0_SOLDER_PROXY\Surface Impedance\Z' (FD - Interpolated)
+1D Results\Materials\B1RT0_SOLDER_PROXY\Surface Impedance\Z' (Fit)
+1D Results\Materials\B1RT0_SOLDER_PROXY\Surface Impedance\Z' (Theory)
+1D Results\Materials\B1RT0_SOLDER_PROXY\Surface Impedance\Z'' (FD - Interpolated)
+1D Results\Materials\B1RT0_SOLDER_PROXY\Surface Impedance\Z'' (Fit)
+1D Results\Materials\B1RT0_SOLDER_PROXY\Surface Impedance\Z'' (Theory)
+1D Results\Power\Excitation [1]\Loss in Dielectrics
+1D Results\Power\Excitation [1]\Loss in Metals
+1D Results\Power\Excitation [1]\Loss per Material\Metal loss in B0_COPPER
+1D Results\Power\Excitation [1]\Loss per Material\Metal loss in B1RT0_SOLDER_PROXY
+1D Results\Power\Excitation [1]\Loss per Material\Metal loss in [Boundary wall]
+1D Results\Power\Excitation [1]\Power Accepted
+1D Results\Power\Excitation [1]\Power Accepted per Port\Port 1
+1D Results\Power\Excitation [1]\Power Accepted per Port\Port 2
+1D Results\Power\Excitation [1]\Power Accepted per Port\Port 3
+1D Results\Power\Excitation [1]\Power Accepted per Port\Port 4
+1D Results\Power\Excitation [1]\Power Accepted per Port\Port 5
+1D Results\Power\Excitation [1]\Power Accepted per Port\Port 6
+1D Results\Power\Excitation [1]\Power Outgoing all Ports
+1D Results\Power\Excitation [1]\Power Stimulated
+1D Results\Power\Excitation [2]\Loss in Dielectrics
+1D Results\Power\Excitation [2]\Loss in Metals
+1D Results\Power\Excitation [2]\Loss per Material\Metal loss in B0_COPPER
+1D Results\Power\Excitation [2]\Loss per Material\Metal loss in B1RT0_SOLDER_PROXY
+1D Results\Power\Excitation [2]\Loss per Material\Metal loss in [Boundary wall]
+1D Results\Power\Excitation [2]\Power Accepted
+1D Results\Power\Excitation [2]\Power Accepted per Port\Port 1
+1D Results\Power\Excitation [2]\Power Accepted per Port\Port 2
+1D Results\Power\Excitation [2]\Power Accepted per Port\Port 3
+1D Results\Power\Excitation [2]\Power Accepted per Port\Port 4
+1D Results\Power\Excitation [2]\Power Accepted per Port\Port 5
+1D Results\Power\Excitation [2]\Power Accepted per Port\Port 6
+1D Results\Power\Excitation [2]\Power Outgoing all Ports
+1D Results\Power\Excitation [2]\Power Stimulated
+1D Results\Power\Excitation [4]\Loss in Dielectrics
+1D Results\Power\Excitation [4]\Loss in Metals
+1D Results\Power\Excitation [4]\Loss per Material\Metal loss in B0_COPPER
+1D Results\Power\Excitation [4]\Loss per Material\Metal loss in B1RT0_SOLDER_PROXY
+1D Results\Power\Excitation [4]\Loss per Material\Metal loss in [Boundary wall]
+1D Results\Power\Excitation [4]\Power Accepted
+1D Results\Power\Excitation [4]\Power Accepted per Port\Port 1
+1D Results\Power\Excitation [4]\Power Accepted per Port\Port 2
+1D Results\Power\Excitation [4]\Power Accepted per Port\Port 3
+1D Results\Power\Excitation [4]\Power Accepted per Port\Port 4
+1D Results\Power\Excitation [4]\Power Accepted per Port\Port 5
+1D Results\Power\Excitation [4]\Power Accepted per Port\Port 6
+1D Results\Power\Excitation [4]\Power Outgoing all Ports
+1D Results\Power\Excitation [4]\Power Stimulated
+1D Results\Power\Excitation [5]\Loss in Dielectrics
+1D Results\Power\Excitation [5]\Loss in Metals
+1D Results\Power\Excitation [5]\Loss per Material\Metal loss in B0_COPPER
+1D Results\Power\Excitation [5]\Loss per Material\Metal loss in B1RT0_SOLDER_PROXY
+1D Results\Power\Excitation [5]\Loss per Material\Metal loss in [Boundary wall]
+1D Results\Power\Excitation [5]\Power Accepted
+1D Results\Power\Excitation [5]\Power Accepted per Port\Port 1
+1D Results\Power\Excitation [5]\Power Accepted per Port\Port 2
+1D Results\Power\Excitation [5]\Power Accepted per Port\Port 3
+1D Results\Power\Excitation [5]\Power Accepted per Port\Port 4
+1D Results\Power\Excitation [5]\Power Accepted per Port\Port 5
+1D Results\Power\Excitation [5]\Power Accepted per Port\Port 6
+1D Results\Power\Excitation [5]\Power Outgoing all Ports
+1D Results\Power\Excitation [5]\Power Stimulated
+1D Results\Reference Impedance\ZRef 1(1)
+1D Results\Reference Impedance\ZRef 2(1)
+1D Results\Reference Impedance\ZRef 3(1)
+1D Results\Reference Impedance\ZRef 4(1)
+1D Results\Reference Impedance\ZRef 5(1)
+1D Results\Reference Impedance\ZRef 6(1)
+1D Results\S-Parameters\S1,1
+1D Results\S-Parameters\S1,2
+1D Results\S-Parameters\S1,4
+1D Results\S-Parameters\S1,5
+1D Results\S-Parameters\S2,1
+1D Results\S-Parameters\S2,2
+1D Results\S-Parameters\S2,4
+1D Results\S-Parameters\S2,5
+1D Results\S-Parameters\S3,1
+1D Results\S-Parameters\S3,2
+1D Results\S-Parameters\S3,4
+1D Results\S-Parameters\S3,5
+1D Results\S-Parameters\S4,1
+1D Results\S-Parameters\S4,2
+1D Results\S-Parameters\S4,4
+1D Results\S-Parameters\S4,5
+1D Results\S-Parameters\S5,1
+1D Results\S-Parameters\S5,2
+1D Results\S-Parameters\S5,4
+1D Results\S-Parameters\S5,5
+1D Results\S-Parameters\S6,1
+1D Results\S-Parameters\S6,2
+1D Results\S-Parameters\S6,4
+1D Results\S-Parameters\S6,5
+Excitation Signals\default

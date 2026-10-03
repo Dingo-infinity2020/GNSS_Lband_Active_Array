@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-R3-D2-M1-SOLVE-20260927",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "0ffeb8a7f547cb25b10be4deea0147d3308c9ce3",
+    "model_identity": "AR0_B1R_R3_D2_M1_DUAL_POL_CHARACTERIZATION"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_R3_D2_M1_AB_SOLVES",
+    "target_control_host": "NW",
+    "solver_host": "NW",
+    "entrypoint": "scripts/run_r1e1a4a_ar0_b1r_r3_d2_m1_ab_solves.py",
+    "stop_boundary": "one solve per A/B; compare; no retry; no sweep"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": true,
+    "polA_solver_launch_budget": 1,
+    "polB_solver_launch_budget": 1,
+    "retry_authorized": false
+  },
+  "source": {
+    "fixture_A_sha256": "33294aa6200264135582ec0c0742a1b4e6ca7b2148e1adece2f64388d81d3dd6",
+    "fixture_B_sha256": "11b3576ff5efb4326a761554fb94d8588d22c54691d713f8181c359415bdb70e"
+  },
+  "execution": {
+    "silent_retry_allowed": false,
+    "dry_run": false,
+    "ticket_id": "GNSS-AR0-B1R-R3-D2-M1-SOLVE-20260927"
+  }
+}

@@ -1,0 +1,16 @@
+output.txt|    Message output from D:\GNSS_Lband_Active_Array\_r1a5m2_maxpass8_work\R1A5M2_ADAPTIVE_MAXPASS8_V01
+output.txt|Mesh adaptation sample 1 of 1 (1.8 GHz)
+output.txt|Adaptive mesh refinement pass 1
+output.txt|Adaptive mesh refinement pass 2
+output.txt|Delta calculation
+output.txt|Adaptive mesh refinement pass 3
+output.txt|Delta calculation
+output.txt|Adaptive mesh refinement pass 4
+output.txt|Delta calculation
+output.txt|Adaptive mesh refinement pass 5
+output.txt|Delta calculation
+output.txt|Adaptive mesh refinement pass 6
+output.txt|Delta calculation
+output.txt|Adaptive mesh refinement pass 7
+output.txt|Delta calculation
+output.txt|Mesh adaptation terminated because the desired accuracy limit is reached.

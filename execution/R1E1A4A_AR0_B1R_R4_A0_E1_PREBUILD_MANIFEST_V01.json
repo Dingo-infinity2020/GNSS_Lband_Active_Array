@@ -1,0 +1,285 @@
+{
+  "schema_version": "0.2.8",
+  "status": "READY_FOR_STATIC_PREBUILD_AUDIT_NO_REMOTE",
+  "model": "R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE",
+  "coordinate_system": {
+    "q": "transverse branch local",
+    "v": "downstream",
+    "n": "board normal"
+  },
+  "substrate": {
+    "q_mm": [
+      -2,
+      2
+    ],
+    "v_mm": [
+      3,
+      13
+    ],
+    "n_mm": [
+      -1,
+      0
+    ],
+    "thickness_mm": 1,
+    "material": "FR4_COST_BASELINE",
+    "er": 4.2,
+    "tan_delta": 0.018
+  },
+  "copper": {
+    "thickness_mm": 0.035,
+    "sigma_S_per_m": 58000000,
+    "roughness": "smooth_baseline",
+    "solder_mask": "RF_coupon_keepout_baseline"
+  },
+  "backside_ground": {
+    "q_mm": [
+      -2,
+      2
+    ],
+    "v_mm": [
+      3,
+      13
+    ],
+    "n_mm": [
+      -1.035,
+      -1
+    ]
+  },
+  "package": {
+    "center_qv_mm": [
+      0.25,
+      7
+    ],
+    "body_mm": [
+      2,
+      2
+    ],
+    "rotation": "x_pkg_to_+v;y_pkg_to_+q",
+    "rf_in_qv_mm": [
+      0,
+      6.085
+    ],
+    "rf_out_qv_mm": [
+      0,
+      7.915
+    ],
+    "vbias_qv_mm": [
+      -0.5,
+      6.085
+    ]
+  },
+  "paddle_vias": [
+    {
+      "q_mm": -0.25,
+      "v_mm": 7,
+      "finished_hole_mm": 0.25,
+      "barrel_od_mm": 0.35
+    },
+    {
+      "q_mm": 0.25,
+      "v_mm": 7,
+      "finished_hole_mm": 0.25,
+      "barrel_od_mm": 0.35
+    },
+    {
+      "q_mm": 0.75,
+      "v_mm": 7,
+      "finished_hole_mm": 0.25,
+      "barrel_od_mm": 0.35
+    }
+  ],
+  "component_land_seed": {
+    "package": "0402",
+    "pad_axis_mm": 0.5,
+    "pad_transverse_mm": 0.6,
+    "gap_mm": 0.4,
+    "center_spacing_mm": 0.9
+  },
+  "C_IN": {
+    "value_pF": 100,
+    "axis": "v",
+    "pad_centers_qv_mm": [
+      [
+        0,
+        4.65
+      ],
+      [
+        0,
+        5.55
+      ]
+    ],
+    "family": "Murata GRM1555C1H101JA01#"
+  },
+  "C_OUT": {
+    "value_pF": 100,
+    "axis": "v",
+    "pad_centers_qv_mm": [
+      [
+        0,
+        8.45
+      ],
+      [
+        0,
+        9.35
+      ]
+    ],
+    "family": "Murata GRM1555C1H101JA01#"
+  },
+  "L1": {
+    "value_nH": 18,
+    "part": "Coilcraft 0402CS-18NXGRW",
+    "axis": "v",
+    "pad_centers_qv_mm": [
+      [
+        1.45,
+        8.45
+      ],
+      [
+        1.45,
+        9.35
+      ]
+    ]
+  },
+  "C_RF": {
+    "value_pF": 100,
+    "axis": "v",
+    "pad_centers_qv_mm": [
+      [
+        1.45,
+        10.25
+      ],
+      [
+        1.45,
+        11.15
+      ]
+    ],
+    "ground_via_qv_mm": [
+      1.45,
+      11.15
+    ]
+  },
+  "ports": [
+    {
+      "name": "E_UP",
+      "q_mm": 0,
+      "v_mm": 4.65,
+      "z0_ohm": 50
+    },
+    {
+      "name": "P_IN",
+      "q_mm": 0,
+      "v_mm": 6.085,
+      "z0_ohm": 50
+    },
+    {
+      "name": "P_OUT",
+      "q_mm": 0,
+      "v_mm": 7.915,
+      "z0_ohm": 50
+    },
+    {
+      "name": "E_DN",
+      "q_mm": 0,
+      "v_mm": 9.35,
+      "z0_ohm": 50
+    },
+    {
+      "name": "B_VDD",
+      "q_mm": 1.45,
+      "v_mm": 9.8,
+      "z0_ohm": 50
+    },
+    {
+      "name": "B_VBIAS",
+      "q_mm": -0.5,
+      "v_mm": 6.085,
+      "z0_ohm": 50
+    }
+  ],
+  "port_n_mm": {
+    "signal": 0,
+    "ground": -1
+  },
+  "fixed_ground_pins": [
+    3,
+    4,
+    5,
+    6,
+    8
+  ],
+  "circuit_connections": {
+    "C_IN": [
+      "E_UP",
+      "P_IN"
+    ],
+    "QPL9547": [
+      "P_IN",
+      "P_OUT"
+    ],
+    "C_OUT": [
+      "P_OUT",
+      "E_DN"
+    ],
+    "L1": [
+      "P_OUT",
+      "B_VDD"
+    ],
+    "C_RF": [
+      "B_VDD",
+      "GROUND"
+    ],
+    "C_BULK": [
+      "B_VDD",
+      "GROUND"
+    ],
+    "R4": [
+      "B_VDD",
+      "B_VBIAS"
+    ]
+  },
+  "clearances_mm": {
+    "signal_to_via_barrel": 0.2,
+    "via_barrel_to_board_edge": 0.2,
+    "unrelated_top_nodes": 0.2,
+    "package_body_to_edge": 0.25
+  },
+  "build_authorized": false,
+  "solve_authorized": false,
+  "grounded_pin_spokes": {
+    "pins": [
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "width_q_mm": 0.2,
+    "upstream_v_mm": [
+      6.3,
+      6.6
+    ],
+    "downstream_v_mm": [
+      7.4,
+      7.7
+    ],
+    "upstream_centers_q_mm": [
+      0.5,
+      1
+    ],
+    "downstream_centers_q_mm": [
+      -0.5,
+      0.5,
+      1
+    ],
+    "node": "EXPOSED_PADDLE_TO_LOCAL_GROUND"
+  },
+  "B_VBIAS_scope": {
+    "physical_node": "pin-1 land only",
+    "R4_physical_pads_in_E1": false,
+    "circuit_connection": "B_VDD -- 3.32kOhm -- B_VBIAS",
+    "R4_physical_layout_stage": "A0-E2"
+  },
+  "contracts": [
+    "docs/R1E1A4A_AR0_B1R_R4_A0_E1_GROUNDED_PIN_SPOKE_CONTRACT_V01.md"
+  ]
+}

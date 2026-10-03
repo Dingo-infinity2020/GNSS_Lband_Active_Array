@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.2.11",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-POLA-PREFREEZE-20260928",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_INTEGRATED_EM_CONTRACT_FREEZE",
+  "status": "PASS_R4_A0_E2A_POLA_CONTRACT_FROZEN_SOURCE_IMPLEMENTATION_NEXT",
+  "remote_calls": 0,
+  "build_invocations": 0,
+  "solver_invocations": 0,
+  "freeze_doc": "docs/R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_INTEGRATED_EM_FREEZE_V01.md",
+  "manifest": "execution/R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_INTEGRATED_EM_MANIFEST_V01.json",
+  "key_decisions": {
+    "polA_first": true,
+    "full_radiator_retained": true,
+    "raw_em_port_count": 12,
+    "frozen_device_plane_count": 4,
+    "raw_four_port_rejected_as_topologically_incomplete": true,
+    "circuit_passives_remain_outside_raw_cst": true,
+    "local_ground": "G-L0_BRANCH_LOCAL",
+    "remote_ground_merge": false,
+    "same_package_rotation_both_branches": true,
+    "no_impedance_optimization": true
+  },
+  "next_stage": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_SOURCE_IMPLEMENTATION",
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  }
+}

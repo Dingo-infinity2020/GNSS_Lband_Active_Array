@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2B-S0L-FORMAL-HOLD-20260929",
+  "status": "HOLD_R1E1A4A_AR0_B1R_R4_A0_E2B_S0L_EXECUTION",
+  "classification": "HOLD_POSTSOLVE_QUALIFICATION_PARSER_EXCEPTION",
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "solver_runner_exit_code": 9,
+  "source_artifact_sha256": "002eb117b0716cf2a47856b4552dd96ef4567358c7dd5827cbe766d10a633f39",
+  "configured_copy_sha256": "d6f9ded59390013f9c606d7b599f01a89b554a5b172844d01e55db4ecd2b5842",
+  "solved_artifact": {
+    "path": "D:\\GNSS_R4A0E2B_S0L_SOLVE_20260929\\R1E1A4A_AR0_B1R_R4_A0_E2B_S0L_LOADED_SOURCE_SOLVED_V01.cst",
+    "sha256": "2abafb4435a6f1dc7bfcadec029ee1c81436cf91f27fefe99ca64337820eba02"
+  },
+  "presolve": {
+    "all_nine_checks_pass": true,
+    "source_excitation_set": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "matched_load_only_set": [
+      3,
+      6
+    ]
+  },
+  "native_solver_evidence": {
+    "observed_delta_s": [
+      0.0358152,
+      0.00656218,
+      0.00869598
+    ],
+    "final_two_below_0p02": true,
+    "native_termination": "Mesh adaptation terminated because the desired accuracy limit is reached.",
+    "broadband_samples": 8,
+    "broadband_converged": true
+  },
+  "failure": {
+    "phase": "postsolve qualification",
+    "exception": "sre_constants.error: bad character range \\\\-E at position 35",
+    "root_cause": "Malformed numeric regex introduced in future native-log parser patch; scientific solve completed before exception."
+  },
+  "formal_result_note": "Formal result remains HOLD. No retry is authorized. Qualification may continue only by read-only recovery on this immutable solved artifact.",
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2B_S0L_READONLY_QUALIFICATION_RECOVERY"
+}

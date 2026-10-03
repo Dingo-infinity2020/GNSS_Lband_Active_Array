@@ -1,0 +1,79 @@
+{
+  "schema_version": "0.2.10",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E1-S0-PASSIVE-EM-SOLVE-20260928",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_branch": "project/r0-charts-scaffold",
+    "model_identity": "R1E1A4A_AR0_B1R_R4_A0_E1_V03_PASSIVE_SIX_PORT_NETWORK"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_R4_A0_E1_S0_PASSIVE_EM_SOLVE",
+    "target_control_host": "NW",
+    "solve_host": "NW",
+    "source_artifact": "D:\\\\GNSS_R4A0E1_20260928_RECOVERY_ARTIFACTS\\\\R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_BUILD_ONLY_V03.cst",
+    "source_artifact_sha256": "aee6bc30085c002b6063de80f110096f6b62911bf897007d133b309e5a962b36",
+    "solver_macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E1_PASSIVE_EM_SOLVER_CONFIG_V01.mcr",
+    "solver_macro_blob": "14554ad16fb7cb982ed7d9c03d0dc662bb4dec88",
+    "runner": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e1_passive_em_solve.py",
+    "runner_blob": "5ba9319fc5fc81a5bb48fab7a07d5247125b259b",
+    "target_root": "D:\\\\GNSS_R4A0E1_20260928_E1S0_PASSIVE_SOLVE",
+    "target_artifact": "R1E1A4A_AR0_B1R_R4_A0_E1_PASSIVE_EM_SOLVED_V01.cst",
+    "evidence_root": "D:\\\\GNSS_R4A0E1_20260928_E1S0_PASSIVE_SOLVE\\\\evidence",
+    "stop_boundary": "one source-verified complete-project copy -> persistent solver config -> presolve audit -> one formal solver invocation -> read-only six-port qualification -> STOP"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "execution": {
+    "formal_solver_budget": 1,
+    "automatic_retry_budget": 0,
+    "silent_retry_allowed": false,
+    "fresh_solve_path_required": true,
+    "source_artifact_protected": true,
+    "no_geometry_redesign": true,
+    "authorization_note": "User explicitly authorized exactly one E1-S0 passive six-port EM solve on 2026-09-28. Automatic retry remains forbidden.",
+    "provenance_rebaseline": "PASS_R4_A0_E1_V03_POST_HUMAN_SOURCE_IDENTITY",
+    "provenance_rebaseline_result": "execution/result_packets/R1E1A4A_AR0_B1R_R4_A0_E1_V03_POSTHUMAN_SOURCE_DRIFT_result.json",
+    "formal_solver_invocations_consumed": 1,
+    "automatic_retries": 0,
+    "retry_authorized": false,
+    "final_status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E1_PASSIVE_EM_CHARACTERIZED",
+    "result_packet": "execution/result_packets/R1E1A4A_AR0_B1R_R4_A0_E1_S0_PASSIVE_EM_SOLVE_result.json"
+  },
+  "solver_contract": {
+    "frequency_ghz": [
+      1,
+      1.8
+    ],
+    "decision_band_ghz": [
+      1.15,
+      1.65
+    ],
+    "solver": "HF Frequency Domain",
+    "mesh": "second-order tetrahedral adaptive",
+    "max_delta_s": 0.02,
+    "delta_s_checks": 2,
+    "min_passes": 3,
+    "max_passes": 16,
+    "ports": 6
+  },
+  "hard_gates": {
+    "final_two_delta_s_lte_0p02": true,
+    "full_6x6_common_run": true,
+    "max_reciprocity_abs_complex_lte_0p02": true,
+    "max_column_power_sum_lte_1p02": true,
+    "no_fatal_solver_error": true,
+    "no_mesh_corruption": true
+  },
+  "interpretation": {
+    "s11_product_match_authority": false,
+    "end_to_end_s21_insertion_loss_authority": false,
+    "coupling_sentinels_are_hard_gates": false,
+    "gnss_reference_interpolation": "linear complex",
+    "next_if_clean": "A0-E2 integrated antenna EM contract freeze",
+    "next_if_coupling_review": "E1-M1 field/current/loss mechanism probe"
+  }
+}

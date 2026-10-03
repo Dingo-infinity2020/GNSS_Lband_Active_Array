@@ -1,0 +1,105 @@
+{
+  "schema_version": "0.1",
+  "architecture": "AR0-B0_STALK_TOP_TWIN_MSL_TWIN_LNA",
+  "status": "BUILD_AUTHORIZED",
+  "parent": {
+    "radiator_feed_authority": "R1A5F differential terminal geometry",
+    "terminal_radius_mm": 3,
+    "pol_a": [
+      "NE",
+      "SW"
+    ],
+    "pol_b": [
+      "NW",
+      "SE"
+    ]
+  },
+  "hard_rules": {
+    "radiator_ground_overlap_allowed": false,
+    "stalk_ground_galvanic_contact_to_radiator_allowed": false,
+    "pre_lna_passive_balun": false,
+    "signal_contacts_per_terminal": 1,
+    "t01_pre_lna_use": false,
+    "via_must_cross_positive_fr4": true
+  },
+  "stack": {
+    "substrate": "FR4_COST_BASELINE",
+    "thickness_mm": 1,
+    "copper_sigma_s_per_m": 58000000
+  },
+  "feed_head": {
+    "half_width_mm": 5,
+    "central_slot_half_width_mm": 1,
+    "depth_mm": 12,
+    "ground_setback_mm": 3,
+    "prebuild_static_collision_check": "PASS_AT_SLOT_HALF_WIDTH_1P0MM; FAIL_AT_0P75MM"
+  },
+  "msl": {
+    "count_per_polarization": 2,
+    "center_u_mm": [
+      -3,
+      3
+    ],
+    "nominal_width_mm": 1.9,
+    "topology": "front-face microstrip with backside ground rail below ground setback",
+    "role": "first-cut near-50-ohm carrier; not final noise match"
+  },
+  "lna": {
+    "candidate": "QPL9547",
+    "count_per_polarization": 2,
+    "total_dual_pol": 4,
+    "package_envelope_mm": [
+      2,
+      2
+    ],
+    "nominal_centers_local_uv_mm": [
+      [
+        -3,
+        7
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "actual_footprint_frozen": false,
+    "active_model_authorized": false
+  },
+  "ground": {
+    "radiator_pcb_ground_forbidden": true,
+    "upper_unbacked_zone_v_mm": [
+      0,
+      3
+    ],
+    "prong_ground_rails_start_v_mm": 3,
+    "broad_common_ground_merge": "DEFERRED_BELOW_FEED_HEAD"
+  },
+  "mechanics": {
+    "old_h3a_top_notch_inherited": false,
+    "old_h3a_top_mechanical_lands_inherited": false,
+    "orthogonal_feed_head_collision_allowed": false,
+    "lower_interlock": "DEFERRED_BUT_MUST_NOT_CHANGE_FEED_HEAD"
+  },
+  "deferred": {
+    "ground_setback_sentinels_mm": [
+      2,
+      4
+    ],
+    "lna_padmap": true,
+    "lna_ground_vias": true,
+    "bias_network": true,
+    "output_combiner": true,
+    "post_lna_t01": true,
+    "lower_stalk_body": true,
+    "architecture_a": true
+  },
+  "next_stage": "R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_AWAIT_AUTH",
+  "feedthrough": {
+    "type": "signal-only plated through feedthrough",
+    "outer_radius_mm": 0.2,
+    "inner_radius_mm": 0.1,
+    "substrate_hole_radius_mm": 0.2,
+    "ground_contact": false,
+    "freeze_doc": "docs/R1E1A4A_AR0_B0G_SIGNAL_FEEDTHROUGH_FREEZE_V01.md"
+  }
+}

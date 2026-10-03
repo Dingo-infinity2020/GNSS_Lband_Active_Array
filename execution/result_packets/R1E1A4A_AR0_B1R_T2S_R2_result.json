@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-T2S-R2-20260927",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_T2S_R2_NW_QUALIFICATION",
+  "final_status": "PASS_R1E1A4A_AR0_B1R_T2S_R2_NW_BASELINE_CHARACTERIZED",
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "result_reader_recovery": "EXPLICIT_RUN_ID_1_NO_SOLVER_RERUN",
+  "source_fixture_sha256": "ae3bc705fea01e3a8f1c4a52458f447726843ba32a22d247c085c62b8bb83a7b",
+  "solved_sha256": "0c099f4de12bff222919c24f16114f2e19dd7ec872b4644ce064c0cf248af54c",
+  "numerical_pass": true,
+  "passes_executed": 8,
+  "final_two_delta_s": [
+    0.0000032227382041216057,
+    0.000020071682606251655
+  ],
+  "scientific_verdict": "STRONG_CONCERN",
+  "core_metrics": {
+    "worst_S11_dB": -0.39635673669222937,
+    "worst_amp_imbalance_dB": 0.0012478257087084404,
+    "worst_phase_error_deg": 0.020536786427612697,
+    "worst_CMR_dB": -74.28541932747102,
+    "worst_normalized_excess_loss_dB": 0.1267529332809595,
+    "min_power_closure": 0.9930400523300883,
+    "max_power_closure": 0.9976037222094962
+  },
+  "reference_points": {
+    "L5": {
+      "f_GHz": 1.1768,
+      "S11_dB": -0.42241273497739035,
+      "amp_imbalance_dB": 0.00013270103423518602,
+      "phase_error_deg": 0.007253442339049343,
+      "CMR_dB": -83.90937534477968,
+      "normalized_excess_loss_dB": 0.1211784985759139
+    },
+    "L2": {
+      "f_GHz": 1.2272,
+      "S11_dB": -0.47609472828037436,
+      "amp_imbalance_dB": 0.000018929256564520966,
+      "phase_error_deg": 0.008280554970895082,
+      "CMR_dB": -82.82087623908063,
+      "normalized_excess_loss_dB": 0.12149677679912618
+    },
+    "L1": {
+      "f_GHz": 1.5752,
+      "S11_dB": -1.030539733856997,
+      "amp_imbalance_dB": 0.0010560820715717427,
+      "phase_error_deg": 0.01783758779629352,
+      "CMR_dB": -75.53982818861425,
+      "normalized_excess_loss_dB": 0.12568784038642966
+    }
+  },
+  "evidence": [
+    "evidence/r1e1a4a_ar0_b1r_t2s_r2_nw_20260927_solve01/recovery_summary.json",
+    "evidence/r1e1a4a_ar0_b1r_t2s_r2_nw_20260927_solve01/t2s_r2_run1_metrics.csv",
+    "evidence/r1e1a4a_ar0_b1r_t2s_r2_nw_20260927_solve01/native_output_txt",
+    "evidence/r1e1a4a_ar0_b1r_t2s_r2_nw_20260927_solve01/native_Model_log"
+  ],
+  "next_boundary": "AR0_B1R_T2S_R2_RESULT_REVIEW"
+}

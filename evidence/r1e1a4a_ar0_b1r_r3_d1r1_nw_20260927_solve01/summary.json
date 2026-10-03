@@ -1,0 +1,292 @@
+{
+  "status": "PASS_R1E1A4A_AR0_B1R_R3_D1R1_DIAGNOSTIC_SOLVES",
+  "branches": {
+    "A": {
+      "status": "PASS_R1E1A4A_AR0_B1R_R3_D1R1A_CHARACTERIZED",
+      "formal_solver_invocations": 1,
+      "automatic_retries": 0,
+      "source_sha256": "5aa3dd603607a70f7ac190c746e25af550f6cfcb81a9b1bb45846d9c776b6bcd",
+      "configured_sha256": "70e2e73f0ba21da86eaaa9c185320d9baab1cc9a667ffef4999a356921856de4",
+      "solved_sha256": "4f3cde7d98bb84ecc9294271bc6a98e230eaa678100d6e8e7bc2f4bb80d67cb4",
+      "solved_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d1r1_solve_work\\A\\R1E1A4A_AR0_B1R_R3_D1R1A_SOLVED_V01.cst",
+      "native_flags": {
+        "bad_conductor_warning": false,
+        "mesh_corruption": false,
+        "large_reflection_warning": false
+      },
+      "metrics": {
+        "decision_band_GHz": [
+          1.15,
+          1.65
+        ],
+        "core": {
+          "worst_S11_dB": -4.002896473819714,
+          "worst_S22_dB": -4.004688150484847,
+          "min_S21_dB": -2.2202626244001005,
+          "worst_reciprocity_abs_dB": 9.100812529361235e-06,
+          "worst_normalized_excess_loss_dB": 0.017369059297284016,
+          "min_power_closure": 0.997596553460212,
+          "max_power_closure": 0.9982144321586185,
+          "Zin_real_range_ohm": [
+            124.67940867882021,
+            158.86662215083456
+          ],
+          "Zin_imag_range_ohm": [
+            133.93146781799257,
+            196.26397331599014
+          ]
+        },
+        "reference_samples": {
+          "L5": {
+            "f_GHz": 1.1768,
+            "S11_dB": -5.545955891847903,
+            "S22_dB": -5.546718086238914,
+            "S21_dB": -1.4307994362872147,
+            "S12_dB": -1.4307921081699917,
+            "reciprocity_abs_dB": 7.328117223037722e-06,
+            "power_closure": 0.9981882347765104,
+            "mismatch_normalized_eta": 0.9974875966319402,
+            "normalized_excess_loss_dB": 0.010924958896312943,
+            "Zin_real_ohm": 125.98700067553007,
+            "Zin_imag_ohm": 137.16099556588028
+          },
+          "L2": {
+            "f_GHz": 1.2272,
+            "S11_dB": -5.324438428624665,
+            "S22_dB": -5.325279646593659,
+            "S21_dB": -1.520128922498546,
+            "S12_dB": -1.5201258605039798,
+            "reciprocity_abs_dB": 3.06199456612255e-06,
+            "power_closure": 0.9981370449963907,
+            "mismatch_normalized_eta": 0.9973632520307536,
+            "normalized_excess_loss_dB": 0.011466374554089482,
+            "Zin_real_ohm": 128.6139727436768,
+            "Zin_imag_ohm": 143.35120965697502
+          },
+          "L1": {
+            "f_GHz": 1.5752000000000002,
+            "S11_dB": -4.179632404958161,
+            "S22_dB": -4.181209441385086,
+            "S21_dB": -2.1060626155465827,
+            "S12_dB": -2.1060618752131237,
+            "reciprocity_abs_dB": 7.403334589817234e-07,
+            "power_closure": 0.9977114556660434,
+            "mismatch_normalized_eta": 0.9962969940353092,
+            "normalized_excess_loss_dB": 0.016111800059986754,
+            "Zin_real_ohm": 152.28889181977428,
+            "Zin_imag_ohm": 186.85675025596836
+          }
+        },
+        "adaptive": {
+          "selected_run_id": 1,
+          "sparameter_run_ids": {
+            "1D Results\\S-Parameters\\S1,1": [
+              0,
+              1
+            ],
+            "1D Results\\S-Parameters\\S1,2": [
+              0,
+              1
+            ],
+            "1D Results\\S-Parameters\\S2,1": [
+              0,
+              1
+            ],
+            "1D Results\\S-Parameters\\S2,2": [
+              0,
+              1
+            ]
+          },
+          "convergence_run_ids": [
+            0,
+            1
+          ],
+          "convergence_selected_run_id": 1,
+          "delta_sequence": [
+            {
+              "pass": 3,
+              "delta_s": 0.037740748966005676
+            },
+            {
+              "pass": 4,
+              "delta_s": 0.0006551340012171357
+            },
+            {
+              "pass": 5,
+              "delta_s": 9.55588719615928e-06
+            }
+          ]
+        },
+        "numerical_pass": true,
+        "final_two_delta_s": [
+          0.0006551340012171357,
+          9.55588719615928e-06
+        ],
+        "scientific_verdict": "NEEDS_OPTIMIZATION",
+        "diagnostics": {
+          "return_acceptable": false,
+          "loss_acceptable": true,
+          "passivity_closure_reasonable": true,
+          "strong_return_concern": false,
+          "loss_concern": false
+        }
+      },
+      "scientific_verdict": "NEEDS_OPTIMIZATION"
+    },
+    "B": {
+      "status": "PASS_R1E1A4A_AR0_B1R_R3_D1R1B_CHARACTERIZED",
+      "formal_solver_invocations": 1,
+      "automatic_retries": 0,
+      "source_sha256": "93d97b06bc2a739f84f88454a7efa76b27731e7bbdb2714214118a3ec0bafb35",
+      "configured_sha256": "2060bd8bfd01e36fc6ce7c29f2bcf027f286b1667209be73a819a9c56e0d1b3b",
+      "solved_sha256": "284453ae96f6bb3a0c2cb14e39c644547a4d66edbca119b61c9ddd27e8e8aa35",
+      "solved_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d1r1_solve_work\\B\\R1E1A4A_AR0_B1R_R3_D1R1B_SOLVED_V01.cst",
+      "native_flags": {
+        "bad_conductor_warning": false,
+        "mesh_corruption": false,
+        "large_reflection_warning": false
+      },
+      "metrics": {
+        "decision_band_GHz": [
+          1.15,
+          1.65
+        ],
+        "core": {
+          "worst_S11_dB": -5.660736849433523,
+          "worst_amp_imbalance_dB": 0.001980707487052576,
+          "worst_phase_error_deg": 0.041962423474274146,
+          "worst_CMR_dB": -68.32398289377916,
+          "worst_normalized_excess_loss_dB": 0.01838077910028581,
+          "min_power_closure": 0.9969236757187498,
+          "max_power_closure": 0.9976621667357245,
+          "Zin_real_range_ohm": [
+            111.00035590336527,
+            120.51908128984395
+          ],
+          "Zin_imag_range_ohm": [
+            94.22361017435684,
+            132.49169753629334
+          ]
+        },
+        "reference_samples": {
+          "L5": {
+            "f_GHz": 1.1768,
+            "S11_dB": -7.5899620602742655,
+            "S21_dB": -3.8546156787777175,
+            "S31_dB": -3.8532809166481035,
+            "amp_imbalance_dB": 0.0013347621296134755,
+            "phase_error_deg": 0.024223256291634243,
+            "CMR_dB": -72.95948808633158,
+            "power_closure": 0.9976282976669602,
+            "normalized_excess_loss_dB": 0.012490638504089166,
+            "Zin_real_ohm": 111.46537737034339,
+            "Zin_imag_ohm": 96.29483360781164
+          },
+          "L2": {
+            "f_GHz": 1.2272,
+            "S11_dB": -7.329382266301051,
+            "S21_dB": -3.912189859224794,
+            "S31_dB": -3.910767731733405,
+            "amp_imbalance_dB": 0.0014221274913896707,
+            "phase_error_deg": 0.025825065312233164,
+            "CMR_dB": -72.40394971948079,
+            "power_closure": 0.9975630916497797,
+            "normalized_excess_loss_dB": 0.013004420444676444,
+            "Zin_real_ohm": 112.37070774114895,
+            "Zin_imag_ohm": 100.23363262553484
+          },
+          "L1": {
+            "f_GHz": 1.5752000000000002,
+            "S11_dB": -5.901886960370515,
+            "S21_dB": -4.318202092432846,
+            "S31_dB": -4.31628564759373,
+            "amp_imbalance_dB": 0.0019164448391152814,
+            "phase_error_deg": 0.03876878217852209,
+            "CMR_dB": -68.97457260640391,
+            "power_closure": 0.997053850782624,
+            "normalized_excess_loss_dB": 0.017253232872134164,
+            "Zin_real_ohm": 119.05175453209505,
+            "Zin_imag_ohm": 126.89593087472252
+          }
+        },
+        "adaptive": {
+          "selected_run_id": 1,
+          "sparameter_run_ids": {
+            "1D Results\\S-Parameters\\S1,1": [
+              0,
+              1
+            ],
+            "1D Results\\S-Parameters\\S1,2": [
+              0,
+              1
+            ],
+            "1D Results\\S-Parameters\\S1,3": [
+              0,
+              1
+            ],
+            "1D Results\\S-Parameters\\S2,1": [
+              0,
+              1
+            ],
+            "1D Results\\S-Parameters\\S2,2": [
+              0,
+              1
+            ],
+            "1D Results\\S-Parameters\\S2,3": [
+              0,
+              1
+            ],
+            "1D Results\\S-Parameters\\S3,1": [
+              0,
+              1
+            ],
+            "1D Results\\S-Parameters\\S3,2": [
+              0,
+              1
+            ],
+            "1D Results\\S-Parameters\\S3,3": [
+              0,
+              1
+            ]
+          },
+          "convergence_run_ids": [
+            0,
+            1
+          ],
+          "convergence_selected_run_id": 1,
+          "delta_sequence": [
+            {
+              "pass": 3,
+              "delta_s": 0.06812738311719467
+            },
+            {
+              "pass": 4,
+              "delta_s": 0.0012170160509052945
+            },
+            {
+              "pass": 5,
+              "delta_s": 3.489187018933145e-05
+            }
+          ]
+        },
+        "numerical_pass": true,
+        "final_two_delta_s": [
+          0.0012170160509052945,
+          3.489187018933145e-05
+        ],
+        "scientific_verdict": "NEEDS_OPTIMIZATION",
+        "diagnostics": {
+          "return_acceptable": false,
+          "amp_acceptable": true,
+          "phase_acceptable": true,
+          "cmr_acceptable": true,
+          "loss_acceptable": true,
+          "passivity_closure_reasonable": true,
+          "strong_return_concern": false,
+          "loss_concern": false
+        }
+      },
+      "scientific_verdict": "NEEDS_OPTIMIZATION"
+    }
+  }
+}

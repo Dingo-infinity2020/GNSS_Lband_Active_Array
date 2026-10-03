@@ -1,0 +1,58 @@
+Traceback (most recent call last):
+  File ".\scripts\run_r1e1a4a_ar0_b0g_build_only.py", line 336, in <module>
+    sys.exit(run(a.repo,a.evidence,a.work,a.parent_cst))
+  File ".\scripts\run_r1e1a4a_ar0_b0g_build_only.py", line 252, in run
+    if not prj.schematic.execute_vba_code(vba(paircheck_vba(pairs,pairlist))):
+RuntimeError: An error occurred while trying to execute execute_vba_code:
+Error in VBA code:
+Sub Main()
+On Error Resume Next
+Dim f As Integer
+f=FreeFile
+Open "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold\evidence\r1e1a4a_ar0_b0g_nw_20260926_build01\targeted_intersections.txt" For Output As #f
+If Solid.DoTheseGeometricallyIntersect("B0_BackGround:A_P_BACK_GND","TopCopper:TOP_COPPER") Then Print #f, "HIT|GROUND_VS_RADIATOR_COPPER|B0_BackGround:A_P_BACK_GND|TopCopper:TOP_COPPER"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:A_P_SIG_FEEDTHROUGH","B0_BackGround:A_P_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:A_P_SIG_FEEDTHROUGH|B0_BackGround:A_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:A_P_SIG_FEEDTHROUGH","B0_BackGround:A_N_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:A_P_SIG_FEEDTHROUGH|B0_BackGround:A_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:A_P_SIG_FEEDTHROUGH","B0_BackGround:B_P_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:A_P_SIG_FEEDTHROUGH|B0_BackGround:B_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:A_P_SIG_FEEDTHROUGH","B0_BackGround:B_N_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:A_P_SIG_FEEDTHROUGH|B0_BackGround:B_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:A_P_QPL9547_ENV","B0_Stalk:B_P_PRONG") Then Print #f, "HIT|LNA_ENV_VS_OTHER_STALK|B0_LNAEnvelope:A_P_QPL9547_ENV|B0_Stalk:B_P_PRONG"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:A_P_QPL9547_ENV","B0_BackGround:B_P_BACK_GND") Then Print #f, "HIT|LNA_ENV_VS_OTHER_GROUND|B0_LNAEnvelope:A_P_QPL9547_ENV|B0_BackGround:B_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:A_P_QPL9547_ENV","B0_Stalk:B_N_PRONG") Then Print #f, "HIT|LNA_ENV_VS_OTHER_STALK|B0_LNAEnvelope:A_P_QPL9547_ENV|B0_Stalk:B_N_PRONG"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:A_P_QPL9547_ENV","B0_BackGround:B_N_BACK_GND") Then Print #f, "HIT|LNA_ENV_VS_OTHER_GROUND|B0_LNAEnvelope:A_P_QPL9547_ENV|B0_BackGround:B_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_BackGround:A_N_BACK_GND","TopCopper:TOP_COPPER") Then Print #f, "HIT|GROUND_VS_RADIATOR_COPPER|B0_BackGround:A_N_BACK_GND|TopCopper:TOP_COPPER"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:A_N_SIG_FEEDTHROUGH","B0_BackGround:A_P_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:A_N_SIG_FEEDTHROUGH|B0_BackGround:A_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:A_N_SIG_FEEDTHROUGH","B0_BackGround:A_N_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:A_N_SIG_FEEDTHROUGH|B0_BackGround:A_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:A_N_SIG_FEEDTHROUGH","B0_BackGround:B_P_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:A_N_SIG_FEEDTHROUGH|B0_BackGround:B_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:A_N_SIG_FEEDTHROUGH","B0_BackGround:B_N_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:A_N_SIG_FEEDTHROUGH|B0_BackGround:B_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:A_N_QPL9547_ENV","B0_Stalk:B_P_PRONG") Then Print #f, "HIT|LNA_ENV_VS_OTHER_STALK|B0_LNAEnvelope:A_N_QPL9547_ENV|B0_Stalk:B_P_PRONG"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:A_N_QPL9547_ENV","B0_BackGround:B_P_BACK_GND") Then Print #f, "HIT|LNA_ENV_VS_OTHER_GROUND|B0_LNAEnvelope:A_N_QPL9547_ENV|B0_BackGround:B_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:A_N_QPL9547_ENV","B0_Stalk:B_N_PRONG") Then Print #f, "HIT|LNA_ENV_VS_OTHER_STALK|B0_LNAEnvelope:A_N_QPL9547_ENV|B0_Stalk:B_N_PRONG"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:A_N_QPL9547_ENV","B0_BackGround:B_N_BACK_GND") Then Print #f, "HIT|LNA_ENV_VS_OTHER_GROUND|B0_LNAEnvelope:A_N_QPL9547_ENV|B0_BackGround:B_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_BackGround:B_P_BACK_GND","TopCopper:TOP_COPPER") Then Print #f, "HIT|GROUND_VS_RADIATOR_COPPER|B0_BackGround:B_P_BACK_GND|TopCopper:TOP_COPPER"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:B_P_SIG_FEEDTHROUGH","B0_BackGround:A_P_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:B_P_SIG_FEEDTHROUGH|B0_BackGround:A_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:B_P_SIG_FEEDTHROUGH","B0_BackGround:A_N_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:B_P_SIG_FEEDTHROUGH|B0_BackGround:A_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:B_P_SIG_FEEDTHROUGH","B0_BackGround:B_P_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:B_P_SIG_FEEDTHROUGH|B0_BackGround:B_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:B_P_SIG_FEEDTHROUGH","B0_BackGround:B_N_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:B_P_SIG_FEEDTHROUGH|B0_BackGround:B_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:B_P_QPL9547_ENV","B0_Stalk:A_P_PRONG") Then Print #f, "HIT|LNA_ENV_VS_OTHER_STALK|B0_LNAEnvelope:B_P_QPL9547_ENV|B0_Stalk:A_P_PRONG"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:B_P_QPL9547_ENV","B0_BackGround:A_P_BACK_GND") Then Print #f, "HIT|LNA_ENV_VS_OTHER_GROUND|B0_LNAEnvelope:B_P_QPL9547_ENV|B0_BackGround:A_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:B_P_QPL9547_ENV","B0_Stalk:A_N_PRONG") Then Print #f, "HIT|LNA_ENV_VS_OTHER_STALK|B0_LNAEnvelope:B_P_QPL9547_ENV|B0_Stalk:A_N_PRONG"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:B_P_QPL9547_ENV","B0_BackGround:A_N_BACK_GND") Then Print #f, "HIT|LNA_ENV_VS_OTHER_GROUND|B0_LNAEnvelope:B_P_QPL9547_ENV|B0_BackGround:A_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_BackGround:B_N_BACK_GND","TopCopper:TOP_COPPER") Then Print #f, "HIT|GROUND_VS_RADIATOR_COPPER|B0_BackGround:B_N_BACK_GND|TopCopper:TOP_COPPER"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:B_N_SIG_FEEDTHROUGH","B0_BackGround:A_P_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:B_N_SIG_FEEDTHROUGH|B0_BackGround:A_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:B_N_SIG_FEEDTHROUGH","B0_BackGround:A_N_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:B_N_SIG_FEEDTHROUGH|B0_BackGround:A_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:B_N_SIG_FEEDTHROUGH","B0_BackGround:B_P_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:B_N_SIG_FEEDTHROUGH|B0_BackGround:B_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_SignalFeedthrough:B_N_SIG_FEEDTHROUGH","B0_BackGround:B_N_BACK_GND") Then Print #f, "HIT|FEEDTHROUGH_VS_GROUND|B0_SignalFeedthrough:B_N_SIG_FEEDTHROUGH|B0_BackGround:B_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:B_N_QPL9547_ENV","B0_Stalk:A_P_PRONG") Then Print #f, "HIT|LNA_ENV_VS_OTHER_STALK|B0_LNAEnvelope:B_N_QPL9547_ENV|B0_Stalk:A_P_PRONG"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:B_N_QPL9547_ENV","B0_BackGround:A_P_BACK_GND") Then Print #f, "HIT|LNA_ENV_VS_OTHER_GROUND|B0_LNAEnvelope:B_N_QPL9547_ENV|B0_BackGround:A_P_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:B_N_QPL9547_ENV","B0_Stalk:A_N_PRONG") Then Print #f, "HIT|LNA_ENV_VS_OTHER_STALK|B0_LNAEnvelope:B_N_QPL9547_ENV|B0_Stalk:A_N_PRONG"
+If Solid.DoTheseGeometricallyIntersect("B0_LNAEnvelope:B_N_QPL9547_ENV","B0_BackGround:A_N_BACK_GND") Then Print #f, "HIT|LNA_ENV_VS_OTHER_GROUND|B0_LNAEnvelope:B_N_QPL9547_ENV|B0_BackGround:A_N_BACK_GND"
+If Solid.DoTheseGeometricallyIntersect("B0_Stalk:A_P_PRONG","B0_Stalk:B_P_PRONG") Then Print #f, "HIT|STALK_PRONG_COLLISION|B0_Stalk:A_P_PRONG|B0_Stalk:B_P_PRONG"
+If Solid.DoTheseGeometricallyIntersect("B0_Stalk:A_P_PRONG","B0_Stalk:B_N_PRONG") Then Print #f, "HIT|STALK_PRONG_COLLISION|B0_Stalk:A_P_PRONG|B0_Stalk:B_N_PRONG"
+If Solid.DoTheseGeometricallyIntersect("B0_Stalk:A_N_PRONG","B0_Stalk:B_P_PRONG") Then Print #f, "HIT|STALK_PRONG_COLLISION|B0_Stalk:A_N_PRONG|B0_Stalk:B_P_PRONG"
+If Solid.DoTheseGeometricallyIntersect("B0_Stalk:A_N_PRONG","B0_Stalk:B_N_PRONG") Then Print #f, "HIT|STALK_PRONG_COLLISION|B0_Stalk:A_N_PRONG|B0_Stalk:B_N_PRONG"
+Close #f
+On Error GoTo 0
+End Sub
+
+Method or property not found.
+(If Solid.DoTheseGeometricallyIntersect("B0_BackGround:A_P_BACK_GND","TopCopper:TOP_COPPER") Then Print #f, "HIT|GROUND_VS_RADIATOR_COPPER|B0_BackGround:A_P_BACK_GND|TopCopper:TOP_COPPER")(Line:6)

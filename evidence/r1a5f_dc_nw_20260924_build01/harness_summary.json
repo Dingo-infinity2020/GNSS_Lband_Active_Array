@@ -1,0 +1,82 @@
+{
+  "base_cst": "D:\\GNSS_Lband_Active_Array\\_r1a3_materialized_fr4_work\\R1A3_CHARTS_MATERIALIZED_FR4_BUILD_ONLY_V01.cst",
+  "base_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+  "A": {
+    "key": "A",
+    "cst": "D:\\GNSS_Lband_Active_Array\\_r1a5f_split_single_port_work\\R1A5F_POLA_SINGLE_PORT_V01.cst",
+    "cst_sha256": "74497f112b79b0f75548209bb3f3d8a9037644803c9efc808e6e0a74796bb1ce",
+    "cst_bytes": 48140,
+    "pre_port_copy_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+    "macro": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\source\\cst\\R1A5F_POLA_SINGLE_PORT_BUILD_ONLY_V01.mcr",
+    "macro_sha256": "f2b4555413005596f5fa8ceefacc64b7cadbba2cce1c430f0c9c713a6f7aead9",
+    "build_port_count": 1,
+    "reopen_port_count": 1,
+    "log": [
+      "MODEL=A",
+      "BASE_CST_SHA256=b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+      "PRE_PORT_COPY_SHA256=b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+      "PORT_MACRO_SHA256=f2b4555413005596f5fa8ceefacc64b7cadbba2cce1c430f0c9c713a6f7aead9",
+      "BUILD_AUDIT_PASS",
+      "FRESH_REOPEN_AUDIT_PASS"
+    ]
+  },
+  "B": {
+    "key": "B",
+    "cst": "D:\\GNSS_Lband_Active_Array\\_r1a5f_split_single_port_work\\R1A5F_POLB_SINGLE_PORT_V01.cst",
+    "cst_sha256": "11ca4ae06baa1d3f18376789c90717f28aee2b02480d7eba88d2f5155d51a1bf",
+    "cst_bytes": 48171,
+    "pre_port_copy_sha256": "b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+    "macro": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\source\\cst\\R1A5F_POLB_SINGLE_PORT_BUILD_ONLY_V01.mcr",
+    "macro_sha256": "ba7bd64129f17339bd1446502aa63f60c3a226b1ff886e36fb493683d54e5665",
+    "build_port_count": 1,
+    "reopen_port_count": 1,
+    "log": [
+      "MODEL=B",
+      "BASE_CST_SHA256=b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+      "PRE_PORT_COPY_SHA256=b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa",
+      "PORT_MACRO_SHA256=ba7bd64129f17339bd1446502aa63f60c3a226b1ff886e36fb493683d54e5665",
+      "BUILD_AUDIT_PASS",
+      "FRESH_REOPEN_AUDIT_PASS"
+    ]
+  },
+  "runtime_endpoints": {
+    "A": {
+      "p1": [
+        2.12132034355964,
+        2.12132034355964
+      ],
+      "p2": [
+        -2.12132034355964,
+        -2.12132034355964
+      ],
+      "rotation_deg": 0.0
+    },
+    "B": {
+      "p1": [
+        -2.12132034355964,
+        2.12132034355964
+      ],
+      "p2": [
+        2.12132034355964,
+        -2.12132034355964
+      ],
+      "rotation_deg": 90.0
+    }
+  },
+  "checks": {
+    "base_hash_match": true,
+    "A_pre_copy_hash_match": true,
+    "B_pre_copy_hash_match": true,
+    "A_build_port_count_1": true,
+    "A_reopen_port_count_1": true,
+    "B_build_port_count_1": true,
+    "B_reopen_port_count_1": true,
+    "A_geometry_unchanged_vs_r1a3": true,
+    "B_geometry_unchanged_vs_r1a3": true,
+    "A_B_geometry_identical": true,
+    "runtime_exact_rz90_relation": true,
+    "same_100ohm_reference": true,
+    "pass": true
+  },
+  "solver_run": false
+}

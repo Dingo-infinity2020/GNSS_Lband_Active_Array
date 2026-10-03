@@ -1,0 +1,76 @@
+{
+  "formal_status": "HOLD_R1E1A4A_H0_P1_BROADSIDE_POSTPROCESS_RESULT_PATH",
+  "formal_solve_invocation_count": 1,
+  "solver_rerun": false,
+  "read_only_recovery": true,
+  "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h0_p1_b0_solve_work\\R1E1A4A_H0_P1_BROADSIDE_SOLVE_V01.cst",
+  "artifact_sha256": "a95e18b66d5000b034807455c368abdf9b831e2c1395427edb33bd6de73fafab",
+  "artifact_bytes": 45033,
+  "result_paths": {
+    "S11": "1D Results\\S-Parameters\\S1(1),1(1)",
+    "S12": "1D Results\\S-Parameters\\S1(1),2(1)",
+    "S21": "1D Results\\S-Parameters\\S2(1),1(1)",
+    "S22": "1D Results\\S-Parameters\\S2(1),2(1)"
+  },
+  "native": {
+    "delta_s_sequence": [
+      {
+        "pass": 2,
+        "delta_s": 0.691864
+      },
+      {
+        "pass": 2,
+        "delta_s": 0.0451233
+      },
+      {
+        "pass": 3,
+        "delta_s": 0.0194908
+      },
+      {
+        "pass": 4,
+        "delta_s": 0.010365
+      }
+    ],
+    "last_two_below_0p02": true,
+    "desired_accuracy": true,
+    "maxpasses": false,
+    "broadband_converged": true,
+    "errors": []
+  },
+  "numerical_checks": {
+    "all_four_s_present": true,
+    "nonempty": true,
+    "last_two_delta_s": true,
+    "desired_accuracy": true,
+    "not_maxpasses": true,
+    "broadband_converged": true,
+    "no_error_lines": true,
+    "pass": true
+  },
+  "p0_reference_csv": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\evidence\\r1e0b_dc_nw_20260924_smoke01\\active_s11_and_zactive.csv",
+  "comparison_vs_p0": {
+    "sample_count": 625,
+    "max_abs_delta_sdd_vs_p0": 0.41098886048777644,
+    "max_abs_delta_sdd_freq_ghz": 1.4288,
+    "rms_abs_delta_sdd_vs_p0": 0.371631658771115,
+    "max_abs_delta_zdd_vs_p0_ohm": 199.9674596043464,
+    "max_abs_delta_zdd_freq_ghz": 1.2984,
+    "rms_abs_delta_zdd_vs_p0_ohm": 142.41828090196904
+  },
+  "gate_r_mixed_mode": {
+    "max_sdc_db": -42.37676357077263,
+    "max_sdc_freq_ghz": 1.6496,
+    "max_scd_db": -42.36712335534651,
+    "max_scd_freq_ghz": 1.6496,
+    "max_abs_branch_mag_imbalance_db": 0.14286809309008397,
+    "max_branch_mag_imbalance_freq_ghz": 1.6496,
+    "max_abs_branch_phase_error_deg": 0.3763628084236643,
+    "max_branch_phase_error_freq_ghz": 1.6496,
+    "max_abs_zdd_minus_2zavg_ohm": 0.0035909160839647063,
+    "mode_conversion_pass": true,
+    "branch_symmetry_pass": true,
+    "virtual_ground_mapping_diagnostic": "QUALIFIED_BY_MODE_CONVERSION_AND_BRANCH_SYMMETRY_GATES",
+    "pass": true
+  },
+  "canonical_status": "PASS_R1E1A4A_H0_P1_BROADSIDE_MIXEDMODE_READONLY_RECOVERY"
+}

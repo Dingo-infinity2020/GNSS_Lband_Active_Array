@@ -1,0 +1,349 @@
+{
+  "mode": "READ_ONLY_EXISTING_ARTIFACT_QUALIFICATION",
+  "cst_rebuild": false,
+  "solver_run": false,
+  "original_recovery_status": "HOLD_R1E0C_A_RECOVERY_NO_SOLVER_PREDICATE",
+  "hold_classification": "NO_SOLVER_PREDICATE_FILE_EXISTENCE_MISMATCH",
+  "states": [
+    {
+      "state": "C30P45",
+      "theta_deg": 30.0,
+      "phi_deg": 45.0,
+      "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01\\R1E0C_C30P45_SCANSTATE_BUILD_ONLY_V01.cst",
+      "artifact_sha256": "e68bbe11a61c988debd34503ede5cb952cd44f93f5db2a43f53a31344f7a30f2",
+      "artifact_bytes": 42518,
+      "build_status": {
+        "PORT_COUNT": "1",
+        "BOUNDARY_XMIN": "unit cell",
+        "BOUNDARY_XMAX": "unit cell",
+        "BOUNDARY_YMIN": "unit cell",
+        "BOUNDARY_YMAX": "unit cell",
+        "BOUNDARY_ZMIN": "expanded open",
+        "BOUNDARY_ZMAX": "expanded open",
+        "STRUCTURE_QUERY_ERR": "0",
+        "STRUCTURE_XMIN": "-47",
+        "STRUCTURE_XMAX": "47",
+        "STRUCTURE_YMIN": "-47",
+        "STRUCTURE_YMAX": "47",
+        "SCAN_QUERY_ERR": "0",
+        "SCAN_VALID": "-1",
+        "SCAN_THETA_DEG": "30",
+        "SCAN_PHI_DEG": "45",
+        "SCAN_DIRECTION": "1",
+        "UNITCELL_DS1": "94",
+        "UNITCELL_DS2": "94",
+        "UNITCELL_ANGLE": "90",
+        "SOLVER_RUN": "NO"
+      },
+      "reopen_status": {
+        "PORT_COUNT": "1",
+        "BOUNDARY_XMIN": "unit cell",
+        "BOUNDARY_XMAX": "unit cell",
+        "BOUNDARY_YMIN": "unit cell",
+        "BOUNDARY_YMAX": "unit cell",
+        "BOUNDARY_ZMIN": "expanded open",
+        "BOUNDARY_ZMAX": "expanded open",
+        "STRUCTURE_QUERY_ERR": "0",
+        "STRUCTURE_XMIN": "-47",
+        "STRUCTURE_XMAX": "47",
+        "STRUCTURE_YMIN": "-47",
+        "STRUCTURE_YMAX": "47",
+        "SCAN_QUERY_ERR": "0",
+        "SCAN_VALID": "-1",
+        "SCAN_THETA_DEG": "30",
+        "SCAN_PHI_DEG": "45",
+        "SCAN_DIRECTION": "1",
+        "UNITCELL_DS1": "94",
+        "UNITCELL_DS2": "94",
+        "UNITCELL_ANGLE": "90",
+        "SOLVER_RUN": "NO"
+      },
+      "scan_parameters": {
+        "theta": "30",
+        "phi": "45"
+      },
+      "message_log": {
+        "exists": true,
+        "solver_marker_hits": [],
+        "warning_lines": [
+          "WARNING:",
+          "Prevented attempt to change the value for parameter R1E0_scan_theta_deg to 0 inside history rebuild at step 3.This can break parametrization and should be avoided. Please use the Parameter List to change the value of a parameter. The function \"MakeSureParameterExists\" can be used to create a parameter inside the history."
+        ]
+      },
+      "result_tree": {
+        "solver_result_item_count": 0,
+        "solver_result_items": []
+      },
+      "checks": {
+        "artifact_sha_match": true,
+        "build_geometry_unchanged": true,
+        "reopen_geometry_unchanged": true,
+        "build_status_pass": true,
+        "reopen_status_pass": true,
+        "build_reopen_status_identical": true,
+        "theta_parameter_match": true,
+        "phi_parameter_match": true,
+        "no_solver_markers_in_message_log": true,
+        "no_solver_result_tree_items": true,
+        "pass": true
+      }
+    },
+    {
+      "state": "C45P45",
+      "theta_deg": 45.0,
+      "phi_deg": 45.0,
+      "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01\\R1E0C_C45P45_SCANSTATE_BUILD_ONLY_V01.cst",
+      "artifact_sha256": "ed3c6cbe0d570e7ff4dc4d093d7e3630b3356684ae96569b6f2a20251ffa34ed",
+      "artifact_bytes": 42495,
+      "build_status": {
+        "PORT_COUNT": "1",
+        "BOUNDARY_XMIN": "unit cell",
+        "BOUNDARY_XMAX": "unit cell",
+        "BOUNDARY_YMIN": "unit cell",
+        "BOUNDARY_YMAX": "unit cell",
+        "BOUNDARY_ZMIN": "expanded open",
+        "BOUNDARY_ZMAX": "expanded open",
+        "STRUCTURE_QUERY_ERR": "0",
+        "STRUCTURE_XMIN": "-47",
+        "STRUCTURE_XMAX": "47",
+        "STRUCTURE_YMIN": "-47",
+        "STRUCTURE_YMAX": "47",
+        "SCAN_QUERY_ERR": "0",
+        "SCAN_VALID": "-1",
+        "SCAN_THETA_DEG": "45",
+        "SCAN_PHI_DEG": "45",
+        "SCAN_DIRECTION": "1",
+        "UNITCELL_DS1": "94",
+        "UNITCELL_DS2": "94",
+        "UNITCELL_ANGLE": "90",
+        "SOLVER_RUN": "NO"
+      },
+      "reopen_status": {
+        "PORT_COUNT": "1",
+        "BOUNDARY_XMIN": "unit cell",
+        "BOUNDARY_XMAX": "unit cell",
+        "BOUNDARY_YMIN": "unit cell",
+        "BOUNDARY_YMAX": "unit cell",
+        "BOUNDARY_ZMIN": "expanded open",
+        "BOUNDARY_ZMAX": "expanded open",
+        "STRUCTURE_QUERY_ERR": "0",
+        "STRUCTURE_XMIN": "-47",
+        "STRUCTURE_XMAX": "47",
+        "STRUCTURE_YMIN": "-47",
+        "STRUCTURE_YMAX": "47",
+        "SCAN_QUERY_ERR": "0",
+        "SCAN_VALID": "-1",
+        "SCAN_THETA_DEG": "45",
+        "SCAN_PHI_DEG": "45",
+        "SCAN_DIRECTION": "1",
+        "UNITCELL_DS1": "94",
+        "UNITCELL_DS2": "94",
+        "UNITCELL_ANGLE": "90",
+        "SOLVER_RUN": "NO"
+      },
+      "scan_parameters": {
+        "theta": "45",
+        "phi": "45"
+      },
+      "message_log": {
+        "exists": true,
+        "solver_marker_hits": [],
+        "warning_lines": [
+          "WARNING:",
+          "Prevented attempt to change the value for parameter R1E0_scan_theta_deg to 0 inside history rebuild at step 3.This can break parametrization and should be avoided. Please use the Parameter List to change the value of a parameter. The function \"MakeSureParameterExists\" can be used to create a parameter inside the history."
+        ]
+      },
+      "result_tree": {
+        "solver_result_item_count": 0,
+        "solver_result_items": []
+      },
+      "checks": {
+        "artifact_sha_match": true,
+        "build_geometry_unchanged": true,
+        "reopen_geometry_unchanged": true,
+        "build_status_pass": true,
+        "reopen_status_pass": true,
+        "build_reopen_status_identical": true,
+        "theta_parameter_match": true,
+        "phi_parameter_match": true,
+        "no_solver_markers_in_message_log": true,
+        "no_solver_result_tree_items": true,
+        "pass": true
+      }
+    },
+    {
+      "state": "C60P45",
+      "theta_deg": 60.0,
+      "phi_deg": 45.0,
+      "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01\\R1E0C_C60P45_SCANSTATE_BUILD_ONLY_V01.cst",
+      "artifact_sha256": "94360ee2c40d4e5236b7b7a1fee79b46739da2aaec70054e4aa707a123853e01",
+      "artifact_bytes": 42506,
+      "build_status": {
+        "PORT_COUNT": "1",
+        "BOUNDARY_XMIN": "unit cell",
+        "BOUNDARY_XMAX": "unit cell",
+        "BOUNDARY_YMIN": "unit cell",
+        "BOUNDARY_YMAX": "unit cell",
+        "BOUNDARY_ZMIN": "expanded open",
+        "BOUNDARY_ZMAX": "expanded open",
+        "STRUCTURE_QUERY_ERR": "0",
+        "STRUCTURE_XMIN": "-47",
+        "STRUCTURE_XMAX": "47",
+        "STRUCTURE_YMIN": "-47",
+        "STRUCTURE_YMAX": "47",
+        "SCAN_QUERY_ERR": "0",
+        "SCAN_VALID": "-1",
+        "SCAN_THETA_DEG": "60",
+        "SCAN_PHI_DEG": "45",
+        "SCAN_DIRECTION": "1",
+        "UNITCELL_DS1": "94",
+        "UNITCELL_DS2": "94",
+        "UNITCELL_ANGLE": "90",
+        "SOLVER_RUN": "NO"
+      },
+      "reopen_status": {
+        "PORT_COUNT": "1",
+        "BOUNDARY_XMIN": "unit cell",
+        "BOUNDARY_XMAX": "unit cell",
+        "BOUNDARY_YMIN": "unit cell",
+        "BOUNDARY_YMAX": "unit cell",
+        "BOUNDARY_ZMIN": "expanded open",
+        "BOUNDARY_ZMAX": "expanded open",
+        "STRUCTURE_QUERY_ERR": "0",
+        "STRUCTURE_XMIN": "-47",
+        "STRUCTURE_XMAX": "47",
+        "STRUCTURE_YMIN": "-47",
+        "STRUCTURE_YMAX": "47",
+        "SCAN_QUERY_ERR": "0",
+        "SCAN_VALID": "-1",
+        "SCAN_THETA_DEG": "60",
+        "SCAN_PHI_DEG": "45",
+        "SCAN_DIRECTION": "1",
+        "UNITCELL_DS1": "94",
+        "UNITCELL_DS2": "94",
+        "UNITCELL_ANGLE": "90",
+        "SOLVER_RUN": "NO"
+      },
+      "scan_parameters": {
+        "theta": "60",
+        "phi": "45"
+      },
+      "message_log": {
+        "exists": true,
+        "solver_marker_hits": [],
+        "warning_lines": [
+          "WARNING:",
+          "Prevented attempt to change the value for parameter R1E0_scan_theta_deg to 0 inside history rebuild at step 3.This can break parametrization and should be avoided. Please use the Parameter List to change the value of a parameter. The function \"MakeSureParameterExists\" can be used to create a parameter inside the history."
+        ]
+      },
+      "result_tree": {
+        "solver_result_item_count": 0,
+        "solver_result_items": []
+      },
+      "checks": {
+        "artifact_sha_match": true,
+        "build_geometry_unchanged": true,
+        "reopen_geometry_unchanged": true,
+        "build_status_pass": true,
+        "reopen_status_pass": true,
+        "build_reopen_status_identical": true,
+        "theta_parameter_match": true,
+        "phi_parameter_match": true,
+        "no_solver_markers_in_message_log": true,
+        "no_solver_result_tree_items": true,
+        "pass": true
+      }
+    },
+    {
+      "state": "C60P135",
+      "theta_deg": 60.0,
+      "phi_deg": 135.0,
+      "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01\\R1E0C_C60P135_SCANSTATE_BUILD_ONLY_V01.cst",
+      "artifact_sha256": "c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1",
+      "artifact_bytes": 42511,
+      "build_status": {
+        "PORT_COUNT": "1",
+        "BOUNDARY_XMIN": "unit cell",
+        "BOUNDARY_XMAX": "unit cell",
+        "BOUNDARY_YMIN": "unit cell",
+        "BOUNDARY_YMAX": "unit cell",
+        "BOUNDARY_ZMIN": "expanded open",
+        "BOUNDARY_ZMAX": "expanded open",
+        "STRUCTURE_QUERY_ERR": "0",
+        "STRUCTURE_XMIN": "-47",
+        "STRUCTURE_XMAX": "47",
+        "STRUCTURE_YMIN": "-47",
+        "STRUCTURE_YMAX": "47",
+        "SCAN_QUERY_ERR": "0",
+        "SCAN_VALID": "-1",
+        "SCAN_THETA_DEG": "60",
+        "SCAN_PHI_DEG": "135",
+        "SCAN_DIRECTION": "1",
+        "UNITCELL_DS1": "94",
+        "UNITCELL_DS2": "94",
+        "UNITCELL_ANGLE": "90",
+        "SOLVER_RUN": "NO"
+      },
+      "reopen_status": {
+        "PORT_COUNT": "1",
+        "BOUNDARY_XMIN": "unit cell",
+        "BOUNDARY_XMAX": "unit cell",
+        "BOUNDARY_YMIN": "unit cell",
+        "BOUNDARY_YMAX": "unit cell",
+        "BOUNDARY_ZMIN": "expanded open",
+        "BOUNDARY_ZMAX": "expanded open",
+        "STRUCTURE_QUERY_ERR": "0",
+        "STRUCTURE_XMIN": "-47",
+        "STRUCTURE_XMAX": "47",
+        "STRUCTURE_YMIN": "-47",
+        "STRUCTURE_YMAX": "47",
+        "SCAN_QUERY_ERR": "0",
+        "SCAN_VALID": "-1",
+        "SCAN_THETA_DEG": "60",
+        "SCAN_PHI_DEG": "135",
+        "SCAN_DIRECTION": "1",
+        "UNITCELL_DS1": "94",
+        "UNITCELL_DS2": "94",
+        "UNITCELL_ANGLE": "90",
+        "SOLVER_RUN": "NO"
+      },
+      "scan_parameters": {
+        "theta": "60",
+        "phi": "135"
+      },
+      "message_log": {
+        "exists": true,
+        "solver_marker_hits": [],
+        "warning_lines": [
+          "WARNING:",
+          "Prevented attempt to change the value for parameter R1E0_scan_theta_deg to 0 inside history rebuild at step 3.This can break parametrization and should be avoided. Please use the Parameter List to change the value of a parameter. The function \"MakeSureParameterExists\" can be used to create a parameter inside the history.",
+          "WARNING:",
+          "Prevented attempt to change the value for parameter R1E0_scan_phi_deg to 45 inside history rebuild at step 3.This can break parametrization and should be avoided. Please use the Parameter List to change the value of a parameter. The function \"MakeSureParameterExists\" can be used to create a parameter inside the history."
+        ]
+      },
+      "result_tree": {
+        "solver_result_item_count": 0,
+        "solver_result_items": []
+      },
+      "checks": {
+        "artifact_sha_match": true,
+        "build_geometry_unchanged": true,
+        "reopen_geometry_unchanged": true,
+        "build_status_pass": true,
+        "reopen_status_pass": true,
+        "build_reopen_status_identical": true,
+        "theta_parameter_match": true,
+        "phi_parameter_match": true,
+        "no_solver_markers_in_message_log": true,
+        "no_solver_result_tree_items": true,
+        "pass": true
+      }
+    }
+  ],
+  "checks": {
+    "state_count_4": true,
+    "all_state_hashes_unique": true,
+    "all_states_pass": true,
+    "pass": true
+  }
+}

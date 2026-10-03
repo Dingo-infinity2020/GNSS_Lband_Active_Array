@@ -1,0 +1,523 @@
+{
+  "schema_version": "gnss-e2c-s0-m6-v0.2",
+  "status": "PASS_M6_V02_EXACT_ENTITY_ATTRIBUTION_READY",
+  "supersedes": "M6_V01 invalid: parser recognized Brick/Cylinder only and returned zero E2C geometry; no v0.1 geometry conclusion is authoritative.",
+  "final_e2c_entity_count": 140,
+  "geometry_coverage": 1.0,
+  "missing_geometry": [],
+  "counts": {
+    "A": {
+      "DEVICE_INPUT": 2,
+      "DEVICE_OTHER": 14,
+      "LOCAL_GROUND": 26,
+      "LOCAL_GROUND_VIA": 8,
+      "POST_CIN_SIGNAL": 14,
+      "PRE_CIN_SIGNAL": 6
+    },
+    "B": {
+      "DEVICE_INPUT": 2,
+      "DEVICE_OTHER": 14,
+      "LOCAL_GROUND": 26,
+      "LOCAL_GROUND_VIA": 8,
+      "POST_CIN_SIGNAL": 14,
+      "PRE_CIN_SIGNAL": 6
+    }
+  },
+  "nearest_cross_pol_aabb_lower_bounds": [
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 0.0
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Vias:CRF_GROUND_VIA",
+      "b_category": "LOCAL_GROUND_VIA",
+      "aabb_lower_bound_mm": 0.2156675682618968
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Vias:PADDLE_VIA_P",
+      "b_category": "LOCAL_GROUND_VIA",
+      "aabb_lower_bound_mm": 0.7106423150924802
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_LocalGroundTop:CRF_GND_PAD",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 0.8383391318553601
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Bias:L1_RF_PAD",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 0.8383391318553601
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Bias:L1_VDD_PAD",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 0.8383391318553601
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Bias:VDD_TRACE",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 0.8383391318553601
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Bias:CRF_VDD_PAD",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 0.8383391318553601
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_LocalGroundTop:CRF_GND_PAD",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 0.8656572647416522
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Bias:L1_RF_PAD",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 0.8656572647416522
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Bias:L1_VDD_PAD",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 0.8656572647416522
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Bias:VDD_TRACE",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 0.8656572647416522
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Bias:CRF_VDD_PAD",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 0.8656572647416522
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Vias:CRF_GROUND_VIA",
+      "b_category": "LOCAL_GROUND_VIA",
+      "aabb_lower_bound_mm": 0.9382497002397602
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Vias:PADDLE_VIA_C",
+      "b_category": "LOCAL_GROUND_VIA",
+      "aabb_lower_bound_mm": 1.0641957056857536
+    },
+    {
+      "a": "E2C_A_P_Vias:PADDLE_VIA_M",
+      "a_category": "LOCAL_GROUND_VIA",
+      "b": "E2C_B_N_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.0641957056857536
+    },
+    {
+      "a": "E2C_A_N_Vias:CRF_GROUND_VIA",
+      "a_category": "LOCAL_GROUND_VIA",
+      "b": "E2C_B_N_LocalGroundTop:CRF_GND_PAD",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.099551044745081
+    },
+    {
+      "a": "E2C_A_N_Vias:CRF_GROUND_VIA",
+      "a_category": "LOCAL_GROUND_VIA",
+      "b": "E2C_B_N_Vias:CRF_GROUND_VIA",
+      "b_category": "LOCAL_GROUND_VIA",
+      "aabb_lower_bound_mm": 1.1879393923934
+    },
+    {
+      "a": "E2C_A_N_Vias:CRF_GROUND_VIA",
+      "a_category": "LOCAL_GROUND_VIA",
+      "b": "E2C_B_N_Bias:CRF_VDD_PAD",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 1.1977635409378597
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Bias:POUT_TO_L1_FAN",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 1.2586500705120538
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_PackageLands:PIN4_GND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.2763277400417175
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_PackageLands:PIN5_GND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.2763277400417175
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Bias:POUT_TO_L1_FAN",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 1.283398807853583
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_LocalGroundTop:PIN4_SPOKE",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.2940054095713809
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_LocalGroundTop:PIN5_SPOKE",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.2940054095713809
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_PackageLands:PIN4_GND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.3010764773832466
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_PackageLands:PIN5_GND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.3010764773832466
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_LocalGroundTop:PIN4_SPOKE",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.31875414691291
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_LocalGroundTop:PIN5_SPOKE",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.31875414691291
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_LocalGroundTop:EXPOSED_PADDLE",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.3293607486307084
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_LocalGroundTop:EXPOSED_PADDLE",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.3541094859722376
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_P_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.3894648250315649
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.3894648250315649
+    },
+    {
+      "a": "E2C_A_P_Signal:UPSTREAM_MSL",
+      "a_category": "PRE_CIN_SIGNAL",
+      "b": "E2C_B_P_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.400071426749363
+    },
+    {
+      "a": "E2C_A_P_Signal:UPSTREAM_TAPER",
+      "a_category": "PRE_CIN_SIGNAL",
+      "b": "E2C_B_P_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.400071426749363
+    },
+    {
+      "a": "E2C_A_P_Signal:DOWNSTREAM_TAPER",
+      "a_category": "POST_CIN_SIGNAL",
+      "b": "E2C_B_P_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.400071426749363
+    },
+    {
+      "a": "E2C_A_P_Signal:DOWNSTREAM_MSL",
+      "a_category": "POST_CIN_SIGNAL",
+      "b": "E2C_B_P_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.400071426749363
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Signal:UPSTREAM_MSL",
+      "b_category": "PRE_CIN_SIGNAL",
+      "aabb_lower_bound_mm": 1.400071426749363
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Signal:UPSTREAM_TAPER",
+      "b_category": "PRE_CIN_SIGNAL",
+      "aabb_lower_bound_mm": 1.400071426749363
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Signal:DOWNSTREAM_TAPER",
+      "b_category": "POST_CIN_SIGNAL",
+      "aabb_lower_bound_mm": 1.400071426749363
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Signal:DOWNSTREAM_MSL",
+      "b_category": "POST_CIN_SIGNAL",
+      "aabb_lower_bound_mm": 1.400071426749363
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Vias:PADDLE_VIA_M",
+      "b_category": "LOCAL_GROUND_VIA",
+      "aabb_lower_bound_mm": 1.4177490962790276
+    },
+    {
+      "a": "E2C_A_P_Vias:PADDLE_VIA_C",
+      "a_category": "LOCAL_GROUND_VIA",
+      "b": "E2C_B_N_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.4177490962790276
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Vias:PADDLE_VIA_P",
+      "b_category": "LOCAL_GROUND_VIA",
+      "aabb_lower_bound_mm": 1.417749096279028
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Signal:UPSTREAM_MSL",
+      "b_category": "PRE_CIN_SIGNAL",
+      "aabb_lower_bound_mm": 1.4248201640908922
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Signal:UPSTREAM_TAPER",
+      "b_category": "PRE_CIN_SIGNAL",
+      "aabb_lower_bound_mm": 1.4248201640908922
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Signal:DOWNSTREAM_TAPER",
+      "b_category": "POST_CIN_SIGNAL",
+      "aabb_lower_bound_mm": 1.4248201640908922
+    },
+    {
+      "a": "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_Signal:DOWNSTREAM_MSL",
+      "b_category": "POST_CIN_SIGNAL",
+      "aabb_lower_bound_mm": 1.4248201640908922
+    },
+    {
+      "a": "E2C_A_P_Signal:UPSTREAM_MSL",
+      "a_category": "PRE_CIN_SIGNAL",
+      "b": "E2C_B_N_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.4248201640908922
+    },
+    {
+      "a": "E2C_A_P_Signal:UPSTREAM_TAPER",
+      "a_category": "PRE_CIN_SIGNAL",
+      "b": "E2C_B_N_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.4248201640908922
+    },
+    {
+      "a": "E2C_A_P_Signal:DOWNSTREAM_TAPER",
+      "a_category": "POST_CIN_SIGNAL",
+      "b": "E2C_B_N_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.4248201640908922
+    },
+    {
+      "a": "E2C_A_P_Signal:DOWNSTREAM_MSL",
+      "a_category": "POST_CIN_SIGNAL",
+      "b": "E2C_B_N_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.4248201640908922
+    },
+    {
+      "a": "E2C_A_N_Vias:CRF_GROUND_VIA",
+      "a_category": "LOCAL_GROUND_VIA",
+      "b": "E2C_B_N_Bias:VDD_TRACE",
+      "b_category": "DEVICE_OTHER",
+      "aabb_lower_bound_mm": 1.469570515490836
+    },
+    {
+      "a": "E2C_A_P_PackageLands:PIN1_VBIAS",
+      "a_category": "DEVICE_OTHER",
+      "b": "E2C_B_P_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.629881130634991
+    },
+    {
+      "a": "E2C_A_P_PackageLands:PIN8_GND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_P_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.629881130634991
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_PackageLands:PIN3_GND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.629881130634991
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_PackageLands:PIN6_GND_FDD",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.629881130634991
+    },
+    {
+      "a": "E2C_A_P_LocalGroundTop:PIN8_SPOKE",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_P_BackGround:LOCAL_BACK_GROUND",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.6475588001646544
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_LocalGroundTop:PIN3_SPOKE",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.6475588001646544
+    },
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "a_category": "LOCAL_GROUND",
+      "b": "E2C_B_N_LocalGroundTop:PIN6_SPOKE",
+      "b_category": "LOCAL_GROUND",
+      "aabb_lower_bound_mm": 1.6475588001646544
+    }
+  ],
+  "diagnostic_variants": [
+    {
+      "id": "M6-D1-SIG",
+      "observer": "Pol-A / E2A semantics",
+      "add_from_polB": [
+        "E2C_B_P_Signal:UPSTREAM_MSL",
+        "E2C_B_P_Signal:UPSTREAM_TAPER",
+        "E2C_B_P_Signal:CIN_UP_PAD",
+        "E2C_B_N_Signal:UPSTREAM_MSL",
+        "E2C_B_N_Signal:UPSTREAM_TAPER",
+        "E2C_B_N_Signal:CIN_UP_PAD"
+      ],
+      "purpose": "Isolate passive scattering/coupling caused by the opposite-pol pre-CIN signal extension connected to the existing Pol-B radiator/feed.",
+      "ports": "No Pol-B ports. Preserve Pol-A E2A loaded-source solve semantics only.",
+      "prediction": "If pre-CIN signal metal is dominant, Pol-A own-pol complex delta and diff/common degradation move substantially toward full-E2C values even without Pol-B ground/device metal."
+    },
+    {
+      "id": "M6-D2-GND",
+      "observer": "Pol-A / E2A semantics",
+      "add_from_polB": [
+        "E2C_B_P_BackGround:LOCAL_BACK_GROUND",
+        "E2C_B_P_PackageLands:PIN3_GND",
+        "E2C_B_P_PackageLands:PIN4_GND",
+        "E2C_B_P_PackageLands:PIN8_GND",
+        "E2C_B_P_PackageLands:PIN6_GND_FDD",
+        "E2C_B_P_PackageLands:PIN5_GND",
+        "E2C_B_P_LocalGroundTop:EXPOSED_PADDLE",
+        "E2C_B_P_LocalGroundTop:PIN3_SPOKE",
+        "E2C_B_P_LocalGroundTop:PIN4_SPOKE",
+        "E2C_B_P_LocalGroundTop:PIN8_SPOKE",
+        "E2C_B_P_LocalGroundTop:PIN6_SPOKE",
+        "E2C_B_P_LocalGroundTop:PIN5_SPOKE",
+        "E2C_B_P_LocalGroundTop:CRF_GND_PAD",
+        "E2C_B_P_Vias:PADDLE_VIA_M",
+        "E2C_B_P_Vias:PADDLE_VIA_C",
+        "E2C_B_P_Vias:PADDLE_VIA_P",
+        "E2C_B_P_Vias:CRF_GROUND_VIA",
+        "E2C_B_N_BackGround:LOCAL_BACK_GROUND",
+        "E2C_B_N_PackageLands:PIN3_GND",
+        "E2C_B_N_PackageLands:PIN4_GND",
+        "E2C_B_N_PackageLands:PIN8_GND",
+        "E2C_B_N_PackageLands:PIN6_GND_FDD",
+        "E2C_B_N_PackageLands:PIN5_GND",
+        "E2C_B_N_LocalGroundTop:EXPOSED_PADDLE",
+        "E2C_B_N_LocalGroundTop:PIN3_SPOKE",
+        "E2C_B_N_LocalGroundTop:PIN4_SPOKE",
+        "E2C_B_N_LocalGroundTop:PIN8_SPOKE",
+        "E2C_B_N_LocalGroundTop:PIN6_SPOKE",
+        "E2C_B_N_LocalGroundTop:PIN5_SPOKE",
+        "E2C_B_N_LocalGroundTop:CRF_GND_PAD",
+        "E2C_B_N_Vias:PADDLE_VIA_M",
+        "E2C_B_N_Vias:PADDLE_VIA_C",
+        "E2C_B_N_Vias:PADDLE_VIA_P",
+        "E2C_B_N_Vias:CRF_GROUND_VIA"
+      ],
+      "purpose": "Isolate passive scattering/common-mode perturbation caused by opposite-pol local-ground, backside-ground and via metal.",
+      "ports": "No Pol-B ports. Preserve Pol-A E2A loaded-source solve semantics only.",
+      "prediction": "If local-ground return geometry is dominant, Pol-A branch imbalance and diff/common degradation move substantially toward full-E2C values while D1 remains comparatively small."
+    }
+  ],
+  "decision_logic": {
+    "if_D1_large_D2_small": "pre-CIN signal parasitic path primary",
+    "if_D1_small_D2_large": "local-ground/backside/via path primary",
+    "if_D1_small_D2_small_but_full_large": "signal-ground interaction / composite mixed mode primary",
+    "if_D1_large_D2_large": "both classes independently load the observer; use field-current comparison before geometry optimization"
+  },
+  "notes": [
+    "AABB distances are conservative lower bounds, not exact conductor-to-conductor distances.",
+    "Exact entity membership comes from the final E2C inventory contract, not primitive creation count.",
+    "M6-D1/D2 are observer-polarization ablation diagnostics; they do not require Pol-B ports."
+  ],
+  "boundary": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false
+  }
+}

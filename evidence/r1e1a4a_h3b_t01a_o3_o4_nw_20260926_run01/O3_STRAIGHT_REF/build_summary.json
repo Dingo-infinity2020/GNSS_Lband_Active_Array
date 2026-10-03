@@ -1,0 +1,13 @@
+{
+  "build_sha256": "ab1cc6fcf767523abefc159344f5bbd1126a80c810198b9a5ffa0560ccaa17da",
+  "checks": {
+    "shape_count": true,
+    "shape_count_observed": 21,
+    "all_volumes_positive": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "reopen_hash_stable": true
+  }
+}

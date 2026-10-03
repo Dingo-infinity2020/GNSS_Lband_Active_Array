@@ -1,0 +1,26 @@
+{
+  "source_build_sha256": "85a27c3e4297bde65184ddda361208796efe789a030a8cfb0f310d122ac8e93c",
+  "configured_sha256": "fa74a5715bb16a06e306a4ba5fd58c4b7e3dd811333d0fc2c7abfff964974323",
+  "solved_sha256": "ab44823f5afd52a174dc3867372756f0cbdfec4824b20fe998f318ee2f057b2b",
+  "metrics": {
+    "worst_core_return_db": -19.320911199651118,
+    "core_s21_min_db": -0.18431461077257766,
+    "core_s21_max_db": -0.10704860829176308,
+    "reciprocity_max_abs_db": 2.5211461834262483e-05
+  },
+  "adaptive_delta_sequence": [
+    {
+      "pass": 2,
+      "delta_s": 0.031578372914612136
+    },
+    {
+      "pass": 3,
+      "delta_s": 0.04035279157548433
+    },
+    {
+      "pass": 4,
+      "delta_s": 0.03557717072599522
+    }
+  ],
+  "formal_solver_invocations": 1
+}

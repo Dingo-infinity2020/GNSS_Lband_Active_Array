@@ -1,0 +1,158 @@
+{
+  "status": "HOLD_R1E1A4A_AR0_B1R_R3_D2_M1B_QUALIFICATION",
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "source_sha256": "11b3576ff5efb4326a761554fb94d8588d22c54691d713f8181c359415bdb70e",
+  "configured_sha256": "d70588af621ccac467f17182b2778fb223f36824a43b14f7af7be058bebef5c8",
+  "solved_sha256": "8e14b35185d07d1ceb470aa98197131cfb8a06bb24bf9dc893c2fdc93186990b",
+  "solved_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d2_m1_solve_work\\B\\R1E1A4A_AR0_B1R_R3_D2_M1B_SOLVED_V01.cst",
+  "native_flags": {
+    "bad_conductor_warning": false,
+    "mesh_corruption": false,
+    "large_reflection_warning": true
+  },
+  "metrics": {
+    "decision_band_GHz": [
+      1.15,
+      1.65
+    ],
+    "core": {
+      "worst_S11_dB": -0.3166853265869618,
+      "worst_amp_imbalance_dB": 0.021343225569019894,
+      "worst_phase_error_deg": 0.2651810064600113,
+      "worst_CMR_dB": -52.637393794782085,
+      "worst_normalized_excess_loss_dB": 1.1725576828037179,
+      "min_power_closure": 0.983360284976769,
+      "max_power_closure": 0.9928050797506999,
+      "Zin_real_range_ohm": [
+        151.99632854655786,
+        4819.5882041991645
+      ],
+      "Zin_imag_range_ohm": [
+        330.18146195437066,
+        2451.866014700252
+      ]
+    },
+    "reference_samples": {
+      "L5": {
+        "f_GHz": 1.1768,
+        "S11_dB": -1.7634134196362383,
+        "S21_dB": -7.865116870080234,
+        "S31_dB": -7.884953372538234,
+        "amp_imbalance_dB": 0.01983650245800065,
+        "phase_error_deg": 0.11657204841952762,
+        "phase_error_signed_deg": -0.11657204841952762,
+        "CMR_dB": -56.31015035386578,
+        "power_closure": 0.9925156800707368,
+        "normalized_excess_loss_dB": 0.09850863411089453,
+        "Zin_real_ohm": 157.3429843817098,
+        "Zin_imag_ohm": 349.8128539473972
+      },
+      "L2": {
+        "f_GHz": 1.2272,
+        "S11_dB": -1.541760904824794,
+        "S21_dB": -8.364856106046174,
+        "S31_dB": -8.38542590777134,
+        "amp_imbalance_dB": 0.02056980172516699,
+        "phase_error_deg": 0.12977379545560552,
+        "phase_error_signed_deg": -0.12977379545560552,
+        "CMR_dB": -55.71118866938096,
+        "power_closure": 0.9919191939470426,
+        "normalized_excess_loss_dB": 0.1190571346048972,
+        "Zin_real_ohm": 169.7585429888598,
+        "Zin_imag_ohm": 393.01649982100616
+      },
+      "L1": {
+        "f_GHz": 1.5752000000000002,
+        "S11_dB": -0.455505691429346,
+        "S21_dB": -13.705538546837797,
+        "S31_dB": -13.719629562461208,
+        "amp_imbalance_dB": 0.014091015623411888,
+        "phase_error_deg": 0.24079868976480157,
+        "phase_error_signed_deg": -0.24079868976480157,
+        "CMR_dB": -52.94675026897791,
+        "power_closure": 0.9854980742992179,
+        "normalized_excess_loss_dB": 0.6836109563074215,
+        "Zin_real_ohm": 943.4919382930876,
+        "Zin_imag_ohm": 1643.5781133207286
+      }
+    },
+    "adaptive": {
+      "selected_run_id": 1,
+      "sparameter_run_ids": {
+        "1D Results\\S-Parameters\\S1,1": [
+          0,
+          1
+        ],
+        "1D Results\\S-Parameters\\S1,2": [
+          0,
+          1
+        ],
+        "1D Results\\S-Parameters\\S1,3": [
+          0,
+          1
+        ],
+        "1D Results\\S-Parameters\\S2,1": [
+          0,
+          1
+        ],
+        "1D Results\\S-Parameters\\S2,2": [
+          0,
+          1
+        ],
+        "1D Results\\S-Parameters\\S2,3": [
+          0,
+          1
+        ],
+        "1D Results\\S-Parameters\\S3,1": [
+          0,
+          1
+        ],
+        "1D Results\\S-Parameters\\S3,2": [
+          0,
+          1
+        ],
+        "1D Results\\S-Parameters\\S3,3": [
+          0,
+          1
+        ]
+      },
+      "convergence_run_ids": [
+        0,
+        1
+      ],
+      "convergence_selected_run_id": 1,
+      "delta_sequence": [
+        {
+          "pass": 3,
+          "delta_s": 0.1796185214116582
+        },
+        {
+          "pass": 4,
+          "delta_s": 0.019429314843691512
+        },
+        {
+          "pass": 5,
+          "delta_s": 0.00020173734974680008
+        },
+        {
+          "pass": 6,
+          "delta_s": 4.422929326335656e-05
+        },
+        {
+          "pass": 7,
+          "delta_s": 0.029204788885056614
+        },
+        {
+          "pass": 8,
+          "delta_s": 6.5631633296185276e-06
+        }
+      ]
+    },
+    "numerical_pass": false,
+    "final_two_delta_s": [
+      0.029204788885056614,
+      6.5631633296185276e-06
+    ]
+  }
+}

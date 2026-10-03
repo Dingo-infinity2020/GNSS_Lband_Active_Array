@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.2.17",
+  "packet_id": "GNSS-E2C-PARENT-SMOKE-20260930-01-HOLD",
+  "status": "HOLD_E2C_PARENT_SMOKE_INVENTORY_WATCHDOG",
+  "simulationops_commit": "d4d2e53055ec5745eadeb11367332151e80d090c",
+  "runner_final_status": "HOLD_ENTRYPOINT",
+  "project_progress": {
+    "phase": "smoke_parent_inventory",
+    "state": "HOLD",
+    "message": "phase watchdog timeout",
+    "production_boundary": "NOT_OBSERVED"
+  },
+  "scientific_formal_build_started": false,
+  "root_cause": "Legacy inventory iterated GetNameOfShapeFromIndex through shape_count+1200 invalid/sparse indices; replace with exact-name contract queries.",
+  "geometry_changed": false,
+  "new_runner_blob": "59fd03e8929d25a8c6c2efceed3714e1bd856f3e",
+  "new_smoke_blob": "0dc73c76d540019d6c8c086ef2a06ead5f7b542b",
+  "new_generator_blob": "23d581854efb3e42659409cfe0922cccbb4fc01f"
+}

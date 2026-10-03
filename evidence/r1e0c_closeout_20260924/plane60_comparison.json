@@ -1,0 +1,108 @@
+{
+  "mode": "READ_ONLY_60DEG_PLANE_COMPARISON",
+  "science_band_ghz": [
+    1.15,
+    1.65
+  ],
+  "principal": {
+    "state": "C60P45",
+    "metrics": {
+      "re_min": 55.42088558360749,
+      "re_max": 77.84236751641495,
+      "im_min": -13.421328121963963,
+      "im_max": 103.0299517215876,
+      "max_abs_z": 129.13018675860917,
+      "max_abs_s11": 0.5127475895078316
+    }
+  },
+  "orthogonal": {
+    "state": "C60P135",
+    "metrics": {
+      "re_min": 73.42651544375465,
+      "re_max": 263.3201654546471,
+      "im_min": -63.8233510322937,
+      "im_max": 137.06779244186322,
+      "max_abs_z": 266.3954969055856,
+      "max_abs_s11": 0.536900130781014
+    }
+  },
+  "comparison": {
+    "sample_count": 625,
+    "max_complex_delta_s11": 0.6702315800171013,
+    "max_complex_delta_s11_freq_ghz": 1.1504,
+    "rms_complex_delta_s11": 0.642861434319711,
+    "max_abs_delta_zactive_ohm": 208.97687581823746,
+    "max_abs_delta_zactive_freq_ghz": 1.5776,
+    "rms_abs_delta_zactive_ohm": 173.71287357664937,
+    "anchors": {
+      "1.17645": {
+        "f_ghz": 1.1768,
+        "principal_z_re": 67.46979735313207,
+        "principal_z_im": -6.16130569694317,
+        "orthogonal_z_re": 82.81622563204621,
+        "orthogonal_z_im": 113.07930342907453,
+        "delta_z_abs": 120.22410625853531,
+        "delta_s11_abs": 0.6674664753002184
+      },
+      "1.2276": {
+        "f_ghz": 1.2272,
+        "principal_z_re": 59.72009560283651,
+        "principal_z_im": 7.425583426316545,
+        "orthogonal_z_re": 104.45084631167322,
+        "orthogonal_z_im": 125.72042439387931,
+        "delta_z_abs": 126.46940127365616,
+        "delta_s11_abs": 0.6591041510908391
+      },
+      "1.27875": {
+        "f_ghz": 1.2784,
+        "principal_z_re": 56.3000205105848,
+        "principal_z_im": 20.29261536560313,
+        "orthogonal_z_re": 132.31055501302816,
+        "orthogonal_z_im": 134.83479416922174,
+        "delta_z_abs": 137.46822207487543,
+        "delta_s11_abs": 0.649425771109333
+      },
+      "1.4": {
+        "f_ghz": 1.4,
+        "principal_z_re": 56.821812224284486,
+        "principal_z_im": 47.93376261789221,
+        "orthogonal_z_re": 218.05126602767217,
+        "orthogonal_z_im": 117.50026501230968,
+        "delta_z_abs": 175.59736623631693,
+        "delta_s11_abs": 0.6316373942006224
+      },
+      "1.5611": {
+        "f_ghz": 1.5608,
+        "principal_z_re": 67.63273865715689,
+        "principal_z_im": 82.42406465008152,
+        "orthogonal_z_re": 251.84814492532735,
+        "orthogonal_z_im": -15.743769376975102,
+        "delta_z_abs": 208.73964535782568,
+        "delta_s11_abs": 0.634551805340948
+      },
+      "1.57542": {
+        "f_ghz": 1.5752000000000002,
+        "principal_z_re": 69.06424865156495,
+        "principal_z_im": 85.6102898560383,
+        "orthogonal_z_re": 245.25456126918758,
+        "orthogonal_z_im": -26.758541539091993,
+        "delta_z_abs": 208.9731574375111,
+        "delta_s11_abs": 0.6368860970370004
+      },
+      "1.602": {
+        "f_ghz": 1.6024,
+        "principal_z_re": 71.99272885723342,
+        "principal_z_im": 91.76023536337276,
+        "orthogonal_z_re": 230.0572456772335,
+        "orthogonal_z_im": -44.2623912777606,
+        "delta_z_abs": 208.5342812007015,
+        "delta_s11_abs": 0.6424622879476928
+      }
+    }
+  },
+  "classification": {
+    "numerical_pass_fail_threshold_for_plane_divergence": "NOT_FROZEN",
+    "retroactive_threshold_added": false,
+    "interpretation": "Quantitative plane dependence only; no post-hoc PASS/FAIL threshold applied."
+  }
+}

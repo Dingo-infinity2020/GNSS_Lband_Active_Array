@@ -1,0 +1,120 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2C-CONTRACT-FREEZE-20260929",
+  "project": "GNSS_Lband_Active_Array",
+  "status": "PASS_R4_A0_E2C_ROUTE_GEOMETRY_AND_SENTINEL_CONTRACTS_FROZEN",
+  "route": {
+    "current": "E2C_DUALPOL_COEXISTENCE",
+    "after_e2c_pass": [
+      "D0_DEVICE_COMPONENT_MODEL_AUTHORITY",
+      "C1_N0_POLA_FULL_12PORT_PASSIVE_NETWORK_AUTHORITY",
+      "C1_ACTIVE_FEASIBILITY",
+      "R1_PERIODIC_SCAN_ACTIVE_IMPEDANCE",
+      "FINAL_LNA_ANTENNA_CODDESIGN"
+    ]
+  },
+  "geometry": {
+    "parent_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+    "e2a_source_blob": "9931736f1129624d94aee1c9e983a1eaabca5f24",
+    "e2b_source_blob": "e8cbb334173b093165c4ef05bb9d374d39ff74b4",
+    "final_shape_count": 177,
+    "raw_port_count": 24,
+    "temporary_drill_count": 16,
+    "plated_via_count": 16,
+    "new_shapes": 144,
+    "deleted_parent_shapes": 12,
+    "a_b_positive_volume_intersection_allowed": false
+  },
+  "sentinel": {
+    "reduced_port_count": 12,
+    "source_count": 8,
+    "load_only_count": 4,
+    "required_complex_traces": 96,
+    "source_ports": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      10,
+      11
+    ],
+    "load_only_ports": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "full_24x24_first_solve": false,
+    "max_delta_s": 0.02,
+    "consecutive_native_checks": 2,
+    "max_passes": 16
+  },
+  "promotion_review": {
+    "own_pol_complex_delta_review": 0.1,
+    "own_pol_complex_delta_severe": 0.2,
+    "mode_conversion_degradation_review_db": 3,
+    "mode_conversion_degradation_severe_db": 6,
+    "branch_return_imbalance_review_db": 1,
+    "resonance_excursion_review_db": 10,
+    "resonance_window_mhz": 50,
+    "crosspol_device_coupling_review_db": -20,
+    "crosspol_device_coupling_severe_db": -10
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "documents": {
+    "route": "docs/R1E1A4A_AR0_B1R_R4_A0_ROUTE_FREEZE_POST_E2AB_V01.md",
+    "geometry": "docs/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_GEOMETRY_CONTRACT_V01.md",
+    "sentinel": "docs/R1E1A4A_AR0_B1R_R4_A0_E2C_COMBINED_SENTINEL_CONTRACT_V01.md"
+  },
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2C_BUILD_AWAIT_AUTH",
+  "implementation": {
+    "status": "PASS_R4_A0_E2C_PREBUILD_STATIC_READY_AWAIT_AUTH",
+    "sources": {
+      "macro": {
+        "path": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_ONLY_V01.mcr",
+        "blob": "fb770258aa94106a2437320c29a2cd036990770a"
+      },
+      "inventory": {
+        "path": "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_INVENTORY_V01.json",
+        "blob": "dcc33fc9236eb9e2a696bb90f43ce9e1bdc27bd2"
+      },
+      "kernel": {
+        "path": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_16VIA_DRILL_KERNEL_REFERENCE_V01.mcr",
+        "blob": "fbaac4e894a5b5af3c3145a67e767b2a7c8e9c98"
+      },
+      "broadphase_runner": {
+        "path": "scripts/audit_r1e1a4a_ar0_b1r_r4_a0_e2c_crosspol_broadphase.py",
+        "blob": "ce09233173aea44783be8d87dc5e665ca07356e9"
+      },
+      "broadphase_manifest": {
+        "path": "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_CROSSPOL_BROADPHASE_V01.json",
+        "blob": "8dd082aab1c1fd99495b0e773c1c987efd79e62c"
+      },
+      "build_runner": {
+        "path": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e2c_dualpol_build_only_v01.py",
+        "blob": "226459460c7110f35c29e43fbb882b458465d2b0"
+      }
+    },
+    "static_result": "execution/result_packets/R1E1A4A_AR0_B1R_R4_A0_E2C_PREBUILD_STATIC_PASS_20260929_result.json",
+    "build_task": "execution/task_packets/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_task.json",
+    "broadphase": {
+      "all_cross_pairs": 5184,
+      "candidate_pair_count": 1,
+      "total_pairwise_after_build": 29
+    },
+    "simulationops": {
+      "version": "0.2.15",
+      "commit": "7dfbeb7a44a82501a7a20bbe62230aa047e80af6",
+      "preferred_runner": "runner/nw/simops.cmd",
+      "generic_runner_schema": "runner-task-v0.1"
+    },
+    "review_copy_in_same_build_transaction": true,
+    "host_global_cst_path_in_project_source": false
+  }
+}

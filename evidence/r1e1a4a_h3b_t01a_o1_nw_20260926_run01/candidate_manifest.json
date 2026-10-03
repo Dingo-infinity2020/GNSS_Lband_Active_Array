@@ -1,0 +1,65 @@
+[
+  {
+    "candidate": "W15_G20",
+    "Wsig_mm": 1.5,
+    "Gcpw_mm": 0.2,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o1_build_work\\W15_G20\\W15_G20_BUILD_ONLY.cst",
+    "build_sha256": "0998ee0bc51d60de82a01b9e3bbeb68a7e702b921a951adca94e82234d10c225"
+  },
+  {
+    "candidate": "W15_G30",
+    "Wsig_mm": 1.5,
+    "Gcpw_mm": 0.3,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o1_build_work\\W15_G30\\W15_G30_BUILD_ONLY.cst",
+    "build_sha256": "a931f488b0420945a6189083b56388ac87b4a547630e6ac35d30bc14ca9d4d83"
+  },
+  {
+    "candidate": "W15_G40",
+    "Wsig_mm": 1.5,
+    "Gcpw_mm": 0.4,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o1_build_work\\W15_G40\\W15_G40_BUILD_ONLY.cst",
+    "build_sha256": "85a27c3e4297bde65184ddda361208796efe789a030a8cfb0f310d122ac8e93c"
+  },
+  {
+    "candidate": "W18_G20",
+    "Wsig_mm": 1.8,
+    "Gcpw_mm": 0.2,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o1_build_work\\W18_G20\\W18_G20_BUILD_ONLY.cst",
+    "build_sha256": "20ab69b6af5b78eae7805d3fb9c3934d5c72d083570acf593c5ab5b550f6f9ba"
+  },
+  {
+    "candidate": "W18_G30",
+    "Wsig_mm": 1.8,
+    "Gcpw_mm": 0.3,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o1_build_work\\W18_G30\\W18_G30_BUILD_ONLY.cst",
+    "build_sha256": "bd8f1d7d7aa9786b4d1950f88c9e48b316e93dc112879d913d0ebf4a89453eaa"
+  },
+  {
+    "candidate": "W18_G40",
+    "Wsig_mm": 1.8,
+    "Gcpw_mm": 0.4,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o1_build_work\\W18_G40\\W18_G40_BUILD_ONLY.cst",
+    "build_sha256": "260ad665d48509d4a7ff5780667bb6f1af44e67da4c214556c54f139470074a4"
+  },
+  {
+    "candidate": "W21_G20",
+    "Wsig_mm": 2.1,
+    "Gcpw_mm": 0.2,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o1_build_work\\W21_G20\\W21_G20_BUILD_ONLY.cst",
+    "build_sha256": "5ff337f23d67a0b16dd30cdd30de6bfd45d6ca2b39c994aee50381d92735e80f"
+  },
+  {
+    "candidate": "W21_G30",
+    "Wsig_mm": 2.1,
+    "Gcpw_mm": 0.3,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o1_build_work\\W21_G30\\W21_G30_BUILD_ONLY.cst",
+    "build_sha256": "96962d5482c2fd42f5517d30d288f9a7b5db5c5b6d0c231bf86a628cfeef9ca7"
+  },
+  {
+    "candidate": "W21_G40",
+    "Wsig_mm": 2.1,
+    "Gcpw_mm": 0.4,
+    "build_file": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_o1_build_work\\W21_G40\\W21_G40_BUILD_ONLY.cst",
+    "build_sha256": "56a1e9864500505bbc7431c42ad881d39b7511a0be4dc508e730b1879f34ea09"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "schema_version": "gnss-e3a-electrical-closure-v0.1",
+  "status": "PASS_E3A_E2C_R7_ELECTRICAL_CLOSURE_FOR_SENTINEL",
+  "mode": "OFFLINE_ONLY",
+  "canonical_sha256": "cab6754235a66006ba8bdb423c4dcde2d00de0cb5d8c56623cf94fc3c364ce2c",
+  "human_geometry_review": "PASS_E2C_R7_HUMAN_GEOMETRY_REVIEW",
+  "branch_count": 4,
+  "raw_port_count": 24,
+  "ports_per_branch": 6,
+  "plated_via_count": 16,
+  "signal_path_to_E_UP": "PASS",
+  "branch_local_ground_reference": "PASS",
+  "device_lead_reference_planes": "PASS",
+  "intentional_circuit_domain_gaps": true,
+  "corrective_build_required": false,
+  "sentinel_solve_geometry_eligible": true,
+  "product_active_chain_authority": false,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false,
+  "next": "E3B_REFERENCE_PLANE_AND_PORT_AUTHORITY_REVIEW"
+}

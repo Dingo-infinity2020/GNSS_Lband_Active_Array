@@ -1,0 +1,216 @@
+{
+  "status": "PASS_R1E1A4A_AR0_B1R_T2S_R2_NW_BASELINE_CHARACTERIZED",
+  "recovery_type": "RESULT_READER_ONLY_EXPLICIT_RUN_ID_1",
+  "formal_solver_rerun": false,
+  "selected_run_id": 1,
+  "artifact_sha256": "0c099f4de12bff222919c24f16114f2e19dd7ec872b4644ce064c0cf248af54c",
+  "sparameter_paths": {
+    "S11": {
+      "path": "1D Results\\S-Parameters\\S1,1",
+      "run_ids": [
+        0,
+        1
+      ],
+      "selected_run_id": 1,
+      "points": 1001
+    },
+    "S12": {
+      "path": "1D Results\\S-Parameters\\S1,2",
+      "run_ids": [
+        0,
+        1
+      ],
+      "selected_run_id": 1,
+      "points": 1001
+    },
+    "S13": {
+      "path": "1D Results\\S-Parameters\\S1,3",
+      "run_ids": [
+        0,
+        1
+      ],
+      "selected_run_id": 1,
+      "points": 1001
+    },
+    "S21": {
+      "path": "1D Results\\S-Parameters\\S2,1",
+      "run_ids": [
+        0,
+        1
+      ],
+      "selected_run_id": 1,
+      "points": 1001
+    },
+    "S22": {
+      "path": "1D Results\\S-Parameters\\S2,2",
+      "run_ids": [
+        0,
+        1
+      ],
+      "selected_run_id": 1,
+      "points": 1001
+    },
+    "S23": {
+      "path": "1D Results\\S-Parameters\\S2,3",
+      "run_ids": [
+        0,
+        1
+      ],
+      "selected_run_id": 1,
+      "points": 1001
+    },
+    "S31": {
+      "path": "1D Results\\S-Parameters\\S3,1",
+      "run_ids": [
+        0,
+        1
+      ],
+      "selected_run_id": 1,
+      "points": 1001
+    },
+    "S32": {
+      "path": "1D Results\\S-Parameters\\S3,2",
+      "run_ids": [
+        0,
+        1
+      ],
+      "selected_run_id": 1,
+      "points": 1001
+    },
+    "S33": {
+      "path": "1D Results\\S-Parameters\\S3,3",
+      "run_ids": [
+        0,
+        1
+      ],
+      "selected_run_id": 1,
+      "points": 1001
+    }
+  },
+  "metrics": {
+    "decision_band_GHz": [
+      1.15,
+      1.65
+    ],
+    "reference_samples": {
+      "L5": {
+        "f_GHz": 1.1768,
+        "S11_dB": -0.42241273497739035,
+        "S21_dB": -13.461512492296473,
+        "S31_dB": -13.461379791262235,
+        "S21_phase_deg": 42.01885533445714,
+        "S31_phase_deg": -137.97389122320382,
+        "amp_imbalance_dB": 0.00013270103423518602,
+        "phase_error_deg": 0.007253442339049343,
+        "CMR_dB": -83.90937534477968,
+        "power_closure": 0.997449650792242,
+        "transmitted_power": 0.09013332274607008,
+        "mismatch_normalized_eta": 0.9724832955579434,
+        "normalized_excess_loss_dB": 0.1211784985759139
+      },
+      "L2": {
+        "f_GHz": 1.2272,
+        "S11_dB": -0.47609472828037436,
+        "S21_dB": -12.96856957829295,
+        "S31_dB": -12.968588507549514,
+        "S21_phase_deg": 39.476128169325555,
+        "S31_phase_deg": -140.51559127570354,
+        "amp_imbalance_dB": 1.8929256564520966e-05,
+        "phase_error_deg": 0.008280554970895082,
+        "CMR_dB": -82.82087623908063,
+        "power_closure": 0.9971355480748499,
+        "transmitted_power": 0.10096528868551068,
+        "mismatch_normalized_eta": 0.9724120284968143,
+        "normalized_excess_loss_dB": 0.12149677679912618
+      },
+      "L1": {
+        "f_GHz": 1.5752000000000002,
+        "S11_dB": -1.030539733856997,
+        "S21_dB": -9.887741076653844,
+        "S31_dB": -9.888797158725415,
+        "S21_phase_deg": 20.127648475661893,
+        "S31_phase_deg": -159.85451393654182,
+        "amp_imbalance_dB": 0.0010560820715717427,
+        "phase_error_deg": 0.01783758779629352,
+        "CMR_dB": -75.53982818861425,
+        "power_closure": 0.9939742433595358,
+        "transmitted_power": 0.2052121578540938,
+        "mismatch_normalized_eta": 0.9714740762571796,
+        "normalized_excess_loss_dB": 0.12568784038642966
+      }
+    },
+    "core": {
+      "worst_S11_dB": -0.39635673669222937,
+      "best_S11_dB": -1.203113639284317,
+      "worst_amp_imbalance_dB": 0.0012478257087084404,
+      "worst_phase_error_deg": 0.020536786427612697,
+      "worst_CMR_dB": -74.28541932747102,
+      "best_CMR_dB": -84.4004356430334,
+      "worst_normalized_excess_loss_dB": 0.1267529332809595,
+      "min_power_closure": 0.9930400523300883,
+      "max_power_closure": 0.9976037222094962,
+      "min_transmitted_power": 0.08482748291238383,
+      "max_transmitted_power": 0.23500613846923102
+    },
+    "diagnostics": {
+      "return_preferred": false,
+      "return_acceptable": false,
+      "amp_preferred": true,
+      "amp_acceptable": true,
+      "phase_preferred": true,
+      "phase_acceptable": true,
+      "cmr_preferred": true,
+      "cmr_acceptable": true,
+      "loss_preferred": true,
+      "loss_acceptable": true,
+      "strong_return_concern": true,
+      "loss_concern": false,
+      "passivity_closure_reasonable": true
+    },
+    "scientific_verdict": "STRONG_CONCERN",
+    "adaptive_delta_sequence": [
+      {
+        "pass": 3,
+        "delta_s": 0.08278133006440402
+      },
+      {
+        "pass": 4,
+        "delta_s": 0.0002562272831743037
+      },
+      {
+        "pass": 5,
+        "delta_s": 4.54546541861906e-05
+      },
+      {
+        "pass": 6,
+        "delta_s": 1.2148505779205435e-05
+      },
+      {
+        "pass": 7,
+        "delta_s": 3.2227382041216057e-06
+      },
+      {
+        "pass": 8,
+        "delta_s": 2.0071682606251655e-05
+      }
+    ],
+    "numerical_pass": true,
+    "passes_executed": 8,
+    "final_two_delta_s": [
+      3.2227382041216057e-06,
+      2.0071682606251655e-05
+    ]
+  },
+  "native_log_checks": {
+    "warnings": [],
+    "errors": [
+      "Broadband sweep error threshold value :",
+      "Number of error criterion checks      :"
+    ],
+    "port_2_3_bad_conductor_warning_present": false,
+    "mesh_corruption_present": false,
+    "large_reflection_warning_present": true
+  },
+  "scientific_verdict": "STRONG_CONCERN",
+  "original_reader_hold": "HOLD_R1E1A4A_AR0_B1R_T2S_R2_NO_VALID_RESULTS"
+}

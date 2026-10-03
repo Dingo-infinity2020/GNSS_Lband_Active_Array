@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.2.10",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E1-V03-BUILD-20260928",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E1_V03_RECOVERY_BUILD_ONLY",
+  "automated_status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E1_V03_BUILD_ONLY",
+  "lifecycle_status": "PASS_AUTOMATED_AWAIT_HUMAN_3D_REVIEW",
+  "formal_builds": 1,
+  "solver_invocations": 0,
+  "retry_performed": false,
+  "source_head": "7391b5099fd18150c51212b28ace32961a512b4d",
+  "source_macro": {
+    "path": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_BUILD_ONLY_V03.mcr",
+    "git_blob": "8066f693f7a3ba980cf015ef5d9554fd31dc7549",
+    "sha256": "202e6f6bcc144b2fb2e9a065fb06a9f7f8f2f6b525d212c076d0f338e0b29dd5"
+  },
+  "runner": {
+    "path": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e1_v03_recovery_build.py",
+    "git_blob": "a3e7bd8b9ce585f268d4cfbae834b01ed73ee5a1"
+  },
+  "artifact": {
+    "path": "D:\\GNSS_R4A0E1_20260928_RECOVERY_ARTIFACTS\\R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_BUILD_ONLY_V03.cst",
+    "sha256": "a0e4bda5c64ea712564db76441721ca6dc147c97c061360a16a7d21f272f787a",
+    "evidence_root": "D:\\GNSS_R4A0E1_20260928_RECOVERY_ARTIFACTS\\evidence",
+    "lifecycle_state": "PROTECTED_PENDING_HUMAN_3D_REVIEW"
+  },
+  "checks": {
+    "history_persistent": true,
+    "shape_count_36": true,
+    "exact_shape_name_set": true,
+    "component_counts_exact": true,
+    "materials_exact": true,
+    "ports_exact_6_with_properties_coordinates": true,
+    "drill_tools_consumed": true,
+    "result_tree_empty": true,
+    "artifact_hash_stable_fresh_reopen": true,
+    "builtin_intersection_command_returned": true,
+    "critical_pairwise_zero_overlap_10_of_10": true
+  },
+  "port_count": 6,
+  "solver_invocations_confirmed": 0,
+  "next_boundary": "R4_A0_E1_V03_HUMAN_3D_REVIEW",
+  "authorization_after_stop": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  }
+}

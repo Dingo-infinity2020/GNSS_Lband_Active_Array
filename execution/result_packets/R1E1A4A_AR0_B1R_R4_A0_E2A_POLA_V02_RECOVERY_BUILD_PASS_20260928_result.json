@@ -1,0 +1,78 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-POLA-V02-RECOVERY-BUILD-PASS-20260928",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_V02_RECOVERY_BUILD_ONLY",
+  "status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_ONLY",
+  "classification": "PASS_BUILD_ONLY_AFTER_AUDIT_SEMANTICS_RECOVERY",
+  "recovery_class": "NO_GEOMETRY_REDESIGN",
+  "formal_build_invocations": 1,
+  "solver_invocations": 0,
+  "automatic_retries": 0,
+  "source_head": "4eb9afcda880a1da9cab3f3d88960dbb9e56a7e1",
+  "parent": {
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d1r1_build_work\\R1E1A4A_AR0_B1R_T1R1_GROUND_PLACEMENT_CORRECTED_BUILD_ONLY_V01.cst",
+    "sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e"
+  },
+  "source_blobs": {
+    "production_macro": "9931736f1129624d94aee1c9e983a1eaabca5f24",
+    "kernel_reference_macro": "e7fe96e2e763fcc025ce45e874162d9c8a771f77",
+    "runner": "a8f9183d7e4bb635ece3a5cc9e0edd30fb230502",
+    "inventory": "e10886a4c01d9aafd55a16d8126418b7e22025fd"
+  },
+  "artifact": {
+    "path": "D:\\GNSS_R4A0E2A_20260928_BUILD_R2\\R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_INTEGRATED_BUILD_ONLY_V02_RECOVERY.cst",
+    "sha256": "78c9d38e186e38b1d0398e7771758af34345fc5e8f780fdc8c7fade4a8705804",
+    "evidence_root": "D:\\GNSS_R4A0E2A_20260928_BUILD_R2\\evidence",
+    "lifecycle_state": "PROTECTED_AWAIT_HUMAN_3D_REVIEW"
+  },
+  "kernel_reference": {
+    "status": "PASS",
+    "formal_build_invocations": 0,
+    "solver_invocations": 0,
+    "loss_mm3": {
+      "B0_Stalk:A_N_PRONG": 0.3848372420552977,
+      "B0_Stalk:A_P_PRONG": 0.38483724205539716
+    },
+    "production_minus_reference_mm3": {
+      "B0_Stalk:A_N_PRONG": 0,
+      "B0_Stalk:A_P_PRONG": 0
+    },
+    "hard_tolerance_mm3": 1e-7,
+    "analytic_loss_mm3_diagnostic_only": 0.3848451000647496
+  },
+  "checks": {
+    "shape_count_107": true,
+    "exact_shape_name_set": true,
+    "component_counts_exact": true,
+    "preserved_parent_signature_exact": true,
+    "removed_parent_objects_absent": true,
+    "drill_tools_consumed": true,
+    "eight_plated_vias": true,
+    "via_volumes_exact": true,
+    "polA_prong_drill_loss_matches_cst_kernel_reference": true,
+    "ports_exact_12": true,
+    "device_plane_ports": [
+      2,
+      3,
+      8,
+      9
+    ],
+    "history_persistent": true,
+    "result_tree_empty": true,
+    "fresh_reopen_hash_stable": true,
+    "all_positive_volume": true,
+    "builtin_intersection_command_returned": true,
+    "registered_pairwise_zero_overlap_14_of_14": true,
+    "artifact_hash_stable_after_pairwise": true,
+    "analytic_crosspol_envelope_zero_positive_overlap": true
+  },
+  "note": "Runner summary retains an inherited simulationops=0.2.11 display field; execution authority is project/global SimulationOps 0.2.12. This is metadata-only and did not change source, gates, or execution.",
+  "human_review_required": true,
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_HUMAN_3D_REVIEW",
+  "authorization_after_stop": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  }
+}

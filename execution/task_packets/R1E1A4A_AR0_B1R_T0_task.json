@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-T0-20260927",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "759151b8cdd66e44a5178cfc5b81ff1bc9216b87",
+    "model_identity": "AR0_B1R_T0_RF_TENON_SOLDER_INTERFACE"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_T0_RF_TENON_BUILD_ONLY",
+    "target_control_host": "NW",
+    "entrypoint": "scripts/run_r1e1a4a_ar0_b1r_t0_build_only.py",
+    "args": [],
+    "stop_boundary": "build-only + human 3D review; no solve"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": false
+  },
+  "preflight": {
+    "requirements": [
+      "SimulationOps 0.2.8",
+      "B1M artifact SHA256 exact",
+      "B1R-T0 freeze V0.1 unchanged",
+      "stalk thickness fixed at 1.00 mm"
+    ],
+    "fail_closed": true
+  },
+  "outputs": {
+    "expected": [
+      "B1R-T0 CST artifact",
+      "fresh-reopen inventory",
+      "interface audit",
+      "human 3D review guide"
+    ],
+    "result_packet_path": "execution/result_packets/R1E1A4A_AR0_B1R_T0_result.json"
+  },
+  "dc_call_budget": {
+    "target_calls": 2,
+    "polling_policy": "single build transaction then task-node inspection"
+  },
+  "execution": {
+    "silent_retry_allowed": false,
+    "dry_run": false,
+    "ticket_id": "GNSS-AR0-B1R-T0-20260927",
+    "lock_path": "execution/locks/GNSS-AR0-B1R-T0-20260927.lock"
+  }
+}

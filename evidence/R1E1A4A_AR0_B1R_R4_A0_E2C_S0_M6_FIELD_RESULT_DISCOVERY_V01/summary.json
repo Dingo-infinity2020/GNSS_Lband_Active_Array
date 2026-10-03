@@ -1,0 +1,164 @@
+{
+  "schema_version": "gnss-m6-field-result-discovery-v0.1",
+  "status": "HOLD_M6_FIELD_RESULT_PATHS_NOT_DISCOVERED",
+  "results": {
+    "D1": {
+      "tree_item_count": 274,
+      "top_level_counts": {
+        "1D Results": 273,
+        "Excitation Signals": 1
+      },
+      "matches": [
+        "1D Results\\Adaptive Meshing\\f=1.57542\\Meshcells",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\Delta\\All S-Parameters",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S1,1",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S1,2",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S1,4",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S1,5",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S2,1",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S2,2",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S2,4",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S2,5",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S3,1",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S3,2",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S3,4",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S3,5",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S4,1",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S4,2",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S4,4",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S4,5",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S5,1",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S5,2",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S5,4",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S5,5",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S6,1",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S6,2",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S6,4",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S6,5",
+        "1D Results\\Adaptive Meshing\\f=1.57542\\Solvertime"
+      ],
+      "run_ids": {
+        "1D Results\\Adaptive Meshing\\f=1.57542\\Meshcells": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\Delta\\All S-Parameters": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S1,1": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S1,2": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S1,4": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S1,5": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S2,1": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S2,2": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S2,4": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S2,5": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S3,1": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S3,2": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S3,4": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S3,5": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S4,1": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S4,2": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S4,4": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S4,5": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S5,1": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S5,2": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S5,4": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S5,5": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S6,1": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S6,2": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S6,4": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\S-Parameters\\S6,5": [
+          0,
+          1
+        ],
+        "1D Results\\Adaptive Meshing\\f=1.57542\\Solvertime": [
+          0,
+          1
+        ]
+      }
+    },
+    "D2": {
+      "tree_item_count": 139,
+      "top_level_counts": {
+        "1D Results": 138,
+        "Excitation Signals": 1
+      },
+      "matches": [],
+      "run_ids": {}
+    }
+  },
+  "solver_invocations": 0,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false
+}
