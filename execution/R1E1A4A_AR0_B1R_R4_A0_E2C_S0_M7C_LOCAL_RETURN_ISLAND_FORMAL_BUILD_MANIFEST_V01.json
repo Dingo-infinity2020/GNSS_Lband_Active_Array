@@ -1,0 +1,169 @@
+{
+  "schema_version": "gnss-m7c-corrective-formal-build-v0.1",
+  "status": "FORMAL_BUILD_READY_AWAIT_AUTH",
+  "candidate": "M7C",
+  "title": "LOCAL_RETURN_ISLAND_MOAT",
+  "prepared_from_project_commit": "b35bda1b8002c7e00c81c1b3054dac0c068e2361",
+  "parent": {
+    "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\E2C_R7_CANONICAL_BUILD\\R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_COEXISTENCE_BUILD_ONLY_V01.cst",
+    "sha256": "cab6754235a66006ba8bdb423c4dcde2d00de0cb5d8c56623cf94fc3c364ce2c",
+    "expected_solids": 177,
+    "raw_ports": 24,
+    "inventory_contract": "D:\\GNSS_R4A0E1_20260928\\execution\\R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_INVENTORY_V01.json",
+    "inventory_contract_sha256": "e4f4157bf4248bd94c0d33b18c0a8dad4a8831ae46204d6a8fae4ecba86a8095"
+  },
+  "geometry": {
+    "modified_entities": [
+      "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "E2C_B_P_BackGround:LOCAL_BACK_GROUND",
+      "E2C_B_N_BackGround:LOCAL_BACK_GROUND"
+    ],
+    "unchanged_classes": [
+      "radiator",
+      "stalk dielectric",
+      "all signal copper",
+      "package lands",
+      "local-ground-top copper",
+      "vias",
+      "bias/output copper",
+      "ports"
+    ],
+    "island_local_uv_mm": {
+      "A_P": [
+        2.45,
+        4.05,
+        4.15,
+        7.4
+      ],
+      "A_N": [
+        -4.05,
+        -2.45,
+        4.15,
+        7.4
+      ],
+      "B_P": [
+        2.45,
+        4.05,
+        4.15,
+        7.4
+      ],
+      "B_N": [
+        -4.05,
+        -2.45,
+        4.15,
+        7.4
+      ]
+    },
+    "moat_outer_local_uv_mm": {
+      "A_P": [
+        2.2,
+        4.3,
+        3.9,
+        7.65
+      ],
+      "A_N": [
+        -4.3,
+        -2.2,
+        3.9,
+        7.65
+      ],
+      "B_P": [
+        2.2,
+        4.3,
+        3.9,
+        7.65
+      ],
+      "B_N": [
+        -4.3,
+        -2.2,
+        3.9,
+        7.65
+      ]
+    },
+    "moat_width_mm": 0.25,
+    "moat_tools_per_branch": 4,
+    "tool_count": 16,
+    "tool_height_mm": -0.07,
+    "copper_thickness_mm": 0.035,
+    "area_removed_per_branch_mm2": 2.675,
+    "expected_volume_loss_per_branch_mm3": 0.093625,
+    "expected_final_solids": 177,
+    "expected_raw_ports": 24,
+    "four_branch_symmetry_required": true,
+    "paddle_vias_local_uv_positive": [
+      [
+        2.75,
+        7
+      ],
+      [
+        3.25,
+        7
+      ],
+      [
+        3.75,
+        7
+      ]
+    ],
+    "via_outer_radius_mm": 0.175,
+    "min_via_annulus_to_island_edge_margin_mm": 0.125,
+    "island_basis": "smallest axis-aligned local-u/v rectangle containing the tested M7B under-pad footprint and the full projected EXPOSED_PADDLE / three-paddle-via return region",
+    "cross_pol_bypass_check": {
+      "background_centerline_intersection_abs_u": 1,
+      "moat_min_abs_u": 2.2,
+      "island_min_abs_u": 2.45,
+      "direct_cross_pol_ground_contact_with_island": false
+    }
+  },
+  "scientific_change": "From the canonical full-E2C backside ground, retain a branch-local copper island beneath the CIN/RFIN path and all three paddle-via return contacts, while etching a closed 0.25-mm copper moat around that island. No signal, package-top ground, via, port or radiator geometry changes.",
+  "target_mechanism": "Preserve the local RF reference that M7B removed, while preventing the CIN-coupled local return node from being a broad low-impedance part of the surrounding/shared backside sheet.",
+  "first_principles_prediction": "If M7B's large Sdd penalty was caused by loss of local reference while full-E2C Sdc/asymmetry came from coupling that reference into a shared/non-ideal return sheet, M7C should keep most of the M7B symmetry improvement and simultaneously restore the differential self-loading toward the isolated baseline.",
+  "falsification": "If branch asymmetry remains suppressed but Sdd improves by less than 10% versus M7B, loss of local return reference is not sufficient to explain the M7B penalty or this topology fails to restore it. If Sdd improves but Sdc/asymmetry returns above 50% of full-E2C, the moat does not isolate the shared return strongly enough.",
+  "preregistered_future_solve_gate": {
+    "anchors_ghz": [
+      1.2056,
+      1.2984,
+      1.3432,
+      1.5752,
+      1.6496
+    ],
+    "primary_symmetry": "For both polarizations at all five anchors, |Delta Sdc| versus the corresponding isolated baseline <= 0.25 times the full-E2C |Delta Sdc| at the same anchor.",
+    "primary_differential_restoration": "For both polarizations at 1.3432, 1.5752 and 1.6496 GHz, |Delta Sdd| versus isolated baseline <= 0.70 times the M7B |Delta Sdd| at the same anchor.",
+    "secondary_raw": "Worst own-pol source-side complex deviation over 1.15-1.65 GHz <= 0.80 times the M7B worst value (reference worst=0.8208781601757584; threshold=0.6567025281406067).",
+    "guard": "No new >6 dB off-diagonal excursion in any <=50 MHz window; numerical hard gates must pass.",
+    "classification": {
+      "PASS_M7C_LOCAL_RETURN_ISLAND": "numerical gates pass AND symmetry primary passes AND differential-restoration primary passes AND guard passes",
+      "REVIEW_M7C_PARTIAL": "numerical/guard pass and exactly one primary family passes or at least one failed primary improves >=10% in the predicted direction",
+      "REJECT_M7C_LOCAL_RETURN_TOPOLOGY": "numerical/guard pass and neither primary family demonstrates >=10% predicted improvement",
+      "HOLD_M7C_GUARD": "numerical gates pass but guard fails",
+      "HOLD_M7C_NUMERICAL": "numerical hard gate fails"
+    }
+  },
+  "comparison_authority": {
+    "m6_d1": "WEAK signal-only standalone mechanism",
+    "m6_d2": "INTERMEDIATE ground/backside/via contribution but not scaled full-E2C copy",
+    "m7a": "REJECT_M7A_INNER_EDGE_LEVER",
+    "m7b": "REVIEW_M7B_PARTIAL_CORRECTION; Sdc/asymmetry strongly suppressed but Sdd self-loading worsened 2.25-3.60x full-E2C at diagnostic anchors",
+    "modal_interpretation_commit": "b35bda1b8002c7e00c81c1b3054dac0c068e2361"
+  },
+  "execution": {
+    "macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.mcr",
+    "macro_sha256": "62f69181b70d192093fb71ebcc73c4a20ff04c602c04dbbadc2e190dacd99726",
+    "build_stop": "STOP_AFTER_177_SOLID_24_PORT_FRESH_REOPEN_EXACT_MOAT_VOLUME_AND_HUMAN_GEOMETRY_REVIEW_NO_SOLVER",
+    "target_root": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7C_LOCAL_RETURN_ISLAND_V01",
+    "artifact_name": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst",
+    "formal_build_invocations": 1,
+    "solver_invocations": 0,
+    "runner": "scripts/run_m7c_local_return_island_build_only_v01.py",
+    "packet_generator": "scripts/make_m7c_local_return_island_build_packet_v01.py"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false
+  },
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
+  "freeze_authority": {
+    "candidate_manifest": "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_MANIFEST_V01.json",
+    "candidate_manifest_sha256": "bf3e0abdd529c639186edfb0f25c0c9104252534ad85c122db87a8e3b3ffb826"
+  }
+}

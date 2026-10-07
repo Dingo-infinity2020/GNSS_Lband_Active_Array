@@ -1,0 +1,27 @@
+{
+  "schema_version": "gnss-m7c-offline-freeze-audit-v0.1",
+  "status": "PASS_M7C_OFFLINE_BUILD_CONTRACT_FROZEN_AWAIT_HOST_STATIC_QUALIFICATION_AND_BUILD_AUTH",
+  "checks": {
+    "parent_full_e2c": true,
+    "modified_entities_exact_four": true,
+    "macro_create_count": true,
+    "macro_subtract_count": true,
+    "no_solver_keywords": true,
+    "island_contains_three_paddle_vias": true,
+    "min_via_margin_mm": 0.125,
+    "cross_pol_direct_bypass_excluded": true,
+    "moat_area_per_branch_mm2": 2.675,
+    "expected_volume_loss_per_branch_mm3": 0.093625,
+    "build_authorized": false,
+    "solve_authorized": false
+  },
+  "hashes": {
+    "macro_sha256": "62f69181b70d192093fb71ebcc73c4a20ff04c602c04dbbadc2e190dacd99726",
+    "candidate_manifest_sha256": "bf3e0abdd529c639186edfb0f25c0c9104252534ad85c122db87a8e3b3ffb826",
+    "runner_text_sha256": "8d14e5193dfef3e5aee8ea35fafad819750818c1188c735e87fffb6a69ded8c9",
+    "packet_generator_text_sha256": "06d5ba4fd46202075dd8497421c4fbbe5d22566f5013930702e17a47c32608ea",
+    "audit_script_text_sha256": "926cf116c096f397100684befc4aa1ada563205b32c390aa187a85c44d7ab86c"
+  },
+  "remote_execution_performed": false,
+  "cst_execution_performed": false
+}
