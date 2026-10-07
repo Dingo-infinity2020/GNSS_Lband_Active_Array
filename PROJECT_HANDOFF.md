@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=94
+HANDOFF_VERSION=95
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_HUMAN_GEOMETRY_REVIEW
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_AWAIT_AUTH
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=M7C_BUILD_PASS_AWAIT_USER_HUMAN_3D_REVIEW
+TASK_STATUS=M7C_HUMAN_REVIEW_PASS_SOLVE_CONTRACT_FROZEN_AWAIT_AUTH
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -20,49 +20,56 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-07 current baton — M7C BUILD PASS, human 3D review required
+## 2026-10-07 current baton — M7C human review PASS, SOLVE contract frozen
 
-The user authorized one M7C BUILD. The frozen host static contract passed after binding the known Windows host-byte/CRLF hashes.
+The user manually reviewed the protected M7C CST geometry and explicitly reported PASS.
 
-Formal runner:
-- packet: `GNSS-M7C-LOCAL-RETURN-ISLAND-BUILD-V01`
-- runner final status: PASS
-- entrypoint exit: 0
-- BUILD invocations: 1
-- solver invocations: 0
-- replay detected: false
-- all 13 runner preflight checks PASS.
-
-Canonical M7C build artifact:
+Reviewed artifact:
 `D:\GNSS_Lband_Active_Array\runs\formal\build_only\M7C_LOCAL_RETURN_ISLAND_V01\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst`
 
 SHA256:
 `ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98`
 
-Automated geometry/inventory qualification:
-- 177 solids PASS;
-- 24 raw ports PASS;
-- all expected names query PASS;
-- 173 unmodified solids preserved PASS;
-- port semantics unchanged PASS;
-- fresh-reopen hash stable PASS;
-- no solver result files PASS;
-- four modified backside-ground losses are symmetric and equal to 0.093625 mm^3 within floating precision.
+Human-review evidence:
+`execution/M7C_HUMAN_GEOMETRY_REVIEW_PASS.json`
+
+The diagnostic SOLVE contract is now frozen before any M7C solved response exists. It reuses the proven 12-port coexistence network and solver fidelity from full E2C / M7A / M7B.
+
+Frozen primary family A — symmetry preservation:
+- at 1.2056, 1.2984, 1.3432, 1.5752 and 1.6496 GHz;
+- both polarizations;
+- |Delta Sdc| <= 0.25 x corresponding full-E2C |Delta Sdc|;
+- all 10 checks required.
+
+Frozen primary family B — differential restoration:
+- at 1.3432, 1.5752 and 1.6496 GHz;
+- both polarizations;
+- |Delta Sdd| <= 0.70 x frozen M7B |Delta Sdd|;
+- all 6 checks required.
+
+Secondary raw check:
+worst own-pol source-side complex deviation over 1.15–1.65 GHz <= 0.6567025281.
+
+Guard:
+no new >6 dB off-diagonal excursion in any <=50 MHz window relative to full E2C.
+
+Formal solver budget = 1.
+Automatic retry = 0.
+No automatic geometry change or next stage.
 
 Current boundary:
-`M7C_HUMAN_GEOMETRY_REVIEW`
-
-The user should open the canonical artifact and verify:
-1. one closed 0.25-mm copper moat surrounds each intended local-return island;
-2. positive island u=2.45..4.05 and negative island u=-4.05..-2.45, v=4.15..7.40;
-3. all signal/package/top-ground/via/bias/port geometry remains visually unchanged;
-4. all three paddle vias remain inside/connected to each island and no moat intersects a via annulus;
-5. four islands/moats are mirror/rotation symmetric, and the moat is copper etch only, not a substrate slot.
+`M7C_DIAGNOSTIC_SOLVE_AWAIT_AUTH`
 
 BUILD_AUTHORIZED = NO.
 SOLVE_AUTHORIZED = NO.
 
-A human PASS does not itself authorize SOLVE. Only after human review may the M7C diagnostic SOLVE contract be finalized and presented at a separate authorization boundary.
+Before any future SOLVE grant, run:
+`scripts/audit_m7c_diagnostic_solve_contract_v01.py`
+
+Only exact `PASS_M7C_DIAGNOSTIC_SOLVE_STATIC_CONTRACT` may proceed to a one-shot SOLVE grant.
+
+Authority:
+`docs/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_FREEZE_V01.md`
 
 ## Long-horizon authority
 

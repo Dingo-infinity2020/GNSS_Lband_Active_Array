@@ -3,7 +3,7 @@
     "project":  {
                     "name":  "GNSS_Lband_Active_Array",
                     "source_branch":  "project/r0-charts-scaffold",
-                    "source_commit":  "e50472abf2154d8a7a8971c8dd56fbf235a15989",
+                    "source_commit":  "0ddf8136872dbc172ecee8da79a135d942e05028",
                     "repository":  "Dingo-infinity2020/GNSS_Lband_Active_Array",
                     "model_identity":  "R1E1A4A_AR0_B1R_R4_A0_E2C_R7"
                 },
@@ -1927,7 +1927,7 @@
                                                   ]
                           },
     "execution":  {
-                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_HUMAN_GEOMETRY_REVIEW",
+                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_AWAIT_AUTH",
                       "formal_recovery_solve_invocation_count":  1,
                       "silent_retry_allowed":  false,
                       "hash_lock_required":  true,
@@ -1936,18 +1936,18 @@
                       "formal_o2b_screen_invocation_count":  9,
                       "formal_o2b_qualification_invocation_count":  3,
                       "last_completed_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
-                      "last_status":  "PASS_M7C_BUILD_AWAIT_HUMAN_GEOMETRY_REVIEW",
+                      "last_status":  "PASS_M7C_HUMAN_REVIEW_SOLVE_CONTRACT_FROZEN_AWAIT_AUTH",
                       "one_shot_required":  true,
                       "fresh_run_directory_required":  true,
                       "entrypoint_qualification":  {
                                                        "required":  true,
-                                                       "entrypoint_path":  "scripts/run_m7c_local_return_island_build_only_v01.py",
+                                                       "entrypoint_path":  "scripts/run_m7c_diagnostic_solve_v01.py",
                                                        "runtime_identity":  "CST Studio Suite 2022 bundled Python via workspace launcher + SimulationOps control Python",
-                                                       "qualification_stage":  "M7C_FORMAL_BUILD_STATIC_QUALIFICATION",
-                                                       "qualification_status":  "PASS_M7C_FORMAL_BUILD_STATIC_CONTRACT",
-                                                       "qualification_evidence":  "evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_FORMAL_BUILD_PREP_V01/STATIC_AUDIT.json",
-                                                       "last_qualified_source_commit":  "e50472abf2154d8a7a8971c8dd56fbf235a15989",
-                                                       "entrypoint_sha256":  "61da0103a5c2e1cee8e61d0cbb64e847dd225731db8be26d0fa675cf807f6ad6"
+                                                       "qualification_stage":  "M7C_DIAGNOSTIC_SOLVE_STATIC_QUALIFICATION",
+                                                       "qualification_status":  "FROZEN_AWAIT_HOST_STATIC_QUALIFICATION",
+                                                       "qualification_evidence":  "evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_PREP_V01/STATIC_AUDIT.json",
+                                                       "last_qualified_source_commit":  "",
+                                                       "entrypoint_sha256":  ""
                                                    },
                       "project_observability":  {
                                                     "protocol":  "simops-project-event-v0.1",
@@ -1967,16 +1967,16 @@
                       "geometry_review":  {
                                               "required":  true,
                                               "preferred_mode":  "CST_GUI_BUILTIN_PLUS_HUMAN_VISUAL",
-                                              "status":  "AWAIT_USER_M7C_HUMAN_GEOMETRY_REVIEW",
+                                              "status":  "PASS_M7C_HUMAN_GEOMETRY_REVIEW",
                                               "review_artifact":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7C_LOCAL_RETURN_ISLAND_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst",
                                               "review_artifact_sha256":  "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98",
-                                              "reviewer":  "",
-                                              "method":  "Automated M7C BUILD invariants PASS; awaiting user manual CST 3D review before any SOLVE contract.",
+                                              "reviewer":  "USER_HUMAN_REVIEW",
+                                              "method":  "User manual CST 3D review after automated M7C BUILD qualification; PASS.",
                                               "unexpected_interference":  [],
                                               "intentional_contacts":  [],
                                               "intentional_em_overlaps":  [],
-                                              "evidence":  "",
-                                              "reviewed_at":  "",
+                                              "evidence":  "execution/M7C_HUMAN_GEOMETRY_REVIEW_PASS.json",
+                                              "reviewed_at":  "2026-10-07",
                                               "automated_pairwise_required":  false,
                                               "automated_pairwise_scope":  []
                                           }
@@ -2020,17 +2020,17 @@
                   },
     "dc_call_budget":  {
                            "target_calls_per_routine_stage":  2,
-                           "calls_used_current_stage":  1,
-                           "task_packet_path":  "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_LOCAL_RETURN_ISLAND_V01\\task_packet.json",
-                           "result_packet_path":  "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_LOCAL_RETURN_ISLAND_V01\\result_packet.json",
+                           "calls_used_current_stage":  0,
+                           "task_packet_path":  "",
+                           "result_packet_path":  "",
                            "preferred_runner":  "D:\\\\quest_naoc_tarminal\\\\SimulationOps\\\\runner\\\\nw\\\\simops.cmd",
                            "polling_policy":  "launch_once_inspect_at_task_node",
-                           "exception_reason":  "M7C one-shot BUILD PASS and consumed; no solver invoked; awaiting user human 3D geometry review.",
+                           "exception_reason":  "M7C human geometry review PASS; diagnostic SOLVE contract frozen offline; no SOLVE authorization and no CST/DC action performed for solve preparation.",
                            "task_packet_source":  {
                                                       "mode":  "PROJECT_GIT_PACKET_OR_GENERATOR",
                                                       "packet_path":  "",
-                                                      "generator_path":  "scripts/make_m7c_local_return_island_build_packet_v01.py",
-                                                      "packet_or_generator_sha256":  "7f8dec4f3570f6ee9029eb283711a9ff4f6275f89fa183f514c1594060bb8000",
+                                                      "generator_path":  "scripts/make_m7c_diagnostic_solve_packet_v01.py",
+                                                      "packet_or_generator_sha256":  "PENDING_HOST_STATIC_QUALIFICATION",
                                                       "adhoc_exception_reason":  ""
                                                   },
                            "accounting_scope":  "TRANSACTION_CONTROL_TARGET_NOT_REMOTE_MCP_TOTAL",
@@ -2041,7 +2041,7 @@
                            "forensics_command":  "runner/nw/simops.cmd forensics --packet \u003cpacket\u003e"
                        },
     "evidence":  {
-                     "status_classification":  "PASS_M7C_BUILD_AWAIT_HUMAN_GEOMETRY_REVIEW",
+                     "status_classification":  "PASS_M7C_HUMAN_REVIEW_SOLVE_CONTRACT_FROZEN_AWAIT_AUTH",
                      "source_commit_for_o3_o4":  "00bea9de782eb36c1d3f118866edd283808b6233",
                      "o3_nominal_solved_sha256":  "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
                      "o3_straight_reference_solved_sha256":  "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
@@ -2076,7 +2076,7 @@
                      "m7b_build_artifact_sha256":  "5498e9c447fdd4eeb969c02701d27886e839144ebe9941c4e7f56bc7419c69ea",
                      "m7b_build_recovery_evidence":  "evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_BUILD_READONLY_RECOVERY_V01/RECOVERY.json",
                      "m7b_build_recovery_status":  "PASS_M7B_BUILD_READONLY_QUALIFICATION_RECOVERY_AWAIT_HUMAN_REVIEW",
-                     "exact_invocation":  "ONE_FORMAL_M7C_BUILD_CONSUMED; RUNNER_PASS; ZERO_SOLVER; AWAIT_USER_HUMAN_3D_REVIEW"
+                     "exact_invocation":  "M7C_HUMAN_REVIEW_PASS; DIAGNOSTIC_SOLVE_CONTRACT_FROZEN_OFFLINE; NO_BUILD_NO_SOLVE"
                  },
     "authorization_history":  [
                                   {
@@ -2240,7 +2240,7 @@
                       "source_bundle":  "",
                       "build_artifact":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7C_LOCAL_RETURN_ISLAND_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst",
                       "staging_artifact":  "",
-                      "run_directory":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7C_LOCAL_RETURN_ISLAND_V01",
+                      "run_directory":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_DIAGNOSTIC_SOLVE_V01",
                       "qualification_output":  "D:\\GNSS_Lband_Active_Array\\runs\\nonprod\\e2c_s0_entrypoint_qualification_20261002_v01\\qualification.json",
                       "handoff":  ""
                   },
