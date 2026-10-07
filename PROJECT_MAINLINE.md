@@ -322,10 +322,10 @@ No stage inherits solver permission from the previous stage.
 
 As of the 2026-10-04 handoff, the active local sub-route is:
 
-`R1E0 periodic scan CLOSED PASS -> R1E1A support gate -> R1E1A4A/AR0 receiver-interface branch -> E2A/E2B isolated loaded-source characterization -> E2C dual-pol coexistence severe composite-mode evidence -> M6 diagnostic decomposition -> M7A CLOSED REJECT -> M7B BUILD CLOSED RECOVERY PASS -> M7B HUMAN 3D REVIEW PASS -> M7B DIAGNOSTIC SOLVE AWAIT AUTH`.
+`R1E0 periodic scan CLOSED PASS -> R1E1A support gate -> R1E1A4A/AR0 receiver-interface branch -> E2A/E2B isolated loaded-source characterization -> E2C dual-pol coexistence severe composite-mode evidence -> M6 diagnostic decomposition -> M7A CLOSED REJECT -> M7B CLOSED PARTIAL -> M7B first-principles modal decomposition PASS -> M7C LOCAL_RETURN_ISLAND BUILD AWAIT AUTH`.
 
-M7B now has a protected, human-reviewed build. The diagnostic solve contract is frozen before seeing any M7B solved response. No SOLVE is currently authorized.
+M7B is closed. M7C now has a frozen offline topology and BUILD-only chain designed to preserve local CIN/RFIN return reference while isolating it from the shared backside sheet. No BUILD or SOLVE is currently authorized.
 
-If a future explicit SOLVE authorization is given, first run the frozen host static contract audit. Only a PASS may activate a one-shot SOLVE grant. The solve must use the exact frozen 12-port network and pre-registered M7B metrics; no retry, sweep, or geometry mutation is allowed.
+If a future explicit M7C BUILD authorization is given, first run the frozen host static build-chain audit. Only a PASS may activate one BUILD-only grant. A successful M7C build must stop for automated invariants and human 3D review; it grants no SOLVE permission.
 
 After the M7B result is classified, return to the already frozen AR0/mainline authority. Do not reopen isolated-element S11 optimization and do not freeze final LNA input matching before the authoritative scan-dependent active-impedance locus exists.

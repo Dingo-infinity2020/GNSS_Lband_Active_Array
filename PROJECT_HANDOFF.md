@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=92
+HANDOFF_VERSION=93
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_OFFLINE_TOPOLOGY_DEFINITION
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_AWAIT_AUTH
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=M7B_FIRST_PRINCIPLES_MODAL_INTERPRETATION_PASS_M7C_OFFLINE_ONLY
+TASK_STATUS=M7C_LOCAL_RETURN_ISLAND_BUILD_CONTRACT_FROZEN_AWAIT_AUTH
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -20,33 +20,45 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-04 current baton — M7B solved, first-principles modal interpretation complete
+## 2026-10-07 current baton — M7C local-return island frozen, BUILD awaiting authorization
 
-Formal M7B SOLVE is closed with runner PASS and science status `REVIEW_M7B_PARTIAL_CORRECTION`. The live grant is consumed; no retry is allowed.
+M7B is closed as `REVIEW_M7B_PARTIAL_CORRECTION`. First-principles modal decomposition established that M7B suppressed branch asymmetry / Sdc to about 4–8% of full E2C but worsened Sdd self-loading by about 2.25–3.60x.
 
-Read-only modal decomposition of existing full-E2C, M7B and isolated E2A/E2B data is complete.
+The unique M7C candidate is now frozen offline:
 
-Key result:
-- M7B suppresses branch asymmetry / Sdc to approximately 4–8% of full-E2C across the five diagnostic anchors.
-- M7B leaves the mutual-average term comparatively similar.
-- M7B increases self-average deviation to about 1.7–2.4x full E2C.
-- M7B increases Sdd deviation to about 2.25–3.60x full E2C, worsening toward the upper band.
+`LOCAL_RETURN_ISLAND_MOAT`
 
-Interpretation:
-M7B removed the asymmetric terminal-local signal/return coupling, but the full under-pad aperture also removed too much local RF return reference and created a broadband symmetric differential-impedance discontinuity.
+Parent is the canonical full-E2C R7 build, not M7B.
 
-Current task:
-`M7C_OFFLINE_TOPOLOGY_DEFINITION`
+Per branch, preserve a backside local-return island covering the CIN/RFIN path and all three paddle-via return contacts, and etch a 0.25-mm closed moat around it.
 
-Preferred topology principle:
-retain local ground under/near CIN as a branch-local return island/tongue, isolate its lateral/shared-current connection with a moat, and keep it galvanically tied to the branch-local package/via return. Do not enlarge the M7B aperture.
+Positive branch island:
+u=2.45..4.05 mm, v=4.15..7.40 mm.
 
-No exact M7C dimensions are frozen yet.
+Negative branch island:
+u=-4.05..-2.45 mm, v=4.15..7.40 mm.
+
+Moat outer envelope:
+positive u=2.20..4.30 mm; negative u=-4.30..-2.20 mm; v=3.90..7.65 mm.
+
+All three paddle vias remain inside the island with >=0.125-mm annulus-to-edge copper margin. The island lies away from the orthogonal backside-ground direct-contact line near |u|=1, so no cross-pol galvanic bypass is expected.
+
+Only the four backside `LOCAL_BACK_GROUND` solids may change. Expected moat copper loss is 2.675 mm^2 x 0.035 mm = 0.093625 mm^3 per branch. The 0.07-mm cutter depth is not used as removed-material thickness.
+
+Frozen source:
+`source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.mcr`
+
+Candidate authority:
+`docs/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_FREEZE_V01.md`
+
+Current boundary:
+`M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_AWAIT_AUTH`
+
+Before any BUILD grant, run the frozen host static audit. Only `PASS_M7C_FORMAL_BUILD_STATIC_CONTRACT` may proceed.
+
 BUILD_AUTHORIZED = NO.
 SOLVE_AUTHORIZED = NO.
-
-Authority:
-`docs/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_FIRST_PRINCIPLES_MODAL_INTERPRETATION_V01.md`
+No CST, Desktop Commander or solver action was performed during M7C preparation.
 
 ## Long-horizon authority
 
