@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=93
+HANDOFF_VERSION=94
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_AWAIT_AUTH
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_HUMAN_GEOMETRY_REVIEW
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=M7C_LOCAL_RETURN_ISLAND_BUILD_CONTRACT_FROZEN_AWAIT_AUTH
+TASK_STATUS=M7C_BUILD_PASS_AWAIT_USER_HUMAN_3D_REVIEW
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -20,45 +20,49 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-07 current baton — M7C local-return island frozen, BUILD awaiting authorization
+## 2026-10-07 current baton — M7C BUILD PASS, human 3D review required
 
-M7B is closed as `REVIEW_M7B_PARTIAL_CORRECTION`. First-principles modal decomposition established that M7B suppressed branch asymmetry / Sdc to about 4–8% of full E2C but worsened Sdd self-loading by about 2.25–3.60x.
+The user authorized one M7C BUILD. The frozen host static contract passed after binding the known Windows host-byte/CRLF hashes.
 
-The unique M7C candidate is now frozen offline:
+Formal runner:
+- packet: `GNSS-M7C-LOCAL-RETURN-ISLAND-BUILD-V01`
+- runner final status: PASS
+- entrypoint exit: 0
+- BUILD invocations: 1
+- solver invocations: 0
+- replay detected: false
+- all 13 runner preflight checks PASS.
 
-`LOCAL_RETURN_ISLAND_MOAT`
+Canonical M7C build artifact:
+`D:\GNSS_Lband_Active_Array\runs\formal\build_only\M7C_LOCAL_RETURN_ISLAND_V01\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst`
 
-Parent is the canonical full-E2C R7 build, not M7B.
+SHA256:
+`ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98`
 
-Per branch, preserve a backside local-return island covering the CIN/RFIN path and all three paddle-via return contacts, and etch a 0.25-mm closed moat around it.
-
-Positive branch island:
-u=2.45..4.05 mm, v=4.15..7.40 mm.
-
-Negative branch island:
-u=-4.05..-2.45 mm, v=4.15..7.40 mm.
-
-Moat outer envelope:
-positive u=2.20..4.30 mm; negative u=-4.30..-2.20 mm; v=3.90..7.65 mm.
-
-All three paddle vias remain inside the island with >=0.125-mm annulus-to-edge copper margin. The island lies away from the orthogonal backside-ground direct-contact line near |u|=1, so no cross-pol galvanic bypass is expected.
-
-Only the four backside `LOCAL_BACK_GROUND` solids may change. Expected moat copper loss is 2.675 mm^2 x 0.035 mm = 0.093625 mm^3 per branch. The 0.07-mm cutter depth is not used as removed-material thickness.
-
-Frozen source:
-`source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.mcr`
-
-Candidate authority:
-`docs/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_FREEZE_V01.md`
+Automated geometry/inventory qualification:
+- 177 solids PASS;
+- 24 raw ports PASS;
+- all expected names query PASS;
+- 173 unmodified solids preserved PASS;
+- port semantics unchanged PASS;
+- fresh-reopen hash stable PASS;
+- no solver result files PASS;
+- four modified backside-ground losses are symmetric and equal to 0.093625 mm^3 within floating precision.
 
 Current boundary:
-`M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_AWAIT_AUTH`
+`M7C_HUMAN_GEOMETRY_REVIEW`
 
-Before any BUILD grant, run the frozen host static audit. Only `PASS_M7C_FORMAL_BUILD_STATIC_CONTRACT` may proceed.
+The user should open the canonical artifact and verify:
+1. one closed 0.25-mm copper moat surrounds each intended local-return island;
+2. positive island u=2.45..4.05 and negative island u=-4.05..-2.45, v=4.15..7.40;
+3. all signal/package/top-ground/via/bias/port geometry remains visually unchanged;
+4. all three paddle vias remain inside/connected to each island and no moat intersects a via annulus;
+5. four islands/moats are mirror/rotation symmetric, and the moat is copper etch only, not a substrate slot.
 
 BUILD_AUTHORIZED = NO.
 SOLVE_AUTHORIZED = NO.
-No CST, Desktop Commander or solver action was performed during M7C preparation.
+
+A human PASS does not itself authorize SOLVE. Only after human review may the M7C diagnostic SOLVE contract be finalized and presented at a separate authorization boundary.
 
 ## Long-horizon authority
 

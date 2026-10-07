@@ -322,7 +322,7 @@ No stage inherits solver permission from the previous stage.
 
 As of the 2026-10-04 handoff, the active local sub-route is:
 
-`R1E0 periodic scan CLOSED PASS -> R1E1A support gate -> R1E1A4A/AR0 receiver-interface branch -> E2A/E2B isolated loaded-source characterization -> E2C dual-pol coexistence severe composite-mode evidence -> M6 diagnostic decomposition -> M7A CLOSED REJECT -> M7B CLOSED PARTIAL -> M7B first-principles modal decomposition PASS -> M7C LOCAL_RETURN_ISLAND BUILD AWAIT AUTH`.
+`R1E0 periodic scan CLOSED PASS -> R1E1A support gate -> R1E1A4A/AR0 receiver-interface branch -> E2A/E2B isolated loaded-source characterization -> E2C dual-pol coexistence severe composite-mode evidence -> M6 diagnostic decomposition -> M7A CLOSED REJECT -> M7B CLOSED PARTIAL -> M7B first-principles modal decomposition PASS -> M7C LOCAL_RETURN_ISLAND BUILD PASS -> HUMAN 3D REVIEW AWAIT`.
 
 M7B is closed. M7C now has a frozen offline topology and BUILD-only chain designed to preserve local CIN/RFIN return reference while isolating it from the shared backside sheet. No BUILD or SOLVE is currently authorized.
 

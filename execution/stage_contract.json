@@ -8,25 +8,14 @@
                     "model_identity":  "R1E1A4A_AR0_B1R_R4_A0_E2C_R7"
                 },
     "authorization":  {
-                          "BUILD_AUTHORIZED":  true,
+                          "BUILD_AUTHORIZED":  false,
                           "SOLVE_AUTHORIZED":  false,
                           "production_solve_authorized":  false,
                           "material_ab_authorized":  false,
                           "lna_integration_authorized":  false,
                           "cst251_authorized":  false,
                           "semantics":  "CURRENT_LIVE_ONLY",
-                          "active_grant":  {
-                                               "grant_id":  "GNSS-M7C-BUILD-GRANT-20261007-01",
-                                               "kind":  "BUILD",
-                                               "state":  "GRANTED",
-                                               "stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
-                                               "source_commit":  "e50472abf2154d8a7a8971c8dd56fbf235a15989",
-                                               "entrypoint_sha256":  "61da0103a5c2e1cee8e61d0cbb64e847dd225731db8be26d0fa675cf807f6ad6",
-                                               "granted_at":  "2026-10-07T14:14:00Z",
-                                               "expires_at":  null,
-                                               "task_node":  "M7C_LOCAL_RETURN_ISLAND_BUILD",
-                                               "user_authorization":  "EXPLICIT_CURRENT_TURN"
-                                           }
+                          "active_grant":  null
                       },
     "scientific_freeze":  {
                               "candidate":  "H3B_T01A_GCPW_ORTHOGONAL_TRANSITION",
@@ -1938,7 +1927,7 @@
                                                   ]
                           },
     "execution":  {
-                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
+                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_HUMAN_GEOMETRY_REVIEW",
                       "formal_recovery_solve_invocation_count":  1,
                       "silent_retry_allowed":  false,
                       "hash_lock_required":  true,
@@ -1946,8 +1935,8 @@
                       "formal_o2a_solve_invocation_count":  1,
                       "formal_o2b_screen_invocation_count":  9,
                       "formal_o2b_qualification_invocation_count":  3,
-                      "last_completed_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_DIAGNOSTIC_SOLVE",
-                      "last_status":  "AUTHORIZED_M7C_BUILD_AWAIT_PACKET",
+                      "last_completed_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
+                      "last_status":  "PASS_M7C_BUILD_AWAIT_HUMAN_GEOMETRY_REVIEW",
                       "one_shot_required":  true,
                       "fresh_run_directory_required":  true,
                       "entrypoint_qualification":  {
@@ -1978,11 +1967,11 @@
                       "geometry_review":  {
                                               "required":  true,
                                               "preferred_mode":  "CST_GUI_BUILTIN_PLUS_HUMAN_VISUAL",
-                                              "status":  "AWAIT_M7C_BUILD_AND_HUMAN_GEOMETRY_REVIEW",
-                                              "review_artifact":  "",
-                                              "review_artifact_sha256":  "",
+                                              "status":  "AWAIT_USER_M7C_HUMAN_GEOMETRY_REVIEW",
+                                              "review_artifact":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7C_LOCAL_RETURN_ISLAND_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst",
+                                              "review_artifact_sha256":  "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98",
                                               "reviewer":  "",
-                                              "method":  "After a separately authorized M7C BUILD, automated invariants first, then user manual CST 3D review.",
+                                              "method":  "Automated M7C BUILD invariants PASS; awaiting user manual CST 3D review before any SOLVE contract.",
                                               "unexpected_interference":  [],
                                               "intentional_contacts":  [],
                                               "intentional_em_overlaps":  [],
@@ -2036,7 +2025,7 @@
                            "result_packet_path":  "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_LOCAL_RETURN_ISLAND_V01\\result_packet.json",
                            "preferred_runner":  "D:\\\\quest_naoc_tarminal\\\\SimulationOps\\\\runner\\\\nw\\\\simops.cmd",
                            "polling_policy":  "launch_once_inspect_at_task_node",
-                           "exception_reason":  "M7C host static qualification PASS; explicit one-shot BUILD authorization active; formal BUILD not yet launched.",
+                           "exception_reason":  "M7C one-shot BUILD PASS and consumed; no solver invoked; awaiting user human 3D geometry review.",
                            "task_packet_source":  {
                                                       "mode":  "PROJECT_GIT_PACKET_OR_GENERATOR",
                                                       "packet_path":  "",
@@ -2052,7 +2041,7 @@
                            "forensics_command":  "runner/nw/simops.cmd forensics --packet \u003cpacket\u003e"
                        },
     "evidence":  {
-                     "status_classification":  "AUTHORIZED_M7C_BUILD_AWAIT_PACKET",
+                     "status_classification":  "PASS_M7C_BUILD_AWAIT_HUMAN_GEOMETRY_REVIEW",
                      "source_commit_for_o3_o4":  "00bea9de782eb36c1d3f118866edd283808b6233",
                      "o3_nominal_solved_sha256":  "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
                      "o3_straight_reference_solved_sha256":  "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
@@ -2087,7 +2076,7 @@
                      "m7b_build_artifact_sha256":  "5498e9c447fdd4eeb969c02701d27886e839144ebe9941c4e7f56bc7419c69ea",
                      "m7b_build_recovery_evidence":  "evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_BUILD_READONLY_RECOVERY_V01/RECOVERY.json",
                      "m7b_build_recovery_status":  "PASS_M7B_BUILD_READONLY_QUALIFICATION_RECOVERY_AWAIT_HUMAN_REVIEW",
-                     "exact_invocation":  "M7C_HOST_STATIC_AUDIT_PASS; ONE_SHOT_BUILD_AUTHORIZED; BUILD_NOT_YET_LAUNCHED"
+                     "exact_invocation":  "ONE_FORMAL_M7C_BUILD_CONSUMED; RUNNER_PASS; ZERO_SOLVER; AWAIT_USER_HUMAN_3D_REVIEW"
                  },
     "authorization_history":  [
                                   {
@@ -2228,13 +2217,30 @@
                                       "solve_consumed":  false,
                                       "artifact_sha256":  "5498e9c447fdd4eeb969c02701d27886e839144ebe9941c4e7f56bc7419c69ea",
                                       "recovery_reason":  "QUALIFICATION_EXPECTED_TOOL_DEPTH_0P07_INSTEAD_OF_PARENT_GROUND_THICKNESS_0P035"
+                                  },
+                                  {
+                                      "grant_id":  "GNSS-M7C-BUILD-GRANT-20261007-01",
+                                      "kind":  "BUILD",
+                                      "state":  "CONSUMED",
+                                      "stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
+                                      "packet_id":  "GNSS-M7C-LOCAL-RETURN-ISLAND-BUILD-V01",
+                                      "source_commit":  "e50472abf2154d8a7a8971c8dd56fbf235a15989",
+                                      "entrypoint_sha256":  "61da0103a5c2e1cee8e61d0cbb64e847dd225731db8be26d0fa675cf807f6ad6",
+                                      "granted_at":  "2026-10-07T14:14:00Z",
+                                      "closed_at":  "2026-10-07T14:57:23Z",
+                                      "runner_result":  "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_LOCAL_RETURN_ISLAND_V01\\result_packet.json",
+                                      "final_status":  "PASS",
+                                      "project_science_status":  "PASS_M7C_BUILD_AWAIT_HUMAN_GEOMETRY_REVIEW",
+                                      "build_consumed":  true,
+                                      "solve_consumed":  false,
+                                      "artifact_sha256":  "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98"
                                   }
                               ],
     "artifacts":  {
                       "source_bundle":  "",
-                      "build_artifact":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7B_CIN_PAD_CLEARANCE_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_CIN_PAD_CLEARANCE_BUILD_ONLY_V01.cst",
+                      "build_artifact":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7C_LOCAL_RETURN_ISLAND_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst",
                       "staging_artifact":  "",
-                      "run_directory":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7B_DIAGNOSTIC_SOLVE_V01",
+                      "run_directory":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7C_LOCAL_RETURN_ISLAND_V01",
                       "qualification_output":  "D:\\GNSS_Lband_Active_Array\\runs\\nonprod\\e2c_s0_entrypoint_qualification_20261002_v01\\qualification.json",
                       "handoff":  ""
                   },
