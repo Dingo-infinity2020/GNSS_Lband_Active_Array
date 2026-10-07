@@ -4,8 +4,8 @@ from pathlib import Path
 ROOT=Path(r"D:\GNSS_R4A0E1_20260928")
 FREEZE=ROOT/"execution"/"R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_MANIFEST_V01.json"
 MAN=ROOT/"execution"/"R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_FORMAL_BUILD_MANIFEST_V01.json"
-RUN=ROOT/"scripts"/"run_m7c_cin_pad_clearance_build_only_v01.py"
-PKT=ROOT/"scripts"/"make_m7c_cin_pad_clearance_build_packet_v01.py"
+RUN=ROOT/"scripts"/"run_m7c_local_return_island_build_only_v01.py"
+PKT=ROOT/"scripts"/"make_m7c_local_return_island_build_packet_v01.py"
 OUT=ROOT/"evidence"/"R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_FORMAL_BUILD_PREP_V01"/"STATIC_AUDIT.json"
 def sha(p):
  h=hashlib.sha256()
@@ -20,7 +20,7 @@ def run_solver_calls(p):
 freeze=json.loads(FREEZE.read_text(encoding="utf-8")); m=json.loads(MAN.read_text(encoding="utf-8"))
 macro=ROOT/m["execution"]["macro"]; t=macro.read_text(encoding="utf-8")
 inv=Path(m["parent"]["inventory_contract"]); j=json.loads(inv.read_text(encoding="utf-8"))
-immutable_keys=("candidate","title","geometry","scientific_change","target_mechanism","primary_prediction","falsification","pre_registered_success_gate","comparison_authority")
+immutable_keys=("candidate","title","geometry","scientific_change","target_mechanism","first_principles_prediction","falsification","preregistered_future_solve_gate","comparison_authority")
 checks={
  "candidate_m7c":m["candidate"]=="M7C",
  "stage_exact":m["stage"]=="R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
@@ -38,7 +38,7 @@ checks={
  "packet_zero_run_solver":run_solver_calls(PKT)==0,
  "runner_177_24_contract":'"shape_count_exact_177"' in RUN.read_text(encoding="utf-8") and '"ports_exact_24"' in RUN.read_text(encoding="utf-8"),
  "runner_m7c_volume_gate":'expected_loss=float(m["geometry"]["area_removed_per_branch_mm2"])*float(m["geometry"]["copper_thickness_mm"])' in RUN.read_text(encoding="utf-8"),
- "runner_m7c_human_review":"M7C CIN_PAD_PROJECTION_CLEARANCE Human Geometry Review" in RUN.read_text(encoding="utf-8"),
+ "runner_m7c_human_review":"M7C LOCAL_RETURN_ISLAND_MOAT Human Geometry Review" in RUN.read_text(encoding="utf-8"),
  "packet_id_m7c":'"packet_id":"GNSS-M7C-LOCAL-RETURN-ISLAND-BUILD-V01"' in PKT.read_text(encoding="utf-8"),
  "packet_v02":'"schema_version":"runner-task-v0.2"' in PKT.read_text(encoding="utf-8"),
  "packet_fail_closed":"HOLD_M7C_LIVE_BUILD_GRANT" in PKT.read_text(encoding="utf-8")

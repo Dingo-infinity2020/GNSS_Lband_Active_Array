@@ -20,7 +20,7 @@ def main():
     root=Path(a.project_root).resolve(); vm=Path(a.variant_manifest).resolve()
     m=json.loads(vm.read_text(encoding="utf-8"))
     contract=root/"execution"/"stage_contract.json"
-    runner=root/"scripts"/"run_m7c_cin_pad_clearance_build_only_v01.py"
+    runner=root/"scripts"/"run_m7c_local_return_island_build_only_v01.py"
     launcher=root/"scripts"/"cst_bundled_python_launcher_v01.py"
     if subprocess.check_output(["git","-C",str(root),"status","--porcelain"],text=True).strip():
         raise SystemExit("HOLD_M7_PROJECT_DIRTY")
