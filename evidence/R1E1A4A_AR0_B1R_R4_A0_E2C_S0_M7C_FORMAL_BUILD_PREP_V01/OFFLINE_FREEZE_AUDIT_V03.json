@@ -1,0 +1,18 @@
+{
+  "schema_version": "gnss-m7c-offline-freeze-audit-v0.3",
+  "status": "PASS_M7C_OFFLINE_BUILD_CHAIN_HARDENED_AWAIT_HOST_STATIC_QUALIFICATION_AND_BUILD_AUTH",
+  "supersedes": "evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_FORMAL_BUILD_PREP_V01/OFFLINE_FREEZE_AUDIT_V02.json",
+  "supersession_reason": "V02 used an incorrectly escaped JavaScript regex for macro operation counting; the evidence generator miscounted, not the frozen M7C macro.",
+  "checks": {
+    "macro_create_count": 16,
+    "macro_subtract_count": 16,
+    "expected_create_count": 16,
+    "expected_subtract_count": 16,
+    "counts_pass": true,
+    "build_authorized": false,
+    "solve_authorized": false
+  },
+  "remote_execution_performed": false,
+  "cst_execution_performed": false,
+  "boundary": "HOST_STATIC_QUALIFICATION_REQUIRED_BEFORE_ANY_BUILD_GRANT"
+}
