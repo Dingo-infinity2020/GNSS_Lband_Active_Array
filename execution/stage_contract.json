@@ -3,19 +3,30 @@
     "project":  {
                     "name":  "GNSS_Lband_Active_Array",
                     "source_branch":  "project/r0-charts-scaffold",
-                    "source_commit":  "0ddf8136872dbc172ecee8da79a135d942e05028",
+                    "source_commit":  "f3f25a024d486f3884088a63ec61b4e8f5538837",
                     "repository":  "Dingo-infinity2020/GNSS_Lband_Active_Array",
                     "model_identity":  "R1E1A4A_AR0_B1R_R4_A0_E2C_R7"
                 },
     "authorization":  {
                           "BUILD_AUTHORIZED":  false,
-                          "SOLVE_AUTHORIZED":  false,
+                          "SOLVE_AUTHORIZED":  true,
                           "production_solve_authorized":  false,
                           "material_ab_authorized":  false,
                           "lna_integration_authorized":  false,
                           "cst251_authorized":  false,
                           "semantics":  "CURRENT_LIVE_ONLY",
-                          "active_grant":  null
+                          "active_grant":  {
+                                               "grant_id":  "GNSS-M7C-SOLVE-GRANT-20261008-01",
+                                               "kind":  "SOLVE",
+                                               "state":  "GRANTED",
+                                               "stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE",
+                                               "source_commit":  "f3f25a024d486f3884088a63ec61b4e8f5538837",
+                                               "entrypoint_sha256":  "af430a7a997c2b35be53d938619482372afd7ef50b35ddc8450f833d0816c670",
+                                               "granted_at":  "2026-10-08T00:46:00Z",
+                                               "expires_at":  null,
+                                               "task_node":  "M7C_DIAGNOSTIC_SOLVE",
+                                               "user_authorization":  "EXPLICIT_CURRENT_TURN"
+                                           }
                       },
     "scientific_freeze":  {
                               "candidate":  "H3B_T01A_GCPW_ORTHOGONAL_TRANSITION",
@@ -1927,7 +1938,7 @@
                                                   ]
                           },
     "execution":  {
-                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_AWAIT_AUTH",
+                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE",
                       "formal_recovery_solve_invocation_count":  1,
                       "silent_retry_allowed":  false,
                       "hash_lock_required":  true,
@@ -1936,7 +1947,7 @@
                       "formal_o2b_screen_invocation_count":  9,
                       "formal_o2b_qualification_invocation_count":  3,
                       "last_completed_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
-                      "last_status":  "PASS_M7C_HUMAN_REVIEW_SOLVE_CONTRACT_FROZEN_AWAIT_AUTH",
+                      "last_status":  "AUTHORIZED_M7C_SOLVE_AWAIT_PACKET",
                       "one_shot_required":  true,
                       "fresh_run_directory_required":  true,
                       "entrypoint_qualification":  {
@@ -1944,10 +1955,10 @@
                                                        "entrypoint_path":  "scripts/run_m7c_diagnostic_solve_v01.py",
                                                        "runtime_identity":  "CST Studio Suite 2022 bundled Python via workspace launcher + SimulationOps control Python",
                                                        "qualification_stage":  "M7C_DIAGNOSTIC_SOLVE_STATIC_QUALIFICATION",
-                                                       "qualification_status":  "FROZEN_AWAIT_HOST_STATIC_QUALIFICATION",
+                                                       "qualification_status":  "PASS_M7C_DIAGNOSTIC_SOLVE_STATIC_CONTRACT",
                                                        "qualification_evidence":  "evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_PREP_V01/STATIC_AUDIT.json",
-                                                       "last_qualified_source_commit":  "",
-                                                       "entrypoint_sha256":  ""
+                                                       "last_qualified_source_commit":  "f3f25a024d486f3884088a63ec61b4e8f5538837",
+                                                       "entrypoint_sha256":  "af430a7a997c2b35be53d938619482372afd7ef50b35ddc8450f833d0816c670"
                                                    },
                       "project_observability":  {
                                                     "protocol":  "simops-project-event-v0.1",
@@ -2020,17 +2031,17 @@
                   },
     "dc_call_budget":  {
                            "target_calls_per_routine_stage":  2,
-                           "calls_used_current_stage":  0,
-                           "task_packet_path":  "",
-                           "result_packet_path":  "",
+                           "calls_used_current_stage":  1,
+                           "task_packet_path":  "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIAGNOSTIC_SOLVE_V01\\task_packet.json",
+                           "result_packet_path":  "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIAGNOSTIC_SOLVE_V01\\result_packet.json",
                            "preferred_runner":  "D:\\\\quest_naoc_tarminal\\\\SimulationOps\\\\runner\\\\nw\\\\simops.cmd",
                            "polling_policy":  "launch_once_inspect_at_task_node",
-                           "exception_reason":  "M7C human geometry review PASS; diagnostic SOLVE contract frozen offline; no SOLVE authorization and no CST/DC action performed for solve preparation.",
+                           "exception_reason":  "M7C host static solve qualification PASS; explicit one-shot SOLVE authorization active; formal solver not yet launched.",
                            "task_packet_source":  {
                                                       "mode":  "PROJECT_GIT_PACKET_OR_GENERATOR",
                                                       "packet_path":  "",
                                                       "generator_path":  "scripts/make_m7c_diagnostic_solve_packet_v01.py",
-                                                      "packet_or_generator_sha256":  "PENDING_HOST_STATIC_QUALIFICATION",
+                                                      "packet_or_generator_sha256":  "7aab6fcf860be24d3aced3065e4e303f8a63b83d6b341ea9c4b7c7ed304927ed",
                                                       "adhoc_exception_reason":  ""
                                                   },
                            "accounting_scope":  "TRANSACTION_CONTROL_TARGET_NOT_REMOTE_MCP_TOTAL",
@@ -2041,7 +2052,7 @@
                            "forensics_command":  "runner/nw/simops.cmd forensics --packet \u003cpacket\u003e"
                        },
     "evidence":  {
-                     "status_classification":  "PASS_M7C_HUMAN_REVIEW_SOLVE_CONTRACT_FROZEN_AWAIT_AUTH",
+                     "status_classification":  "AUTHORIZED_M7C_SOLVE_AWAIT_PACKET",
                      "source_commit_for_o3_o4":  "00bea9de782eb36c1d3f118866edd283808b6233",
                      "o3_nominal_solved_sha256":  "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
                      "o3_straight_reference_solved_sha256":  "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
@@ -2076,7 +2087,7 @@
                      "m7b_build_artifact_sha256":  "5498e9c447fdd4eeb969c02701d27886e839144ebe9941c4e7f56bc7419c69ea",
                      "m7b_build_recovery_evidence":  "evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_BUILD_READONLY_RECOVERY_V01/RECOVERY.json",
                      "m7b_build_recovery_status":  "PASS_M7B_BUILD_READONLY_QUALIFICATION_RECOVERY_AWAIT_HUMAN_REVIEW",
-                     "exact_invocation":  "M7C_HUMAN_REVIEW_PASS; DIAGNOSTIC_SOLVE_CONTRACT_FROZEN_OFFLINE; NO_BUILD_NO_SOLVE"
+                     "exact_invocation":  "M7C_HOST_STATIC_SOLVE_AUDIT_PASS; ONE_SHOT_SOLVE_AUTHORIZED; SOLVER_NOT_YET_LAUNCHED"
                  },
     "authorization_history":  [
                                   {
