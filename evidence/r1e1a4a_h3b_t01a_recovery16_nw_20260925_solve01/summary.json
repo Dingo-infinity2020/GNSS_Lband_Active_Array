@@ -1,0 +1,136 @@
+{
+  "mode": "H3B_T01A_NUMERICAL_RECOVERY_MAXPASS16",
+  "formal_solver_invocations": 1,
+  "source_sha256": "f321b678d390470a2420df40fd6d0cf6553cc041f9219bfcd011c7e41fbadf3d",
+  "solved_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_recovery16_work\\R1E1A4A_H3B_T01A_RECOVERY_MAXPASS16_V01.cst",
+  "solved_sha256": "928400031803e62665df0a17890b2158b8d56b2673e9af1a9e0c7a7d171266df",
+  "adaptive_delta_sequence": [
+    {
+      "pass": 2,
+      "delta_s": 0.017693829798905745
+    },
+    {
+      "pass": 3,
+      "delta_s": 0.03638646659760349
+    },
+    {
+      "pass": 4,
+      "delta_s": 0.0406901340677369
+    },
+    {
+      "pass": 5,
+      "delta_s": 0.044503771855566504
+    },
+    {
+      "pass": 6,
+      "delta_s": 0.03740848724120811
+    },
+    {
+      "pass": 7,
+      "delta_s": 0.03207271602554626
+    },
+    {
+      "pass": 8,
+      "delta_s": 0.030945470022107766
+    },
+    {
+      "pass": 9,
+      "delta_s": 0.02818156137959418
+    },
+    {
+      "pass": 10,
+      "delta_s": 0.02625522191934611
+    },
+    {
+      "pass": 11,
+      "delta_s": 0.01971590799246139
+    },
+    {
+      "pass": 12,
+      "delta_s": 0.01570656517587774
+    }
+  ],
+  "adaptive_meshcells": [
+    {
+      "pass": 1,
+      "cells": 43521
+    },
+    {
+      "pass": 2,
+      "cells": 51980
+    },
+    {
+      "pass": 3,
+      "cells": 61554
+    },
+    {
+      "pass": 4,
+      "cells": 74117
+    },
+    {
+      "pass": 5,
+      "cells": 78237
+    },
+    {
+      "pass": 6,
+      "cells": 82457
+    },
+    {
+      "pass": 7,
+      "cells": 88182
+    },
+    {
+      "pass": 8,
+      "cells": 98391
+    },
+    {
+      "pass": 9,
+      "cells": 115322
+    },
+    {
+      "pass": 10,
+      "cells": 140811
+    },
+    {
+      "pass": 11,
+      "cells": 166744
+    },
+    {
+      "pass": 12,
+      "cells": 192614
+    }
+  ],
+  "passes_executed": 12,
+  "final_two_delta_s": [
+    0.01971590799246139,
+    0.01570656517587774
+  ],
+  "core_summary": {
+    "S11": {
+      "core_db_min": -15.36781697714073,
+      "core_db_max": -9.77222934590147
+    },
+    "S12": {
+      "core_db_min": -0.6386317686924102,
+      "core_db_max": -0.24006923118581108
+    },
+    "S21": {
+      "core_db_min": -0.6386265823757935,
+      "core_db_max": -0.2400832722979781
+    },
+    "S22": {
+      "core_db_min": -15.3682866477916,
+      "core_db_max": -9.772581334070441
+    },
+    "reciprocity_max_abs_db": 6.519547738578768e-05
+  },
+  "max_core_s21_db_change_vs_maxpass8": 0.0686210651895105,
+  "checks": {
+    "full_2port": true,
+    "finite": true,
+    "native_two_final_below_0p02": true,
+    "reciprocity_0p1db": true,
+    "source_hash_locked": true
+  },
+  "pass": true
+}

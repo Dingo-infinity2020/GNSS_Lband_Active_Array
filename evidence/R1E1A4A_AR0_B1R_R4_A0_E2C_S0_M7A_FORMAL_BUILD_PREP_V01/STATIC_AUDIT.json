@@ -1,0 +1,28 @@
+{
+  "status": "PASS_M7A_FORMAL_BUILD_STATIC_CONTRACT",
+  "checks": {
+    "candidate_m7a": true,
+    "stage_exact": true,
+    "manifest_auth_false": true,
+    "parent_inventory_177": true,
+    "parent_inventory_hash": true,
+    "macro_hash": true,
+    "macro_four_creates": true,
+    "macro_four_subtracts": true,
+    "macro_only_background_targets": true,
+    "macro_no_port_solver_monitor": true,
+    "runner_zero_run_solver": true,
+    "packet_zero_run_solver": true,
+    "runner_177_24_contract": true,
+    "runner_symmetry_gate": true,
+    "packet_v02": true,
+    "packet_fail_closed": true
+  },
+  "runner_sha256": "17adc569b9440278b5540e0d4e392aec5cd84a00e6698d48a4757702b1500c15",
+  "packet_generator_sha256": "8943b9e60584d70bdcf077436cbe3f71cef94e76333effd82741a68c29506177",
+  "manifest_sha256": "294630277f273a4ef5b00a32073357a9a73ab93a6b427cc3ff9d811517e770a6",
+  "formal_build_invocations": 0,
+  "solver_invocations": 0,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false
+}

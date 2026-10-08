@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2C-CROSSPOL-BROADPHASE-20260929",
+  "status": "PASS_R4_A0_E2C_CROSSPOL_BROADPHASE_STATIC",
+  "classification": "SOURCE_GEOMETRY_AABB_BROADPHASE",
+  "macro_blob": "fb770258aa94106a2437320c29a2cd036990770a",
+  "runner_blob": "ce09233173aea44783be8d87dc5e665ca07356e9",
+  "a_solid_count": 72,
+  "b_solid_count": 72,
+  "all_cross_pairs": 5184,
+  "candidate_pair_count": 1,
+  "candidate_pairs": [
+    [
+      "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "E2C_B_N_BackGround:LOCAL_BACK_GROUND"
+    ]
+  ],
+  "inherited_pairwise_checks": {
+    "E2A": 14,
+    "E2B": 14
+  },
+  "total_formal_pairwise_checks_after_build": 29,
+  "interpretation": "AABB broadphase is a conservative candidate filter only. The one candidate must be resolved by destructive Solid.Intersect on a complete disposable CST project copy. No positive-volume E2C_A/E2C_B contact is authorized.",
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false
+  }
+}

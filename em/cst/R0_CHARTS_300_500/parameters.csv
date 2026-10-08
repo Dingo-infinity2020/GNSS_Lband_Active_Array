@@ -1,0 +1,37 @@
+parameter,value,unit,provenance,status,source_note
+f_min,300,MHz,PAPER_EXPLICIT,FROZEN,CHARTS operating band
+f_max,500,MHz,PAPER_EXPLICIT,FROZEN,CHARTS operating band
+height_ground,200,mm,PAPER_EXPLICIT,FROZEN,height over ground stated in text
+z_center_re_min,60,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,derived from stated 100 +/- 40 range
+z_center_re_nom,100,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,stated center impedance design region
+z_center_re_max,140,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,derived from stated 100 +/- 40 range
+z_center_im_min,-40,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,stated center impedance design region
+z_center_im_nom,0,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,stated center impedance design region
+z_center_im_max,40,ohm,PAPER_EXPLICIT,REFERENCE_ONLY,stated center impedance design region
+fig_label_227_5,227.5,mm,FIGURE_DERIVED_UNVERIFIED,OBSERVED_LABEL,visible red dimension label in Fig.1a
+fig_label_247_5,247.5,mm,FIGURE_DERIVED_UNVERIFIED,OBSERVED_LABEL,visible red dimension label in Fig.1a
+fig_label_center_40,40,mm,FIGURE_DERIVED_UNVERIFIED,SEMANTICS_UNRESOLVED,real Fig1 label but not mapped to V0.3 center clear span
+board_span,247.5,mm,FIGURE_DERIVED_UNVERIFIED,V03_CANDIDATE,Fig1/Fig2-consistent square board span hypothesis
+outer_slot_frame_span,227.5,mm,FIGURE_DERIVED_UNVERIFIED,V03_CANDIDATE,opposing outer-slot centerline span hypothesis
+outer_slot_axis_offset,113.75,mm,FIGURE_DERIVED_UNVERIFIED,V03_DERIVED,outer_slot_frame_span/2
+outer_slot_width,5,mm,FIGURE_DERIVED_UNVERIFIED,V03_PHOTO_ESTIMATE,Fig2 perspective-rectified estimate; topology only
+outer_mid_bridge,18,mm,FIGURE_DERIVED_UNVERIFIED,V03_PHOTO_ESTIMATE,conductor bridge at midpoint of each board side
+outer_corner_margin,20.625,mm,FIGURE_DERIVED_UNVERIFIED,V03_DERIVED,(board_span - 2*outer_slot_segment_length - outer_mid_bridge)/2
+outer_slot_segment_length,94.125,mm,FIGURE_DERIVED_UNVERIFIED,V03_PHOTO_ESTIMATE,each of eight outer slot segments
+inner_slot_width,9,mm,FIGURE_DERIVED_UNVERIFIED,V03_PHOTO_ESTIMATE,Fig2 visible inner slots are wider than outer slots
+inner_slot_length,73,mm,FIGURE_DERIVED_UNVERIFIED,V03_PHOTO_ESTIMATE,average visible radial-slot length
+inner_center_clear_span,60,mm,FIGURE_DERIVED_UNVERIFIED,V03_PHOTO_ESTIMATE,visible slot-to-slot central clear span; distinct from unresolved 40mm label
+inner_slot_start_radius,30,mm,FIGURE_DERIVED_UNVERIFIED,V03_DERIVED,inner_center_clear_span/2
+inner_slot_end_radius,103,mm,FIGURE_DERIVED_UNVERIFIED,V03_DERIVED,inner_slot_start_radius+inner_slot_length
+inner_outer_bridge,8.25,mm,FIGURE_DERIVED_UNVERIFIED,V03_DERIVED,outer_slot_axis_offset-outer_slot_width/2-inner_slot_end_radius
+slot_count_total,12,count,FIGURE_DERIVED_UNVERIFIED,V03_TOPOLOGY,8 outer segments plus 4 inner radial slots
+topology_t,0.1,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,PEC proxy thickness for build-only only
+ground_xy_size,1000,mm,ASSUMPTION,TOPOLOGY_PLACEHOLDER,visual reference ground only; not an EM claim
+pcb_outer_size,247.5,mm,FIGURE_DERIVED_UNVERIFIED,V03_CANDIDATE,same as board_span for square topology hypothesis
+substrate_material,UNKNOWN,,ASSUMPTION,OPEN,needed for materialized build
+substrate_thickness,UNKNOWN,mm,ASSUMPTION,OPEN,needed for materialized build
+copper_thickness,UNKNOWN,um,ASSUMPTION,OPEN,needed for materialized build
+v01_feed_center_gap,40,mm,FIGURE_DERIVED_UNVERIFIED,REJECTED_V01,old interpretation rejected
+v01_petal_span,227.5,mm,FIGURE_DERIVED_UNVERIFIED,REJECTED_V01,old separate-petal interpretation rejected
+v01_ring_outer_size,247.5,mm,FIGURE_DERIVED_UNVERIFIED,REJECTED_V01,old separate-ring interpretation rejected
+v02_outer_slot_count,4,count,ASSUMPTION,REJECTED_V02,V0.2 used one outer slot per side; Fig2 shows two per side

@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.2.15",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2C-FORMAL-BUILD-HOLD-20260930-01",
+  "status": "HOLD_R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_ENTRYPOINT",
+  "classification": "HOLD_ENTRYPOINT_PRE_CST_SIGNATURE_MISMATCH",
+  "simulationops": {
+    "version": "0.2.15",
+    "commit": "7dfbeb7a44a82501a7a20bbe62230aa047e80af6",
+    "runner_packet_id": "GNSS-E2C-DUALPOL-BUILD-20260930-01",
+    "runner_final_status": "HOLD_ENTRYPOINT",
+    "runner_exit_code": 25,
+    "build_consumed": true,
+    "solve_consumed": false
+  },
+  "failure": {
+    "exception": "TypeError: main() takes 6 positional arguments but 7 were given",
+    "phase": "project entrypoint bootstrap before main()",
+    "cst_interface_entered": false,
+    "kernel_reference_started": false,
+    "production_macro_started": false,
+    "artifact_generated": false
+  },
+  "frozen_science_unchanged": true,
+  "geometry_redesign": false,
+  "automatic_retry": false,
+  "source_fix": {
+    "corrected_build_runner_blob": "76b3e403a830d9736fc019303dc7f0b0e8b3ee0f",
+    "entrypoint_audit_blob": "e2e761d54d263e52d7a7c90a910d9e5863d8251f"
+  },
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2C_BUILD_RECOVERY_AWAIT_AUTH"
+}

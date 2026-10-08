@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1A5R-SECOND-ORDER-SOLVE-NW",
+    "stage": "R1A5R_SECOND_ORDER_SYMMETRY_CONVERGENCE",
+    "status": "PASS_R1A5R_SYMMETRY_CONVERGED"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "state": "CHECKPOINTED"
+  },
+  "source": {
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "branch": "project/r0-charts-scaffold",
+    "head_commit": "73391ffa61cb1fb7f3b8cc5cb785b9c1a3d0ecc6",
+    "head_on_trusted_remote": true
+  },
+  "result": {
+    "r1a5r_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5r_second_order_work\\R1A5R_SECOND_ORDER_V01.cst",
+    "r1a5r_cst_sha256": "f2254cffe07312270d115e95f5526d5841411a865571dfc22c8a3321a98e24e0",
+    "max_pol_asym_db": 0.5584631593748632,
+    "max_reciprocity_error": 0.0001862085818477911,
+    "solver_runtime_seconds": 36.57
+  },
+  "archive": {
+    "mode": "CHECKPOINTED",
+    "destination": "D:\\GNSS_Lband_Active_Array\\_r1a5r_second_order_work",
+    "critical_artifacts": [
+      "D:\\GNSS_Lband_Active_Array\\_r1a5r_second_order_work\\R1A5R_SECOND_ORDER_V01.cst",
+      "evidence/r1a5r_dc_nw_20260924_second01/"
+    ],
+    "completed": true,
+    "purge_allowed": false
+  },
+  "closeout": {
+    "task_node": "R1A5R PASS / return baton to R1A5M design",
+    "active_processes_checked": true,
+    "project_owned_active_solver_sessions": false,
+    "unrelated_active_session_observed": "NW PID 13516 belongs to separate dingoKID/sonnet251 task; not touched",
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}

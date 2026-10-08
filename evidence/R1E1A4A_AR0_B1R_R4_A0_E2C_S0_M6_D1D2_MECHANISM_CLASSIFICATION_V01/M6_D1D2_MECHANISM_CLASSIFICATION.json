@@ -1,0 +1,44 @@
+﻿{
+    "schema_version":  "gnss-m6-d1d2-mechanism-classification-v0.1",
+    "status":  "PASS_M6_D1D2_NUMERICAL_ATTRIBUTION_MIXED_INCONCLUSIVE_FIELD_REVIEW_PENDING",
+    "frozen_decision_rule":  "D1 WEAK + D2 INTERMEDIATE =\u003e MIXED_OR_INCONCLUSIVE_REQUIRES_FIELD_CURRENT_REVIEW",
+    "D1":  {
+               "class":  "WEAK",
+               "raw_delta":  0.02099407220464578,
+               "mode_degradation_db":  1.8421458215144533,
+               "imbalance_db":  0.2843309938040841,
+               "fractions":  {
+                                 "raw":  0.02982989958491275,
+                                 "mode":  0.08452005263227766,
+                                 "imbalance":  0.02499773439034454
+                             }
+           },
+    "D2":  {
+               "class":  "INTERMEDIATE",
+               "raw_delta":  0.3434190500032508,
+               "mode_degradation_db":  16.46766914827887,
+               "imbalance_db":  2.100781830303534,
+               "fractions":  {
+                                 "raw":  0.4879546796488664,
+                                 "mode":  0.7555581359999001,
+                                 "imbalance":  0.1846959612224845
+                             }
+           },
+    "evidence_based_interpretation":  [
+                                          "Pre-CIN signal metal alone is a weak perturbation and is not the primary standalone cause.",
+                                          "Ground/backside/via metal alone is a substantial contributor to differential-to-common conversion, but it does not reproduce the full-E2C raw complex deviation or branch imbalance.",
+                                          "The frozen decision rule therefore does not permit a ground-primary verdict; the remaining evidence is consistent with a composite signal-ground/return-path interaction or mixed-mode mechanism.",
+                                          "Effect fractions are diagnostic ratios, not linearly additive power fractions; their residuals must not be interpreted as a quantitative interaction fraction."
+                                      ],
+    "field_current_evidence":  {
+                                   "D1":  "HOLD_FIELD_PATHS_NOT_DISCOVERED",
+                                   "D2":  "HOLD_FIELD_PATHS_NOT_DISCOVERED",
+                                   "status":  "PENDING_OR_UNDISCOVERED_IN_RESULTS_API",
+                                   "implication":  "Numerical attribution is valid; final physical-path attribution remains pending field/current evidence or another non-rerun extraction method."
+                               },
+    "boundary":  {
+                     "BUILD_AUTHORIZED":  false,
+                     "SOLVE_AUTHORIZED":  false,
+                     "next_action":  "OFFLINE_FIELD_RESULT_DISCOVERY_OR_PHYSICAL_INTERPRETATION_NO_RERUN"
+                 }
+}

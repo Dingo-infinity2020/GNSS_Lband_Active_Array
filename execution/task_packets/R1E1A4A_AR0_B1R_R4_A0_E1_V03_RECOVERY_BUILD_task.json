@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2.10",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E1-V03-RECOVERY-BUILD-20260928",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_branch": "project/r0-charts-scaffold",
+    "model_identity": "R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_V03_RECOVERY"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_R4_A0_E1_V03_RECOVERY_BUILD_ONLY",
+    "target_control_host": "NW",
+    "source_macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_BUILD_ONLY_V03.mcr",
+    "source_macro_blob_sha": "8066f693f7a3ba980cf015ef5d9554fd31dc7549",
+    "runner": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e1_v03_recovery_build.py",
+    "runner_blob_sha": "a3e7bd8b9ce585f268d4cfbae834b01ed73ee5a1",
+    "target_artifact": "R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_BUILD_ONLY_V03.cst",
+    "target_root": "D:\\GNSS_R4A0E1_20260928_RECOVERY_ARTIFACTS",
+    "stop_boundary": "persistent-history build + fresh reopen + ports + whole-model/pairwise intersection audit + human review; no solve"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "execution": {
+    "formal_build_budget": 1,
+    "solver_launch_budget": 0,
+    "silent_retry_allowed": false,
+    "recovery_retry": false,
+    "authorization_note": "User explicitly authorized exactly one V03 recovery BUILD-ONLY invocation on 2026-09-28. No solve authorization.",
+    "formal_builds_consumed": 1,
+    "retry_authorized": false,
+    "final_automated_status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E1_V03_BUILD_ONLY",
+    "human_review_required": true,
+    "result_packet": "execution/result_packets/R1E1A4A_AR0_B1R_R4_A0_E1_V03_BUILD_result.json"
+  },
+  "recovery_invariants": {
+    "no_geometry_redesign": true,
+    "expected_shape_count": 36,
+    "expected_port_count": 6,
+    "complete_project_copy_required_for_pairwise": true,
+    "history_persistence_required": true,
+    "non_destructive_pair_api": "UNAVAILABLE_ON_CURRENT_CST2022_VBA_SURFACE"
+  }
+}

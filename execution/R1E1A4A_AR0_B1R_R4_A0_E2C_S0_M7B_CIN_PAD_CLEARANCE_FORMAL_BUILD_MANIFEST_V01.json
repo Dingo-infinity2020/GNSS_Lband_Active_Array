@@ -1,0 +1,107 @@
+{
+  "schema_version": "gnss-m7-corrective-formal-build-v0.1",
+  "status": "FORMAL_BUILD_READY_AWAIT_AUTH",
+  "candidate": "M7B",
+  "title": "CIN_PAD_PROJECTION_CLEARANCE",
+  "parent": {
+    "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\E2C_R7_CANONICAL_BUILD\\R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_COEXISTENCE_BUILD_ONLY_V01.cst",
+    "sha256": "cab6754235a66006ba8bdb423c4dcde2d00de0cb5d8c56623cf94fc3c364ce2c",
+    "expected_solids": 177,
+    "raw_ports": 24,
+    "inventory_contract": "D:\\GNSS_R4A0E1_20260928\\execution\\R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_INVENTORY_V01.json",
+    "inventory_contract_sha256": "e4f4157bf4248bd94c0d33b18c0a8dad4a8831ae46204d6a8fae4ecba86a8095"
+  },
+  "geometry": {
+    "modified_entities": [
+      "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+      "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "E2C_B_P_BackGround:LOCAL_BACK_GROUND",
+      "E2C_B_N_BackGround:LOCAL_BACK_GROUND"
+    ],
+    "unchanged_classes": [
+      "radiator",
+      "stalk dielectric",
+      "all signal copper",
+      "package lands",
+      "local-ground-top copper",
+      "vias",
+      "bias/output copper",
+      "ports"
+    ],
+    "clearance_windows_local_uv_mm": {
+      "A_P": [
+        2.45,
+        3.55,
+        4.15,
+        5.15
+      ],
+      "A_N": [
+        -3.55,
+        -2.45,
+        4.15,
+        5.15
+      ],
+      "B_P": [
+        2.45,
+        3.55,
+        4.15,
+        5.15
+      ],
+      "B_N": [
+        -3.55,
+        -2.45,
+        4.15,
+        5.15
+      ]
+    },
+    "tool_entities": [
+      "M7B_ClearanceTools:M7B_A_P_CLEARANCE",
+      "M7B_ClearanceTools:M7B_A_N_CLEARANCE",
+      "M7B_ClearanceTools:M7B_B_P_CLEARANCE",
+      "M7B_ClearanceTools:M7B_B_N_CLEARANCE"
+    ],
+    "tool_count": 4,
+    "tool_height_mm": -0.07,
+    "expected_final_solids": 177,
+    "expected_raw_ports": 24,
+    "area_removed_per_branch_mm2": 1.1,
+    "four_branch_symmetry_required": true
+  },
+  "scientific_change": "Open one 1.10 x 1.00 mm backside-ground window under each CIN_UP_PAD projection, using a 0.25-mm guard around the frozen 0.60 x 0.50 mm CIN_UP_PAD; leave upstream MSL ground, ground perimeter, package ground, spokes and vias unchanged.",
+  "target_mechanism": "Reduce local CIN signal-to-return shunt capacitance that can participate in the composite signal-ground resonance, following the earlier H1C shaped/perforated-ground principle without arbitrary ground optimization.",
+  "primary_prediction": "The 1.3-1.4 GHz full-E2C raw-deviation peak should move downward and the diff/common peak should reduce if local terminal-to-ground capacitance is a necessary resonant element.",
+  "falsification": "If the 1.3432-GHz raw-deviation peak and 1.2-1.4-GHz diff/common degradation remain within 10% of full E2C, CIN-local shunt capacitance is not the controlling corrective lever.",
+  "pre_registered_success_gate": {
+    "primary": "At least 30% reduction in source-side complex deviation at the frozen full-E2C raw-peak neighborhood AND at least 6 dB reduction in E_UP diff-to-common degradation in 1.2-1.4 GHz.",
+    "secondary": "Branch imbalance at 1.2984 GHz reduced by at least 30%.",
+    "guard": "No new >6 dB narrow excursion within <=50 MHz and no numerical hard-gate failure."
+  },
+  "comparison_authority": {
+    "full_e2c_raw_peak_ghz": 1.3432,
+    "full_e2c_raw_max_complex_delta": 0.7037929224295506,
+    "full_e2c_mode_degradation_reference_db": 21.795370023361176,
+    "full_e2c_imbalance_peak_ghz": 1.2984,
+    "full_e2c_imbalance_db": 11.374270538449593,
+    "m6_conclusion": "ground important but ground-only frequency shape is not a scaled copy of full E2C"
+  },
+  "execution": {
+    "macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_CIN_PAD_CLEARANCE_BUILD_ONLY_V01.mcr",
+    "macro_sha256": "0dd737c383420dda4367f24c82901213cf364997addb687b0f537ff9aea8322e",
+    "build_stop": "STOP_AFTER_177_SOLID_24_PORT_FRESH_REOPEN_AND_HUMAN_GEOMETRY_REVIEW_NO_SOLVER",
+    "target_root": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7B_CIN_PAD_CLEARANCE_V01",
+    "artifact_name": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_CIN_PAD_CLEARANCE_BUILD_ONLY_V01.cst",
+    "runner": "scripts/run_m7b_cin_pad_clearance_build_only_v01.py",
+    "packet_generator": "scripts/make_m7b_cin_pad_clearance_build_packet_v01.py",
+    "formal_build_invocations": 1,
+    "solver_invocations": 0
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false
+  },
+  "freeze_authority": {
+    "candidate_manifest": "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_CIN_PAD_CLEARANCE_MANIFEST_V01.json",
+    "candidate_manifest_sha256": "675e11fbe253512c80f41e48ef15928980af52475b699b682f411e71494283e7"
+  },
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_CIN_PAD_CLEARANCE_BUILD_ONLY"
+}

@@ -1,0 +1,10 @@
+Set-Location "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold"; & "D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\python.exe" "scripts\run_r1a5m2_maxpass_recovery_dc.py" --repo "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold" --evidence "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold\evidence\r1a5m2_dc_nw_20260924_recovery01" --work "D:\GNSS_Lband_Active_Array\_r1a5m2_maxpass8_work" --base-cst "D:\GNSS_Lband_Active_Array\_r1a4_differential_ports_work\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst"
+
+SOURCE_HEAD=165707fe2da53e5c5ccf9b7e8d775f45017ec8b2
+CONFIG_SHA256=c620f8267d5548e88c606b858ff40ae0e52960112b21ec321ecf44a7e762bdb6
+HARNESS_SHA256=65cbf61440974b684d9dc3d9901ba95e66940ded9b76c3d5279ac52e969a23d6
+BASELINE_CSV_SHA256=f7662e077c06dbcd7c82d91cdd6a1d2b2b444cdcbdbce9052986f9d265ba7da6
+EXIT_CODE=0
+RUNTIME_SECONDS=108.72
+FORMAL_INVOCATION_COUNT=1
+SILENT_RETRY=NO

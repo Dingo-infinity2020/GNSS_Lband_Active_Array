@@ -1,0 +1,16 @@
+{
+  "candidate": "P24_G30_E30",
+  "pad_width_mm": 2.4,
+  "pad_gap_mm": 0.3,
+  "extension_mm": 0.3,
+  "build_sha256": "dcc408315648dcbf52d66a8b3eed93b064108e0654034d5fdfda620ddf03f38b",
+  "checks": {
+    "shape_count_38": true,
+    "positive_volumes": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "hash_stable": true
+  }
+}

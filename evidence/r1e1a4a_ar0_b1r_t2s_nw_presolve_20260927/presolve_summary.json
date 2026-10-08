@@ -1,0 +1,14 @@
+{
+  "status": "PASS_R1E1A4A_AR0_B1R_T2S_PRESOLVE_CONFIG",
+  "source_sha256": "f0184b638b5af6c5c752804fd5570a5e4178e52bc6bdd62e31e72c281c03de90",
+  "configured_sha256": "ab8a61cc781880ba938b729f44862d1d79f36dbb959288fc57ede5e61b4d2858",
+  "configured_path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_t2s_stage\\R1E1A4A_AR0_B1R_T2S_CONFIGURED_V01.cst",
+  "checks": {
+    "source_hash_exact": true,
+    "configured_copy_exists": true,
+    "configured_hash_stable_after_reopen": true,
+    "port_count_3": true,
+    "solver_run_no": true,
+    "result_tree_empty_before_solve": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.2.10",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E1_V03_RECOVERY_RUNNER_STATIC_AUDIT",
+  "status": "PASS_R4_A0_E1_V03_RECOVERY_RUNNER_STATIC_AUDIT",
+  "runner_blob_sha": "a3e7bd8b9ce585f268d4cfbae834b01ed73ee5a1",
+  "macro_blob_sha": "8066f693f7a3ba980cf015ef5d9554fd31dc7549",
+  "formal_builds": 0,
+  "solver_invocations": 0,
+  "checks": {
+    "runner_uses_history_list": true,
+    "runner_complete_project_copy": true,
+    "runner_history_gate": true,
+    "runner_port_properties": true,
+    "runner_pair_count": true,
+    "runner_pair_requires_before_volume": true,
+    "runner_global_intersection": true,
+    "runner_no_solver_start": true,
+    "v03_flat_single_main": true,
+    "v03_six_ports": true,
+    "pass": true
+  }
+}

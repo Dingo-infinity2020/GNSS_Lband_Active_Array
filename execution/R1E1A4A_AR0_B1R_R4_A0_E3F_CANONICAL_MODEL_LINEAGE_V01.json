@@ -1,0 +1,16 @@
+{
+  "schema_version": "gnss-e3f-lineage-v0.1",
+  "status": "PASS_E3F_CANONICAL_MODEL_LINEAGE_FROZEN",
+  "current_geometry_stage": "E2C_R7",
+  "current_geometry_sha256": "cab6754235a66006ba8bdb423c4dcde2d00de0cb5d8c56623cf94fc3c364ce2c",
+  "canonical_pre_e2_parent_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+  "e2a_e2b_relationship": "SIBLINGS_FROM_COMMON_PARENT",
+  "e2c_container_merge": false,
+  "e1_role": "GEOMETRY_AND_REFERENCE_PLANE_DONOR",
+  "t01a_current_role": "POST_LNA_INTERCONNECT_CANDIDATE",
+  "r1e0_current_role": "QUALIFIED_PERIODIC_METHOD_INFRASTRUCTURE_NOT_FINAL_FEED_AUTHORITY",
+  "forensic_runs_are_authority": false,
+  "next_simulation": "E2C_12PORT_8SOURCE_COEXISTENCE_SENTINEL",
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false
+}

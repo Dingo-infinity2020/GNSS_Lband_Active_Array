@@ -1,0 +1,8 @@
+Set-Location "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold"; & "D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\python.exe" "scripts\run_r1a4q_crossed_port_test.py" --only lifted --work "D:\GNSS_Lband_Active_Array\_r1a4q_lifted_reference_attempt3" --evidence "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold\evidence\r1a4q_dc_nw_20260924_attempt3"
+
+SOURCE_HEAD=3ac0f428c1e47cfcbd6536c8cb757cf642508db7
+SCRIPT_SHA256=8ad2fe22325409267c9efbe90488a18313bb63102a51fb76d9f25d327979cc27
+EXIT_CODE=0
+RUNTIME_SECONDS=20.23
+MODEL=LIFTED_REFERENCE_ONLY
+CROSS_RERUN=NO

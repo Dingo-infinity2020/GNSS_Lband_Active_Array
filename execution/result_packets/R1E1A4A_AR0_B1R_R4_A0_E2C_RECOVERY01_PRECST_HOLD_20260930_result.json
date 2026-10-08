@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.2.16",
+  "packet_id": "GNSS-E2C-DUALPOL-BUILD-RECOVERY-20260930-01-PRECST-HOLD",
+  "status": "HOLD_E2C_RECOVERY_PACKET_PRE_CST_EVIDENCE_COLLISION",
+  "classification": "PRE_CST_ORCHESTRATION_HOLD_NOT_FORMAL_SCIENTIFIC_BUILD",
+  "simulationops": {
+    "version": "0.2.16",
+    "commit": "4a3af70c8f9a859bacf7cbc51e7b72fcf4e14d2a",
+    "generic_packet_id": "GNSS-E2C-DUALPOL-BUILD-RECOVERY-20260930-01",
+    "generic_runner_build_consumed": true,
+    "scientific_formal_build_consumed": false,
+    "basis": "GLOBAL rule 35: production CST source was not entered and no artifact was generated"
+  },
+  "failure": {
+    "exception": "HOLD_E2C_EVIDENCE_EXISTS",
+    "cause": "bridge provenance file created production evidence directory before project runner fail-closed fresh-evidence check",
+    "cst_project_opened": false,
+    "kernel_reference_started": false,
+    "production_macro_started": false,
+    "artifact_generated": false,
+    "solver_started": false
+  },
+  "geometry_or_science_changed": false,
+  "silent_retry": false,
+  "recovery": {
+    "generator_blob": "b174a9cc1ce5635b06732ea58926d280399f8a02",
+    "change": "bridge provenance moved to runner result/state directory; production evidence root remains absent until project runner creates it",
+    "next_packet_id": "GNSS-E2C-DUALPOL-BUILD-RECOVERY-20260930-02",
+    "fresh_target_required": true
+  }
+}

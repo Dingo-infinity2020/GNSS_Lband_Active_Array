@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-R3-D0-20260927",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "ca24b1174dbf79cf0c56df686f0b6d9de57d0760",
+    "model_identity": "AR0_B1R_R3_D0_RETURN_PATH_DIAGNOSTICS"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_R3_D0_DIAGNOSTIC_FIXTURES_BUILD_ONLY",
+    "target_control_host": "NW",
+    "entrypoint": "scripts/run_r1e1a4a_ar0_b1r_r3_d0_build_only.py",
+    "stop_boundary": "build D0-A and D0-B; human/analytic review; no solve"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": false
+  },
+  "source": {
+    "parent_t1_sha256": "3144672323cbd4123d6413e7d9ae8f4842b78707d3a71b641748c7250ca2a8f6"
+  },
+  "outputs": {
+    "result_packet_path": "execution/result_packets/R1E1A4A_AR0_B1R_R3_D0_result.json"
+  },
+  "execution": {
+    "silent_retry_allowed": false,
+    "dry_run": false,
+    "ticket_id": "GNSS-AR0-B1R-R3-D0-20260927"
+  }
+}

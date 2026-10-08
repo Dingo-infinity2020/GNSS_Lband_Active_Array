@@ -1,0 +1,20 @@
+{
+  "schema_version": "gnss-e3c-ground-topology-v0.1",
+  "status": "PASS_E3C_CURRENT_BRANCH_LOCAL_GROUND_TOPOLOGY",
+  "mode": "OFFLINE_ONLY",
+  "local_ground_nodes": ["G_AP","G_AN","G_BP","G_BN"],
+  "vias_per_branch": 4,
+  "paddle_vias_per_branch": 3,
+  "crf_ground_vias_per_branch": 1,
+  "grounded_side_pins": [3,4,5,6,8],
+  "separate_pins": [1,2,7],
+  "branch_ground_common_merge_present": false,
+  "polarization_ground_merge_present": false,
+  "radiator_ground_contact_present": false,
+  "remote_D2_ground_merge_present": false,
+  "assembled_ground_merge_authority": "OPEN",
+  "corrective_build_required_for_e2c_sentinel": false,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false,
+  "next": "E3D_NEXT_SIMULATION_QUESTION_AND_MINIMUM_NETWORK_FREEZE"
+}

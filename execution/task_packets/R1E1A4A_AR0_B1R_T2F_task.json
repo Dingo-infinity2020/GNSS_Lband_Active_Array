@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-T2F-20260927",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "5ad665a8b40a8e4935c03cc8f035edf4c3374c5b",
+    "model_identity": "AR0_B1R_T2F_CANONICAL_TRANSITION_FIXTURE"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_T2F_FIXTURE_BUILD_ONLY",
+    "target_control_host": "NW",
+    "entrypoint": "scripts/run_r1e1a4a_ar0_b1r_t2f_build_only.py",
+    "args": [],
+    "stop_boundary": "fixture build-only + human review; no solve"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": false
+  },
+  "preflight": {
+    "requirements": [
+      "SimulationOps 0.2.8",
+      "T1 artifact SHA256 exact",
+      "T2F fixture freeze V0.1 unchanged",
+      "Pol-A retained-volume signature exact"
+    ],
+    "fail_closed": true
+  },
+  "outputs": {
+    "expected": [
+      "T2F CST fixture",
+      "build/reopen inventories",
+      "build/reopen port audits",
+      "fixture review guide"
+    ],
+    "result_packet_path": "execution/result_packets/R1E1A4A_AR0_B1R_T2F_result.json"
+  },
+  "dc_call_budget": {
+    "target_calls": 2,
+    "polling_policy": "single fixture-build transaction then task-node inspection"
+  },
+  "execution": {
+    "silent_retry_allowed": false,
+    "dry_run": false,
+    "ticket_id": "GNSS-AR0-B1R-T2F-20260927",
+    "lock_path": "execution/locks/GNSS-AR0-B1R-T2F-20260927.lock"
+  }
+}

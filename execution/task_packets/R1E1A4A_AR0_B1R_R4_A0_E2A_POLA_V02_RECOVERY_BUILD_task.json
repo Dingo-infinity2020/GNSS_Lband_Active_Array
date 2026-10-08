@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.2.11",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-POLA-V02-RECOVERY-BUILD-20260928",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_branch": "project/r0-charts-scaffold"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_V02_RECOVERY_BUILD_ONLY",
+    "target_host": "NW",
+    "recovery_class": "NO_GEOMETRY_REDESIGN",
+    "parent_filename": "R1E1A4A_AR0_B1R_T1R1_GROUND_PLACEMENT_CORRECTED_BUILD_ONLY_V01.cst",
+    "parent_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+    "production_macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_ONLY_V01.mcr",
+    "production_macro_blob": "9931736f1129624d94aee1c9e983a1eaabca5f24",
+    "kernel_reference_macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2A_DRILL_KERNEL_REFERENCE_V01.mcr",
+    "kernel_reference_blob": "e7fe96e2e763fcc025ce45e874162d9c8a771f77",
+    "inventory_contract": "execution/R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_INVENTORY_V01.json",
+    "inventory_blob": "e10886a4c01d9aafd55a16d8126418b7e22025fd",
+    "runner": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e2a_pola_build_only_v02_recovery.py",
+    "runner_blob": "a8f9183d7e4bb635ece3a5cc9e0edd30fb230502",
+    "target_root": "D:\\GNSS_R4A0E2A_20260928_BUILD_R2",
+    "target_artifact": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_INTEGRATED_BUILD_ONLY_V02_RECOVERY.cst",
+    "evidence_root": "D:\\GNSS_R4A0E2A_20260928_BUILD_R2\\evidence",
+    "stop_boundary": "kernel-reference preflight -> exactly one unchanged-geometry production build -> fresh-reopen/107-solid/12-port/8-via/intersection gates -> human-review package -> STOP"
+  },
+  "recovery_change": {
+    "geometry_changed": false,
+    "ports_changed": false,
+    "inventory_changed": false,
+    "production_macro_changed": false,
+    "hard_gate_removed": "analytic pi*r^2*h equality at 1e-7 mm3",
+    "hard_gate_added": "production prong loss matches CST-native canonical-parent drill reference within 1e-7 mm3",
+    "analytic_volume_status": "diagnostic_only"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "budgets": {
+    "formal_build": 1,
+    "solver_invocations": 0,
+    "automatic_retries": 0,
+    "silent_retry": false
+  },
+  "authorization_note": "User explicitly authorized exactly one E2A Pol-A V02 recovery BUILD-ONLY invocation on 2026-09-28. No solve authorization. No automatic retry.",
+  "formal_build_invocations_consumed": 1,
+  "solver_invocations": 0,
+  "automatic_retries": 0,
+  "retry_authorized": false,
+  "final_status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_ONLY",
+  "result_packet": "execution/result_packets/R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_V02_RECOVERY_BUILD_PASS_20260928_result.json",
+  "artifact_sha256": "78c9d38e186e38b1d0398e7771758af34345fc5e8f780fdc8c7fade4a8705804",
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_HUMAN_3D_REVIEW"
+}

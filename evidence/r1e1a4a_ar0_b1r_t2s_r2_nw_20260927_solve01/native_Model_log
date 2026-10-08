@@ -1,0 +1,858 @@
+27/Sep/2026 15:08:54  In order to get an optimal performance, hyperthreading is ignored for parallel
+                      computations.
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:56  Units settings: 
+                      
+                        Dimensions: mm
+                        Frequency:  GHz
+                        Time:       ns
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:56  Boundary conditions: 
+                      
+                        YZsymmetry: none
+                        XZsymmetry: none
+                        XYsymmetry: none
+                      
+                        Xmin: open
+                        Xmax: open
+                      
+                        Ymin: open
+                        Ymax: open
+                      
+                        Zmin: open
+                        Zmax: open
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:56  Order settings: 
+                      
+                        Solver order   : 2nd (constant)
+                        Curved elements: up to order 3 (automatic)
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:56    Mesh time                :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:56  
+                      ================================================================================
+                      Frequency Domain Solver calculation cycle started
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:56  Solver started at: 03:08 PM Sunday, 27. September 2026 (中国标准时间)
+                      
+                        Module:  Frequency Domain: S-Parameter (Win 64)
+                        Version: 2022.5 Release from 2022-06-03 (change 981760)
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:56    Calculation 1 of 1 (Frequency: 1.8 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:56  Adaptive mesh refinement pass 1
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:56  Performing block excitation with block size 3 and 10 threads.  More...
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:57    Matrix setup time        :	0 s
+                        Degrees of freedom       :	46850
+                        Number of mesh cells     :	6996
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	6.56345e-05
+                        Iterations               :	46
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:57    Stimulation port         :	2
+                        Accuracy                 :	9.82687e-05
+                        Iterations               :	49
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:57    Stimulation port         :	3
+                        Accuracy                 :	6.98519e-05
+                        Iterations               :	47
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:57  71% of all mesh edges seem to be longer than expected. The adaptive mesh refinement's growth limitation will therefore 
+                      use 36985 instead of 6996 mesh cells as a reference.
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:57  Adaptive mesh refinement pass 2
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:59    Matrix setup time        :	1 s
+                        Degrees of freedom       :	75062
+                        Number of mesh cells     :	11182
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	9.68969e-05
+                        Iterations               :	33
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:59    Stimulation port         :	2
+                        Accuracy                 :	8.01534e-05
+                        Iterations               :	32
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:59    Stimulation port         :	3
+                        Accuracy                 :	6.17608e-05
+                        Iterations               :	39
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:59    Delta calculation        
+27/Sep/2026 15:08:59    All S-Parameters         :	0.0205971
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:59  The input reflection seems to be large at 1.8 GHz. The adaptive mesh refinement at this sample will be stopped. A new 
+                      mesh adaptation frequency has been added at 1.4 GHz.  More...
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:59    Total time               :	3 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:59    Calculation 2 of 2 (Frequency: 1.4 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:08:59  Adaptive mesh refinement pass 1
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:00    Matrix setup time        :	0 s
+                        Degrees of freedom       :	75062
+                        Number of mesh cells     :	11182
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	9.55453e-05
+                        Iterations               :	26
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:00    Stimulation port         :	2
+                        Accuracy                 :	6.13698e-05
+                        Iterations               :	26
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:00    Stimulation port         :	3
+                        Accuracy                 :	8.65923e-05
+                        Iterations               :	27
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:00  The input reflection seems to be large at 1.4 GHz. The adaptive mesh refinement at this sample will be stopped. A new 
+                      mesh adaptation frequency has been added at 1.6 GHz.  More...
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:00    Total time               :	1 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:00    Calculation 3 of 3 (Frequency: 1.6 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:00  Adaptive mesh refinement pass 1
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01    Matrix setup time        :	0 s
+                        Degrees of freedom       :	75062
+                        Number of mesh cells     :	11182
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	9.42891e-05
+                        Iterations               :	9
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01    Stimulation port         :	2
+                        Accuracy                 :	8.68556e-05
+                        Iterations               :	7
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01    Stimulation port         :	3
+                        Accuracy                 :	8.83709e-05
+                        Iterations               :	9
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01  The input reflection seems to be large at 1.6 GHz. The adaptive mesh refinement at this sample will be stopped. A new 
+                      mesh adaptation frequency has been added at 1.2 GHz.  More...
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01    Total time               :	1 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01    Calculation 4 of 4 (Frequency: 1.2 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01  Adaptive mesh refinement pass 1
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01    Matrix setup time        :	0 s
+                        Degrees of freedom       :	75062
+                        Number of mesh cells     :	11182
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	9.50756e-05
+                        Iterations               :	10
+                        Solver time              :	0 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01    Stimulation port         :	2
+                        Accuracy                 :	7.81979e-05
+                        Iterations               :	9
+                        Solver time              :	0 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01    Stimulation port         :	3
+                        Accuracy                 :	8.49396e-05
+                        Iterations               :	10
+                        Solver time              :	0 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01  The input reflection seems to be large at 1.2 GHz. The adaptive mesh refinement at this sample will be stopped. A new 
+                      mesh adaptation frequency has been added at 1 GHz.  More...
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01    Total time               :	0 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01    Calculation 5 of 5 (Frequency: 1 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:01  Adaptive mesh refinement pass 1
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:02    Matrix setup time        :	1 s
+                        Degrees of freedom       :	75062
+                        Number of mesh cells     :	11182
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	5.91938e-05
+                        Iterations               :	9
+                        Solver time              :	0 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:02    Stimulation port         :	2
+                        Accuracy                 :	6.11388e-05
+                        Iterations               :	9
+                        Solver time              :	0 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:02    Stimulation port         :	3
+                        Accuracy                 :	6.0222e-05
+                        Iterations               :	9
+                        Solver time              :	0 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:02  The input reflection seems to be large at 1 GHz. The adaptive mesh refinement at this sample will be stopped. The mesh 
+                      adaptation is performed at 1.8 GHz again.  More...
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:02    Total time               :	1 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:02    Calculation 1 of 5 (Frequency: 1.8 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:03  Adaptive mesh refinement pass 3
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:04    Matrix setup time        :	0 s
+                        Degrees of freedom       :	100002
+                        Number of mesh cells     :	14960
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	8.29511e-05
+                        Iterations               :	27
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:04    Stimulation port         :	2
+                        Accuracy                 :	7.66653e-05
+                        Iterations               :	27
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:04    Stimulation port         :	3
+                        Accuracy                 :	9.20121e-05
+                        Iterations               :	30
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:04  The input reflection seems to be large at 1.8 GHz. The mesh adaptation sample will not be moved again. Please define a 
+                      suitable constant adaptation frequency.  More...
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:05  Adaptive mesh refinement pass 4
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:08    Matrix setup time        :	1 s
+                        Degrees of freedom       :	131360
+                        Number of mesh cells     :	19697
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	9.45332e-05
+                        Iterations               :	26
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:08    Stimulation port         :	2
+                        Accuracy                 :	9.07405e-05
+                        Iterations               :	27
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:08    Stimulation port         :	3
+                        Accuracy                 :	9.80879e-05
+                        Iterations               :	27
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:08    Delta calculation        
+27/Sep/2026 15:09:08    All S-Parameters         :	0.0261279
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:08  Adaptive mesh refinement pass 5
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:11    Matrix setup time        :	1 s
+                        Degrees of freedom       :	150412
+                        Number of mesh cells     :	22613
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	9.69148e-05
+                        Iterations               :	25
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:11    Stimulation port         :	2
+                        Accuracy                 :	5.87284e-05
+                        Iterations               :	24
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:11    Stimulation port         :	3
+                        Accuracy                 :	7.11334e-05
+                        Iterations               :	25
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:11    Delta calculation        
+27/Sep/2026 15:09:11    All S-Parameters         :	0.0278318
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:12  Adaptive mesh refinement pass 6
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:15    Matrix setup time        :	0 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	180140
+                        Number of mesh cells     :	27235
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	9.14861e-05
+                        Iterations               :	24
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:15    Stimulation port         :	2
+                        Accuracy                 :	8.48739e-05
+                        Iterations               :	21
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:15    Stimulation port         :	3
+                        Accuracy                 :	9.67332e-05
+                        Iterations               :	21
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:15    Delta calculation        
+27/Sep/2026 15:09:15    All S-Parameters         :	0.0267774
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:16  Adaptive mesh refinement pass 7
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:20    Matrix setup time        :	1 s
+                        Degrees of freedom       :	225328
+                        Number of mesh cells     :	34258
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	9.33366e-05
+                        Iterations               :	17
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:20    Stimulation port         :	2
+                        Accuracy                 :	8.57763e-05
+                        Iterations               :	18
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:20    Stimulation port         :	3
+                        Accuracy                 :	9.3826e-05
+                        Iterations               :	17
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:20    Delta calculation        
+27/Sep/2026 15:09:20    All S-Parameters         :	0.0243632
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:21  Adaptive mesh refinement pass 8
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:26    Matrix setup time        :	1 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	297118
+                        Number of mesh cells     :	45430
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	7.87327e-05
+                        Iterations               :	17
+                        Solver time              :	3 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:26    Stimulation port         :	2
+                        Accuracy                 :	7.99199e-05
+                        Iterations               :	17
+                        Solver time              :	3 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:26    Stimulation port         :	3
+                        Accuracy                 :	9.15815e-05
+                        Iterations               :	15
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:26    Delta calculation        
+27/Sep/2026 15:09:26    All S-Parameters         :	0.0210516
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:28  Adaptive mesh refinement pass 9
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:33    Matrix setup time        :	1 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	390766
+                        Number of mesh cells     :	60009
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	8.01344e-05
+                        Iterations               :	15
+                        Solver time              :	3 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:33    Stimulation port         :	2
+                        Accuracy                 :	6.64114e-05
+                        Iterations               :	16
+                        Solver time              :	3 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:33    Stimulation port         :	3
+                        Accuracy                 :	9.23844e-05
+                        Iterations               :	14
+                        Solver time              :	3 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:34    Delta calculation        
+27/Sep/2026 15:09:34    All S-Parameters         :	0.0189138
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:36  Adaptive mesh refinement pass 10
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:44    Matrix setup time        :	2 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	491184
+                        Number of mesh cells     :	75621
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	9.30924e-05
+                        Iterations               :	15
+                        Solver time              :	5 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:44    Stimulation port         :	2
+                        Accuracy                 :	8.27292e-05
+                        Iterations               :	15
+                        Solver time              :	5 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:44    Stimulation port         :	3
+                        Accuracy                 :	9.58944e-05
+                        Iterations               :	15
+                        Solver time              :	5 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:44    Delta calculation        
+27/Sep/2026 15:09:44    All S-Parameters         :	0.0164695
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:44  Mesh adaptation terminated because the desired accuracy limit is reached.
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:44    Total time               :	42 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:44    Calculation 2 (Frequency: 1.4 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:49    Matrix setup time        :	1 s
+                        Degrees of freedom       :	491184
+                        Number of mesh cells     :	75621
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	9.6464e-05
+                        Iterations               :	12
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:49    Stimulation port         :	2
+                        Accuracy                 :	9.99112e-05
+                        Iterations               :	11
+                        Solver time              :	3 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:49    Stimulation port         :	3
+                        Accuracy                 :	7.81367e-05
+                        Iterations               :	12
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:49    Total time               :	5 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:49    Calculation 3 (Frequency: 1.6 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:51    Matrix setup time        :	0 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	491184
+                        Number of mesh cells     :	75621
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	5.43165e-05
+                        Iterations               :	5
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:51    Stimulation port         :	2
+                        Accuracy                 :	5.24983e-05
+                        Iterations               :	5
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:51    Stimulation port         :	3
+                        Accuracy                 :	4.91922e-05
+                        Iterations               :	5
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:52    Total time               :	3 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:52    Calculation 4 (Frequency: 1.2 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:55    Matrix setup time        :	0 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	491184
+                        Number of mesh cells     :	75621
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	8.85891e-05
+                        Iterations               :	6
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:55    Stimulation port         :	2
+                        Accuracy                 :	7.45337e-05
+                        Iterations               :	6
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:55    Stimulation port         :	3
+                        Accuracy                 :	9.26189e-05
+                        Iterations               :	5
+                        Solver time              :	1 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:55    Total time               :	3 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:55    Calculation 5 (Frequency: 1 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:58    Matrix setup time        :	0 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	491184
+                        Number of mesh cells     :	75621
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	4.56475e-05
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:58    Stimulation port         :	2
+                        Accuracy                 :	6.41429e-05
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:58    Stimulation port         :	3
+                        Accuracy                 :	3.43472e-05
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:58  Calculating additional frequency samples due to field monitors, equidistant sampling interval, or single frequency 
+                      sample definitions.
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:58    Total time               :	3 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:09:58    Calculation 6 (Frequency: 1.7264 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:01    Matrix setup time        :	0 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	491184
+                        Number of mesh cells     :	75621
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	3.14752e-05
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:01    Stimulation port         :	2
+                        Accuracy                 :	3.55097e-05
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:01    Stimulation port         :	3
+                        Accuracy                 :	5.34654e-05
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:01  Only few automatic samples have been calculated up to now. Therefore, the frequency sweep is continued with additional 
+                      automatically chosen samples.
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:01    Total time               :	3 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:01    Calculation 7 (Frequency: 1.0728 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:04    Matrix setup time        :	0 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	491184
+                        Number of mesh cells     :	75621
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	1.31581e-05
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:04    Stimulation port         :	2
+                        Accuracy                 :	1.21344e-05
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:04    Stimulation port         :	3
+                        Accuracy                 :	2.26364e-05
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:04    Total time               :	3 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:04    Calculation 8 (Frequency: 1.2904 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:07    Matrix setup time        :	0 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	491184
+                        Number of mesh cells     :	75621
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	9.95612e-06
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:07    Stimulation port         :	2
+                        Accuracy                 :	2.33867e-05
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:07    Stimulation port         :	3
+                        Accuracy                 :	1.00825e-05
+                        Iterations               :	5
+                        Solver time              :	2 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:07    Total time               :	3 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:07  Finished the general purpose interpolative broadband frequency sweep:
+                      All broadband sweep convergence criteria have been satisfied after
+                      calculating 8 frequency samples:
+                      
+                        Broadband sweep error threshold value : 
+                                                                0.01 (All S-Parameters) 
+                        Number of error criterion checks      : 
+                                                                2 (All S-Parameters) 
+                        Minimum number of samples             : 3
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:07    Total Solver Time        :	72 s	 (= 0 h, 01 m, 12 s)
+                      ================================================================================
+                      
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:07    ----------------------------------------------------------------------------
+                                            Peak memory used (kB)         Free physical memory (kB) 
+                                                                          At begin     Minimum      
+                        ----------------------------------------------------------------------------
+                        Solver start        20596                         20451616     20451176     
+                        Eq. system setup    1899272                       20428164     18917508     
+                        Eq. system solve    1899804                       20389208     18558864     
+                        Mesh refinement     1486720                       20337588     19243088     
+                        Solver run total    1899804                       20451620     18591332     
+                      
+                        Computer name       DESKTOP-GBTI6Q4
+                        ----------------------------------------------------------------------------
+                      
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:07  Running postprocessing.
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:08  Postprocessing finished.
+                      
+                      ------------------------------------------------------------------------------
+27/Sep/2026 15:10:08  Creating parametric 1D results for Run ID 1
+                      
+                      ------------------------------------------------------------------------------

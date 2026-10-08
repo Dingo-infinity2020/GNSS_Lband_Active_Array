@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-S0L-COUPLING-REVIEW-20260929",
+  "project": "GNSS_Lband_Active_Array",
+  "status": "PASS_R4_A0_E2A_S0L_COUPLING_CLASSIFIED_NO_PROBE_REQUIRED",
+  "classification": "BALANCED_RADIATOR_TERMINAL_COUPLING_NOT_ABNORMAL_COMMON_MODE_MECHANISM",
+  "source_artifact_sha256": "811a31eabcd193bcf5f9cbecdf05f8aab1b1ab945bad4bda51a94d21d57b04b3",
+  "remote_solver_invocations": 0,
+  "additional_solver_invocations": 0,
+  "offline_analysis_only": true,
+  "evidence": {
+    "A_TO_B_EUP_peak_core_db": -16.251617998126797,
+    "A_TO_B_EUP_peak_core_ghz": 1.5736,
+    "max_50MHz_excursion_db": 1.0092364239310747,
+    "resonance_10dB_per_50MHz_trigger": false,
+    "E_diff_to_common_peak_db": -30.710619115420975,
+    "E_common_to_diff_peak_db": -30.711725634378674,
+    "E_diff_to_PIN_common_peak_db": -67.61508572571978,
+    "PIN_diff_to_common_peak_db": -73.5334326252104,
+    "max_return_magnitude_difference_db": 0.2252226006049043
+  },
+  "pec_wire_warning": {
+    "classification": "KNOWN_INTENTIONAL_EDGE_CONTACT_MESH_WARNING",
+    "localized_to": "RF_TONGUE_AND_SOLDER_BRIDGE_CONTACT_SEAM",
+    "not_localized_to": [
+      "P_IN",
+      "P_OUT",
+      "LOCAL_BACK_GROUND",
+      "PADDLE_VIAS",
+      "CRF_GROUND_VIA"
+    ],
+    "final_loss_authority": false,
+    "future_debt": "replace edge-only lossy-conductor contact with finite-area overlap/union before authoritative loss/NF budgeting"
+  },
+  "mechanism_probe_required": false,
+  "polB_promotion_unblocked": true,
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_PROMOTION_CONTRACT_FREEZE",
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  }
+}

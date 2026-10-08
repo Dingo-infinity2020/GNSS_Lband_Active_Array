@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-H3B-T01A-O4-20260926-RECONCILED",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "O4",
+  "host": "NW",
+  "final_status": "PASS_R1E1A4A_H3B_T01A_O4_MINIMAL_SENTINELS",
+  "actions": [
+    {
+      "action": "reconciled pre-existing formal results",
+      "exit_code": 0,
+      "formal_solver_invocations": 6
+    }
+  ],
+  "evidence": {
+    "source_commit": "00bea9de782eb36c1d3f118866edd283808b6233",
+    "outputs": [
+      "evidence/r1e1a4a_h3b_t01a_o3_o4_nw_20260926_run01/O3_SUMMARY.json",
+      "evidence/r1e1a4a_h3b_t01a_o3_o4_nw_20260926_run01/O4_SUMMARY.json",
+      "evidence/r1e1a4a_h3b_t01a_o3_o4_nw_20260926_run01/QUALIFICATION.md"
+    ]
+  },
+  "authorization": {
+    "build_authorization_consumed": true,
+    "solve_authorization_consumed": true
+  },
+  "workspace": {
+    "state": "CHECKPOINTED",
+    "record_path": "execution/workspace_records/R1E1A4A_H3B_T01A_O3_O4_workspace.json"
+  },
+  "dc_call_budget": {
+    "target_calls": 2,
+    "calls_used": 3,
+    "exceeded": true,
+    "exception_reason": "Closeout reconciliation only: oversized first packet plus Python 3.6 merge-recovery compatibility stop; no formal solve rerun."
+  },
+  "next_boundary": "H3B_COMPLETE_PASSIVE_UNIT_FREEZE"
+}

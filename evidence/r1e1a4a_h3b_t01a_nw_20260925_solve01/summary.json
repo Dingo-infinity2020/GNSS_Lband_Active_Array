@@ -1,0 +1,139 @@
+{
+  "mode": "H3B_T01A_PASSIVE_BASELINE_SOLVE",
+  "simulationops": "0.2.6",
+  "formal_solver_invocations": 1,
+  "source_build_sha256": "f321b678d390470a2420df40fd6d0cf6553cc041f9219bfcd011c7e41fbadf3d",
+  "configured_copy_sha256": "56ccbf97986731e08a01acad7d257f6f9aa8acf3c1fb8eae64fbc97f09e5b2a7",
+  "solved_cst_sha256": "846919954fc99f541d8d0cfa3b4246fb49bf520d51b6c14de675d6fed54b0734",
+  "solved_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h3b_t01a_solve_work\\R1E1A4A_H3B_T01A_PASSIVE_BASELINE_V01.cst",
+  "port_count": 2,
+  "frequency_ghz": [
+    1.0,
+    2.0
+  ],
+  "decision_band_ghz": [
+    1.15,
+    1.65
+  ],
+  "summary": {
+    "S11": {
+      "samples": {
+        "1.0": {
+          "f_ghz": 1.0,
+          "db": -16.473819312162846
+        },
+        "1.15": {
+          "f_ghz": 1.15,
+          "db": -14.730146580754278
+        },
+        "1.4": {
+          "f_ghz": 1.4,
+          "db": -12.270347410522701
+        },
+        "1.65": {
+          "f_ghz": 1.65,
+          "db": -10.332317712202075
+        },
+        "2.0": {
+          "f_ghz": 2.0,
+          "db": -8.424655399813316
+        }
+      },
+      "core_db_min": -14.730146580754278,
+      "core_db_max": -10.332317712202075
+    },
+    "S12": {
+      "samples": {
+        "1.0": {
+          "f_ghz": 1.0,
+          "db": -0.19367699570461636
+        },
+        "1.15": {
+          "f_ghz": 1.15,
+          "db": -0.25680374031923847
+        },
+        "1.4": {
+          "f_ghz": 1.4,
+          "db": -0.394020236233315
+        },
+        "1.65": {
+          "f_ghz": 1.65,
+          "db": -0.5700258634698683
+        },
+        "2.0": {
+          "f_ghz": 2.0,
+          "db": -0.8463640395980065
+        }
+      },
+      "core_db_min": -0.5700258634698683,
+      "core_db_max": -0.25680374031923847
+    },
+    "S21": {
+      "samples": {
+        "1.0": {
+          "f_ghz": 1.0,
+          "db": -0.19371559852026676
+        },
+        "1.15": {
+          "f_ghz": 1.15,
+          "db": -0.2568281317269528
+        },
+        "1.4": {
+          "f_ghz": 1.4,
+          "db": -0.39399560542360723
+        },
+        "1.65": {
+          "f_ghz": 1.65,
+          "db": -0.570005517186283
+        },
+        "2.0": {
+          "f_ghz": 2.0,
+          "db": -0.8463342093790137
+        }
+      },
+      "core_db_min": -0.570005517186283,
+      "core_db_max": -0.2568281317269528
+    },
+    "S22": {
+      "samples": {
+        "1.0": {
+          "f_ghz": 1.0,
+          "db": -16.476479875107707
+        },
+        "1.15": {
+          "f_ghz": 1.15,
+          "db": -14.732373266460986
+        },
+        "1.4": {
+          "f_ghz": 1.4,
+          "db": -12.272147219291071
+        },
+        "1.65": {
+          "f_ghz": 1.65,
+          "db": -10.333765437553215
+        },
+        "2.0": {
+          "f_ghz": 2.0,
+          "db": -8.42578443284949
+        }
+      },
+      "core_db_min": -14.732373266460986,
+      "core_db_max": -10.333765437553215
+    },
+    "reciprocity_max_abs_db": 3.973215077010539e-05,
+    "core_s21_min_db": -0.570005517186283,
+    "core_s21_max_db": -0.2568281317269528,
+    "core_s11_worst_db": -10.332317712202075,
+    "core_s22_worst_db": -10.333765437553215
+  },
+  "scientific_diagnostics": {
+    "preferred_return_loss_all_core": false,
+    "acceptable_return_loss_all_core": true,
+    "strong_return_loss_concern": false,
+    "preferred_insertion_loss": false,
+    "insertion_loss_concern": true,
+    "topology_notch_concern": false,
+    "reciprocity_ok_0p1db": true
+  },
+  "numerical_pass": true
+}

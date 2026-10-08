@@ -1,0 +1,11 @@
+{
+  "cst_project": "D:\\GNSS_Lband_Active_Array\\_r0_1a_h01_work\\R0_1A_TOPOLOGY_BUILD_ONLY_H01.cst",
+  "cst_project_sha256": "100a8563ade4a9b341338d2698aabc7c71d68633b7f6133f6403e384f8499518",
+  "screenshots": {
+    "top_view_full.png": "765c4f218e74c7024af7d14be4a4b403729cd71e65076d3073d415670bb4d1fc",
+    "top_view_radiator.png": "1b3d1e7b54f8331cfed2026908c73f46716c14362898b5bac24756b29ad5272c",
+    "side_view_ground_gap.png": "90511ad2de317c0eedbb01e546c9cbd937f3b34bdff777cab14c7ce1af8ea8b0",
+    "oblique_view.png": "9a0151ff3902c391e455cb2cb61b0dadc7fa29f8962c64763372af0451d452b8",
+    "view_after_reopen.png": "e35cf41f341cb018ce63ed15a33fb5c2c7f6586b6424ffff122b8dd479aecd1e"
+  }
+}

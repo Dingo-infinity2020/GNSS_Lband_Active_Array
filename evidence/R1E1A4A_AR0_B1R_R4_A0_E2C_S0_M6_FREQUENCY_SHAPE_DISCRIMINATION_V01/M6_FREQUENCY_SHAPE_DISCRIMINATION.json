@@ -1,0 +1,299 @@
+{
+  "schema_version": "gnss-m6-frequency-shape-discrimination-v0.1",
+  "status": "PASS_M6_FREQUENCY_SHAPE_DISCRIMINATION",
+  "classification": "GROUND_SEPARATE_OR_SECONDARY_MECHANISM",
+  "shape": {
+    "D1": {
+      "correlation_with_full": {
+        "raw_max_delta": 0.4123574975029319,
+        "frobenius_delta": 0.6361130536653018,
+        "mode_complex_delta": 0.6068017060913916,
+        "branch_imbalance": -0.612586797348099
+      },
+      "peaks": {
+        "raw": {
+          "value": 0.02099407220464578,
+          "frequency_ghz": 1.6496,
+          "index": 624
+        },
+        "fro": {
+          "value": 0.03077881924486653,
+          "frequency_ghz": 1.6496,
+          "index": 624
+        },
+        "mode_complex_delta": {
+          "value": 0.00693552505479247,
+          "frequency_ghz": 1.6496,
+          "index": 624
+        },
+        "mode_degradation_db": {
+          "value": 1.8421458215144533,
+          "frequency_ghz": 1.6496,
+          "index": 624
+        },
+        "imbalance": {
+          "value": 0.2843309938040841,
+          "frequency_ghz": 1.6496,
+          "index": 624
+        }
+      },
+      "complex_direction_alignment": {
+        "median": 0.808940056691104,
+        "mean": 0.8144184370680037,
+        "min": 0.7965218515531457,
+        "max": 0.8589044056708953
+      }
+    },
+    "D2": {
+      "correlation_with_full": {
+        "raw_max_delta": -0.6154364056211242,
+        "frobenius_delta": -0.32767958136711817,
+        "mode_complex_delta": 0.1897779825343072,
+        "branch_imbalance": -0.47228576120582605
+      },
+      "peaks": {
+        "raw": {
+          "value": 0.3434190500032508,
+          "frequency_ghz": 1.6496,
+          "index": 624
+        },
+        "fro": {
+          "value": 0.3636790647960613,
+          "frequency_ghz": 1.6496,
+          "index": 624
+        },
+        "mode_complex_delta": {
+          "value": 0.16631769214665537,
+          "frequency_ghz": 1.6496,
+          "index": 624
+        },
+        "mode_degradation_db": {
+          "value": 20.09622620039725,
+          "frequency_ghz": 1.1504,
+          "index": 0
+        },
+        "imbalance": {
+          "value": 2.100781830303534,
+          "frequency_ghz": 1.6496,
+          "index": 624
+        }
+      },
+      "complex_direction_alignment": {
+        "median": 0.9405282894687174,
+        "mean": 0.9425466729493112,
+        "min": 0.93501199593775,
+        "max": 0.9502542409018059
+      }
+    },
+    "FULL": {
+      "peaks": {
+        "raw": {
+          "value": 0.7037929224295506,
+          "frequency_ghz": 1.3432,
+          "index": 241
+        },
+        "fro": {
+          "value": 0.7427151083151267,
+          "frequency_ghz": 1.6496,
+          "index": 624
+        },
+        "mode_complex_delta": {
+          "value": 0.3585976685645122,
+          "frequency_ghz": 1.3679999999999999,
+          "index": 272
+        },
+        "mode_degradation_db": {
+          "value": 26.062448807741475,
+          "frequency_ghz": 1.2056,
+          "index": 69
+        },
+        "imbalance": {
+          "value": 11.374270538449593,
+          "frequency_ghz": 1.2984,
+          "index": 185
+        }
+      }
+    }
+  },
+  "full_vs_d2_raw_peak_separation_ghz": 0.3064,
+  "anchors": {
+    "FULL_RAW_PEAK": {
+      "frequency_ghz": 1.3432,
+      "D1": {
+        "raw_max_delta": 0.013502281424463317,
+        "frobenius_delta": 0.018726090320338395,
+        "mode_degradation_db": 1.70994774748155,
+        "branch_imbalance_db": 0.1102826600963831,
+        "direction_alignment_to_full": 0.79665791407403
+      },
+      "D2": {
+        "raw_max_delta": 0.2586993946302351,
+        "frobenius_delta": 0.27335364989483907,
+        "mode_degradation_db": 16.771738509529218,
+        "branch_imbalance_db": 0.8681491606045463,
+        "direction_alignment_to_full": 0.9465666299897016
+      },
+      "FULL": {
+        "raw_max_delta": 0.7037929224295506,
+        "frobenius_delta": 0.7262692679697198,
+        "mode_degradation_db": 24.79321450812797,
+        "branch_imbalance_db": 11.086380956117214,
+        "direction_alignment_to_full": 1.0
+      }
+    },
+    "FULL_MODE_PEAK": {
+      "frequency_ghz": 1.2056,
+      "D1": {
+        "raw_max_delta": 0.01079686890464308,
+        "frobenius_delta": 0.015199337058513408,
+        "mode_degradation_db": 1.646290776554487,
+        "branch_imbalance_db": 0.08623923869303712,
+        "direction_alignment_to_full": 0.8099458632015016
+      },
+      "D2": {
+        "raw_max_delta": 0.30196456951523476,
+        "frobenius_delta": 0.31546822341284714,
+        "mode_degradation_db": 18.90878880380754,
+        "branch_imbalance_db": 0.46939978035134833,
+        "direction_alignment_to_full": 0.9461553050942314
+      },
+      "FULL": {
+        "raw_max_delta": 0.6273453877532088,
+        "frobenius_delta": 0.6481419631447723,
+        "mode_degradation_db": 26.062448807741475,
+        "branch_imbalance_db": 9.447135396658224,
+        "direction_alignment_to_full": 0.9999999999999999
+      }
+    },
+    "FULL_IMBALANCE_PEAK": {
+      "frequency_ghz": 1.2984,
+      "D1": {
+        "raw_max_delta": 0.01261656829868407,
+        "frobenius_delta": 0.017513683655257656,
+        "mode_degradation_db": 1.6896916978343697,
+        "branch_imbalance_db": 0.09566551311819144,
+        "direction_alignment_to_full": 0.7974450246989733
+      },
+      "D2": {
+        "raw_max_delta": 0.26775645633955725,
+        "frobenius_delta": 0.28100445573110683,
+        "mode_degradation_db": 17.304387766162037,
+        "branch_imbalance_db": 0.7117906327692751,
+        "direction_alignment_to_full": 0.9496699016815109
+      },
+      "FULL": {
+        "raw_max_delta": 0.6982661039926165,
+        "frobenius_delta": 0.7184654315626696,
+        "mode_degradation_db": 25.371005050683817,
+        "branch_imbalance_db": 11.374270538449593,
+        "direction_alignment_to_full": 1.0
+      }
+    },
+    "D2_RAW_PEAK": {
+      "frequency_ghz": 1.6496,
+      "D1": {
+        "raw_max_delta": 0.02099407220464578,
+        "frobenius_delta": 0.03077881924486653,
+        "mode_degradation_db": 1.8421458215144533,
+        "branch_imbalance_db": 0.2843309938040841,
+        "direction_alignment_to_full": 0.8589044056708953
+      },
+      "D2": {
+        "raw_max_delta": 0.3434190500032508,
+        "frobenius_delta": 0.3636790647960613,
+        "mode_degradation_db": 16.46766914827887,
+        "branch_imbalance_db": 2.100781830303534,
+        "direction_alignment_to_full": 0.9406472379703429
+      },
+      "FULL": {
+        "raw_max_delta": 0.681263035422918,
+        "frobenius_delta": 0.7427151083151267,
+        "mode_degradation_db": 21.50719809481149,
+        "branch_imbalance_db": 8.157355647187867,
+        "direction_alignment_to_full": 1.0
+      }
+    },
+    "L2": {
+      "frequency_ghz": 1.2272,
+      "D1": {
+        "raw_max_delta": 0.01122358722402157,
+        "frobenius_delta": 0.015713890782265035,
+        "mode_degradation_db": 1.6567344665334147,
+        "branch_imbalance_db": 0.08529122460337635,
+        "direction_alignment_to_full": 0.8057508921106423
+      },
+      "D2": {
+        "raw_max_delta": 0.2925574820524086,
+        "frobenius_delta": 0.305529298144327,
+        "mode_degradation_db": 18.47835969874088,
+        "branch_imbalance_db": 0.5153460076670895,
+        "direction_alignment_to_full": 0.948445081454986
+      },
+      "FULL": {
+        "raw_max_delta": 0.6542634494285485,
+        "frobenius_delta": 0.6740667760056603,
+        "mode_degradation_db": 26.0098617753753,
+        "branch_imbalance_db": 10.239674037316583,
+        "direction_alignment_to_full": 1.0
+      }
+    },
+    "MIXED_OLD": {
+      "frequency_ghz": 1.3384,
+      "D1": {
+        "raw_max_delta": 0.013405942109934735,
+        "frobenius_delta": 0.018591817658296667,
+        "mode_degradation_db": 1.7077475435531753,
+        "branch_imbalance_db": 0.10844929173957352,
+        "direction_alignment_to_full": 0.7965733182538794
+      },
+      "D2": {
+        "raw_max_delta": 0.2593859023918215,
+        "frobenius_delta": 0.27385884211286926,
+        "mode_degradation_db": 16.820875325743266,
+        "branch_imbalance_db": 0.8503299094688646,
+        "direction_alignment_to_full": 0.9469897829393626
+      },
+      "FULL": {
+        "raw_max_delta": 0.7037344196875823,
+        "frobenius_delta": 0.7259053315860633,
+        "mode_degradation_db": 24.857948994585378,
+        "branch_imbalance_db": 11.13822865784483,
+        "direction_alignment_to_full": 1.0
+      }
+    },
+    "L1": {
+      "frequency_ghz": 1.5752000000000002,
+      "D1": {
+        "raw_max_delta": 0.018641580837507634,
+        "frobenius_delta": 0.02695882615095529,
+        "mode_degradation_db": 1.8102412198641424,
+        "branch_imbalance_db": 0.24486113437672208,
+        "direction_alignment_to_full": 0.8360389045340814
+      },
+      "D2": {
+        "raw_max_delta": 0.3074908577486775,
+        "frobenius_delta": 0.3280301107188538,
+        "mode_degradation_db": 16.294824024512486,
+        "branch_imbalance_db": 1.8370521356147378,
+        "direction_alignment_to_full": 0.9394180551625378
+      },
+      "FULL": {
+        "raw_max_delta": 0.6711703951235333,
+        "frobenius_delta": 0.7211782522934694,
+        "mode_degradation_db": 22.07802802569488,
+        "branch_imbalance_db": 8.645012007381021,
+        "direction_alignment_to_full": 1.0
+      }
+    }
+  },
+  "findings": [
+    "D2 ground/via perturbation does not closely track the full-E2C differential/common-mode frequency shape.",
+    "D2 does not reproduce the full-E2C broadband raw source-side deviation shape.",
+    "D2 and full-E2C raw-deviation peaks are separated by more than 100 MHz, arguing against a simple scaled copy of one mechanism."
+  ],
+  "boundary": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "rerun_required": false
+  }
+}

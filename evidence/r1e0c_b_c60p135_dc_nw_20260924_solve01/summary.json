@@ -1,0 +1,152 @@
+{
+  "state": "C60P135",
+  "theta_deg": 60.0,
+  "phi_deg": 135.0,
+  "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01\\R1E0C_C60P135_SCANSTATE_BUILD_ONLY_V01.cst",
+  "source_sha256": "c8270338b8a0e0bef9263460cad97a83e1ff2a59c0b29aaaab682d8212836ec1",
+  "config_sha256": "2454e2c3cbca31304cdef363c51fb50f4dd105f378cdf75659526d4e05af46a1",
+  "broadside_context_sha256": "342ccaa2f71318cc287a9589ec8f911386f09542edeba1f382ca4389a2160d66",
+  "result_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0c_b_c60p135_scan_solve_work\\R1E0C_B_C60P135_SCAN_SMOKE_V01.cst",
+  "result_cst_sha256": "8107aff4f656c5013e9d6cf422f7d258ee4e045affa0311b7273c2889918d16c",
+  "result_cst_bytes": 43575,
+  "metrics": {
+    "point_count": 1001,
+    "invalid_s11_values": 0,
+    "invalid_zactive_values": 0,
+    "science_band_re_min": {
+      "ohm": 73.42651544375465,
+      "f_ghz": 1.1504
+    },
+    "science_band_re_max": {
+      "ohm": 263.3201654546471,
+      "f_ghz": 1.508
+    },
+    "science_band_im_min": {
+      "ohm": -63.8233510322937,
+      "f_ghz": 1.6496
+    },
+    "science_band_im_max": {
+      "ohm": 137.06779244186322,
+      "f_ghz": 1.3136
+    },
+    "science_band_max_abs_z": {
+      "ohm": 266.3954969055856,
+      "f_ghz": 1.4872
+    },
+    "science_band_max_abs_s11": {
+      "value": 0.536900130781014,
+      "f_ghz": 1.1504
+    },
+    "anchors": {
+      "1.17645": {
+        "f_ghz": 1.1768,
+        "s11_db": -5.480426136896476,
+        "zactive_re_ohm": 82.81622563204621,
+        "zactive_im_ohm": 113.07930342907453
+      },
+      "1.2276": {
+        "f_ghz": 1.2272,
+        "s11_db": -5.611103533461237,
+        "zactive_re_ohm": 104.45084631167322,
+        "zactive_im_ohm": 125.72042439387931
+      },
+      "1.27875": {
+        "f_ghz": 1.2784,
+        "s11_db": -5.743753512066544,
+        "zactive_re_ohm": 132.31055501302816,
+        "zactive_im_ohm": 134.83479416922174
+      },
+      "1.4": {
+        "f_ghz": 1.4,
+        "s11_db": -6.174135429570121,
+        "zactive_re_ohm": 218.05126602767217,
+        "zactive_im_ohm": 117.50026501230968
+      },
+      "1.5611": {
+        "f_ghz": 1.5608,
+        "s11_db": -7.261165802779428,
+        "zactive_re_ohm": 251.84814492532735,
+        "zactive_im_ohm": -15.743769376975102
+      },
+      "1.57542": {
+        "f_ghz": 1.5752000000000002,
+        "s11_db": -7.401264149810187,
+        "zactive_re_ohm": 245.25456126918758,
+        "zactive_im_ohm": -26.758541539091993
+      },
+      "1.602": {
+        "f_ghz": 1.6024,
+        "s11_db": -7.690545619894191,
+        "zactive_re_ohm": 230.0572456772335,
+        "zactive_im_ohm": -44.2623912777606
+      }
+    }
+  },
+  "comparison_vs_broadside": {
+    "sample_count": 625,
+    "max_complex_delta_s11": 0.3823061116165268,
+    "max_complex_delta_s11_freq_ghz": 1.6496,
+    "max_abs_delta_zactive_ohm": 161.84724552558848,
+    "max_abs_delta_zactive_freq_ghz": 1.448
+  },
+  "native_adaptation": {
+    "delta_s_sequence": [
+      {
+        "pass": 2,
+        "delta_s": 0.0678618
+      },
+      {
+        "pass": 3,
+        "delta_s": 0.0451358
+      },
+      {
+        "pass": 4,
+        "delta_s": 0.0260878
+      },
+      {
+        "pass": 5,
+        "delta_s": 0.0274831
+      },
+      {
+        "pass": 6,
+        "delta_s": 0.0165357
+      },
+      {
+        "pass": 7,
+        "delta_s": 0.0145798
+      }
+    ],
+    "last_two_below_0p02": true,
+    "desired_accuracy_termination": true,
+    "max_passes_reached": false,
+    "broadband_sweep_converged": true,
+    "warning_lines": [
+      "WARNING:",
+      "Prevented attempt to change the value for parameter R1E0_scan_theta_deg to 0 inside history rebuild at step 3.This can break parametrization and should be avoided. Please use the Parameter List to change the value of a parameter. The function \"MakeSureParameterExists\" can be used to create a parameter inside the history.",
+      "WARNING:",
+      "Prevented attempt to change the value for parameter R1E0_scan_phi_deg to 45 inside history rebuild at step 3.This can break parametrization and should be avoided. Please use the Parameter List to change the value of a parameter. The function \"MakeSureParameterExists\" can be used to create a parameter inside the history."
+    ],
+    "error_lines": []
+  },
+  "physics_alerts": {
+    "abs_s11_ge_0p90": false,
+    "re_zactive_le_0": false,
+    "abs_zactive_ge_1000": false,
+    "max_abs_s11": 0.536900130781014,
+    "min_re_zactive_ohm": 73.42651544375465,
+    "max_abs_zactive_ohm": 266.3954969055856
+  },
+  "checks": {
+    "source_hash_match": true,
+    "periodic_s11_path_present": true,
+    "s11_nonempty": true,
+    "s11_finite": true,
+    "zactive_finite": true,
+    "native_last_two_delta_s_pass": true,
+    "native_desired_accuracy_termination": true,
+    "native_not_maxpass_terminated": true,
+    "broadband_sweep_converged": true,
+    "native_no_error_lines": true,
+    "pass": true
+  }
+}

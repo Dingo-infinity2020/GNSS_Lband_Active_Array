@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.2.10",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E1_V03_STATIC_EQUIVALENCE",
+  "status": "PASS_R4_A0_E1_V03_STATIC_NO_GEOMETRY_REDESIGN",
+  "previous_audit_status": "HOLD_FALSE_AUDIT_LOGIC_V01",
+  "correction_reason": [
+    "drill token counter counted both definition and reference",
+    "port comparison used JSON property-order equality"
+  ],
+  "v02_blob_sha": "81e83d205889bc79ed6b341c7fc78b699ea1cb7f",
+  "v03_blob_sha": "8066f693f7a3ba980cf015ef5d9554fd31dc7549",
+  "interpretation": "V03 flattens V02 helper calls and changes production execution to History List persistence; frozen geometry/material/via/port coordinates are unchanged.",
+  "checks": {
+    "v03_flat_no_helper_calls": true,
+    "v03_expected_36_solids": true,
+    "v03_four_drills": true,
+    "v03_six_ports": true,
+    "v02_helper_counts": true,
+    "port_coordinates_identical": true,
+    "no_solver_tokens": true,
+    "v02_v03_core_parameters": true,
+    "land_PIN1_VBIAS": true,
+    "land_PIN2_RFIN": true,
+    "land_PIN3_GND": true,
+    "land_PIN4_GND": true,
+    "land_PIN8_GND": true,
+    "land_PIN7_RFOUT_VDD": true,
+    "land_PIN6_GND_FDD": true,
+    "land_PIN5_GND": true,
+    "spoke_PIN3_SPOKE": true,
+    "spoke_PIN4_SPOKE": true,
+    "spoke_PIN8_SPOKE": true,
+    "spoke_PIN6_SPOKE": true,
+    "spoke_PIN5_SPOKE": true,
+    "via_PADDLE_VIA_M": true,
+    "via_PADDLE_VIA_C": true,
+    "via_PADDLE_VIA_P": true,
+    "via_CRF_GROUND_VIA": true,
+    "pass": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "delta_s_sequence": [
+    {
+      "pass": 2,
+      "delta_s": 0.0673917
+    },
+    {
+      "pass": 3,
+      "delta_s": 0.0497934
+    },
+    {
+      "pass": 4,
+      "delta_s": 0.0274924
+    },
+    {
+      "pass": 5,
+      "delta_s": 0.0203928
+    },
+    {
+      "pass": 6,
+      "delta_s": 0.0173367
+    },
+    {
+      "pass": 7,
+      "delta_s": 0.017589
+    }
+  ],
+  "last_two_below_0p02": true,
+  "max_passes_reached": false,
+  "broadband_sweep_converged": true,
+  "error_lines": []
+}

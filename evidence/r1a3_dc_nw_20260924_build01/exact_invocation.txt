@@ -1,0 +1,6 @@
+Set-Location "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold"; & "D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\python.exe" "scripts\run_r1a3_build_only_dc.py" --repo "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold" --evidence "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold\evidence\r1a3_dc_nw_20260924_build01" --work "D:\GNSS_Lband_Active_Array\_r1a3_materialized_fr4_work"
+
+INVOCATION_COUNT=1
+SILENT_RETRY=NO
+EXIT_CODE=0
+RUNTIME_SECONDS=76.10

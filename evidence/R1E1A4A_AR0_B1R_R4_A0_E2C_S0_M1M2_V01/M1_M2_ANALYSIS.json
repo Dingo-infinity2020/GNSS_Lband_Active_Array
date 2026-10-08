@@ -1,0 +1,977 @@
+{
+  "schema_version": "gnss-e2c-s0-m1m2-v0.1",
+  "m1_status": "PASS_M1_SEMANTIC_INTEGRITY",
+  "m1_checks": {
+    "combined_csv_sha256": "63efb3b3c046ffa633d04092d0190afc4d01ea03f4fd6316ffa1d87170af8a46",
+    "combined_1001_points": true,
+    "combined_grid_1p0_1p8": true,
+    "combined_grid_step_0p0008": true,
+    "required_96_columns": true,
+    "manifest_12_ports": true,
+    "manifest_names_exact": true,
+    "source_ports_exact": true,
+    "load_ports_exact": true,
+    "transform_orthonormal": true,
+    "transform_orthonormal_error": 2.220446049250313e-16,
+    "qualifier_hard_checks_all_pass": true,
+    "formal_solver_invocations_one": true,
+    "automatic_retries_zero": true,
+    "PolA_baseline_hash_exact": true,
+    "PolA_grid_exact": true,
+    "PolA_16_columns": true,
+    "PolA_modal_selftest_zero": true,
+    "PolB_baseline_hash_exact": true,
+    "PolB_grid_exact": true,
+    "PolB_16_columns": true,
+    "PolB_modal_selftest_zero": true
+  },
+  "m2": {
+    "polarizations": {
+      "PolA": {
+        "own_pol_max_delta": {
+          "delta_mag": 0.7037929224295505,
+          "frequency_ghz": 1.3432,
+          "combined_pair": [
+            1,
+            1
+          ],
+          "combined_semantics": [
+            "A_P_E_UP",
+            "A_P_E_UP"
+          ],
+          "baseline_pair": [
+            1,
+            1
+          ],
+          "combined_db": -11.590764119321364,
+          "baseline_db": -0.5929519516520633,
+          "combined_phase_deg": -15.306275935583379,
+          "baseline_phase_deg": -40.13905030664214
+        },
+        "top_same_pol_raw_deltas": [
+          {
+            "delta_mag": 0.7037929224295505,
+            "frequency_ghz": 1.3432,
+            "combined_pair": [
+              1,
+              1
+            ],
+            "combined_semantics": [
+              "A_P_E_UP",
+              "A_P_E_UP"
+            ],
+            "baseline_pair": [
+              1,
+              1
+            ],
+            "combined_db": -11.590764119321364,
+            "baseline_db": -0.5929519516520633,
+            "combined_phase_deg": -15.306275935583379,
+            "baseline_phase_deg": -40.13905030664214
+          },
+          {
+            "delta_mag": 0.19416263240790413,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              1,
+              4
+            ],
+            "combined_semantics": [
+              "A_P_E_UP",
+              "A_N_E_UP"
+            ],
+            "baseline_pair": [
+              1,
+              4
+            ],
+            "combined_db": -23.76993135874137,
+            "baseline_db": -16.383753071084882,
+            "combined_phase_deg": 119.74166478421357,
+            "baseline_phase_deg": -2.5835750100049046
+          },
+          {
+            "delta_mag": 0.19416001798066496,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              4,
+              1
+            ],
+            "combined_semantics": [
+              "A_N_E_UP",
+              "A_P_E_UP"
+            ],
+            "baseline_pair": [
+              4,
+              1
+            ],
+            "combined_db": -23.76982914497722,
+            "baseline_db": -16.383967902308086,
+            "combined_phase_deg": 119.74202128553435,
+            "baseline_phase_deg": -2.583769341058594
+          },
+          {
+            "delta_mag": 0.10951330832326701,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              4,
+              4
+            ],
+            "combined_semantics": [
+              "A_N_E_UP",
+              "A_N_E_UP"
+            ],
+            "baseline_pair": [
+              4,
+              4
+            ],
+            "combined_db": -1.3114069719097312,
+            "baseline_db": -1.0129256272079876,
+            "combined_phase_deg": -55.59684272803097,
+            "baseline_phase_deg": -48.695262850611414
+          },
+          {
+            "delta_mag": 0.00607398003221867,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              2,
+              1
+            ],
+            "combined_semantics": [
+              "A_P_P_IN",
+              "A_P_E_UP"
+            ],
+            "baseline_pair": [
+              2,
+              1
+            ],
+            "combined_db": -37.39636343996395,
+            "baseline_db": -34.60666318773776,
+            "combined_phase_deg": 70.38452465159439,
+            "baseline_phase_deg": 58.49844141294705
+          },
+          {
+            "delta_mag": 0.006064801944152547,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              1,
+              2
+            ],
+            "combined_semantics": [
+              "A_P_E_UP",
+              "A_P_P_IN"
+            ],
+            "baseline_pair": [
+              1,
+              2
+            ],
+            "combined_db": -37.3871585322936,
+            "baseline_db": -34.60657135513636,
+            "combined_phase_deg": 70.39009712235324,
+            "baseline_phase_deg": 58.492329872228225
+          },
+          {
+            "delta_mag": 0.0035083469222181307,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              5,
+              5
+            ],
+            "combined_semantics": [
+              "A_N_P_IN",
+              "A_N_P_IN"
+            ],
+            "baseline_pair": [
+              5,
+              5
+            ],
+            "combined_db": -0.0019943976350671904,
+            "baseline_db": -0.0017570130916000435,
+            "combined_phase_deg": -6.6188941263350385,
+            "baseline_phase_deg": -6.417843236103016
+          },
+          {
+            "delta_mag": 0.0029361457378026083,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              2,
+              2
+            ],
+            "combined_semantics": [
+              "A_P_P_IN",
+              "A_P_P_IN"
+            ],
+            "baseline_pair": [
+              2,
+              2
+            ],
+            "combined_db": -0.0016004583023962848,
+            "baseline_db": -0.001804825160728894,
+            "combined_phase_deg": -6.610227780578823,
+            "baseline_phase_deg": -6.441971381664066
+          },
+          {
+            "delta_mag": 0.002483125850652526,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              5,
+              1
+            ],
+            "combined_semantics": [
+              "A_N_P_IN",
+              "A_P_E_UP"
+            ],
+            "baseline_pair": [
+              5,
+              1
+            ],
+            "combined_db": -63.00987524053178,
+            "baseline_db": -54.543624562097115,
+            "combined_phase_deg": -18.81629175602368,
+            "baseline_phase_deg": 125.50710151903397
+          },
+          {
+            "delta_mag": 0.0024759900727035614,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              1,
+              5
+            ],
+            "combined_semantics": [
+              "A_P_E_UP",
+              "A_N_P_IN"
+            ],
+            "baseline_pair": [
+              1,
+              5
+            ],
+            "combined_db": -63.11394067410677,
+            "baseline_db": -54.543136447802276,
+            "combined_phase_deg": -18.881711005574186,
+            "baseline_phase_deg": 125.50104868781678
+          },
+          {
+            "delta_mag": 0.001560059097543077,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              5,
+              4
+            ],
+            "combined_semantics": [
+              "A_N_P_IN",
+              "A_N_E_UP"
+            ],
+            "baseline_pair": [
+              5,
+              4
+            ],
+            "combined_db": -34.202490413542876,
+            "baseline_db": -34.62880659001827,
+            "combined_phase_deg": 56.960878731286144,
+            "baseline_phase_deg": 60.726513342965625
+          },
+          {
+            "delta_mag": 0.001553666149140184,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              4,
+              5
+            ],
+            "combined_semantics": [
+              "A_N_E_UP",
+              "A_N_P_IN"
+            ],
+            "baseline_pair": [
+              4,
+              5
+            ],
+            "combined_db": -34.206059371422,
+            "baseline_db": -34.62877029457011,
+            "combined_phase_deg": 56.95948771805014,
+            "baseline_phase_deg": 60.720006284399844
+          }
+        ],
+        "combined_modal_peaks": {
+          "E_diff_to_common": {
+            "frequency_ghz": 1.3584,
+            "db": -8.915249092059799,
+            "mag": 0.35829235814656984,
+            "phase_deg": 127.80646817443723
+          },
+          "E_common_to_diff": {
+            "frequency_ghz": 1.3584,
+            "db": -8.915271660210632,
+            "mag": 0.3582914272130889,
+            "phase_deg": 127.80593523347612
+          },
+          "E_diff_to_PIN_common": {
+            "frequency_ghz": 1.6496,
+            "db": -49.897350115236705,
+            "mag": 0.0031998711751180294,
+            "phase_deg": -141.08954772162392
+          },
+          "E_common_to_PIN_diff": {
+            "frequency_ghz": 1.6496,
+            "db": -48.059328791090195,
+            "mag": 0.003953971735131781,
+            "phase_deg": -155.83099151269866
+          },
+          "PIN_diff_to_common": {
+            "frequency_ghz": 1.6496,
+            "db": -82.05289987622689,
+            "mag": 7.895052207170472e-05,
+            "phase_deg": 66.68874041627697
+          },
+          "PIN_common_to_diff": {
+            "frequency_ghz": 1.6496,
+            "db": -82.05555474578443,
+            "mag": 7.892639428322983e-05,
+            "phase_deg": 66.6995948965771
+          }
+        },
+        "baseline_modal_peaks": {
+          "E_diff_to_common": {
+            "frequency_ghz": 1.6496,
+            "db": -30.710619115420975,
+            "mag": 0.02913862432216809,
+            "phase_deg": -163.44438573974577
+          },
+          "E_common_to_diff": {
+            "frequency_ghz": 1.6496,
+            "db": -30.711725634378674,
+            "mag": 0.029134912510492085,
+            "phase_deg": -163.44292304574822
+          },
+          "E_diff_to_PIN_common": {
+            "frequency_ghz": 1.6496,
+            "db": -67.61508572571978,
+            "mag": 0.00041614598962102833,
+            "phase_deg": -12.420946717259055
+          },
+          "E_common_to_PIN_diff": {
+            "frequency_ghz": 1.6496,
+            "db": -69.4569805816876,
+            "mag": 0.0003366285689992968,
+            "phase_deg": -44.3107116341349
+          },
+          "PIN_diff_to_common": {
+            "frequency_ghz": 1.6496,
+            "db": -73.5334326252104,
+            "mag": 0.00021053697017572038,
+            "phase_deg": -97.17898670131491
+          },
+          "PIN_common_to_diff": {
+            "frequency_ghz": 1.6496,
+            "db": -73.53379274293798,
+            "mag": 0.00021052824147587036,
+            "phase_deg": -97.17861405318307
+          }
+        },
+        "modal_degradation_db": {
+          "E_diff_to_common": 21.795370023361176,
+          "E_common_to_diff": 21.796453974168042,
+          "E_diff_to_PIN_common": 17.717735610483075,
+          "E_common_to_PIN_diff": 21.397651790597408,
+          "PIN_diff_to_common": -8.519467251016493,
+          "PIN_common_to_diff": -8.521762002846458
+        },
+        "eup_return_imbalance": {
+          "max_abs_db": 11.374270538449593,
+          "frequency_ghz": 1.2984,
+          "plus_self_db": -11.82310045658877,
+          "minus_self_db": -0.4488299181391774
+        },
+        "raw_decomposition_E_diff_to_common": {
+          "total": {
+            "mag": 0.35829235814656996,
+            "db": -8.915249092059796,
+            "phase_deg": 127.80646817443723
+          },
+          "terms": [
+            {
+              "term": "Spp",
+              "coef": 0.5,
+              "raw_db": -11.43097519173448,
+              "raw_phase_deg": -13.537764091581137,
+              "contribution_mag": 0.13409767397399702,
+              "contribution_phase_deg": -13.537764091581137
+            },
+            {
+              "term": "Spn",
+              "coef": -0.5,
+              "raw_db": -36.14536745130264,
+              "raw_phase_deg": 85.07588337413966,
+              "contribution_mag": 0.007792945370113465,
+              "contribution_phase_deg": -94.92411662586034
+            },
+            {
+              "term": "Snp",
+              "coef": 0.5,
+              "raw_db": -36.14624648837974,
+              "raw_phase_deg": 85.08720598015785,
+              "contribution_mag": 0.0077921567414775,
+              "contribution_phase_deg": 85.08720598015785
+            },
+            {
+              "term": "Snn",
+              "coef": -0.5,
+              "raw_db": -0.5277291240081193,
+              "raw_phase_deg": -41.93931801141887,
+              "contribution_mag": 0.47052591523862686,
+              "contribution_phase_deg": 138.06068198858114
+            }
+          ]
+        },
+        "raw_decomposition_E_common_to_diff": {
+          "total": {
+            "mag": 0.358291427213089,
+            "db": -8.915271660210628,
+            "phase_deg": 127.80593523347609
+          },
+          "terms": [
+            {
+              "term": "Spp",
+              "coef": 0.5,
+              "raw_db": -11.43097519173448,
+              "raw_phase_deg": -13.537764091581137,
+              "contribution_mag": 0.13409767397399702,
+              "contribution_phase_deg": -13.537764091581137
+            },
+            {
+              "term": "Spn",
+              "coef": 0.5,
+              "raw_db": -36.14536745130264,
+              "raw_phase_deg": 85.07588337413966,
+              "contribution_mag": 0.007792945370113465,
+              "contribution_phase_deg": 85.07588337413966
+            },
+            {
+              "term": "Snp",
+              "coef": -0.5,
+              "raw_db": -36.14624648837974,
+              "raw_phase_deg": 85.08720598015785,
+              "contribution_mag": 0.0077921567414775,
+              "contribution_phase_deg": -94.91279401984215
+            },
+            {
+              "term": "Snn",
+              "coef": -0.5,
+              "raw_db": -0.5277291240081193,
+              "raw_phase_deg": -41.93931801141887,
+              "contribution_mag": 0.47052591523862686,
+              "contribution_phase_deg": 138.06068198858114
+            }
+          ]
+        }
+      },
+      "PolB": {
+        "own_pol_max_delta": {
+          "delta_mag": 0.700674941097189,
+          "frequency_ghz": 1.34,
+          "combined_pair": [
+            10,
+            10
+          ],
+          "combined_semantics": [
+            "B_N_E_UP",
+            "B_N_E_UP"
+          ],
+          "baseline_pair": [
+            4,
+            4
+          ],
+          "combined_db": -11.461859640128871,
+          "baseline_db": -0.5463169025364946,
+          "combined_phase_deg": -17.313447516962302,
+          "baseline_phase_deg": -40.23606645284667
+        },
+        "top_same_pol_raw_deltas": [
+          {
+            "delta_mag": 0.700674941097189,
+            "frequency_ghz": 1.34,
+            "combined_pair": [
+              10,
+              10
+            ],
+            "combined_semantics": [
+              "B_N_E_UP",
+              "B_N_E_UP"
+            ],
+            "baseline_pair": [
+              4,
+              4
+            ],
+            "combined_db": -11.461859640128871,
+            "baseline_db": -0.5463169025364946,
+            "combined_phase_deg": -17.313447516962302,
+            "baseline_phase_deg": -40.23606645284667
+          },
+          {
+            "delta_mag": 0.1886902625205913,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              7,
+              10
+            ],
+            "combined_semantics": [
+              "B_P_E_UP",
+              "B_N_E_UP"
+            ],
+            "baseline_pair": [
+              1,
+              4
+            ],
+            "combined_db": -23.633151359737848,
+            "baseline_db": -16.87600684098019,
+            "combined_phase_deg": 121.98294464861945,
+            "baseline_phase_deg": -2.7325663246934617
+          },
+          {
+            "delta_mag": 0.1886715070287031,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              10,
+              7
+            ],
+            "combined_semantics": [
+              "B_N_E_UP",
+              "B_P_E_UP"
+            ],
+            "baseline_pair": [
+              4,
+              1
+            ],
+            "combined_db": -23.633204691035576,
+            "baseline_db": -16.877152558265667,
+            "combined_phase_deg": 121.98050645517509,
+            "baseline_phase_deg": -2.7345379640601117
+          },
+          {
+            "delta_mag": 0.09814154122496839,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              7,
+              7
+            ],
+            "combined_semantics": [
+              "B_P_E_UP",
+              "B_P_E_UP"
+            ],
+            "baseline_pair": [
+              1,
+              1
+            ],
+            "combined_db": -1.229749532595483,
+            "baseline_db": -0.9608144591055378,
+            "combined_phase_deg": -55.627581591501695,
+            "baseline_phase_deg": -49.497518069468164
+          },
+          {
+            "delta_mag": 0.006731233528242234,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              11,
+              10
+            ],
+            "combined_semantics": [
+              "B_N_P_IN",
+              "B_N_E_UP"
+            ],
+            "baseline_pair": [
+              5,
+              4
+            ],
+            "combined_db": -36.84274224643613,
+            "baseline_db": -34.00224873907153,
+            "combined_phase_deg": 71.62518131387215,
+            "baseline_phase_deg": 58.78409971558979
+          },
+          {
+            "delta_mag": 0.006722119315609872,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              10,
+              11
+            ],
+            "combined_semantics": [
+              "B_N_E_UP",
+              "B_N_P_IN"
+            ],
+            "baseline_pair": [
+              4,
+              5
+            ],
+            "combined_db": -36.83592279704438,
+            "baseline_db": -34.00215361352883,
+            "combined_phase_deg": 71.61412324176848,
+            "baseline_phase_deg": 58.77792884418451
+          },
+          {
+            "delta_mag": 0.002706538147753962,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              8,
+              10
+            ],
+            "combined_semantics": [
+              "B_P_P_IN",
+              "B_N_E_UP"
+            ],
+            "baseline_pair": [
+              2,
+              4
+            ],
+            "combined_db": -61.34262466573155,
+            "baseline_db": -54.46070651514111,
+            "combined_phase_deg": -25.680634673651557,
+            "baseline_phase_deg": 132.53822577908585
+          },
+          {
+            "delta_mag": 0.0026917062391162943,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              10,
+              8
+            ],
+            "combined_semantics": [
+              "B_N_E_UP",
+              "B_P_P_IN"
+            ],
+            "baseline_pair": [
+              4,
+              2
+            ],
+            "combined_db": -61.49095586247819,
+            "baseline_db": -54.46327659504473,
+            "combined_phase_deg": -25.64313642958353,
+            "baseline_phase_deg": 132.50592631658662
+          },
+          {
+            "delta_mag": 0.0025847088950776164,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              11,
+              11
+            ],
+            "combined_semantics": [
+              "B_N_P_IN",
+              "B_N_P_IN"
+            ],
+            "baseline_pair": [
+              5,
+              5
+            ],
+            "combined_db": -0.0016601706746642204,
+            "baseline_db": -0.001987169765889903,
+            "combined_phase_deg": -7.288385709377792,
+            "baseline_phase_deg": -7.140277367082342
+          },
+          {
+            "delta_mag": 0.0023989667300716388,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              8,
+              8
+            ],
+            "combined_semantics": [
+              "B_P_P_IN",
+              "B_P_P_IN"
+            ],
+            "baseline_pair": [
+              2,
+              2
+            ],
+            "combined_db": -0.002293219402053005,
+            "baseline_db": -0.002054788852921349,
+            "combined_phase_deg": -7.2964741972403235,
+            "baseline_phase_deg": -7.1589980848077355
+          },
+          {
+            "delta_mag": 0.001564168789203772,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              11,
+              7
+            ],
+            "combined_semantics": [
+              "B_N_P_IN",
+              "B_P_E_UP"
+            ],
+            "baseline_pair": [
+              5,
+              1
+            ],
+            "combined_db": -67.20281265057407,
+            "baseline_db": -54.69257436313892,
+            "combined_phase_deg": 167.20832320666509,
+            "baseline_phase_deg": 122.26265469474511
+          },
+          {
+            "delta_mag": 0.0015605956802050196,
+            "frequency_ghz": 1.6496,
+            "combined_pair": [
+              7,
+              11
+            ],
+            "combined_semantics": [
+              "B_P_E_UP",
+              "B_N_P_IN"
+            ],
+            "baseline_pair": [
+              1,
+              5
+            ],
+            "combined_db": -67.17631920094964,
+            "baseline_db": -54.689975150219006,
+            "combined_phase_deg": 166.64645695825857,
+            "baseline_phase_deg": 122.23336382729926
+          }
+        ],
+        "combined_modal_peaks": {
+          "E_diff_to_common": {
+            "frequency_ghz": 1.3544,
+            "db": -8.972240408580369,
+            "mag": 0.35594916588713116,
+            "phase_deg": -51.786423069885586
+          },
+          "E_common_to_diff": {
+            "frequency_ghz": 1.3544,
+            "db": -8.972184917967908,
+            "mag": 0.35595143990869216,
+            "phase_deg": -51.78699921705933
+          },
+          "E_diff_to_PIN_common": {
+            "frequency_ghz": 1.6496,
+            "db": -48.53962323963887,
+            "mag": 0.0037412681609708814,
+            "phase_deg": 36.937377026577884
+          },
+          "E_common_to_PIN_diff": {
+            "frequency_ghz": 1.6496,
+            "db": -46.83827952325281,
+            "mag": 0.004550781918397818,
+            "phase_deg": 23.030735335686842
+          },
+          "PIN_diff_to_common": {
+            "frequency_ghz": 1.6392,
+            "db": -81.99775090152099,
+            "mag": 7.94533942350948e-05,
+            "phase_deg": -124.08784461268463
+          },
+          "PIN_common_to_diff": {
+            "frequency_ghz": 1.6384,
+            "db": -82.00047247831249,
+            "mag": 7.942850275604534e-05,
+            "phase_deg": -124.06332984188565
+          }
+        },
+        "baseline_modal_peaks": {
+          "E_diff_to_common": {
+            "frequency_ghz": 1.6496,
+            "db": -32.433005338920054,
+            "mag": 0.02389734938186094,
+            "phase_deg": 15.680719258725258
+          },
+          "E_common_to_diff": {
+            "frequency_ghz": 1.6496,
+            "db": -32.42592477565782,
+            "mag": 0.02391683796470617,
+            "phase_deg": 15.677624180362407
+          },
+          "E_diff_to_PIN_common": {
+            "frequency_ghz": 1.6496,
+            "db": -69.18070317034076,
+            "mag": 0.0003475080276262127,
+            "phase_deg": 78.07464908127781
+          },
+          "E_common_to_PIN_diff": {
+            "frequency_ghz": 1.6496,
+            "db": -70.9005477320079,
+            "mag": 0.00028508384880237105,
+            "phase_deg": 141.7952066553826
+          },
+          "PIN_diff_to_common": {
+            "frequency_ghz": 1.6496,
+            "db": -75.73650041972425,
+            "mag": 0.00016337100437344385,
+            "phase_deg": -98.51517256040391
+          },
+          "PIN_common_to_diff": {
+            "frequency_ghz": 1.6496,
+            "db": -75.73581747095321,
+            "mag": 0.0001633838503129861,
+            "phase_deg": -98.5138700497631
+          }
+        },
+        "modal_degradation_db": {
+          "E_diff_to_common": 23.460764930339685,
+          "E_common_to_diff": 23.45373985768991,
+          "E_diff_to_PIN_common": 20.641079930701892,
+          "E_common_to_PIN_diff": 24.062268208755086,
+          "PIN_diff_to_common": -6.261250481796736,
+          "PIN_common_to_diff": -6.264655007359281
+        },
+        "eup_return_imbalance": {
+          "max_abs_db": 11.237354304102572,
+          "frequency_ghz": 1.2984,
+          "plus_self_db": -0.4246176686406547,
+          "minus_self_db": -11.661971972743228
+        },
+        "raw_decomposition_E_diff_to_common": {
+          "total": {
+            "mag": 0.35594916588713116,
+            "db": -8.972240408580369,
+            "phase_deg": -51.786423069885586
+          },
+          "terms": [
+            {
+              "term": "Spp",
+              "coef": 0.5,
+              "raw_db": -0.4919559823054945,
+              "raw_phase_deg": -42.0238687137598,
+              "contribution_mag": 0.47246778884760526,
+              "contribution_phase_deg": -42.0238687137598
+            },
+            {
+              "term": "Spn",
+              "coef": -0.5,
+              "raw_db": -36.82923295022928,
+              "raw_phase_deg": 96.35267838454922,
+              "contribution_mag": 0.007202916111720051,
+              "contribution_phase_deg": -83.64732161545076
+            },
+            {
+              "term": "Snp",
+              "coef": 0.5,
+              "raw_db": -36.82692948332412,
+              "raw_phase_deg": 96.34536341093825,
+              "contribution_mag": 0.007204826552653214,
+              "contribution_phase_deg": 96.34536341093825
+            },
+            {
+              "term": "Snn",
+              "coef": -0.5,
+              "raw_db": -11.320066979799373,
+              "raw_phase_deg": -15.638995279697845,
+              "contribution_mag": 0.1358209160774164,
+              "contribution_phase_deg": 164.36100472030216
+            }
+          ]
+        },
+        "raw_decomposition_E_common_to_diff": {
+          "total": {
+            "mag": 0.35595143990869216,
+            "db": -8.972184917967908,
+            "phase_deg": -51.786999217059325
+          },
+          "terms": [
+            {
+              "term": "Spp",
+              "coef": 0.5,
+              "raw_db": -0.4919559823054945,
+              "raw_phase_deg": -42.0238687137598,
+              "contribution_mag": 0.47246778884760526,
+              "contribution_phase_deg": -42.0238687137598
+            },
+            {
+              "term": "Spn",
+              "coef": 0.5,
+              "raw_db": -36.82923295022928,
+              "raw_phase_deg": 96.35267838454922,
+              "contribution_mag": 0.007202916111720051,
+              "contribution_phase_deg": 96.35267838454922
+            },
+            {
+              "term": "Snp",
+              "coef": -0.5,
+              "raw_db": -36.82692948332412,
+              "raw_phase_deg": 96.34536341093825,
+              "contribution_mag": 0.007204826552653214,
+              "contribution_phase_deg": -83.65463658906175
+            },
+            {
+              "term": "Snn",
+              "coef": -0.5,
+              "raw_db": -11.320066979799373,
+              "raw_phase_deg": -15.638995279697845,
+              "contribution_mag": 0.1358209160774164,
+              "contribution_phase_deg": 164.36100472030216
+            }
+          ]
+        }
+      }
+    },
+    "cross_pol": {
+      "EUP_to_EUP": {
+        "peak_db": -3.0713039902158883,
+        "mag": 0.7021579226641615,
+        "frequency_ghz": 1.316,
+        "response_port": 10,
+        "response_semantic": "B_N_E_UP",
+        "source_port": 1,
+        "source_semantic": "A_P_E_UP",
+        "phase_deg": -35.765572037100746
+      },
+      "EUP_to_PIN": {
+        "peak_db": -42.32271510283847,
+        "mag": 0.007653573281779259,
+        "frequency_ghz": 1.6496,
+        "response_port": 11,
+        "response_semantic": "B_N_P_IN",
+        "source_port": 1,
+        "source_semantic": "A_P_E_UP",
+        "phase_deg": 43.7019373840891
+      },
+      "PIN_to_EUP": {
+        "peak_db": -42.33637893074203,
+        "mag": 0.007641542862307691,
+        "frequency_ghz": 1.6496,
+        "response_port": 1,
+        "response_semantic": "A_P_E_UP",
+        "source_port": 11,
+        "source_semantic": "B_N_P_IN",
+        "phase_deg": 43.66213210243599
+      },
+      "device_side": {
+        "peak_db": -73.56484348762179,
+        "frequency_ghz": 1.6496,
+        "response_port": 6,
+        "source_port": 8
+      }
+    },
+    "resonance": {
+      "excursion_db": 6.441056587312428,
+      "f_start_ghz": 1.1504,
+      "f_end_ghz": 1.2,
+      "response_port": 4,
+      "source_port": 1
+    },
+    "mechanism_evidence": [
+      {
+        "priority": "HIGH",
+        "mechanism": "REAL_DUALPOL_EUP_ELECTROMAGNETIC_COUPLING",
+        "evidence": "cross-pol E_UP<->E_UP peak > -20 dB"
+      },
+      {
+        "priority": "HIGH",
+        "mechanism": "PLUS_MINUS_BRANCH_REFERENCE_OR_RETURN_ASYMMETRY",
+        "evidence": "E_UP branch self-return imbalance > 6 dB"
+      },
+      {
+        "priority": "HIGH",
+        "mechanism": "DIRECT_DEVICE_SIDE_CROSSPOL_COUPLING_NOT_DOMINANT",
+        "evidence": "cross-pol P_IN/device-side coupling remains below -40 dB"
+      },
+      {
+        "priority": "MEDIUM",
+        "mechanism": "NARROW_RESONANCE_NOT_PRIMARY_TRIGGER",
+        "evidence": "50 MHz excursion below frozen 10 dB gate"
+      }
+    ],
+    "status": "PASS_M2_COUPLING_DECOMPOSITION_EVIDENCE_READY"
+  },
+  "boundaries": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "rerun_allowed": false
+  }
+}

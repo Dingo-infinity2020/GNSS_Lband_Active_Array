@@ -1,0 +1,91 @@
+{
+  "schema_version": "gnss-m7b-diagnostic-solve-closeout-v0.1",
+  "status": "REVIEW_M7B_PARTIAL_CORRECTION",
+  "runner_final_status": "PASS",
+  "packet_id": "GNSS-M7B-DIAGNOSTIC-SOLVE-V01",
+  "grant_id": "GNSS-M7B-SOLVE-GRANT-20261004-01",
+  "started_at": "2026-10-04T13:22:51Z",
+  "ended_at": "2026-10-04T13:29:49Z",
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "solve_consumed": true,
+  "replay_detected": false,
+  "numerical_pass": true,
+  "artifact": {
+    "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7B_DIAGNOSTIC_SOLVE_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_DIAGNOSTIC_SOLVED_V01.cst",
+    "sha256": "04de3afaf2966d71ca890576f005718881139dffcdd9b3d95f41a478719c3054"
+  },
+  "convergence": {
+    "final_two_delta_s": [
+      0.00695983,
+      0.00321606
+    ],
+    "limit": 0.02
+  },
+  "hard_checks": {
+    "required_96_responses_extracted": true,
+    "native_grid_1001_1p0_1p8": true,
+    "native_final_two_delta_s_lte_0p02": true,
+    "source_side_reciprocity": true,
+    "loaded_power_closure": true,
+    "no_fatal_solver_error": true,
+    "no_mesh_corruption": true
+  },
+  "preregistered_metrics": {
+    "raw_primary": {
+      "anchor_ghz": 1.3432,
+      "full_delta": 0.7037929224295505,
+      "candidate_delta": 0.6590986532066113,
+      "reduction_fraction": 0.06350485746382746,
+      "pass": false,
+      "required_reduction_fraction": 0.3
+    },
+    "mode_primary": {
+      "polarization": "PolB",
+      "anchor_ghz": 1.2056,
+      "full_degradation_db": 27.573665183120955,
+      "candidate_degradation_db": -48.79939618023758,
+      "improvement_db": 76.37306136335853,
+      "pass": true,
+      "required_improvement_db": 6
+    },
+    "branch_imbalance_secondary": {
+      "anchor_ghz": 1.2984,
+      "full_db": 11.374270538449593,
+      "candidate_db": 0.00011875336222126235,
+      "reduction_fraction": 0.9999895594744455,
+      "pass": true,
+      "required_reduction_fraction": 0.3
+    },
+    "guard": {
+      "new_excursion_db": 1.9112812691476933,
+      "limit_db": 6,
+      "window_ghz": [
+        1.1504,
+        1.2
+      ],
+      "response_port": 11,
+      "source_port": 5,
+      "pass": true
+    }
+  },
+  "broader_observations": {
+    "severe_own_pol_complex_delta_still_present": true,
+    "PolA_max_abs_complex_delta": 0.8153231579875007,
+    "PolB_max_abs_complex_delta": 0.8208781601757584,
+    "max_delta_frequency_ghz": 1.6496,
+    "loaded_power_closure_range": [
+      0.9997718196462392,
+      0.9999841948895863
+    ],
+    "source_side_reciprocity_max_abs_complex": 0.000042685118794179174,
+    "cross_pol_device_coupling_peak_db": -67.58994674544813
+  },
+  "interpretation": "M7B strongly corrects the local branch-balance/differential-to-common symptom but does not sufficiently reduce the frozen source-side complex deviation. CIN-pad local shunt capacitance is therefore a real contributing lever, but the result does not support it as the sole controlling mechanism of the full composite problem.",
+  "authorization_after_closeout": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "active_grant": null
+  },
+  "next_boundary": "OFFLINE_M7B_RESULT_INTERPRETATION_NO_AUTOMATIC_BUILD_OR_SOLVE"
+}

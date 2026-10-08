@@ -1,0 +1,119 @@
+{
+  "status": "HOLD_R1E1A4A_AR0_B1R_R3_D2_M0_PAIRWISE_OVERLAP",
+  "recovery_type": "READ_ONLY_PAIRWISE_DESTRUCTIVE_BOOLEAN_ON_TEMPORARY_COPIES",
+  "formal_rebuild": false,
+  "solver_invocations": 0,
+  "canonical_sha256": "e242416cd3037cb23f57513f60c6de29c97ba277ad754da1574954240eb4bd73",
+  "pair_count": 12,
+  "all_zero_overlap": false,
+  "results": [
+    {
+      "mode": "own_fr4",
+      "tag": "A_P",
+      "ground": "D2M0_BackGround:A_P_LOWER_RAIL",
+      "target": "B1M_LowerStalk:A_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0,
+      "pass_zero_overlap": true
+    },
+    {
+      "mode": "opposite_stalk",
+      "tag": "A_P",
+      "ground": "D2M0_BackGround:A_P_LOWER_RAIL",
+      "target": "B1M_LowerStalk:B_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0,
+      "pass_zero_overlap": true
+    },
+    {
+      "mode": "own_fr4",
+      "tag": "A_N",
+      "ground": "D2M0_BackGround:A_N_LOWER_RAIL",
+      "target": "B1M_LowerStalk:A_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0,
+      "pass_zero_overlap": true
+    },
+    {
+      "mode": "opposite_stalk",
+      "tag": "A_N",
+      "ground": "D2M0_BackGround:A_N_LOWER_RAIL",
+      "target": "B1M_LowerStalk:B_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0,
+      "pass_zero_overlap": true
+    },
+    {
+      "mode": "own_fr4",
+      "tag": "A_BRIDGE",
+      "ground": "D2M0_BackGround:A_COMMON_BRIDGE",
+      "target": "B1M_LowerStalk:A_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0489999999999998,
+      "pass_zero_overlap": false
+    },
+    {
+      "mode": "opposite_stalk",
+      "tag": "A_BRIDGE",
+      "ground": "D2M0_BackGround:A_COMMON_BRIDGE",
+      "target": "B1M_LowerStalk:B_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0,
+      "pass_zero_overlap": true
+    },
+    {
+      "mode": "own_fr4",
+      "tag": "B_P",
+      "ground": "D2M0_BackGround:B_P_LOWER_RAIL",
+      "target": "B1M_LowerStalk:B_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0,
+      "pass_zero_overlap": true
+    },
+    {
+      "mode": "opposite_stalk",
+      "tag": "B_P",
+      "ground": "D2M0_BackGround:B_P_LOWER_RAIL",
+      "target": "B1M_LowerStalk:A_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0,
+      "pass_zero_overlap": true
+    },
+    {
+      "mode": "own_fr4",
+      "tag": "B_N",
+      "ground": "D2M0_BackGround:B_N_LOWER_RAIL",
+      "target": "B1M_LowerStalk:B_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0,
+      "pass_zero_overlap": true
+    },
+    {
+      "mode": "opposite_stalk",
+      "tag": "B_N",
+      "ground": "D2M0_BackGround:B_N_LOWER_RAIL",
+      "target": "B1M_LowerStalk:A_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0,
+      "pass_zero_overlap": true
+    },
+    {
+      "mode": "own_fr4",
+      "tag": "B_BRIDGE",
+      "ground": "D2M0_BackGround:B_COMMON_BRIDGE",
+      "target": "B1M_LowerStalk:B_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0489999999999999,
+      "pass_zero_overlap": false
+    },
+    {
+      "mode": "opposite_stalk",
+      "tag": "B_BRIDGE",
+      "ground": "D2M0_BackGround:B_COMMON_BRIDGE",
+      "target": "B1M_LowerStalk:A_LOWER_BODY",
+      "intersect_err": 0,
+      "intersection_volume_mm3": 0.0,
+      "pass_zero_overlap": true
+    }
+  ]
+}

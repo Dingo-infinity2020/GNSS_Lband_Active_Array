@@ -1,0 +1,140 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-S0L-LOADED-SOURCE-SOLVE-FREEZE-20260928",
+  "project": "GNSS_Lband_Active_Array",
+  "status": "PASS_R4_A0_E2A_S0L_LOADED_SOURCE_SOLVE_CONTRACT_FROZEN_BLOCKED_BY_HUMAN_REVIEW",
+  "active_now": false,
+  "activation_requires": "EXPLICIT_E2A_HUMAN_3D_REVIEW_PASS",
+  "canonical_build": {
+    "sha256": "78c9d38e186e38b1d0398e7771758af34345fc5e8f780fdc8c7fade4a8705804",
+    "build_status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_ONLY",
+    "shape_count": 107,
+    "raw_build_ports": 12
+  },
+  "loaded_solve": {
+    "name": "E2A-S0L",
+    "interpretation": "50OHM_OUTPUT_LOADED_SOURCE_SIDE_PASSIVE_PILOT",
+    "modeled_band_ghz": [
+      1,
+      1.8
+    ],
+    "decision_band_ghz": [
+      1.15,
+      1.65
+    ],
+    "references_ghz": {
+      "L5": 1.17645,
+      "L2": 1.2276,
+      "L1": 1.57542
+    },
+    "solver": "CST HF Frequency Domain",
+    "mesh": "second-order tetrahedral adaptive",
+    "max_delta_s": 0.02,
+    "consecutive_passes_required": 2,
+    "max_passes": 16,
+    "formal_solver_budget": 1,
+    "automatic_retries": 0
+  },
+  "solve_copy_ports": {
+    "count": 6,
+    "semantic_order": [
+      {
+        "n": 1,
+        "name": "A_E_UP",
+        "role": "SOURCE"
+      },
+      {
+        "n": 2,
+        "name": "A_P_IN",
+        "role": "SOURCE_DEVICE_INPUT_PLANE"
+      },
+      {
+        "n": 3,
+        "name": "A_P_OUT_LOAD50",
+        "role": "MATCHED_50OHM_LOAD_ONLY"
+      },
+      {
+        "n": 4,
+        "name": "B_E_UP",
+        "role": "SOURCE"
+      },
+      {
+        "n": 5,
+        "name": "B_P_IN",
+        "role": "SOURCE_DEVICE_INPUT_PLANE"
+      },
+      {
+        "n": 6,
+        "name": "B_P_OUT_LOAD50",
+        "role": "MATCHED_50OHM_LOAD_ONLY"
+      }
+    ],
+    "source_excitation_set": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "matched_load_only_set": [
+      3,
+      6
+    ],
+    "removed_raw_build_ports": [
+      "A_E_DN",
+      "A_B_VDD",
+      "A_B_VBIAS",
+      "B_E_DN",
+      "B_B_VDD",
+      "B_B_VBIAS"
+    ],
+    "removed_nodes_physical_state": "COPPER_GEOMETRY_RETAINED; PORTS_REMOVED; CIRCUIT-DOMAIN GAPS REMAIN OPEN"
+  },
+  "response_contract": {
+    "authoritative_complex_traces": 24,
+    "source_side_4x4_terms": 16,
+    "output_load_pickup_terms": 8,
+    "common_run_required": true,
+    "common_native_frequency_grid_required": true,
+    "full_12x12_required": false,
+    "full_6x6_required": false
+  },
+  "hard_gates": {
+    "exact_canonical_source_sha": true,
+    "geometry_inventory_107_unchanged": true,
+    "six_solver_copy_ports_exact": true,
+    "selected_source_excitation_proven": true,
+    "load_ports_never_excited": true,
+    "final_two_native_delta_s_lte_0p02": true,
+    "response_24_terms_complete": true,
+    "source_side_reciprocity_max_abs_complex_lte_0p02": true,
+    "loaded_column_power_lte_1p02": true,
+    "no_fatal_solver_error": true,
+    "no_mesh_corruption": true
+  },
+  "diagnostics": {
+    "unintended_coupling_review_db": -20,
+    "unintended_coupling_severe_db": -10,
+    "output_load_pickup_review_db": -20,
+    "output_load_pickup_severe_db": -10,
+    "resonance_rule": ">=10 dB change in unintended coupling/load-pickup over <=50 MHz or coincident sharp multi-source feature"
+  },
+  "interpretation_boundaries": [
+    "C_IN remains circuit-domain and absent from CST.",
+    "Raw E2A-S0L does not directly claim final QPL9547 source impedance.",
+    "After qualified C_IN insertion, derived source condition must be labeled 50OHM_OUTPUT_LOADED_SOURCE_CONDITION.",
+    "50-ohm output load is a first baseline, not final active output-network authority.",
+    "Full-network extraction is deferred until arbitrary output/bias reconnection, reverse-feedback, active stability, or full transistor co-simulation requires it."
+  ],
+  "polA_to_polB": {
+    "full_12port_prerequisite_superseded": true,
+    "required": "BUILD PASS + HUMAN REVIEW PASS + E2A-S0L HARD PASS + NO SEVERE/UNRESOLVED REVIEW",
+    "polB_condition": "same 50-ohm output-load baseline and equivalent transformed source excitation contract"
+  },
+  "next_after_human_review": "R1E1A4A_AR0_B1R_R4_A0_E2A_S0L_LOADED_SOURCE_SOLVE_IMPLEMENTATION",
+  "freeze_doc": "docs/R1E1A4A_AR0_B1R_R4_A0_E2A_S0L_LOADED_SOURCE_SOLVE_FREEZE_V01.md",
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  }
+}

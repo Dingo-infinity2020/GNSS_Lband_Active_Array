@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1A4-DIFFERENTIAL-PORT-BUILD-ONLY-DC-NW",
+    "stage": "BUILD_ONLY_R1A4",
+    "status": "PASS_R1A4_DIFFERENTIAL_PORT_BUILD_ONLY"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "created_at": "existing checkout",
+    "last_used_at": "2026-09-24",
+    "state": "CHECKPOINTED"
+  },
+  "source": {
+    "type": "git",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "branch": "project/r0-charts-scaffold",
+    "head_commit": "80648b960d7d3ce91e6af99f52b9913637b1e820",
+    "head_on_trusted_remote": true,
+    "dirty": false,
+    "untracked_present": false,
+    "local_only_commits_present": false
+  },
+  "archive": {
+    "mode": "CHECKPOINTED",
+    "destination": "D:\\GNSS_Lband_Active_Array\\_r1a4_differential_ports_work",
+    "manifest_path": "execution/workspace_record_NW_R1A4.json",
+    "critical_artifacts": [
+      "D:\\GNSS_Lband_Active_Array\\_r1a4_differential_ports_work\\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst",
+      "evidence/r1a4_dc_nw_20260924_build01/"
+    ],
+    "recovery_method": "checkout recorded source HEAD and use the hash-locked R1A4 CST for R1A5 design",
+    "completed": true
+  },
+  "closeout": {
+    "task_node": "R1A4 BUILD_ONLY PASS / return baton to R1A5 design",
+    "active_processes_checked": true,
+    "downstream_dependency_checked": true,
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false,
+    "cleanup_evidence": "R1A4 CST retained because the next smoke-solve design stage may consume this exact hash-locked artifact."
+  }
+}

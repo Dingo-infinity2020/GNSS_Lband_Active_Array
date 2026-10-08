@@ -1,0 +1,78 @@
+{
+  "schema_version": "gnss-e2c-s0-m6-geometry-attribution-v0.1",
+  "status": "PASS_M6_STATIC_GEOMETRY_ATTRIBUTION_READY",
+  "macro_sha256": "f105e62c0db1653eec9cd2da425364abd07278da9985c230ccdae2be9832d4ba",
+  "object_counts": {
+    "A": {
+      "SIGNAL": 0,
+      "GROUND": 0,
+      "VIA": 0,
+      "OTHER": 0
+    },
+    "B": {
+      "SIGNAL": 0,
+      "GROUND": 0,
+      "VIA": 0,
+      "OTHER": 0
+    }
+  },
+  "nearest_cross_pol_pairs": [],
+  "nearest_by_class": {},
+  "variants": [
+    {
+      "id": "M6-SIG",
+      "purpose": "Test whether opposite-polarization pre-CIN signal copper is the dominant mixed-mode coupling path.",
+      "geometry_action": "In a disposable E2C copy, suppress only the opposite-pol active landing-zone SIGNAL extensions from upstream MSL/taper through E_UP-side C_IN pad while preserving radiator/feed parent geometry and all local-ground/via geometry.",
+      "must_not_change": [
+        "radiator arms",
+        "RF tenon/tongue parent feed before frozen handoff",
+        "all local-ground copper",
+        "all vias",
+        "backside ground"
+      ],
+      "primary_observables": [
+        "A/B E_UP modal cross-block principal singular value",
+        "A_diff<->B_diff",
+        "A_diff<->B_common",
+        "same-pol E diff->common"
+      ],
+      "prediction_if_signal_dominant": "principal A/B modal coupling and same-pol diff/common degradation both improve strongly; ground-related branch imbalance may remain."
+    },
+    {
+      "id": "M6-GND",
+      "purpose": "Test whether branch-local ground/backside/via structures are the dominant mixed-mode coupling path.",
+      "geometry_action": "In a disposable E2C copy, retain all signal copper but remove only the added opposite-pol local-ground/paddle/spoke/backside-ground/via system that was absent in the isolated baseline comparison, using an electrically well-defined audit replacement only if required to keep ports valid.",
+      "must_not_change": [
+        "radiator arms",
+        "pre-CIN signal copper",
+        "E_UP signal pads"
+      ],
+      "primary_observables": [
+        "E_UP +/- return imbalance",
+        "same-pol E diff->common",
+        "A/B modal cross-block singular value"
+      ],
+      "prediction_if_ground_dominant": "branch imbalance and diff/common conversion improve more than raw E_UP signal-to-signal coupling."
+    },
+    {
+      "id": "M6-INT",
+      "purpose": "Test signal-ground interaction if neither pure signal nor pure ground ablation explains the mixed eigenchannel.",
+      "geometry_action": "Retain both classes but selectively increase only the closest A/B signal-to-ground separation identified by the static geometry audit, without changing radiator dimensions or device-side geometry.",
+      "must_not_change": [
+        "radiator electrical length",
+        "P_IN/P_OUT/package geometry",
+        "far ground topology"
+      ],
+      "primary_observables": [
+        "global A/B cross-modal principal sigma",
+        "worst-region A/B singular-mode purity",
+        "same-pol diff/common degradation"
+      ],
+      "prediction_if_interaction_dominant": "modal coupling improves only when the nearest signal-ground adjacency is perturbed, while pure-class ablations are incomplete."
+    }
+  ],
+  "boundary": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false
+  }
+}

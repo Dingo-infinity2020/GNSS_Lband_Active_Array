@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.2.8",
+  "status": "DESIGN_SEED_FROZEN_NO_EXECUTION",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E1_LANDING_ZONE_DESIGN_SEED",
+  "coordinates": {
+    "branch_u_mm": [
+      -3,
+      3
+    ],
+    "historical_lna_center_v_mm": 7,
+    "full_ground_start_v_mm": 4.5
+  },
+  "package_orientation": {
+    "rf_in_direction": "upstream / -v",
+    "rf_out_direction": "downstream / +v",
+    "same_rotation_both_branches": true,
+    "mirror_package_pinout": false
+  },
+  "qpl9547_package": {
+    "body_mm": [
+      2,
+      2
+    ],
+    "dap_mm": [
+      0.8,
+      1.6
+    ],
+    "terminal_pitch_mm": 0.5,
+    "via_drill_mm": 0.35,
+    "via_finished_mm": 0.25
+  },
+  "g0_passives": {
+    "dc_block_C_pF": 100,
+    "dc_block_Xc_ohm": {
+      "at_1p15_GHz": 1.3839560268860465,
+      "at_L5": 1.3528406909932027,
+      "at_L2": 1.2964723288684858,
+      "at_L1": 1.01023817833908,
+      "at_1p65_GHz": 0.9645754126781535
+    },
+    "bias_choke": {
+      "part": "Coilcraft 0402CS-18NXGRW",
+      "L_nH": 18,
+      "SRF_typ_GHz": 3.1,
+      "Q_typ_900MHz": 57,
+      "Q_typ_1p7GHz": 62,
+      "DCR_max_ohm": 0.23,
+      "Irms_mA": 420
+    },
+    "bias_choke_Xl_ohm": {
+      "at_1p15_GHz": 130.06193585861743,
+      "at_L5": 133.05336038336563,
+      "at_L2": 138.83828909568587,
+      "at_L1": 178.17580433946353,
+      "at_1p65_GHz": 186.61060362323371
+    }
+  },
+  "ground_candidates": [
+    "G-L0_BRANCH_LOCAL",
+    "G-L1_SHORT_LOCAL_COMMON",
+    "G-R_REMOTE_SENTINEL"
+  ],
+  "mechanical_policy": {
+    "orthogonal_two_stalk_architecture_frozen": true,
+    "exact_half_lap_slot_released_if_active_ground_requires": true
+  },
+  "build_authorized": false,
+  "solve_authorized": false
+}

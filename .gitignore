@@ -1,0 +1,34 @@
+# CST / EM binary projects and caches
+*.cst
+*.mod
+*.bak
+*.tmp
+*.log
+*.lock
+*.results/
+Result/
+Temp/
+
+# ADS generated databases/caches
+*.dds
+*.ael~
+*.wrk/
+data/display/
+simulation/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large raw measurement/simulation exports should be curated before commit
+*.h5
+*.hdf5
+*.mat

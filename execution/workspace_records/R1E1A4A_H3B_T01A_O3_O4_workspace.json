@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.2.8",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "H3B_T01A_O3_O4_CLOSEOUT",
+  "host_alias": "NW",
+  "working_path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+  "state": "CHECKPOINTED",
+  "archive_mode": "REFERENCE_ONLY_PLUS_PROTECTED_SOLVER_ARTIFACTS",
+  "closeout_task_node": "O3/O4 PASS -> T01-A FREEZE",
+  "purge_allowed": false,
+  "cleanup_completed": false,
+  "source_commit_for_formal_runs": "00bea9de782eb36c1d3f118866edd283808b6233",
+  "notes": "Scientific evidence committed; solver artifacts retained in place for downstream H3B integration."
+}

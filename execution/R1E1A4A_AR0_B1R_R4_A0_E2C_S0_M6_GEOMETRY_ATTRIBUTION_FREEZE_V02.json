@@ -1,0 +1,17 @@
+{
+  "schema_version": "gnss-e2c-s0-m6-freeze-v0.2",
+  "status": "PASS_M6_V02_EXACT_ENTITY_ATTRIBUTION_READY",
+  "method": "literature-guided structure-evolution attribution with one-polarization observer",
+  "diagnostic_order": [
+    "M6-D1-SIG",
+    "M6-D2-GND"
+  ],
+  "interaction_inference": "Use already-solved full E2C as SIG+GND(+device) endpoint; if D1/D2 are small individually but full is severe, interaction is primary.",
+  "field_monitor_recommendation_if_future_solve_authorized": [
+    "L2 1.2276 GHz",
+    "mixed-mode worst region 1.3384 GHz",
+    "L1 1.57542 GHz"
+  ],
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false
+}

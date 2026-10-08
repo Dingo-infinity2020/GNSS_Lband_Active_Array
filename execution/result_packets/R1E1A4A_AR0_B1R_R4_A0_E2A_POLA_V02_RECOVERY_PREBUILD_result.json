@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.2.11",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-POLA-V02-RECOVERY-PREBUILD-20260928",
+  "status": "PASS_R4_A0_E2A_POLA_V02_RECOVERY_READY_AWAIT_BUILD_AUTH",
+  "root_cause_proof": "PASS_R4_A0_E2A_DRILL_KERNEL_REFERENCE",
+  "formal_build_invocations_this_recovery": 0,
+  "solver_invocations": 0,
+  "geometry_redesign": false,
+  "production_macro_blob": "9931736f1129624d94aee1c9e983a1eaabca5f24",
+  "inventory_blob": "e10886a4c01d9aafd55a16d8126418b7e22025fd",
+  "kernel_reference_blob": "e7fe96e2e763fcc025ce45e874162d9c8a771f77",
+  "runner_blob": "a8f9183d7e4bb635ece3a5cc9e0edd30fb230502",
+  "static_checks": {
+    "run_solver_calls": 0,
+    "kernel_reference_precedes_production": true,
+    "complete_project_copy_for_reference": true,
+    "complete_project_copy_for_production": true,
+    "old_analytic_hard_gate_absent": true,
+    "cst_native_hard_gate_present": true,
+    "analytic_value_diagnostic_only": true,
+    "tolerance_mm3": 1e-7
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false
+  },
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_V02_RECOVERY_BUILD_ONLY_AWAIT_AUTH"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "gnss-m7b-diagnostic-solve-offline-freeze-v0.1",
+  "status": "PASS_M7B_DIAGNOSTIC_SOLVE_OFFLINE_FREEZE_AWAIT_HOST_STATIC_QUALIFICATION_AND_SOLVE_AUTH",
+  "checks": {
+    "human_review_recorded": true,
+    "reviewed_artifact_sha_locked": true,
+    "solve_network_reuses_proven_m7a_e2c_semantics": true,
+    "raw_anchor_frozen_1p3432": true,
+    "mode_search_band_frozen_1p20_1p40": true,
+    "mode_success_gate_6db": true,
+    "raw_success_gate_30pct": true,
+    "imbalance_anchor_frozen_1p2984": true,
+    "imbalance_secondary_gate_30pct": true,
+    "falsification_10pct": true,
+    "guard_6db_50mhz": true,
+    "exactly_one_run_solver_in_runner": true,
+    "evaluator_contains_no_run_solver": true,
+    "packet_generator_contains_no_run_solver": true,
+    "solve_authorized": false,
+    "build_authorized": false
+  },
+  "note": "Host byte-level static qualification deferred until a future explicit SOLVE authorization turn; no DC/CST call used for this offline freeze."
+}

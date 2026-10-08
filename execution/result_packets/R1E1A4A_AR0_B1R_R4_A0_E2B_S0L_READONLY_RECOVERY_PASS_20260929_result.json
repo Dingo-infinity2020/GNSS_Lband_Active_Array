@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2B-S0L-READONLY-RECOVERY-PASS-20260929",
+  "status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E2B_S0L_READONLY_QUALIFICATION_RECOVERY",
+  "disposition": "PASS_LOADED_SOURCE_WITH_REVIEW",
+  "formal_result_remains": "HOLD_R1E1A4A_AR0_B1R_R4_A0_E2B_S0L_EXECUTION",
+  "classification": "READONLY_POSTSOLVE_QUALIFICATION_RECOVERY",
+  "formal_solver_invocations": 1,
+  "recovery_solver_invocations": 0,
+  "automatic_retries": 0,
+  "source_artifact_sha256": "002eb117b0716cf2a47856b4552dd96ef4567358c7dd5827cbe766d10a633f39",
+  "solved_artifact_sha256": "2abafb4435a6f1dc7bfcadec029ee1c81436cf91f27fefe99ca64337820eba02",
+  "native_delta_sequence": [
+    0.0358152,
+    0.00656218,
+    0.00869598
+  ],
+  "final_two_native_delta_s": [
+    0.00656218,
+    0.00869598
+  ],
+  "hard_checks": {
+    "formal_solver_invocations_exactly_one": true,
+    "automatic_retries_zero": true,
+    "source_artifact_unchanged": true,
+    "solved_artifact_sha_exact": true,
+    "presolve_all_pass": true,
+    "required_24_responses_extracted": true,
+    "native_numerical_convergence": true,
+    "source_side_reciprocity": true,
+    "loaded_power_closure": true,
+    "no_fatal_solver_error": true,
+    "no_mesh_corruption": true,
+    "no_new_solver_invocation": true
+  },
+  "metrics": {
+    "frequency_grid": {
+      "count": 1001,
+      "min_ghz": 1,
+      "max_ghz": 1.8
+    },
+    "source_side_reciprocity_max_abs_complex": 0.00002198965380283278,
+    "loaded_power_max_column": 0.9999872874855372,
+    "loaded_power_min_column": 0.7635517876317299,
+    "A_CIN_GAP_peak_core_db": -33.84407463795149,
+    "B_CIN_GAP_peak_core_db": -34.00224873907153,
+    "A_TO_B_EUP_peak_core_db": -16.727052731493913,
+    "A_TO_B_EUP_peak_core_ghz": 1.572,
+    "A_PIN_TO_B_PIN_peak_core_db": -102.6646829110864
+  },
+  "warning_classification": {
+    "large_input_reflection": true,
+    "disconnected_conductor_warning": false,
+    "pec_wire_problematic_positions": "RF_TONGUE_AND_SOLDER_BRIDGE_SEAMS_ONLY",
+    "half_lap_problematic_position": false,
+    "yz_matrix_warning": "EXPECTED_PARTIAL_S_MATRIX_WARNING"
+  },
+  "result_semantics_note": "Native output.txt is authoritative for mesh convergence. Result-tree convergence sequence differs semantically/numerically but does not override the native gate."
+}

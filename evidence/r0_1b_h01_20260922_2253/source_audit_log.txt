@@ -1,0 +1,78 @@
+R0.1B CENTER/FEED PROVENANCE — SOURCE AVAILABILITY AUDIT LOG
+=============================================================
+
+Task      : R0.1B-CENTER-FEED-PROVENANCE-H01
+Host      : H01 (DESKTOP-GBTI6Q4)
+Date      : 2026-09-22
+Git head  : e1bb1a3 (project/r0-charts-scaffold)
+Toolchain : Miniconda CPython 3.13.9 / webfetch
+
+Goal of this log: establish whether the primary source figures (Fig.1(a),
+Fig.2(a) of Lau et al., ISAP 2025) are available to H01 for a new high-quality
+center/feed inspection. No CST was run.
+
+1) REPOSITORY PROVENANCE INVENTORY
+----------------------------------
+Command : Get-ChildItem -Recurse -File refs
+Result  : refs/charts2025/FIGURE_EXTRACTION.md
+          refs/charts2025/PHOTO_GEOMETRY_ESTIMATE.md
+          refs/charts2025/PROVENANCE.md
+          refs/cui2023/PROVENANCE.md
+          refs/dacosta2026/PROVENANCE.md
+Interpretation: only Markdown provenance files; no source figure/PDF stored.
+
+2) REPOSITORY-WIDE IMAGE/PDF SEARCH
+-----------------------------------
+Command : Get-ChildItem -Recurse -File <repo> | where extension in
+          {pdf,png,jpg,jpeg,gif,tif,tiff,bmp,webp}
+Result  : only project-owned evidence screenshots under
+          evidence/r0_1a_h01_*/ , evidence/r0_1a2_h01_*/ , evidence/r0_1a3_h01_*/
+Interpretation: no copyrighted source imagery in the repository.
+
+3) LOCAL MACHINE SOURCE SEARCH
+------------------------------
+Command : recursive file search under
+          D:\GNSS_Lband_Active_Array , %USERPROFILE%\Downloads ,
+          %USERPROFILE%\Desktop , %USERPROFILE%\Documents ,
+          C:\Users\Administrator.DESKTOP-GBTI6Q4\Downloads
+          for names matching {chart,isap,lau,1571143655,25.*antenna}
+          AND extension in {pdf,png,jpg,jpeg,tif,tiff,bmp}
+Result  : no matches.
+Interpretation: no local copy of the CHARTS paper or its figures on H01.
+
+4) DOI RESOLUTION
+-----------------
+URL     : https://doi.org/10.34385/proc.98.1571143655
+Result  : bibliographic metadata only:
+            title  = "Active Planar Antenna Design for CHARTS Array"
+            author = Albert Wai Kit Lau; Victoria Allder; Sophia Da Costa;
+                     Sean V Hum; Keith Vanderlinde; Juan Mena-Parra
+            publisher = The Institute of Electronics, Information and
+                        Communication Engineers (IEICE)
+            container = IEICE Proceeding Series, vol. 98
+            issued = 2025-10-27
+            pages  = 1571143655
+          No full-text or figure link returned.
+Interpretation: DOI advertises the paper but exposes no open full text here.
+
+5) METADATA API CHECKS
+----------------------
+URL     : https://api.crossref.org/works/10.34385/proc.98.1571143655
+Result  : HTTP 404.
+URL     : https://api.datacite.org/dois/10.34385/proc.98.1571143655
+Result  : HTTP 404.
+Interpretation: no machine-resolvable full-text pointer for this DOI prefix.
+
+6) CONCLUSION
+-------------
+The primary source full text and the Fig.1/Fig.2 figures are NOT available to
+H01 (neither stored locally nor reachable as open full text). A new
+pixel-level center/feed figure audit could not be performed.
+
+Consequently the R0.1B extraction was consolidated strictly from the
+repository's existing source-traceable records, with all figure-derived items
+kept at their prior provenance class and not re-measured or upgraded.
+
+Final status: HOLD_R0_PRIMARY_SOURCE_UNAVAILABLE.
+
+Note: no copyrighted source was downloaded, copied, or committed by this task.
