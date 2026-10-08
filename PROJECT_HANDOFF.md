@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=96
+HANDOFF_VERSION=97
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_RESULT_STORAGE_HOLD
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_COMPLETE
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=M7C_SOLVE_CONSUMED_STORAGE_HOLD_NO_SCIENCE_CLASSIFICATION
+TASK_STATUS=D_DRIVE_CLEANUP_PASS_RECOVERY_CONTRACT_NOT_YET_AUTHORIZED
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -20,59 +20,31 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-08 current baton — M7C SOLVE consumed, storage HOLD, no science classification
+## 2026-10-08 current baton — D: storage cleanup PASS, M7C recovery not yet authorized
 
-The user explicitly authorized one M7C diagnostic SOLVE.
+The consumed M7C SOLVE remains scientifically unclassified because broadband result storage failed when D: had only ~0.16 GB free.
 
-Formal transaction:
-- grant: `GNSS-M7C-SOLVE-GRANT-20261008-01`;
-- packet: `GNSS-M7C-DIAGNOSTIC-SOLVE-V01`;
-- runner final status: `HOLD_ENTRYPOINT`;
-- one-shot SOLVE consumed: YES;
-- automatic retry: 0;
-- production boundary observed: YES;
-- protocol errors: 0.
+Storage cleanup is now complete:
 
-The electromagnetic adaptive solve itself converged:
-- Delta-S sequence: 0.0726795 -> 0.0154014 -> 0.0149362;
-- final two values are <0.02;
-- CST reported desired accuracy reached.
+- D: free space increased from ~0.06 GB at cleanup start to **14.933 GB**.
+- Conda caches were cleaned after exporting environment provenance; Python, Conda and SimulationOps doctor all PASS.
+- The failed M7C run had 96 disposable e/h/d/b field intermediate files removed, reclaiming ~2.976 GB. The .cst, remaining project/result database, native logs and all evidence are retained.
+- M7A is already CLOSED/REJECT. Its 320 field-intermediate .m3t files were removed, reclaiming ~9.538 GB. Its S-parameter database remains intact and was re-verified: run IDs 0 and 1 each contain 1001 points from 1.0 to 1.8 GHz.
+- E2C, M7B, E2A, E2B and M6 science baselines were not touched.
 
-The run then failed during broadband result materialization:
-- repeated `Could not write electric/magnetic field`;
-- `Error accessing the 1D result storage`;
-- `Not all S-parameters were calculated`;
-- standard S-parameter tree contains only two points: 1.0 and 1.8 GHz;
-- therefore the frozen 1.15–1.65 GHz M7C modal gates cannot be evaluated.
-
-Root cause is storage exhaustion on NW D::
-- D: used approximately 132.08 GB;
-- D: free approximately 0.16 GB at forensic read;
-- M7C formal solver run footprint approximately 3.46 GB.
-
-This is an infrastructure/storage HOLD, **not a rejection of the M7C geometry**.
-
-Protected partial solved artifact:
-`D:\GNSS_Lband_Active_Array\runs\formal\solver_runs\M7C_DIAGNOSTIC_SOLVE_V01\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVED_V01.cst`
-
-SHA256:
-`144a86df9cfa5a65d30f3997d6df66dcddb27da9a89a8f3840fcae958d69765e`
+Cleanup authority:
+`evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_20261008/D_DRIVE_CLEANUP.json`
 
 Current boundary:
-`M7C_RESULT_STORAGE_HOLD`
+`M7C_STORAGE_RECOVERY_COMPLETE`
 
 BUILD_AUTHORIZED = NO.
 SOLVE_AUTHORIZED = NO.
 
-Do not infer PASS/REVIEW/REJECT for M7C from this attempt. Do not interpolate the two endpoint S-parameter samples to the frozen modal anchors.
-
-Before any future recovery SOLVE is even proposed:
-1. clean/archive D: under the project/SimulationOps storage policy;
-2. add or enforce a free-space preflight gate;
-3. preserve this consumed attempt and partial artifact;
-4. freeze a recovery contract that explicitly distinguishes infrastructure recovery from geometry change.
-
-No retry is authorized by the current user grant.
+Before any recovery SOLVE can be authorized:
+1. add/enforce a free-space preflight;
+2. freeze a recovery contract that reuses the same reviewed M7C geometry and frozen science gates;
+3. treat the original consumed storage-HOLD attempt as immutable historical evidence.
 
 ## Long-horizon authority
 

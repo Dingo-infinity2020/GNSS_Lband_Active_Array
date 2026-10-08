@@ -1927,7 +1927,7 @@
                                                   ]
                           },
     "execution":  {
-                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_RESULT_STORAGE_HOLD",
+                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_COMPLETE",
                       "formal_recovery_solve_invocation_count":  1,
                       "silent_retry_allowed":  false,
                       "hash_lock_required":  true,
@@ -1936,7 +1936,7 @@
                       "formal_o2b_screen_invocation_count":  9,
                       "formal_o2b_qualification_invocation_count":  3,
                       "last_completed_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
-                      "last_status":  "HOLD_M7C_RESULT_STORAGE_DISK_EXHAUSTION_NO_SCIENCE_CLASSIFICATION",
+                      "last_status":  "PASS_D_DRIVE_STORAGE_RECOVERY_M7C_RECOVERY_NOT_AUTHORIZED",
                       "one_shot_required":  true,
                       "fresh_run_directory_required":  true,
                       "entrypoint_qualification":  {
@@ -2025,7 +2025,7 @@
                            "result_packet_path":  "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIAGNOSTIC_SOLVE_V01\\result_packet.json",
                            "preferred_runner":  "D:\\\\quest_naoc_tarminal\\\\SimulationOps\\\\runner\\\\nw\\\\simops.cmd",
                            "polling_policy":  "launch_once_inspect_at_task_node",
-                           "exception_reason":  "One M7C SOLVE consumed. Adaptive mesh converged, but D: had only 0.16 GB free and CST failed writing field/1D result storage; no complete broadband S-parameter grid and no science classification. No retry authorized.",
+                           "exception_reason":  "Consumed M7C attempt remains scientifically unclassified. D: cleanup restored 14.933 GB free; no recovery SOLVE is authorized until free-space preflight and recovery contract are frozen.",
                            "task_packet_source":  {
                                                       "mode":  "PROJECT_GIT_PACKET_OR_GENERATOR",
                                                       "packet_path":  "",
@@ -2041,7 +2041,7 @@
                            "forensics_command":  "runner/nw/simops.cmd forensics --packet \u003cpacket\u003e"
                        },
     "evidence":  {
-                     "status_classification":  "HOLD_M7C_RESULT_STORAGE_DISK_EXHAUSTION_NO_SCIENCE_CLASSIFICATION",
+                     "status_classification":  "PASS_D_DRIVE_STORAGE_RECOVERY_M7C_RECOVERY_NOT_AUTHORIZED",
                      "source_commit_for_o3_o4":  "00bea9de782eb36c1d3f118866edd283808b6233",
                      "o3_nominal_solved_sha256":  "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
                      "o3_straight_reference_solved_sha256":  "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
@@ -2076,7 +2076,7 @@
                      "m7b_build_artifact_sha256":  "5498e9c447fdd4eeb969c02701d27886e839144ebe9941c4e7f56bc7419c69ea",
                      "m7b_build_recovery_evidence":  "evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_BUILD_READONLY_RECOVERY_V01/RECOVERY.json",
                      "m7b_build_recovery_status":  "PASS_M7B_BUILD_READONLY_QUALIFICATION_RECOVERY_AWAIT_HUMAN_REVIEW",
-                     "exact_invocation":  "ONE_FORMAL_M7C_SOLVE_CONSUMED; ADAPTIVE_CONVERGENCE_PASS; BROADBAND_RESULT_STORAGE_FAILED_WITH_D_FREE_0P16GB; NO_SCIENCE_CLASSIFICATION; NO_RETRY"
+                     "exact_invocation":  "M7C_STORAGE_HOLD_PRESERVED; D_DRIVE_CLEANUP_PASS_FREE_14P933GB; SCIENCE_BASELINES_UNTOUCHED; NO_RECOVERY_SOLVE_AUTH"
                  },
     "authorization_history":  [
                                   {

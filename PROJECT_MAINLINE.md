@@ -322,10 +322,10 @@ No stage inherits solver permission from the previous stage.
 
 As of the 2026-10-04 handoff, the active local sub-route is:
 
-`R1E0 periodic scan CLOSED PASS -> R1E1A support gate -> R1E1A4A/AR0 receiver-interface branch -> E2A/E2B isolated loaded-source characterization -> E2C dual-pol coexistence severe composite-mode evidence -> M6 diagnostic decomposition -> M7A CLOSED REJECT -> M7B CLOSED PARTIAL -> M7B first-principles modal decomposition PASS -> M7C LOCAL_RETURN_ISLAND BUILD PASS -> HUMAN 3D REVIEW PASS -> M7C DIAGNOSTIC SOLVE CONSUMED -> STORAGE HOLD`.
+`R1E0 periodic scan CLOSED PASS -> R1E1A support gate -> R1E1A4A/AR0 receiver-interface branch -> E2A/E2B isolated loaded-source characterization -> E2C dual-pol coexistence severe composite-mode evidence -> M6 diagnostic decomposition -> M7A CLOSED REJECT -> M7B CLOSED PARTIAL -> M7B first-principles modal decomposition PASS -> M7C LOCAL_RETURN_ISLAND BUILD PASS -> HUMAN 3D REVIEW PASS -> M7C DIAGNOSTIC SOLVE CONSUMED -> STORAGE HOLD -> D: CLEANUP PASS`.
 
-M7B is closed. M7C BUILD and human 3D review are PASS. One M7C diagnostic SOLVE was consumed; adaptive convergence passed, but NW D: storage exhaustion prevented full broadband S-parameter materialization. M7C therefore has no scientific PASS/REVIEW/REJECT classification from this attempt.
+M7B is closed. M7C BUILD and human 3D review are PASS. One M7C diagnostic SOLVE was consumed; adaptive convergence passed, but NW D: storage exhaustion prevented full broadband S-parameter materialization. D: cleanup has now restored 14.933 GB free while preserving current science baselines. M7C still has no scientific PASS/REVIEW/REJECT classification from the consumed attempt.
 
-No M7C retry is currently authorized. Before a future recovery SOLVE can be proposed, D: storage must be cleaned/archived under policy and a free-space preflight gate must be added or enforced. The recovery must reuse the same reviewed M7C geometry and frozen science gates unless separately changed with explicit design authority.
+No M7C retry is currently authorized. D: storage cleanup is complete. Before a future recovery SOLVE can be proposed, a free-space preflight gate must be added or enforced and a same-geometry infrastructure-recovery contract must be frozen. The recovery must reuse the same reviewed M7C geometry and frozen science gates unless separately changed with explicit design authority.
 
 After the M7B result is classified, return to the already frozen AR0/mainline authority. Do not reopen isolated-element S11 optimization and do not freeze final LNA input matching before the authoritative scan-dependent active-impedance locus exists.
