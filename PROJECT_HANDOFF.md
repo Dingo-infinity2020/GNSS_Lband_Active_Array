@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=95
+HANDOFF_VERSION=96
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_AWAIT_AUTH
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_RESULT_STORAGE_HOLD
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=M7C_HUMAN_REVIEW_PASS_SOLVE_CONTRACT_FROZEN_AWAIT_AUTH
+TASK_STATUS=M7C_SOLVE_CONSUMED_STORAGE_HOLD_NO_SCIENCE_CLASSIFICATION
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -20,56 +20,59 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-07 current baton — M7C human review PASS, SOLVE contract frozen
+## 2026-10-08 current baton — M7C SOLVE consumed, storage HOLD, no science classification
 
-The user manually reviewed the protected M7C CST geometry and explicitly reported PASS.
+The user explicitly authorized one M7C diagnostic SOLVE.
 
-Reviewed artifact:
-`D:\GNSS_Lband_Active_Array\runs\formal\build_only\M7C_LOCAL_RETURN_ISLAND_V01\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst`
+Formal transaction:
+- grant: `GNSS-M7C-SOLVE-GRANT-20261008-01`;
+- packet: `GNSS-M7C-DIAGNOSTIC-SOLVE-V01`;
+- runner final status: `HOLD_ENTRYPOINT`;
+- one-shot SOLVE consumed: YES;
+- automatic retry: 0;
+- production boundary observed: YES;
+- protocol errors: 0.
+
+The electromagnetic adaptive solve itself converged:
+- Delta-S sequence: 0.0726795 -> 0.0154014 -> 0.0149362;
+- final two values are <0.02;
+- CST reported desired accuracy reached.
+
+The run then failed during broadband result materialization:
+- repeated `Could not write electric/magnetic field`;
+- `Error accessing the 1D result storage`;
+- `Not all S-parameters were calculated`;
+- standard S-parameter tree contains only two points: 1.0 and 1.8 GHz;
+- therefore the frozen 1.15–1.65 GHz M7C modal gates cannot be evaluated.
+
+Root cause is storage exhaustion on NW D::
+- D: used approximately 132.08 GB;
+- D: free approximately 0.16 GB at forensic read;
+- M7C formal solver run footprint approximately 3.46 GB.
+
+This is an infrastructure/storage HOLD, **not a rejection of the M7C geometry**.
+
+Protected partial solved artifact:
+`D:\GNSS_Lband_Active_Array\runs\formal\solver_runs\M7C_DIAGNOSTIC_SOLVE_V01\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVED_V01.cst`
 
 SHA256:
-`ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98`
-
-Human-review evidence:
-`execution/M7C_HUMAN_GEOMETRY_REVIEW_PASS.json`
-
-The diagnostic SOLVE contract is now frozen before any M7C solved response exists. It reuses the proven 12-port coexistence network and solver fidelity from full E2C / M7A / M7B.
-
-Frozen primary family A — symmetry preservation:
-- at 1.2056, 1.2984, 1.3432, 1.5752 and 1.6496 GHz;
-- both polarizations;
-- |Delta Sdc| <= 0.25 x corresponding full-E2C |Delta Sdc|;
-- all 10 checks required.
-
-Frozen primary family B — differential restoration:
-- at 1.3432, 1.5752 and 1.6496 GHz;
-- both polarizations;
-- |Delta Sdd| <= 0.70 x frozen M7B |Delta Sdd|;
-- all 6 checks required.
-
-Secondary raw check:
-worst own-pol source-side complex deviation over 1.15–1.65 GHz <= 0.6567025281.
-
-Guard:
-no new >6 dB off-diagonal excursion in any <=50 MHz window relative to full E2C.
-
-Formal solver budget = 1.
-Automatic retry = 0.
-No automatic geometry change or next stage.
+`144a86df9cfa5a65d30f3997d6df66dcddb27da9a89a8f3840fcae958d69765e`
 
 Current boundary:
-`M7C_DIAGNOSTIC_SOLVE_AWAIT_AUTH`
+`M7C_RESULT_STORAGE_HOLD`
 
 BUILD_AUTHORIZED = NO.
 SOLVE_AUTHORIZED = NO.
 
-Before any future SOLVE grant, run:
-`scripts/audit_m7c_diagnostic_solve_contract_v01.py`
+Do not infer PASS/REVIEW/REJECT for M7C from this attempt. Do not interpolate the two endpoint S-parameter samples to the frozen modal anchors.
 
-Only exact `PASS_M7C_DIAGNOSTIC_SOLVE_STATIC_CONTRACT` may proceed to a one-shot SOLVE grant.
+Before any future recovery SOLVE is even proposed:
+1. clean/archive D: under the project/SimulationOps storage policy;
+2. add or enforce a free-space preflight gate;
+3. preserve this consumed attempt and partial artifact;
+4. freeze a recovery contract that explicitly distinguishes infrastructure recovery from geometry change.
 
-Authority:
-`docs/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_FREEZE_V01.md`
+No retry is authorized by the current user grant.
 
 ## Long-horizon authority
 

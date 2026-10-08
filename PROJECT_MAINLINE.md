@@ -322,10 +322,10 @@ No stage inherits solver permission from the previous stage.
 
 As of the 2026-10-04 handoff, the active local sub-route is:
 
-`R1E0 periodic scan CLOSED PASS -> R1E1A support gate -> R1E1A4A/AR0 receiver-interface branch -> E2A/E2B isolated loaded-source characterization -> E2C dual-pol coexistence severe composite-mode evidence -> M6 diagnostic decomposition -> M7A CLOSED REJECT -> M7B CLOSED PARTIAL -> M7B first-principles modal decomposition PASS -> M7C LOCAL_RETURN_ISLAND BUILD PASS -> HUMAN 3D REVIEW PASS -> M7C DIAGNOSTIC SOLVE AWAIT AUTH`.
+`R1E0 periodic scan CLOSED PASS -> R1E1A support gate -> R1E1A4A/AR0 receiver-interface branch -> E2A/E2B isolated loaded-source characterization -> E2C dual-pol coexistence severe composite-mode evidence -> M6 diagnostic decomposition -> M7A CLOSED REJECT -> M7B CLOSED PARTIAL -> M7B first-principles modal decomposition PASS -> M7C LOCAL_RETURN_ISLAND BUILD PASS -> HUMAN 3D REVIEW PASS -> M7C DIAGNOSTIC SOLVE CONSUMED -> STORAGE HOLD`.
 
-M7B is closed. M7C BUILD and human 3D review are PASS. The M7C diagnostic SOLVE contract is frozen around two independent primary families: preserving Sdc symmetry suppression and restoring Sdd relative to M7B. No BUILD or SOLVE is currently authorized.
+M7B is closed. M7C BUILD and human 3D review are PASS. One M7C diagnostic SOLVE was consumed; adaptive convergence passed, but NW D: storage exhaustion prevented full broadband S-parameter materialization. M7C therefore has no scientific PASS/REVIEW/REJECT classification from this attempt.
 
-If a future explicit M7C SOLVE authorization is given, first run the frozen host static solve-contract audit. Only exact PASS_M7C_DIAGNOSTIC_SOLVE_STATIC_CONTRACT may activate one one-shot SOLVE grant. No retry, sweep, geometry mutation or automatic next stage is permitted.
+No M7C retry is currently authorized. Before a future recovery SOLVE can be proposed, D: storage must be cleaned/archived under policy and a free-space preflight gate must be added or enforced. The recovery must reuse the same reviewed M7C geometry and frozen science gates unless separately changed with explicit design authority.
 
 After the M7B result is classified, return to the already frozen AR0/mainline authority. Do not reopen isolated-element S11 optimization and do not freeze final LNA input matching before the authoritative scan-dependent active-impedance locus exists.

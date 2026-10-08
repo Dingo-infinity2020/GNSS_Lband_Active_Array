@@ -9,24 +9,13 @@
                 },
     "authorization":  {
                           "BUILD_AUTHORIZED":  false,
-                          "SOLVE_AUTHORIZED":  true,
+                          "SOLVE_AUTHORIZED":  false,
                           "production_solve_authorized":  false,
                           "material_ab_authorized":  false,
                           "lna_integration_authorized":  false,
                           "cst251_authorized":  false,
                           "semantics":  "CURRENT_LIVE_ONLY",
-                          "active_grant":  {
-                                               "grant_id":  "GNSS-M7C-SOLVE-GRANT-20261008-01",
-                                               "kind":  "SOLVE",
-                                               "state":  "GRANTED",
-                                               "stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE",
-                                               "source_commit":  "f3f25a024d486f3884088a63ec61b4e8f5538837",
-                                               "entrypoint_sha256":  "af430a7a997c2b35be53d938619482372afd7ef50b35ddc8450f833d0816c670",
-                                               "granted_at":  "2026-10-08T00:46:00Z",
-                                               "expires_at":  null,
-                                               "task_node":  "M7C_DIAGNOSTIC_SOLVE",
-                                               "user_authorization":  "EXPLICIT_CURRENT_TURN"
-                                           }
+                          "active_grant":  null
                       },
     "scientific_freeze":  {
                               "candidate":  "H3B_T01A_GCPW_ORTHOGONAL_TRANSITION",
@@ -1938,7 +1927,7 @@
                                                   ]
                           },
     "execution":  {
-                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE",
+                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_RESULT_STORAGE_HOLD",
                       "formal_recovery_solve_invocation_count":  1,
                       "silent_retry_allowed":  false,
                       "hash_lock_required":  true,
@@ -1947,7 +1936,7 @@
                       "formal_o2b_screen_invocation_count":  9,
                       "formal_o2b_qualification_invocation_count":  3,
                       "last_completed_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
-                      "last_status":  "AUTHORIZED_M7C_SOLVE_AWAIT_PACKET",
+                      "last_status":  "HOLD_M7C_RESULT_STORAGE_DISK_EXHAUSTION_NO_SCIENCE_CLASSIFICATION",
                       "one_shot_required":  true,
                       "fresh_run_directory_required":  true,
                       "entrypoint_qualification":  {
@@ -2036,7 +2025,7 @@
                            "result_packet_path":  "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIAGNOSTIC_SOLVE_V01\\result_packet.json",
                            "preferred_runner":  "D:\\\\quest_naoc_tarminal\\\\SimulationOps\\\\runner\\\\nw\\\\simops.cmd",
                            "polling_policy":  "launch_once_inspect_at_task_node",
-                           "exception_reason":  "M7C host static solve qualification PASS; explicit one-shot SOLVE authorization active; formal solver not yet launched.",
+                           "exception_reason":  "One M7C SOLVE consumed. Adaptive mesh converged, but D: had only 0.16 GB free and CST failed writing field/1D result storage; no complete broadband S-parameter grid and no science classification. No retry authorized.",
                            "task_packet_source":  {
                                                       "mode":  "PROJECT_GIT_PACKET_OR_GENERATOR",
                                                       "packet_path":  "",
@@ -2052,7 +2041,7 @@
                            "forensics_command":  "runner/nw/simops.cmd forensics --packet \u003cpacket\u003e"
                        },
     "evidence":  {
-                     "status_classification":  "AUTHORIZED_M7C_SOLVE_AWAIT_PACKET",
+                     "status_classification":  "HOLD_M7C_RESULT_STORAGE_DISK_EXHAUSTION_NO_SCIENCE_CLASSIFICATION",
                      "source_commit_for_o3_o4":  "00bea9de782eb36c1d3f118866edd283808b6233",
                      "o3_nominal_solved_sha256":  "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
                      "o3_straight_reference_solved_sha256":  "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
@@ -2087,7 +2076,7 @@
                      "m7b_build_artifact_sha256":  "5498e9c447fdd4eeb969c02701d27886e839144ebe9941c4e7f56bc7419c69ea",
                      "m7b_build_recovery_evidence":  "evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_BUILD_READONLY_RECOVERY_V01/RECOVERY.json",
                      "m7b_build_recovery_status":  "PASS_M7B_BUILD_READONLY_QUALIFICATION_RECOVERY_AWAIT_HUMAN_REVIEW",
-                     "exact_invocation":  "M7C_HOST_STATIC_SOLVE_AUDIT_PASS; ONE_SHOT_SOLVE_AUTHORIZED; SOLVER_NOT_YET_LAUNCHED"
+                     "exact_invocation":  "ONE_FORMAL_M7C_SOLVE_CONSUMED; ADAPTIVE_CONVERGENCE_PASS; BROADBAND_RESULT_STORAGE_FAILED_WITH_D_FREE_0P16GB; NO_SCIENCE_CLASSIFICATION; NO_RETRY"
                  },
     "authorization_history":  [
                                   {
@@ -2245,6 +2234,29 @@
                                       "build_consumed":  true,
                                       "solve_consumed":  false,
                                       "artifact_sha256":  "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98"
+                                  },
+                                  {
+                                      "grant_id":  "GNSS-M7C-SOLVE-GRANT-20261008-01",
+                                      "kind":  "SOLVE",
+                                      "state":  "CONSUMED",
+                                      "stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE",
+                                      "packet_id":  "GNSS-M7C-DIAGNOSTIC-SOLVE-V01",
+                                      "source_commit":  "f3f25a024d486f3884088a63ec61b4e8f5538837",
+                                      "entrypoint_sha256":  "af430a7a997c2b35be53d938619482372afd7ef50b35ddc8450f833d0816c670",
+                                      "granted_at":  "2026-10-08T00:46:00Z",
+                                      "closed_at":  "2026-10-08T00:54:42Z",
+                                      "runner_result":  "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIAGNOSTIC_SOLVE_V01\\result_packet.json",
+                                      "final_status":  "HOLD_ENTRYPOINT",
+                                      "project_science_status":  "HOLD_M7C_RESULT_STORAGE_DISK_EXHAUSTION_NO_SCIENCE_CLASSIFICATION",
+                                      "solve_consumed":  true,
+                                      "automatic_retries":  0,
+                                      "adaptive_convergence_sequence":  [0.0726795, 0.0154014, 0.0149362],
+                                      "adaptive_termination":  "DESIRED_ACCURACY_REACHED",
+                                      "broadband_result_materialized":  false,
+                                      "standard_sparameter_grid_points":  2,
+                                      "standard_sparameter_grid_ghz":  [1.0, 1.8],
+                                      "solved_artifact_sha256":  "144a86df9cfa5a65d30f3997d6df66dcddb27da9a89a8f3840fcae958d69765e",
+                                      "root_cause":  "D_DRIVE_DISK_EXHAUSTION_D_FREE_0P16_GB"
                                   }
                               ],
     "artifacts":  {

@@ -1,0 +1,76 @@
+{
+  "schema_version": "gnss-m7c-solve-storage-hold-closeout-v0.1",
+  "status": "HOLD_M7C_RESULT_STORAGE_DISK_EXHAUSTION_NO_SCIENCE_CLASSIFICATION",
+  "runner_final_status": "HOLD_ENTRYPOINT",
+  "runner_entrypoint_exit_code": 9,
+  "grant_id": "GNSS-M7C-SOLVE-GRANT-20261008-01",
+  "packet_id": "GNSS-M7C-DIAGNOSTIC-SOLVE-V01",
+  "started_at": "2026-10-08T00:48:18Z",
+  "ended_at": "2026-10-08T00:54:42Z",
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "solve_consumed": true,
+  "production_boundary": "OBSERVED",
+  "protocol_error_count": 0,
+  "solver": {
+    "started": true,
+    "completed": true,
+    "adaptive_delta_s": [
+      0.0726795,
+      0.0154014,
+      0.0149362
+    ],
+    "adaptive_termination": "DESIRED_ACCURACY_REACHED",
+    "solved_artifact": {
+      "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_DIAGNOSTIC_SOLVE_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVED_V01.cst",
+      "sha256": "144a86df9cfa5a65d30f3997d6df66dcddb27da9a89a8f3840fcae958d69765e",
+      "size_bytes": 154009
+    }
+  },
+  "broadband_result": {
+    "complete": false,
+    "standard_sparameter_run_ids": [
+      0
+    ],
+    "standard_sparameter_points": 2,
+    "standard_sparameter_frequency_ghz": [
+      1,
+      1.8
+    ],
+    "evaluator_executed": false,
+    "science_classification": null,
+    "reason": "Frozen M7C modal gates require complete 1.15-1.65 GHz complex S-parameter data."
+  },
+  "native_errors": [
+    "Could not write magnetic flux density field.",
+    "Could not write electric field.",
+    "Could not write magnetic field.",
+    "Could not write electric flux density field.",
+    "Error accessing the 1D result storage.",
+    "Not all S-parameters were calculated.",
+    "6 errors and 2 warnings occurred."
+  ],
+  "storage_forensics": {
+    "D_used_gb": 132.08,
+    "D_free_gb": 0.16,
+    "m7c_run_size_mb": 3459.01,
+    "root_cause": "D_DRIVE_DISK_EXHAUSTION"
+  },
+  "comparison": {
+    "M7B_standard_sparameter_runs": [
+      0,
+      1
+    ],
+    "M7B_points_per_run": 1001,
+    "M7C_standard_sparameter_runs": [
+      0
+    ],
+    "M7C_points_per_run": 2
+  },
+  "authorization_after_closeout": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "active_grant": null
+  },
+  "next_boundary": "STORAGE_CLEANUP_AND_RECOVERY_CONTRACT_DESIGN_NO_AUTOMATIC_RETRY"
+}
