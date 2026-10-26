@@ -1,0 +1,27 @@
+{
+  "authority": "DIRECT_HUMAN_USER_CURRENT_TURN",
+  "verbatim_request": "授权求解",
+  "grant": {
+    "grant_id": "GNSS-M7C-STORAGE-RECOVERY-SOLVE-GRANT-20261026-01",
+    "kind": "SOLVE",
+    "state": "GRANTED",
+    "stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01",
+    "packet_id": "GNSS-M7C-STORAGE-RECOVERY-20261026-V01",
+    "source_commit": "4ab2648015955e1e6c8f10864f063e916f4d64f1",
+    "entrypoint_path": "scripts/run_m7c_storage_recovery_solve_v01.py",
+    "entrypoint_sha256": "85e02268de7e13bbc3e26fad9d3b98522536a1850d32f4bcd34eee79b555e605",
+    "granted_at": "2026-10-26T14:56:44Z",
+    "expires_at": "2026-10-26T20:56:44Z",
+    "task_node": "M7C_SAME_GEOMETRY_STORAGE_RECOVERY_DIAGNOSTIC_SOLVE",
+    "user_authorization": "EXPLICIT_CURRENT_TURN: 授权求解",
+    "formal_solver_budget": 1,
+    "automatic_retries": 0,
+    "host_alias": "NW",
+    "stop_boundary": "STOP_AFTER_ONE_SAME_GEOMETRY_M7C_RECOVERY_SOLVE_QUALIFICATION_MODAL_CLASSIFICATION_NO_RETRY_NO_NEXT_STAGE"
+  },
+  "preparation_commit": "0f32c6b84ae3cfba1e6fbd72d6fd242029949d7b",
+  "manifest_sha256": "7fde455373c882724c7098f79c779fd58179ce4dff70a7d151a66e9acc4d79ac",
+  "qualified_receipt": "evidence/M7C_STORAGE_RECOVERY_PREP_20261026/qualification_v02/RECEIPT.json",
+  "build_authorized": false,
+  "formal_solve_started": false
+}

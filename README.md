@@ -13,7 +13,7 @@ Read these first:
 
 ## Current scientific phase
 
-M7C local-return-island diagnostic is closed STORAGE HOLD with no science classification. Same-geometry storage-recovery preparation is the current task; BUILD/SOLVE are closed.
+M7C local-return-island diagnostic is closed STORAGE HOLD with no science classification. One same-geometry storage-recovery SOLVE is explicitly authorized; BUILD remains closed.
 
 Read `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md`, `PROJECT_HANDOFF.md` and `execution/stage_contract.json` for the current boundary.
 
@@ -55,14 +55,14 @@ Therefore the pitch/material trade is now the current mainline, and the final LN
 
 ## Current execution
 
-`R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_READY_AWAIT_AUTH`
+`R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01`
 
-`PASS_M7C_RECOVERY_PREPARATION_READY_AWAIT_SOLVE_AUTH`
+`SOLVE_AUTHORIZED_M7C_RECOVERY_ONE_SHOT_PENDING_PACKET_VALIDATION`
 
 - Output: new C: NTFS project run directory; existing D: baselines preserved.
 - Storage: output 32 GiB + TEMP 8 GiB, summed when sharing a filesystem.
 - Geometry, 12-port/8-source semantics, solver fidelity and M7C modal gates unchanged.
-- No production grant or actual SOLVE packet exists for recovery.
+- One fresh SOLVE grant is live. Packet generation/validation precedes exactly one run; automatic retries=0.
 
 ## Core documents
 

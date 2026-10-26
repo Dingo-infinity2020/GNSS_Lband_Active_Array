@@ -2,6 +2,21 @@
 
 SimulationOps: 0.2.26 @ c074982bce2ad1bc7c0914ad422244f2cba84d4a
 
+Current stage: R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01
+Current status: SOLVE_AUTHORIZED_M7C_RECOVERY_ONE_SHOT_PENDING_PACKET_VALIDATION
+
+BUILD_AUTHORIZED: false
+SOLVE_AUTHORIZED: true
+active_grant: GNSS-M7C-STORAGE-RECOVERY-SOLVE-GRANT-20261026-01
+LNA_INTEGRATION_AUTHORIZED: false
+CST251_AUTHORIZED: false
+
+Exactly one NW same-geometry recovery solve; automatic retries=0. Authority: `docs/M7C_STORAGE_RECOVERY_SOLVE_AUTHORIZATION_20261026.md`. Native contract-check/validate/dry-run precede the formal run. Close live authority at the terminal task node.
+
+## Historical preparation header (superseded by fresh SOLVE grant)
+
+SimulationOps: 0.2.26 @ c074982bce2ad1bc7c0914ad422244f2cba84d4a
+
 Current stage: R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_READY_AWAIT_AUTH
 Current status: PASS_M7C_RECOVERY_PREPARATION_READY_AWAIT_SOLVE_AUTH
 

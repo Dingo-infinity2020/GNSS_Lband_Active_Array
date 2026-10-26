@@ -3,16 +3,16 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=100
+HANDOFF_VERSION=101
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_READY_AWAIT_AUTH
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=PASS_M7C_RECOVERY_PREPARATION_READY_AWAIT_SOLVE_AUTH
+TASK_STATUS=SOLVE_AUTHORIZED_M7C_RECOVERY_ONE_SHOT_PENDING_PACKET_VALIDATION
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=NO
+SOLVER_PERMISSION=YES
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
@@ -20,7 +20,21 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-26 current baton — same-geometry recovery preparation
+## 2026-10-26 current baton — one M7C recovery SOLVE explicitly authorized
+
+The human user wrote **授权求解**. Exactly one NW-local same-geometry recovery SOLVE is authorized under `docs/M7C_STORAGE_RECOVERY_SOLVE_AUTHORIZATION_20261026.md`.
+
+Grant: `GNSS-M7C-STORAGE-RECOVERY-SOLVE-GRANT-20261026-01`. Packet: `GNSS-M7C-STORAGE-RECOVERY-20261026-V01`.
+
+BUILD_AUTHORIZED=NO; SOLVE_AUTHORIZED=YES. No heavy CST251 production solve, optimization, geometry change or automatic next stage is authorized. Automatic retries=0.
+
+Qualified source is `4ab2648015955e1e6c8f10864f063e916f4d64f1`; exact entrypoint/manifest hashes and 6-hour grant expiry are recorded in the stage contract. C: output and process TEMP require 40 GiB combined when sharing a filesystem.
+
+Next: contract-check -> generate -> validate -> dry-run -> exactly one formal run -> read-only qualification/modal gate -> close grant and checkpoint evidence. Any terminal outcome stops further execution.
+
+The preparation baton below is historical and does not override this fresh grant.
+
+## 2026-10-26 preparation baton (historical) — same-geometry recovery preparation
 
 Status: `PASS_M7C_RECOVERY_PREPARATION_READY_AWAIT_SOLVE_AUTH`.
 

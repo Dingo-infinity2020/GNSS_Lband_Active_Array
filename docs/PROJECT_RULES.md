@@ -439,4 +439,4 @@ Current allowed work:
 
 # Current execution control statement — 2026-10-26
 
-Current task: same-geometry M7C storage-recovery preparation under `M7C_STORAGE_RECOVERY_PREPARATION_V01.md`. BUILD, SOLVE, optimization and hardware permissions remain closed. Current stage/permissions are owned by PROJECT_HANDOFF.md and execution/stage_contract.json. The original R0 statement above is preserved only as history.
+Current task: one explicitly authorized same-geometry M7C storage-recovery SOLVE under `M7C_STORAGE_RECOVERY_SOLVE_AUTHORIZATION_20261026.md`. BUILD, optimization and hardware permissions remain closed; SOLVE is live only for the recorded one-shot grant. Current stage/permissions are owned by PROJECT_HANDOFF.md and execution/stage_contract.json. The original R0 statement above is preserved only as history.

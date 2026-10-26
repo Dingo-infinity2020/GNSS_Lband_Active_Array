@@ -23,20 +23,18 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_READY_AWAIT_AUTH**
+Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01**
 
-- Preparation is authorized; BUILD/SOLVE remain false and active_grant is null.
-- M7B is CLOSED/PARTIAL. M7C BUILD and human 3D review are PASS.
-- The original M7C diagnostic SOLVE was consumed and closed STORAGE HOLD; no science classification exists.
-- Prepare and qualify the same-geometry recovery under `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md`.
-- Canonical reviewed source remains `ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98`.
-- New recovery output is a fresh project-owned C: NTFS directory. D: baselines remain protected.
-- New entrypoint and packet generator enforce fresh grant, dependency hashes, source-companion identity and output/TEMP free-space reservations.
-- Production gates remain the frozen M7C Sdc/Sdd/guard gates. Geometry, ports, materials, config and evaluator are unchanged.
-- No simulator application is launched during preparation; only static audits, help and stdlib regression tests.
-- Only a future fresh explicit SOLVE grant can open the one-shot recovery stage; zero automatic retries.
+- The human user explicitly authorized one recovery SOLVE in the current turn.
+- Active grant: `GNSS-M7C-STORAGE-RECOVERY-SOLVE-GRANT-20261026-01`; exactly one invocation; automatic retries=0.
+- BUILD remains false; SOLVE is live only for this frozen NW-local recovery.
+- Use the unchanged reviewed M7C complete BUILD project and qualified source `4ab2648015955e1e6c8f10864f063e916f4d64f1`.
+- Frozen source/companion/dependency hashes, 12-port/8-source semantics, second-order mesh fidelity, M7C Sdc/Sdd/guard gates and storage reservations remain unchanged.
+- Native contract-check, packet validate and dry-run must PASS before the single formal run.
+- A terminal outcome closes the grant and both live booleans return false; no silent retry or automatic next stage.
+- No geometry/sweep/material/LNA/CST251/cleanup authority is added.
 
-Current authority: `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md`; `PROJECT_HANDOFF.md`; `execution/stage_contract.json`.
+Current authority: `docs/M7C_STORAGE_RECOVERY_SOLVE_AUTHORIZATION_20261026.md`; `PROJECT_HANDOFF.md`; `execution/stage_contract.json`.
 
 ## Historical M7B gate snapshot (superseded; no live authority)
 

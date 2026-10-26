@@ -326,6 +326,6 @@ As of the 2026-10-26 preparation handoff, the active local sub-route is:
 
 M7B is closed. M7C BUILD and human 3D review are PASS. One M7C diagnostic SOLVE was consumed; adaptive convergence passed, but NW D: storage exhaustion prevented full broadband S-parameter materialization. D: cleanup has now restored 14.933 GB free while preserving current science baselines. M7C still has no scientific PASS/REVIEW/REJECT classification from the consumed attempt.
 
-No M7C retry is currently authorized. Same-geometry infrastructure-recovery preparation is now authorized under `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md`. The new output directory is on C: NTFS; source and baselines stay protected on D:. Before later authorization, complete nonproduction entrypoint/hash/storage qualification. Science gates remain unchanged.
+One same-geometry M7C storage-recovery diagnostic SOLVE is now explicitly authorized (zero automatic retries). The completed preparation remains frozen under `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md`. The new output directory is on C: NTFS; source and baselines stay protected on D:. Nonproduction qualification is PASS; contract/packet validation and fresh storage preflight precede the one-shot run. Science gates remain unchanged.
 
 After the M7C result is classified, return to the frozen AR0/mainline authority. Final LNA input matching remains blocked until the authoritative scan-dependent active-impedance locus exists.
