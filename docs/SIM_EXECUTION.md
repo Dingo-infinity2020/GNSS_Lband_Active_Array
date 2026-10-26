@@ -2,6 +2,21 @@
 
 SimulationOps: 0.2.26 @ c074982bce2ad1bc7c0914ad422244f2cba84d4a
 
+Current stage: R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_RESULT_REVIEW
+Current status: HOLD_M7C_GUARD
+
+BUILD_AUTHORIZED: false
+SOLVE_AUTHORIZED: false
+active_grant: null
+LNA_INTEGRATION_AUTHORIZED: false
+CST251_AUTHORIZED: false
+
+One SOLVE consumed, zero retries. Runner PASS and full numerical/response hard gates PASS; scientific GUARD HOLD. Sdd 6/6, Sdc 0/10, guard 20.2398 dB >6 dB. Retain source/results and native warnings. Authority: `docs/M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md`. Next boundary: read-only result interpretation only.
+
+## Historical SOLVE authorization header (consumed; no live authority)
+
+SimulationOps: 0.2.26 @ c074982bce2ad1bc7c0914ad422244f2cba84d4a
+
 Current stage: R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01
 Current status: SOLVE_AUTHORIZED_M7C_RECOVERY_ONE_SHOT_PENDING_PACKET_VALIDATION
 

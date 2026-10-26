@@ -1,0 +1,9 @@
+{
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "retry_authorized": false,
+  "solver_started": true,
+  "source_sha256": "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98",
+  "solver_completed": true,
+  "solved_artifact_sha256": "90af39c8447d7245d6e1eb6f77930e3789b6c11c64ea14a7d314b33b07a0e5fa"
+}

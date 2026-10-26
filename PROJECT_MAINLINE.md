@@ -320,12 +320,12 @@ No stage inherits solver permission from the previous stage.
 
 ## Current immediate route
 
-As of the 2026-10-26 preparation handoff, the active local sub-route is:
+As of 2026-10-26:
 
-`R1E0 periodic scan CLOSED PASS -> R1E1A support gate -> R1E1A4A/AR0 receiver-interface branch -> E2A/E2B isolated loaded-source characterization -> E2C dual-pol coexistence severe composite-mode evidence -> M6 diagnostic decomposition -> M7A CLOSED REJECT -> M7B CLOSED PARTIAL -> M7B first-principles modal decomposition PASS -> M7C LOCAL_RETURN_ISLAND BUILD PASS -> HUMAN 3D REVIEW PASS -> M7C DIAGNOSTIC SOLVE CONSUMED -> STORAGE HOLD -> D: CLEANUP PASS -> SAME-GEOMETRY STORAGE-RECOVERY PREPARATION`.
+`R1E0 periodic scan PASS -> support/hub receiver-interface branch -> E2A/E2B characterization -> E2C severe coexistence evidence -> M6 decomposition -> M7A REJECT -> M7B PARTIAL -> M7C BUILD/HUMAN REVIEW PASS -> initial M7C STORAGE HOLD -> storage-recovery preparation PASS -> ONE SAME-GEOMETRY RECOVERY SOLVE -> NUMERICAL/RESPONSE PASS -> HOLD_M7C_GUARD`.
 
-M7B is closed. M7C BUILD and human 3D review are PASS. One M7C diagnostic SOLVE was consumed; adaptive convergence passed, but NW D: storage exhaustion prevented full broadband S-parameter materialization. D: cleanup has now restored 14.933 GB free while preserving current science baselines. M7C still has no scientific PASS/REVIEW/REJECT classification from the consumed attempt.
+The fresh recovery completes the previously missing broadband dataset. M7C Sdd restoration passes 6/6, but Sdc symmetry passes 0/10 and the frozen guard fails (20.2398 dB >6 dB). No topology promotion follows. The original consumed storage-HOLD attempt remains immutable history.
 
-One same-geometry M7C storage-recovery diagnostic SOLVE is now explicitly authorized (zero automatic retries). The completed preparation remains frozen under `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md`. The new output directory is on C: NTFS; source and baselines stay protected on D:. Nonproduction qualification is PASS; contract/packet validation and fresh storage preflight precede the one-shot run. Science gates remain unchanged.
+The recovery grant is CONSUMED and closed. BUILD/SOLVE are false; next boundary is read-only guard/polarization/native-warning review under `docs/M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md`. Native thin-PEC-edge approximation is retained as an interpretation limitation. No automatic geometry change, retry or next simulation is authorized.
 
-After the M7C result is classified, return to the frozen AR0/mainline authority. Final LNA input matching remains blocked until the authoritative scan-dependent active-impedance locus exists.
+After classification/review, follow the frozen AR0/mainline authority. Final LNA input matching remains blocked until the authoritative scan-dependent active-impedance locus exists.

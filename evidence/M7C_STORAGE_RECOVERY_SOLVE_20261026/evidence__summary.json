@@ -1,0 +1,9 @@
+{
+  "status": "HOLD_M7C_GUARD",
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "solved_artifact_sha256": "90af39c8447d7245d6e1eb6f77930e3789b6c11c64ea14a7d314b33b07a0e5fa",
+  "numerical_qualification": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\qualification\\qualification_summary.json",
+  "modal_evaluation": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\modal\\modal_evaluation.json",
+  "next_boundary": "M7C_RESULT_REVIEW_NO_AUTOMATIC_NEXT_STAGE"
+}

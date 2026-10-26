@@ -23,18 +23,17 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01**
+Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_RESULT_REVIEW**
 
-- The human user explicitly authorized one recovery SOLVE in the current turn.
-- Active grant: `GNSS-M7C-STORAGE-RECOVERY-SOLVE-GRANT-20261026-01`; exactly one invocation; automatic retries=0.
-- BUILD remains false; SOLVE is live only for this frozen NW-local recovery.
-- Use the unchanged reviewed M7C complete BUILD project and qualified source `4ab2648015955e1e6c8f10864f063e916f4d64f1`.
-- Frozen source/companion/dependency hashes, 12-port/8-source semantics, second-order mesh fidelity, M7C Sdc/Sdd/guard gates and storage reservations remain unchanged.
-- Native contract-check, packet validate and dry-run must PASS before the single formal run.
-- A terminal outcome closes the grant and both live booleans return false; no silent retry or automatic next stage.
-- No geometry/sweep/material/LNA/CST251/cleanup authority is added.
+- Current science status: `HOLD_M7C_GUARD`. One formal SOLVE consumed; zero retries.
+- Runner and numerical/response integrity PASS; required 96 traces ×1001 native points are complete.
+- Sdd restoration 6/6 PASS; Sdc symmetry 0/10 PASS; guard excursion 20.2398 dB exceeds 6 dB.
+- The native thin-PEC-edge approximation and YZ/partial-excitation warning remain preserved.
+- BUILD/SOLVE are false; active_grant=null. No silent retry or automatic next stage.
+- Complete source/results remain protected. No geometry/sweep/material/LNA/CST251/cleanup authority is open.
+- Allowed next work: read-only offline result/guard/polarization/model-warning review.
 
-Current authority: `docs/M7C_STORAGE_RECOVERY_SOLVE_AUTHORIZATION_20261026.md`; `PROJECT_HANDOFF.md`; `execution/stage_contract.json`.
+Current authority: `docs/M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md`; `PROJECT_HANDOFF.md`; `execution/stage_contract.json`.
 
 ## Historical M7B gate snapshot (superseded; no live authority)
 

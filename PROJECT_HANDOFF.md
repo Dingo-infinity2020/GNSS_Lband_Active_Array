@@ -3,16 +3,16 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=101
+HANDOFF_VERSION=102
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_RESULT_REVIEW
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=SOLVE_AUTHORIZED_M7C_RECOVERY_ONE_SHOT_PENDING_PACKET_VALIDATION
+TASK_STATUS=HOLD_M7C_GUARD
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=YES
+SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
@@ -20,7 +20,23 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-26 current baton — one M7C recovery SOLVE explicitly authorized
+## 2026-10-26 current baton — recovery completed, scientific GUARD HOLD
+
+`HOLD_M7C_GUARD`. One SOLVE consumed, zero retries; runner PASS, numerical hard gates 7/7 PASS, full required 96×1001 native response set retained.
+
+- Sdd restoration: 6/6 PASS.
+- Sdc symmetry preservation: 0/10 PASS.
+- New window excursion: 20.2398 dB at S2,5 / 1.2088–1.2584 GHz; frozen guard limit 6 dB.
+- Two native warnings and mesh feedback remain preserved; thin-PEC-edge approximation needs offline review.
+- Reviewed source/reference integrity and solved hash stability PASS.
+
+Authority: `docs/M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md`; `evidence/M7C_STORAGE_RECOVERY_SOLVE_20261026/CLOSEOUT.json`.
+
+BUILD_AUTHORIZED=NO; SOLVE_AUTHORIZED=NO; active_grant=null. The fresh grant is closed CONSUMED. Complete C: result is PROTECTED; no cleanup/relocation or further solver action occurred. Next boundary is read-only guard/polarization/native-warning interpretation.
+
+Historical authorization baton below is consumed evidence only.
+
+## 2026-10-26 SOLVE authorization baton (historical) — one M7C recovery SOLVE explicitly authorized
 
 The human user wrote **授权求解**. Exactly one NW-local same-geometry recovery SOLVE is authorized under `docs/M7C_STORAGE_RECOVERY_SOLVE_AUTHORIZATION_20261026.md`.
 

@@ -1,0 +1,41 @@
+{
+  "status": "PASS_POSTRUN_READONLY_INTEGRITY",
+  "source_and_reference_checks": {
+    "reviewed_source_sha256": true,
+    "complete_source_companion": true,
+    "human_review": true,
+    "full_e2c_reference": true,
+    "isolated_PolA": true,
+    "isolated_PolB": true,
+    "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_MANIFEST_V01.json": true,
+    "scripts/run_m7c_diagnostic_solve_v01.py": true,
+    "scripts/evaluate_m7c_modal_restoration_readonly_v01.py": true,
+    "scripts/configure_r1e1a4a_ar0_b1r_r4_a0_e2c_s0_presolve.py": true,
+    "scripts/qualify_r1e1a4a_ar0_b1r_r4_a0_e2c_s0_readonly.py": true,
+    "scripts/cst_bundled_python_launcher_v01.py": true,
+    "scripts/m7c_storage_recovery_preflight_v01.py": true,
+    "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_COEXISTENCE_CONFIG_V01.mcr": true,
+    "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_INVENTORY_V01.json": true,
+    "execution/M7C_HUMAN_GEOMETRY_REVIEW_PASS.json": true
+  },
+  "solved_sha256": "90af39c8447d7245d6e1eb6f77930e3789b6c11c64ea14a7d314b33b07a0e5fa",
+  "output_receipts": [
+    {
+      "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\qualification\\loaded_response_native.csv",
+      "bytes": 7883596,
+      "sha256": "711365d2f3336a5afed0cf94e2394f0ae75e0691421c8729af6dda2425a74cae"
+    },
+    {
+      "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\modal\\modal_evaluation.json",
+      "bytes": 6345,
+      "sha256": "ff2fd8200691d0127e7d9341321c4b5195d0e8a008cd55f3658b5c07b2cd2b4a"
+    },
+    {
+      "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\summary.json",
+      "bytes": 592,
+      "sha256": "1454d3d8d535d1b49263c1ed040afd7a843189dc62a5c0f347852cecd9c9d938"
+    }
+  ],
+  "new_build": false,
+  "new_solve": false
+}

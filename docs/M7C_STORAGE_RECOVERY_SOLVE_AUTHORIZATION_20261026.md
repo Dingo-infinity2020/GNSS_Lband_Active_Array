@@ -20,3 +20,7 @@ The recovery manifest, geometry, ports, solver configuration, evaluator and froz
 Before launch: native contract-check, packet generation from this live grant, native validate and `run --dry-run` must PASS. Dry-run is not the formal invocation. The formal `run` occurs once only under the global execution lock. A terminal outcome closes this grant whether consumed or unconsumed; no packet replay or replacement grant is implied.
 
 Use direct SSH as explicitly authorized by the user. Follow `M7C_STORAGE_RECOVERY_PREPARATION_V01.md` for storage reservations and acceptance. Stop after qualification/modal classification and preserve all failure evidence.
+
+## Terminal closeout
+
+The recorded grant is now CONSUMED and closed. Runner PASS; scientific `HOLD_M7C_GUARD`. Exactly one solver invocation and zero retries. BUILD/SOLVE=false; active_grant=null. See `M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md` and the CLOSEOUT.json evidence. The authorization text above is immutable historical scope, not live permission.

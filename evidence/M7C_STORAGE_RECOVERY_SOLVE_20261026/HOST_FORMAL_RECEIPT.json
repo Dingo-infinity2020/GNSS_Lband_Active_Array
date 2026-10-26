@@ -1,0 +1,10 @@
+{
+  "observed_at_utc": "2026-10-26T15:14:27Z",
+  "formal_cli_exit": 0,
+  "new_build": 0,
+  "automatic_retries": 0,
+  "artifact_exists": true,
+  "free_c_bytes": 127344459776,
+  "artifact_sha256": "90af39c8447d7245d6e1eb6f77930e3789b6c11c64ea14a7d314b33b07a0e5fa",
+  "artifact_bytes": 153988
+}

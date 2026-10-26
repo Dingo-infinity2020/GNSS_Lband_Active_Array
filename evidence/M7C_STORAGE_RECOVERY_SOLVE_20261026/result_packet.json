@@ -1,0 +1,612 @@
+{
+  "schema_version": "runner-result-v0.1",
+  "packet_id": "GNSS-M7C-STORAGE-RECOVERY-20261026-V01",
+  "packet_schema_version": "runner-task-v0.2",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "4ab2648015955e1e6c8f10864f063e916f4d64f1",
+    "model_identity": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01",
+    "kind": "SOLVE_LAUNCH"
+  },
+  "control_host": "NW",
+  "transport": {
+    "type": "local"
+  },
+  "started_at": "2026-10-26T15:04:46Z",
+  "ended_at": "2026-10-26T15:14:18Z",
+  "final_status": "PASS",
+  "summary": "PASS: SOLVE_LAUNCH R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01 entrypoint exit 0; 6/6 expected output(s) present; next boundary STOP_AFTER_ONE_SAME_GEOMETRY_M7C_RECOVERY_SOLVE_QUALIFICATION_MODAL_CLASSIFICATION_NO_RETRY_NO_NEXT_STAGE",
+  "entrypoint_started": true,
+  "entrypoint_exit_code": 0,
+  "preflight": [
+    {
+      "id": "storage_0",
+      "type": "min_free_bytes",
+      "status": "PASS",
+      "observed": {
+        "path": "C:\\",
+        "free_bytes": 139746762752
+      },
+      "expected": {
+        "min_free_bytes": 42949672960
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "dependency_0",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\execution\\M7C_HUMAN_GEOMETRY_REVIEW_PASS.json",
+        "sha256": "0fd329c95208a382f4737037627f439bc73f1de8d2e4aca222f3f687dc25ce66"
+      },
+      "expected": {
+        "sha256": "0fd329c95208a382f4737037627f439bc73f1de8d2e4aca222f3f687dc25ce66"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "dependency_1",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\execution\\R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_INVENTORY_V01.json",
+        "sha256": "d8246dd39640825a95a4525b9c0fac113e00bf8adde3cd6efca59ccb8227c6c9"
+      },
+      "expected": {
+        "sha256": "d8246dd39640825a95a4525b9c0fac113e00bf8adde3cd6efca59ccb8227c6c9"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "dependency_2",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\execution\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_MANIFEST_V01.json",
+        "sha256": "bb1fed864742c96f254ea6a28b5a24b7f13fdf82ad03d136e84dbe7e132b746f"
+      },
+      "expected": {
+        "sha256": "bb1fed864742c96f254ea6a28b5a24b7f13fdf82ad03d136e84dbe7e132b746f"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "dependency_3",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\scripts\\configure_r1e1a4a_ar0_b1r_r4_a0_e2c_s0_presolve.py",
+        "sha256": "05a08450bde57925f1f99f5ef50afbc5722e5d84bcde8b86010a33fffc9cc546"
+      },
+      "expected": {
+        "sha256": "05a08450bde57925f1f99f5ef50afbc5722e5d84bcde8b86010a33fffc9cc546"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "dependency_4",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\scripts\\cst_bundled_python_launcher_v01.py",
+        "sha256": "f827358f3823b75d566a38058cd3a02810e1f4e5797b2b1f6532f2d28404275f"
+      },
+      "expected": {
+        "sha256": "f827358f3823b75d566a38058cd3a02810e1f4e5797b2b1f6532f2d28404275f"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "dependency_5",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\scripts\\evaluate_m7c_modal_restoration_readonly_v01.py",
+        "sha256": "01f05b38e6970b9188e11e37a760dd82987938afd8cea1c114f0af8f680a4972"
+      },
+      "expected": {
+        "sha256": "01f05b38e6970b9188e11e37a760dd82987938afd8cea1c114f0af8f680a4972"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "dependency_6",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\scripts\\m7c_storage_recovery_preflight_v01.py",
+        "sha256": "06b13662540dec357afebe45b63eaf34deca5529adb2ee67edef491387872fa4"
+      },
+      "expected": {
+        "sha256": "06b13662540dec357afebe45b63eaf34deca5529adb2ee67edef491387872fa4"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "dependency_7",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\scripts\\qualify_r1e1a4a_ar0_b1r_r4_a0_e2c_s0_readonly.py",
+        "sha256": "0074d4061bec9f6563d0162abe27e2b8376646681f02e77fbea8f5c02e81eb8c"
+      },
+      "expected": {
+        "sha256": "0074d4061bec9f6563d0162abe27e2b8376646681f02e77fbea8f5c02e81eb8c"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "dependency_8",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\scripts\\run_m7c_diagnostic_solve_v01.py",
+        "sha256": "b9e2d09c7fcb94ce14455ec55ae6745ddb38b5518f88204ba0e85053ec817c28"
+      },
+      "expected": {
+        "sha256": "b9e2d09c7fcb94ce14455ec55ae6745ddb38b5518f88204ba0e85053ec817c28"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "dependency_9",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\source\\cst\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_COEXISTENCE_CONFIG_V01.mcr",
+        "sha256": "035976282c4d5bf3ea45e28b66edf79bf7639b451380e5ca8f5b5b7e46a88f4b"
+      },
+      "expected": {
+        "sha256": "035976282c4d5bf3ea45e28b66edf79bf7639b451380e5ca8f5b5b7e46a88f4b"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "isolated_PolA",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\E2A_S0L_SOLVE_20260929\\evidence\\loaded_response_native.csv",
+        "sha256": "a759ac6135a297429a8a166b6a01a39a66b5ec3a861267ed0f05d53ff605fae4"
+      },
+      "expected": {
+        "sha256": "a759ac6135a297429a8a166b6a01a39a66b5ec3a861267ed0f05d53ff605fae4"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "isolated_PolB",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\GNSS_Lband_Active_Array\\GNSS_R4A0E2B_S0L_SOLVE_20260929\\qualification_recovery_v01\\loaded_response_native.csv",
+        "sha256": "103c0de1ee2353d284e84ab8e065c9e802f4e1283912d0e19f1f5c7a89ced4e5"
+      },
+      "expected": {
+        "sha256": "103c0de1ee2353d284e84ab8e065c9e802f4e1283912d0e19f1f5c7a89ced4e5"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "git_clean",
+      "type": "git_clean",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout",
+        "porcelain": ""
+      },
+      "expected": {
+        "clean": true
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "git_head",
+      "type": "git_head_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout",
+        "commit": "339a799112be7f3dbe4f20be6df5332337e254b2"
+      },
+      "expected": {
+        "commit": "339a799112be7f3dbe4f20be6df5332337e254b2"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "runner_hash",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\scripts\\run_m7c_storage_recovery_solve_v01.py",
+        "sha256": "85e02268de7e13bbc3e26fad9d3b98522536a1850d32f4bcd34eee79b555e605"
+      },
+      "expected": {
+        "sha256": "85e02268de7e13bbc3e26fad9d3b98522536a1850d32f4bcd34eee79b555e605"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "evaluator_hash",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\scripts\\evaluate_m7c_modal_restoration_readonly_v01.py",
+        "sha256": "01f05b38e6970b9188e11e37a760dd82987938afd8cea1c114f0af8f680a4972"
+      },
+      "expected": {
+        "sha256": "01f05b38e6970b9188e11e37a760dd82987938afd8cea1c114f0af8f680a4972"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "launcher_hash",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\scripts\\cst_bundled_python_launcher_v01.py",
+        "sha256": "f827358f3823b75d566a38058cd3a02810e1f4e5797b2b1f6532f2d28404275f"
+      },
+      "expected": {
+        "sha256": "f827358f3823b75d566a38058cd3a02810e1f4e5797b2b1f6532f2d28404275f"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "manifest_hash",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\execution\\M7C_STORAGE_RECOVERY_SOLVE_MANIFEST_V01.json",
+        "sha256": "7fde455373c882724c7098f79c779fd58179ce4dff70a7d151a66e9acc4d79ac"
+      },
+      "expected": {
+        "sha256": "7fde455373c882724c7098f79c779fd58179ce4dff70a7d151a66e9acc4d79ac"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "config_hash",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\source\\cst\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_COEXISTENCE_CONFIG_V01.mcr",
+        "sha256": "035976282c4d5bf3ea45e28b66edf79bf7639b451380e5ca8f5b5b7e46a88f4b"
+      },
+      "expected": {
+        "sha256": "035976282c4d5bf3ea45e28b66edf79bf7639b451380e5ca8f5b5b7e46a88f4b"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "inventory_hash",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\execution\\R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_INVENTORY_V01.json",
+        "sha256": "d8246dd39640825a95a4525b9c0fac113e00bf8adde3cd6efca59ccb8227c6c9"
+      },
+      "expected": {
+        "sha256": "d8246dd39640825a95a4525b9c0fac113e00bf8adde3cd6efca59ccb8227c6c9"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "contract_hash",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\execution\\stage_contract.json",
+        "sha256": "6e7887e56c07e44cb071f3d39ef304f743cb151f56fbe2ef72ee62b451dd045a"
+      },
+      "expected": {
+        "sha256": "6e7887e56c07e44cb071f3d39ef304f743cb151f56fbe2ef72ee62b451dd045a"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "source_hash",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7C_LOCAL_RETURN_ISLAND_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst",
+        "sha256": "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98"
+      },
+      "expected": {
+        "sha256": "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "full_e2c_hash",
+      "type": "file_sha256_equals",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\E2C_S0_COEXISTENCE_20261002_V01\\evidence\\qualification\\loaded_response_native.csv",
+        "sha256": "63efb3b3c046ffa633d04092d0190afc4d01ea03f4fd6316ffa1d87170af8a46"
+      },
+      "expected": {
+        "sha256": "63efb3b3c046ffa633d04092d0190afc4d01ea03f4fd6316ffa1d87170af8a46"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "target_absent",
+      "type": "path_absent",
+      "status": "PASS",
+      "observed": {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01",
+        "exists": false
+      },
+      "expected": {
+        "exists": false
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "result_absent",
+      "type": "result_path_absent",
+      "status": "PASS",
+      "observed": {
+        "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_STORAGE_RECOVERY_20261026_V01\\result_packet.json",
+        "exists": false
+      },
+      "expected": {
+        "exists": false
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "cst_gui_absent",
+      "type": "process_absent",
+      "status": "PASS",
+      "observed": {
+        "matches": []
+      },
+      "expected": {
+        "absent": "CST DESIGN ENVIRONMENT_AMD64.exe"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    },
+    {
+      "id": "cst_modeler_absent",
+      "type": "process_absent",
+      "status": "PASS",
+      "observed": {
+        "matches": []
+      },
+      "expected": {
+        "absent": "modeler_AMD64.exe"
+      },
+      "at": "2026-10-26T15:04:46Z",
+      "detail": ""
+    }
+  ],
+  "actions": [
+    {
+      "action": "entrypoint",
+      "transport": "local",
+      "logical_argv": [
+        "python",
+        "scripts/cst_bundled_python_launcher_v01.py",
+        "scripts/run_m7c_storage_recovery_solve_v01.py",
+        "--manifest",
+        "execution/M7C_STORAGE_RECOVERY_SOLVE_MANIFEST_V01.json",
+        "--out",
+        "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\M7C_STORAGE_RECOVERY_DIAGNOSTIC_SOLVED_V01.cst",
+        "--evidence",
+        "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence"
+      ],
+      "exec_argv": [
+        "python",
+        "scripts/cst_bundled_python_launcher_v01.py",
+        "scripts/run_m7c_storage_recovery_solve_v01.py",
+        "--manifest",
+        "execution/M7C_STORAGE_RECOVERY_SOLVE_MANIFEST_V01.json",
+        "--out",
+        "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\M7C_STORAGE_RECOVERY_DIAGNOSTIC_SOLVED_V01.cst",
+        "--evidence",
+        "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence"
+      ],
+      "cwd": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout",
+      "remote_command": null,
+      "ssh_argv": null,
+      "started_at": "2026-10-26T15:04:46Z",
+      "ended_at": "2026-10-26T15:14:18Z",
+      "exit_code": 0,
+      "timed_out": false,
+      "transport_error": null,
+      "entrypoint_started": true,
+      "launch_state": "launched",
+      "launch_boundary_observed": true
+    }
+  ],
+  "evidence": {
+    "source_sha256": "4a0bf8a9abf924b115c604007ae7fcdd476cd5c0b5c2dbce25b113bc816b243d",
+    "artifact_hashes": [
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\M7C_STORAGE_RECOVERY_DIAGNOSTIC_SOLVED_V01.cst",
+        "sha256": "90af39c8447d7245d6e1eb6f77930e3789b6c11c64ea14a7d314b33b07a0e5fa",
+        "size_bytes": 153988
+      },
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\solver_invocation.json",
+        "sha256": "e8bd722c22e677a2a3b33cd51f6c4058b2e2f5f7506484673e82f9d76edb61af",
+        "size_bytes": 338
+      },
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\qualification\\loaded_response_native.csv",
+        "sha256": "711365d2f3336a5afed0cf94e2394f0ae75e0691421c8729af6dda2425a74cae",
+        "size_bytes": 7883596
+      },
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\modal\\modal_evaluation.json",
+        "sha256": "ff2fd8200691d0127e7d9341321c4b5195d0e8a008cd55f3658b5c07b2cd2b4a",
+        "size_bytes": 6345
+      },
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\summary.json",
+        "sha256": "1454d3d8d535d1b49263c1ed040afd7a843189dc62a5c0f347852cecd9c9d938",
+        "size_bytes": 592
+      },
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\FINAL_STATUS.txt",
+        "sha256": "f5fa2ebf3b96eb4556304313594398d8b2ff4b65d6c4720bed3c819e23599f7e",
+        "size_bytes": 16
+      }
+    ],
+    "logs": {
+      "runner": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_STORAGE_RECOVERY_20261026_V01\\state\\runs\\GNSS-M7C-STORAGE-RECOVERY-20261026-V01\\runner.log",
+      "stdout": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_STORAGE_RECOVERY_20261026_V01\\state\\runs\\GNSS-M7C-STORAGE-RECOVERY-20261026-V01\\stdout.log",
+      "stderr": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_STORAGE_RECOVERY_20261026_V01\\state\\runs\\GNSS-M7C-STORAGE-RECOVERY-20261026-V01\\stderr.log"
+    },
+    "outputs": [
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\M7C_STORAGE_RECOVERY_DIAGNOSTIC_SOLVED_V01.cst",
+        "required": true,
+        "sha256_requested": true,
+        "exists": true,
+        "size_bytes": 153988,
+        "sha256": "90af39c8447d7245d6e1eb6f77930e3789b6c11c64ea14a7d314b33b07a0e5fa",
+        "resolved_path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\M7C_STORAGE_RECOVERY_DIAGNOSTIC_SOLVED_V01.cst"
+      },
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\solver_invocation.json",
+        "required": true,
+        "sha256_requested": true,
+        "exists": true,
+        "size_bytes": 338,
+        "sha256": "e8bd722c22e677a2a3b33cd51f6c4058b2e2f5f7506484673e82f9d76edb61af",
+        "resolved_path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\solver_invocation.json"
+      },
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\qualification\\loaded_response_native.csv",
+        "required": true,
+        "sha256_requested": true,
+        "exists": true,
+        "size_bytes": 7883596,
+        "sha256": "711365d2f3336a5afed0cf94e2394f0ae75e0691421c8729af6dda2425a74cae",
+        "resolved_path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\qualification\\loaded_response_native.csv"
+      },
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\modal\\modal_evaluation.json",
+        "required": true,
+        "sha256_requested": true,
+        "exists": true,
+        "size_bytes": 6345,
+        "sha256": "ff2fd8200691d0127e7d9341321c4b5195d0e8a008cd55f3658b5c07b2cd2b4a",
+        "resolved_path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\modal\\modal_evaluation.json"
+      },
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\summary.json",
+        "required": true,
+        "sha256_requested": true,
+        "exists": true,
+        "size_bytes": 592,
+        "sha256": "1454d3d8d535d1b49263c1ed040afd7a843189dc62a5c0f347852cecd9c9d938",
+        "resolved_path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\summary.json"
+      },
+      {
+        "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\FINAL_STATUS.txt",
+        "required": true,
+        "sha256_requested": true,
+        "exists": true,
+        "size_bytes": 16,
+        "sha256": "f5fa2ebf3b96eb4556304313594398d8b2ff4b65d6c4720bed3c819e23599f7e",
+        "resolved_path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\FINAL_STATUS.txt"
+      }
+    ]
+  },
+  "authorization": {
+    "build_required": false,
+    "solve_required": true,
+    "build_consumed": false,
+    "solve_consumed": true
+  },
+  "authorization_snapshot": {
+    "mode": "GRANT_SNAPSHOT_V0_2",
+    "grant_id": "GNSS-M7C-STORAGE-RECOVERY-SOLVE-GRANT-20261026-01",
+    "kind": "SOLVE",
+    "snapshot_sha256": "2cb06273e440eeb77531587a91aacbc8296d4961a157d559bc57bf05090f4bb4"
+  },
+  "one_shot": {
+    "marker_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_STORAGE_RECOVERY_20261026_V01\\state\\runs\\GNSS-M7C-STORAGE-RECOVERY-20261026-V01\\one_shot.json",
+    "replay_detected": false,
+    "global_lock_required": true,
+    "global_lock_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\global_execution_locks\\50\\5060fd9bed1252caa69e39add1a4e7a2703cb3dc72b1569c5e8acf1247e04314.json",
+    "global_identity_hash": "5060fd9bed1252caa69e39add1a4e7a2703cb3dc72b1569c5e8acf1247e04314"
+  },
+  "workspace": {
+    "path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout",
+    "state": "CHECKPOINTED",
+    "git_dirty": false,
+    "git_head": "339a799112be7f3dbe4f20be6df5332337e254b2",
+    "recommendation": "PURGE_READY_CANDIDATE"
+  },
+  "dc_call_budget": {
+    "target_calls": 1,
+    "remote_mcp_calls_target": 3,
+    "calls_used": 1,
+    "exceeded": false,
+    "exception_reason": "",
+    "accounting_scope": "RUNNER_TRANSACTION_ONLY",
+    "transaction_control_calls": 1,
+    "passive_monitor_calls": null,
+    "exceptional_forensic_calls": null,
+    "remote_mcp_total_observable_by_runner": false
+  },
+  "next_boundary": "STOP_AFTER_ONE_SAME_GEOMETRY_M7C_RECOVERY_SOLVE_QUALIFICATION_MODAL_CLASSIFICATION_NO_RETRY_NO_NEXT_STAGE",
+  "project_progress": {
+    "schema_version": "simops-project-progress-v0.1",
+    "protocol_observed": true,
+    "event_count": 8,
+    "protocol_error_count": 0,
+    "last_event_index": 8,
+    "phase": "complete",
+    "state": "PASS",
+    "current": null,
+    "total": null,
+    "message": "HOLD_M7C_GUARD",
+    "observed_at": "2026-10-26T15:14:18Z",
+    "production_boundary": "OBSERVED",
+    "last_rejected_event": null,
+    "last_rejection_reason": null,
+    "last_rejected_observed_at": null,
+    "progress_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_STORAGE_RECOVERY_20261026_V01\\state\\runs\\GNSS-M7C-STORAGE-RECOVERY-20261026-V01\\project_progress.json",
+    "events_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_STORAGE_RECOVERY_20261026_V01\\state\\runs\\GNSS-M7C-STORAGE-RECOVERY-20261026-V01\\project_events.jsonl",
+    "rejected_events_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_STORAGE_RECOVERY_20261026_V01\\state\\runs\\GNSS-M7C-STORAGE-RECOVERY-20261026-V01\\project_rejected_events.jsonl",
+    "runtime_state_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_STORAGE_RECOVERY_20261026_V01\\state\\runs\\GNSS-M7C-STORAGE-RECOVERY-20261026-V01\\runtime_state.json"
+  }
+}

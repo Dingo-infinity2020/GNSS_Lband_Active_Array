@@ -1,0 +1,1052 @@
+26/Oct/2026 23:05:48  In order to get an optimal performance, hyperthreading is ignored for parallel
+                      computations.
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:05:48  The length ratio between the shortest and the longest model edges is 1:2020.
+                      Short model edges can be highlighted via Mesh:Mesh Control->Check Mesh->Check
+                      Model Edge Length.... (It may be advantageous to model the metallizations as
+                      infinitely thin sheets.) More...
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:01  Units settings: 
+                      
+                        Dimensions: mm
+                        Frequency:  GHz
+                        Time:       ns
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:01  Boundary conditions: 
+                      
+                        YZsymmetry: none
+                        XZsymmetry: none
+                        XYsymmetry: none
+                      
+                        Xmin: open
+                        Xmax: open
+                      
+                        Ymin: open
+                        Ymax: open
+                      
+                        Zmin: open
+                        Zmax: open
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:01  Order settings: 
+                      
+                        Solver order   : 2nd (constant)
+                        Curved elements: up to order 3 (automatic)
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:01    Mesh time                :	12 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:01  
+                      ================================================================================
+                      Frequency Domain Solver calculation cycle started
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:01  Solver started at: 11:06 PM Monday, 26. October 2026 (�й���׼ʱ��)
+                      
+                        Module:  Frequency Domain: S-Parameter (Win 64)
+                        Version: 2022.5 Release from 2022-06-03 (change 981760)
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:01    Calculation 1 of 1 (Frequency: 1.8 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:01  *** Warning ***
+                      
+26/Oct/2026 23:06:01  Some edges which are part of lossy conductor surfaces are the intersection of otherwise disjoint regions. These edges 
+                      will be treated as infinitely thin PEC wires. Click here to show the positions.
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:01  Adaptive mesh refinement pass 1
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:04  Performing block excitation with block size 8 and 10 threads.  More...
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:39    Matrix setup time        :	2 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	397752
+                        Number of mesh cells     :	59627
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	8.93029e-05
+                        Iterations               :	108
+                        Solver time              :	32 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:39    Stimulation port         :	2
+                        Accuracy                 :	6.8859e-05
+                        Iterations               :	54
+                        Solver time              :	21 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:39    Stimulation port         :	4
+                        Accuracy                 :	9.00295e-05
+                        Iterations               :	125
+                        Solver time              :	35 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:39    Stimulation port         :	5
+                        Accuracy                 :	9.78974e-05
+                        Iterations               :	45
+                        Solver time              :	18 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:39    Stimulation port         :	7
+                        Accuracy                 :	8.21456e-05
+                        Iterations               :	115
+                        Solver time              :	33 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:39    Stimulation port         :	8
+                        Accuracy                 :	9.85598e-05
+                        Iterations               :	45
+                        Solver time              :	18 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:39    Stimulation port         :	10
+                        Accuracy                 :	7.66079e-05
+                        Iterations               :	130
+                        Solver time              :	35 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:39    Stimulation port         :	11
+                        Accuracy                 :	7.18242e-05
+                        Iterations               :	54
+                        Solver time              :	21 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:40  5% of all mesh edges seem to be longer than expected. The adaptive mesh refinement's growth limitation will therefore 
+                      use 79104 instead of 59627 mesh cells as a reference.
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:44  For some elements the curvature had to be reduced to maintain the quality of the mesh. More...
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:06:45  Adaptive mesh refinement pass 2
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:07:20    Matrix setup time        :	2 s
+                        Solver setup             :	1 s
+                        Degrees of freedom       :	493364
+                        Number of mesh cells     :	74940
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	4.7081e-05
+                        Iterations               :	84
+                        Solver time              :	30 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:07:20    Stimulation port         :	2
+                        Accuracy                 :	7.05169e-05
+                        Iterations               :	47
+                        Solver time              :	21 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:07:20    Stimulation port         :	4
+                        Accuracy                 :	5.50047e-05
+                        Iterations               :	90
+                        Solver time              :	31 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:07:20    Stimulation port         :	5
+                        Accuracy                 :	6.71934e-05
+                        Iterations               :	38
+                        Solver time              :	18 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:07:20    Stimulation port         :	7
+                        Accuracy                 :	8.96563e-05
+                        Iterations               :	71
+                        Solver time              :	27 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:07:20    Stimulation port         :	8
+                        Accuracy                 :	9.07344e-05
+                        Iterations               :	33
+                        Solver time              :	16 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:07:20    Stimulation port         :	10
+                        Accuracy                 :	9.85663e-05
+                        Iterations               :	92
+                        Solver time              :	32 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:07:20    Stimulation port         :	11
+                        Accuracy                 :	9.59845e-05
+                        Iterations               :	28
+                        Solver time              :	14 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:07:20    Delta calculation        
+26/Oct/2026 23:07:20    All S-Parameters         :	0.0726822
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:07:26  For some elements the curvature had to be reduced to maintain the quality of the mesh. More...
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:07:27  Adaptive mesh refinement pass 3
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:08:05    Matrix setup time        :	3 s
+                        Solver setup             :	2 s
+                        Degrees of freedom       :	666446
+                        Number of mesh cells     :	102614
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	5.92231e-05
+                        Iterations               :	59
+                        Solver time              :	30 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:08:05    Stimulation port         :	2
+                        Accuracy                 :	9.40033e-05
+                        Iterations               :	27
+                        Solver time              :	18 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:08:05    Stimulation port         :	4
+                        Accuracy                 :	7.016e-05
+                        Iterations               :	67
+                        Solver time              :	32 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:08:05    Stimulation port         :	5
+                        Accuracy                 :	9.59013e-05
+                        Iterations               :	27
+                        Solver time              :	18 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:08:05    Stimulation port         :	7
+                        Accuracy                 :	5.70109e-05
+                        Iterations               :	55
+                        Solver time              :	28 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:08:05    Stimulation port         :	8
+                        Accuracy                 :	7.97164e-05
+                        Iterations               :	27
+                        Solver time              :	18 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:08:05    Stimulation port         :	10
+                        Accuracy                 :	6.29289e-05
+                        Iterations               :	71
+                        Solver time              :	33 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:08:05    Stimulation port         :	11
+                        Accuracy                 :	6.01642e-05
+                        Iterations               :	27
+                        Solver time              :	18 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:08:05    Delta calculation        
+26/Oct/2026 23:08:05    All S-Parameters         :	0.0154013
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:08:13  For some elements the curvature had to be reduced to maintain the quality of the mesh. More...
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:08:14  Adaptive mesh refinement pass 4
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:02    Matrix setup time        :	4 s
+                        Solver setup             :	3 s
+                        Degrees of freedom       :	932858
+                        Number of mesh cells     :	144986
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	3.98954e-05
+                        Iterations               :	58
+                        Solver time              :	40 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:02    Stimulation port         :	2
+                        Accuracy                 :	6.47167e-05
+                        Iterations               :	25
+                        Solver time              :	24 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:02    Stimulation port         :	4
+                        Accuracy                 :	7.74488e-05
+                        Iterations               :	53
+                        Solver time              :	38 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:02    Stimulation port         :	5
+                        Accuracy                 :	3.69251e-05
+                        Iterations               :	29
+                        Solver time              :	27 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:02    Stimulation port         :	7
+                        Accuracy                 :	9.89352e-05
+                        Iterations               :	48
+                        Solver time              :	36 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:02    Stimulation port         :	8
+                        Accuracy                 :	5.49626e-05
+                        Iterations               :	25
+                        Solver time              :	24 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:02    Stimulation port         :	10
+                        Accuracy                 :	8.61033e-05
+                        Iterations               :	60
+                        Solver time              :	41 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:02    Stimulation port         :	11
+                        Accuracy                 :	5.99565e-05
+                        Iterations               :	25
+                        Solver time              :	24 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:03    Delta calculation        
+26/Oct/2026 23:09:03    All S-Parameters         :	0.0149349
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:03  Mesh adaptation terminated because the desired accuracy limit is reached.
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:03    Total time               :	182 s	 (= 0 h, 03 m, 02 s)
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:12    Calculation 2 (Frequency: 1 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:58    Matrix setup time        :	2 s
+                        Solver setup             :	2 s
+                        Degrees of freedom       :	932858
+                        Number of mesh cells     :	144986
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	6.45411e-05
+                        Iterations               :	58
+                        Solver time              :	40 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:58    Stimulation port         :	2
+                        Accuracy                 :	7.01932e-05
+                        Iterations               :	25
+                        Solver time              :	23 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:58    Stimulation port         :	4
+                        Accuracy                 :	6.55792e-05
+                        Iterations               :	55
+                        Solver time              :	38 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:58    Stimulation port         :	5
+                        Accuracy                 :	4.62134e-05
+                        Iterations               :	29
+                        Solver time              :	26 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:58    Stimulation port         :	7
+                        Accuracy                 :	7.21714e-05
+                        Iterations               :	48
+                        Solver time              :	35 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:58    Stimulation port         :	8
+                        Accuracy                 :	6.71731e-05
+                        Iterations               :	22
+                        Solver time              :	21 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:58    Stimulation port         :	10
+                        Accuracy                 :	5.39516e-05
+                        Iterations               :	63
+                        Solver time              :	41 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:58    Stimulation port         :	11
+                        Accuracy                 :	7.89021e-05
+                        Iterations               :	22
+                        Solver time              :	21 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:09:58  The direct solver will be used.
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:07    Generating results       :	9 s
+                      
+                        Total time               :	55 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:07    Calculation 3 (Frequency: 1.4 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:33    Matrix setup time        :	3 s
+                        Solver setup             :	19 s
+                        Degrees of freedom       :	932858
+                        Number of mesh cells     :	144986
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	3.26602e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:33    Stimulation port         :	2
+                        Accuracy                 :	3.46153e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:33    Stimulation port         :	4
+                        Accuracy                 :	1.80989e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:33    Stimulation port         :	5
+                        Accuracy                 :	3.21274e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:33    Stimulation port         :	7
+                        Accuracy                 :	6.78834e-07
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:33    Stimulation port         :	8
+                        Accuracy                 :	8.65972e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:33    Stimulation port         :	10
+                        Accuracy                 :	8.27731e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:33    Stimulation port         :	11
+                        Accuracy                 :	1.95044e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:42    Generating results       :	8 s
+                      
+                        Total time               :	35 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:42    Calculation 4 (Frequency: 1.6 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:58    Matrix setup time        :	1 s
+                        Solver setup             :	11 s
+                        Degrees of freedom       :	932858
+                        Number of mesh cells     :	144986
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	6.15888e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:58    Stimulation port         :	2
+                        Accuracy                 :	4.67727e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:58    Stimulation port         :	4
+                        Accuracy                 :	2.45141e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:58    Stimulation port         :	5
+                        Accuracy                 :	4.90943e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:58    Stimulation port         :	7
+                        Accuracy                 :	1.47256e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:58    Stimulation port         :	8
+                        Accuracy                 :	9.85121e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:58    Stimulation port         :	10
+                        Accuracy                 :	9.46298e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:10:58    Stimulation port         :	11
+                        Accuracy                 :	2.25412e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:07    Generating results       :	8 s
+                      
+                        Total time               :	25 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:07    Calculation 5 (Frequency: 1.2144 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:24    Matrix setup time        :	1 s
+                        Solver setup             :	12 s
+                        Degrees of freedom       :	932858
+                        Number of mesh cells     :	144986
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	3.94431e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:24    Stimulation port         :	2
+                        Accuracy                 :	2.51739e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:24    Stimulation port         :	4
+                        Accuracy                 :	1.45108e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:24    Stimulation port         :	5
+                        Accuracy                 :	2.99406e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:24    Stimulation port         :	7
+                        Accuracy                 :	1.06778e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:24    Stimulation port         :	8
+                        Accuracy                 :	7.98277e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:24    Stimulation port         :	10
+                        Accuracy                 :	7.15919e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:24    Stimulation port         :	11
+                        Accuracy                 :	1.2698e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:32    Generating results       :	8 s
+                      
+                        Total time               :	25 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:32    Calculation 6 (Frequency: 1.7496 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:50    Matrix setup time        :	2 s
+                        Solver setup             :	12 s
+                        Degrees of freedom       :	932858
+                        Number of mesh cells     :	144986
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	8.44645e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:50    Stimulation port         :	2
+                        Accuracy                 :	5.96453e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:50    Stimulation port         :	4
+                        Accuracy                 :	3.08178e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:50    Stimulation port         :	5
+                        Accuracy                 :	6.48345e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:50    Stimulation port         :	7
+                        Accuracy                 :	2.40579e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:50    Stimulation port         :	8
+                        Accuracy                 :	1.17636e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:50    Stimulation port         :	10
+                        Accuracy                 :	1.60015e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:50    Stimulation port         :	11
+                        Accuracy                 :	2.38331e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:58    Generating results       :	8 s
+                      
+                        Total time               :	26 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:11:58    Calculation 7 (Frequency: 1.18 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:16    Matrix setup time        :	2 s
+                        Solver setup             :	12 s
+                        Degrees of freedom       :	932858
+                        Number of mesh cells     :	144986
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	3.03699e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:16    Stimulation port         :	2
+                        Accuracy                 :	2.60714e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:16    Stimulation port         :	4
+                        Accuracy                 :	2.79244e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:16    Stimulation port         :	5
+                        Accuracy                 :	3.31565e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:16    Stimulation port         :	7
+                        Accuracy                 :	7.51497e-07
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:16    Stimulation port         :	8
+                        Accuracy                 :	9.1787e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:16    Stimulation port         :	10
+                        Accuracy                 :	1.29694e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:16    Stimulation port         :	11
+                        Accuracy                 :	1.2276e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:25    Generating results       :	8 s
+                      
+                        Total time               :	27 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:25    Calculation 8 (Frequency: 1.2664 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:44    Matrix setup time        :	1 s
+                        Solver setup             :	14 s
+                        Degrees of freedom       :	932858
+                        Number of mesh cells     :	144986
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	2.98741e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:44    Stimulation port         :	2
+                        Accuracy                 :	2.64273e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:44    Stimulation port         :	4
+                        Accuracy                 :	1.13471e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:44    Stimulation port         :	5
+                        Accuracy                 :	2.76158e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:44    Stimulation port         :	7
+                        Accuracy                 :	6.50027e-07
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:44    Stimulation port         :	8
+                        Accuracy                 :	7.73536e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:44    Stimulation port         :	10
+                        Accuracy                 :	6.88713e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:44    Stimulation port         :	11
+                        Accuracy                 :	1.44842e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:52    Generating results       :	8 s
+                      
+                        Total time               :	27 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:12:52    Calculation 9 (Frequency: 1.0504 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:11    Matrix setup time        :	2 s
+                        Solver setup             :	13 s
+                        Degrees of freedom       :	932858
+                        Number of mesh cells     :	144986
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	4.31682e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:11    Stimulation port         :	2
+                        Accuracy                 :	5.27444e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:11    Stimulation port         :	4
+                        Accuracy                 :	9.91886e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:11    Stimulation port         :	5
+                        Accuracy                 :	8.72361e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:11    Stimulation port         :	7
+                        Accuracy                 :	1.98963e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:11    Stimulation port         :	8
+                        Accuracy                 :	2.26676e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:11    Stimulation port         :	10
+                        Accuracy                 :	9.83344e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:11    Stimulation port         :	11
+                        Accuracy                 :	2.55221e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:20    Generating results       :	8 s
+                      
+                        Total time               :	28 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:20    Calculation 10 (Frequency: 1.684 GHz)
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:39    Matrix setup time        :	1 s
+                        Solver setup             :	14 s
+                        Degrees of freedom       :	932858
+                        Number of mesh cells     :	144986
+                      
+                        Stimulation port         :	1
+                        Accuracy                 :	7.66264e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:39    Stimulation port         :	2
+                        Accuracy                 :	5.43348e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:39    Stimulation port         :	4
+                        Accuracy                 :	2.41011e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:39    Stimulation port         :	5
+                        Accuracy                 :	5.4459e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:39    Stimulation port         :	7
+                        Accuracy                 :	2.24988e-06
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:39    Stimulation port         :	8
+                        Accuracy                 :	1.06201e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:39    Stimulation port         :	10
+                        Accuracy                 :	1.29634e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:39    Stimulation port         :	11
+                        Accuracy                 :	2.35767e-05
+                        Iterations               :	1
+                        Solver time              :	4 s
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:48    Generating results       :	8 s
+                      
+                        Total time               :	28 s
+                      
+                      ------------------------------------------------------------------------------
+
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:48  Finished the general purpose interpolative broadband frequency sweep:
+                      All broadband sweep convergence criteria have been satisfied after
+                      calculating 10 frequency samples:
+                      
+                        Broadband sweep error threshold value : 
+                                                                0.01 (All S-Parameters) 
+                        Number of error criterion checks      : 
+                                                                2 (All S-Parameters) 
+                        Minimum number of samples             : 3
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:48    Total Solver Time        :	470 s	 (= 0 h, 07 m, 50 s)
+                      ================================================================================
+                      
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:13:48  Calculating remaining monitors.
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:14:05    ----------------------------------------------------------------------------
+                                            Peak memory used (kB)         Free physical memory (kB) 
+                                                                          At begin     Minimum      
+                        ----------------------------------------------------------------------------
+                        Solver start        20556                         20297964     20297964     
+                        Eq. system setup    5767936                       20501576     16807104     
+                        Eq. system solve    5767936                       20212232     14877276     
+                        Mesh refinement     2693008                       19404464     18284872     
+                        Solver run total    5767936                       20297860     14877276     
+                      
+                        Computer name       DESKTOP-GBTI6Q4
+                        ----------------------------------------------------------------------------
+                      
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:14:05  Running postprocessing.
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:14:06  Postprocessing finished.
+                      
+                      ------------------------------------------------------------------------------
+26/Oct/2026 23:14:06  Creating parametric 1D results for Run ID 1
+                      
+                      ------------------------------------------------------------------------------

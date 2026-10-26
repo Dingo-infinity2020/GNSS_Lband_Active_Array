@@ -1,0 +1,142 @@
+{
+  "schema_version": "gnss-m7c-storage-recovery-closeout-v0.1",
+  "grant_id": "GNSS-M7C-STORAGE-RECOVERY-SOLVE-GRANT-20261026-01",
+  "packet_id": "GNSS-M7C-STORAGE-RECOVERY-20261026-V01",
+  "qualified_source_commit": "4ab2648015955e1e6c8f10864f063e916f4d64f1",
+  "authorization_checkout_commit": "339a799112be7f3dbe4f20be6df5332337e254b2",
+  "started_at": "2026-10-26T15:04:46Z",
+  "ended_at": "2026-10-26T15:14:18Z",
+  "grant_closed_at": "2026-10-26T15:20:12Z",
+  "runner_status": "PASS",
+  "science": {
+    "status": "HOLD_M7C_GUARD",
+    "runner_final_status": "PASS",
+    "numerical_pass": true,
+    "response_count": 96,
+    "native_frequency_count": 1001,
+    "native_frequency_range_ghz": [
+      1.0,
+      1.8
+    ],
+    "final_two_delta_s": [
+      0.0154013,
+      0.0149349
+    ],
+    "symmetry_primary": {
+      "passed": 0,
+      "total": 10,
+      "maximum_fraction_of_full_e2c": 0.25
+    },
+    "differential_restoration_primary": {
+      "passed": 6,
+      "total": 6,
+      "maximum_fraction_of_m7b": 0.7,
+      "observed_fraction_range": [
+        0.21208616551682993,
+        0.4711674613563655
+      ]
+    },
+    "guard": {
+      "new_excursion_db": 20.23977272266319,
+      "f_start_ghz": 1.2088,
+      "f_end_ghz": 1.2584,
+      "response_port": 2,
+      "source_port": 5,
+      "pass": false
+    },
+    "secondary_raw": {
+      "candidate_worst_delta": 0.8545482712537513,
+      "frequency_ghz": 1.6496,
+      "polarization": "PolB",
+      "driver": {
+        "response_port": 10,
+        "source_port": 10
+      },
+      "m7b_reference": 0.8208781601757584,
+      "fraction_of_m7b": 1.0410171846584197,
+      "absolute_threshold": 0.6567025281406067,
+      "pass": false
+    },
+    "native_warnings": [
+      "Lossy-conductor edges at otherwise disjoint-region intersections are modeled as infinitely thin PEC wires.",
+      "YZ matrices unavailable / not all S-parameters calculated; frozen 12-row x 8-selected-source 96-response set is complete. No full 12x12/YZ claim."
+    ],
+    "native_mesh_messages": [
+      "missing mesh size for UID 0",
+      "max_size smaller than greatest edge; feedback includes incoherent graphical-item descriptors"
+    ],
+    "scientific_interpretation": "Differential restoration succeeds relative to M7B, but expected symmetry preservation fails for both polarizations at every anchor and the frozen narrow-window guard fails. No topology promotion. Physical attribution is not established; native thin-PEC-edge approximation remains a review limitation.",
+    "next_boundary": "OFFLINE_GUARD_AND_POLARIZATION_ASYMMETRY_REVIEW_ONLY_NO_NEW_SOLVE"
+  },
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "solve_consumed": true,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false,
+  "active_grant": null,
+  "artifact": {
+    "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\M7C_STORAGE_RECOVERY_DIAGNOSTIC_SOLVED_V01.cst",
+    "sha256": "90af39c8447d7245d6e1eb6f77930e3789b6c11c64ea14a7d314b33b07a0e5fa",
+    "bytes": 153988,
+    "state": "PROTECTED",
+    "companion_identity": {
+      "algorithm": "SIMOPS_TREE_ID_V1",
+      "tree_sha256": "cc2d4e501afb14f649c3f183b3cccb33302d12489e3f657ad84da8cda980a87e",
+      "files": 609,
+      "bytes": 12407270374
+    }
+  },
+  "response_csv_receipt": {
+    "path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\qualification\\loaded_response_native.csv",
+    "bytes": 7883596,
+    "sha256": "711365d2f3336a5afed0cf94e2394f0ae75e0691421c8729af6dda2425a74cae"
+  },
+  "source_reference_integrity": "PASS_POSTRUN_READONLY_INTEGRITY",
+  "solved_file_hash_stable_through_qualification": true,
+  "native_warning_count": 2,
+  "native_warnings_preserved": true,
+  "next_authorized_boundary": "READ_ONLY_RESULT_REVIEW_NO_BUILD_SOLVE_RETRY_OR_GEOMETRY_CHANGE",
+  "global_lock_state": "FINALIZED",
+  "global_lock_identity_hash": "5060fd9bed1252caa69e39add1a4e7a2703cb3dc72b1569c5e8acf1247e04314",
+  "packet_sha256": "4a0bf8a9abf924b115c604007ae7fcdd476cd5c0b5c2dbce25b113bc816b243d",
+  "closed_contract_sha256": "5022b213c6c63aaf23bf0391fd2a3e826f491997ae425c0205f4d4bd7ef5cb60",
+  "closed_native_contract_check": "PASS_NO_ERRORS_NO_WARNINGS",
+  "final_host_sync_check_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_STORAGE_RECOVERY_20261026_V01\\CLOSED_CHECKOUT_CONFIRMATION.json",
+  "evidence_sha256": {
+    "CLOSED_CONTRACT_CHECK.json": "06e220fcc9148b3abf2a9731e402bf90068e0c8aef415bcaf06a0288d906db65",
+    "CONTRACT_CHECK.json": "6e54d0287b45b2844e7f5df3ca154a98544a7c07bb2000bc7334a048600eba94",
+    "DRY_RUN.json": "a58a8c65a750862d9107cddba42c8daa1a558d99442b3ba3dad4653492a83875",
+    "FORENSICS.json": "c5deff3768669290ce388704076124b6abb99a525c23eb7e10a882726948022c",
+    "FORMAL_CLI.json": "1d719728fdda1b49fbb1e5b514a4417bc257aa58eb9b0e3a0a7ace4f809ae949",
+    "FORMAL_SSH.stderr.base64.txt": "4e6c61a6593f32dee4754fe885229c286efbacb8fecec00ed02e3556ec384b98",
+    "FORMAL_SSH.stdout.txt": "aa11329b1c5ea3adc351dca516a48713317f4db7d1b55f7c3eeffd6b8ef20b43",
+    "HOST_FORMAL_RECEIPT.json": "00fdada7585c8022821c2920acf62aa06928eb075fac086cfc5576bb778748ee",
+    "INTERMEDIATE_STATUS_01.json": "bdb09ac4a8516a25f4208e299b8c28568e48ce878ea0bb2bab3a309b61096aab",
+    "INTERMEDIATE_STATUS_02.json": "7ccec6a52afbb08e9d54709dd9736a3773888c9d1ac6a190af488c776d5570ed",
+    "INTERMEDIATE_STATUS_03.json": "7ccec6a52afbb08e9d54709dd9736a3773888c9d1ac6a190af488c776d5570ed",
+    "MODAL_ANCHOR_SUMMARY.csv": "39d2aa0c6625e8daf7955065b2e46ee29edfa786157cdff5997f3f3192e2667e",
+    "PACKET_PREPARATION.stderr.base64.txt": "9fa8e385d8a943cf4208c33c8fa9516ffeec2219546e7c4d867c7dd3dbdd14d9",
+    "PACKET_PREPARATION.stdout.txt": "f29fde912139a95aa5f89bc9527d7e65c8884f96284ed8c0164aba4801da3940",
+    "POSTRUN_INTEGRITY.json": "1bb1e4018f84b32fa511c565fbad802b7ba7754bc49ceaf4e61ff5300c87e5f9",
+    "PREGRANT_READONLY.stderr.base64.txt": "31b77826c3a5ced21fb96525a84149af32063616d2abef9f7a9638dd0bae9789",
+    "PREGRANT_READONLY.stdout.txt": "5faa228aaa0cac29f88c5ba3b1628eefe832ad47f41c5590498f07f41cf93798",
+    "SCIENCE_SUMMARY.json": "d89281b47bdd54894bfed65531baafd5d15f4e7c4d5902c2bb8f0e05b73870d1",
+    "SOLVED_COMPANION_IDENTITY.json": "c20b29e0c68987d09a7d2c7c6fc155fdf91f921ad355f66bddae268be2ee3355",
+    "USER_SOLVE_GRANT.json": "8fc0e7dbe2147661a63830c075e9f6ee8327a5e979212318d0599672a22b3b51",
+    "VALIDATE.json": "763737e068f1526c472211b095e1b0335ab267a2a523e1915789ceb74c7ad5d8",
+    "evidence__FINAL_STATUS.txt": "f5fa2ebf3b96eb4556304313594398d8b2ff4b65d6c4720bed3c819e23599f7e",
+    "evidence__modal__FINAL_STATUS.txt": "f5fa2ebf3b96eb4556304313594398d8b2ff4b65d6c4720bed3c819e23599f7e",
+    "evidence__modal__modal_evaluation.json": "ff2fd8200691d0127e7d9341321c4b5195d0e8a008cd55f3658b5c07b2cd2b4a",
+    "evidence__presolve__source_gate.json": "a690c743dd7f56451cd67c69c835c7468e24b8ef400f4cab45c3d14e96d36d7e",
+    "evidence__qualification__native_Model_log": "83e29c7cc94fb7fbc836fe61295780d4a1a3f6c2cedd8aa8ba0c3032f171620d",
+    "evidence__qualification__native_Model_log.raw.base64.txt": "6b2f9847b479a3a6081134e64f099cd14a452ae2236864ba46947755e5b76397",
+    "evidence__qualification__native_log_tet": "8730017288c635157cb6066995939d8ce366d942cc97a317b255fc67d7d2ef68",
+    "evidence__qualification__native_output_txt": "cf33f476b0514b17e385f9cf782c099c87bd8df0d7760172bcf223f019e0abf4",
+    "evidence__qualification__qualification_summary.json": "6535a1a1e6340fd705c611d87e13942f3a71b8e2408a05529f692c5949bde7aa",
+    "evidence__solver_invocation.json": "e8bd722c22e677a2a3b33cd51f6c4058b2e2f5f7506484673e82f9d76edb61af",
+    "evidence__storage_preflight.json": "e859722b2a84a575d29a5cd5449b7ff223a9143f530ecf7d266357ccf999e9a4",
+    "evidence__summary.json": "1454d3d8d535d1b49263c1ed040afd7a843189dc62a5c0f347852cecd9c9d938",
+    "result_packet.json": "91ce2f3d083541591342d1a2f0ba589a6d26a4febd74e801550a517e2e9a1b1b",
+    "task_packet.json": "4a0bf8a9abf924b115c604007ae7fcdd476cd5c0b5c2dbce25b113bc816b243d"
+  }
+}

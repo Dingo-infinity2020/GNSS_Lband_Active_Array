@@ -1,0 +1,190 @@
+{
+  "schema_version": "gnss-m7c-modal-evaluation-v0.1",
+  "status": "HOLD_M7C_GUARD",
+  "numerical_pass": true,
+  "comparison_grid": "native grids identical",
+  "symmetry_primary_pass": false,
+  "differential_restoration_primary_pass": true,
+  "secondary_raw_pass": false,
+  "guard_pass": false,
+  "symmetry": [
+    {
+      "polarization": "PolA",
+      "frequency_ghz": 1.2056,
+      "full_e2c_delta_sdc": 0.31340725192594904,
+      "candidate_delta_sdc": 0.10762354836201499,
+      "fraction_of_full_e2c": 0.3433983984118018,
+      "reduction_vs_full_fraction": 0.6566016015881981,
+      "pass": false
+    },
+    {
+      "polarization": "PolB",
+      "frequency_ghz": 1.2056,
+      "full_e2c_delta_sdc": 0.3134330961398753,
+      "candidate_delta_sdc": 0.353293041141461,
+      "fraction_of_full_e2c": 1.127172099859542,
+      "reduction_vs_full_fraction": -0.12717209985954203,
+      "pass": false
+    },
+    {
+      "polarization": "PolA",
+      "frequency_ghz": 1.2984,
+      "full_e2c_delta_sdc": 0.3530167293140848,
+      "candidate_delta_sdc": 0.12720959517151428,
+      "fraction_of_full_e2c": 0.36035004748552246,
+      "reduction_vs_full_fraction": 0.6396499525144775,
+      "pass": false
+    },
+    {
+      "polarization": "PolB",
+      "frequency_ghz": 1.2984,
+      "full_e2c_delta_sdc": 0.3512192233791157,
+      "candidate_delta_sdc": 0.42209522364459123,
+      "fraction_of_full_e2c": 1.201799888922851,
+      "reduction_vs_full_fraction": -0.20179988892285095,
+      "pass": false
+    },
+    {
+      "polarization": "PolA",
+      "frequency_ghz": 1.3432,
+      "full_e2c_delta_sdc": 0.35801234258334713,
+      "candidate_delta_sdc": 0.13966747005709285,
+      "fraction_of_full_e2c": 0.39011914798601544,
+      "reduction_vs_full_fraction": 0.6098808520139846,
+      "pass": false
+    },
+    {
+      "polarization": "PolB",
+      "frequency_ghz": 1.3432,
+      "full_e2c_delta_sdc": 0.3555561999220643,
+      "candidate_delta_sdc": 0.4443774927415731,
+      "fraction_of_full_e2c": 1.2498094333300276,
+      "reduction_vs_full_fraction": -0.24980943333002759,
+      "pass": false
+    },
+    {
+      "polarization": "PolA",
+      "frequency_ghz": 1.5752000000000002,
+      "full_e2c_delta_sdc": 0.34778235823569464,
+      "candidate_delta_sdc": 0.20663189731535017,
+      "fraction_of_full_e2c": 0.5941414002814779,
+      "reduction_vs_full_fraction": 0.4058585997185221,
+      "pass": false
+    },
+    {
+      "polarization": "PolB",
+      "frequency_ghz": 1.5752000000000002,
+      "full_e2c_delta_sdc": 0.344273331163115,
+      "candidate_delta_sdc": 0.479200745121559,
+      "fraction_of_full_e2c": 1.3919194481390604,
+      "reduction_vs_full_fraction": -0.39191944813906043,
+      "pass": false
+    },
+    {
+      "polarization": "PolA",
+      "frequency_ghz": 1.6496,
+      "full_e2c_delta_sdc": 0.3498174896720291,
+      "candidate_delta_sdc": 0.2260936630527896,
+      "fraction_of_full_e2c": 0.6463189226609665,
+      "reduction_vs_full_fraction": 0.35368107733903353,
+      "pass": false
+    },
+    {
+      "polarization": "PolB",
+      "frequency_ghz": 1.6496,
+      "full_e2c_delta_sdc": 0.34617438382686583,
+      "candidate_delta_sdc": 0.4896746262625435,
+      "fraction_of_full_e2c": 1.414531661324332,
+      "reduction_vs_full_fraction": -0.41453166132433195,
+      "pass": false
+    }
+  ],
+  "differential_restoration": [
+    {
+      "polarization": "PolA",
+      "frequency_ghz": 1.3432,
+      "full_e2c_delta_sdd": 0.3185784080204895,
+      "m7b_delta_sdd": 0.740158069415456,
+      "candidate_delta_sdd": 0.1569772868186637,
+      "fraction_of_m7b": 0.21208616551682993,
+      "reduction_vs_m7b_fraction": 0.7879138344831701,
+      "pass": true
+    },
+    {
+      "polarization": "PolB",
+      "frequency_ghz": 1.3432,
+      "full_e2c_delta_sdd": 0.31755927624495367,
+      "m7b_delta_sdd": 0.7429160967229927,
+      "candidate_delta_sdd": 0.29763611908921384,
+      "fraction_of_m7b": 0.4006322119039936,
+      "reduction_vs_m7b_fraction": 0.5993677880960064,
+      "pass": true
+    },
+    {
+      "polarization": "PolA",
+      "frequency_ghz": 1.5752000000000002,
+      "full_e2c_delta_sdd": 0.267648276701474,
+      "m7b_delta_sdd": 0.8561936269362469,
+      "candidate_delta_sdd": 0.19136817425597122,
+      "fraction_of_m7b": 0.22351039325152638,
+      "reduction_vs_m7b_fraction": 0.7764896067484737,
+      "pass": true
+    },
+    {
+      "polarization": "PolB",
+      "frequency_ghz": 1.5752000000000002,
+      "full_e2c_delta_sdd": 0.2677544246446499,
+      "m7b_delta_sdd": 0.8591927208372186,
+      "candidate_delta_sdd": 0.3952503990212902,
+      "fraction_of_m7b": 0.4600253114762756,
+      "reduction_vs_m7b_fraction": 0.5399746885237244,
+      "pass": true
+    },
+    {
+      "polarization": "PolA",
+      "frequency_ghz": 1.6496,
+      "full_e2c_delta_sdd": 0.2449389922416031,
+      "m7b_delta_sdd": 0.8807339333019938,
+      "candidate_delta_sdd": 0.19335871830395054,
+      "fraction_of_m7b": 0.21954271431216674,
+      "reduction_vs_m7b_fraction": 0.7804572856878332,
+      "pass": true
+    },
+    {
+      "polarization": "PolB",
+      "frequency_ghz": 1.6496,
+      "full_e2c_delta_sdd": 0.24578552577825138,
+      "m7b_delta_sdd": 0.8843087425323863,
+      "candidate_delta_sdd": 0.4166575052742243,
+      "fraction_of_m7b": 0.4711674613563655,
+      "reduction_vs_m7b_fraction": 0.5288325386436346,
+      "pass": true
+    }
+  ],
+  "secondary_raw": {
+    "candidate_worst_delta": 0.8545482712537513,
+    "frequency_ghz": 1.6496,
+    "polarization": "PolB",
+    "driver": {
+      "response_port": 10,
+      "source_port": 10
+    },
+    "m7b_reference": 0.8208781601757584,
+    "fraction_of_m7b": 1.0410171846584197,
+    "absolute_threshold": 0.6567025281406067,
+    "pass": false
+  },
+  "guard": {
+    "new_excursion_db": 20.23977272266319,
+    "f_start_ghz": 1.2088,
+    "f_end_ghz": 1.2584,
+    "response_port": 2,
+    "source_port": 5,
+    "pass": false
+  },
+  "partial_review_evidence": {
+    "symmetry_any_item_improves_ge_10pct": true,
+    "differential_any_item_improves_ge_10pct": true
+  },
+  "boundary": "No automatic next BUILD/SOLVE or geometry change is authorized by this result."
+}

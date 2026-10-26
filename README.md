@@ -13,11 +13,9 @@ Read these first:
 
 ## Current scientific phase
 
-M7C local-return-island diagnostic is closed STORAGE HOLD with no science classification. One same-geometry storage-recovery SOLVE is explicitly authorized; BUILD remains closed.
+M7C same-geometry storage recovery completed with full broadband data and numerical PASS, but science is `HOLD_M7C_GUARD`. Differential restoration passes 6/6; symmetry passes 0/10; the new-window guard excursion is 20.2398 dB versus a 6-dB limit.
 
-Read `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md`, `PROJECT_HANDOFF.md` and `execution/stage_contract.json` for the current boundary.
-
-The mainline remains support/hub-inclusive array physics, scan-dependent active impedance, finite-array validation and receiver co-design. The LNA input match is not frozen.
+BUILD/SOLVE are closed. See `docs/M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md`, `PROJECT_HANDOFF.md` and `execution/stage_contract.json`. The mainline remains array-aware receiver co-design; final LNA input matching is not frozen.
 
 ## Target system envelope
 
@@ -55,14 +53,14 @@ Therefore the pitch/material trade is now the current mainline, and the final LN
 
 ## Current execution
 
-`R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01`
+`R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_RESULT_REVIEW`
 
-`SOLVE_AUTHORIZED_M7C_RECOVERY_ONE_SHOT_PENDING_PACKET_VALIDATION`
+`HOLD_M7C_GUARD`
 
-- Output: new C: NTFS project run directory; existing D: baselines preserved.
-- Storage: output 32 GiB + TEMP 8 GiB, summed when sharing a filesystem.
-- Geometry, 12-port/8-source semantics, solver fidelity and M7C modal gates unchanged.
-- One fresh SOLVE grant is live. Packet generation/validation precedes exactly one run; automatic retries=0.
+- Exactly one fresh recovery SOLVE consumed; automatic retries=0.
+- 96 complex traces ×1001 native points; numerical hard gates all PASS.
+- Source/reference integrity PASS; complete C: output PROTECTED.
+- No live grant. Next boundary is read-only interpretation of the guard, polarization asymmetry and native model warnings.
 
 ## Core documents
 
