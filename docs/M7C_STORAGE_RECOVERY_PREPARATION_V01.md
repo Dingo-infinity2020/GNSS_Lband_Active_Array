@@ -1,7 +1,7 @@
 # M7C same-geometry storage recovery preparation V0.1
 
 Date: 2026-10-26 (Asia/Shanghai)
-Status: PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_REQUALIFICATION
+Status: PASS_M7C_RECOVERY_PREPARATION_READY_AWAIT_SOLVE_AUTH
 
 ## Scope and authority
 
@@ -106,8 +106,14 @@ Direct SSH qualification of source commit `18f13b127a0635551edc0fa83fe6a3855e089
 - Build invocations=0; solver invocations=0; CST application instantiations=0; actual formal packets generated=0.
 - Production output root was not created. Original NW checkout and all science baselines remain unchanged.
 
-The task-private host checkout/control evidence is CHECKPOINTED for authorization review. Retain it until that decision or explicit abandonment; no cleanup is part of this preparation. A future formal grant must bind a clean reviewed Git HEAD and current contract; validate/dry-run must then precede the single run.
+The task-private host checkout/control evidence is CHECKPOINTED for authorization review. Retain it until that decision or explicit abandonment; no cleanup is part of this preparation. A future formal grant binds the qualified source; the later clean authorization checkout HEAD and current contract are separately locked by the packet. Validate/dry-run then precede the single run.
 
 ### Source-binding review
 
 Final review separated the qualified source commit from the later authorization-contract commit. The recovery helper and generator were updated to require qualification/source agreement and source ancestry; exact checkout HEAD remains a native packet preflight. This changes authorization bookkeeping only. A second nonproduction qualification is required for these updated helper/generator bytes; the original 18f13b1 receipts above remain historical preparation evidence.
+
+### Final source-binding requalification — PASS
+
+The second direct-SSH qualification passed for commit `4ab2648015955e1e6c8f10864f063e916f4d64f1` at `2026-10-26T14:08:28Z`. Authoritative final receipts are under `evidence/M7C_STORAGE_RECOVERY_PREP_20261026/qualification_v02/`; these supersede the initial source qualification for current readiness. Source, manifest and helper/generator bytes match the qualified hashes. Local regression: 9/9 PASS. NW regression: 8 PASS plus the same privilege-dependent symlink skip. Native contract-check: PASS, no warnings. Python 3.6 import/help/read-only preflight and absent-grant refusal: PASS.
+
+Current status: `PASS_M7C_RECOVERY_PREPARATION_READY_AWAIT_SOLVE_AUTH`. Preparation is complete. BUILD/SOLVE remain false, active_grant=null, actual formal packets=0, production output created=false. The future grant's source_commit must be the qualified source commit above; its entrypoint/manifest/dependency hashes must remain unchanged. Any changed production source requires requalification. The packet separately binds the later authorization checkout HEAD and stage-contract hash.

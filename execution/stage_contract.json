@@ -1936,7 +1936,7 @@
                       "formal_o2b_screen_invocation_count":  9,
                       "formal_o2b_qualification_invocation_count":  3,
                       "last_completed_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
-                      "last_status":  "PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_REQUALIFICATION",
+                      "last_status":  "PASS_M7C_RECOVERY_PREPARATION_READY_AWAIT_SOLVE_AUTH",
                       "one_shot_required":  true,
                       "fresh_run_directory_required":  true,
                       "entrypoint_qualification":  {
@@ -1945,9 +1945,9 @@
                                                        "runtime_identity":  "CST Studio Suite 2022 bundled Python via workspace launcher + SimulationOps control Python",
                                                        "qualification_stage":  "M7C_STORAGE_RECOVERY_NONPRODUCTION_QUALIFICATION",
                                                        "qualification_status":  "PASS_M7C_RECOVERY_NONPRODUCTION_HOST_QUALIFICATION",
-                                                       "qualification_evidence":  "evidence/M7C_STORAGE_RECOVERY_PREP_20261026/RECEIPT.json",
-                                                       "last_qualified_source_commit":  "18f13b127a0635551edc0fa83fe6a3855e08918a",
-                                                       "entrypoint_sha256":  "1bf50dc74cbf1770fdcb68c006698ba5ef02dd128ad040fcf7f52dcb628052d8"
+                                                       "qualification_evidence":  "evidence/M7C_STORAGE_RECOVERY_PREP_20261026/qualification_v02/RECEIPT.json",
+                                                       "last_qualified_source_commit":  "4ab2648015955e1e6c8f10864f063e916f4d64f1",
+                                                       "entrypoint_sha256":  "85e02268de7e13bbc3e26fad9d3b98522536a1850d32f4bcd34eee79b555e605"
                                                    },
                       "project_observability":  {
                                                     "protocol":  "simops-project-event-v0.1",
@@ -2030,7 +2030,7 @@
                                                       "mode":  "PROJECT_GIT_PACKET_OR_GENERATOR",
                                                       "packet_path":  "",
                                                       "generator_path":  "scripts/make_m7c_storage_recovery_packet_v01.py",
-                                                      "packet_or_generator_sha256":  "49cd27d48aacad10e737eb367d319dc8b98917464e4c7b3b54f5af0bcd5f779f",
+                                                      "packet_or_generator_sha256":  "dc649fb78b2bf5a09e458ff45a0f78f097366650007c22a93e66ce85ef80017c",
                                                       "adhoc_exception_reason":  ""
                                                   },
                            "accounting_scope":  "TRANSACTION_CONTROL_TARGET_NOT_REMOTE_MCP_TOTAL",
@@ -2041,7 +2041,7 @@
                            "forensics_command":  "runner/nw/simops.cmd forensics --packet \u003cpacket\u003e"
                        },
     "evidence":  {
-                     "status_classification":  "PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_REQUALIFICATION",
+                     "status_classification":  "PASS_M7C_RECOVERY_PREPARATION_READY_AWAIT_SOLVE_AUTH",
                      "source_commit_for_o3_o4":  "00bea9de782eb36c1d3f118866edd283808b6233",
                      "o3_nominal_solved_sha256":  "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
                      "o3_straight_reference_solved_sha256":  "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
@@ -2305,7 +2305,7 @@
         "host_evidence": "evidence/M7C_STORAGE_RECOVERY_PREP_20261026/HOST_READONLY_SNAPSHOT.json"
     ,
     "host_qualification_status": "PASS_M7C_RECOVERY_NONPRODUCTION_HOST_QUALIFICATION",
-    "qualified_source_commit": "18f13b127a0635551edc0fa83fe6a3855e08918a",
+    "qualified_source_commit": "4ab2648015955e1e6c8f10864f063e916f4d64f1",
     "execution_route_exception": {
         "authority": "DIRECT_USER_INSTRUCTION_2026-10-26",
         "route": "CODEX_DIRECT_SSH",

@@ -57,7 +57,7 @@ Therefore the pitch/material trade is now the current mainline, and the final LN
 
 `R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_READY_AWAIT_AUTH`
 
-`PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_REQUALIFICATION`
+`PASS_M7C_RECOVERY_PREPARATION_READY_AWAIT_SOLVE_AUTH`
 
 - Output: new C: NTFS project run directory; existing D: baselines preserved.
 - Storage: output 32 GiB + TEMP 8 GiB, summed when sharing a filesystem.
