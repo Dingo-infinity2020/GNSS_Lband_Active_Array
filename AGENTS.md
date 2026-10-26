@@ -23,6 +23,23 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
+Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_PREPARATION**
+
+- Preparation is authorized; BUILD/SOLVE remain false and active_grant is null.
+- M7B is CLOSED/PARTIAL. M7C BUILD and human 3D review are PASS.
+- The original M7C diagnostic SOLVE was consumed and closed STORAGE HOLD; no science classification exists.
+- Prepare and qualify the same-geometry recovery under `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md`.
+- Canonical reviewed source remains `ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98`.
+- New recovery output is a fresh project-owned C: NTFS directory. D: baselines remain protected.
+- New entrypoint and packet generator enforce fresh grant, dependency hashes, source-companion identity and output/TEMP free-space reservations.
+- Production gates remain the frozen M7C Sdc/Sdd/guard gates. Geometry, ports, materials, config and evaluator are unchanged.
+- No simulator application is launched during preparation; only static audits, help and stdlib regression tests.
+- Only a future fresh explicit SOLVE grant can open the one-shot recovery stage; zero automatic retries.
+
+Current authority: `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md`; `PROJECT_HANDOFF.md`; `execution/stage_contract.json`.
+
+## Historical M7B gate snapshot (superseded; no live authority)
+
 Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_DIAGNOSTIC_SOLVE_AWAIT_AUTH**
 
 Current permissions and stop rules:

@@ -2,6 +2,24 @@
 
 SimulationOps: 0.2.26 @ c074982bce2ad1bc7c0914ad422244f2cba84d4a
 
+Current stage: R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_PREPARATION
+Current status: PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_HOST_QUALIFICATION
+
+BUILD_AUTHORIZED: false
+SOLVE_AUTHORIZED: false
+LNA_INTEGRATION_AUTHORIZED: false
+CST251_AUTHORIZED: false
+active_grant: null
+
+Current preparation authority: `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md`.
+Recovery manifest: `execution/M7C_STORAGE_RECOVERY_SOLVE_MANIFEST_V01.json`.
+
+M7C remains scientifically unclassified. Output/TEMP storage guards and a fresh recovery identity are prepared. Formal generation/launch awaits later explicit authorization. Original consumed attempts are immutable history.
+
+## Historical M7B execution header (superseded; no live authority)
+
+SimulationOps: 0.2.26 @ c074982bce2ad1bc7c0914ad422244f2cba84d4a
+
 Current stage:
 R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_DIAGNOSTIC_SOLVE_AWAIT_AUTH
 

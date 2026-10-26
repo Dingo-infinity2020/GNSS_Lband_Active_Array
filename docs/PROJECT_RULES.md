@@ -418,7 +418,7 @@ This rule exists specifically to prevent endless local optimization.
 
 ---
 
-# Current project control statement
+# Historical R0 control statement (superseded; no live authority)
 
 Until explicitly changed:
 
@@ -436,3 +436,7 @@ Current allowed work:
 - reconstruction assumptions,
 - parameter manifest review,
 - build-only tooling after manifest PASS.
+
+# Current execution control statement — 2026-10-26
+
+Current task: same-geometry M7C storage-recovery preparation under `M7C_STORAGE_RECOVERY_PREPARATION_V01.md`. BUILD, SOLVE, optimization and hardware permissions remain closed. Current stage/permissions are owned by PROJECT_HANDOFF.md and execution/stage_contract.json. The original R0 statement above is preserved only as history.

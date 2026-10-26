@@ -27,8 +27,8 @@
                               "pass12_delta_s":  0.01570656517587774,
                               "max_delta_s_required":  0.02,
                               "rf_baseline_interpretation":  "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
-                              "next_stage":  "AR0_B1R_R4_A0_E2C_CST_CAPABILITY_SMOKE02",
-                              "stop_boundary":  "STOP_AFTER_ONE_12PORT_8SOURCE_SENTINEL_SOLVE_AND_READONLY_QUALIFICATION_NO_RETRY_NO_C1",
+                              "next_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01",
+                              "stop_boundary":  "STOP_AFTER_ONE_SAME_GEOMETRY_M7C_RECOVERY_SOLVE_QUALIFICATION_MODAL_CLASSIFICATION_NO_RETRY_NO_NEXT_STAGE",
                               "master_plan":  "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
                               "simulationops_min":  "0.2.12",
                               "t01c_status":  "DEFERRED_NOT_AUTHORIZED",
@@ -1927,7 +1927,7 @@
                                                   ]
                           },
     "execution":  {
-                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_COMPLETE",
+                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_PREPARATION",
                       "formal_recovery_solve_invocation_count":  1,
                       "silent_retry_allowed":  false,
                       "hash_lock_required":  true,
@@ -1936,18 +1936,18 @@
                       "formal_o2b_screen_invocation_count":  9,
                       "formal_o2b_qualification_invocation_count":  3,
                       "last_completed_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
-                      "last_status":  "PASS_D_DRIVE_STORAGE_RECOVERY_M7C_RECOVERY_NOT_AUTHORIZED",
+                      "last_status":  "PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_HOST_QUALIFICATION",
                       "one_shot_required":  true,
                       "fresh_run_directory_required":  true,
                       "entrypoint_qualification":  {
                                                        "required":  true,
-                                                       "entrypoint_path":  "scripts/run_m7c_diagnostic_solve_v01.py",
+                                                       "entrypoint_path":  "scripts/run_m7c_storage_recovery_solve_v01.py",
                                                        "runtime_identity":  "CST Studio Suite 2022 bundled Python via workspace launcher + SimulationOps control Python",
-                                                       "qualification_stage":  "M7C_DIAGNOSTIC_SOLVE_STATIC_QUALIFICATION",
-                                                       "qualification_status":  "PASS_M7C_DIAGNOSTIC_SOLVE_STATIC_CONTRACT",
-                                                       "qualification_evidence":  "evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_PREP_V01/STATIC_AUDIT.json",
-                                                       "last_qualified_source_commit":  "f3f25a024d486f3884088a63ec61b4e8f5538837",
-                                                       "entrypoint_sha256":  "af430a7a997c2b35be53d938619482372afd7ef50b35ddc8450f833d0816c670"
+                                                       "qualification_stage":  "M7C_STORAGE_RECOVERY_NONPRODUCTION_QUALIFICATION",
+                                                       "qualification_status":  "PENDING_HOST_READONLY_QUALIFICATION",
+                                                       "qualification_evidence":  "evidence/M7C_STORAGE_RECOVERY_PREP_20261026/OFFLINE_AUDIT.json",
+                                                       "last_qualified_source_commit":  null,
+                                                       "entrypoint_sha256":  "1bf50dc74cbf1770fdcb68c006698ba5ef02dd128ad040fcf7f52dcb628052d8"
                                                    },
                       "project_observability":  {
                                                     "protocol":  "simops-project-event-v0.1",
@@ -2021,16 +2021,16 @@
     "dc_call_budget":  {
                            "target_calls_per_routine_stage":  2,
                            "calls_used_current_stage":  1,
-                           "task_packet_path":  "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIAGNOSTIC_SOLVE_V01\\task_packet.json",
-                           "result_packet_path":  "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIAGNOSTIC_SOLVE_V01\\result_packet.json",
+                           "task_packet_path":  "",
+                           "result_packet_path":  "",
                            "preferred_runner":  "D:\\\\quest_naoc_tarminal\\\\SimulationOps\\\\runner\\\\nw\\\\simops.cmd",
                            "polling_policy":  "launch_once_inspect_at_task_node",
-                           "exception_reason":  "Consumed M7C attempt remains scientifically unclassified. D: cleanup restored 14.933 GB free; no recovery SOLVE is authorized until free-space preflight and recovery contract are frozen.",
+                           "exception_reason":  "Nonproduction recovery preparation only; current source checkout is isolated and original consumed attempts are protected.",
                            "task_packet_source":  {
                                                       "mode":  "PROJECT_GIT_PACKET_OR_GENERATOR",
                                                       "packet_path":  "",
-                                                      "generator_path":  "scripts/make_m7c_diagnostic_solve_packet_v01.py",
-                                                      "packet_or_generator_sha256":  "7aab6fcf860be24d3aced3065e4e303f8a63b83d6b341ea9c4b7c7ed304927ed",
+                                                      "generator_path":  "scripts/make_m7c_storage_recovery_packet_v01.py",
+                                                      "packet_or_generator_sha256":  "49cd27d48aacad10e737eb367d319dc8b98917464e4c7b3b54f5af0bcd5f779f",
                                                       "adhoc_exception_reason":  ""
                                                   },
                            "accounting_scope":  "TRANSACTION_CONTROL_TARGET_NOT_REMOTE_MCP_TOTAL",
@@ -2041,7 +2041,7 @@
                            "forensics_command":  "runner/nw/simops.cmd forensics --packet \u003cpacket\u003e"
                        },
     "evidence":  {
-                     "status_classification":  "PASS_D_DRIVE_STORAGE_RECOVERY_M7C_RECOVERY_NOT_AUTHORIZED",
+                     "status_classification":  "PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_HOST_QUALIFICATION",
                      "source_commit_for_o3_o4":  "00bea9de782eb36c1d3f118866edd283808b6233",
                      "o3_nominal_solved_sha256":  "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
                      "o3_straight_reference_solved_sha256":  "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
@@ -2076,7 +2076,7 @@
                      "m7b_build_artifact_sha256":  "5498e9c447fdd4eeb969c02701d27886e839144ebe9941c4e7f56bc7419c69ea",
                      "m7b_build_recovery_evidence":  "evidence/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_BUILD_READONLY_RECOVERY_V01/RECOVERY.json",
                      "m7b_build_recovery_status":  "PASS_M7B_BUILD_READONLY_QUALIFICATION_RECOVERY_AWAIT_HUMAN_REVIEW",
-                     "exact_invocation":  "M7C_STORAGE_HOLD_PRESERVED; D_DRIVE_CLEANUP_PASS_FREE_14P933GB; SCIENCE_BASELINES_UNTOUCHED; NO_RECOVERY_SOLVE_AUTH"
+                     "exact_invocation":  "PREPARATION_ONLY; NO_CST_APPLICATION_LAUNCH; NO_BUILD; NO_SOLVE; NO_LIVE_GRANT"
                  },
     "authorization_history":  [
                                   {
@@ -2263,8 +2263,8 @@
                       "source_bundle":  "",
                       "build_artifact":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7C_LOCAL_RETURN_ISLAND_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst",
                       "staging_artifact":  "",
-                      "run_directory":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_DIAGNOSTIC_SOLVE_V01",
-                      "qualification_output":  "D:\\GNSS_Lband_Active_Array\\runs\\nonprod\\e2c_s0_entrypoint_qualification_20261002_v01\\qualification.json",
+                      "run_directory":  "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01",
+                      "qualification_output":  "evidence/M7C_STORAGE_RECOVERY_PREP_20261026",
                       "handoff":  ""
                   },
     "artifact_residency":  {
@@ -2283,5 +2283,25 @@
                                                   "forensics":  "forensics",
                                                   "metadata":  "metadata"
                                               }
-                           }
+                           ,
+    "additional_temporary_project_run_roots": [
+        {
+            "path": "C:\\GNSS_Lband_Active_Array\\runs",
+            "reason": "Same-host NTFS storage recovery; fresh outputs only; no historical relocation",
+            "created": false,
+            "long_term_storage_qualified": false
+        }
+    ]
+}
+,
+    "preparation": {
+        "base_commit": "24cc5a9cbd55443a395db6072e876ddfeaa952d6",
+        "scope": "USER_AUTHORIZED_PREPARATION_ONLY_NO_BUILD_OR_SOLVE",
+        "manifest": "execution/M7C_STORAGE_RECOVERY_SOLVE_MANIFEST_V01.json",
+        "recovery_stage_if_later_authorized": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01",
+        "formal_recovery_packet_generated": false,
+        "formal_recovery_invocations": 0,
+        "actual_solve_source_commit": "TO_BE_BOUND_BY_FUTURE_EXPLICIT_GRANT",
+        "host_evidence": "evidence/M7C_STORAGE_RECOVERY_PREP_20261026/HOST_READONLY_SNAPSHOT.json"
+    }
 }

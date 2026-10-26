@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=97
+HANDOFF_VERSION=98
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_COMPLETE
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_PREPARATION
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=D_DRIVE_CLEANUP_PASS_RECOVERY_CONTRACT_NOT_YET_AUTHORIZED
+TASK_STATUS=PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_HOST_QUALIFICATION
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -19,6 +19,30 @@ MATERIAL_AB_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
+
+## 2026-10-26 current baton — same-geometry recovery preparation
+
+Status: `PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_HOST_QUALIFICATION`.
+
+User authorized the previously proposed recovery preparation package (storage preflight, same-geometry contract, entrypoint/hash qualification and current-state synchronization). This is not a BUILD/SOLVE grant.
+
+Read `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md` and `execution/M7C_STORAGE_RECOVERY_SOLVE_MANIFEST_V01.json`.
+
+- Source model SHA and canonical companion tree are locked; no geometry/science change.
+- D: snapshot: 14,859,431,936 bytes free; insufficient for the frozen 32-GiB output budget.
+- C: is NTFS with 139,732,905,984 bytes free at the 13:45 UTC snapshot; planned fresh output is on C:.
+- F: has capacity but is exFAT and is not qualified for direct CST result storage.
+- Output budget is 32 GiB; TEMP reserve is 8 GiB. Same-volume requirement is 40 GiB.
+- These are conservative engineering reservations based on retained analog sizes, not measured peak use or a future guarantee.
+- Original storage-HOLD evidence, M7B/E2C/E2A/E2B/M6 baselines and historical packets remain unchanged.
+- Historical NW project checkout is clean but remains at `cd9e6a9`; it is not current authorization authority. Use a fresh task-private qualification checkout with `core.autocrlf=false`.
+- Actual formal packet is intentionally not generated without a fresh matching grant. No grant id has been invented.
+
+BUILD_AUTHORIZED=NO; SOLVE_AUTHORIZED=NO; active_grant=null.
+
+Next: NW nonproduction static/hash/storage/runtime-help qualification, then review the prepared recovery and request one explicit SOLVE grant. Formal packet validate/dry-run is deferred until that grant exists. No simulator open/build/solve during preparation.
+
+The sections below are historical evidence; their old authorization text is not live permission.
 
 ## 2026-10-08 current baton — D: storage cleanup PASS, M7C recovery not yet authorized
 

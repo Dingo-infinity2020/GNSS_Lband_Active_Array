@@ -13,15 +13,11 @@ Read these first:
 
 ## Current scientific phase
 
-**R1E1A2 - mechanical-support / standoff EM baseline DESIGN after R1E1A1 PASS.**
+M7C local-return-island diagnostic is closed STORAGE HOLD with no science classification. Same-geometry storage-recovery preparation is the current task; BUILD/SOLVE are closed.
 
-The isolated-element passive phase is closed.
+Read `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md`, `PROJECT_HANDOFF.md` and `execution/stage_contract.json` for the current boundary.
 
-The project mainline is:
-
-**clean feed -> periodic unit cell -> scan qualification -> pitch/material array trade -> active-impedance atlas -> finite passive array -> LNA/antenna co-design -> active periodic/finite array**
-
-Do not redirect the project into prolonged isolated-element S11 optimization.
+The mainline remains support/hub-inclusive array physics, scan-dependent active impedance, finite-array validation and receiver co-design. The LNA input match is not frozen.
 
 ## Target system envelope
 
@@ -59,30 +55,14 @@ Therefore the pitch/material trade is now the current mainline, and the final LN
 
 ## Current execution
 
-R1E0C scan qualification is closed PASS.
+`R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_PREPARATION`
 
-R1E1A0 parameterization mechanism is now closed PASS after:
-- initial formal HOLD on historical `StoreParameter` semantics;
-- R1 pitch-ready canonical-source recovery PASS;
-- R2 88/100-mm endpoint proof PASS with no protected-parameter warnings.
+`PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_HOST_QUALIFICATION`
 
-Canonical status:
-`PASS_R1E1A0_PITCH_PARAMETERIZATION_MECHANISM`.
-
-Current work:
-**R1E1A2 mechanical-support / standoff EM baseline DESIGN ONLY**.
-
-R1E1A1 is closed: `PASS_R1E1A1_SIX_PITCH_FR4_SOURCE_SET_BUILD_ONLY`.
-
-Pitch set:
-88 / 90 / 92 / 94 / 96 / 100 mm
-
-Current permissions:
-- BUILD_AUTHORIZED=NO
-- SOLVER_PERMISSION=NO
-- R1E1B remains blocked until the support baseline is defined and later sensitivity-qualified
-
-Read `PROJECT_HANDOFF.md` for the exact baton.
+- Output: new C: NTFS project run directory; existing D: baselines preserved.
+- Storage: output 32 GiB + TEMP 8 GiB, summed when sharing a filesystem.
+- Geometry, 12-port/8-source semantics, solver fidelity and M7C modal gates unchanged.
+- No production grant or actual SOLVE packet exists for recovery.
 
 ## Core documents
 
