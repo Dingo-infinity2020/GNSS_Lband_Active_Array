@@ -1,7 +1,7 @@
 # M7C same-geometry storage recovery preparation V0.1
 
 Date: 2026-10-26 (Asia/Shanghai)
-Status: OFFLINE_FROZEN_AWAIT_HOST_NONPRODUCTION_QUALIFICATION
+Status: PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_REQUALIFICATION
 
 ## Scope and authority
 
@@ -75,7 +75,7 @@ python -B scripts/audit_m7c_storage_recovery_v01.py --host-readonly
 
 The host checkout is task-private, clean and configured with `core.autocrlf=false`; the old NW checkout is not updated because it still contains the historical pre-consumption grant. Current Git/handoff/contract, not that stale checkout, controls preparation.
 
-Actual production packet generation, validate/dry-run and formal launch remain deferred. Both direct entrypoint and generator reject absent/consumed/mismatched/expired grants before simulator imports/output creation. A future grant must bind the reviewed exact Git HEAD, the new entrypoint hash and the updated stage contract. The formal packet uses `runner-task-v0.2`, native `min_free_bytes`, source/dependency/contract hashes, fresh result paths and global one-shot lock. Never replay the original packet.
+Actual production packet generation, validate/dry-run and formal launch remain deferred. Both direct entrypoint and generator reject absent/consumed/mismatched/expired grants before simulator imports/output creation. A future grant binds the qualified source commit and new entrypoint hash. That source commit must be an ancestor of the checkout containing the later authorization update; the packet separately binds exact checkout HEAD and stage-contract bytes. This avoids a self-reference in which a commit would have to contain its own SHA. The formal packet uses `runner-task-v0.2`, native `min_free_bytes`, source/dependency/contract hashes, fresh result paths and global one-shot lock. Never replay the original packet.
 
 ## Scientific acceptance and stop
 
@@ -92,3 +92,22 @@ Evidence root: `evidence/M7C_STORAGE_RECOVERY_PREP_20261026/`.
 BUILD_AUTHORIZED=false; SOLVE_AUTHORIZED=false; active_grant=null.
 
 The preparation package is reviewable independently of later production authorization. Host qualification status must be read from its evidence, not inferred from offline tests or free-space snapshots.
+
+## 2026-10-26 qualification closeout
+
+Direct SSH qualification of source commit `18f13b127a0635551edc0fa83fe6a3855e08918a` completed at 14:00:05 UTC. The checkout is clean and `core.autocrlf=false`. The entrypoint, helper, generator, frozen manifest and reused scientific source bytes are unchanged by this documentation/evidence closeout.
+
+- Offline regression: 8/8 PASS.
+- NW regression: 7 PASS; one link-creation test skipped because Windows symlink privilege is not assumed.
+- All host artifact/source/reference/tree/storage checks PASS. C: free bytes at qualification: 139,754,782,720; combined requirement: 42,949,672,960.
+- SimulationOps native contract-check PASS, no errors/warnings.
+- Historical inventory byte SHA is `e4f4157bf4248bd94c0d33b18c0a8dad4a8831ae46204d6a8fae4ecba86a8095`; isolated Git/LF byte SHA is `d8246dd39640825a95a4525b9c0fac113e00bf8adde3cd6efca59ccb8227c6c9`. Parsed JSON equality PASS.
+- Actual CST bundled Python is 3.6.0. Safe help and import-only checks PASS. A targeted subsequent read-only compatibility probe also passed artifact/tree/reference/storage checks and confirmed ungranted launch refusal under Python 3.6. This additional small probe was needed after discovering the actual runtime version; its exact source is preserved as `RUNTIME_PREFLIGHT_PROBE.py`.
+- Build invocations=0; solver invocations=0; CST application instantiations=0; actual formal packets generated=0.
+- Production output root was not created. Original NW checkout and all science baselines remain unchanged.
+
+The task-private host checkout/control evidence is CHECKPOINTED for authorization review. Retain it until that decision or explicit abandonment; no cleanup is part of this preparation. A future formal grant must bind a clean reviewed Git HEAD and current contract; validate/dry-run must then precede the single run.
+
+### Source-binding review
+
+Final review separated the qualified source commit from the later authorization-contract commit. The recovery helper and generator were updated to require qualification/source agreement and source ancestry; exact checkout HEAD remains a native packet preflight. This changes authorization bookkeeping only. A second nonproduction qualification is required for these updated helper/generator bytes; the original 18f13b1 receipts above remain historical preparation evidence.

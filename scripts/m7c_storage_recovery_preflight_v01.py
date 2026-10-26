@@ -113,11 +113,15 @@ def require_live_grant(contract, manifest, root):
             or not isinstance(grant, dict)):
         raise RuntimeError("HOLD_M7C_RECOVERY_NO_LIVE_SOLVE_GRANT")
     expected_sha = sha(Path(root) / manifest["execution"]["runner"])
+    qualified = contract["execution"].get("entrypoint_qualification", {})
     if (grant.get("kind") != "SOLVE" or grant.get("state") != "GRANTED"
             or grant.get("stage") != manifest["stage"]
             or contract["execution"]["current_stage"] != manifest["stage"]
             or grant.get("source_commit") != contract["project"]["source_commit"]
             or grant.get("entrypoint_sha256") != expected_sha
+            or qualified.get("entrypoint_sha256") != expected_sha
+            or qualified.get("last_qualified_source_commit") != grant.get("source_commit")
+            or qualified.get("qualification_status") != "PASS_M7C_RECOVERY_NONPRODUCTION_HOST_QUALIFICATION"
             or grant.get("grant_id") in {g["grant_id"] for g in contract.get("authorization_history", [])}):
         raise RuntimeError("HOLD_M7C_RECOVERY_GRANT_IDENTITY")
     if grant.get("expires_at"):
@@ -127,14 +131,22 @@ def require_live_grant(contract, manifest, root):
     return grant
 
 
+def require_source_ancestor(contract, root):
+    # The later authorization commit changes the contract itself. Bind the
+    # qualified source as an ancestor; native packet preflight binds exact HEAD.
+    result = subprocess.call(["git", "-C", str(root), "merge-base", "--is-ancestor",
+                              contract["project"]["source_commit"], "HEAD"],
+                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if result != 0:
+        raise RuntimeError("HOLD_M7C_RECOVERY_SOURCE_COMMIT")
+
+
 def require_ready(manifest, root, out, evidence, fresh):
     """Called before any simulator import/copy and again before the single solve."""
     root = Path(root)
     contract = json.loads((root / "execution/stage_contract.json").read_text(encoding="utf-8-sig"))
     require_live_grant(contract, manifest, root)
-    head = subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], universal_newlines=True).strip()
-    if head != contract["project"]["source_commit"]:
-        raise RuntimeError("HOLD_M7C_RECOVERY_SOURCE_COMMIT")
+    require_source_ancestor(contract, root)
     target = Path(manifest["execution"]["target_root"])
     if (Path(out).resolve() != (target / manifest["execution"]["artifact_name"]).resolve()
             or Path(evidence).resolve() != (target / "evidence").resolve()):

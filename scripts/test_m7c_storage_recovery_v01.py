@@ -8,7 +8,7 @@ import sys
 import tempfile
 import unittest
 from collections import namedtuple
-from m7c_storage_recovery_preflight_v01 import GIB, storage_check, tree_identity, require_live_grant, sha
+from m7c_storage_recovery_preflight_v01 import GIB, storage_check, tree_identity, require_live_grant, require_source_ancestor, sha
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "execution/M7C_STORAGE_RECOVERY_SOLVE_MANIFEST_V01.json"
@@ -100,6 +100,14 @@ class RecoveryGuards(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("NO_LIVE_SOLVE_GRANT", result.stderr)
         self.assertFalse(packet.exists())
+
+    def test_qualified_source_can_precede_authorization_checkout(self):
+        qualified_source = "24cc5a9cbd55443a395db6072e876ddfeaa952d6"
+        head = subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "HEAD"], universal_newlines=True).strip()
+        self.assertNotEqual(qualified_source, head)
+        require_source_ancestor({"project": {"source_commit": qualified_source}}, ROOT)
+        with self.assertRaisesRegex(RuntimeError, "SOURCE_COMMIT"):
+            require_source_ancestor({"project": {"source_commit": "0" * 40}}, ROOT)
 
 
 if __name__ == "__main__":

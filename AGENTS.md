@@ -23,7 +23,7 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_PREPARATION**
+Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_READY_AWAIT_AUTH**
 
 - Preparation is authorized; BUILD/SOLVE remain false and active_grant is null.
 - M7B is CLOSED/PARTIAL. M7C BUILD and human 3D review are PASS.

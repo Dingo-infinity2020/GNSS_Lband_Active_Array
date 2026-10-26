@@ -1,7 +1,7 @@
 from __future__ import print_function
 import argparse,hashlib,json,subprocess,sys
 from pathlib import Path
-from m7c_storage_recovery_preflight_v01 import require_live_grant, storage_check, artifact_checks, existing_parent, GIB
+from m7c_storage_recovery_preflight_v01 import require_live_grant, require_source_ancestor, storage_check, artifact_checks
 import os, tempfile
 def sha(p):
  h=hashlib.sha256()
@@ -18,7 +18,7 @@ def main():
  require_live_grant(c,m,root)
  if subprocess.check_output(["git","-C",str(root),"status","--porcelain"],text=True).strip():raise SystemExit("HOLD_M7C_PROJECT_DIRTY")
  head=subprocess.check_output(["git","-C",str(root),"rev-parse","HEAD"],text=True).strip()
- if head!=c["project"]["source_commit"]:raise SystemExit("HOLD_M7C_RECOVERY_SOURCE_COMMIT")
+ require_source_ancestor(c,root)
  fail=[]
  if c["authorization"]["BUILD_AUTHORIZED"] is not False:fail.append("build_false")
  if c["authorization"]["SOLVE_AUTHORIZED"] is not True:fail.append("solve_live")

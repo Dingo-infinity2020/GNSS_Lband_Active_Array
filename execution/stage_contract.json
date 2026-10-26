@@ -1927,7 +1927,7 @@
                                                   ]
                           },
     "execution":  {
-                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_PREPARATION",
+                      "current_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_READY_AWAIT_AUTH",
                       "formal_recovery_solve_invocation_count":  1,
                       "silent_retry_allowed":  false,
                       "hash_lock_required":  true,
@@ -1936,7 +1936,7 @@
                       "formal_o2b_screen_invocation_count":  9,
                       "formal_o2b_qualification_invocation_count":  3,
                       "last_completed_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
-                      "last_status":  "PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_HOST_QUALIFICATION",
+                      "last_status":  "PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_REQUALIFICATION",
                       "one_shot_required":  true,
                       "fresh_run_directory_required":  true,
                       "entrypoint_qualification":  {
@@ -1944,9 +1944,9 @@
                                                        "entrypoint_path":  "scripts/run_m7c_storage_recovery_solve_v01.py",
                                                        "runtime_identity":  "CST Studio Suite 2022 bundled Python via workspace launcher + SimulationOps control Python",
                                                        "qualification_stage":  "M7C_STORAGE_RECOVERY_NONPRODUCTION_QUALIFICATION",
-                                                       "qualification_status":  "PENDING_HOST_READONLY_QUALIFICATION",
-                                                       "qualification_evidence":  "evidence/M7C_STORAGE_RECOVERY_PREP_20261026/OFFLINE_AUDIT.json",
-                                                       "last_qualified_source_commit":  null,
+                                                       "qualification_status":  "PASS_M7C_RECOVERY_NONPRODUCTION_HOST_QUALIFICATION",
+                                                       "qualification_evidence":  "evidence/M7C_STORAGE_RECOVERY_PREP_20261026/RECEIPT.json",
+                                                       "last_qualified_source_commit":  "18f13b127a0635551edc0fa83fe6a3855e08918a",
                                                        "entrypoint_sha256":  "1bf50dc74cbf1770fdcb68c006698ba5ef02dd128ad040fcf7f52dcb628052d8"
                                                    },
                       "project_observability":  {
@@ -2041,7 +2041,7 @@
                            "forensics_command":  "runner/nw/simops.cmd forensics --packet \u003cpacket\u003e"
                        },
     "evidence":  {
-                     "status_classification":  "PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_HOST_QUALIFICATION",
+                     "status_classification":  "PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_REQUALIFICATION",
                      "source_commit_for_o3_o4":  "00bea9de782eb36c1d3f118866edd283808b6233",
                      "o3_nominal_solved_sha256":  "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
                      "o3_straight_reference_solved_sha256":  "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
@@ -2303,5 +2303,21 @@
         "formal_recovery_invocations": 0,
         "actual_solve_source_commit": "TO_BE_BOUND_BY_FUTURE_EXPLICIT_GRANT",
         "host_evidence": "evidence/M7C_STORAGE_RECOVERY_PREP_20261026/HOST_READONLY_SNAPSHOT.json"
+    ,
+    "host_qualification_status": "PASS_M7C_RECOVERY_NONPRODUCTION_HOST_QUALIFICATION",
+    "qualified_source_commit": "18f13b127a0635551edc0fa83fe6a3855e08918a",
+    "execution_route_exception": {
+        "authority": "DIRECT_USER_INSTRUCTION_2026-10-26",
+        "route": "CODEX_DIRECT_SSH",
+        "scope": "TRANSPORT_ONLY_NO_BUILD_SOLVE_GRANT"
+    },
+    "workspace": {
+        "host_alias": "NW",
+        "checkout": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout",
+        "lifecycle_state": "CHECKPOINTED",
+        "purge_allowed": false,
+        "retain_reason": "Qualified immutable recovery source/evidence for explicit authorization review",
+        "next_closeout": "AFTER_RECOVERY_AUTHORIZATION_DECISION_OR_ABANDONMENT"
     }
+}
 }

@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=98
+HANDOFF_VERSION=99
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_PREPARATION
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_READY_AWAIT_AUTH
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_HOST_QUALIFICATION
+TASK_STATUS=PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_REQUALIFICATION
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -22,7 +22,7 @@ CST251_PERMISSION=NO
 
 ## 2026-10-26 current baton — same-geometry recovery preparation
 
-Status: `PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_HOST_QUALIFICATION`.
+Status: `PASS_M7C_RECOVERY_OFFLINE_FREEZE_AWAIT_REQUALIFICATION`.
 
 User authorized the previously proposed recovery preparation package (storage preflight, same-geometry contract, entrypoint/hash qualification and current-state synchronization). This is not a BUILD/SOLVE grant.
 
@@ -40,7 +40,9 @@ Read `docs/M7C_STORAGE_RECOVERY_PREPARATION_V01.md` and `execution/M7C_STORAGE_R
 
 BUILD_AUTHORIZED=NO; SOLVE_AUTHORIZED=NO; active_grant=null.
 
-Next: NW nonproduction static/hash/storage/runtime-help qualification, then review the prepared recovery and request one explicit SOLVE grant. Formal packet validate/dry-run is deferred until that grant exists. No simulator open/build/solve during preparation.
+NW nonproduction qualification is now PASS at commit `18f13b127a0635551edc0fa83fe6a3855e08918a` (source bytes unchanged at closeout). Read `evidence/M7C_STORAGE_RECOVERY_PREP_20261026/RECEIPT.json`. Direct SSH was explicitly authorized by the user. Local regression: 8/8 PASS; NW: 7 PASS + 1 privilege-dependent symlink test skipped. CST bundled Python 3.6 help, import-only and read-only preflight compatibility PASS. Native contract-check PASS, zero warnings. No CST application/build/solve and no actual formal packet.
+
+Next: review the prepared recovery and request one explicit SOLVE grant. Formal packet validate/dry-run is deferred until that grant exists. No simulator open/build/solve during preparation.
 
 The sections below are historical evidence; their old authorization text is not live permission.
 
