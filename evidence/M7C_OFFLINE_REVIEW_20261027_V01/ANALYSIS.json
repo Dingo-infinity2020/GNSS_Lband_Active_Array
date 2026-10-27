@@ -1,0 +1,370 @@
+{
+  "schema_version": "gnss-m7c-offline-review-v0.1",
+  "science_status_unchanged": "HOLD_M7C_GUARD",
+  "build_authorized": false,
+  "solve_authorized": false,
+  "simulator_applications_launched": 0,
+  "solver_invocations": 0,
+  "input_csvs": {
+    "M7C": {
+      "host": "NW",
+      "remote_path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\qualification\\loaded_response_native.csv",
+      "cache_path": "/tmp/gnss_m7c_offline_review_20261027/M7C.csv",
+      "bytes": 7883596,
+      "sha256": "711365d2f3336a5afed0cf94e2394f0ae75e0691421c8729af6dda2425a74cae",
+      "expected_sha256": "711365d2f3336a5afed0cf94e2394f0ae75e0691421c8729af6dda2425a74cae",
+      "preexisting_hash_match": true
+    },
+    "full_E2C": {
+      "host": "NW",
+      "remote_path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\E2C_S0_COEXISTENCE_20261002_V01\\evidence\\qualification\\loaded_response_native.csv",
+      "cache_path": "/tmp/gnss_m7c_offline_review_20261027/full_E2C.csv",
+      "bytes": 7871074,
+      "sha256": "63efb3b3c046ffa633d04092d0190afc4d01ea03f4fd6316ffa1d87170af8a46",
+      "expected_sha256": "63efb3b3c046ffa633d04092d0190afc4d01ea03f4fd6316ffa1d87170af8a46",
+      "preexisting_hash_match": true
+    },
+    "M7B": {
+      "host": "NW",
+      "remote_path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7B_DIAGNOSTIC_SOLVE_V01\\evidence\\qualification\\loaded_response_native.csv",
+      "cache_path": "/tmp/gnss_m7c_offline_review_20261027/M7B.csv",
+      "bytes": 7968770,
+      "sha256": "f27353c63f21ad54c9df1ec65c81f5c901c90e8b05c14f7e430159361b562a5f",
+      "expected_sha256": null,
+      "preexisting_hash_match": null
+    },
+    "isolated_A": {
+      "host": "NW",
+      "remote_path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\E2A_S0L_SOLVE_20260929\\evidence\\loaded_response_native.csv",
+      "cache_path": "/tmp/gnss_m7c_offline_review_20261027/isolated_A.csv",
+      "bytes": 1962216,
+      "sha256": "a759ac6135a297429a8a166b6a01a39a66b5ec3a861267ed0f05d53ff605fae4",
+      "expected_sha256": "a759ac6135a297429a8a166b6a01a39a66b5ec3a861267ed0f05d53ff605fae4",
+      "preexisting_hash_match": true
+    },
+    "isolated_B": {
+      "host": "NW",
+      "remote_path": "D:\\GNSS_Lband_Active_Array\\GNSS_R4A0E2B_S0L_SOLVE_20260929\\qualification_recovery_v01\\loaded_response_native.csv",
+      "cache_path": "/tmp/gnss_m7c_offline_review_20261027/isolated_B.csv",
+      "bytes": 1962357,
+      "sha256": "103c0de1ee2353d284e84ab8e065c9e802f4e1283912d0e19f1f5c7a89ced4e5",
+      "expected_sha256": "103c0de1ee2353d284e84ab8e065c9e802f4e1283912d0e19f1f5c7a89ced4e5",
+      "preexisting_hash_match": true
+    }
+  },
+  "native_grid_identical": true,
+  "native_points": 1001,
+  "frozen_guard_reproduced": {
+    "new_excursion_db": 20.23977272266319,
+    "f_start_ghz": 1.2088,
+    "f_end_ghz": 1.2584,
+    "response_port": 2,
+    "source_port": 5,
+    "pass": false
+  },
+  "M7B_previous_guard_reproduced": {
+    "new_excursion_db": 1.9112812691476933,
+    "f_start_ghz": 1.1504,
+    "f_end_ghz": 1.2,
+    "response_port": 11,
+    "source_port": 5,
+    "pass": true
+  },
+  "guard_window": {
+    "full_E2C": {
+      "S2_5": {
+        "min_db": -103.46026306986838,
+        "min_f_ghz": 1.2584,
+        "max_db": -102.70757864486329,
+        "max_f_ghz": 1.2088,
+        "excursion_db": 0.7526844250050857,
+        "max_abs_s": 7.321854052083062e-06
+      },
+      "S5_2": {
+        "min_db": -103.47524190859079,
+        "min_f_ghz": 1.2584,
+        "max_db": -102.76559968789611,
+        "max_f_ghz": 1.2088,
+        "excursion_db": 0.7096422206946755,
+        "max_abs_s": 7.273107649158511e-06
+      },
+      "S8_11": {
+        "min_db": -102.41535840679411,
+        "min_f_ghz": 1.2584,
+        "max_db": -101.69079008050872,
+        "max_f_ghz": 1.2088,
+        "excursion_db": 0.724568326285393,
+        "max_abs_s": 8.231149618431818e-06
+      },
+      "S11_8": {
+        "min_db": -102.41484051893786,
+        "min_f_ghz": 1.2584,
+        "max_db": -101.61986268191427,
+        "max_f_ghz": 1.2088,
+        "excursion_db": 0.7949778370235947,
+        "max_abs_s": 8.29863887001816e-06
+      },
+      "pair_2_5_reciprocity": {
+        "max_abs_complex_difference": 5.3992849892766024e-08,
+        "frequency_ghz": 1.2088,
+        "db_forward": -102.70757864486329,
+        "db_reverse": -102.76559968789611
+      }
+    },
+    "M7B": {
+      "S2_5": {
+        "min_db": -86.22379664641569,
+        "min_f_ghz": 1.2088,
+        "max_db": -85.68847679760081,
+        "max_f_ghz": 1.2584,
+        "excursion_db": 0.5353198488148792,
+        "max_abs_s": 5.194887657484849e-05
+      },
+      "S5_2": {
+        "min_db": -86.28279158046533,
+        "min_f_ghz": 1.2088,
+        "max_db": -85.73799397780763,
+        "max_f_ghz": 1.2584,
+        "excursion_db": 0.5447976026576953,
+        "max_abs_s": 5.165356503562287e-05
+      },
+      "S8_11": {
+        "min_db": -85.45171635664738,
+        "min_f_ghz": 1.2088,
+        "max_db": -84.9173927305653,
+        "max_f_ghz": 1.2584,
+        "excursion_db": 0.5343236260820845,
+        "max_abs_s": 5.6771499253935945e-05
+      },
+      "S11_8": {
+        "min_db": -85.40603707414077,
+        "min_f_ghz": 1.2088,
+        "max_db": -84.88329999388566,
+        "max_f_ghz": 1.2584,
+        "excursion_db": 0.5227370802551121,
+        "max_abs_s": 5.699476932872962e-05
+      },
+      "pair_2_5_reciprocity": {
+        "max_abs_complex_difference": 3.3718153523732425e-07,
+        "frequency_ghz": 1.2088,
+        "db_forward": -86.22379664641569,
+        "db_reverse": -86.28279158046533
+      }
+    },
+    "M7C": {
+      "S2_5": {
+        "min_db": -103.07610172446566,
+        "min_f_ghz": 1.2088,
+        "max_db": -82.08364457679738,
+        "max_f_ghz": 1.2096,
+        "excursion_db": 20.992457147668276,
+        "max_abs_s": 7.867156165947698e-05
+      },
+      "S5_2": {
+        "min_db": -101.91206327571422,
+        "min_f_ghz": 1.2448000000000001,
+        "max_db": -100.21478516466516,
+        "max_f_ghz": 1.2104,
+        "excursion_db": 1.6972781110490587,
+        "max_abs_s": 9.755751778544045e-06
+      },
+      "S8_11": {
+        "min_db": -96.42509209534522,
+        "min_f_ghz": 1.2088,
+        "max_db": -95.77175299959902,
+        "max_f_ghz": 1.2584,
+        "excursion_db": 0.6533390957462046,
+        "max_abs_s": 1.627092900112362e-05
+      },
+      "S11_8": {
+        "min_db": -96.4296231386632,
+        "min_f_ghz": 1.2088,
+        "max_db": -95.7684338354627,
+        "max_f_ghz": 1.2584,
+        "excursion_db": 0.6611893032005014,
+        "max_abs_s": 1.6277147846432786e-05
+      },
+      "pair_2_5_reciprocity": {
+        "max_abs_complex_difference": 7.082533747834185e-05,
+        "frequency_ghz": 1.2096,
+        "db_forward": -82.08364457679738,
+        "db_reverse": -101.72101834358224
+      }
+    }
+  },
+  "guard_ranking_top10": [
+    {
+      "response_port": 2,
+      "source_port": 5,
+      "new_excursion_db": 20.23977272266319,
+      "start_ghz": 1.2088,
+      "end_ghz": 1.2584
+    },
+    {
+      "response_port": 6,
+      "source_port": 2,
+      "new_excursion_db": 13.673650541152327,
+      "start_ghz": 1.2088,
+      "end_ghz": 1.2584
+    },
+    {
+      "response_port": 4,
+      "source_port": 2,
+      "new_excursion_db": 10.83964275912031,
+      "start_ghz": 1.1544,
+      "end_ghz": 1.204
+    },
+    {
+      "response_port": 2,
+      "source_port": 4,
+      "new_excursion_db": 9.76368816297267,
+      "start_ghz": 1.152,
+      "end_ghz": 1.2016
+    },
+    {
+      "response_port": 1,
+      "source_port": 4,
+      "new_excursion_db": 5.555466147718803,
+      "start_ghz": 1.22,
+      "end_ghz": 1.2696
+    },
+    {
+      "response_port": 4,
+      "source_port": 1,
+      "new_excursion_db": 5.554557536573817,
+      "start_ghz": 1.22,
+      "end_ghz": 1.2696
+    },
+    {
+      "response_port": 12,
+      "source_port": 2,
+      "new_excursion_db": 4.067143159605095,
+      "start_ghz": 1.1504,
+      "end_ghz": 1.2
+    },
+    {
+      "response_port": 12,
+      "source_port": 8,
+      "new_excursion_db": 3.814065733489201,
+      "start_ghz": 1.1504,
+      "end_ghz": 1.2
+    },
+    {
+      "response_port": 3,
+      "source_port": 5,
+      "new_excursion_db": 3.441012944374407,
+      "start_ghz": 1.6,
+      "end_ghz": 1.6496
+    },
+    {
+      "response_port": 6,
+      "source_port": 1,
+      "new_excursion_db": 2.849974539768958,
+      "start_ghz": 1.2688000000000001,
+      "end_ghz": 1.3184
+    }
+  ],
+  "failing_guard_trace_count": 4,
+  "static_geometry_audit": {
+    "paired_landing_zone_extrudes": 62,
+    "local_A_B_differences": [
+      {
+        "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+        "b": "E2C_B_N_BackGround:LOCAL_BACK_GROUND",
+        "field": "LineTo"
+      }
+    ],
+    "difference_authority": "frozen B_N half-lap notch, v=12..13, u=-1..-1.125 mm",
+    "M7C_moat_tools": 16,
+    "M7C_A_B_local_cutters_identical": true,
+    "limits": "static source audit; no new kernel geometry or current distribution claim"
+  },
+  "modal_identity_max_complex_error": 4.710277376051325e-16,
+  "port_endpoint_max_error_mm": 0.0,
+  "port_A_to_B_rotation_max_error_mm": 0.0,
+  "native_warnings": {
+    "full_E2C": {
+      "thin_pec_edge_warning": true,
+      "partial_excitation_yz_warning": true
+    },
+    "M7B": {
+      "thin_pec_edge_warning": true,
+      "partial_excitation_yz_warning": true
+    },
+    "M7C": {
+      "thin_pec_edge_warning": true,
+      "partial_excitation_yz_warning": true
+    }
+  },
+  "native_direct_sample_frequencies_ghz": {
+    "full_E2C": [
+      1.8,
+      1.0,
+      1.4,
+      1.6,
+      1.2008,
+      1.7464,
+      1.1192,
+      1.2576,
+      1.0416,
+      1.504
+    ],
+    "M7B": [
+      1.8,
+      1.4,
+      1.6,
+      1.2,
+      1.0,
+      1.5296,
+      1.1304,
+      1.748
+    ],
+    "M7C": [
+      1.8,
+      1.0,
+      1.4,
+      1.6,
+      1.2144,
+      1.7496,
+      1.18,
+      1.2664,
+      1.0504,
+      1.684
+    ]
+  },
+  "problematic_positions": {
+    "full_E2C": {
+      "count": 28,
+      "inside_moat_z_span": 0,
+      "z_values_mm": [
+        57.1428566,
+        58.1428566,
+        58.4278564
+      ]
+    },
+    "M7B": {
+      "count": 30,
+      "inside_moat_z_span": 0,
+      "z_values_mm": [
+        57.1428566,
+        58.1428566,
+        58.4278564
+      ]
+    },
+    "M7C": {
+      "count": 30,
+      "inside_moat_z_span": 0,
+      "z_values_mm": [
+        57.1428566,
+        58.1428566,
+        58.4278564
+      ]
+    }
+  },
+  "limits": [
+    "weak-curve reciprocity is a diagnostic, not a replacement for the frozen absolute gate",
+    "1001 native output points are not 1001 directly solved frequency samples",
+    "Problematic Positions do not provide individual PEC edge IDs or prove causality",
+    "source geometry records do not establish RF current distributions"
+  ]
+}

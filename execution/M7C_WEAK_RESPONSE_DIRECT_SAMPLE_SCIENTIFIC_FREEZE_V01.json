@@ -1,0 +1,107 @@
+{
+  "schema_version": "gnss-m7c-direct-sample-scientific-freeze-v0.1",
+  "date": "2026-10-27",
+  "status": "SCIENTIFIC_DESIGN_FROZEN_IMPLEMENTATION_UNQUALIFIED_NO_GRANT",
+  "current_science_status": "HOLD_M7C_GUARD",
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false,
+  "active_grant": null,
+  "scientific_plan": {
+    "path": "docs/M7C_WEAK_RESPONSE_DIRECT_SAMPLE_FREEZE_V01.md",
+    "sha256": "cf8be7af0773605fec3e38000a4eae8b81b56eab05d543d586445b089e57bd5f"
+  },
+  "review_base_commit": "be0bea7a42fdabe95849ec7e88b49da786459f8f",
+  "hypothesis": "H_NUM: the 1.2096-GHz S2,5 peak is not yet a reproducible reciprocal direct-solution feature",
+  "source_build_sha256": "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98",
+  "source_companion_sha256": "76a988e78dcfa8b16967821e538039996ed51abce3f308b9047f231d4f463d52",
+  "comparison_solved_sha256": "90af39c8447d7245d6e1eb6f77930e3789b6c11c64ea14a7d314b33b07a0e5fa",
+  "direct_frequencies_ghz": [
+    1.152,
+    1.1544,
+    1.1728,
+    1.1736,
+    1.18,
+    1.2016,
+    1.204,
+    1.2088,
+    1.2096,
+    1.2104,
+    1.2112,
+    1.2144,
+    1.2328,
+    1.2448,
+    1.2584
+  ],
+  "rows": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "sources": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    10,
+    11
+  ],
+  "load_only": [
+    3,
+    6,
+    9,
+    12
+  ],
+  "primary_pair": [
+    [
+      2,
+      5
+    ],
+    [
+      5,
+      2
+    ]
+  ],
+  "context_only_responses": [
+    [
+      6,
+      2
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "diagnostic_reciprocity_abs_budget": 1e-06,
+  "old_peak_abs": 7.867156165947698e-05,
+  "old_local_directional_error_abs": 7.082533747834185e-05,
+  "outcome_rules_authority": "docs/M7C_WEAK_RESPONSE_DIRECT_SAMPLE_FREEZE_V01.md",
+  "geometry_changes_allowed": false,
+  "automatic_retries": 0,
+  "execution_entrypoint": null,
+  "execution_packet": null,
+  "future_solver_budget_only_if_separately_granted": 1,
+  "required_before_any_execution": [
+    "qualified direct-sample implementation",
+    "frozen dependency and entrypoint hashes",
+    "fresh explicit matching one-shot SOLVE grant",
+    "native contract-check/validate/dry-run",
+    "fresh protected source copy and fresh output",
+    "output/TEMP storage reservations"
+  ],
+  "current_stage_contract_sha256": "5022b213c6c63aaf23bf0391fd2a3e826f491997ae425c0205f4d4bd7ef5cb60"
+}

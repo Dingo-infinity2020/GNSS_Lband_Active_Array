@@ -1,0 +1,36 @@
+{
+  "schema_version": "gnss-m7c-offline-review-closeout-v0.1",
+  "date": "2026-10-27",
+  "review_status": "OFFLINE_REVIEW_COMPLETE_HOLD_RETAINED",
+  "science_status": "HOLD_M7C_GUARD",
+  "source_checkout_commit": "be0bea7a42fdabe95849ec7e88b49da786459f8f",
+  "simulator_applications_launched": 0,
+  "build_invocations": 0,
+  "solver_invocations": 0,
+  "automatic_retries": 0,
+  "original_stage_contract_unchanged_sha256": "5022b213c6c63aaf23bf0391fd2a3e826f491997ae425c0205f4d4bd7ef5cb60",
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "active_grant": null
+  },
+  "checks": {
+    "frozen_guard_exactly_reproduced": true,
+    "previous_M7B_guard_reproduced": true,
+    "ten_symmetry_metrics_reproduced": true,
+    "six_M7B_Sdd_reference_metrics_reproduced": true,
+    "raw_port_endpoints_and_rotation": true,
+    "all_34_downloaded_files_equal_remote_hashes": true,
+    "all_four_guard_drivers_retained": true,
+    "production_dependencies_unchanged": true,
+    "svg_plots_visually_checked": true,
+    "modal_identity_max_error_lt_1e_minus14": true
+  },
+  "artifacts": {
+    "docs/M7C_OFFLINE_ATTRIBUTION_REVIEW_20261027.md": "6697f5721628a92bbec22efccebca46137208d57d93a5a578dfbab661a1bfe18",
+    "docs/M7C_WEAK_RESPONSE_DIRECT_SAMPLE_FREEZE_V01.md": "cf8be7af0773605fec3e38000a4eae8b81b56eab05d543d586445b089e57bd5f",
+    "execution/M7C_WEAK_RESPONSE_DIRECT_SAMPLE_SCIENTIFIC_FREEZE_V01.json": "0176a3c032bedfb55256f2660ed938fe44dc92eb48a19122d48b95772b8f2f03",
+    "scripts/analyze_m7c_offline_review_v01.py": "4796435fec7087236f26fb29d7a48c123a62ae7414d3300b75ae2f0a761030fe"
+  },
+  "next_boundary": "Review the single-hypothesis scientific proposal; execution implementation remains unqualified and no grant is open."
+}

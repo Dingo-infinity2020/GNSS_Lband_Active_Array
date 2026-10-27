@@ -3,7 +3,7 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=102
+HANDOFF_VERSION=103
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
@@ -20,7 +20,19 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-26 current baton — recovery completed, scientific GUARD HOLD
+## 2026-10-27 current baton — offline review complete, scientific HOLD retained
+
+Read `docs/M7C_OFFLINE_ATTRIBUTION_REVIEW_20261027.md` and `evidence/M7C_OFFLINE_REVIEW_20261027_V01/ANALYSIS.json`.
+
+- Frozen Guard and modal results reproduced; 34 downloaded/native file hashes match.
+- Four off-diagonal responses exceed the frozen 6-dB excursion guard. S2,5 has a weak, directional feature at a non-directly-solved output frequency; numerical representation is an unproven attribution hypothesis.
+- Sdc failure is broadband and dominated by branch self-reflection asymmetry, independent of that weak S2,5 feature. Port mapping and modal algebra checks pass.
+- Native Problematic Positions remain at the inherited RF tongue/solder joint, outside the new moat height interval. Retain the PEC-edge physical-model debt.
+- `docs/M7C_WEAK_RESPONSE_DIRECT_SAMPLE_FREEZE_V01.md` freezes only a proposed single-hypothesis diagnostic. Implementation is unqualified; it is not an execution contract or grant.
+
+Current task and science status remain RESULT_REVIEW / HOLD_M7C_GUARD. BUILD/SOLVE=false, active_grant=null; stage-contract bytes are unchanged. No simulator application, new solve, geometry change, cleanup or result relocation in this review. No automatic next stage.
+
+## 2026-10-26 recovery closeout — scientific GUARD HOLD (retained)
 
 `HOLD_M7C_GUARD`. One SOLVE consumed, zero retries; runner PASS, numerical hard gates 7/7 PASS, full required 96×1001 native response set retained.
 

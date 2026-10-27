@@ -1,0 +1,47 @@
+{
+  "M7C": {
+    "host": "NW",
+    "remote_path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\qualification\\loaded_response_native.csv",
+    "cache_path": "/tmp/gnss_m7c_offline_review_20261027/M7C.csv",
+    "bytes": 7883596,
+    "sha256": "711365d2f3336a5afed0cf94e2394f0ae75e0691421c8729af6dda2425a74cae",
+    "expected_sha256": "711365d2f3336a5afed0cf94e2394f0ae75e0691421c8729af6dda2425a74cae",
+    "preexisting_hash_match": true
+  },
+  "full_E2C": {
+    "host": "NW",
+    "remote_path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\E2C_S0_COEXISTENCE_20261002_V01\\evidence\\qualification\\loaded_response_native.csv",
+    "cache_path": "/tmp/gnss_m7c_offline_review_20261027/full_E2C.csv",
+    "bytes": 7871074,
+    "sha256": "63efb3b3c046ffa633d04092d0190afc4d01ea03f4fd6316ffa1d87170af8a46",
+    "expected_sha256": "63efb3b3c046ffa633d04092d0190afc4d01ea03f4fd6316ffa1d87170af8a46",
+    "preexisting_hash_match": true
+  },
+  "M7B": {
+    "host": "NW",
+    "remote_path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7B_DIAGNOSTIC_SOLVE_V01\\evidence\\qualification\\loaded_response_native.csv",
+    "cache_path": "/tmp/gnss_m7c_offline_review_20261027/M7B.csv",
+    "bytes": 7968770,
+    "sha256": "f27353c63f21ad54c9df1ec65c81f5c901c90e8b05c14f7e430159361b562a5f",
+    "expected_sha256": null,
+    "preexisting_hash_match": null
+  },
+  "isolated_A": {
+    "host": "NW",
+    "remote_path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\E2A_S0L_SOLVE_20260929\\evidence\\loaded_response_native.csv",
+    "cache_path": "/tmp/gnss_m7c_offline_review_20261027/isolated_A.csv",
+    "bytes": 1962216,
+    "sha256": "a759ac6135a297429a8a166b6a01a39a66b5ec3a861267ed0f05d53ff605fae4",
+    "expected_sha256": "a759ac6135a297429a8a166b6a01a39a66b5ec3a861267ed0f05d53ff605fae4",
+    "preexisting_hash_match": true
+  },
+  "isolated_B": {
+    "host": "NW",
+    "remote_path": "D:\\GNSS_Lband_Active_Array\\GNSS_R4A0E2B_S0L_SOLVE_20260929\\qualification_recovery_v01\\loaded_response_native.csv",
+    "cache_path": "/tmp/gnss_m7c_offline_review_20261027/isolated_B.csv",
+    "bytes": 1962357,
+    "sha256": "103c0de1ee2353d284e84ab8e065c9e802f4e1283912d0e19f1f5c7a89ced4e5",
+    "expected_sha256": "103c0de1ee2353d284e84ab8e065c9e802f4e1283912d0e19f1f5c7a89ced4e5",
+    "preexisting_hash_match": true
+  }
+}

@@ -13,6 +13,8 @@ CST251_AUTHORIZED: false
 
 One SOLVE consumed, zero retries. Runner PASS and full numerical/response hard gates PASS; scientific GUARD HOLD. Sdd 6/6, Sdc 0/10, guard 20.2398 dB >6 dB. Retain source/results and native warnings. Authority: `docs/M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md`. Next boundary: read-only result interpretation only.
 
+2026-10-27 offline review is complete under `docs/M7C_OFFLINE_ATTRIBUTION_REVIEW_20261027.md`. Guard/modal evidence is reproduced; four guard-triggering traces retained. Weak-curve numerical representation and broadband branch asymmetry are separate unresolved attribution questions. Native PEC positions match the inherited tongue/solder region. A single-hypothesis direct-sample scientific proposal is frozen in `docs/M7C_WEAK_RESPONSE_DIRECT_SAMPLE_FREEZE_V01.md`; implementation is unqualified and no execution authority is opened. Stage contract, production evaluator and original source/results remain unchanged. Review simulator/solve invocation counts: 0/0.
+
 ## Historical SOLVE authorization header (consumed; no live authority)
 
 SimulationOps: 0.2.26 @ c074982bce2ad1bc7c0914ad422244f2cba84d4a
