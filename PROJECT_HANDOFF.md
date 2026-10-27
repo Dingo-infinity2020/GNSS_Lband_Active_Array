@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=106
+HANDOFF_VERSION=107
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_READONLY_QUALIFICATION_RECOVERY
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_RESULT_REVIEW
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=HOLD_M7C_DIRECT_POSTSOLVE_READER_REPRESENTATION
+TASK_STATUS=H_NUM_SUPPORTED_M7C_DIRECT_SAMPLE
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -20,7 +20,21 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-27 current baton — SOLVE consumed, read-only extraction recovery
+## 2026-10-27 current baton — direct-sample stage COMPLETE
+
+Diagnostic result: H_NUM_SUPPORTED_M7C_DIRECT_SAMPLE. Original scientific status: HOLD_M7C_GUARD. Read `docs/M7C_DIRECT_SAMPLE_DIAGNOSTIC_RESULT_20261027.md`.
+
+- Exactly one formal SOLVE; no geometry BUILD, no automatic retries. Solver completed; original runner HOLD_ENTRYPOINT from a reflection-record reader compatibility error is retained.
+- Zero-solver read-only extraction plus native-log semantic recovery qualifies 96 responses x 15 direct points; 11 checks PASS.
+- At 1.2096 GHz: S2,5=-101.238764 dB; S5,2=-101.229672 dB. Max primary-pair complex reciprocity difference across 15 points=8.567101e-8 <=1e-6; preregistered H_NUM support criteria pass.
+- Other Guard context and broad branch asymmetry remain; no full-band Guard/science reclassification or topology promotion.
+- Solved .cst SHA c21fa9f047d83f4f3776d5e6ef5718e8924aaf8e54f0ad8cbb7cb6a7c6681851; complete companion 59f363732e407cec1eb1f9fa62d25bc6778dccb11e40315dabaaea50482b5803 /849 files/19799723618 bytes, protected on C:.
+- Grant CONSUMED and closed; BUILD/SOLVE=false; active_grant=null. No residual simulator process. No cleanup/relocation.
+
+The delegated long task for this diagnostic stage is complete. Next allowed boundary is offline return-path hypothesis review only; no new physical execution, geometry sweep, LNA or CST251 stage opens automatically.
+
+## 2026-10-27 extraction-recovery closeout (retained)
+
 
 The single direct-sample SOLVE completed. Runner closed HOLD_ENTRYPOINT because a native get_data() representation failed during extraction; no automatic retry. Grant is CONSUMED; BUILD/SOLVE=false, active_grant=null.
 

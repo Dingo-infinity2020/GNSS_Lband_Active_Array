@@ -33,3 +33,8 @@
 - 不能证明实际直接频点计算、数值/互易精度不足、缺少必需数据或 source 漂移时保留 HOLD，不能临时追加频点或改阈值救结果。
 
 当前正式权限仍以 stage_contract.json 为准；此计划是新用户授权的范围记录，不是已资格化入口或正式 packet。
+
+
+## 2026-10-27 stage closeout
+
+Stage completed: H_NUM_SUPPORTED_M7C_DIRECT_SAMPLE, with original science HOLD retained. Exactly one solve; zero geometry builds, retries or recovery solves. See M7C_DIRECT_SAMPLE_DIAGNOSTIC_RESULT_20261027.md.

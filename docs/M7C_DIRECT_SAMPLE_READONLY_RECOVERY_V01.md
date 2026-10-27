@@ -15,3 +15,8 @@ Recovery uses the documented separate x/y accessors, checks equal lengths, and r
 - fixture with a three-item reflection record passes using separate x/y accessors; source compilation/help pass before remote extraction.
 
 The user explicitly delegated completion of this stage. Its formal SOLVE grant is now CONSUMED; current BUILD/SOLVE=false and active_grant=null. This remaining work is zero-solver read-only qualification, not a new execution grant. The original M7C science remains HOLD_M7C_GUARD independently of the diagnostic result.
+
+
+## 2026-10-27 stage closeout
+
+V01 successfully extracted all curves but conservatively retained a native-log-format HOLD because direct mode writes Sample N of 16. CPU-only recover_m7c_direct_sample_log_semantics_v02.py verifies every direct frequency and all eight excitations from exact base64-preserved solver bytes, without changing criteria. V02 is qualified H_NUM_SUPPORTED; original formal and V01 HOLD histories remain unchanged. No further solve/application was launched.

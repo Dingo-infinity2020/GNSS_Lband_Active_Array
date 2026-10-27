@@ -445,3 +445,8 @@ M7C same-geometry recovery SOLVE is closed CONSUMED with `HOLD_M7C_GUARD`. BUILD
 # Current direct-sample delegation — 2026-10-27
 
 The user explicitly delegates completion of the current same-geometry M7C direct-sample diagnostic, including the decision whether BUILD/SOLVE is needed. `docs/M7C_DIRECT_SAMPLE_STAGE_PLAN_20261027.md` bounds this authority. No geometry BUILD is selected; qualify the new entrypoint before instantiating one live SOLVE grant. Current live booleans stay false during preparation. Original science remains HOLD_M7C_GUARD; no threshold/architecture/geometry change or automatic retry is authorized.
+
+
+## 2026-10-27 stage closeout
+
+The delegated direct-sample stage is complete. Exactly one SOLVE consumed; zero retries; original runner HOLD and zero-solver read-only recovery retained. Current BUILD/SOLVE=false, active_grant=null. H_NUM_SUPPORTED does not clear the original M7C scientific HOLD or authorize another physical stage.

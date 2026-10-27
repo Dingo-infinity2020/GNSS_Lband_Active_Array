@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "scripts/run_m7c_direct_sample_solve_v01.py", line 99, in <module>
+    sys.exit(main(a.manifest,a.out,a.evidence))
+  File "scripts/run_m7c_direct_sample_solve_v01.py", line 79, in main
+    rc=qualifier.main(out,manifest_path,evidence/"qualification")
+  File "D:\quest_naoc_tarminal\SimulationOps_Runtime\NW\GNSS_Lband_Active_Array\M7C_RECOVERY_PREP_20261026\checkout\scripts\qualify_m7c_direct_sample_readonly_v01.py", line 57, in main
+    values = [(float(x),complex(y)) for x,y in p3.get_result_item(path,rid).get_data()]
+  File "D:\quest_naoc_tarminal\SimulationOps_Runtime\NW\GNSS_Lband_Active_Array\M7C_RECOVERY_PREP_20261026\checkout\scripts\qualify_m7c_direct_sample_readonly_v01.py", line 57, in <listcomp>
+    values = [(float(x),complex(y)) for x,y in p3.get_result_item(path,rid).get_data()]
+ValueError: too many values to unpack (expected 2)

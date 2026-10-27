@@ -23,16 +23,17 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_READONLY_QUALIFICATION_RECOVERY**
+Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_RESULT_REVIEW**
 
-- Original science status remains `HOLD_M7C_GUARD`; old recovery SOLVE is consumed and closed.
-- User explicitly delegates BUILD/SOLVE decisions until the current direct-sample diagnostic stage is complete (2026-10-27).
-- Selected scope: no geometry BUILD; qualify a new same-geometry, 15-direct-frequency diagnostic; at most one fresh formal SOLVE, zero automatic retries.
-- The single direct-sample SOLVE completed and its grant is CONSUMED. BUILD/SOLVE=false, active_grant=null. Runner HOLD_ENTRYPOINT is a post-solve get_data representation error. Only zero-solver read-only qualification recovery on solved SHA c21fa9f047d83f4f3776d5e6ef5718e8924aaf8e54f0ad8cbb7cb6a7c6681851 is authorized; preserve original failure.
-- Preserve geometry, materials, source/load semantics, numerical settings, old Sdc/Sdd/Guard gates, all native warnings and protected results.
-- No geometry optimization, LNA/CST251 work, old-result cleanup/relocation, or automatic next scientific stage.
+- Direct-sample diagnostic stage is COMPLETE: `H_NUM_SUPPORTED_M7C_DIRECT_SAMPLE`; original science remains `HOLD_M7C_GUARD`.
+- One formal solver completed; no geometry BUILD and zero automatic retries. Preserve original runner HOLD_ENTRYPOINT and both read-only recovery histories.
+- Qualified recovery: 96 responses x15 direct frequencies, 11 checks PASS. At 1.2096 GHz, S2,5/S5,2 both about -101.2 dB; maximum primary-pair complex reciprocity difference 8.567101e-8.
+- Other Guard context and broadband branch asymmetry remain; no full-band science reclassification or topology promotion.
+- Grant is CONSUMED/closed. BUILD/SOLVE=false, active_grant=null. Delegated diagnostic long task is complete; no further execution inherits its authority.
+- Complete source/results remain PROTECTED on C:. No cleanup/relocation, geometry/sweep/material/LNA/CST251 permission is open.
+- Allowed next boundary: offline return-path hypothesis review only.
 
-Current authority: `docs/M7C_DIRECT_SAMPLE_EXECUTION_AUTHORIZATION_20261027.md`; `docs/M7C_DIRECT_SAMPLE_STAGE_PLAN_20261027.md`; `docs/M7C_WEAK_RESPONSE_DIRECT_SAMPLE_FREEZE_V01.md`; `PROJECT_HANDOFF.md`; `execution/stage_contract.json`.
+Current authority: `docs/M7C_DIRECT_SAMPLE_DIAGNOSTIC_RESULT_20261027.md`; `PROJECT_HANDOFF.md`; `execution/stage_contract.json`.
 
 ## Historical M7B gate snapshot (superseded; no live authority)
 

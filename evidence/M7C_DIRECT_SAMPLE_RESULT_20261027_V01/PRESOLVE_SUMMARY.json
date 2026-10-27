@@ -1,0 +1,139 @@
+{
+  "status": "PASS_E2C_S0_PRESOLVE_CONFIG_READY",
+  "simulationops": "0.2.25",
+  "formal_solver_invocations": 0,
+  "formal_build_invocations": 0,
+  "source_artifact_sha256": "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98",
+  "configured_copy_sha256": "de039f1e53a1576e41baf749547331671a751a966ac9e5666d33cf8309fe28fb",
+  "config_macro": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout\\source\\cst\\M7C_DIRECT_SAMPLE_CONFIG_V01.mcr",
+  "config_macro_sha256": "3c02cf2a4713772b87272d3af2efa16b79790d1c5fda83f5ae28ddfd4e83c0ba",
+  "sentinel_manifest_sha256": "98949e9c8f198539939062593243421d83582082debf6494367ccbb8ea1c0040",
+  "port_count": 12,
+  "semantic_ports": {
+    "1": {
+      "name": "A_P_E_UP",
+      "role": "SOURCE",
+      "source_excited": true,
+      "zref_ohm": 50.0
+    },
+    "2": {
+      "name": "A_P_P_IN",
+      "role": "SOURCE_DEVICE_INPUT",
+      "source_excited": true,
+      "zref_ohm": 50.0
+    },
+    "3": {
+      "name": "A_P_P_OUT_LOAD50",
+      "role": "MATCHED_LOAD_ONLY",
+      "source_excited": false,
+      "zref_ohm": 50.0
+    },
+    "4": {
+      "name": "A_N_E_UP",
+      "role": "SOURCE",
+      "source_excited": true,
+      "zref_ohm": 50.0
+    },
+    "5": {
+      "name": "A_N_P_IN",
+      "role": "SOURCE_DEVICE_INPUT",
+      "source_excited": true,
+      "zref_ohm": 50.0
+    },
+    "6": {
+      "name": "A_N_P_OUT_LOAD50",
+      "role": "MATCHED_LOAD_ONLY",
+      "source_excited": false,
+      "zref_ohm": 50.0
+    },
+    "7": {
+      "name": "B_P_E_UP",
+      "role": "SOURCE",
+      "source_excited": true,
+      "zref_ohm": 50.0
+    },
+    "8": {
+      "name": "B_P_P_IN",
+      "role": "SOURCE_DEVICE_INPUT",
+      "source_excited": true,
+      "zref_ohm": 50.0
+    },
+    "9": {
+      "name": "B_P_P_OUT_LOAD50",
+      "role": "MATCHED_LOAD_ONLY",
+      "source_excited": false,
+      "zref_ohm": 50.0
+    },
+    "10": {
+      "name": "B_N_E_UP",
+      "role": "SOURCE",
+      "source_excited": true,
+      "zref_ohm": 50.0
+    },
+    "11": {
+      "name": "B_N_P_IN",
+      "role": "SOURCE_DEVICE_INPUT",
+      "source_excited": true,
+      "zref_ohm": 50.0
+    },
+    "12": {
+      "name": "B_N_P_OUT_LOAD50",
+      "role": "MATCHED_LOAD_ONLY",
+      "source_excited": false,
+      "zref_ohm": 50.0
+    }
+  },
+  "source_excitation_set": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    10,
+    11
+  ],
+  "matched_load_only_set": [
+    3,
+    6,
+    9,
+    12
+  ],
+  "deleted_raw_audit_ports": [
+    24,
+    23,
+    22,
+    18,
+    17,
+    16,
+    12,
+    11,
+    10,
+    6,
+    5,
+    4
+  ],
+  "required_response_terms": 96,
+  "source_side_terms": 64,
+  "output_load_pickup_terms": 32,
+  "checks": {
+    "source_artifact_unchanged": true,
+    "configured_shape_count_177": true,
+    "configured_all_expected_names": true,
+    "configured_named_queries_success": true,
+    "configured_component_counts_exact": true,
+    "geometry_material_volume_signature_unchanged": true,
+    "twelve_ports_exact": true,
+    "history_persistent_and_exact_excitation_list": true,
+    "result_tree_empty_before_solve": true,
+    "configured_hash_stable_after_fresh_reopen": true
+  },
+  "result_tree_paths_before_solve": [],
+  "interpretation": [
+    "Configured presolve copy only; no solver has run.",
+    "P_OUT ports are retained as 50-ohm passive matched loads and excluded from selected excitation.",
+    "E_DN/VDD/VBIAS ports are deleted only from the solve copy; physical copper remains open.",
+    "C_IN remains absent; final QPL9547 source impedance is not directly claimed.",
+    "No fallback to twelve-source excitation is permitted."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "HOLD_M7C_DIRECT_NUMERICAL_OR_PROVENANCE",
+  "numerical_pass": false,
+  "max_primary_pair_reciprocity_abs": 8.567101196428268e-08,
+  "budget_abs": 1e-06,
+  "at_peak_change_vs_old_abs": [
+    7.09453985762812e-05,
+    1.4708594632706558e-06
+  ],
+  "near_peak_both_directions_lte_half_old_peak": true,
+  "at_peak_both_directions_gte_0p8_old_peak": false,
+  "at_peak_direct_abs": [
+    8.67085280545513e-06,
+    8.679933743558618e-06
+  ],
+  "science_status_unchanged": "HOLD_M7C_GUARD",
+  "boundary": "No geometry change, full-band reclassification, retry or automatic next stage."
+}

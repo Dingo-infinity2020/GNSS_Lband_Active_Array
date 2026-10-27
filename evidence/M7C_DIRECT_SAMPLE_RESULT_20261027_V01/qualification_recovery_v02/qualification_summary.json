@@ -1,0 +1,1280 @@
+{
+  "status": "H_NUM_SUPPORTED_M7C_DIRECT_SAMPLE",
+  "hard_checks": {
+    "required_96_responses": true,
+    "exact_15_direct_samples": true,
+    "native_logs_confirm_direct_frequencies": true,
+    "native_final_two_delta_s_lte_0p02": true,
+    "source_side_reciprocity": true,
+    "loaded_power_upper_bound": true,
+    "native_residual_records_complete": true,
+    "no_fatal_solver_error": true,
+    "no_mesh_corruption": true,
+    "solved_artifact_unchanged_during_read": true,
+    "native_each_diagnostic_frequency_has_all_8_excitations": true
+  },
+  "diagnostic": {
+    "status": "H_NUM_SUPPORTED_M7C_DIRECT_SAMPLE",
+    "numerical_pass": true,
+    "max_primary_pair_reciprocity_abs": 8.567101196428268e-08,
+    "budget_abs": 1e-06,
+    "at_peak_change_vs_old_abs": [
+      7.09453985762812e-05,
+      1.4708594632706558e-06
+    ],
+    "near_peak_both_directions_lte_half_old_peak": true,
+    "at_peak_both_directions_gte_0p8_old_peak": false,
+    "at_peak_direct_abs": [
+      8.67085280545513e-06,
+      8.679933743558618e-06
+    ],
+    "science_status_unchanged": "HOLD_M7C_GUARD",
+    "boundary": "No geometry change, full-band reclassification, retry or automatic next stage."
+  },
+  "solved_sha256_before": "c21fa9f047d83f4f3776d5e6ef5718e8924aaf8e54f0ad8cbb7cb6a7c6681851",
+  "solved_sha256_after": "c21fa9f047d83f4f3776d5e6ef5718e8924aaf8e54f0ad8cbb7cb6a7c6681851",
+  "selected_run_id": 1,
+  "run_ids": {
+    "1D Results\\S-Parameters\\S1,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S2,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S3,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S4,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S5,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S6,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S7,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S8,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S9,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S10,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S11,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S12,1": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S1,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S2,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S3,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S4,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S5,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S6,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S7,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S8,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S9,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S10,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S11,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S12,2": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S1,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S2,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S3,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S4,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S5,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S6,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S7,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S8,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S9,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S10,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S11,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S12,4": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S1,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S2,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S3,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S4,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S5,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S6,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S7,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S8,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S9,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S10,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S11,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S12,5": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S1,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S2,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S3,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S4,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S5,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S6,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S7,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S8,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S9,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S10,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S11,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S12,7": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S1,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S2,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S3,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S4,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S5,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S6,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S7,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S8,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S9,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S10,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S11,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S12,8": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S1,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S2,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S3,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S4,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S5,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S6,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S7,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S8,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S9,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S10,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S11,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S12,10": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S1,11": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S2,11": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S3,11": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S4,11": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S5,11": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S6,11": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S7,11": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S8,11": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S9,11": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S10,11": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S11,11": [
+      0,
+      1
+    ],
+    "1D Results\\S-Parameters\\S12,11": [
+      0,
+      1
+    ]
+  },
+  "native_frequencies_ghz": [
+    1.152,
+    1.1544,
+    1.1728,
+    1.1736,
+    1.18,
+    1.2016,
+    1.204,
+    1.2088,
+    1.2096,
+    1.2104,
+    1.2112,
+    1.2144,
+    1.2328,
+    1.2448,
+    1.2584,
+    1.8
+  ],
+  "output_frequencies_ghz": [
+    1.152,
+    1.1544,
+    1.1728,
+    1.1736,
+    1.18,
+    1.2016,
+    1.204,
+    1.2088,
+    1.2096,
+    1.2104,
+    1.2112,
+    1.2144,
+    1.2328,
+    1.2448,
+    1.2584,
+    1.8
+  ],
+  "native_delta_sequence": [
+    0.07268,
+    0.0154016,
+    0.0149358
+  ],
+  "relative_residuals": {
+    "1": [
+      [
+        1.152,
+        -4.312606145503382
+      ],
+      [
+        1.1544,
+        -4.110356794441884
+      ],
+      [
+        1.1728,
+        -4.120048611005163
+      ],
+      [
+        1.1736,
+        -4.177688130213671
+      ],
+      [
+        1.18,
+        -4.3106066341367555
+      ],
+      [
+        1.2016,
+        -4.061857133747969
+      ],
+      [
+        1.204,
+        -4.154716745465462
+      ],
+      [
+        1.2088,
+        -4.10334801316597
+      ],
+      [
+        1.2096,
+        -4.178948637492353
+      ],
+      [
+        1.2104,
+        -4.405880961223896
+      ],
+      [
+        1.2112,
+        -4.492573584047908
+      ],
+      [
+        1.2144,
+        -4.604974726257889
+      ],
+      [
+        1.2328,
+        -4.437494470240489
+      ],
+      [
+        1.2448,
+        -4.355346568235271
+      ],
+      [
+        1.2584,
+        -4.3519843613120015
+      ],
+      [
+        1.8,
+        -4.034363184424201
+      ]
+    ],
+    "2": [
+      [
+        1.152,
+        -4.073494876493059
+      ],
+      [
+        1.1544,
+        -4.223849886998383
+      ],
+      [
+        1.1728,
+        -4.215877753674663
+      ],
+      [
+        1.1736,
+        -4.4418272270378205
+      ],
+      [
+        1.18,
+        -4.624389326378986
+      ],
+      [
+        1.2016,
+        -4.4812666899289155
+      ],
+      [
+        1.204,
+        -4.605707317540103
+      ],
+      [
+        1.2088,
+        -4.703948267185059
+      ],
+      [
+        1.2096,
+        -4.873905292486989
+      ],
+      [
+        1.2104,
+        -5.006729765410836
+      ],
+      [
+        1.2112,
+        -5.1621849581820385
+      ],
+      [
+        1.2144,
+        -5.310188005406635
+      ],
+      [
+        1.2328,
+        -4.926840221128157
+      ],
+      [
+        1.2448,
+        -4.988604983355635
+      ],
+      [
+        1.2584,
+        -5.107178036775386
+      ],
+      [
+        1.8,
+        -4.188983574250978
+      ]
+    ],
+    "4": [
+      [
+        1.152,
+        -4.2867686362760145
+      ],
+      [
+        1.1544,
+        -4.115578281316329
+      ],
+      [
+        1.1728,
+        -4.0410384562200905
+      ],
+      [
+        1.1736,
+        -4.099397000936791
+      ],
+      [
+        1.18,
+        -4.266543393303332
+      ],
+      [
+        1.2016,
+        -4.233628416871315
+      ],
+      [
+        1.204,
+        -4.263753346603643
+      ],
+      [
+        1.2088,
+        -4.2354567672819075
+      ],
+      [
+        1.2096,
+        -4.416085588301388
+      ],
+      [
+        1.2104,
+        -4.507373135848301
+      ],
+      [
+        1.2112,
+        -4.5606723275165955
+      ],
+      [
+        1.2144,
+        -4.618178612685406
+      ],
+      [
+        1.2328,
+        -4.385776704022313
+      ],
+      [
+        1.2448,
+        -4.230415377331807
+      ],
+      [
+        1.2584,
+        -4.1963384281154035
+      ],
+      [
+        1.8,
+        -4.137611115715367
+      ]
+    ],
+    "5": [
+      [
+        1.152,
+        -4.090647412323742
+      ],
+      [
+        1.1544,
+        -4.412472476721328
+      ],
+      [
+        1.1728,
+        -4.525005807746609
+      ],
+      [
+        1.1736,
+        -4.645512541744975
+      ],
+      [
+        1.18,
+        -4.864046963860403
+      ],
+      [
+        1.2016,
+        -4.87585187554568
+      ],
+      [
+        1.204,
+        -5.063092535177237
+      ],
+      [
+        1.2088,
+        -5.174988516519914
+      ],
+      [
+        1.2096,
+        -5.285237418152278
+      ],
+      [
+        1.2104,
+        -5.4043354452973125
+      ],
+      [
+        1.2112,
+        -5.5863036086675475
+      ],
+      [
+        1.2144,
+        -5.682945066259968
+      ],
+      [
+        1.2328,
+        -5.3616090204189915
+      ],
+      [
+        1.2448,
+        -5.414946599879292
+      ],
+      [
+        1.2584,
+        -5.483136059226986
+      ],
+      [
+        1.8,
+        -4.4326778803767555
+      ]
+    ],
+    "7": [
+      [
+        1.152,
+        -4.011858740933256
+      ],
+      [
+        1.1544,
+        -4.140909346631054
+      ],
+      [
+        1.1728,
+        -4.0336178908959965
+      ],
+      [
+        1.1736,
+        -4.074884633074084
+      ],
+      [
+        1.18,
+        -4.1349088456814656
+      ],
+      [
+        1.2016,
+        -4.016192746225281
+      ],
+      [
+        1.204,
+        -4.127256127044885
+      ],
+      [
+        1.2088,
+        -4.182410611644711
+      ],
+      [
+        1.2096,
+        -4.307992554819195
+      ],
+      [
+        1.2104,
+        -4.387908683853413
+      ],
+      [
+        1.2112,
+        -4.550226117868825
+      ],
+      [
+        1.2144,
+        -4.693929937498301
+      ],
+      [
+        1.2328,
+        -4.255385855425831
+      ],
+      [
+        1.2448,
+        -4.250794256428714
+      ],
+      [
+        1.2584,
+        -4.1845302908016055
+      ],
+      [
+        1.8,
+        -4.348770083664328
+      ]
+    ],
+    "8": [
+      [
+        1.152,
+        -4.13323491977128
+      ],
+      [
+        1.1544,
+        -4.345188579803273
+      ],
+      [
+        1.1728,
+        -4.365327536030786
+      ],
+      [
+        1.1736,
+        -4.479905755764652
+      ],
+      [
+        1.18,
+        -4.60991209305751
+      ],
+      [
+        1.2016,
+        -4.709420063487363
+      ],
+      [
+        1.204,
+        -4.882922434340108
+      ],
+      [
+        1.2088,
+        -5.0215854418382015
+      ],
+      [
+        1.2096,
+        -5.248979773081559
+      ],
+      [
+        1.2104,
+        -5.431660353038934
+      ],
+      [
+        1.2112,
+        -5.639985261155161
+      ],
+      [
+        1.2144,
+        -5.758724628490041
+      ],
+      [
+        1.2328,
+        -5.219089789831545
+      ],
+      [
+        1.2448,
+        -5.19286997545537
+      ],
+      [
+        1.2584,
+        -5.258053450428374
+      ],
+      [
+        1.8,
+        -4.2599326099431
+      ]
+    ],
+    "10": [
+      [
+        1.152,
+        -4.018928335548305
+      ],
+      [
+        1.1544,
+        -4.094128256809168
+      ],
+      [
+        1.1728,
+        -4.162734859754747
+      ],
+      [
+        1.1736,
+        -4.22047304652595
+      ],
+      [
+        1.18,
+        -4.0539966767054185
+      ],
+      [
+        1.2016,
+        -4.027036245988016
+      ],
+      [
+        1.204,
+        -4.146166055486066
+      ],
+      [
+        1.2088,
+        -4.186034691458754
+      ],
+      [
+        1.2096,
+        -4.2481927288544465
+      ],
+      [
+        1.2104,
+        -4.420009065512198
+      ],
+      [
+        1.2112,
+        -4.555206183836278
+      ],
+      [
+        1.2144,
+        -4.533518914119409
+      ],
+      [
+        1.2328,
+        -4.028340558907201
+      ],
+      [
+        1.2448,
+        -4.056836743543624
+      ],
+      [
+        1.2584,
+        -4.1418856266838935
+      ],
+      [
+        1.8,
+        -4.048110352145984
+      ]
+    ],
+    "11": [
+      [
+        1.152,
+        -4.170067790638942
+      ],
+      [
+        1.1544,
+        -4.307791862847895
+      ],
+      [
+        1.1728,
+        -4.303583423686836
+      ],
+      [
+        1.1736,
+        -4.308317902622759
+      ],
+      [
+        1.18,
+        -4.572660104119701
+      ],
+      [
+        1.2016,
+        -4.605917186608033
+      ],
+      [
+        1.204,
+        -4.75621155681437
+      ],
+      [
+        1.2088,
+        -4.987868382671002
+      ],
+      [
+        1.2096,
+        -5.112977636084642
+      ],
+      [
+        1.2104,
+        -5.254525833790142
+      ],
+      [
+        1.2112,
+        -5.294726438014831
+      ],
+      [
+        1.2144,
+        -5.3173917954815115
+      ],
+      [
+        1.2328,
+        -5.042892629194031
+      ],
+      [
+        1.2448,
+        -5.071800771886816
+      ],
+      [
+        1.2584,
+        -5.234146850384982
+      ],
+      [
+        1.8,
+        -4.222164017691066
+      ]
+    ]
+  },
+  "residual_ordinate_semantics": "native plotted ordinate retained unconverted; not an EM error bound",
+  "source_reciprocity_max_abs": 1.3218951538492361e-05,
+  "loaded_power_max": 0.9999761373137266,
+  "native_warnings": {
+    "thin_pec_edges": true,
+    "partial_excitation_yz": true
+  },
+  "new_build": false,
+  "new_solve": false,
+  "solver_launches": 0,
+  "recovery_of": "V01 log-format HOLD: direct solver writes Sample N of 16; old broadband parser expected Sample N",
+  "original_formal_qualifier_unchanged": true,
+  "recovery_source_sha256": "e6401e584afe82e59486cd7a4dc2678553a9c66d0b270736d1fbf61301c2dca0",
+  "native_direct_sample_blocks": [
+    {
+      "ordinal": 1,
+      "total": 1,
+      "frequency_ghz": 1.8,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 2,
+      "total": 16,
+      "frequency_ghz": 1.152,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 3,
+      "total": 16,
+      "frequency_ghz": 1.1544,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 4,
+      "total": 16,
+      "frequency_ghz": 1.1728,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 5,
+      "total": 16,
+      "frequency_ghz": 1.1736,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 6,
+      "total": 16,
+      "frequency_ghz": 1.18,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 7,
+      "total": 16,
+      "frequency_ghz": 1.2016,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 8,
+      "total": 16,
+      "frequency_ghz": 1.204,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 9,
+      "total": 16,
+      "frequency_ghz": 1.2088,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 10,
+      "total": 16,
+      "frequency_ghz": 1.2096,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 11,
+      "total": 16,
+      "frequency_ghz": 1.2104,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 12,
+      "total": 16,
+      "frequency_ghz": 1.2112,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 13,
+      "total": 16,
+      "frequency_ghz": 1.2144,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 14,
+      "total": 16,
+      "frequency_ghz": 1.2328,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 15,
+      "total": 16,
+      "frequency_ghz": 1.2448,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "ordinal": 16,
+      "total": 16,
+      "frequency_ghz": 1.2584,
+      "source_ports": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    }
+  ],
+  "native_log_authority": "exact base64-preserved solver bytes; rendered text is not byte authority",
+  "recovery_input_sha256": {
+    "/tmp/m7c_direct_stage_20261027/qualification_recovery_v01/qualification_summary.json": "2bc47acac4345a412e25d916548fef98352246bcbdc572f92c530c2b988839b2",
+    "/tmp/m7c_direct_stage_20261027/qualification_recovery_v01/native_output.txt.base64.txt": "7819b726a945b2734da1d28732efe71cd15071be73e8ff52ce3c431afb7ccb2f",
+    "/tmp/m7c_direct_stage_20261027/qualification_recovery_v01/direct_response_native.csv": "5a05b7ff07c66ded612c58dca4f3ae82e55ce290a4812c0518ab8edb5027c793",
+    "/tmp/gnss_m7c_offline_review_20261027/M7C.csv": "711365d2f3336a5afed0cf94e2394f0ae75e0691421c8729af6dda2425a74cae"
+  }
+}

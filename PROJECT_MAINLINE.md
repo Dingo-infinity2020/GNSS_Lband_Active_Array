@@ -332,3 +332,8 @@ After classification/review, follow the frozen AR0/mainline authority. Final LNA
 
 
 2026-10-27 update: offline review is complete; the user explicitly authorizes completion of the same-geometry weak-response direct-sample diagnostic. This is a bounded result-credibility question before any further geometry decision, not a mainline architecture change. See `docs/M7C_DIRECT_SAMPLE_STAGE_PLAN_20261027.md`; permissions/grants remain controlled by the current handoff and stage contract.
+
+
+## 2026-10-27 stage closeout
+
+The same-geometry direct-sample diagnostic is closed H_NUM_SUPPORTED_M7C_DIRECT_SAMPLE. The weak one-direction peak is not reproduced, but original HOLD_M7C_GUARD and broad branch-asymmetry evidence remain. No topology promotion or new solver follows; next boundary is offline return-path hypothesis review.
