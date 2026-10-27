@@ -1,0 +1,1 @@
+SIMOPS_EVENT {"schema_version":"simops-project-event-v0.1","event":"PHASE","phase":"complete","state":"HOLD","production_boundary":"NOT_OBSERVED","message":"HOLD_M7C_DIRECT_EXECUTION"}

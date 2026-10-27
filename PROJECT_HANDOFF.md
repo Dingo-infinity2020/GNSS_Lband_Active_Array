@@ -3,16 +3,16 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=104
+HANDOFF_VERSION=105
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01_PREPARATION
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=M7C_DIRECT_SAMPLE_IMPLEMENTATION_QUALIFICATION_IN_PROGRESS
+TASK_STATUS=M7C_DIRECT_SAMPLE_SOLVE_GRANTED_PENDING_NATIVE_PACKET_PREFLIGHT
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=NO
+SOLVER_PERMISSION=YES
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
@@ -20,7 +20,16 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-27 current baton — delegated direct-sample stage preparation
+## 2026-10-27 current baton — one qualified direct-sample SOLVE granted
+
+User delegated completion of this exact stage, including needed BUILD/SOLVE decisions. NW nonproduction qualification PASS at `d8fdb3f17a8084c910be41701f6c01e9f91181f4`: 32 host/source/storage checks, six expected command results, seven tests in each Python runtime; no simulator application/solver.
+
+One fresh SOLVE grant: `GNSS-M7C-DIRECT-SAMPLE-SOLVE-GRANT-20261027-01`; packet `GNSS-M7C-DIRECT-SAMPLE-20261027-V01`. Authority: `docs/M7C_DIRECT_SAMPLE_EXECUTION_AUTHORIZATION_20261027.md`. BUILD=false, SOLVE=true for this single grant only. Exact entrypoint SHA is bound in the stage contract; fifteen direct frequencies plus 1.8-GHz adaptation. Original science remains HOLD_M7C_GUARD.
+
+Next: native contract-check -> packet generate/validate/dry-run -> at most one formal run_solver -> read-only direct-sample qualification -> close grant and checkpoint. No geometry BUILD, automatic retry, extra frequencies, geometry optimization, cleanup/relocation, LNA or CST251 stage.
+
+## 2026-10-27 preparation closeout (historical)
+
 
 User explicitly authorizes Codex to plan and complete this stage and decide necessary BUILD/SOLVE actions. Scope is recorded in `docs/M7C_DIRECT_SAMPLE_STAGE_PLAN_20261027.md`.
 

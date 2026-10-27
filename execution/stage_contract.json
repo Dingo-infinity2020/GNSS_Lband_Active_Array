@@ -3,19 +3,30 @@
   "project": {
     "name": "GNSS_Lband_Active_Array",
     "source_branch": "project/r0-charts-scaffold",
-    "source_commit": "4ab2648015955e1e6c8f10864f063e916f4d64f1",
+    "source_commit": "d8fdb3f17a8084c910be41701f6c01e9f91181f4",
     "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
     "model_identity": "R1E1A4A_AR0_B1R_R4_A0_E2C_R7"
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": true,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
     "cst251_authorized": false,
     "semantics": "CURRENT_LIVE_ONLY",
-    "active_grant": null
+    "active_grant": {
+      "grant_id": "GNSS-M7C-DIRECT-SAMPLE-SOLVE-GRANT-20261027-01",
+      "kind": "SOLVE",
+      "state": "GRANTED",
+      "stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01",
+      "source_commit": "d8fdb3f17a8084c910be41701f6c01e9f91181f4",
+      "entrypoint_path": "scripts/run_m7c_direct_sample_solve_v01.py",
+      "entrypoint_sha256": "8905fa6bd7d13a01eeda1ce6c814af59b8642d48dd0ea6022f1c48eb5e3927e6",
+      "granted_at": "2026-10-27T02:17:39Z",
+      "expires_at": "2026-10-27T08:17:39Z",
+      "scope": "One same-geometry direct-frequency diagnostic under explicit delegated user stage authority; no geometry BUILD, no retry."
+    }
   },
   "scientific_freeze": {
     "candidate": "H3B_T01A_GCPW_ORTHOGONAL_TRANSITION",
@@ -27,7 +38,7 @@
     "pass12_delta_s": 0.01570656517587774,
     "max_delta_s_required": 0.02,
     "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
-    "next_stage": "M7C_DIRECT_SAMPLE_IMPLEMENTATION_QUALIFICATION",
+    "next_stage": "M7C_DIRECT_SAMPLE_ONE_SHOT_SOLVE",
     "stop_boundary": "SAME_GEOMETRY_DIRECT_SAMPLE_DIAGNOSTIC_ONLY_NO_RETRY_OR_AUTOMATIC_GEOMETRY_CHANGE",
     "master_plan": "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
     "simulationops_min": "0.2.12",
@@ -1924,10 +1935,11 @@
       "severe coexistence trigger",
       "unexpected source/hash/port/excitation mutation",
       "automatic retry or second solver invocation"
-    ]
+    ],
+    "m7c_direct_sample_manifest": "execution/M7C_DIRECT_SAMPLE_SOLVE_MANIFEST_V01.json"
   },
   "execution": {
-    "current_stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01_PREPARATION",
+    "current_stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true,
@@ -1936,16 +1948,18 @@
     "formal_o2b_screen_invocation_count": 9,
     "formal_o2b_qualification_invocation_count": 3,
     "last_completed_stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01",
-    "last_status": "M7C_DIRECT_SAMPLE_IMPLEMENTATION_QUALIFICATION_IN_PROGRESS",
+    "last_status": "M7C_DIRECT_SAMPLE_SOLVE_GRANTED_PENDING_NATIVE_PACKET_PREFLIGHT",
     "one_shot_required": true,
     "fresh_run_directory_required": true,
     "entrypoint_qualification": {
       "required": true,
       "entrypoint_path": "scripts/run_m7c_direct_sample_solve_v01.py",
-      "qualification_status": "PENDING_NONPRODUCTION_QUALIFICATION",
+      "qualification_status": "PASS_M7C_DIRECT_SAMPLE_NONPRODUCTION_HOST_QUALIFICATION",
       "qualification_stage": "M7C_DIRECT_SAMPLE_NONPRODUCTION_QUALIFICATION",
-      "last_qualified_source_commit": "",
-      "entrypoint_sha256": "8905fa6bd7d13a01eeda1ce6c814af59b8642d48dd0ea6022f1c48eb5e3927e6"
+      "last_qualified_source_commit": "d8fdb3f17a8084c910be41701f6c01e9f91181f4",
+      "entrypoint_sha256": "8905fa6bd7d13a01eeda1ce6c814af59b8642d48dd0ea6022f1c48eb5e3927e6",
+      "qualification_evidence": "evidence/M7C_DIRECT_SAMPLE_PREPARATION_20261027_V01/nw_qualification/RECEIPT.json",
+      "runtime_identity": "NW control Python 3.13.9; CST 2022 bundled Python 3.6.0"
     },
     "project_observability": {
       "protocol": "simops-project-event-v0.1",
@@ -1960,7 +1974,13 @@
       ],
       "simulator_smoke_required": false,
       "simulator_smoke_status": "NOT_REQUIRED_SEPARATE_FROM_ENTRYPOINT_QUALIFICATION_AND_CANONICAL_R7_BUILD",
-      "simulator_smoke_evidence": "D:\\GNSS_Lband_Active_Array\\runs\\nonprod\\e2c_s0_entrypoint_qualification_20261002_v01\\qualification.json"
+      "simulator_smoke_evidence": "D:\\GNSS_Lband_Active_Array\\runs\\nonprod\\e2c_s0_entrypoint_qualification_20261002_v01\\qualification.json",
+      "phase_budgets_seconds": {
+        "presolve_config": 600,
+        "solver_run": 7200,
+        "qualification": 900
+      },
+      "phase_budget_policy": "Cooperative elapsed checks at phase return with finally-close; generic runner 9000-s outer fail-safe for unreturned calls."
     },
     "geometry_review": {
       "required": true,
@@ -1996,13 +2016,13 @@
       "selected_build_budget": 0,
       "selected_formal_solve_budget": 1,
       "automatic_retries": 0,
-      "live_grant_deferred_until_entrypoint_qualification": true
+      "live_grant_deferred_until_entrypoint_qualification": false
     }
   },
   "workspace": {
     "host_alias": "NW",
-    "state": "CHECKPOINTED",
-    "artifact_root": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01",
+    "state": "ACTIVE",
+    "artifact_root": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_DIRECT_SAMPLE_20261027_V01",
     "purge_allowed": false,
     "cleanup_completed": false,
     "cleanup_evidence": "",
@@ -2068,7 +2088,7 @@
     "forensics_command": "runner/nw/simops.cmd forensics --packet <packet>"
   },
   "evidence": {
-    "status_classification": "HOLD_M7C_GUARD",
+    "status_classification": "M7C_DIRECT_SAMPLE_SOLVE_GRANTED_OLD_SCIENCE_HOLD_RETAINED",
     "source_commit_for_o3_o4": "00bea9de782eb36c1d3f118866edd283808b6233",
     "o3_nominal_solved_sha256": "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
     "o3_straight_reference_solved_sha256": "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",

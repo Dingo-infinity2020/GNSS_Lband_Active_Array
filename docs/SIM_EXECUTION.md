@@ -2,14 +2,16 @@
 
 SimulationOps: 0.2.26 @ c074982bce2ad1bc7c0914ad422244f2cba84d4a
 
-Current stage: R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01_PREPARATION
-Current status: M7C_DIRECT_SAMPLE_IMPLEMENTATION_QUALIFICATION_IN_PROGRESS; original science HOLD_M7C_GUARD
+Current stage: R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01
+Current status: M7C_DIRECT_SAMPLE_SOLVE_GRANTED_PENDING_NATIVE_PACKET_PREFLIGHT; original science HOLD_M7C_GUARD
 
 BUILD_AUTHORIZED: false
-SOLVE_AUTHORIZED: false
-active_grant: null
+SOLVE_AUTHORIZED: true
+active_grant: GNSS-M7C-DIRECT-SAMPLE-SOLVE-GRANT-20261027-01
 LNA_INTEGRATION_AUTHORIZED: false
 CST251_AUTHORIZED: false
+
+Current fresh authorization: `docs/M7C_DIRECT_SAMPLE_EXECUTION_AUTHORIZATION_20261027.md`. Qualification PASS at d8fdb3f; exactly one same-geometry direct-sample SOLVE, zero automatic retries. Native contract-check/validate/dry-run precede execution; no geometry BUILD. Preparation/history statements below are not live authority.
 
 2026-10-27 user explicitly delegates this direct-sample stage, including necessary BUILD/SOLVE decisions. Plan: docs/M7C_DIRECT_SAMPLE_STAGE_PLAN_20261027.md. No geometry BUILD is selected. Qualify the direct-only entrypoint/extractor before opening one matching SOLVE grant. Formal budget <=1, automatic retries=0. Current live permissions remain false during qualification; no cleanup/relocation, new geometry, LNA or CST251 scope.
 
