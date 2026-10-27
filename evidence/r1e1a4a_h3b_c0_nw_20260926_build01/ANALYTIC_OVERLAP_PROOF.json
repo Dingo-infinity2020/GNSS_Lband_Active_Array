@@ -1,0 +1,32 @@
+{
+  "status": "HOLD_R1E1A4A_H3B_C0_GEOMETRY_OVERLAP",
+  "method": "deterministic coordinate-overlap proof from frozen H3A V0.2 mechanical-land ranges and frozen H3B-C0 T01 transforms",
+  "note": "No second build and no solver. The long CST all-pairs read-only intersection query was stopped after the overlap was independently proven.",
+  "overlaps": [
+    {
+      "t01": "H3B_T01Transition:X_POS_NE_H_PAD_GND_R",
+      "parent": "H3A_MechLand:X_TOP_LAND_P_B",
+      "overlap_bounds_mm": {"x":[10.7,13.1],"y":[0.625,1.625],"z":[57.1078571428,57.1428571428]},
+      "overlap_volume_mm3": 0.084
+    },
+    {
+      "t01": "H3B_T01Transition:X_NEG_SW_H_PAD_GND_L",
+      "parent": "H3A_MechLand:X_TOP_LAND_N_A",
+      "overlap_bounds_mm": {"x":[-13.1,-10.7],"y":[-1.625,-0.625],"z":[57.1078571428,57.1428571428]},
+      "overlap_volume_mm3": 0.084
+    },
+    {
+      "t01": "H3B_T01Transition:Y_POS_NW_H_PAD_GND_R",
+      "parent": "H3A_MechLand:Y_TOP_LAND_P_A",
+      "overlap_bounds_mm": {"x":[-1.625,-0.625],"y":[10.7,13.1],"z":[57.1078571428,57.1428571428]},
+      "overlap_volume_mm3": 0.084
+    },
+    {
+      "t01": "H3B_T01Transition:Y_NEG_SE_H_PAD_GND_L",
+      "parent": "H3A_MechLand:Y_TOP_LAND_N_B",
+      "overlap_bounds_mm": {"x":[0.625,1.625],"y":[-13.1,-10.7],"z":[57.1078571428,57.1428571428]},
+      "overlap_volume_mm3": 0.084
+    }
+  ],
+  "decision": "HOLD. Do not silently union or trim. Human integration decision required: deliberately merge mechanical land into RF ground, move/split the land, or modify the local T01 ground-pad interface under a new freeze."
+}

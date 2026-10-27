@@ -1,0 +1,16 @@
+{
+  "candidate": "P24_G20_E00",
+  "pad_width_mm": 2.4,
+  "pad_gap_mm": 0.2,
+  "extension_mm": 0.0,
+  "build_sha256": "6607c5765bc1e2d4d11db1c34f7f75ed178da6bb4f302f45d166077de0061edc",
+  "checks": {
+    "shape_count_38": true,
+    "positive_volumes": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "hash_stable": true
+  }
+}

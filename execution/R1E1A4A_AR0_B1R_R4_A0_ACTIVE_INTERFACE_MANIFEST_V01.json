@@ -1,0 +1,104 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-PRESIM-20260927",
+  "project": "GNSS_Lband_Active_Array",
+  "status": "PASS_ACTIVE_INTERFACE_PRE_SIM_FREEZE",
+  "remote_execution_authorized": false,
+  "build_authorized": false,
+  "solve_authorized": false,
+  "lna_integration_authorized": false,
+  "architecture": {
+    "name": "AR0_B_STALK_TOP_TWIN_MSL_TWIN_LNA",
+    "first_stage_lnas_per_polarization": 2,
+    "polarizations": 2,
+    "total_first_stage_lnas": 4,
+    "pre_lna_balun": false
+  },
+  "device": {
+    "reference": "QPL9547",
+    "role": "G0_REFERENCE_NOT_FINAL",
+    "bias_reference": {
+      "vdd_V": 5,
+      "idd_mA": 65
+    },
+    "package": "8-pin 2x2-mm DFN",
+    "rf_input_pin": 2,
+    "rf_output_vdd_pin": 7,
+    "vbias_pin": 1,
+    "shutdown_pin": 6,
+    "backside_paddle": "RF/DC GND",
+    "dc_block_input_required": true,
+    "dc_block_output_required": true,
+    "device_data_reference_plane": "device leads",
+    "s2p_source_sha256": "fad334a226acb9fbe1e4bd769f474afa14e2c23c18f31f4750c091f3d5d0424f"
+  },
+  "em_circuit_partition": {
+    "active_device_inside_cst": false,
+    "ports_per_polarization": 4,
+    "port_names": [
+      "P1A_IN",
+      "P1A_OUT",
+      "P1B_IN",
+      "P1B_OUT"
+    ],
+    "full_dualpol_rf_port_count_later": 8,
+    "passive_em_owns": [
+      "radiator",
+      "RF tenon/solder",
+      "pre-LNA trace",
+      "device land pattern",
+      "local ground",
+      "paddle vias",
+      "component pads",
+      "post-LNA trace",
+      "mechanics",
+      "later shield/coupling"
+    ],
+    "circuit_owns": [
+      "QPL9547 S2P",
+      "noise parameters",
+      "DC-block models",
+      "bias network models",
+      "loads",
+      "gain/NF/stability analysis"
+    ]
+  },
+  "grounding": {
+    "package_local_vias_required": true,
+    "remote_lower_stalk_only_ground_baseline_forbidden": true,
+    "no_ground_contact_to_radiator_copper": true,
+    "local_twin_ground_merge_topology": "RELEASED_FOR_A0_E1_STUDY"
+  },
+  "validation_route": [
+    "A0-C0_CIRCUIT_SANITY",
+    "A0-E1_LANDING_ZONE_EM",
+    "A0-E2_INTEGRATED_ANTENNA_EM",
+    "A0-C1_ACTIVE_COSIM",
+    "A0-STAB_ASSEMBLED_FEEDBACK"
+  ],
+  "bands_GHz": {
+    "science": [
+      1.15,
+      1.65
+    ],
+    "initial_em": [
+      1,
+      1.8
+    ],
+    "low_frequency_stability_below_0p6": "SENTINEL_ONLY_FOR_CURRENT_TRL_REFERENCE"
+  },
+  "mainline_decision": {
+    "D2_M2_passive_fixture_mechanism_probe": "DEFERRED_CONTINGENCY",
+    "next": "R4_A0_C0_CIRCUIT_REFERENCE_AND_A0_E1_LANDING_ZONE_FREEZE"
+  },
+  "open_items": [
+    "machine-transcribed Rev-D PCB land pattern",
+    "package orientation",
+    "local ground island topology",
+    "paddle via count/placement",
+    "DC-block/choke/decoupling broadband component models",
+    "package input/output handoff dimensions",
+    "shield keepout",
+    "A0-E1 port coordinates and geometry predicates"
+  ]
+}

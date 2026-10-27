@@ -1,0 +1,70 @@
+{
+  "source_build_sha256": "85a27c3e4297bde65184ddda361208796efe789a030a8cfb0f310d122ac8e93c",
+  "configured_sha256": "a1972cb6bfe905c7f31c11b56553ca5c77d6967b54986939b0351cab9b88bba0",
+  "solved_sha256": "2050bba69d0a21a2a295c378d0a36a5408ad80e7399ba7403025a94a5694a604",
+  "metrics": {
+    "worst_core_return_db": -16.433750398716352,
+    "core_s21_min_db": -0.2479370025182255,
+    "core_s21_max_db": -0.10506068361168289,
+    "reciprocity_max_abs_db": 9.257737610013361e-06
+  },
+  "adaptive_delta_sequence": [
+    {
+      "pass": 2,
+      "delta_s": 0.03157837291491783
+    },
+    {
+      "pass": 3,
+      "delta_s": 0.04035279157463643
+    },
+    {
+      "pass": 4,
+      "delta_s": 0.035577170726500414
+    },
+    {
+      "pass": 5,
+      "delta_s": 0.04134804551564278
+    },
+    {
+      "pass": 6,
+      "delta_s": 0.029151587011829218
+    },
+    {
+      "pass": 7,
+      "delta_s": 0.029454521854578614
+    },
+    {
+      "pass": 8,
+      "delta_s": 0.029047895209332212
+    },
+    {
+      "pass": 9,
+      "delta_s": 0.02628777114429206
+    },
+    {
+      "pass": 10,
+      "delta_s": 0.02187113381773995
+    },
+    {
+      "pass": 11,
+      "delta_s": 0.017124265265065313
+    },
+    {
+      "pass": 12,
+      "delta_s": 0.01269419017440889
+    }
+  ],
+  "formal_solver_invocations": 1,
+  "numerically_qualified": true,
+  "final_two_delta_s": [
+    0.017124265265065313,
+    0.01269419017440889
+  ],
+  "passes_executed": 12,
+  "rf_acceptance_pass": true,
+  "candidate": "W15_G40",
+  "Wsig_mm": 1.5,
+  "Gcpw_mm": 0.4,
+  "screen_rank": 1,
+  "qualified_pass": true
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "gnss-e3d-next-simulation-freeze-v0.1",
+  "status": "PASS_E3D_NEXT_SIMULATION_IS_E2C_12PORT_COEXISTENCE_SENTINEL",
+  "mode": "OFFLINE_ONLY",
+  "raw_build_ports": 24,
+  "solve_ports": 12,
+  "source_ports": 8,
+  "load_only_ports": 4,
+  "required_complex_traces": 96,
+  "retain_per_branch": ["E_UP","P_IN","P_OUT_LOAD50"],
+  "remove_ports_per_branch": ["E_DN","B_VDD","B_VBIAS"],
+  "full_24x24_required_now": false,
+  "active_cosim_required_now": false,
+  "corrective_build_required": false,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false,
+  "next_after_future_sentinel_pass": ["RESTORE_COMPONENT_MODEL_AUTHORITY","C1_FULL_PASSIVE_NETWORK_AUTHORITY","ACTIVE_FEASIBILITY"]
+}

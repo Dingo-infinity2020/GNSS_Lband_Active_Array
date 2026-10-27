@@ -1,0 +1,45 @@
+{
+  "status": "PASS_CST_PYTHON36_RECOVERY_PREFLIGHT_COMPATIBILITY",
+  "python": "D:\\Program Files (x86)\\CST Studio Suite 2022\\AMD64\\python\\python.exe",
+  "version": "3.6.0 (default, Jul 24 2017, 16:09:32) [MSC v.1900 64 bit (AMD64)]",
+  "source_commit": "18f13b127a0635551edc0fa83fe6a3855e08918a",
+  "artifact_checks": {
+    "reviewed_source_sha256": true,
+    "complete_source_companion": true,
+    "human_review": true,
+    "full_e2c_reference": true,
+    "isolated_PolA": true,
+    "isolated_PolB": true,
+    "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_MANIFEST_V01.json": true,
+    "scripts/run_m7c_diagnostic_solve_v01.py": true,
+    "scripts/evaluate_m7c_modal_restoration_readonly_v01.py": true,
+    "scripts/configure_r1e1a4a_ar0_b1r_r4_a0_e2c_s0_presolve.py": true,
+    "scripts/qualify_r1e1a4a_ar0_b1r_r4_a0_e2c_s0_readonly.py": true,
+    "scripts/cst_bundled_python_launcher_v01.py": true,
+    "scripts/m7c_storage_recovery_preflight_v01.py": true,
+    "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_COEXISTENCE_CONFIG_V01.mcr": true,
+    "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_INVENTORY_V01.json": true,
+    "execution/M7C_HUMAN_GEOMETRY_REVIEW_PASS.json": true
+  },
+  "storage": {
+    "status": "PASS_M7C_STORAGE_PREFLIGHT",
+    "volumes": [
+      {
+        "roles": [
+          "output",
+          "temp"
+        ],
+        "probe_path": "C:\\",
+        "required_free_bytes": 42949672960,
+        "free_bytes": 139754364928,
+        "pass": true
+      }
+    ],
+    "new_build": false,
+    "new_solve": false
+  },
+  "ungranted_launch_refused": true,
+  "new_build": false,
+  "new_solve": false,
+  "application_instantiated": false
+}

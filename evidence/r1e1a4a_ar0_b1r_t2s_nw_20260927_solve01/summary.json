@@ -1,0 +1,23 @@
+{
+  "status": "HOLD_R1E1A4A_AR0_B1R_T2S_NW_OUTPUT_PORT_MESH_CORRUPTION",
+  "simulationops": "0.2.8",
+  "formal_nw_solver_invocations": 1,
+  "automatic_retries": 0,
+  "hf_solver_started": true,
+  "adaptive_pass_reached": 1,
+  "sparameters_produced": false,
+  "configured_source_sha256": "ab8a61cc781880ba938b729f44862d1d79f36dbb959288fc57ede5e61b4d2858",
+  "post_attempt_cst_sha256": "d50ce586e7e1bdfd21877aa6434b41189961ba600107679fdfd3e1f8f4acd2bd",
+  "root_cause": "NW HF Frequency Domain solver started and entered adaptive mesh refinement pass 1, but CST reported that Ports 2 and 3 had at least one endpoint not connected to a good conductor. The solver then failed with The mesh near lumped element \"2\" seems to be corrupted. The current P2/P3 discrete-port segment runs from the outer/front signal-copper surface n=+0.035 to the outer/back ground-copper surface n=-1.035, so the lumped-element line traverses the finite-thickness lossy copper sheets. CST explicitly warns that the element must not pass through PEC or lossy metal.",
+  "cst_warning": "Ports 2, 3: at least one endpoint is not connected to any good conductor.",
+  "cst_error": "The mesh near the lumped element \"2\" seems to be corrupted.",
+  "port_fix": {
+    "P1": "unchanged; 100-ohm balanced input",
+    "P2_signal_n_mm": 0.0,
+    "P2_ground_n_mm": -1.0,
+    "P3_signal_n_mm": 0.0,
+    "P3_ground_n_mm": -1.0,
+    "intent": "port segment spans FR4 only and terminates on copper/FR4 interfaces; no traversal through lossy metal"
+  },
+  "next_required_stage": "AR0_B1R_T2F_R2_OUTPUT_PORT_ENDPOINT_FIX_BUILD_ONLY_AWAIT_AUTH"
+}

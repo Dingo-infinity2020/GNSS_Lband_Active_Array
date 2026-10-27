@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-R3-D2-M0R1-20260927",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "2296ea925d297fd0a192aa2d97c61578b597d9e0",
+    "model_identity": "AR0_B1R_R3_D2_M0R1_MANUFACTURABLE_GROUND_MERGE"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_R3_D2_M0R1_BUILD_ONLY",
+    "target_control_host": "NW",
+    "entrypoint": "scripts/run_r1e1a4a_ar0_b1r_r3_d2_m0r1_build_only.py",
+    "stop_boundary": "fresh recovery build + 12 pairwise overlap audits; no solve"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": false,
+    "retry_authorized": false
+  },
+  "source": {
+    "t1r1_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e"
+  },
+  "execution": {
+    "silent_retry_allowed": false,
+    "dry_run": false,
+    "ticket_id": "GNSS-AR0-B1R-R3-D2-M0R1-20260927"
+  }
+}

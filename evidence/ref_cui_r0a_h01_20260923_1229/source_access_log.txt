@@ -1,0 +1,77 @@
+REF-CUI-R0A — PUBLISHER SOURCE ACCESS LOG
+==========================================
+
+Task      : REF-CUI-R0A-SOURCE-GEOMETRY-FREEZE-H01
+Host      : H01 (DESKTOP-GBTI6Q4)
+Date      : 2026-09-23
+Git head  : e84e6dc (project/r0-charts-scaffold)
+Toolchain : Windows PowerShell 5.1; curl.exe; webfetch
+
+RESULT: PUBLISHER FULL TEXT / FIGURES NOT ACCESSIBLE TO H01.
+        All automated paths are blocked by Cloudflare; no accessible OA mirror.
+
+Target article
+--------------
+Yuehui Cui, Zhenxing Tu, Yue Qin, RongLin Li
+"A compact broadband antenna for ultra high frequency and L band on 5G new radio
+base stations"
+IET Microwaves, Antennas & Propagation 17(5), 361-368 (2023)
+DOI: 10.1049/mia2.12343
+
+Attempts and results
+--------------------
+1) webfetch  https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/mia2.12343
+   -> HTTP 403
+
+2) curl.exe -L (browser UA) same landing URL
+   -> curl(35) schannel: TLS handshake failed (no bytes)
+
+3) curl.exe -L (browser UA) https://ietresearch.onlinelibrary.wiley.com/doi/pdfdirect/10.1049/mia2.12343
+   -> HTTP 403, 5905-byte body = Cloudflare "Just a moment..." JS challenge
+
+4) curl.exe -L (browser UA) https://ietresearch.onlinelibrary.wiley.com/doi/pdf/10.1049/mia2.12343
+   -> HTTP 403, 5887-byte body (Cloudflare challenge)
+
+5) curl.exe -L (browser UA) https://ietresearch.onlinelibrary.wiley.com/doi/epdf/10.1049/mia2.12343
+   -> HTTP 403, 5890-byte body (Cloudflare challenge)
+
+6) Invoke-WebRequest https://.../doi/pdfdirect/10.1049/mia2.12343 (browser UA)
+   -> Cloudflare "Just a moment..." challenge (JS + cookies required)
+
+7) webfetch  https://digital-library.theiet.org/content/journals/10.1049/mia2.12343
+   -> HTTP 403
+8) curl.exe  same IET Digital Library URL
+   -> HTTP 403, 5863-byte Cloudflare challenge
+
+9) webfetch  https://doaj.org/article/3f6f7a183c92471f80f0ba6035a5a75c
+   -> HTTP 403
+10) curl.exe same DOAJ URL
+   -> HTTP 403, 5839-byte Cloudflare challenge
+
+Open-access metadata checks (no usable mirror)
+---------------------------------------------
+11) Unpaywall https://api.unpaywall.org/v2/10.1049/mia2.12343
+    -> is_oa=true, oa_status=gold, license=cc-by-nc-nd
+    -> best_oa_location.url = https://doi.org/10.1049/mia2.12343
+    -> url_for_pdf = null
+12) OpenAlex https://api.openalex.org/works/doi:10.1049/mia2.12343
+    -> open_access.oa_url = https://doi.org/10.1049/mia2.12343
+    -> primary_location.pdf_url = null
+    -> has_fulltext = false ; has_content.pdf = false
+13) Semantic Scholar graph API
+    -> openAccessPdf.url = https://doi.org/10.1049/mia2.12343 (GOLD)
+    -> i.e. it points back to the blocked publisher, no repository mirror
+
+Local temp artifacts (not committed)
+------------------------------------
+temp dir : C:\Users\Administrator.DESKTOP-GBTI6Q4\AppData\Local\Temp\opencode\ref_cui\
+saved    : wiley_2.html (5905 B), wiley_3.html (5887 B), try_1/2/3.html (Cloudflare
+           challenge pages). These are bot-mitigation HTML, not article content.
+
+Conclusion
+----------
+No publisher figure, Table, or PDF could be retrieved. H01 did not attempt to
+defeat the Cloudflare challenge. The Cui 2023 Figure 7 / Table 1 symbol-to-feature
+mapping therefore cannot be audited by H01.
+
+Final status: HOLD_REF_CUI_FIGURE_ACCESS_FAILED.

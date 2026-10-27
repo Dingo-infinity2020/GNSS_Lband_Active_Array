@@ -1,0 +1,41 @@
+{
+  "schema_version": "gnss-m7c-build-closeout-v0.1",
+  "status": "PASS_M7C_BUILD_AWAIT_HUMAN_GEOMETRY_REVIEW",
+  "runner_final_status": "PASS",
+  "packet_id": "GNSS-M7C-LOCAL-RETURN-ISLAND-BUILD-V01",
+  "grant_id": "GNSS-M7C-BUILD-GRANT-20261007-01",
+  "started_at": "2026-10-07T14:56:21Z",
+  "ended_at": "2026-10-07T14:57:23Z",
+  "formal_build_invocations": 1,
+  "solver_invocations": 0,
+  "replay_detected": false,
+  "artifact": {
+    "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7C_LOCAL_RETURN_ISLAND_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst",
+    "sha256": "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98",
+    "size_bytes": 152985
+  },
+  "checks": {
+    "shape_count_exact_177": true,
+    "ports_exact_24": true,
+    "all_expected_names_query": true,
+    "unmodified_173_preserved": true,
+    "ports_byte_semantics_unchanged": true,
+    "history_persistent": true,
+    "fresh_reopen_hash_stable": true,
+    "no_solver_result_files_after_build": true
+  },
+  "volume_loss_mm3": {
+    "E2C_A_N_BackGround_LOCAL_BACK_GROUND": 0.09362500000000984,
+    "E2C_A_P_BackGround_LOCAL_BACK_GROUND": 0.09362499999999985,
+    "E2C_B_N_BackGround_LOCAL_BACK_GROUND": 0.09362500000000007,
+    "E2C_B_P_BackGround_LOCAL_BACK_GROUND": 0.09362499999999985
+  },
+  "expected_volume_loss_per_branch_mm3": 0.093625,
+  "unexpected_changed_entities": [],
+  "authorization_after_closeout": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "active_grant": null
+  },
+  "next_boundary": "USER_HUMAN_M7C_3D_GEOMETRY_REVIEW_NO_SOLVE"
+}

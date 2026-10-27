@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File ".\scripts\run_r1e1a4a_ar0_b1r_t2s_nw_once.py", line 137, in <module>
+    sys.exit(run(a.repo,a.evidence,a.work,a.source_cst))
+  File ".\scripts\run_r1e1a4a_ar0_b1r_t2s_nw_once.py", line 95, in run
+    stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
+  File "D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\lib\subprocess.py", line 403, in run
+    with Popen(*popenargs, **kwargs) as process:
+TypeError: __init__() got an unexpected keyword argument 'text'

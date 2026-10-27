@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "cmd.exe",
+    "/c",
+    "D:\\quest_naoc_tarminal\\SimulationOps\\runner\\nw\\simops.cmd",
+    "run",
+    "--packet",
+    "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIRECT_SAMPLE_20261027_V01\\task_packet.json"
+  ],
+  "cwd": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_RECOVERY_PREP_20261026\\checkout",
+  "started_utc": "2026-10-27T02:23:47.425061+00:00",
+  "automatic_retries": 0
+}

@@ -1,0 +1,64 @@
+{
+  "status": "PASS_R1E1A4A_AR0_B1R_R3_D1R1_CORRECTED_BUILD_ONLY",
+  "simulationops": "0.2.8",
+  "formal_build_products": 3,
+  "solver_invocations": 0,
+  "root_cause": "Pol-A backside ground extrusion sign was reversed; Pol-B original sign was already exterior because the local frame has opposite handedness",
+  "correction": {
+    "PolA_height_mm": -0.035,
+    "PolB_height_mm": 0.035,
+    "criterion": "zero volumetric intersection with own FR4 prong"
+  },
+  "T1R1": {
+    "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d1r1_build_work\\R1E1A4A_AR0_B1R_T1R1_GROUND_PLACEMENT_CORRECTED_BUILD_ONLY_V01.cst",
+    "sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+    "shape_count": 45,
+    "corrected_ground_volumes_mm3": [
+      1.134,
+      1.13399999999999,
+      1.134,
+      1.13399999999999
+    ],
+    "ground_prong_overlap_zero": {
+      "A_P": true,
+      "A_N": true,
+      "B_P": true,
+      "B_N": true
+    }
+  },
+  "D1A": {
+    "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d1r1_build_work\\R1E1A4A_AR0_B1R_R3_D1R1A_DIFF_CONTROL_BUILD_ONLY_V01.cst",
+    "sha256": "5aa3dd603607a70f7ac190c746e25af550f6cfcb81a9b1bb45846d9c776b6bcd",
+    "shape_count": 6,
+    "port_count": 2
+  },
+  "D1B": {
+    "artifact": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d1r1_build_work\\R1E1A4A_AR0_B1R_R3_D1R1B_COMMON_GROUND_BUILD_ONLY_V01.cst",
+    "sha256": "93d97b06bc2a739f84f88454a7efa76b27731e7bbdb2714214118a3ec0bafb35",
+    "shape_count": 7,
+    "port_count": 3,
+    "bridge_volume_mm3": 0.0840000000000007
+  },
+  "checks": {
+    "parent_hash_exact": true,
+    "t1r1_fresh_reopen_hash_stable": true,
+    "t1r1_non_ground_geometry_preserved": true,
+    "t1r1_corrected_ground_count_4": true,
+    "t1r1_corrected_ground_volume_exact": true,
+    "t1r1_ground_prong_overlap_zero_all": true,
+    "t1r1_port_count_zero": true,
+    "t1r1_result_tree_empty": true,
+    "d1a_shape_count_6": true,
+    "d1a_corrected_six_signature_exact": true,
+    "d1a_port_count_2": true,
+    "d1a_hash_stable": true,
+    "d1a_result_tree_empty": true,
+    "d1b_shape_count_7": true,
+    "d1b_corrected_six_signature_exact": true,
+    "d1b_bridge_count_1": true,
+    "d1b_bridge_volume_exact": true,
+    "d1b_port_count_3": true,
+    "d1b_hash_stable": true,
+    "d1b_result_tree_empty": true
+  }
+}

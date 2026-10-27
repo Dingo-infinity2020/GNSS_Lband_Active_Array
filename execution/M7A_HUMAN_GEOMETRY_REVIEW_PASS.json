@@ -1,0 +1,13 @@
+﻿{
+    "schema_version":  "gnss-m7-human-geometry-review-v0.1",
+    "stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7A_INNER_EDGE_SETBACK_BUILD_ONLY",
+    "status":  "PASS_M7A_HUMAN_GEOMETRY_REVIEW",
+    "artifact":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7A_INNER_EDGE_SETBACK_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7A_INNER_EDGE_SETBACK_BUILD_ONLY_V01.cst",
+    "artifact_sha256":  "f9706d9f1be0c352690b150fdc0f4f8a64448d526b9772c0a59b9eb7c3bbc896",
+    "review_basis":  "USER_MANUAL_CST_3D_REVIEW",
+    "build_status":  "PASS_R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7A_INNER_EDGE_SETBACK_BUILD_ONLY",
+    "solver_authorized":  false,
+    "m7b_build_authorized":  false,
+    "next_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7A_DIAGNOSTIC_SOLVE_PREPARATION",
+    "next_stage_authorized":  false
+}

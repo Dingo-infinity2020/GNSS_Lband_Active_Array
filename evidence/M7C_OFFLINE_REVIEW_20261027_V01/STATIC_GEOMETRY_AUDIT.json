@@ -1,0 +1,14 @@
+{
+  "paired_landing_zone_extrudes": 62,
+  "local_A_B_differences": [
+    {
+      "a": "E2C_A_N_BackGround:LOCAL_BACK_GROUND",
+      "b": "E2C_B_N_BackGround:LOCAL_BACK_GROUND",
+      "field": "LineTo"
+    }
+  ],
+  "difference_authority": "frozen B_N half-lap notch, v=12..13, u=-1..-1.125 mm",
+  "M7C_moat_tools": 16,
+  "M7C_A_B_local_cutters_identical": true,
+  "limits": "static source audit; no new kernel geometry or current distribution claim"
+}

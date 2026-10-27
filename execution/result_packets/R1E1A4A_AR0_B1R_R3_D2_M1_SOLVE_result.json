@@ -1,0 +1,71 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-R3-D2-M1-SOLVE-20260927",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R3_D2_M1_AB_SOLVES",
+  "final_status": "HOLD_R1E1A4A_AR0_B1R_R3_D2_M1_PARTIAL",
+  "formal_solver_invocations": {
+    "PolA": 1,
+    "PolB": 1
+  },
+  "automatic_retries": 0,
+  "sources": {
+    "PolA": "33294aa6200264135582ec0c0742a1b4e6ca7b2148e1adece2f64388d81d3dd6",
+    "PolB": "11b3576ff5efb4326a761554fb94d8588d22c54691d713f8181c359415bdb70e"
+  },
+  "PolA": {
+    "status": "PASS_R1E1A4A_AR0_B1R_R3_D2_M1A_CHARACTERIZED",
+    "solved_sha256": "004aea3571dfaa4616c3e225b01b74a9acc323496f47cf4187c9d50bc30a869e",
+    "final_two_delta_s": [
+      0.000007798894317846687,
+      0.000007276578140191174
+    ],
+    "worst_S11_dB": -0.28908000825703395,
+    "worst_amp_imbalance_dB": 0.02759586158318447,
+    "worst_phase_error_deg": 0.02151581753952314,
+    "worst_CMR_dB": -55.97123542502986,
+    "worst_normalized_excess_loss_dB": 1.2923132612105301
+  },
+  "PolB": {
+    "status": "HOLD_R1E1A4A_AR0_B1R_R3_D2_M1B_QUALIFICATION",
+    "solved_sha256": "8e14b35185d07d1ceb470aa98197131cfb8a06bb24bf9dc893c2fdc93186990b",
+    "final_two_delta_s": [
+      0.029204788885056614,
+      0.0000065631633296185276
+    ],
+    "worst_S11_dB": -0.3166853265869618,
+    "worst_amp_imbalance_dB": 0.021343225569019894,
+    "worst_phase_error_deg": 0.2651810064600113,
+    "worst_CMR_dB": -52.637393794782085,
+    "worst_normalized_excess_loss_dB": 1.1725576828037179,
+    "qualification_note": "Diagnostic result only; final two consecutive Delta-S do not both satisfy <=0.02."
+  },
+  "AB_comparison": {
+    "interpretation_boundary": "Full manufacturable lower-stalk asymmetry, not bridge-height-only.",
+    "max_abs_delta_S11_dB": 0.027605318329927853,
+    "max_abs_delta_amp_imbalance_dB": 0.022297379428192952,
+    "max_abs_delta_phase_error_deg": 0.2569926595346601,
+    "max_abs_delta_CMR_dB": 27.449417373664232,
+    "max_abs_delta_normalized_excess_loss_dB": 0.11975557840681228,
+    "L5_delta_Zin_ohm": {
+      "real": -0.3468829618497864,
+      "imag": 2.1398769566068836
+    },
+    "L2_delta_Zin_ohm": {
+      "real": -0.5271829143251239,
+      "imag": 1.6953538256432807
+    },
+    "L1_delta_Zin_ohm": {
+      "real": -168.20614506423942,
+      "imag": -154.49723334450505
+    }
+  },
+  "conclusion": "Both polarizations share a severe mismatch after introducing the long manufacturable lower-ground/remote-merge network. A/B scattering differences are small compared with the shared mismatch. Pol-B is not formally numerically qualified; no retry was authorized.",
+  "evidence": [
+    "evidence/r1e1a4a_ar0_b1r_r3_d2_m1_nw_20260927_solve01/A/summary.json",
+    "evidence/r1e1a4a_ar0_b1r_r3_d2_m1_nw_20260927_solve01/B/summary.json",
+    "evidence/r1e1a4a_ar0_b1r_r3_d2_m1_nw_20260927_solve01/AB_comparison.json",
+    "docs/R1E1A4A_AR0_B1R_R3_D2_M1_DUAL_POL_INTERPRETATION_V01.md"
+  ],
+  "next_boundary": "AR0_B1R_R3_D2_M2_RETURN_PATH_FIXTURE_MECHANISM_PROBE_AWAIT_AUTH"
+}

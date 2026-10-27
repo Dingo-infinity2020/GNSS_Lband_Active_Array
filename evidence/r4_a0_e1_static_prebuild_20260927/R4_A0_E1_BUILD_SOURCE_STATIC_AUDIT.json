@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.2.8",
+  "status": "HOLD_R4_A0_E1_BUILD_SOURCE_STATIC_AUDIT",
+  "source": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_BUILD_ONLY_V02.mcr",
+  "checks": {
+    "sub_main_exactly_one": true,
+    "package_land_calls_8": true,
+    "grounded_spoke_calls_5": true,
+    "plated_via_calls_4": true,
+    "discrete_port_calls_6": true,
+    "drill_subtract_present": true,
+    "via_outer_radius_0p175": true,
+    "via_inner_radius_0p125": true,
+    "fr4_1mm": true,
+    "back_ground_external": true,
+    "port_signal_z0": true,
+    "port_ground_zminus1": true,
+    "lossy_copper_sigma_5p8e7": true,
+    "no_solver_call": true,
+    "no_monitor_true": true,
+    "no_optimizer": false,
+    "six_frozen_port_locations": true
+  },
+  "expected_postbuild_shape_count": 36,
+  "expected_component_counts": {
+    "E1_Substrate": 1,
+    "E1_BackGround": 1,
+    "E1_Signal": 10,
+    "E1_PackageLands": 8,
+    "E1_LocalGroundTop": 7,
+    "E1_Vias": 4,
+    "E1_Bias": 5
+  },
+  "consumed_via_drill_tool_count": 4,
+  "expected_port_count": 6,
+  "execution": "NOT_EXECUTED"
+}

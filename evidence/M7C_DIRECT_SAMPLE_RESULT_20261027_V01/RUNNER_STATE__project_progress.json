@@ -1,0 +1,17 @@
+{
+  "schema_version": "simops-project-progress-v0.1",
+  "protocol_observed": true,
+  "event_count": 6,
+  "protocol_error_count": 0,
+  "last_event_index": 6,
+  "phase": "complete",
+  "state": "HOLD",
+  "current": null,
+  "total": null,
+  "message": "HOLD_M7C_DIRECT_EXECUTION",
+  "observed_at": "2026-10-27T02:35:08Z",
+  "production_boundary": "OBSERVED",
+  "last_rejected_event": null,
+  "last_rejection_reason": null,
+  "last_rejected_observed_at": null
+}

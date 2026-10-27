@@ -1,0 +1,89 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E1-PREBUILD-20260927",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E1_PREBUILD",
+  "final_status": "PASS_R4_A0_E1_PREBUILD_READY_AWAIT_BUILD_AUTH",
+  "remote_calls": 0,
+  "cst_builds": 0,
+  "solver_invocations": 0,
+  "authority": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "active_mainline": {
+    "passive_fixture_s11": "DIAGNOSTIC_ONLY",
+    "lnas_per_polarization": 2,
+    "QPL9547_role": "G0_REFERENCE",
+    "active_device_inside_CST": false,
+    "em_circuit_reference_plane": "device leads"
+  },
+  "e1": {
+    "scope": "one-LNA landing-zone passive EM coupon",
+    "coupon_mm": {
+      "q": [
+        -2,
+        2
+      ],
+      "v": [
+        3,
+        13
+      ],
+      "fr4_thickness": 1
+    },
+    "expected_postbuild_shape_count": 36,
+    "expected_component_counts": {
+      "E1_Substrate": 1,
+      "E1_BackGround": 1,
+      "E1_Signal": 10,
+      "E1_PackageLands": 8,
+      "E1_LocalGroundTop": 7,
+      "E1_Vias": 4,
+      "E1_Bias": 5
+    },
+    "port_count": 6,
+    "port_names": [
+      "E_UP",
+      "P_IN",
+      "P_OUT",
+      "E_DN",
+      "B_VDD",
+      "B_VBIAS"
+    ],
+    "differential_ports": 0,
+    "paddle_vias": 3,
+    "dedicated_CRF_ground_vias": 1,
+    "plated_via_rule": "0.35-mm drill / 0.25-mm finished hole; subtract FR4 drill before annular barrel",
+    "minimum_static_unrelated_copper_clearance_mm": 0.2,
+    "narrowest_location": "downstream RF trace vs right-side decoupling lane"
+  },
+  "sources": {
+    "macro_v02": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_BUILD_ONLY_V02.mcr",
+    "runner": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e1_build_only.py",
+    "build_freeze": "docs/R1E1A4A_AR0_B1R_R4_A0_E1_BUILD_ONLY_FREEZE_V02.md",
+    "task": "execution/task_packets/R1E1A4A_AR0_B1R_R4_A0_E1_BUILD_task.json"
+  },
+  "audits": [
+    {
+      "status": "PASS_R4_A0_E1_STATIC_PREBUILD_ARITHMETIC_AUDIT",
+      "path": "evidence/r4_a0_e1_static_prebuild_20260927/R4_A0_E1_STATIC_ARITHMETIC_AUDIT.json"
+    },
+    {
+      "status": "HOLD_R4_A0_E1_BUILD_SOURCE_STATIC_AUDIT",
+      "path": "evidence/r4_a0_e1_static_prebuild_20260927/R4_A0_E1_BUILD_SOURCE_STATIC_AUDIT.json",
+      "note": "false positive: prohibition comment contained word optimizer"
+    },
+    {
+      "status": "PASS_R4_A0_E1_BUILD_SOURCE_STATIC_AUDIT_RECOVERY",
+      "path": "evidence/r4_a0_e1_static_prebuild_20260927/R4_A0_E1_BUILD_SOURCE_STATIC_AUDIT_RECOVERY.json"
+    }
+  ],
+  "preexecution_correction": {
+    "v01_macro": "PRE_EXECUTION_SUPERSEDED",
+    "reason": "via barrels initially crossed FR4 without explicit drilled-hole subtraction",
+    "v02_macro": "FROZEN",
+    "executed_v01": false
+  },
+  "next_boundary": "A0_E1_BUILD_ONLY_AWAIT_AUTH"
+}

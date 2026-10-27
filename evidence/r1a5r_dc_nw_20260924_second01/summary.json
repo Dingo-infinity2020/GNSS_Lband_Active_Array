@@ -1,0 +1,164 @@
+{
+  "base_cst": "D:\\GNSS_Lband_Active_Array\\_r1a4_differential_ports_work\\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst",
+  "base_cst_sha256": "4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
+  "pre_config_copy_sha256": "4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
+  "config_sha256": "0f16ce84ef99778a6132530c89df9de7cd94504fc8633176782ef4187f717cb4",
+  "r1a5_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5r_second_order_work\\R1A5R_SECOND_ORDER_V01.cst",
+  "r1a5_cst_sha256": "f2254cffe07312270d115e95f5526d5841411a865571dfc22c8a3321a98e24e0",
+  "r1a5_cst_bytes": 48039,
+  "solver": "HF Frequency Domain",
+  "mesh": "tetrahedral second order; curvature order 3; general purpose; adaptation off",
+  "frequency_ghz": [
+    1.0,
+    1.8
+  ],
+  "background_space_mm": 50,
+  "metrics": {
+    "point_count": 1001,
+    "invalid_complex_values": 0,
+    "max_abs_s11_s22_db_diff": 0.5584631593748632,
+    "max_complex_reciprocity_error": 0.0001862085818477911,
+    "best_s11": {
+      "f_ghz": 1.752,
+      "db": -19.145165725480485
+    },
+    "best_s22": {
+      "f_ghz": 1.752,
+      "db": -19.70362414780219
+    },
+    "anchors": {
+      "1.17645": {
+        "f_ghz": 1.1768,
+        "s11_db": -9.701700902937304,
+        "s22_db": -9.977133715177981,
+        "s21_db": -44.72350142935659,
+        "s12_db": -44.71218761303543,
+        "zin1_ohm": [
+          103.37274525805836,
+          -70.3477844577312
+        ],
+        "zin2_ohm": [
+          103.94437590987634,
+          -68.05369540804713
+        ],
+        "s21_interpretation": "QUALITATIVE_ONLY"
+      },
+      "1.2276": {
+        "f_ghz": 1.2272,
+        "s11_db": -13.149579405273633,
+        "s22_db": -13.440044282585891,
+        "s21_db": -46.020044613236955,
+        "s12_db": -46.02767900531315,
+        "zin1_ohm": [
+          80.17861897956709,
+          -35.20082355017617
+        ],
+        "zin2_ohm": [
+          80.08902016447782,
+          -33.51490700903006
+        ],
+        "s21_interpretation": "QUALITATIVE_ONLY"
+      },
+      "1.27875": {
+        "f_ghz": 1.2784,
+        "s11_db": -16.47676338695017,
+        "s22_db": -16.554329394626052,
+        "s21_db": -46.006168228115804,
+        "s12_db": -46.0196657252951,
+        "zin1_ohm": [
+          75.85690945263006,
+          -10.75965684728678
+        ],
+        "zin2_ohm": [
+          75.58350485852306,
+          -9.347417439096345
+        ],
+        "s21_interpretation": "QUALITATIVE_ONLY"
+      },
+      "1.4": {
+        "f_ghz": 1.4,
+        "s11_db": -18.868516431307302,
+        "s22_db": -18.426427488652276,
+        "s21_db": -45.63791791004425,
+        "s12_db": -45.63772353160075,
+        "zin1_ohm": [
+          92.62791101702504,
+          20.802820060177034
+        ],
+        "zin2_ohm": [
+          92.30328146397174,
+          21.88446815764622
+        ],
+        "s21_interpretation": "QUALITATIVE_ONLY"
+      },
+      "1.5611": {
+        "f_ghz": 1.5608,
+        "s11_db": -18.03714885709806,
+        "s22_db": -18.07127534725326,
+        "s21_db": -44.86670991548395,
+        "s12_db": -44.8645751399537,
+        "zin1_ohm": [
+          125.39241029492914,
+          12.488873030496311
+        ],
+        "zin2_ohm": [
+          124.87389275502906,
+          13.129517074748696
+        ],
+        "s21_interpretation": "QUALITATIVE_ONLY"
+      },
+      "1.57542": {
+        "f_ghz": 1.5752000000000002,
+        "s11_db": -18.07657822597713,
+        "s22_db": -18.15644085795298,
+        "s21_db": -44.810243641682376,
+        "s12_db": -44.81104008526802,
+        "zin1_ohm": [
+          126.67522695760444,
+          9.483879367790713
+        ],
+        "zin2_ohm": [
+          126.09634218318902,
+          10.102798513941401
+        ],
+        "s21_interpretation": "QUALITATIVE_ONLY"
+      },
+      "1.602": {
+        "f_ghz": 1.6024,
+        "s11_db": -18.199640998804032,
+        "s22_db": -18.36722712713233,
+        "s21_db": -44.7151436250483,
+        "s12_db": -44.7207752009642,
+        "zin1_ohm": [
+          127.82009356939867,
+          3.4431482082144718
+        ],
+        "zin2_ohm": [
+          127.11186564905864,
+          4.0481797268578985
+        ],
+        "s21_interpretation": "QUALITATIVE_ONLY"
+      }
+    }
+  },
+  "checks": {
+    "base_hash_match": true,
+    "pre_config_copy_hash_match": true,
+    "port_count_2": true,
+    "geometry_unchanged": true,
+    "all_curves_present": true,
+    "no_nan_inf": true,
+    "reciprocity_pass": true,
+    "pol_symmetry_pass": true,
+    "pass": true
+  },
+  "warning_line_count": 6,
+  "port_model_caveat": "Crossed discrete-edge ports add artificial coupling; isolation near/below -50 dB is port-model-limited.",
+  "log": [
+    "BASE_CST_SHA256=4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
+    "PRE_CONFIG_COPY_SHA256=4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
+    "CONFIG_SHA256=0f16ce84ef99778a6132530c89df9de7cd94504fc8633176782ef4187f717cb4",
+    "PRE_SOLVER_PROVENANCE_PASS",
+    "SOLVER_COMPLETED"
+  ]
+}

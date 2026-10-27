@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2C-OFFLINE-FREEZE-PASS-20260929",
+  "project": "GNSS_Lband_Active_Array",
+  "status": "PASS_R4_A0_E2C_ROUTE_GEOMETRY_AND_SENTINEL_CONTRACTS_FROZEN",
+  "work_class": "OFFLINE_CONTRACT_FREEZE_ONLY",
+  "remote_calls": 0,
+  "build_invocations": 0,
+  "solver_invocations": 0,
+  "frozen_route": "E2C_COEXISTENCE -> D0_MODEL_AUTHORITY -> C1_FULL_NETWORK_ACTIVE_FEASIBILITY -> PERIODIC_SCAN_ACTIVE_IMPEDANCE -> FINAL_CODESIGN",
+  "geometry_contract": {
+    "final_shape_count": 177,
+    "raw_ports": 24,
+    "plated_vias": 16,
+    "new_shapes": 144,
+    "deleted_parent_shapes": 12,
+    "parent_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e"
+  },
+  "sentinel_contract": {
+    "reduced_ports": 12,
+    "source_columns": 8,
+    "matched_load_only_ports": 4,
+    "required_complex_traces": 96,
+    "full_24x24_first_solve": false
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2C_BUILD_SOURCE_STATIC_PREPARATION"
+}

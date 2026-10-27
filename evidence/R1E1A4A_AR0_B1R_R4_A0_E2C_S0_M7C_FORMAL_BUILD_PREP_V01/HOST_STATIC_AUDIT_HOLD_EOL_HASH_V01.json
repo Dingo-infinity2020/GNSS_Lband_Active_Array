@@ -1,0 +1,22 @@
+{
+  "schema_version": "gnss-m7c-host-static-audit-hold-v0.1",
+  "status": "HOLD_M7C_FORMAL_BUILD_STATIC_CONTRACT",
+  "failed_checks": [
+    "freeze_hash",
+    "macro_hash"
+  ],
+  "cause": "Host-byte CRLF hashes differed from connector-text LF hashes. All geometry, authorization, zero-solver, count, packet and runner semantic checks passed.",
+  "host_observed": {
+    "macro_sha256": "9fcc3a9f6ce0874069ecce6776503d45fa844b6d02903049f988f3f12d993350",
+    "candidate_manifest_sha256_before_fix": "4d9ba3db09f302a71398dab20e5730560190e93281ad9500d93da1097e0b059c"
+  },
+  "correction": {
+    "candidate_manifest_macro_sha256": "9fcc3a9f6ce0874069ecce6776503d45fa844b6d02903049f988f3f12d993350",
+    "formal_manifest_macro_sha256": "9fcc3a9f6ce0874069ecce6776503d45fa844b6d02903049f988f3f12d993350",
+    "formal_manifest_candidate_host_sha256_after_fix": "350d2f3dd2d1e62d0ff0171e52e59da9cbffc96b7fc65f28b20c3e09c67c6faa"
+  },
+  "formal_build_invocations": 0,
+  "solver_invocations": 0,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false
+}

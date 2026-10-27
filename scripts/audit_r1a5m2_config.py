@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import sys
+
+p=Path("source/cst/R1A5M2_ADAPTIVE_MAXPASS8_CONFIG_V01.mcr")
+if not p.exists():
+    print("HOLD_R1A5M2_CONFIG_MISSING")
+    raise SystemExit(2)
+
+t=p.read_text(encoding="utf-8")
+exec_text="\n".join(x for x in t.splitlines() if not x.lstrip().startswith("'"))
+fail=[]
+
+for token in (
+    "With Brick","With Extrude","With Material","With Transform","Solid.",
+    "DiscretePort","WaveguidePort","LumpedElement",
+    "Optimizer.","ParameterSweep","StartSolver","Solver.Start"
+):
+    if token in exec_text:
+        fail.append("forbidden:"+token)
+
+required=(
+    'Solver.FrequencyRange "1.0", "1.8"',
+    'ChangeSolverType "HF Frequency Domain"',
+    '.SetMeshType "Tet"',
+    '.Set "CurvatureOrder", "3"',
+    'FDSolver.OrderTet "Second"',
+    'FDSolver.SetMethod "Tetrahedral", "General purpose"',
+    '.SetType "HighFrequencyTet"',
+    '.SetAdaptionStrategy "ExpertSystem"',
+    '.MinPasses "3"',
+    '.MaxPasses "8"',
+    '.MaxDeltaS "0.02"',
+    '.NumberOfDeltaSChecks "2"',
+    '.SetLinearGrowthLimitation "40"',
+    'FDSolver.MeshAdaptionTet "True"',
+)
+for x in required:
+    if x not in t:
+        fail.append("missing:"+x)
+
+if '.MaxPasses "6"' in t:
+    fail.append("old_maxpasses_6_present")
+
+if fail:
+    print("HOLD_R1A5M2_STATIC_AUDIT")
+    for x in fail:
+        print("- "+x)
+    raise SystemExit(3)
+
+print("PASS_R1A5M2_STATIC_AUDIT")
+print("PHYSICAL_CHANGES=0")
+print("ONLY_ALLOWED_DELTA=MAXPASSES_6_TO_8")
+print("MIN_PASSES=3")
+print("MAX_PASSES=8")
+print("MAX_DELTA_S=0.02")
+print("DELTA_S_CHECKS=2")
+print("SOLVER=HF_FREQUENCY_DOMAIN")
+print("MESH=TETRA_SECOND_ORDER_ADAPTIVE")

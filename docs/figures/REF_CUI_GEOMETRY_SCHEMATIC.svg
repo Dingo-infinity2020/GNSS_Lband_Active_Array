@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <style>
+    text{font-family:Arial,sans-serif;fill:#111}
+    .metal{fill:#f3b21a;stroke:#9a6b00;stroke-width:2}
+    .sub{fill:#eeeeee;stroke:#777;stroke-width:2}
+    .dim{stroke:#1d4ed8;stroke-width:2;fill:none}
+    .lbl{font-size:22px;fill:#1d4ed8;font-weight:700}
+    .small{font-size:18px}
+    .title{font-size:28px;font-weight:700}
+  </style>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 z" fill="#1d4ed8"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="45" class="title">REF-CUI project-owned geometry mapping schematic</text>
+  <text x="40" y="75" class="small">Not a publisher figure. Used only to map Table-1 symbols to geometric features before CST BUILD-ONLY.</text>
+
+  <!-- Top view -->
+  <text x="80" y="125" class="title">A. Figure 7(b) topology</text>
+  <rect x="100" y="150" width="500" height="500" class="sub"/>
+  <rect x="120" y="170" width="460" height="460" fill="none" stroke="#f3b21a" stroke-width="26"/>
+  <!-- four stylized dipole-arm sectors -->
+  <path d="M210 240 L350 240 L345 330 L355 390 L210 390 Z" class="metal"/>
+  <path d="M490 240 L350 240 L355 330 L345 390 L490 390 Z" class="metal"/>
+  <path d="M210 560 L350 560 L345 470 L355 410 L210 410 Z" class="metal"/>
+  <path d="M490 560 L350 560 L355 470 L345 410 L490 410 Z" class="metal"/>
+  <!-- open-slot U shapes -->
+  <path d="M230 365 L230 275 L330 275" stroke="white" stroke-width="12" fill="none"/>
+  <path d="M470 365 L470 275 L370 275" stroke="white" stroke-width="12" fill="none"/>
+  <path d="M230 435 L230 525 L330 525" stroke="white" stroke-width="12" fill="none"/>
+  <path d="M470 435 L470 525 L370 525" stroke="white" stroke-width="12" fill="none"/>
+  <!-- center crossed gaps -->
+  <rect x="344" y="235" width="12" height="330" fill="white"/>
+  <rect x="205" y="394" width="290" height="12" fill="white"/>
+
+  <!-- dimension labels/topology mapping -->
+  <line x1="120" y1="135" x2="580" y2="135" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="330" y="128" class="lbl">Lr</text>
+  <line x1="120" y1="185" x2="146" y2="185" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="85" y="195" class="lbl">Wr</text>
+  <line x1="210" y1="215" x2="490" y2="215" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="335" y="207" class="lbl">Ld</text>
+  <line x1="230" y1="300" x2="242" y2="300" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="180" y="307" class="lbl">Ws</text>
+  <line x1="242" y1="260" x2="330" y2="260" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="268" y="250" class="lbl">Ls</text>
+  <line x1="344" y1="390" x2="344" y2="406" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="305" y="385" class="lbl">Wg1</text>
+  <line x1="488" y1="390" x2="488" y2="410" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="500" y="407" class="lbl">Wg2</text>
+  <line x1="420" y1="300" x2="482" y2="300" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="438" y="290" class="lbl">Wp</text>
+  <line x1="195" y1="410" x2="195" y2="525" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="145" y="470" class="lbl">Lp1</text>
+  <line x1="210" y1="397" x2="255" y2="397" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="218" y="385" class="lbl">Lp2</text>
+  <line x1="255" y1="410" x2="335" y2="485" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/>
+  <text x="265" y="455" class="lbl">Lp3</text>
+
+  <!-- Balun -->
+  <text x="730" y="125" class="title">B. Figure 7(c) balun mapping</text>
+  <rect x="760" y="170" width="260" height="520" class="sub"/>
+  <rect x="1070" y="170" width="260" height="520" class="sub"/>
+  <!-- Port 1 trace -->
+  <path d="M900 685 L900 540 M900 515 L900 390 L840 390 L840 500" stroke="#f3b21a" stroke-width="10" fill="none"/>
+  <rect x="875" y="685" width="50" height="18" fill="#d11"/>
+  <text x="860" y="735" class="small">Port 1</text>
+  <!-- Port 2 trace and central channel -->
+  <rect x="1184" y="170" width="18" height="520" fill="white" stroke="#bbb"/>
+  <path d="M1210 685 L1210 550 M1210 525 L1210 400 L1150 400 L1150 500" stroke="#f3b21a" stroke-width="10" fill="none"/>
+  <rect x="1185" y="685" width="50" height="18" fill="#d11"/>
+  <text x="1170" y="735" class="small">Port 2</text>
+
+  <!-- Lb labels -->
+  <line x1="930" y1="685" x2="930" y2="540" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="940" y="615" class="lbl">Lb1</text>
+  <line x1="930" y1="540" x2="930" y2="515" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="940" y="532" class="lbl">Lb2</text>
+  <line x1="930" y1="515" x2="930" y2="390" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="940" y="455" class="lbl">Lb3</text>
+  <line x1="825" y1="390" x2="825" y2="500" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="770" y="450" class="lbl">Lb4</text>
+  <line x1="745" y1="170" x2="745" y2="690" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="690" y="440" class="lbl">Lb5</text>
+
+  <!-- Wb labels -->
+  <line x1="1198" y1="630" x2="1222" y2="630" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="1230" y="637" class="lbl">Wb1</text>
+  <line x1="1198" y1="530" x2="1222" y2="530" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="1230" y="537" class="lbl">Wb2</text>
+  <line x1="1198" y1="455" x2="1222" y2="455" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="1230" y="462" class="lbl">Wb3</text>
+  <line x1="1150" y1="375" x2="1210" y2="375" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="1164" y="363" class="lbl">Wb4</text>
+  <line x1="1075" y1="620" x2="1184" y2="620" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="1112" y="608" class="lbl">Wb5</text>
+  <line x1="1184" y1="315" x2="1202" y2="315" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="1210" y="322" class="lbl">Wb6</text>
+  <line x1="1202" y1="205" x2="1235" y2="205" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="1238" y="212" class="lbl">Wb7</text>
+  <line x1="1160" y1="205" x2="1184" y2="205" class="dim" marker-start="url(#arr)" marker-end="url(#arr)"/><text x="1105" y="212" class="lbl">Wb8</text>
+
+  <text x="80" y="820" class="small">All numeric values are stored in refs/cui2023/parameters.csv. This redraw is schematic: the PDF remains the source for topology and dimension-arrow meaning.</text>
+</svg>

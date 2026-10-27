@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.2.11",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-POLA-BUILD-HOLD-20260928",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_ONLY",
+  "status": "HOLD_R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_ONLY",
+  "classification": "HOLD_BUILD_AUDIT_CRITERION",
+  "formal_build_invocations": 1,
+  "solver_invocations": 0,
+  "automatic_retries": 0,
+  "parent": {
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d1r1_build_work\\R1E1A4A_AR0_B1R_T1R1_GROUND_PLACEMENT_CORRECTED_BUILD_ONLY_V01.cst",
+    "sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e"
+  },
+  "source_head": "24a8cf76af1a4a5c61bdbef427b69db08961760e",
+  "source_blobs": {
+    "macro": "9931736f1129624d94aee1c9e983a1eaabca5f24",
+    "runner": "81f717ca5ef7aa4c4375618185aeb1723b0d50f1",
+    "inventory": "e10886a4c01d9aafd55a16d8126418b7e22025fd"
+  },
+  "artifact": {
+    "path": "D:\\GNSS_R4A0E2A_20260928_BUILD\\R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_INTEGRATED_BUILD_ONLY_V01.cst",
+    "sha256": "573e21e893a5b8fa9a76ae3c8d5dce641c672607c2747aa1ca39f9879b63c7fc",
+    "evidence_root": "D:\\GNSS_R4A0E2A_20260928_BUILD\\evidence",
+    "lifecycle_state": "PROTECTED_HOLD_PENDING_RECOVERY"
+  },
+  "passed_checks": {
+    "parent_identity": true,
+    "shape_count_107": true,
+    "exact_shape_name_set": true,
+    "exact_component_counts": true,
+    "preserved_parent_signature_exact": true,
+    "removed_parent_objects_absent": true,
+    "drill_tools_consumed": true,
+    "eight_plated_vias": true,
+    "via_volumes_exact": true,
+    "ports_exact_12": true,
+    "history_persistent": true,
+    "result_tree_empty": true,
+    "fresh_reopen_hash_stable": true,
+    "all_positive_volume": true,
+    "builtin_intersection_command_returned": true,
+    "registered_pairwise_zero_overlap_14_of_14": true,
+    "artifact_hash_stable_after_pairwise": true,
+    "analytic_crosspol_envelope_zero_positive_overlap": true
+  },
+  "hold_check": {
+    "name": "polA_prong_drill_loss_exact",
+    "frozen_expected_mm3": 0.3848451000647496,
+    "actual_A_P_mm3": 0.38483724205539716,
+    "actual_A_N_mm3": 0.3848372420552977,
+    "abs_delta_from_analytic_mm3": 0.00000785800935249,
+    "relative_delta_from_analytic": 0.00002041862908264136,
+    "original_tolerance_mm3": 1e-7
+  },
+  "historical_reference": {
+    "E1_V03_coupon_initial_volume_mm3": 40,
+    "E1_V03_coupon_final_volume_mm3": 39.6151607557998,
+    "E1_V03_actual_four_drill_loss_mm3": 0.3848392442002009,
+    "E1_V03_abs_delta_from_same_analytic_mm3": 0.00000585586454876,
+    "interpretation": "Previously accepted E1 V03 used the same 0.175-mm CST cylinder drill semantics and already demonstrates that ACIS/CST Boolean volume is not exactly equal to analytic 4*pi*r^2*h at 1e-7 mm3 tolerance."
+  },
+  "conclusion": "Formal artifact is structurally coherent; HOLD is caused by an over-strict analytic-volume audit criterion, not by observed via/FR4 interference. Gate cannot be changed post-result, so this formal invocation remains HOLD.",
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_AUDIT_RECOVERY_FREEZE",
+  "authorization_after_stop": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  }
+}

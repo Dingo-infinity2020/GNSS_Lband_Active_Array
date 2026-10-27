@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-T1-20260927",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "a5d22f1c45301d455270e0c599333e1ff5adaf69",
+    "model_identity": "AR0_B1R_T1_BALANCED_GROUND_ACQUISITION"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_T1_GROUND_ACQUISITION_BUILD_ONLY",
+    "target_control_host": "NW",
+    "entrypoint": "scripts/run_r1e1a4a_ar0_b1r_t1_build_only.py",
+    "args": [],
+    "stop_boundary": "build-only + human 3D review; no solve"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": false
+  },
+  "preflight": {
+    "requirements": [
+      "SimulationOps 0.2.8",
+      "T0 artifact SHA256 exact",
+      "T1 freeze V0.1 unchanged",
+      "static cross-pol ground clearance PASS"
+    ],
+    "fail_closed": true
+  },
+  "outputs": {
+    "expected": [
+      "T1 CST artifact",
+      "fresh-reopen inventory",
+      "ground-topology audit",
+      "human 3D review guide"
+    ],
+    "result_packet_path": "execution/result_packets/R1E1A4A_AR0_B1R_T1_result.json"
+  },
+  "dc_call_budget": {
+    "target_calls": 2,
+    "polling_policy": "single build transaction then task-node inspection"
+  },
+  "execution": {
+    "silent_retry_allowed": false,
+    "dry_run": false,
+    "ticket_id": "GNSS-AR0-B1R-T1-20260927",
+    "lock_path": "execution/locks/GNSS-AR0-B1R-T1-20260927.lock"
+  }
+}

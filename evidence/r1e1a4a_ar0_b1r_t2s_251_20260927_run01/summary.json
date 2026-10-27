@@ -1,0 +1,16 @@
+{
+  "status": "HOLD_R1E1A4A_AR0_B1R_T2S_LINUX_HISTORY_REPLAY",
+  "simulationops": "0.2.8",
+  "formal_cst_launches": 1,
+  "solver_hf_tet_kernel_starts": 0,
+  "automatic_retries": 0,
+  "sparameters_produced": false,
+  "configured_sha256": "ab8a61cc781880ba938b729f44862d1d79f36dbb959288fc57ede5e61b4d2858",
+  "post_run_project_sha256": "ab8a61cc781880ba938b729f44862d1d79f36dbb959288fc57ede5e61b4d2858",
+  "outer_exit_code": 137,
+  "root_cause": "CST251 headless cst_design_environment -m/-f attempted to replay the inherited legacy parametric history of the copied T2F project before Solver_HF_Tet started. Replay failed at the historical Transform command .AutoDestination \"True\" with ActiveX Automation error 10091. The configured project SHA remained unchanged and no S-parameter result tree was produced.",
+  "failure_signature": ".AutoDestination \"True\" -> ActiveX Automation 10091 during legacy history replay",
+  "remote_root": "/data/jlding/gnss_ar0_b1r_t2s_20260927",
+  "remote_artifacts_protected_in_place": true,
+  "next_required_stage": "AR0_B1R_T2F_R1_FLATTENED_FIXTURE_BUILD_ONLY_AWAIT_AUTH"
+}

@@ -1,0 +1,100 @@
+{
+  "status": "PASS_R1E1A4A_AR0_B1M_FULL_MECHANICAL_STALK_BUILD_ONLY",
+  "simulationops": "0.2.8",
+  "formal_build_invocations": 1,
+  "solver_invocations": 0,
+  "parent": {
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b0g_build_work\\R1E1A4A_AR0_B0G_FEED_HEAD_BUILD_ONLY_V01.cst",
+    "sha256": "6b027162dd93d8613a0943df0fd96d6bf65d6721893e49c8d8bdc17f8f5eb698"
+  },
+  "artifact": {
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1m_build_work\\R1E1A4A_AR0_B1M_FULL_MECHANICAL_STALK_BUILD_ONLY_V01.cst",
+    "sha256": "6b2e3edc230b54eef54bdd427e8585a9fee1f0ef0235c747aa1b0ef6571b1dbe"
+  },
+  "inventory": {
+    "shape_count": 37,
+    "component_counts": {
+      "UnitCellGround": 1,
+      "Substrate": 1,
+      "TopCopper": 1,
+      "B0_Stalk": 4,
+      "B0_MSL": 4,
+      "B0_BackGround": 4,
+      "B0_LNAEnvelope": 4,
+      "B0_SignalFeedthrough": 4,
+      "B1M_LowerStalk": 2,
+      "B1M_UpperRail": 4,
+      "B1M_TopTenon": 4,
+      "B1M_BottomTenon": 4
+    }
+  },
+  "b0g_rf_signature_before": {
+    "B0_Stalk:A_P_PRONG": 48.0,
+    "B0_MSL:A_P_MSL": 0.798,
+    "B0_BackGround:A_P_BACK_GND": 1.26,
+    "B0_LNAEnvelope:A_P_QPL9547_ENV": 4.0,
+    "B0_SignalFeedthrough:A_P_SIG_FEEDTHROUGH": 0.09424778864,
+    "B0_Stalk:A_N_PRONG": 48.0,
+    "B0_MSL:A_N_MSL": 0.798,
+    "B0_BackGround:A_N_BACK_GND": 1.26,
+    "B0_LNAEnvelope:A_N_QPL9547_ENV": 4.0,
+    "B0_SignalFeedthrough:A_N_SIG_FEEDTHROUGH": 0.09424778864,
+    "B0_Stalk:B_P_PRONG": 48.0,
+    "B0_MSL:B_P_MSL": 0.798,
+    "B0_BackGround:B_P_BACK_GND": 1.26,
+    "B0_LNAEnvelope:B_P_QPL9547_ENV": 4.0,
+    "B0_SignalFeedthrough:B_P_SIG_FEEDTHROUGH": 0.09424778864,
+    "B0_Stalk:B_N_PRONG": 48.0,
+    "B0_MSL:B_N_MSL": 0.798,
+    "B0_BackGround:B_N_BACK_GND": 1.26,
+    "B0_LNAEnvelope:B_N_QPL9547_ENV": 4.0,
+    "B0_SignalFeedthrough:B_N_SIG_FEEDTHROUGH": 0.09424778864
+  },
+  "b0g_rf_signature_after": {
+    "B0_Stalk:A_P_PRONG": 48.0,
+    "B0_MSL:A_P_MSL": 0.798,
+    "B0_BackGround:A_P_BACK_GND": 1.26,
+    "B0_LNAEnvelope:A_P_QPL9547_ENV": 4.0,
+    "B0_SignalFeedthrough:A_P_SIG_FEEDTHROUGH": 0.09424778864,
+    "B0_Stalk:A_N_PRONG": 48.0,
+    "B0_MSL:A_N_MSL": 0.798,
+    "B0_BackGround:A_N_BACK_GND": 1.26,
+    "B0_LNAEnvelope:A_N_QPL9547_ENV": 4.0,
+    "B0_SignalFeedthrough:A_N_SIG_FEEDTHROUGH": 0.09424778864,
+    "B0_Stalk:B_P_PRONG": 48.0,
+    "B0_MSL:B_P_MSL": 0.798,
+    "B0_BackGround:B_P_BACK_GND": 1.26,
+    "B0_LNAEnvelope:B_P_QPL9547_ENV": 4.0,
+    "B0_SignalFeedthrough:B_P_SIG_FEEDTHROUGH": 0.09424778864,
+    "B0_Stalk:B_N_PRONG": 48.0,
+    "B0_MSL:B_N_MSL": 0.798,
+    "B0_BackGround:B_N_BACK_GND": 1.26,
+    "B0_LNAEnvelope:B_N_QPL9547_ENV": 4.0,
+    "B0_SignalFeedthrough:B_N_SIG_FEEDTHROUGH": 0.09424778864
+  },
+  "analytic_mechanical_audit": {
+    "interlock_A_clears_B_thickness": true,
+    "interlock_B_clears_A_thickness": true,
+    "outer_rail_cross_pol_collisions": [],
+    "mechanical_vs_b0_feedhead_local_u_gap_mm": 5.5,
+    "top_bottom_mortise_clearance_each_side_mm": 0.125,
+    "interlock_clearance_each_side_mm": 0.125
+  },
+  "solver_tree_matches": [],
+  "checks": {
+    "artifact_exists": true,
+    "fresh_reopen_hash_stable": true,
+    "shape_count_37": true,
+    "b1m_component_counts_exact": true,
+    "no_tool_shapes": true,
+    "all_positive_volume": true,
+    "b0g_rf_shape_volumes_byte_semantics_preserved": true,
+    "port_count_zero": true,
+    "solver_tree_empty": true,
+    "interlock_A_clear": true,
+    "interlock_B_clear": true,
+    "outer_rail_cross_pol_collision_zero": true,
+    "mechanical_rf_keepout_ge_5p5mm": true
+  },
+  "rf_transition_status": "B0G abrupt 3-mm ground onset remains geometry placeholder; not RF-qualified"
+}

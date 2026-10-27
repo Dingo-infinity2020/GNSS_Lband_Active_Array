@@ -1,0 +1,13 @@
+﻿test_canonical_tree_global_sort_and_content_drift (__main__.RecoveryGuards.test_canonical_tree_global_sort_and_content_drift) ... ok
+test_closed_and_consumed_grants_cannot_launch (__main__.RecoveryGuards.test_closed_and_consumed_grants_cannot_launch) ... ok
+test_generator_writes_no_packet_without_grant (__main__.RecoveryGuards.test_generator_writes_no_packet_without_grant) ... ok
+test_invalid_budget_and_probe_failure_fail_closed (__main__.RecoveryGuards.test_invalid_budget_and_probe_failure_fail_closed) ... ok
+test_separate_volumes_each_need_own_budget (__main__.RecoveryGuards.test_separate_volumes_each_need_own_budget) ... ok
+test_shared_volume_sums_reservations (__main__.RecoveryGuards.test_shared_volume_sums_reservations) ... ok
+test_tree_rejects_symlink (__main__.RecoveryGuards.test_tree_rejects_symlink) ... skipped 'link creation is privilege-dependent on Windows'
+test_ungranted_entrypoint_exits_before_import_or_output (__main__.RecoveryGuards.test_ungranted_entrypoint_exits_before_import_or_output) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.159s
+
+OK (skipped=1)

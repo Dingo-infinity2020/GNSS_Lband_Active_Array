@@ -1,0 +1,4 @@
+material,epsilon_r,tan_delta,frequency_context,provenance,source_note
+ROHACELL_31HF_LBAND_BASELINE,1.05,0.0002,2.5GHz representative -> L-band conservative extrapolation,MANUFACTURER_REPRESENTATIVE_PLUS_PROJECT_EXTRAPOLATION,Evonik ROHACELL Dielectric Properties Nov 2018; 31 HF eps=1.05 tanD<0.0002 at 2.5GHz
+ADHESIVE_CONSERVATIVE_SURROGATE,4.0,0.03,1.15-1.65GHz sensitivity surrogate,ASSUMPTION_CONSERVATIVE,Not a product claim; intentionally pessimistic thin bond-line dielectric
+PEC_POST_SENTINEL,PEC,0,ideal conductor,PROJECT_DIAGNOSTIC,High-risk metal support reference only

@@ -1,0 +1,21 @@
+{
+  "schema_version": "gnss-m7-human-geometry-review-v0.1",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_CIN_PAD_CLEARANCE_BUILD_ONLY",
+  "status": "PASS_M7B_HUMAN_GEOMETRY_REVIEW",
+  "artifact": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7B_CIN_PAD_CLEARANCE_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_CIN_PAD_CLEARANCE_BUILD_ONLY_V01.cst",
+  "artifact_sha256": "5498e9c447fdd4eeb969c02701d27886e839144ebe9941c4e7f56bc7419c69ea",
+  "review_basis": "USER_MANUAL_CST_3D_REVIEW",
+  "build_status": "PASS_M7B_BUILD_READONLY_QUALIFICATION_RECOVERY_AWAIT_HUMAN_REVIEW",
+  "review_scope": [
+    "four guarded CIN_UP_PAD backside-ground projection windows",
+    "upstream MSL ground and outer ground perimeter preserved",
+    "signal copper/radiator/package lands/local top ground/vias/bias-output copper visually unchanged",
+    "no paddle-via or CRF-via intrusion",
+    "no unintended galvanic break",
+    "four-branch mirror/rotation symmetry"
+  ],
+  "solver_authorized": false,
+  "next_stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_DIAGNOSTIC_SOLVE_PREPARATION",
+  "next_stage_authorized": false,
+  "user_confirmation": "EXPLICIT_CURRENT_TURN_2026-10-04"
+}

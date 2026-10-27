@@ -1,0 +1,21 @@
+{
+  "contract_sha256": "5022b213c6c63aaf23bf0391fd2a3e826f491997ae425c0205f4d4bd7ef5cb60",
+  "check": {
+    "schema_version": "simops-contract-check-v0.1",
+    "contract_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_STORAGE_RECOVERY_20261026_V01\\CLOSED_STAGE_CONTRACT.json",
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "facts": {
+      "build_live": false,
+      "solve_live": false,
+      "active_grant_id": null,
+      "current_stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_RESULT_REVIEW",
+      "control_state_root": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW",
+      "project_artifact_library_root": "D:\\GNSS_Lband_Active_Array",
+      "long_term_storage_root": null,
+      "project_run_root": "D:\\GNSS_Lband_Active_Array\\runs",
+      "host_alias": "NW"
+    }
+  }
+}

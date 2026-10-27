@@ -1,0 +1,64 @@
+{
+  "status": "PASS_R1E1A4A_AR0_B1R_T2F_FIXTURE_BUILD_ONLY",
+  "simulationops": "0.2.8",
+  "recovery_type": "AUDIT_ONLY_EXISTING_FIXTURE_NO_REBUILD",
+  "formal_build_invocations_total": 1,
+  "solver_invocations_total": 0,
+  "artifact": {
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_t2f_build_work\\R1E1A4A_AR0_B1R_T2F_CANONICAL_TRANSITION_FIXTURE_V01.cst",
+    "sha256": "f0184b638b5af6c5c752804fd5570a5e4178e52bc6bdd62e31e72c281c03de90"
+  },
+  "port_counts": {
+    "build": 3,
+    "reopen": 3
+  },
+  "build_missing_endpoint_parameters": [
+    "t2f_output_z"
+  ],
+  "reopen_missing_endpoint_parameters": [],
+  "reopen_endpoints": {
+    "t2f_p1_x": 2.09657160621811,
+    "t2f_p1_y": 2.14606908090117,
+    "t2f_p2_x": -2.14606908090117,
+    "t2f_p2_y": -2.09657160621811,
+    "t2f_outp_sig_x": 2.09657160621811,
+    "t2f_outp_sig_y": 2.14606908090117,
+    "t2f_outp_gnd_x": 2.85317586208772,
+    "t2f_outp_gnd_y": 1.38946482503157,
+    "t2f_outn_sig_x": -2.14606908090117,
+    "t2f_outn_sig_y": -2.09657160621811,
+    "t2f_outn_gnd_x": -1.38946482503157,
+    "t2f_outn_gnd_y": -2.85317586208772,
+    "t2f_output_z": 47.1428571428
+  },
+  "expected_endpoints": {
+    "t2f_p1_x": 2.096571606218113,
+    "t2f_p1_y": 2.1460690809011718,
+    "t2f_p2_x": -2.1460690809011718,
+    "t2f_p2_y": -2.096571606218113,
+    "t2f_outp_sig_x": 2.096571606218113,
+    "t2f_outp_sig_y": 2.1460690809011718,
+    "t2f_outp_gnd_x": 2.8531758620877192,
+    "t2f_outp_gnd_y": 1.3894648250315658,
+    "t2f_outn_sig_x": -2.1460690809011718,
+    "t2f_outn_sig_y": -2.096571606218113,
+    "t2f_outn_gnd_x": -1.3894648250315658,
+    "t2f_outn_gnd_y": -2.8531758620877192,
+    "t2f_output_z": 47.1428571428
+  },
+  "solver_tree_matches": [],
+  "checks": {
+    "artifact_hash_exact": true,
+    "build_six_solids": true,
+    "reopen_six_solids": true,
+    "build_reopen_geometry_identical": true,
+    "build_port_count_3": true,
+    "reopen_port_count_3": true,
+    "only_delayed_immediate_parameter_is_output_z": true,
+    "all_common_endpoint_params_stable": true,
+    "reopen_endpoint_geometry_exact": true,
+    "solver_tree_empty": true
+  },
+  "original_hold": "HOLD_R1E1A4A_AR0_B1R_T2F_FIXTURE",
+  "original_hold_cause": "CST immediate-build parameter inventory delayed derived parameter t2f_output_z; fresh reopen enumerated it correctly."
+}

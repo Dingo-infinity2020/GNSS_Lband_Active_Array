@@ -1,0 +1,5 @@
+Set-Location "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold"; $env:PYTHONPATH="D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python_cst_libraries"; & "D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\python.exe" "scripts\qualify_r1e0b_existing_periodic_result.py" --repo "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold" --evidence "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold\evidence\r1e0b_dc_nw_20260924_smoke01" --artifact "D:\GNSS_Lband_Active_Array\_r1e0b_broadside_smoke_work\R1E0B_POLA_PERIODIC_BROADSIDE_SMOKE_V01.cst"
+
+RECOVERY_MODE=READ_ONLY_RESULT_QUALIFICATION
+SOLVER_RERUN=NO
+ARTIFACT_MODIFIED=NO

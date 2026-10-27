@@ -1,0 +1,12 @@
+﻿{
+    "schema_version":  "gnss-m6-human-geometry-review-v0.1",
+    "stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M6_D1_SIG_ATTRIBUTION_BUILD_ONLY",
+    "status":  "PASS_M6_D1_HUMAN_GEOMETRY_REVIEW",
+    "artifact":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M6_D1_SIG_ATTRIBUTION_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M6_D1_SIG_BUILD_ONLY_V01.cst",
+    "artifact_sha256":  "37abf12c415de2418d5d204811f1bc31e9a24cdc30b6538fc2d7d2ce659de7af",
+    "review_basis":  "USER_MANUAL_CST_3D_REVIEW",
+    "build_status":  "PASS_R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M6_D1_SIG_ATTRIBUTION_BUILD_ONLY",
+    "solver_authorized":  false,
+    "next_stage":  "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M6_D2_GND_ATTRIBUTION_BUILD_ONLY",
+    "next_stage_authorized":  false
+}

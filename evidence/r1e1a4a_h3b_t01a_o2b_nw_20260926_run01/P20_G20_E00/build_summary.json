@@ -1,0 +1,16 @@
+{
+  "candidate": "P20_G20_E00",
+  "pad_width_mm": 2.0,
+  "pad_gap_mm": 0.2,
+  "extension_mm": 0.0,
+  "build_sha256": "f65710f720e214fab8b4341720b4d81552487a0018c2c886d071bb188264de32",
+  "checks": {
+    "shape_count_38": true,
+    "positive_volumes": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "hash_stable": true
+  }
+}

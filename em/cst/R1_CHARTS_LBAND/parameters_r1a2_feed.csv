@@ -1,0 +1,16 @@
+parameter,value,unit,provenance,status,note
+feed_gap_center_width,1.20,mm,PROJECT_DESIGN_BASELINE,FROZEN_FOR_R1A2_BUILD_ONLY,center width of canonical gap reference
+feed_gap_outer_width,2.571428571,mm,PROJECT_DERIVED,FROZEN_FOR_R1A2_BUILD_ONLY,matches R1A1 inner_slot_width
+feed_gap_join_radius,8.571428571,mm,PROJECT_DERIVED,FROZEN_FOR_R1A2_BUILD_ONLY,matches R1A1 inner_slot_start_radius
+terminal_r,3.00,mm,PROJECT_DESIGN_BASELINE,FROZEN_FOR_R1A2_BUILD_ONLY,radial center of canonical NE terminal reference
+terminal_len,2.00,mm,PROJECT_DESIGN_BASELINE,FROZEN_FOR_R1A2_BUILD_ONLY,radial terminal reference length
+terminal_w,1.60,mm,PROJECT_DESIGN_BASELINE,FROZEN_FOR_R1A2_BUILD_ONLY,tangential terminal reference width
+reference_t,0.05,mm,PROJECT_TOOLING,FROZEN_FOR_BUILD_ONLY,visual reference solid thickness only
+gap_reference_z_offset,0.50,mm,PROJECT_TOOLING,FROZEN_FOR_BUILD_ONLY,keeps gap reference overlay separate from plate
+terminal_reference_z_offset,1.00,mm,PROJECT_TOOLING,FROZEN_FOR_BUILD_ONLY,keeps terminal reference overlay separate from plate/gap references
+pol_A_pair,NE-SW,,PROJECT_DESIGN,FROZEN,diagonal differential pair
+pol_B_pair,NW-SE,,PROJECT_DESIGN,FROZEN,orthogonal diagonal differential pair
+rotation_rule,90_deg_exact_copies,,PROJECT_DESIGN,FROZEN,only master geometries may be manually authored
+physical_subtraction,NO,,PROJECT_GATE,FROZEN,R1A2 references are not subtracted from aperture
+ports,NO,,PROJECT_GATE,FROZEN,no port objects in R1A2
+solver,NO,,PROJECT_GATE,FROZEN,no solver in R1A2

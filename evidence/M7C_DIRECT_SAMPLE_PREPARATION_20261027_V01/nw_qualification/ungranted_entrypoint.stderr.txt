@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "D:\quest_naoc_tarminal\SimulationOps_Runtime\NW\GNSS_Lband_Active_Array\M7C_RECOVERY_PREP_20261026\checkout\scripts\run_m7c_direct_sample_solve_v01.py", line 99, in <module>
+    sys.exit(main(a.manifest,a.out,a.evidence))
+  File "D:\quest_naoc_tarminal\SimulationOps_Runtime\NW\GNSS_Lband_Active_Array\M7C_RECOVERY_PREP_20261026\checkout\scripts\run_m7c_direct_sample_solve_v01.py", line 30, in main
+    before=require_ready(m,ROOT,out,evidence,fresh=True)
+  File "D:\quest_naoc_tarminal\SimulationOps_Runtime\NW\GNSS_Lband_Active_Array\M7C_RECOVERY_PREP_20261026\checkout\scripts\m7c_direct_sample_contract_v01.py", line 62, in require_ready
+    require_live_grant(c,m,root)
+  File "D:\quest_naoc_tarminal\SimulationOps_Runtime\NW\GNSS_Lband_Active_Array\M7C_RECOVERY_PREP_20261026\checkout\scripts\m7c_direct_sample_contract_v01.py", line 24, in require_live_grant
+    raise RuntimeError("HOLD_M7C_DIRECT_NO_LIVE_SOLVE_GRANT")
+RuntimeError: HOLD_M7C_DIRECT_NO_LIVE_SOLVE_GRANT

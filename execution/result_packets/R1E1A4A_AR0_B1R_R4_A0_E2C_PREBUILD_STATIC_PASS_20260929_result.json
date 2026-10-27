@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2C-PREBUILD-STATIC-PASS-20260929",
+  "project": "GNSS_Lband_Active_Array",
+  "status": "PASS_R4_A0_E2C_PREBUILD_STATIC_READY_AWAIT_AUTH",
+  "work_class": "OFFLINE_SOURCE_AND_STATIC_AUDIT_ONLY",
+  "remote_simulation_calls": 0,
+  "formal_build_invocations": 0,
+  "solver_invocations": 0,
+  "parent_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+  "sources": {
+    "macro": {
+      "path": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_ONLY_V01.mcr",
+      "blob": "fb770258aa94106a2437320c29a2cd036990770a"
+    },
+    "inventory": {
+      "path": "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_INVENTORY_V01.json",
+      "blob": "dcc33fc9236eb9e2a696bb90f43ce9e1bdc27bd2"
+    },
+    "kernel": {
+      "path": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_16VIA_DRILL_KERNEL_REFERENCE_V01.mcr",
+      "blob": "fbaac4e894a5b5af3c3145a67e767b2a7c8e9c98"
+    },
+    "broadphase_runner": {
+      "path": "scripts/audit_r1e1a4a_ar0_b1r_r4_a0_e2c_crosspol_broadphase.py",
+      "blob": "ce09233173aea44783be8d87dc5e665ca07356e9"
+    },
+    "broadphase_manifest": {
+      "path": "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_CROSSPOL_BROADPHASE_V01.json",
+      "blob": "8dd082aab1c1fd99495b0e773c1c987efd79e62c"
+    },
+    "build_runner": {
+      "path": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e2c_dualpol_build_only_v01.py",
+      "blob": "e62ae3982f39c67f1c369802792c2ec553c6788c"
+    }
+  },
+  "static_audit": {
+    "delete_count": 12,
+    "total_shape_creates": 160,
+    "temporary_drill_tools": 16,
+    "final_new_shapes": 144,
+    "exact_new_shape_set": true,
+    "expected_final_shape_count": 177,
+    "raw_port_count": 24,
+    "port_sequence_and_coordinates_exact": true,
+    "via_count": 16,
+    "drill_subtract_count": 16,
+    "rotation_plus135_count": 16,
+    "rotation_minus135_count": 16,
+    "source_broadphase_A_solids": 72,
+    "source_broadphase_B_solids": 72,
+    "source_broadphase_all_cross_pairs": 5184,
+    "source_broadphase_candidate_pairs": 1,
+    "inherited_pairwise_checks_E2A": 14,
+    "inherited_pairwise_checks_E2B": 14,
+    "total_formal_pairwise_checks": 29,
+    "build_runner_run_solver_calls": 0,
+    "stale_E2B_gate_tokens_absent": true
+  },
+  "broadphase_candidate": [
+    "E2C_A_P_BackGround:LOCAL_BACK_GROUND",
+    "E2C_B_N_BackGround:LOCAL_BACK_GROUND"
+  ],
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2C_BUILD_AWAIT_AUTH"
+}

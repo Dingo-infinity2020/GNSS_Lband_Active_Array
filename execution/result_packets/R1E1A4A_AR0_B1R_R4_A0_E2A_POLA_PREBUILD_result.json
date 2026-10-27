@@ -1,0 +1,75 @@
+{
+  "schema_version": "0.2.11",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-POLA-PREBUILD-20260928",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_SOURCE_IMPLEMENTATION",
+  "status": "PASS_R4_A0_E2A_POLA_PREBUILD_READY_AWAIT_BUILD_AUTH",
+  "remote_calls": 0,
+  "formal_build_invocations": 0,
+  "solver_invocations": 0,
+  "source_set": {
+    "macro": {
+      "path": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_ONLY_V01.mcr",
+      "git_blob": "9931736f1129624d94aee1c9e983a1eaabca5f24"
+    },
+    "runner": {
+      "path": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e2a_pola_build_only.py",
+      "git_blob": "81f717ca5ef7aa4c4375618185aeb1723b0d50f1"
+    },
+    "inventory": {
+      "path": "execution/R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_INVENTORY_V01.json",
+      "git_blob": "e10886a4c01d9aafd55a16d8126418b7e22025fd"
+    },
+    "freeze": "docs/R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_INTEGRATED_EM_FREEZE_V01.md"
+  },
+  "parent": {
+    "filename": "R1E1A4A_AR0_B1R_T1R1_GROUND_PLACEMENT_CORRECTED_BUILD_ONLY_V01.cst",
+    "sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+    "shape_count": 45,
+    "path_policy": "resolve exact NW artifact by filename + SHA256 at authorized execution; do not guess/stale-path promote"
+  },
+  "static_audit": {
+    "parent_formula": "45 - 12 + 74 = 107",
+    "delete_count": 12,
+    "macro_final_new_shapes": 74,
+    "macro_drill_tools_created_and_consumed": 8,
+    "expected_final_shape_count": 107,
+    "exact_new_shape_name_set": true,
+    "missing_new_shapes": [],
+    "extra_new_shapes": [],
+    "duplicate_new_shapes": [],
+    "port_numbers_exact_1_through_12": true,
+    "fr4_substrate_coupon_recreated": false,
+    "remote_D2_ground_imported": false,
+    "active_QPL9547_inside_cst": false,
+    "solver_tokens_in_macro": false,
+    "runner_run_solver_calls": 0,
+    "runner_complete_project_copy": true,
+    "runner_history_persistent": true,
+    "runner_exact_name_set_gate": true,
+    "runner_exact_port_gate": true,
+    "runner_whole_model_intersection_check": true,
+    "runner_registered_pairwise_count": 14,
+    "analytic_crosspol_full_active_envelope_positive_overlap": false
+  },
+  "build_acceptance": {
+    "exact_final_names": true,
+    "exact_component_counts": true,
+    "final_shape_count": 107,
+    "raw_port_count": 12,
+    "plated_via_count": 8,
+    "persistent_history": true,
+    "empty_result_tree": true,
+    "solver_invocations": 0,
+    "fresh_reopen_hash_stable": true,
+    "builtin_intersection_command_ok": true,
+    "registered_pairwise_zero_overlap": "14/14",
+    "human_geometry_review_required": true
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_ONLY_AWAIT_AUTH"
+}

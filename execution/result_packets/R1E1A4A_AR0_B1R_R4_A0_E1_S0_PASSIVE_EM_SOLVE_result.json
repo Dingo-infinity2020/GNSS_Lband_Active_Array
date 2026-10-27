@@ -1,0 +1,109 @@
+{
+  "schema_version": "0.2.10",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E1-S0-PASSIVE-EM-SOLVE-RESULT-20260928",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E1_S0_PASSIVE_EM_SOLVE",
+  "status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E1_PASSIVE_EM_CHARACTERIZED",
+  "disposition": "PASS_CHARACTERIZED_NETWORK_CLEAN_SENTINELS",
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "source_artifact_sha256": "aee6bc30085c002b6063de80f110096f6b62911bf897007d133b309e5a962b36",
+  "source_provenance_rebaseline": "PASS_R4_A0_E1_V03_POST_HUMAN_SOURCE_IDENTITY",
+  "configured_copy_sha256": "1024fd3c5f2fd694d6a271e35db5df11f29abb34f89fefc2ff37276cdd6d612d",
+  "solved_artifact": {
+    "path": "D:\\GNSS_R4A0E1_20260928_E1S0_PASSIVE_SOLVE\\R1E1A4A_AR0_B1R_R4_A0_E1_PASSIVE_EM_SOLVED_V01.cst",
+    "sha256": "bd487a52e342284fe7cdf4b6a35c0a7fc23296e97560f9603451bbf6f0b6349c",
+    "evidence_root": "D:\\GNSS_R4A0E1_20260928_E1S0_PASSIVE_SOLVE\\evidence",
+    "lifecycle_state": "PROTECTED"
+  },
+  "hard_checks": {
+    "source_artifact_unchanged": true,
+    "full_6x6_network_extracted": true,
+    "numerical_convergence": true,
+    "reciprocity": true,
+    "passivity": true,
+    "no_fatal_native_solver_error": true,
+    "no_mesh_corruption": true
+  },
+  "numerical_convergence": {
+    "authority": "native CST output.txt adaptation termination",
+    "native_final_two_delta_s": [
+      0.00772936,
+      0.00465735
+    ],
+    "criterion": "two consecutive DeltaS <= 0.02",
+    "native_termination": "Mesh adaptation terminated because the desired accuracy limit is reached.",
+    "secondary_result_tree_series": {
+      "run_ids": [
+        0,
+        1
+      ],
+      "identical_between_runs": true,
+      "final_two": [
+        5.051741642988953e-7,
+        0.0000032044977439030823
+      ],
+      "interpretation": "secondary/postprocessed evidence; not used as primary native mesh-adaptation authority"
+    }
+  },
+  "network": {
+    "port_count": 6,
+    "native_frequency_count": 1001,
+    "modeled_band_ghz": [
+      1,
+      1.8
+    ],
+    "decision_band_ghz": [
+      1.15,
+      1.65
+    ],
+    "selected_sparameter_run_id": 1,
+    "max_reciprocity_abs_complex": {
+      "value": 4.2329461706870077e-7,
+      "f_ghz": 1.7416,
+      "ports": [
+        1,
+        6
+      ]
+    },
+    "max_column_power": {
+      "value": 0.9990452180882121,
+      "f_ghz": 1,
+      "excitation_port": 6
+    },
+    "min_column_power": {
+      "value": 0.9821849675997102,
+      "f_ghz": 1.8,
+      "excitation_port": 4
+    }
+  },
+  "native_flags": {
+    "fatal_error": false,
+    "mesh_corruption": false,
+    "large_reflection_warning": true,
+    "disconnected_conductor_warning": false
+  },
+  "coupling_sentinels_core_band_db": {
+    "device_bypass_P_IN_to_P_OUT": -68.9924096681449,
+    "end_to_end_bypass_E_UP_to_E_DN": -49.43726469709199,
+    "cross_gap_CIN_parasitic": -36.71007513563574,
+    "cross_gap_COUT_parasitic": -34.0586703848998,
+    "cross_gap_L1_parasitic": -35.00614239934286,
+    "VBIAS_to_E_UP": -55.245653161886246,
+    "VBIAS_to_P_IN": -35.170001059205745,
+    "VBIAS_to_P_OUT": -73.04780089740692,
+    "VBIAS_to_E_DN": -69.48412289603047,
+    "VBIAS_to_B_VDD": -82.22811306342913
+  },
+  "review_flags": {
+    "any_unintended_coupling_gt_minus20db": false,
+    "any_unintended_coupling_gt_minus10db": false,
+    "large_reflection_warning": true
+  },
+  "interpretation_boundary": [
+    "The large-reflection warning is expected-compatible with intentionally open circuit-domain gaps and is not a product input-match failure.",
+    "S11 and E_UP-to-E_DN S21 are diagnostic only; C_IN/QPL9547/C_OUT/L1 are absent.",
+    "No E1-M1 mechanism probe is required because no unintended coupling review sentinel was raised."
+  ],
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2_INTEGRATED_ANTENNA_EM_CONTRACT_FREEZE"
+}

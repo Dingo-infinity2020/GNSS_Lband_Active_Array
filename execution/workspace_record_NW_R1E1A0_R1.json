@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1E1-A0-R1-PITCH-READY-CANONICAL-SOURCE-BUILD-ONLY-NW",
+    "stage": "R1E1A0_R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY",
+    "status": "PASS_R1E1A0R1_PITCH_READY_CANONICAL_SOURCE_BUILD_ONLY"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a0r1_pitch_ready_source_work",
+    "state": "PROTECTED"
+  },
+  "source": {
+    "formal_source_commit": "0241a840819847b1b8e9332d4436eb17e58e3307"
+  },
+  "result": {
+    "formal_invocation_count": 1,
+    "exit_code": 0,
+    "runtime_seconds": 42.93,
+    "solver_run": false,
+    "canonical_cst_sha256": "585929d5bf9cbf46c4a6d0ae40b42baa8e2efff673f79c1026dcff33cb014fc2"
+  },
+  "archive": {
+    "mode": "PROTECTED_IN_PLACE",
+    "completed": true,
+    "purge_allowed": false
+  },
+  "closeout": {
+    "task_node": "R1 PASS / baton to R2 design",
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}

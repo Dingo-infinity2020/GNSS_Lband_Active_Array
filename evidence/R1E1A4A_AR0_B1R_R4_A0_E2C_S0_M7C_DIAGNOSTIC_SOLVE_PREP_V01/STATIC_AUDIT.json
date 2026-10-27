@@ -1,0 +1,31 @@
+{
+  "status": "PASS_M7C_DIAGNOSTIC_SOLVE_STATIC_CONTRACT",
+  "checks": {
+    "stage": true,
+    "source_sha": true,
+    "source_exists": true,
+    "human_gate": true,
+    "auth_false": true,
+    "twelve_port_sources": true,
+    "loads": true,
+    "solver_fidelity": true,
+    "symmetry_anchors": true,
+    "differential_anchors": true,
+    "secondary_raw": true,
+    "partial_10pct": true,
+    "guard_frozen": true,
+    "m7b_sdd_refs": true,
+    "runner_one_solver": true,
+    "evaluator_zero_solver": true,
+    "packet_zero_solver": true,
+    "packet_v02": true,
+    "packet_solve_launch": true,
+    "packet_failclosed": true,
+    "config_no_monitor": true
+  },
+  "runner_sha256": "af430a7a997c2b35be53d938619482372afd7ef50b35ddc8450f833d0816c670",
+  "evaluator_sha256": "12e987b0ba393fc5445a8cef05da41fee805455b4e32bd73659047cee36fee10",
+  "packet_sha256": "7aab6fcf860be24d3aced3065e4e303f8a63b83d6b341ea9c4b7c7ed304927ed",
+  "manifest_sha256": "fb8b777ad49ada6e555548c0784343413f0d52ae984c70ffc6b839549157d387",
+  "formal_solver_invocations": 0
+}

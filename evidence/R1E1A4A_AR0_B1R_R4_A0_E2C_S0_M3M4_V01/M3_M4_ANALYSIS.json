@@ -1,0 +1,474 @@
+{
+  "schema_version": "gnss-e2c-s0-m3m4-v0.1",
+  "status": "PASS_M3M4_OFFLINE_MECHANISM_CLASSIFICATION",
+  "modal_cross_pol_eup": {
+    "A_diff_to_B_diff": {
+      "db": -9.85835066795276,
+      "mag": 0.32142708269129405,
+      "phase_deg": 125.50612949153988,
+      "frequency_ghz": 1.3384
+    },
+    "A_diff_to_B_common": {
+      "db": -8.936202009897269,
+      "mag": 0.35742909335042367,
+      "phase_deg": -47.29984112125763,
+      "frequency_ghz": 1.3464
+    },
+    "A_common_to_B_diff": {
+      "db": -8.925650048351208,
+      "mag": 0.35786357618000736,
+      "phase_deg": 133.7441446839626,
+      "frequency_ghz": 1.3448
+    },
+    "A_common_to_B_common": {
+      "db": -5.971002098203534,
+      "mag": 0.5028632467589012,
+      "phase_deg": -25.242108040184007,
+      "frequency_ghz": 1.6496
+    },
+    "B_diff_to_A_diff": {
+      "db": -9.858407830870908,
+      "mag": 0.3214249673467151,
+      "phase_deg": 125.50590351170983,
+      "frequency_ghz": 1.3384
+    },
+    "B_diff_to_A_common": {
+      "db": -8.925679130984044,
+      "mag": 0.3578623779610567,
+      "phase_deg": 133.74508932887386,
+      "frequency_ghz": 1.3448
+    },
+    "B_common_to_A_diff": {
+      "db": -8.936184093993969,
+      "mag": 0.357429830600371,
+      "phase_deg": -47.30058915097738,
+      "frequency_ghz": 1.3464
+    },
+    "B_common_to_A_common": {
+      "db": -5.971007332535095,
+      "mag": 0.5028629437211837,
+      "phase_deg": -25.242068456571896,
+      "frequency_ghz": 1.6496
+    }
+  },
+  "band_profiles": {
+    "LOW": {
+      "A_diff_to_B_diff": {
+        "peak_db": -10.331764915124806,
+        "median_db": -11.245192938721386,
+        "fraction_above_minus10": 0.0,
+        "fraction_above_minus20": 1.0
+      },
+      "A_diff_to_B_common": {
+        "peak_db": -9.293197671055696,
+        "median_db": -9.99183951309102,
+        "fraction_above_minus10": 0.504,
+        "fraction_above_minus20": 1.0
+      },
+      "A_common_to_B_diff": {
+        "peak_db": -9.264739820340717,
+        "median_db": -9.946807876418696,
+        "fraction_above_minus10": 0.528,
+        "fraction_above_minus20": 1.0
+      },
+      "A_common_to_B_common": {
+        "peak_db": -7.299974754116864,
+        "median_db": -7.524351360579567,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      },
+      "B_diff_to_A_diff": {
+        "peak_db": -10.331754880236115,
+        "median_db": -11.245227948152108,
+        "fraction_above_minus10": 0.0,
+        "fraction_above_minus20": 1.0
+      },
+      "B_diff_to_A_common": {
+        "peak_db": -9.264909677475787,
+        "median_db": -9.946715300320083,
+        "fraction_above_minus10": 0.528,
+        "fraction_above_minus20": 1.0
+      },
+      "B_common_to_A_diff": {
+        "peak_db": -9.293060650542921,
+        "median_db": -9.99187950050496,
+        "fraction_above_minus10": 0.504,
+        "fraction_above_minus20": 1.0
+      },
+      "B_common_to_A_common": {
+        "peak_db": -7.299963367893216,
+        "median_db": -7.5243995800324175,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      }
+    },
+    "MID": {
+      "A_diff_to_B_diff": {
+        "peak_db": -9.85835066795276,
+        "median_db": -9.900085747181421,
+        "fraction_above_minus10": 0.9205298013245033,
+        "fraction_above_minus20": 1.0
+      },
+      "A_diff_to_B_common": {
+        "peak_db": -8.936202009897269,
+        "median_db": -8.957914459183383,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      },
+      "A_common_to_B_diff": {
+        "peak_db": -8.925650048351208,
+        "median_db": -8.946876616458084,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      },
+      "A_common_to_B_common": {
+        "peak_db": -7.284320242350518,
+        "median_db": -7.344409202715161,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      },
+      "B_diff_to_A_diff": {
+        "peak_db": -9.858407830870908,
+        "median_db": -9.90013465196824,
+        "fraction_above_minus10": 0.9139072847682119,
+        "fraction_above_minus20": 1.0
+      },
+      "B_diff_to_A_common": {
+        "peak_db": -8.925679130984044,
+        "median_db": -8.946844705218874,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      },
+      "B_common_to_A_diff": {
+        "peak_db": -8.936184093993969,
+        "median_db": -8.957927417240837,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      },
+      "B_common_to_A_common": {
+        "peak_db": -7.284279830476561,
+        "median_db": -7.344367791475817,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      }
+    },
+    "HIGH": {
+      "A_diff_to_B_diff": {
+        "peak_db": -10.726061793738682,
+        "median_db": -11.462261238901558,
+        "fraction_above_minus10": 0.0,
+        "fraction_above_minus20": 1.0
+      },
+      "A_diff_to_B_common": {
+        "peak_db": -9.200394656269559,
+        "median_db": -9.307894598231776,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      },
+      "A_common_to_B_diff": {
+        "peak_db": -9.18502659418721,
+        "median_db": -9.273678829437044,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      },
+      "A_common_to_B_common": {
+        "peak_db": -5.971002098203534,
+        "median_db": -6.606613300527126,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      },
+      "B_diff_to_A_diff": {
+        "peak_db": -10.726086068320823,
+        "median_db": -11.462297094859021,
+        "fraction_above_minus10": 0.0,
+        "fraction_above_minus20": 1.0
+      },
+      "B_diff_to_A_common": {
+        "peak_db": -9.185039637642099,
+        "median_db": -9.273699461886304,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      },
+      "B_common_to_A_diff": {
+        "peak_db": -9.200331872585327,
+        "median_db": -9.307888958939795,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      },
+      "B_common_to_A_common": {
+        "peak_db": -5.971007332535095,
+        "median_db": -6.606602184798492,
+        "fraction_above_minus10": 1.0,
+        "fraction_above_minus20": 1.0
+      }
+    }
+  },
+  "band_science": {
+    "LOW": {
+      "PolA": {
+        "max_raw_delta": 0.6744457361409228,
+        "max_raw_delta_freq": 1.2496,
+        "E_diff_to_common_peak": {
+          "db": -9.348321362350564,
+          "mag": 0.34086619433863374,
+          "phase_deg": 141.032719278954,
+          "frequency_ghz": 1.2496
+        }
+      },
+      "PolB": {
+        "max_raw_delta": 0.6733128893369388,
+        "max_raw_delta_freq": 1.2496,
+        "E_diff_to_common_peak": {
+          "db": -9.375793114135217,
+          "mag": 0.339789805053385,
+          "phase_deg": -39.0937756035862,
+          "frequency_ghz": 1.2496
+        }
+      }
+    },
+    "MID": {
+      "PolA": {
+        "max_raw_delta": 0.7037929224295505,
+        "max_raw_delta_freq": 1.3432,
+        "E_diff_to_common_peak": {
+          "db": -8.915249092059796,
+          "mag": 0.35829235814656996,
+          "phase_deg": 127.80646817443723,
+          "frequency_ghz": 1.3584
+        }
+      },
+      "PolB": {
+        "max_raw_delta": 0.700674941097189,
+        "max_raw_delta_freq": 1.34,
+        "E_diff_to_common_peak": {
+          "db": -8.972240408580369,
+          "mag": 0.35594916588713116,
+          "phase_deg": -51.786423069885586,
+          "frequency_ghz": 1.3544
+        }
+      }
+    },
+    "HIGH": {
+      "PolA": {
+        "max_raw_delta": 0.681263035422918,
+        "max_raw_delta_freq": 1.6496,
+        "E_diff_to_common_peak": {
+          "db": -9.13427977088908,
+          "mag": 0.3493703230489604,
+          "phase_deg": 114.46955183456548,
+          "frequency_ghz": 1.5
+        }
+      },
+      "PolB": {
+        "max_raw_delta": 0.6781741595791412,
+        "max_raw_delta_freq": 1.6496,
+        "E_diff_to_common_peak": {
+          "db": -9.20328185939735,
+          "mag": 0.3466058648325498,
+          "phase_deg": -65.34456258464562,
+          "frequency_ghz": 1.5
+        }
+      }
+    }
+  },
+  "retermination": {
+    "PolA": {
+      "matched": {
+        "max_vs_isolated": {
+          "delta_mag": 0.7037929224295505,
+          "frequency_ghz": 1.3432,
+          "matrix_index": [
+            0,
+            0
+          ]
+        },
+        "E_diff_to_common_peak": {
+          "db": -8.915249092059799,
+          "frequency_ghz": 1.3584
+        },
+        "EUP_return_imbalance": {
+          "db": 11.374270538449593,
+          "frequency_ghz": 1.2984,
+          "plus_db": -11.82310045658877,
+          "minus_db": -0.4488299181391774
+        }
+      },
+      "opp_EUP_open": {
+        "max_vs_isolated": {
+          "delta_mag": 0.451125408588929,
+          "frequency_ghz": 1.6496,
+          "matrix_index": [
+            0,
+            0
+          ]
+        },
+        "E_diff_to_common_peak": {
+          "db": -11.985663053711006,
+          "frequency_ghz": 1.6496
+        },
+        "EUP_return_imbalance": {
+          "db": 3.1135500179378544,
+          "frequency_ghz": 1.6496,
+          "plus_db": -4.004652438575485,
+          "minus_db": -0.891102420637631
+        }
+      },
+      "opp_PIN_open": {
+        "max_vs_isolated": {
+          "delta_mag": 0.7036783098013957,
+          "frequency_ghz": 1.3432,
+          "matrix_index": [
+            0,
+            0
+          ]
+        },
+        "E_diff_to_common_peak": {
+          "db": -8.915218863196998,
+          "frequency_ghz": 1.3584
+        },
+        "EUP_return_imbalance": {
+          "db": 11.367611030953485,
+          "frequency_ghz": 1.2984,
+          "plus_db": -11.815454732233482,
+          "minus_db": -0.44784370127999595
+        }
+      },
+      "opp_all_open": {
+        "max_vs_isolated": {
+          "delta_mag": 0.44812413767665327,
+          "frequency_ghz": 1.6496,
+          "matrix_index": [
+            0,
+            0
+          ]
+        },
+        "E_diff_to_common_peak": {
+          "db": -12.04024057511068,
+          "frequency_ghz": 1.6496
+        },
+        "EUP_return_imbalance": {
+          "db": 3.0765131446000424,
+          "frequency_ghz": 1.6496,
+          "plus_db": -3.9692960864444777,
+          "minus_db": -0.8927829418444351
+        }
+      }
+    },
+    "PolB": {
+      "matched": {
+        "max_vs_isolated": {
+          "delta_mag": 0.700674941097189,
+          "frequency_ghz": 1.34,
+          "matrix_index": [
+            2,
+            2
+          ]
+        },
+        "E_diff_to_common_peak": {
+          "db": -8.972240408580369,
+          "frequency_ghz": 1.3544
+        },
+        "EUP_return_imbalance": {
+          "db": 11.237354304102572,
+          "frequency_ghz": 1.2984,
+          "plus_db": -0.4246176686406547,
+          "minus_db": -11.661971972743228
+        }
+      },
+      "opp_EUP_open": {
+        "max_vs_isolated": {
+          "delta_mag": 0.43664334768136637,
+          "frequency_ghz": 1.6496,
+          "matrix_index": [
+            2,
+            2
+          ]
+        },
+        "E_diff_to_common_peak": {
+          "db": -12.329945127666491,
+          "frequency_ghz": 1.6496
+        },
+        "EUP_return_imbalance": {
+          "db": 2.8444553753574118,
+          "frequency_ghz": 1.6496,
+          "plus_db": -0.8507065019951038,
+          "minus_db": -3.6951618773525157
+        }
+      },
+      "opp_PIN_open": {
+        "max_vs_isolated": {
+          "delta_mag": 0.7005770981565642,
+          "frequency_ghz": 1.34,
+          "matrix_index": [
+            2,
+            2
+          ]
+        },
+        "E_diff_to_common_peak": {
+          "db": -8.971824956352993,
+          "frequency_ghz": 1.3544
+        },
+        "EUP_return_imbalance": {
+          "db": 11.231693405735923,
+          "frequency_ghz": 1.2976,
+          "plus_db": -0.4227311754011515,
+          "minus_db": -11.654424581137075
+        }
+      },
+      "opp_all_open": {
+        "max_vs_isolated": {
+          "delta_mag": 0.43369022321686046,
+          "frequency_ghz": 1.6496,
+          "matrix_index": [
+            2,
+            2
+          ]
+        },
+        "E_diff_to_common_peak": {
+          "db": -12.385340713751003,
+          "frequency_ghz": 1.6496
+        },
+        "EUP_return_imbalance": {
+          "db": 2.8101821447106845,
+          "frequency_ghz": 1.6496,
+          "plus_db": -0.8517086052122691,
+          "minus_db": -3.6618907499229536
+        }
+      }
+    }
+  },
+  "summary_metrics": {
+    "matched_max_delta": 0.7037929224295505,
+    "opp_EUP_open_max_delta": 0.451125408588929,
+    "opp_all_open_max_delta": 0.44812413767665327,
+    "max_diff_to_diff_crosspol_db": -9.85835066795276,
+    "max_diff_to_common_crosspol_db": -8.925679130984044
+  },
+  "classification": [
+    {
+      "finding": "ANALYSIS_SEMANTICS_NOT_PRIMARY",
+      "confidence": "HIGH",
+      "basis": "M1 semantic integrity PASS"
+    },
+    {
+      "finding": "OPPOSITE_POL_EUP_50OHM_TERMINATION_NOT_SUFFICIENT_TO_EXPLAIN_HOLD",
+      "confidence": "HIGH",
+      "basis": "open retermination leaves >50% of matched delta"
+    },
+    {
+      "finding": "TRUE_BALANCED_CROSSPOL_COUPLING_IS_STRONG",
+      "confidence": "HIGH",
+      "basis": "A/B differential-to-differential E_UP coupling exceeds -20 dB"
+    },
+    {
+      "finding": "NARROW_RESONANCE_NOT_PRIMARY",
+      "confidence": "HIGH",
+      "basis": "previous 50 MHz resonance gate remained below 10 dB"
+    }
+  ],
+  "boundary": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "rerun_allowed": false
+  }
+}

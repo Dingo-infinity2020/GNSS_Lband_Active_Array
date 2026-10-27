@@ -1,0 +1,17 @@
+{
+  "schema_version": "gnss-d0-model-authority-review-v0.1",
+  "status": "PARTIAL_PASS_HOLD_FORMAL_FULL_ACTIVE_COSIM",
+  "qpl9547_role": "G0_REFERENCE_NOT_FINAL_DEVICE",
+  "qpl9547_raw_s2p_expected_sha256": "fad334a226acb9fbe1e4bd769f474afa14e2c23c18f31f4750c091f3d5d0424f",
+  "qpl9547_raw_s2p_present_on_nw": false,
+  "sparse_inband_anchor_authority": "PASS_ENGINEERING_REFERENCE",
+  "noise_anchor_authority": "PASS_SCIENCE_BAND_INTERPOLATION_SHADOW",
+  "standalone_device_stability_science_band": "PASS",
+  "passive_broadband_model_files_present": false,
+  "formal_full_active_cosim": "HOLD",
+  "geometry_change_required": false,
+  "corrective_build_required": false,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false,
+  "next": "E3C_GROUND_RETURN_TOPOLOGY_FREEZE"
+}

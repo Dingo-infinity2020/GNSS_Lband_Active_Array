@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1A5-DIAGNOSTIC-SMOKE-SOLVE-NW",
+    "stage": "R1A5_DIAGNOSTIC_SMOKE_SOLVE",
+    "status": "READY_FOR_SOLVE"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "last_used_at": "2026-09-24",
+    "state": "ACTIVE"
+  },
+  "source": {
+    "type": "git",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "branch": "project/r0-charts-scaffold",
+    "head_commit": "RESOLVE_AT_PREFLIGHT",
+    "head_on_trusted_remote": false,
+    "dirty": true,
+    "untracked_present": true,
+    "local_only_commits_present": false
+  },
+  "archive": {
+    "mode": "CHECKPOINTED",
+    "destination": "remote Git + R1A5 smoke work after run",
+    "manifest_path": "execution/workspace_record_NW_R1A5.json",
+    "critical_artifacts": [],
+    "recovery_method": "use hash-locked R1A4 CST plus frozen R1A5 config and harness",
+    "completed": false
+  },
+  "closeout": {
+    "task_node": "",
+    "active_processes_checked": false,
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}

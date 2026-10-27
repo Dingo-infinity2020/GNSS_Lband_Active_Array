@@ -1,0 +1,39 @@
+{
+  "delta_s_sequence": [
+    {
+      "pass": 2,
+      "delta_s": 0.0678618
+    },
+    {
+      "pass": 3,
+      "delta_s": 0.0451358
+    },
+    {
+      "pass": 4,
+      "delta_s": 0.0260878
+    },
+    {
+      "pass": 5,
+      "delta_s": 0.0274831
+    },
+    {
+      "pass": 6,
+      "delta_s": 0.0165357
+    },
+    {
+      "pass": 7,
+      "delta_s": 0.0145798
+    }
+  ],
+  "last_two_below_0p02": true,
+  "desired_accuracy_termination": true,
+  "max_passes_reached": false,
+  "broadband_sweep_converged": true,
+  "warning_lines": [
+    "WARNING:",
+    "Prevented attempt to change the value for parameter R1E0_scan_theta_deg to 0 inside history rebuild at step 3.This can break parametrization and should be avoided. Please use the Parameter List to change the value of a parameter. The function \"MakeSureParameterExists\" can be used to create a parameter inside the history.",
+    "WARNING:",
+    "Prevented attempt to change the value for parameter R1E0_scan_phi_deg to 45 inside history rebuild at step 3.This can break parametrization and should be avoided. Please use the Parameter List to change the value of a parameter. The function \"MakeSureParameterExists\" can be used to create a parameter inside the history."
+  ],
+  "error_lines": []
+}

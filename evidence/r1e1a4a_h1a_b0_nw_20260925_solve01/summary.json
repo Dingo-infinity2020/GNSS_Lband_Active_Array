@@ -1,0 +1,140 @@
+{
+  "source_sha256": "b903d678a7039105ad4d91bea2f82e9c1e5e9f8bbf5a5977360c85e34ced3b94",
+  "result_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_h1a_b0_solve_work\\R1E1A4A_H1A_BROADSIDE_SOLVE_V01.cst",
+  "result_sha256": "5960efbfe85a1f27ae29be987dc397a57c52d75129f9134a49372d898b64e930",
+  "result_bytes": 45369,
+  "protected_evidence_rewrites_detected": [
+    "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\evidence/r1e1a4a_h1a_nw_20260925_build01\\build_shapes.txt",
+    "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\evidence/r1e1a4a_h1a_nw_20260925_build01\\build_status.txt"
+  ],
+  "native": {
+    "delta_s_sequence": [
+      {
+        "pass": 2,
+        "delta_s": 0.102059
+      },
+      {
+        "pass": 3,
+        "delta_s": 0.0449968
+      },
+      {
+        "pass": 4,
+        "delta_s": 0.0426612
+      },
+      {
+        "pass": 5,
+        "delta_s": 0.0414162
+      },
+      {
+        "pass": 6,
+        "delta_s": 0.0500126
+      },
+      {
+        "pass": 7,
+        "delta_s": 0.0495401
+      },
+      {
+        "pass": 8,
+        "delta_s": 0.0477349
+      },
+      {
+        "pass": 9,
+        "delta_s": 0.0433231
+      },
+      {
+        "pass": 10,
+        "delta_s": 0.0356251
+      },
+      {
+        "pass": 11,
+        "delta_s": 0.0288383
+      },
+      {
+        "pass": 12,
+        "delta_s": 0.0213176
+      }
+    ],
+    "last_two_below_0p02": false,
+    "desired_accuracy": false,
+    "maxpasses": true,
+    "broadband_converged": true,
+    "errors": []
+  },
+  "numerical_checks": {
+    "all_four_s_present": true,
+    "nonempty": true,
+    "last_two_delta_s": false,
+    "desired_accuracy": false,
+    "not_maxpasses": false,
+    "broadband_converged": true,
+    "no_error_lines": true,
+    "pass": false
+  },
+  "gate_r_mixed_mode": {
+    "max_sdc_db": -68.3229769613491,
+    "max_sdc_freq_ghz": 1.6496,
+    "max_scd_db": -68.37207868666164,
+    "max_scd_freq_ghz": 1.6496,
+    "max_abs_branch_mag_imbalance_db": 0.010831915277124475,
+    "max_branch_mag_imbalance_freq_ghz": 1.5464,
+    "max_abs_branch_phase_error_deg": 0.16229343116904715,
+    "max_branch_phase_error_freq_ghz": 1.6496,
+    "max_abs_zdd_minus_2zavg_ohm": 3.943133130968472e-05,
+    "mode_conversion_pass": true,
+    "branch_symmetry_pass": true,
+    "virtual_ground_mapping_diagnostic": "QUALIFIED_BY_MODE_CONVERSION_AND_BRANCH_SYMMETRY_GATES",
+    "pass": true
+  },
+  "comparison_vs_p0": {
+    "sample_count": 625,
+    "max_abs_delta_sdd_vs_p0": 0.39554121066300973,
+    "max_abs_delta_sdd_freq_ghz": 1.6496,
+    "rms_abs_delta_sdd_vs_p0": 0.17427529818229412,
+    "max_abs_delta_zdd_vs_p0_ohm": 68.98173865758677,
+    "max_abs_delta_zdd_freq_ghz": 1.6496,
+    "rms_abs_delta_zdd_vs_p0_ohm": 51.337269923442875
+  },
+  "comparison_vs_h0": {
+    "sdd": {
+      "sample_count": 625,
+      "max_abs_delta": 0.5945861754710791,
+      "max_abs_delta_freq_ghz": 1.6496,
+      "rms_abs_delta": 0.45363732442167604
+    },
+    "zdd": {
+      "sample_count": 625,
+      "max_abs_delta": 233.35506942720127,
+      "max_abs_delta_freq_ghz": 1.2832,
+      "rms_abs_delta": 164.3299587771456
+    }
+  },
+  "receiver_shadow": {
+    "limit_db": 0.4,
+    "branches": {
+      "P1A": {
+        "nf_db_min": 0.18277312738998175,
+        "nf_db_min_freq_ghz": 1.6464,
+        "nf_db_max": 0.42106978835889874,
+        "nf_db_max_freq_ghz": 1.1504,
+        "fail_count": 30,
+        "fail_fraction": 0.048,
+        "fail_freq_min_ghz": 1.1504,
+        "fail_freq_max_ghz": 1.1736,
+        "pass": false
+      },
+      "P1B": {
+        "nf_db_min": 0.1827123952744344,
+        "nf_db_min_freq_ghz": 1.6456,
+        "nf_db_max": 0.42080207181985047,
+        "nf_db_max_freq_ghz": 1.1504,
+        "fail_count": 30,
+        "fail_fraction": 0.048,
+        "fail_freq_min_ghz": 1.1504,
+        "fail_freq_max_ghz": 1.1736,
+        "pass": false
+      }
+    },
+    "pass": false
+  },
+  "canonical_pass": false
+}

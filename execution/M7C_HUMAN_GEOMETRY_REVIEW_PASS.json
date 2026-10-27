@@ -1,0 +1,22 @@
+{
+  "schema_version": "gnss-m7-human-geometry-review-v0.1",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
+  "status": "PASS_M7C_HUMAN_GEOMETRY_REVIEW",
+  "artifact": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7C_LOCAL_RETURN_ISLAND_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY_V01.cst",
+  "artifact_sha256": "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98",
+  "review_basis": "USER_MANUAL_CST_3D_REVIEW",
+  "build_status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_LOCAL_RETURN_ISLAND_BUILD_ONLY",
+  "review_scope": [
+    "four closed 0.25-mm backside-ground moats around branch-local return islands",
+    "positive/negative island mirror geometry and four-branch rotation symmetry",
+    "signal copper/radiator/package lands/local top ground/vias/bias-output copper visually unchanged",
+    "all three paddle vias remain inside and connected to each branch-local island",
+    "no moat cut intersects via annuli",
+    "no orthogonal-polarization backside-ground short to the retained island",
+    "moat is copper etch only, not substrate removal"
+  ],
+  "solver_authorized": false,
+  "next_stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIAGNOSTIC_SOLVE_PREPARATION",
+  "next_stage_authorized": false,
+  "user_confirmation": "EXPLICIT_CURRENT_TURN_2026-10-07"
+}

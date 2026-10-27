@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2C-DUALPOL-BUILD-20260929",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_branch": "project/r0-charts-scaffold"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_ONLY",
+    "target_host": "NW",
+    "parent_filename": "R1E1A4A_AR0_B1R_T1R1_GROUND_PLACEMENT_CORRECTED_BUILD_ONLY_V01.cst",
+    "parent_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+    "macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_ONLY_V01.mcr",
+    "macro_blob": "fb770258aa94106a2437320c29a2cd036990770a",
+    "inventory": "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_INVENTORY_V01.json",
+    "inventory_blob": "dcc33fc9236eb9e2a696bb90f43ce9e1bdc27bd2",
+    "kernel_reference": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_16VIA_DRILL_KERNEL_REFERENCE_V01.mcr",
+    "kernel_reference_blob": "fbaac4e894a5b5af3c3145a67e767b2a7c8e9c98",
+    "broadphase_runner": "scripts/audit_r1e1a4a_ar0_b1r_r4_a0_e2c_crosspol_broadphase.py",
+    "broadphase_runner_blob": "ce09233173aea44783be8d87dc5e665ca07356e9",
+    "broadphase_manifest": "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_CROSSPOL_BROADPHASE_V01.json",
+    "broadphase_manifest_blob": "8dd082aab1c1fd99495b0e773c1c987efd79e62c",
+    "build_runner": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e2c_dualpol_build_only_v01.py",
+    "build_runner_blob": "226459460c7110f35c29e43fbb882b458465d2b0",
+    "expected_final_shape_count": 177,
+    "expected_raw_ports": 24,
+    "expected_plated_vias": 16,
+    "expected_pairwise_checks": 29,
+    "target_root": "D:\\GNSS_R4A0E2C_20260929_BUILD",
+    "target_artifact": "R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_COEXISTENCE_BUILD_ONLY_V01.cst",
+    "evidence_root": "D:\\GNSS_R4A0E2C_20260929_BUILD\\evidence",
+    "stop_boundary": "one BUILD_ONLY transaction -> kernel reference -> combined History -> fresh reopen -> 177/24/16 -> whole-model -> 29 pairwise -> complete human-review copy -> STOP; no solver",
+    "review_copy": "R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_HUMAN_REVIEW_COPY.cst",
+    "execution_route": "SimulationOps 0.2.15 generic runner v0.1 via NW stable launcher"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "budgets": {
+    "formal_build_invocations": 1,
+    "formal_solver_invocations": 0,
+    "automatic_retries": 0
+  }
+}

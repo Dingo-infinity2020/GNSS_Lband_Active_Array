@@ -1,0 +1,7 @@
+freq_ghz,nfmin_db,gammaopt_mag,gammaopt_deg,rn_ohm,zopt_re_ohm,zopt_im_ohm,illustrative_2xzopt_re_ohm,illustrative_2xzopt_im_ohm,provenance
+1.1,0.22,0.17,39,1.93,63.49795,13.99093,126.99590,27.98185,Qorvo_QPL9547_RevD_2023_noise_parameters
+1.2,0.21,0.15,36,1.97,62.67674,11.30654,125.35347,22.61307,Qorvo_QPL9547_RevD_2023_noise_parameters
+1.3,0.20,0.15,38,2.06,62.17428,11.74782,124.34856,23.49564,Qorvo_QPL9547_RevD_2023_noise_parameters
+1.4,0.17,0.15,59,2.05,56.30834,14.81299,112.61669,29.62599,Qorvo_QPL9547_RevD_2023_noise_parameters
+1.6,0.17,0.13,62,1.83,54.93177,12.82727,109.86354,25.65454,Qorvo_QPL9547_RevD_2023_noise_parameters
+1.7,0.16,0.13,79,1.71,50.81725,13.19269,101.63450,26.38538,Qorvo_QPL9547_RevD_2023_noise_parameters

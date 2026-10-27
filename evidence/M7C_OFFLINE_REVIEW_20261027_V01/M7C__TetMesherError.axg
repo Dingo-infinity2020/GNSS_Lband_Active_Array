@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CSTAuxiliaryGeometry version="20170928">
+  <Objects>
+    <Object name="Problematic Positions" id="1">
+      <Sphere position="-2.81782055 2.76832294 58.4278564" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-2.81782055 2.76832294 58.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-2.81782055 -2.76832294 58.4278564" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-2.81782055 -2.76832294 58.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="2.76832294 -2.81782055 58.4278564" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="2.76832294 -2.81782055 58.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="2.76832294 2.81782055 58.4278564" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="2.76832294 2.81782055 58.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="2.79307175 -2.79307175 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="2.49320602 -2.49320602 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="2.49320602 -2.49320602 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="2.22988868 -2.22988868 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="2.22988868 -2.22988868 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="2.00217462 -2.00217462 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="2.00217462 -2.00217462 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="1.74038935 -1.74038935 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="1.44956887 -1.44956887 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="1.74038935 -1.74038935 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-1.44956887 1.44956887 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-1.70327199 1.70327199 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-1.70327199 1.70327199 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-1.93974698 1.93974698 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-1.93974698 1.93974698 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-2.12007976 2.12007976 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-2.12007976 2.12007976 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-2.30041242 2.30041242 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-2.30041242 2.30041242 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-2.53737569 2.53737569 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-2.79307175 2.79307175 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <Sphere position="-2.53737569 2.53737569 57.1428566" dimension="4 4 4" material="$ErrorMaterial$"/>
+      <LineSet points="-2.81782055 2.76832294 58.4278564 -2.81782055 2.76832294 58.1428566 -2.81782055 -2.76832294 58.4278564 -2.81782055 -2.76832294 58.1428566 2.76832294 -2.81782055 58.4278564 2.76832294 -2.81782055 58.1428566 2.76832294 2.81782055 58.4278564 2.76832294 2.81782055 58.1428566 2.79307175 -2.79307175 57.1428566 2.49320602 -2.49320602 57.1428566 2.49320602 -2.49320602 57.1428566 2.22988868 -2.22988868 57.1428566 2.22988868 -2.22988868 57.1428566 2.00217462 -2.00217462 57.1428566 2.00217462 -2.00217462 57.1428566 1.74038935 -1.74038935 57.1428566 1.44956887 -1.44956887 57.1428566 1.74038935 -1.74038935 57.1428566 -1.44956887 1.44956887 57.1428566 -1.70327199 1.70327199 57.1428566 -1.70327199 1.70327199 57.1428566 -1.93974698 1.93974698 57.1428566 -1.93974698 1.93974698 57.1428566 -2.12007976 2.12007976 57.1428566 -2.12007976 2.12007976 57.1428566 -2.30041242 2.30041242 57.1428566 -2.30041242 2.30041242 57.1428566 -2.53737569 2.53737569 57.1428566 -2.79307175 2.79307175 57.1428566 -2.53737569 2.53737569 57.1428566" lines="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29" material="$ErrorMaterial$"/>
+    </Object>
+  </Objects>
+  <Materials/>
+  <Groups/>
+</CSTAuxiliaryGeometry>

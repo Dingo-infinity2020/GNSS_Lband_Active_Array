@@ -1,0 +1,36 @@
+{
+  "before_presolve": {
+    "status": "PASS_M7C_STORAGE_PREFLIGHT",
+    "volumes": [
+      {
+        "roles": [
+          "output",
+          "temp"
+        ],
+        "probe_path": "C:\\",
+        "required_free_bytes": 42949672960,
+        "free_bytes": 139746762752,
+        "pass": true
+      }
+    ],
+    "new_build": false,
+    "new_solve": false
+  },
+  "before_solver": {
+    "status": "PASS_M7C_STORAGE_PREFLIGHT",
+    "volumes": [
+      {
+        "roles": [
+          "output",
+          "temp"
+        ],
+        "probe_path": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01",
+        "required_free_bytes": 42949672960,
+        "free_bytes": 139745132544,
+        "pass": true
+      }
+    ],
+    "new_build": false,
+    "new_solve": false
+  }
+}

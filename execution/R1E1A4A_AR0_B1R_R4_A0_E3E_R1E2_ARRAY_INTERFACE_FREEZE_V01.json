@@ -1,0 +1,19 @@
+{
+  "schema_version": "gnss-e3e-array-interface-v0.1",
+  "status": "PASS_E3E_R1E2_ARRAY_INTERFACE_COMPATIBLE",
+  "mode": "OFFLINE_ONLY",
+  "r1e2_raw_antenna_nodes": ["A_P_E_UP","A_N_E_UP","B_P_E_UP","B_N_E_UP"],
+  "lna_source_planes": ["A_P_P_IN","A_N_P_IN","B_P_P_IN","B_N_P_IN"],
+  "layer_a": "periodic_EM_E_UP_source_environment",
+  "layer_b": "qualified_CIN_reconnected_P_IN_source_environment",
+  "core_theta_deg": [0,15,30,45,60],
+  "core_phi_deg": [0,45,90],
+  "extended_theta_deg": [65,70,75],
+  "legacy_100ohm_differential_port_final_authority": false,
+  "finite_array_validation": ["center","edge","corner"],
+  "final_lna_match_freeze_before_r1e2": false,
+  "corrective_build_required_now": false,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false,
+  "next": "E3F_CANONICAL_MODEL_LINEAGE_AND_SUPERSESSION_MAP"
+}

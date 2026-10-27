@@ -1,0 +1,235 @@
+{
+  "schema_version": "0.2.8",
+  "status": "PASS_R4_A0_E1_STATIC_PREBUILD_ARITHMETIC_AUDIT",
+  "audit_scope": "repo/tool-local analytical geometry checks only; no CST/NW/XW/251",
+  "checks": {
+    "package_body_inside_coupon": true,
+    "package_body_edge_margin_ge_0p25": true,
+    "all_paddle_barrels_inside_paddle": true,
+    "side_pad_coupon_edge_margin_ge_0p20": true,
+    "decoupler_via_edge_margin_ge_0p20": true,
+    "output_trace_to_side_lane_ge_0p20": true,
+    "all_component_node_gaps_ge_0p40": true,
+    "rf_land_to_paddle_via_ge_0p20": true,
+    "all_ground_spokes_touch_paddle": true,
+    "no_upstream_spoke_at_pin1_or_pin2": true,
+    "no_downstream_spoke_at_pin7": true,
+    "all_six_ports_inside_intended_copper": true,
+    "all_ports_have_backside_ground_underneath": true,
+    "package_to_L1_body_clearance_ge_0p25": true,
+    "COUT_to_L1_body_clearance_ge_0p25": true,
+    "port_n_rule_exact": true,
+    "no_differential_port": true,
+    "execution_not_authorized": true
+  },
+  "detail": {
+    "package_edge_margins_q_mm": [
+      1.25,
+      0.75
+    ],
+    "paddle_via_edge_margins_mm": [
+      {
+        "q_mm": -0.25,
+        "left": 0.12500000000000006,
+        "right": 1.125,
+        "v_low": 0.22500000000000053,
+        "v_high": 0.22500000000000053
+      },
+      {
+        "q_mm": 0.25,
+        "left": 0.625,
+        "right": 0.625,
+        "v_low": 0.22500000000000053,
+        "v_high": 0.22500000000000053
+      },
+      {
+        "q_mm": 0.75,
+        "left": 1.125,
+        "right": 0.125,
+        "v_low": 0.22500000000000053,
+        "v_high": 0.22500000000000053
+      }
+    ],
+    "min_paddle_barrel_to_paddle_edge_mm": 0.125,
+    "side_pad_coupon_edge_margins_q_mm": [
+      {
+        "name": "L1_RF",
+        "left": 3.15,
+        "right": 0.25
+      },
+      {
+        "name": "L1_VDD",
+        "left": 3.15,
+        "right": 0.25
+      },
+      {
+        "name": "CRF_VDD",
+        "left": 3.15,
+        "right": 0.25
+      },
+      {
+        "name": "CRF_GND",
+        "left": 3.15,
+        "right": 0.25
+      }
+    ],
+    "decoupler_via_to_coupon_right_edge_mm": 0.375,
+    "output_trace_to_side_lane_gap_mm": [
+      {
+        "v_mm": 10,
+        "gap_mm": 0.5899999999999997
+      },
+      {
+        "v_mm": 10.25,
+        "gap_mm": 0.42749999999999977
+      },
+      {
+        "v_mm": 10.5,
+        "gap_mm": 0.2649999999999997
+      },
+      {
+        "v_mm": 10.6,
+        "gap_mm": 0.19999999999999996
+      },
+      {
+        "v_mm": 10.9,
+        "gap_mm": 0.19999999999999996
+      },
+      {
+        "v_mm": 11.15,
+        "gap_mm": 0.19999999999999996
+      },
+      {
+        "v_mm": 11.4,
+        "gap_mm": 0.19999999999999996
+      }
+    ],
+    "min_output_trace_to_side_lane_gap_mm": 0.19999999999999996,
+    "series_component_gaps_mm": {
+      "C_IN": 0.39999999999999947,
+      "C_OUT": 0.40000000000000036,
+      "L1": 0.40000000000000036,
+      "C_RF": 0.40000000000000036
+    },
+    "rf_land_to_paddle_via_barrel_longitudinal_mm": {
+      "RF_IN": 0.5250000000000004,
+      "RF_OUT": 0.5250000000000004
+    },
+    "spoke_paddle_overlap_q_mm": [
+      {
+        "q_mm": -0.5,
+        "overlap_mm": 0.15000000000000002
+      },
+      {
+        "q_mm": 0.5,
+        "overlap_mm": 0.19999999999999996
+      },
+      {
+        "q_mm": 1,
+        "overlap_mm": 0.15000000000000002
+      }
+    ],
+    "spoke_to_isolated_pin_center_min_q_mm": 0,
+    "port_containment": [
+      {
+        "name": "E_UP",
+        "q_mm": 0,
+        "v_mm": 4.65,
+        "owner_rect": {
+          "q": [
+            -0.3,
+            0.3
+          ],
+          "v": [
+            4.4,
+            4.9
+          ]
+        },
+        "inside": true
+      },
+      {
+        "name": "P_IN",
+        "q_mm": 0,
+        "v_mm": 6.085,
+        "owner_rect": {
+          "q": [
+            -0.125,
+            0.125
+          ],
+          "v": [
+            5.87,
+            6.3
+          ]
+        },
+        "inside": true
+      },
+      {
+        "name": "P_OUT",
+        "q_mm": 0,
+        "v_mm": 7.915,
+        "owner_rect": {
+          "q": [
+            -0.125,
+            0.125
+          ],
+          "v": [
+            7.7,
+            8.13
+          ]
+        },
+        "inside": true
+      },
+      {
+        "name": "E_DN",
+        "q_mm": 0,
+        "v_mm": 9.35,
+        "owner_rect": {
+          "q": [
+            -0.3,
+            0.3
+          ],
+          "v": [
+            9.1,
+            9.6
+          ]
+        },
+        "inside": true
+      },
+      {
+        "name": "B_VDD",
+        "q_mm": 1.45,
+        "v_mm": 9.8,
+        "owner_rect": {
+          "q": [
+            1.15,
+            1.75
+          ],
+          "v": [
+            9.6,
+            10
+          ]
+        },
+        "inside": true
+      },
+      {
+        "name": "B_VBIAS",
+        "q_mm": -0.5,
+        "v_mm": 6.085,
+        "owner_rect": {
+          "q": [
+            -0.625,
+            -0.375
+          ],
+          "v": [
+            5.87,
+            6.3
+          ]
+        },
+        "inside": true
+      }
+    ],
+    "package_to_L1_body_v_clearance_mm": 0.40000000000000036,
+    "COUT_to_L1_body_q_clearance_mm": 0.95
+  },
+  "conclusion": "Frozen A0-E1 seed satisfies current arithmetic placement/clearance predicates. The narrowest planned unrelated-copper clearance is 0.20 mm at the widened downstream RF trace versus the side-lane decoupling region; this is an intentional hard boundary to verify in CST build-only."
+}

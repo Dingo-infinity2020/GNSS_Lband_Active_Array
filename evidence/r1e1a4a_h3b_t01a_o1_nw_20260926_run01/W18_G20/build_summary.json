@@ -1,0 +1,15 @@
+{
+  "candidate": "W18_G20",
+  "Wsig_mm": 1.8,
+  "Gcpw_mm": 0.2,
+  "build_sha256": "20ab69b6af5b78eae7805d3fb9c3934d5c72d083570acf593c5ab5b550f6f9ba",
+  "checks": {
+    "shape_count_21": true,
+    "positive_volumes": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "hash_stable": true
+  }
+}

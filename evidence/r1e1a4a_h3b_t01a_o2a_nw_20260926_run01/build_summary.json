@@ -1,0 +1,36 @@
+{
+  "source_macro_sha256": "470451c0972bfa087cae06e723f0017061d7d0e29149477dd4295c60937f9709",
+  "o2a_macro_sha256": "cad9b4d7b08c14c862423562ced7723764d4f69ac3a3b851110e6e210e6ca890",
+  "build_sha256": "290b8c1109706de6415ff342f2d83ce8aaca1162732ca69c60da79531d96521e",
+  "transform_rules": {
+    "StoreParameter \"h3b_t01_wsig\", 1.8": {
+      "new": "StoreParameter \"h3b_t01_wsig\", 1.5",
+      "count": 1
+    },
+    "StoreParameter \"h3b_t01_gap\", 0.3": {
+      "new": "StoreParameter \"h3b_t01_gap\", 0.4",
+      "count": 1
+    },
+    ".Xrange \"-0.9\", \"0.9\"": {
+      "new": ".Xrange \"-0.75\", \"0.75\"",
+      "count": 2
+    },
+    ".Xrange \"-3.4\", \"-1.2\"": {
+      "new": ".Xrange \"-3.35\", \"-1.15\"",
+      "count": 2
+    },
+    ".Xrange \"1.2\", \"3.4\"": {
+      "new": ".Xrange \"1.15\", \"3.35\"",
+      "count": 2
+    }
+  },
+  "checks": {
+    "shape_count_38": true,
+    "positive_volumes": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "reopen_hash_stable": true
+  }
+}

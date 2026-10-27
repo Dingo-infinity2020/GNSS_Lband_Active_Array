@@ -1,0 +1,15 @@
+{
+  "candidate": "W18_G40",
+  "Wsig_mm": 1.8,
+  "Gcpw_mm": 0.4,
+  "build_sha256": "260ad665d48509d4a7ff5780667bb6f1af44e67da4c214556c54f139470074a4",
+  "checks": {
+    "shape_count_21": true,
+    "positive_volumes": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "hash_stable": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.2.9",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E1-BUILD-HOLD-20260928",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E1_BUILD_ONLY",
+  "formal_source_head": "0999e0e9f83f0d1bc88f3e4d2b64961371899bda",
+  "formal_status": "HOLD_R1E1A4A_AR0_B1R_R4_A0_E1_BUILD_ONLY",
+  "classification": "HOLD_BUILD_AUDIT_UNRESOLVED",
+  "formal_builds_consumed": 1,
+  "solver_invocations": 0,
+  "retry_performed": false,
+  "solve_performed": false,
+  "authorization_after_stop": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "source": {
+    "macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_BUILD_ONLY_V02.mcr",
+    "macro_sha256": "85e7999797fc0ce7f7cf974305a99ddb4ca599da43fffd01ce7333e2d5f2cc02"
+  },
+  "nw_artifact": {
+    "path": "D:\\GNSS_R4A0E1_20260928_ARTIFACTS\\R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_BUILD_ONLY_V02.cst",
+    "sha256": "f5ee6fceab2c26db5d4d63365e37abec65b87698633c577e1ca87613b86a9745",
+    "workspace": "D:\\GNSS_R4A0E1_20260928",
+    "lifecycle_state": "PROTECTED_PENDING_RECOVERY"
+  },
+  "passed_checks": {
+    "shape_count_36": true,
+    "exact_shape_name_set": true,
+    "component_counts_exact": true,
+    "materials_exact": true,
+    "drill_tool_component_consumed": true,
+    "result_tree_empty": true,
+    "artifact_hash_stable_fresh_reopen": true
+  },
+  "unresolved_checks": {
+    "port_count": {
+      "expected": 6,
+      "observed": 0
+    },
+    "critical_pairwise_zero_overlap": {
+      "expected": true,
+      "observed": false,
+      "common_intersect_err": -2147418113,
+      "observed_intersection_volume_mm3": 0,
+      "interpretation": "The destructive Solid.Intersect audit failed uniformly at the CST automation command layer; zero reported volumes are not promoted to PASS."
+    }
+  },
+  "diagnostic_interpretation": [
+    "The 36-solid geometry/material/via-drill inventory is intact after fresh reopen.",
+    "No solver result tree exists and no solver was launched.",
+    "The failure does not yet prove a geometry interference or physics failure.",
+    "Port creation/persistence and pairwise Boolean audit semantics require a separate recovery contract before any retry.",
+    "The formal build budget is consumed; no silent retry is permitted."
+  ],
+  "next_boundary": "R4_A0_E1_BUILD_HOLD_RECOVERY_CONTRACT_FREEZE",
+  "remote_evidence_root": "D:\\GNSS_R4A0E1_20260928_ARTIFACTS\\evidence"
+}

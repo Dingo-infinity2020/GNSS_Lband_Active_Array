@@ -1,0 +1,16 @@
+{
+  "source_sha256": "fad334a226acb9fbe1e4bd769f474afa14e2c23c18f31f4750c091f3d5d0424f",
+  "source_bytes": 206642,
+  "source_url": "https://forum.qorvo.com/uploads/short-url/OzRTh5hfsPc1veMfkCB7ChCzFE.S2P",
+  "measurement_header_date": "2024-10-04",
+  "bias": "5V_65mA",
+  "band_ghz": [
+    1.15,
+    1.65
+  ],
+  "K_min": 1.2480207469830478,
+  "mu_min": 1.3687499918133768,
+  "mu_prime_min": 1.3872544939435814,
+  "delta_mag_max": 0.4436905088798117,
+  "unconditional_stability_2port_in_band": true
+}

@@ -1,0 +1,17 @@
+﻿R0.1A TOPOLOGY BUILD-ONLY PREFLIGHT
+timestamp=2026-09-22 20:52:17 +08:00
+host=DESKTOP-GBTI6Q4
+pwd=D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold
+git_head=cd91035893a6a3ad23dcd13a55f9b7c1a176a9e1
+git_status=
+
+CMD: python scripts/r0_manifest_gate.py --stage topology
+PASS_R0_TOPOLOGY_MANIFEST_READY_FOR_BUILD_ONLY
+exit=0
+
+CMD: python scripts/audit_r0_topology_macro.py
+PASS_R0_TOPOLOGY_MACRO_STATIC_AUDIT
+EXPECTED_SOLIDS=9
+EXPECTED_PORTS=0
+SOLVER_RUN=NO
+exit=0

@@ -1,0 +1,6 @@
+Set-Location "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold"; & "D:\Program Files (x86)\CST Studio Suite 2022\AMD64\python\python.exe" "scripts\run_r1a5fq_clean_feed_equivalence_dc.py" --repo "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold" --evidence "D:\GNSS_Lband_Active_Array\GNSS_Lband_Active_Array-project-r0-charts-scaffold\evidence\r1a5fq_dc_nw_20260924_equiv01" --work "D:\GNSS_Lband_Active_Array\_r1a5fq_equivalence_work" --source-a "D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLA_SINGLE_PORT_V01.cst" --source-b "D:\GNSS_Lband_Active_Array\_r1a5f_split_single_port_work\R1A5F_POLB_SINGLE_PORT_V01.cst"
+
+FORMAL_INVOCATION_COUNT=1
+EXIT_CODE=0
+RUNTIME_SECONDS=180.64
+SILENT_RETRY=NO

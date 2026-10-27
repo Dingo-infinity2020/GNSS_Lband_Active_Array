@@ -1,0 +1,331 @@
+{
+  "schema_version": "gnss-m7a-diagnostic-solve-v0.1",
+  "status": "FROZEN_READY_AWAIT_SOLVE_AUTH",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7A_DIAGNOSTIC_SOLVE",
+  "prepared_from_project_commit": "bf052b8f9e80da7a07ed305d01a664d38203142c",
+  "canonical_build": {
+    "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7A_INNER_EDGE_SETBACK_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7A_INNER_EDGE_SETBACK_BUILD_ONLY_V01.cst",
+    "sha256": "f9706d9f1be0c352690b150fdc0f4f8a64448d526b9772c0a59b9eb7c3bbc896",
+    "shape_count": 177,
+    "raw_port_count": 24,
+    "human_review": "PASS_M7A_HUMAN_GEOMETRY_REVIEW"
+  },
+  "solve_network": {
+    "port_count": 12,
+    "source_ports": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      10,
+      11
+    ],
+    "load_only_ports": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "required_complex_traces": 96,
+    "modeled_band_ghz": [
+      1,
+      1.8
+    ],
+    "decision_band_ghz": [
+      1.15,
+      1.65
+    ],
+    "references_ghz": {
+      "L5": 1.17645,
+      "L2": 1.2276,
+      "L1": 1.57542
+    },
+    "solver": "CST HF Frequency Domain",
+    "mesh": "second-order tetrahedral adaptive",
+    "max_delta_s": 0.02,
+    "consecutive_passes_required": 2,
+    "max_passes": 16,
+    "automatic_retries": 0
+  },
+  "raw_to_solve": [
+    {
+      "raw": 1,
+      "solve": 1,
+      "name": "A_P_E_UP",
+      "role": "SOURCE",
+      "p1": [
+        2.12132034355964,
+        2.12132034355964,
+        52.4928571428
+      ],
+      "p2": [
+        2.82842712474619,
+        1.4142135623731,
+        52.4928571428
+      ]
+    },
+    {
+      "raw": 2,
+      "solve": 2,
+      "name": "A_P_P_IN",
+      "role": "SOURCE_DEVICE_INPUT",
+      "p1": [
+        2.12132034355964,
+        2.12132034355964,
+        51.0578571428
+      ],
+      "p2": [
+        2.82842712474619,
+        1.4142135623731,
+        51.0578571428
+      ]
+    },
+    {
+      "raw": 3,
+      "solve": 3,
+      "name": "A_P_P_OUT_LOAD50",
+      "role": "MATCHED_LOAD_ONLY",
+      "p1": [
+        2.12132034355964,
+        2.12132034355964,
+        49.2278571428
+      ],
+      "p2": [
+        2.82842712474619,
+        1.4142135623731,
+        49.2278571428
+      ]
+    },
+    {
+      "raw": 7,
+      "solve": 4,
+      "name": "A_N_E_UP",
+      "role": "SOURCE",
+      "p1": [
+        -2.12132034355964,
+        -2.12132034355964,
+        52.4928571428
+      ],
+      "p2": [
+        -1.4142135623731,
+        -2.82842712474619,
+        52.4928571428
+      ]
+    },
+    {
+      "raw": 8,
+      "solve": 5,
+      "name": "A_N_P_IN",
+      "role": "SOURCE_DEVICE_INPUT",
+      "p1": [
+        -2.12132034355964,
+        -2.12132034355964,
+        51.0578571428
+      ],
+      "p2": [
+        -1.4142135623731,
+        -2.82842712474619,
+        51.0578571428
+      ]
+    },
+    {
+      "raw": 9,
+      "solve": 6,
+      "name": "A_N_P_OUT_LOAD50",
+      "role": "MATCHED_LOAD_ONLY",
+      "p1": [
+        -2.12132034355964,
+        -2.12132034355964,
+        49.2278571428
+      ],
+      "p2": [
+        -1.4142135623731,
+        -2.82842712474619,
+        49.2278571428
+      ]
+    },
+    {
+      "raw": 13,
+      "solve": 7,
+      "name": "B_P_E_UP",
+      "role": "SOURCE",
+      "p1": [
+        -2.12132034355964,
+        2.12132034355964,
+        52.4928571428
+      ],
+      "p2": [
+        -1.4142135623731,
+        2.82842712474619,
+        52.4928571428
+      ]
+    },
+    {
+      "raw": 14,
+      "solve": 8,
+      "name": "B_P_P_IN",
+      "role": "SOURCE_DEVICE_INPUT",
+      "p1": [
+        -2.12132034355964,
+        2.12132034355964,
+        51.0578571428
+      ],
+      "p2": [
+        -1.4142135623731,
+        2.82842712474619,
+        51.0578571428
+      ]
+    },
+    {
+      "raw": 15,
+      "solve": 9,
+      "name": "B_P_P_OUT_LOAD50",
+      "role": "MATCHED_LOAD_ONLY",
+      "p1": [
+        -2.12132034355964,
+        2.12132034355964,
+        49.2278571428
+      ],
+      "p2": [
+        -1.4142135623731,
+        2.82842712474619,
+        49.2278571428
+      ]
+    },
+    {
+      "raw": 19,
+      "solve": 10,
+      "name": "B_N_E_UP",
+      "role": "SOURCE",
+      "p1": [
+        2.12132034355964,
+        -2.12132034355964,
+        52.4928571428
+      ],
+      "p2": [
+        2.82842712474619,
+        -1.4142135623731,
+        52.4928571428
+      ]
+    },
+    {
+      "raw": 20,
+      "solve": 11,
+      "name": "B_N_P_IN",
+      "role": "SOURCE_DEVICE_INPUT",
+      "p1": [
+        2.12132034355964,
+        -2.12132034355964,
+        51.0578571428
+      ],
+      "p2": [
+        2.82842712474619,
+        -1.4142135623731,
+        51.0578571428
+      ]
+    },
+    {
+      "raw": 21,
+      "solve": 12,
+      "name": "B_N_P_OUT_LOAD50",
+      "role": "MATCHED_LOAD_ONLY",
+      "p1": [
+        2.12132034355964,
+        -2.12132034355964,
+        49.2278571428
+      ],
+      "p2": [
+        2.82842712474619,
+        -1.4142135623731,
+        49.2278571428
+      ]
+    }
+  ],
+  "deleted_raw_ports": [
+    4,
+    5,
+    6,
+    10,
+    11,
+    12,
+    16,
+    17,
+    18,
+    22,
+    23,
+    24
+  ],
+  "isolated_baselines": {
+    "PolA": {
+      "solved_sha256": "811a31eabcd193bcf5f9cbecdf05f8aab1b1ab945bad4bda51a94d21d57b04b3",
+      "csv_path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\E2A_S0L_SOLVE_20260929\\evidence\\loaded_response_native.csv",
+      "csv_sha256": "a759ac6135a297429a8a166b6a01a39a66b5ec3a861267ed0f05d53ff605fae4"
+    },
+    "PolB": {
+      "solved_sha256": "2abafb4435a6f1dc7bfcadec029ee1c81436cf91f27fefe99ca64337820eba02",
+      "csv_path": "D:\\GNSS_Lband_Active_Array\\GNSS_R4A0E2B_S0L_SOLVE_20260929\\qualification_recovery_v01\\loaded_response_native.csv",
+      "csv_sha256": "103c0de1ee2353d284e84ab8e065c9e802f4e1283912d0e19f1f5c7a89ced4e5"
+    }
+  },
+  "review_thresholds": {
+    "own_pol_complex_delta_review": 0.1,
+    "own_pol_complex_delta_severe": 0.2,
+    "mode_conversion_degradation_review_db": 3,
+    "mode_conversion_degradation_severe_db": 6,
+    "branch_eup_return_imbalance_review_db": 1,
+    "resonance_excursion_db": 10,
+    "resonance_width_mhz": 50,
+    "cross_pol_device_coupling_review_db": -20,
+    "cross_pol_device_coupling_severe_db": -10
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false
+  },
+  "full_e2c_reference": {
+    "response_csv": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\E2C_S0_COEXISTENCE_20261002_V01\\evidence\\qualification\\loaded_response_native.csv",
+    "response_csv_sha256": "63efb3b3c046ffa633d04092d0190afc4d01ea03f4fd6316ffa1d87170af8a46",
+    "raw_peak_ghz": 1.3432,
+    "raw_max_complex_delta": 0.7037929224295506,
+    "imbalance_anchor_ghz": 1.2984,
+    "imbalance_db": 11.374270538449593
+  },
+  "corrective_gate": {
+    "primary": {
+      "definition": "For BOTH PolA and PolB: >=30% reduction versus full E2C in E_diff_to_common degradation at each full-E2C polarization's own severe peak anchor, AND >=30% reduction in E_UP branch-return imbalance at 1.2984 GHz.",
+      "minimum_reduction_fraction": 0.3,
+      "require_both_polarizations": true
+    },
+    "secondary": {
+      "definition": "Worst own-pol source-side complex deviation versus isolated baseline over 1.15-1.65 GHz is >=20% lower than frozen full-E2C worst reference.",
+      "minimum_reduction_fraction": 0.2
+    },
+    "guard": {
+      "definition": "For every off-diagonal solved response, no <=50 MHz window may gain >6 dB excursion relative to the same full-E2C trace/window.",
+      "max_new_excursion_db": 6.0,
+      "window_mhz": 50.0
+    },
+    "classification": {
+      "PASS_M7A_CORRECTIVE": "numerical hard gates pass AND primary pass AND guard pass",
+      "REVIEW_M7A_PARTIAL_CORRECTION": "numerical hard gates pass AND guard pass AND primary fails but at least one primary reduction >=10% or secondary passes",
+      "REJECT_M7A_INNER_EDGE_LEVER": "numerical hard gates pass AND guard pass AND primary fails with no >=10% primary improvement and secondary fails",
+      "HOLD_M7A_CORRECTIVE_GUARD": "numerical hard gates pass but guard fails",
+      "HOLD_M7A_NUMERICAL": "numerical hard gates fail"
+    }
+  },
+  "execution": {
+    "config_macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_COEXISTENCE_CONFIG_V01.mcr",
+    "config_macro_sha256": "035976282c4d5bf3ea45e28b66edf79bf7639b451380e5ca8f5b5b7e46a88f4b",
+    "inventory_contract": "execution/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_INVENTORY_V01.json",
+    "inventory_contract_sha256": "e4f4157bf4248bd94c0d33b18c0a8dad4a8831ae46204d6a8fae4ecba86a8095",
+    "runner": "scripts/run_m7a_diagnostic_solve_v01.py",
+    "evaluator": "scripts/evaluate_m7a_corrective_readonly_v01.py",
+    "target_root": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7A_DIAGNOSTIC_SOLVE_V01",
+    "artifact_name": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7A_DIAGNOSTIC_SOLVED_V01.cst",
+    "formal_solver_budget": 1,
+    "automatic_retries": 0,
+    "stop_boundary": "STOP_AFTER_ONE_M7A_12PORT_SOLVE_READONLY_QUALIFICATION_AND_CORRECTIVE_GATE_NO_RETRY_NO_M7B"
+  }
+}

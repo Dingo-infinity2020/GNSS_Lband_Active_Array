@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-T2F-R2-20260927",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "7902c39983254fcf8dda7957bd4d507cb34cb863",
+    "model_identity": "AR0_B1R_T2F_R2_OUTPUT_PORT_ENDPOINT_FIX"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_T2F_R2_PORT_ENDPOINT_BUILD_ONLY",
+    "target_control_host": "NW",
+    "entrypoint": "scripts/run_r1e1a4a_ar0_b1r_t2f_r2_build_only.py",
+    "stop_boundary": "continue to conditional NW solve only if build PASS"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED_CONDITIONAL": true,
+    "solver_launch_budget_after_build_pass": 1,
+    "retry_authorized": false
+  },
+  "source": {
+    "parent_t1_sha256": "3144672323cbd4123d6413e7d9ae8f4842b78707d3a71b641748c7250ca2a8f6"
+  },
+  "execution": {
+    "silent_retry_allowed": false,
+    "dry_run": false,
+    "ticket_id": "GNSS-AR0-B1R-T2F-R2-20260927"
+  }
+}

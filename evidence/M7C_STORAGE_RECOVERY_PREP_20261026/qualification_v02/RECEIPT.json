@@ -1,0 +1,23 @@
+﻿{
+    "status":  "PASS_M7C_RECOVERY_NONPRODUCTION_HOST_QUALIFICATION",
+    "observed_at_utc":  "2026-10-26T14:08:28Z",
+    "host_name":  "DESKTOP-GBTI6Q4",
+    "source_commit":  "4ab2648015955e1e6c8f10864f063e916f4d64f1",
+    "source_status":  [
+
+                      ],
+    "source_autocrlf":  "false",
+    "regression_exit":  0,
+    "runtime_help_exit":  0,
+    "runtime_import_exit":  0,
+    "contract_check_exit":  0,
+    "inventory_semantics_exit":  0,
+    "build_invocations":  0,
+    "solve_invocations":  0,
+    "simulator_application_launched":  false,
+    "actual_formal_packet_generated":  false,
+    "BUILD_AUTHORIZED":  false,
+    "SOLVE_AUTHORIZED":  false,
+    "transport":  "DIRECT_SSH_USER_AUTHORIZED_ROUTE_EXCEPTION",
+    "output_root_created":  false
+}

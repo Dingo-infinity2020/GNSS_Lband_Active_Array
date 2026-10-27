@@ -1,0 +1,21 @@
+{
+  "schema_version": "gnss-e2c-s0-posthold-route-v0.1",
+  "status": "FROZEN_OFFLINE_ROUTE",
+  "trigger": "HOLD_E2C_S0_SEVERE_COEXISTENCE_REVIEW",
+  "canonical_geometry_sha256": "cab6754235a66006ba8bdb423c4dcde2d00de0cb5d8c56623cf94fc3c364ce2c",
+  "solved_artifact_sha256": "71b74ec749baa60276c8f6cf7c10cc0e17dad4d0d4bde7c7b6cd54668c16c784",
+  "sequence": [
+    "M1_SEMANTIC_INTEGRITY",
+    "M2_96_TRACE_COUPLING_DECOMPOSITION",
+    "M3_FREQUENCY_MECHANISM",
+    "M4_FIRST_PRINCIPLES_CLASSIFICATION"
+  ],
+  "future_build_gate": [
+    "named_physical_mechanism",
+    "named_observable",
+    "expected_direction"
+  ],
+  "automatic_retry": false,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false
+}

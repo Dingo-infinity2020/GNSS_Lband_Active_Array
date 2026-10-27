@@ -1,0 +1,6 @@
+log.tet|[14:22:18] [CADSurf] Warning: missing mesh size for UID 169
+log.tet|[14:22:18] [CADSurf] Warning: missing mesh size for UID 0
+log.tet|[14:22:19] [SrfToVol] Msg:  %% WARNING max_size    8.483    is lower than the greatest edge    11.63
+log.tet|[14:22:19] [SrfToVol] Msg:  %% WARNING max_size    17.39    is lower than the greatest edge    24.94
+log.tet|Description: 1005343  %% WARNING max_size    8.483    is lower than the greatest edge    11.63
+log.tet|Description: 1005343  %% WARNING max_size    17.39    is lower than the greatest edge    24.94

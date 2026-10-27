@@ -1,0 +1,228 @@
+{
+  "base_cst": "D:\\GNSS_Lband_Active_Array\\_r1a4_differential_ports_work\\R1A4_DIFFERENTIAL_PORTS_BUILD_ONLY_V01.cst",
+  "base_cst_sha256": "4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
+  "pre_config_copy_sha256": "4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
+  "config_sha256": "c620f8267d5548e88c606b858ff40ae0e52960112b21ec321ecf44a7e762bdb6",
+  "baseline_csv": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold\\evidence\\r1a5m_dc_nw_20260924_adapt01\\sparameters_and_zin.csv",
+  "baseline_csv_sha256": "f7662e077c06dbcd7c82d91cdd6a1d2b2b444cdcbdbce9052986f9d265ba7da6",
+  "r1a5m2_cst": "D:\\GNSS_Lband_Active_Array\\_r1a5m2_maxpass8_work\\R1A5M2_ADAPTIVE_MAXPASS8_V01.cst",
+  "r1a5m2_cst_sha256": "1f904290293b49d4ad39d71cf3d3ddda86c81c2c202305e95f43b50ed477428e",
+  "r1a5m2_cst_bytes": 48178,
+  "solver": "HF Frequency Domain",
+  "mesh": "tetrahedral second order adaptive; curvature order 3; general purpose",
+  "adaptation": {
+    "min_passes": 3,
+    "max_passes": 8,
+    "max_delta_s": 0.02,
+    "delta_s_checks": 2,
+    "linear_growth_limitation": 40
+  },
+  "frequency_ghz": [
+    1.0,
+    1.8
+  ],
+  "metrics": {
+    "point_count": 1001,
+    "invalid_complex_values": 0,
+    "max_abs_s11_s22_db_diff": 0.013107094436062283,
+    "max_complex_reciprocity_error": 7.966782484269627e-05,
+    "best_s11": {
+      "f_ghz": 1.8,
+      "db": -19.993323328534913
+    },
+    "best_s22": {
+      "f_ghz": 1.8,
+      "db": -19.98021623409885
+    },
+    "anchors": {
+      "1.17645": {
+        "f_ghz": 1.1768,
+        "s11_db": -11.619243436699678,
+        "s22_db": -11.610659037409993,
+        "s21_db": -53.4578113385943,
+        "s12_db": -53.6804199002364,
+        "zin1_ohm": [
+          101.8914364357381,
+          -54.87510503857774
+        ],
+        "zin2_ohm": [
+          101.40431322885689,
+          -54.816474374512666
+        ],
+        "s21_interpretation": "PORT_MODEL_LIMITED"
+      },
+      "1.2276": {
+        "f_ghz": 1.2272,
+        "s11_db": -15.743963120363869,
+        "s22_db": -15.748082990090268,
+        "s21_db": -55.615578670425656,
+        "s12_db": -55.63478556934204,
+        "zin1_ohm": [
+          77.6776613391943,
+          -18.768069602536784
+        ],
+        "zin2_ohm": [
+          77.59358803176804,
+          -18.6207349959466
+        ],
+        "s21_interpretation": "PORT_MODEL_LIMITED"
+      },
+      "1.27875": {
+        "f_ghz": 1.2784,
+        "s11_db": -15.667784359981411,
+        "s22_db": -15.678962195046642,
+        "s21_db": -57.297723832492906,
+        "s12_db": -57.30622595366627,
+        "zin1_ohm": [
+          72.48304796473123,
+          7.134560066806606
+        ],
+        "zin2_ohm": [
+          72.55059949573139,
+          7.295972593605454
+        ],
+        "s21_interpretation": "PORT_MODEL_LIMITED"
+      },
+      "1.4": {
+        "f_ghz": 1.4,
+        "s11_db": -12.32399432056388,
+        "s22_db": -12.324772994285238,
+        "s21_db": -60.23011920926181,
+        "s12_db": -60.18529250749825,
+        "zin1_ohm": [
+          86.77323826715518,
+          44.54276557463969
+        ],
+        "zin2_ohm": [
+          86.97598004052576,
+          44.65436612843439
+        ],
+        "s21_interpretation": "PORT_MODEL_LIMITED"
+      },
+      "1.5611": {
+        "f_ghz": 1.5608,
+        "s11_db": -12.289331021014734,
+        "s22_db": -12.290247573039395,
+        "s21_db": -63.15870239880746,
+        "s12_db": -63.19179348779276,
+        "zin1_ohm": [
+          122.63736884564712,
+          50.64460446625542
+        ],
+        "zin2_ohm": [
+          122.77015259107613,
+          50.61114157392792
+        ],
+        "s21_interpretation": "PORT_MODEL_LIMITED"
+      },
+      "1.57542": {
+        "f_ghz": 1.5752000000000002,
+        "s11_db": -12.455384255895147,
+        "s22_db": -12.456616131308795,
+        "s21_db": -63.370324238068,
+        "s12_db": -63.40143401702976,
+        "zin1_ohm": [
+          125.07736678445804,
+          48.834911817853076
+        ],
+        "zin2_ohm": [
+          125.18841675243547,
+          48.79585369143061
+        ],
+        "s21_interpretation": "PORT_MODEL_LIMITED"
+      },
+      "1.602": {
+        "f_ghz": 1.6024,
+        "s11_db": -12.84389800648759,
+        "s22_db": -12.845750190709055,
+        "s21_db": -63.74724309238338,
+        "s12_db": -63.774373125098094,
+        "zin1_ohm": [
+          128.76834510637232,
+          44.665230469540525
+        ],
+        "zin2_ohm": [
+          128.83452278503523,
+          44.62455935083495
+        ],
+        "s21_interpretation": "PORT_MODEL_LIMITED"
+      }
+    }
+  },
+  "comparison_to_r1a5m_pass6": {
+    "science_band_ghz": [
+      1.15,
+      1.65
+    ],
+    "sample_count": 625,
+    "max_frequency_grid_error_ghz": 0.0,
+    "max_complex_delta_s11": 0.015124122186841216,
+    "max_complex_delta_s11_freq_ghz": 1.6496,
+    "max_complex_delta_s22": 0.015189754305994719,
+    "max_complex_delta_s22_freq_ghz": 1.6496,
+    "max_db_delta_s11": 0.6055526539697507,
+    "max_db_delta_s11_freq_ghz": 1.6496,
+    "max_db_delta_s22": 0.6079799500011589,
+    "max_db_delta_s22_freq_ghz": 1.6496
+  },
+  "native_adaptation": {
+    "delta_s_sequence": [
+      {
+        "pass": 2,
+        "delta_s": 0.0673917
+      },
+      {
+        "pass": 3,
+        "delta_s": 0.0497934
+      },
+      {
+        "pass": 4,
+        "delta_s": 0.0274924
+      },
+      {
+        "pass": 5,
+        "delta_s": 0.0203928
+      },
+      {
+        "pass": 6,
+        "delta_s": 0.0173367
+      },
+      {
+        "pass": 7,
+        "delta_s": 0.017589
+      }
+    ],
+    "last_two_below_0p02": true,
+    "max_passes_reached": false,
+    "broadband_sweep_converged": true,
+    "error_lines": []
+  },
+  "checks": {
+    "base_hash_match": true,
+    "pre_config_copy_hash_match": true,
+    "port_count_2": true,
+    "geometry_unchanged": true,
+    "all_curves_present": true,
+    "no_nan_inf": true,
+    "reciprocity_pass": true,
+    "pol_symmetry_pass": true,
+    "baseline_s11_complex_converged": true,
+    "baseline_s22_complex_converged": true,
+    "native_two_consecutive_delta_s_pass": true,
+    "native_not_maxpass_terminated": true,
+    "native_no_error_lines": true,
+    "broadband_sweep_converged": true,
+    "pass": true
+  },
+  "warning_line_count": 6,
+  "adaptation_log_line_count": 16,
+  "port_model_caveat": "Crossed discrete-edge ports add artificial coupling; isolation near/below -50 dB is port-model-limited.",
+  "log": [
+    "BASE_CST_SHA256=4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
+    "PRE_CONFIG_COPY_SHA256=4875ce8bf9e3af0a17db2bd98ded7524ea7cfa042c0203113b8e4c3493dd2364",
+    "CONFIG_SHA256=c620f8267d5548e88c606b858ff40ae0e52960112b21ec321ecf44a7e762bdb6",
+    "BASELINE_CSV_SHA256=f7662e077c06dbcd7c82d91cdd6a1d2b2b444cdcbdbce9052986f9d265ba7da6",
+    "PRE_SOLVER_PROVENANCE_PASS",
+    "SOLVER_COMPLETED"
+  ]
+}

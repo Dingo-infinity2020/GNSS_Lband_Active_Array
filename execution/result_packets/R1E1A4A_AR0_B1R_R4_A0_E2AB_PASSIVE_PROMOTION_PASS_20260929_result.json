@@ -1,0 +1,66 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2AB-PROMOTION-COMPARE-20260929",
+  "status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E2AB_PASSIVE_PROMOTION",
+  "classification": "POLB_HALF_LAP_SENTINEL_ELECTRICALLY_ACCEPTABLE_NO_RETUNE_REQUIRED",
+  "offline_only": true,
+  "additional_solver_invocations": 0,
+  "grid_points": 1001,
+  "comparison": {
+    "E_diff_to_common_peak_db": {
+      "PolA": -30.710619115420975,
+      "PolB": -32.433005338920054,
+      "B_minus_A": -1.722386223499079
+    },
+    "E_common_to_diff_peak_db": {
+      "PolA": -30.711725634378674,
+      "PolB": -32.42592477565782,
+      "B_minus_A": -1.7141991412791455
+    },
+    "E_diff_to_PIN_common_peak_db": {
+      "PolA": -67.61508572571978,
+      "PolB": -69.18070317034076,
+      "B_minus_A": -1.5656174446209832
+    },
+    "E_common_to_PIN_diff_peak_db": {
+      "PolA": -69.4569805816876,
+      "PolB": -70.9005477320079,
+      "B_minus_A": -1.4435671503202911
+    },
+    "PIN_diff_to_common_peak_db": {
+      "PolA": -73.5334326252104,
+      "PolB": -75.73650041972425,
+      "B_minus_A": -2.2030677945138564
+    },
+    "PIN_common_to_diff_peak_db": {
+      "PolA": -73.53379274293798,
+      "PolB": -75.73581747095321,
+      "B_minus_A": -2.202024728015232
+    },
+    "branch_return_imbalance_db": {
+      "PolA": 0.2252226006049043,
+      "PolB": 0.18630153246686498
+    },
+    "max_50MHz_excursion_db": {
+      "PolA": 1.0092364239310747,
+      "PolB": 0.9901249690652598
+    }
+  },
+  "frozen_gates": {
+    "worst_conversion_degradation_db": -1.4435671503202911,
+    "review_if_gt_6db": false,
+    "severe_if_gt_10db": false,
+    "branch_imbalance_review_if_gt_1db": false,
+    "resonance_review_if_ge_10db": false
+  },
+  "mechanical_delta": {
+    "polB_only_change": "N-branch backside-ground half-lap notch",
+    "footprint_mm": [
+      0.125,
+      1
+    ],
+    "mesh_warning_new_mechanism": false
+  },
+  "conclusion": "Pol-B half-lap mechanical adaptation does not degrade the frozen passive active-feed architecture. No passive retune or mechanism probe is required before C1 active co-simulation.",
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_C1_ACTIVE_COSIM_CONTRACT_FREEZE"
+}

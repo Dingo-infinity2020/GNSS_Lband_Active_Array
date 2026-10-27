@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1E1-A0-R2-ENDPOINT-PROOF-BUILD-ONLY-NW",
+    "stage": "R1E1A0_R2_ENDPOINT_PROOF_BUILD_ONLY",
+    "status": "PASS_R1E1A0R2_PITCH_PARAMETERIZATION_BUILD_ONLY"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a0r2_pitch_endpoint_work",
+    "state": "PROTECTED"
+  },
+  "source": {
+    "formal_source_commit": "063d3b467c5b149e1a818daf0a0e585a1ea1b5c9"
+  },
+  "result": {
+    "formal_invocation_count": 1,
+    "exit_code": 0,
+    "runtime_seconds": 91.57,
+    "solver_run": false,
+    "canonical_status": "PASS_R1E1A0_PITCH_PARAMETERIZATION_MECHANISM",
+    "P088": "089fdcfd7a2339a3504b8fb3b9542a586265549773e7c13ac4b20ef483e37b3a",
+    "P100": "8ffd74b176ad2f139770afbb5aa2201ae60e1a4f0e1fb38cf05a2254966e5a03"
+  },
+  "archive": {
+    "mode": "PROTECTED_IN_PLACE",
+    "completed": true,
+    "purge_allowed": false
+  },
+  "closeout": {
+    "task_node": "R1E1A0 PASS / baton to A1 design",
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "status": "PASS_M7_CORRECTIVE_CANDIDATE_STATIC_FREEZE",
+  "checks": {
+    "M7A_status": true,
+    "M7A_parent_hash": true,
+    "M7A_auth_false": true,
+    "M7A_four_tools": true,
+    "M7A_four_subtracts": true,
+    "M7A_only_backgrounds_modified": true,
+    "M7A_no_signal_subtract": true,
+    "M7A_no_port_or_solver": true,
+    "M7A_solid_count_unchanged": true,
+    "M7A_macro_hash": true,
+    "M7A_four_branch_windows": true,
+    "M7A_retains_signal_overhang": true,
+    "M7A_window_does_not_reach_signal_inner_edge": true,
+    "M7B_status": true,
+    "M7B_parent_hash": true,
+    "M7B_auth_false": true,
+    "M7B_four_tools": true,
+    "M7B_four_subtracts": true,
+    "M7B_only_backgrounds_modified": true,
+    "M7B_no_signal_subtract": true,
+    "M7B_no_port_or_solver": true,
+    "M7B_solid_count_unchanged": true,
+    "M7B_macro_hash": true,
+    "M7B_four_branch_windows": true,
+    "M7B_exact_guarded_CIN_projection": true,
+    "M7B_window_separate_from_via_regions": true,
+    "candidate_count_exactly_two": true
+  },
+  "detail": {
+    "M7A": {
+      "manifest_sha256": "bdf776571c52666d26fe61c2f59073fb3344f92ea867df4cb74a5c9a70b6b7d6",
+      "macro_sha256": "19a7a3fc5b11f6245c6bbcad3c24576eb53c126a6c7b133b6e9faae2725b5607",
+      "success_gate": {
+        "primary": "At least 30% reduction versus full E2C in BOTH E_UP diff-to-common degradation and E_UP branch-return imbalance at their frozen severe anchors.",
+        "secondary": "At least 20% reduction in maximum source-side complex deviation over 1.15-1.65 GHz.",
+        "guard": "No new >6 dB narrow excursion within <=50 MHz and no numerical hard-gate failure."
+      }
+    },
+    "M7B": {
+      "manifest_sha256": "675e11fbe253512c80f41e48ef15928980af52475b699b682f411e71494283e7",
+      "macro_sha256": "0dd737c383420dda4367f24c82901213cf364997addb687b0f537ff9aea8322e",
+      "success_gate": {
+        "primary": "At least 30% reduction in source-side complex deviation at the frozen full-E2C raw-peak neighborhood AND at least 6 dB reduction in E_UP diff-to-common degradation in 1.2-1.4 GHz.",
+        "secondary": "Branch imbalance at 1.2984 GHz reduced by at least 30%.",
+        "guard": "No new >6 dB narrow excursion within <=50 MHz and no numerical hard-gate failure."
+      }
+    }
+  },
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false
+}

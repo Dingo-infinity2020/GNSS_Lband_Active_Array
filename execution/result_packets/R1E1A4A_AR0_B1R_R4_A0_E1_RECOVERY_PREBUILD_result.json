@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.2.10",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E1-V03-RECOVERY-PREBUILD-20260928",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E1_RECOVERY_PREBUILD",
+  "status": "PASS_R4_A0_E1_V03_RECOVERY_PREBUILD_READY_AWAIT_BUILD_AUTH",
+  "formal_builds": 0,
+  "solver_invocations": 0,
+  "root_causes": {
+    "port_persistence": {
+      "status": "CONFIRMED",
+      "evidence": [
+        "V02 Model/3D/Model.mod contains only header and no build/DiscretePort history",
+        "temporary full-project copy + direct schematic.execute_vba_code Port99 -> reopen PORT_COUNT=0",
+        "temporary full-project copy + modeler.add_to_history Port99 -> reopen PORT_COUNT=1 and Model.mod contains TOOLING_DIAG_ADD_PORT_99"
+      ],
+      "conclusion": "Production construction must use persistent 3D History List."
+    },
+    "pairwise_boolean": {
+      "status": "CONFIRMED",
+      "evidence": [
+        "V02 .cst-only temporary copy produced missing target solid (BEFORE_A=0) and Solid.Intersect error -2147418113",
+        "complete project copy (.cst + same-stem companion directory) restored BEFORE_A=0.0037625 mm^3",
+        "on complete copy Solid.Intersect returned INTERSECT_ERR=0 for the known zero-overlap PIN2-vs-paddle pair"
+      ],
+      "conclusion": "Temporary CST audit copies must preserve complete project state; .cst-only copy is not accepted without self-contained-copy qualification."
+    },
+    "nondestructive_pair_query": {
+      "status": "UNAVAILABLE_ON_CURRENT_CST2022_VBA_SURFACE",
+      "evidence": "Solid.DoTheseGeometricallyIntersect -> Method or property not found",
+      "route": "CDCheckModelIntersections + complete-project-copy destructive pairwise fallback"
+    }
+  },
+  "v03": {
+    "macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E1_ONE_LNA_LANDING_ZONE_BUILD_ONLY_V03.mcr",
+    "macro_blob_sha": "8066f693f7a3ba980cf015ef5d9554fd31dc7549",
+    "static_equivalence": "PASS_R4_A0_E1_V03_STATIC_NO_GEOMETRY_REDESIGN",
+    "runner": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e1_v03_recovery_build.py",
+    "runner_blob_sha": "a3e7bd8b9ce585f268d4cfbae834b01ed73ee5a1",
+    "runner_static_audit": "PASS_R4_A0_E1_V03_RECOVERY_RUNNER_STATIC_AUDIT"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "next_boundary": "A0_E1_V03_RECOVERY_BUILD_ONLY_AWAIT_AUTH"
+}

@@ -1,0 +1,60 @@
+{
+  "status": "HOLD_M7C_GUARD",
+  "runner_final_status": "PASS",
+  "numerical_pass": true,
+  "response_count": 96,
+  "native_frequency_count": 1001,
+  "native_frequency_range_ghz": [
+    1.0,
+    1.8
+  ],
+  "final_two_delta_s": [
+    0.0154013,
+    0.0149349
+  ],
+  "symmetry_primary": {
+    "passed": 0,
+    "total": 10,
+    "maximum_fraction_of_full_e2c": 0.25
+  },
+  "differential_restoration_primary": {
+    "passed": 6,
+    "total": 6,
+    "maximum_fraction_of_m7b": 0.7,
+    "observed_fraction_range": [
+      0.21208616551682993,
+      0.4711674613563655
+    ]
+  },
+  "guard": {
+    "new_excursion_db": 20.23977272266319,
+    "f_start_ghz": 1.2088,
+    "f_end_ghz": 1.2584,
+    "response_port": 2,
+    "source_port": 5,
+    "pass": false
+  },
+  "secondary_raw": {
+    "candidate_worst_delta": 0.8545482712537513,
+    "frequency_ghz": 1.6496,
+    "polarization": "PolB",
+    "driver": {
+      "response_port": 10,
+      "source_port": 10
+    },
+    "m7b_reference": 0.8208781601757584,
+    "fraction_of_m7b": 1.0410171846584197,
+    "absolute_threshold": 0.6567025281406067,
+    "pass": false
+  },
+  "native_warnings": [
+    "Lossy-conductor edges at otherwise disjoint-region intersections are modeled as infinitely thin PEC wires.",
+    "YZ matrices unavailable / not all S-parameters calculated; frozen 12-row x 8-selected-source 96-response set is complete. No full 12x12/YZ claim."
+  ],
+  "native_mesh_messages": [
+    "missing mesh size for UID 0",
+    "max_size smaller than greatest edge; feedback includes incoherent graphical-item descriptors"
+  ],
+  "scientific_interpretation": "Differential restoration succeeds relative to M7B, but expected symmetry preservation fails for both polarizations at every anchor and the frozen narrow-window guard fails. No topology promotion. Physical attribution is not established; native thin-PEC-edge approximation remains a review limitation.",
+  "next_boundary": "OFFLINE_GUARD_AND_POLARIZATION_ASYMMETRY_REVIEW_ONLY_NO_NEW_SOLVE"
+}

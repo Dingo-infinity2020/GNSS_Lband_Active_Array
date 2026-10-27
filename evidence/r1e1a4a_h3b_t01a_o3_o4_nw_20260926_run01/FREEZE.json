@@ -1,0 +1,22 @@
+{
+  "source_head": "00bea9de782eb36c1d3f118866edd283808b6233",
+  "candidate": "P20_G30_E30",
+  "copper_sigma_s_per_m": 58000000.0,
+  "solder_proxy_sigma_s_per_m": 7000000.0,
+  "o3_acceptance": {
+    "acceptable_return_db": -12.0,
+    "preferred_return_db": -15.0,
+    "acceptable_excess_db": 0.15,
+    "preferred_excess_db": 0.1,
+    "s21_floor_db": -3.0,
+    "reciprocity_db": 0.05
+  },
+  "o4_cases": [
+    "FAB_LOWZ",
+    "FAB_HIGHZ",
+    "ALIGN_P020",
+    "ALIGN_M020",
+    "SOLDER_SMALL",
+    "SOLDER_LARGE"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "build_sha256": "ab1cc6fcf767523abefc159344f5bbd1126a80c810198b9a5ffa0560ccaa17da",
+  "configured_sha256": "8f978e7704007c5827246c4ec5cadab3839643e96887155191412b6f77769731",
+  "solved_sha256": "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
+  "formal_solver_invocations": 1,
+  "adaptive_delta_sequence": [
+    {
+      "pass": 2,
+      "delta_s": 0.03127667023178389,
+      "source": "api"
+    },
+    {
+      "pass": 3,
+      "delta_s": 0.04019545446808714,
+      "source": "api"
+    },
+    {
+      "pass": 4,
+      "delta_s": 0.036638952624553196,
+      "source": "api"
+    },
+    {
+      "pass": 5,
+      "delta_s": 0.03831156454879565,
+      "source": "api"
+    },
+    {
+      "pass": 6,
+      "delta_s": 0.02838321492271803,
+      "source": "api"
+    },
+    {
+      "pass": 7,
+      "delta_s": 0.03007866083421927,
+      "source": "api"
+    },
+    {
+      "pass": 8,
+      "delta_s": 0.028565444717600738,
+      "source": "api"
+    },
+    {
+      "pass": 9,
+      "delta_s": 0.027938515267941944,
+      "source": "api"
+    },
+    {
+      "pass": 10,
+      "delta_s": 0.022210386803962333,
+      "source": "api"
+    },
+    {
+      "pass": 11,
+      "delta_s": 0.017408730209904806,
+      "source": "api"
+    },
+    {
+      "pass": 12,
+      "delta_s": 0.01289551406473866,
+      "source": "api"
+    }
+  ],
+  "numerically_qualified": true,
+  "passes_executed": 12,
+  "final_two_delta_s": [
+    0.017408730209904806,
+    0.01289551406473866
+  ],
+  "metrics": {
+    "worst_core_return_db": -16.50181341457326,
+    "core_s21_min_db": -0.2726889087414882,
+    "core_s21_max_db": -0.12547226771018336,
+    "reciprocity_max_abs_db": 1.8498952697121318e-05
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "mode": "R1E1A2_SUPPORT_BUILD_ONLY",
+  "solver_run": false,
+  "results": [
+    {
+      "label": "S1_BONDED_B0",
+      "kind": "S1",
+      "theta": 0.0,
+      "phi": 45.0,
+      "cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work\\R1E1A2_S1_BONDED_B0_BUILD_ONLY_V01.cst",
+      "sha256": "addcd7a30fabdac49227b9f8ab8f05a6832266f0e00b58d288982abec13bae95",
+      "bytes": 49452,
+      "checks": {
+        "shape_count_build": false,
+        "shape_count_reopen": true,
+        "build_reopen_shapes_identical": false,
+        "port_count_1": true,
+        "theta_match": true,
+        "phi_match": true,
+        "unitcell_94": true,
+        "support_center_30": true,
+        "support_post_half_2": true,
+        "no_solver_markers": true,
+        "no_solver_result_items": true,
+        "foam_er_1p05": true,
+        "foam_tand_0p0002": true,
+        "adh_er_4": true,
+        "adh_tand_0p03": true,
+        "pass": false
+      },
+      "parameters": {
+        "support_center_abs": "30",
+        "support_post_half": "2",
+        "support_bond_half": "2.5",
+        "support_bond_t": "0.1",
+        "support_foam_er": "1.05",
+        "support_foam_tand": "0.0002",
+        "support_adh_er": "4",
+        "support_adh_tand": "0.03"
+      }
+    },
+    {
+      "label": "S1_BONDED_C60P45",
+      "kind": "S1",
+      "theta": 60.0,
+      "phi": 45.0,
+      "cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work\\R1E1A2_S1_BONDED_C60P45_BUILD_ONLY_V01.cst",
+      "sha256": "9c66bad44df42761aa09bacca835704dbc9d0e9eea458cd5088bb674d6ce8105",
+      "bytes": 49480,
+      "checks": {
+        "shape_count_build": false,
+        "shape_count_reopen": true,
+        "build_reopen_shapes_identical": false,
+        "port_count_1": true,
+        "theta_match": true,
+        "phi_match": true,
+        "unitcell_94": true,
+        "support_center_30": true,
+        "support_post_half_2": true,
+        "no_solver_markers": true,
+        "no_solver_result_items": true,
+        "foam_er_1p05": true,
+        "foam_tand_0p0002": true,
+        "adh_er_4": true,
+        "adh_tand_0p03": true,
+        "pass": false
+      },
+      "parameters": {
+        "support_center_abs": "30",
+        "support_post_half": "2",
+        "support_bond_half": "2.5",
+        "support_bond_t": "0.1",
+        "support_foam_er": "1.05",
+        "support_foam_tand": "0.0002",
+        "support_adh_er": "4",
+        "support_adh_tand": "0.03"
+      }
+    },
+    {
+      "label": "S1_BONDED_C60P135",
+      "kind": "S1",
+      "theta": 60.0,
+      "phi": 135.0,
+      "cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work\\R1E1A2_S1_BONDED_C60P135_BUILD_ONLY_V01.cst",
+      "sha256": "05ef5bb2ff7094072bae01895b2aa066d16abbf2213ef68e42202479745af789",
+      "bytes": 49509,
+      "checks": {
+        "shape_count_build": false,
+        "shape_count_reopen": true,
+        "build_reopen_shapes_identical": false,
+        "port_count_1": true,
+        "theta_match": true,
+        "phi_match": true,
+        "unitcell_94": true,
+        "support_center_30": true,
+        "support_post_half_2": true,
+        "no_solver_markers": true,
+        "no_solver_result_items": true,
+        "foam_er_1p05": true,
+        "foam_tand_0p0002": true,
+        "adh_er_4": true,
+        "adh_tand_0p03": true,
+        "pass": false
+      },
+      "parameters": {
+        "support_center_abs": "30",
+        "support_post_half": "2",
+        "support_bond_half": "2.5",
+        "support_bond_t": "0.1",
+        "support_foam_er": "1.05",
+        "support_foam_tand": "0.0002",
+        "support_adh_er": "4",
+        "support_adh_tand": "0.03"
+      }
+    },
+    {
+      "label": "S4_PEC_B0",
+      "kind": "S4",
+      "theta": 0.0,
+      "phi": 45.0,
+      "cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a2_support_build_work\\R1E1A2_S4_PEC_B0_BUILD_ONLY_V01.cst",
+      "sha256": "3962a20eb07c3db0f920304a9f3fc90d33e6946c03c753a9f43e99f4ede3223c",
+      "bytes": 45337,
+      "checks": {
+        "shape_count_build": false,
+        "shape_count_reopen": true,
+        "build_reopen_shapes_identical": false,
+        "port_count_1": true,
+        "theta_match": true,
+        "phi_match": true,
+        "unitcell_94": true,
+        "support_center_30": true,
+        "support_post_half_2": true,
+        "no_solver_markers": true,
+        "no_solver_result_items": true,
+        "pass": false
+      },
+      "parameters": {
+        "support_center_abs": "30",
+        "support_post_half": "2",
+        "support_bond_half": "2.5",
+        "support_bond_t": "0.1",
+        "support_foam_er": null,
+        "support_foam_tand": null,
+        "support_adh_er": null,
+        "support_adh_tand": null
+      }
+    }
+  ],
+  "checks": {
+    "count_4": true,
+    "all_pass": false,
+    "hashes_unique": true,
+    "pass": false
+  }
+}

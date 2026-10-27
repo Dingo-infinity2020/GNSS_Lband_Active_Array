@@ -1,0 +1,52 @@
+{
+  "status": "PASS_M6_D1D2_DIAGNOSTIC_SOLVE_STATIC_CONTRACT",
+  "checks": {
+    "D1_auth_false": true,
+    "D1_source_exists_hash": true,
+    "D1_human_review_pass": true,
+    "D1_baseline_hash": true,
+    "D1_six_port_delete_map": true,
+    "D1_sources_exact": true,
+    "D1_solver_fidelity": true,
+    "D1_three_hfield_monitors": true,
+    "D1_no_solver_start_in_config": true,
+    "D1_thresholds_frozen": true,
+    "D2_auth_false": true,
+    "D2_source_exists_hash": true,
+    "D2_human_review_pass": true,
+    "D2_baseline_hash": true,
+    "D2_six_port_delete_map": true,
+    "D2_sources_exact": true,
+    "D2_solver_fidelity": true,
+    "D2_three_hfield_monitors": true,
+    "D2_no_solver_start_in_config": true,
+    "D2_thresholds_frozen": true,
+    "presolve_compiles_ast": true,
+    "presolve_run_solver_count": true,
+    "qualifier_compiles_ast": true,
+    "qualifier_run_solver_count": true,
+    "runner_compiles_ast": true,
+    "runner_run_solver_count": true,
+    "runner_run_solver_not_in_loop": true,
+    "packet_compiles_ast": true,
+    "packet_run_solver_count": true,
+    "packet_v02": true,
+    "packet_live_solve_fail_closed": true,
+    "presolve_named_inventory_no_index_scan": true
+  },
+  "detail": {
+    "D1": {
+      "manifest_sha256": "a20be2ea322b8d6efbb38965c5d43a81354ce580f4bc28bdd65e78be5a97f093",
+      "config_sha256": "8d2eb3f0f91c0cf8a15f12838818b3c089c208b67d9d9d03f4cdfccd37108260",
+      "source_sha256": "37abf12c415de2418d5d204811f1bc31e9a24cdc30b6538fc2d7d2ce659de7af"
+    },
+    "D2": {
+      "manifest_sha256": "9ea2060855bbbaa4575dd2feb9db9d7a9557a631adab52430e07c2d2368b0ef7",
+      "config_sha256": "92450423030cdef3d25bf90de424d6bf6b8c98b594ea4a434c4fa56581b08de1",
+      "source_sha256": "c2a935e8d3a9e2d1f8b1ee7d58320e8ffd6d8f0513a859a01869f4f757855f2a"
+    }
+  },
+  "formal_solver_invocations": 0,
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false
+}

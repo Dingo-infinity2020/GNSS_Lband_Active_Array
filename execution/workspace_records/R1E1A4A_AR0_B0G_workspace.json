@@ -1,0 +1,13 @@
+{
+  "schema_version": "0.2.8",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "AR0_B0G",
+  "host_alias": "NW",
+  "state": "CHECKPOINTED",
+  "status": "HOLD_R1E1A4A_AR0_B0G_EXECUTION_EXCEPTION",
+  "working_path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+  "artifact_root": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b0g_build_work",
+  "purge_allowed": false,
+  "cleanup_completed": false,
+  "notes": "No solver authorized or invoked; B0G artifact retained for human 3D review."
+}

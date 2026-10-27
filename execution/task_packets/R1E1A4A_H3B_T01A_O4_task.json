@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-H3B-T01A-O4-20260926",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_commit": "a2ee36528f6ca69e2d3d131556451bf9b9ca0562",
+    "model_identity": "H3B_T01A_O4_MANUFACTURING_SENTINELS"
+  },
+  "stage": {
+    "name": "R1E1A4A_H3B_T01A_O4_MINIMAL_TOLERANCE_SENTINELS",
+    "target_control_host": "NW",
+    "entrypoint": "scripts/run_r1e1a4a_h3b_t01a_o4_stage.py",
+    "args": [],
+    "stop_boundary": "Execute only after O3 PASS; PASS -> T01-A FREEZE; HOLD -> stop and preserve evidence"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": true
+  },
+  "preflight": {
+    "requirements": [
+      "O3 result packet exists with PASS",
+      "O3 nominal physical-fidelity artifact identity frozen",
+      "exact six O4 sentinels match route freeze",
+      "no existing O4 formal result packet for this packet_id"
+    ],
+    "fail_closed": true
+  },
+  "outputs": {
+    "expected": [
+      "six sentinel build audits",
+      "six one-shot full-fidelity solves",
+      "O4 tolerance report",
+      "workspace lifecycle record"
+    ],
+    "result_packet_path": "execution/result_packets/R1E1A4A_H3B_T01A_O4_result.json"
+  },
+  "dc_call_budget": {
+    "target_calls": 2,
+    "polling_policy": "launch_once_inspect_at_task_node"
+  },
+  "execution": {
+    "silent_retry_allowed": false,
+    "dry_run": false,
+    "ticket_id": "GNSS-O4-20260926",
+    "lock_path": "execution/locks/GNSS-O4-20260926.lock"
+  }
+}

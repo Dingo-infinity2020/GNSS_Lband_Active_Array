@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1A2-FEED-REFERENCE-BUILD-ONLY-DC-NW",
+    "stage": "BUILD_ONLY_R1A2",
+    "status": "PASS_R1A2_FEED_REFERENCE_BUILD_ONLY"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "created_at": "existing checkout",
+    "last_used_at": "2026-09-24",
+    "state": "CHECKPOINTED"
+  },
+  "source": {
+    "type": "git",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "remote_url": "https://github.com/Dingo-infinity2020/GNSS_Lband_Active_Array.git",
+    "branch": "project/r0-charts-scaffold",
+    "head_commit": "7cace83d85eb55fe4a970ce2285abf15bad76d1e",
+    "head_on_trusted_remote": true,
+    "dirty": false,
+    "untracked_present": false,
+    "local_only_commits_present": false
+  },
+  "archive": {
+    "mode": "REFERENCE_ONLY",
+    "destination": "remote Git + evidence/r1a2_dc_nw_20260924_1127/",
+    "manifest_path": "execution/workspace_record_NW_R1A2.json",
+    "critical_artifacts": [
+      "evidence/r1a2_dc_nw_20260924_1127/"
+    ],
+    "recovery_method": "checkout canonical branch and rerun R1A2 macro/harness with CST bundled Python 3.6",
+    "completed": true
+  },
+  "closeout": {
+    "task_node": "R1A2 PASS",
+    "active_processes_checked": true,
+    "downstream_dependency_checked": true,
+    "handoff_written": true,
+    "purge_allowed": true,
+    "purged": true,
+    "cleanup_evidence": "R1A2 evidence committed at 7cace83; D:\\GNSS_Lband_Active_Array\\_r1a2_feed_reference_work deleted and verified absent via DC after checkout sync."
+  }
+}

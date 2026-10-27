@@ -1,0 +1,86 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-S0L-READONLY-QUALIFICATION-RECOVERY-20260929",
+  "project": "GNSS_Lband_Active_Array",
+  "status": "PASS_R4_A0_E2A_S0L_READONLY_QUALIFICATION_RECOVERY",
+  "disposition": "PASS_LOADED_SOURCE_WITH_REVIEW",
+  "classification": "READONLY_QUALIFICATION_PARSER_RECOVERY",
+  "formal_solve_result_remains": "HOLD_R1E1A4A_AR0_B1R_R4_A0_E2A_S0L_LOADED_SOURCE_QUALIFICATION",
+  "formal_solver_invocations": 1,
+  "recovery_solver_invocations": 0,
+  "automatic_retries": 0,
+  "solved_artifact": {
+    "path": "D:\\GNSS_R4A0E2A_S0L_SOLVE_20260929\\R1E1A4A_AR0_B1R_R4_A0_E2A_S0L_LOADED_SOURCE_SOLVED_V01.cst",
+    "sha256": "811a31eabcd193bcf5f9cbecdf05f8aab1b1ab945bad4bda51a94d21d57b04b3"
+  },
+  "native_convergence": {
+    "recovered_sequence": [
+      0.039114,
+      0.00606905,
+      0.00737333
+    ],
+    "final_two": [
+      0.00606905,
+      0.00737333
+    ],
+    "threshold": 0.02,
+    "pass": true
+  },
+  "hard_checks": {
+    "source_artifact_unchanged": true,
+    "required_24_responses_extracted": true,
+    "native_numerical_convergence": true,
+    "source_side_reciprocity": true,
+    "loaded_power_closure": true,
+    "no_fatal_solver_error": true,
+    "no_mesh_corruption": true
+  },
+  "metrics": {
+    "native_frequency_count": 1001,
+    "native_frequency_band_ghz": [
+      1,
+      1.8
+    ],
+    "reciprocity_max_abs_complex": 0.000017683876529212006,
+    "loaded_power_max_column": 0.9999855570204119,
+    "loaded_power_min_column": 0.7479859003788308,
+    "A_CIN_GAP_peak_core_db": -34.60666318773776,
+    "B_CIN_GAP_peak_core_db": -34.62880659001827,
+    "A_TO_B_EUP_peak_core_db": -16.251617998126797,
+    "A_TO_B_EUP_peak_core_ghz": 1.5736,
+    "A_PIN_TO_B_PIN_peak_core_db": -101.9483607304498,
+    "A_SOURCE_TO_A_OUTLOAD_peak_core_db": -36.37819041531235,
+    "B_SOURCE_TO_B_OUTLOAD_peak_core_db": -35.4719962579357
+  },
+  "gnss_reference_db": {
+    "L5": {
+      "freq_ghz": 1.17645,
+      "A_CIN_GAP": -37.480252574476246,
+      "B_CIN_GAP": -37.560721046072445,
+      "A_TO_B_EUP": -20.99970709864261,
+      "A_PIN_TO_B_PIN": -103.12548929442735
+    },
+    "L2": {
+      "freq_ghz": 1.2276,
+      "A_CIN_GAP": -37.0225576274166,
+      "B_CIN_GAP": -37.11635977296987,
+      "A_TO_B_EUP": -19.987248993300554,
+      "A_PIN_TO_B_PIN": -102.16799916036565
+    },
+    "L1": {
+      "freq_ghz": 1.57542,
+      "A_CIN_GAP": -34.96495086422655,
+      "B_CIN_GAP": -35.00904429817815,
+      "A_TO_B_EUP": -16.251683770701007,
+      "A_PIN_TO_B_PIN": -106.93313040904671
+    }
+  },
+  "review": {
+    "any_review_gt_minus20db": true,
+    "any_severe_gt_minus10db": false,
+    "trigger": "A_TO_B_EUP coupling exceeds -20 dB near upper/core band; classify mechanism before Pol-B promotion.",
+    "large_reflection_warning": true,
+    "note": "Large reflection is expected to be interpreted in context because C_IN remains absent and source-side nodes are strongly mismatched; it is not a hard numerical failure."
+  },
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2A_S0L_COUPLING_REVIEW_FREEZE"
+}

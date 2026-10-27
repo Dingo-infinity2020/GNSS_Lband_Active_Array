@@ -1,0 +1,38 @@
+{
+  "delta_s_sequence": [
+    {
+      "pass": 2,
+      "delta_s": 0.0453805
+    },
+    {
+      "pass": 3,
+      "delta_s": 0.0552784
+    },
+    {
+      "pass": 4,
+      "delta_s": 0.0530417
+    },
+    {
+      "pass": 5,
+      "delta_s": 0.0204615
+    },
+    {
+      "pass": 6,
+      "delta_s": 0.0179226
+    },
+    {
+      "pass": 7,
+      "delta_s": 0.0185901
+    }
+  ],
+  "last_two_below_0p02": true,
+  "desired_accuracy_termination": true,
+  "max_passes_reached": false,
+  "broadband_sweep_converged": true,
+  "warning_lines": [
+    "WARNING:",
+    "WARNING:",
+    "1 warning occurred."
+  ],
+  "error_lines": []
+}

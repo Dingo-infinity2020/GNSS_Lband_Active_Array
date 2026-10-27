@@ -1,0 +1,58 @@
+{
+  "schema_version": "gnss-m7c-readonly-host-snapshot-v0.1",
+  "observed_at_utc": "2026-10-26T13:45:11Z",
+  "host_name": "DESKTOP-GBTI6Q4",
+  "collection": "Two read-only Desktop Commander PowerShell transactions; PIDs 31888 and 19212. No CST application launched. Normalized numeric/path evidence from stdout.",
+  "build_invocations": 0,
+  "solve_invocations": 0,
+  "project_checkout_head": "cd9e6a9b8f37c784d28c492667d1ed69930f5ef2",
+  "project_checkout_clean": true,
+  "simulationops_head": "c074982bce2ad1bc7c0914ad422244f2cba84d4a",
+  "simulationops_checkout_clean": true,
+  "volumes": {
+    "C:": {
+      "filesystem": "NTFS",
+      "free_bytes": 139732905984,
+      "size_bytes": 274878951424
+    },
+    "D:": {
+      "filesystem": "NTFS",
+      "free_bytes": 14859431936,
+      "size_bytes": 141993963520
+    },
+    "F:": {
+      "filesystem": "exFAT",
+      "free_bytes": 1290932322304,
+      "size_bytes": 2000353755136
+    }
+  },
+  "temp_path": "C:\\Users\\Administrator.DESKTOP-GBTI6Q4\\AppData\\Local\\Temp\\",
+  "reviewed_artifact_sha256": "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98",
+  "reviewed_artifact_bytes": 152985,
+  "companion_identity": {
+    "algorithm": "SIMOPS_TREE_ID_V1",
+    "tree_sha256": "76a988e78dcfa8b16967821e538039996ed51abce3f308b9047f231d4f463d52",
+    "files": 97,
+    "bytes": 6557288
+  },
+  "reference_hashes": {
+    "full_e2c": "63efb3b3c046ffa633d04092d0190afc4d01ea03f4fd6316ffa1d87170af8a46",
+    "PolA": "a759ac6135a297429a8a166b6a01a39a66b5ec3a861267ed0f05d53ff605fae4",
+    "PolB": "103c0de1ee2353d284e84ab8e065c9e802f4e1283912d0e19f1f5c7a89ced4e5"
+  },
+  "retained_run_bytes": {
+    "M7B": 6073255844,
+    "M7C_after_historical_cleanup": 431120837,
+    "E2C": 11441462029
+  },
+  "F_direct_solver_qualified": false,
+  "D_capacity_satisfies_32_GiB_output_budget": false,
+  "C_capacity_satisfies_combined_40_GiB_budget": true,
+  "runtime_services_observed": [
+    "cstd",
+    "CSTDCMainController_AMD64",
+    "CSTDCSolverServer_AMD64"
+  ],
+  "modeler_or_GUI_observed": false,
+  "recovery_authorized": false
+}

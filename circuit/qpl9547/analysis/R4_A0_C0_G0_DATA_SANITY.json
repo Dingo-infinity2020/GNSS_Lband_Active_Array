@@ -1,0 +1,84 @@
+{
+  "status": "PASS_R4_A0_C0_G0_COMMITTED_DATA_SANITY",
+  "audit_type": "analytic audit of committed QPL9547 project reference CSVs; no remote execution",
+  "checks": {
+    "noise_anchor_count_nonzero": true,
+    "sparam_anchor_count_nonzero": true,
+    "zopt_reconstruction_error_lt_1e_4_ohm": true,
+    "single_expected_s2p_hash": true,
+    "K_gt_1_all": true,
+    "mu_gt_1_all": true,
+    "mu_prime_gt_1_all": true,
+    "delta_lt_1_all": true
+  },
+  "reference_plane": "QPL9547 device leads",
+  "bias_reference": "5 V / 65 mA",
+  "Z0_ohm": 50,
+  "max_zopt_table_error_ohm": 0.000006095187809069562,
+  "Zopt_real_range_ohm": [
+    50.81725,
+    63.49795
+  ],
+  "Zopt_imag_range_ohm": [
+    11.30654,
+    14.81299
+  ],
+  "illustrative_2xZopt_real_range_ohm": [
+    101.6345,
+    126.9959
+  ],
+  "illustrative_2xZopt_imag_range_ohm": [
+    22.61307,
+    29.62599
+  ],
+  "NF_50ohm_anchor_range_db": [
+    0.16906439337965942,
+    0.2342225041393002
+  ],
+  "NF_50ohm_anchors": [
+    {
+      "freq_ghz": 1.1,
+      "nf_50ohm_db": 0.2342225041393002
+    },
+    {
+      "freq_ghz": 1.2,
+      "nf_50ohm_db": 0.22158198188891295
+    },
+    {
+      "freq_ghz": 1.3,
+      "nf_50ohm_db": 0.21219892612303645
+    },
+    {
+      "freq_ghz": 1.4,
+      "nf_50ohm_db": 0.18307302779554893
+    },
+    {
+      "freq_ghz": 1.6,
+      "nf_50ohm_db": 0.17906252925495958
+    },
+    {
+      "freq_ghz": 1.7,
+      "nf_50ohm_db": 0.16906439337965942
+    }
+  ],
+  "S21_anchor_range_db": [
+    20.28058,
+    22.82828
+  ],
+  "S11_anchor_range_db": [
+    -13.83877,
+    -11.50236
+  ],
+  "stability_bounds": {
+    "K_min": 1.2480207469830478,
+    "mu_min": 1.3687499918133768,
+    "mu_prime_min": 1.3872544939435814,
+    "delta_mag_max": 0.4436905088798117
+  },
+  "differential_mapping_frozen": false,
+  "interpretation": [
+    "Committed G0 S/noise references are internally consistent for the project science-band reference calculation.",
+    "A 50-ohm source is already close to the device noise optimum at the Rev-D anchors, but is not exactly GammaOpt.",
+    "The illustrative 2xZopt scale is roughly 102-127 + j(23-30) ohm over the committed anchors, but it is not an antenna differential target."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "status": "PASS_R1E1A4A_AR0_B1R_R3_D0_DIAGNOSTIC_FIXTURES_BUILD_ONLY",
+  "simulationops": "0.2.8",
+  "formal_fixture_builds": 2,
+  "solver_invocations": 0,
+  "parent": {
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_t1_build_work\\R1E1A4A_AR0_B1R_T1_GROUND_ACQUISITION_BUILD_ONLY_V01.cst",
+    "sha256": "3144672323cbd4123d6413e7d9ae8f4842b78707d3a71b641748c7250ca2a8f6"
+  },
+  "D0A": {
+    "artifact": {
+      "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d0_build_work\\R1E1A4A_AR0_B1R_R3_D0A_DIFF_CONTROL_BUILD_ONLY_V01.cst",
+      "sha256": "f983eb43a3450c511387073a760e946bf60c16d8df1424d26692c8db7d9e3863"
+    },
+    "port_count": 2,
+    "shape_count": 6
+  },
+  "D0B": {
+    "artifact": {
+      "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d0_build_work\\R1E1A4A_AR0_B1R_R3_D0B_COMMON_GROUND_BUILD_ONLY_V01.cst",
+      "sha256": "66f7b9d1b0f4c8ba6b36a5e25f271dcec88c1f7f4efc38e13973175ca62cfd32"
+    },
+    "port_count": 3,
+    "shape_count": 7,
+    "bridge_volume_mm3": 0.0840000000000007,
+    "bridge_spec": {
+      "u_mm": [
+        -1.2,
+        1.2
+      ],
+      "n_mm": [
+        -1.035,
+        -1.0
+      ],
+      "v_mm": [
+        11.0,
+        12.0
+      ]
+    }
+  },
+  "checks": {
+    "parent_hash_exact": true,
+    "d0a_shape_count_6": true,
+    "d0a_exact_six_solids": true,
+    "d0a_retained_signature_exact": true,
+    "d0a_port_count_2_build_reopen": true,
+    "d0a_endpoint_geometry_exact": true,
+    "d0a_hash_stable_reopen": true,
+    "d0a_result_tree_empty": true,
+    "d0b_shape_count_7": true,
+    "d0b_retained_signature_exact": true,
+    "d0b_bridge_count_1": true,
+    "d0b_bridge_volume_exact": true,
+    "d0b_bridge_face_contact_u_edges": true,
+    "d0b_bridge_downstream_of_ports": true,
+    "d0b_port_count_3_build_reopen": true,
+    "d0b_endpoint_geometry_exact": true,
+    "d0b_hash_stable_reopen": true,
+    "d0b_result_tree_empty": true
+  },
+  "interpretation": "D0A differential-only control and D0B ideal common-return closure control; no product-geometry change; no solve"
+}

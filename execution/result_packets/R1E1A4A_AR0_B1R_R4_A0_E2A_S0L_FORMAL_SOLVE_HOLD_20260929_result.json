@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2A-S0L-FORMAL-SOLVE-HOLD-20260929",
+  "project": "GNSS_Lband_Active_Array",
+  "status": "HOLD_R1E1A4A_AR0_B1R_R4_A0_E2A_S0L_LOADED_SOURCE_QUALIFICATION",
+  "classification": "HOLD_QUALIFICATION_PARSER_SEMANTICS",
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "source_artifact_sha256": "78c9d38e186e38b1d0398e7771758af34345fc5e8f780fdc8c7fade4a8705804",
+  "configured_copy_sha256": "719aad797dbe8dedf944465356762444a78ef2f1664b529fb7cc42560bd20418",
+  "solved_artifact_sha256": "811a31eabcd193bcf5f9cbecdf05f8aab1b1ab945bad4bda51a94d21d57b04b3",
+  "solved_artifact": "D:\\GNSS_R4A0E2A_S0L_SOLVE_20260929\\R1E1A4A_AR0_B1R_R4_A0_E2A_S0L_LOADED_SOURCE_SOLVED_V01.cst",
+  "evidence_root": "D:\\GNSS_R4A0E2A_S0L_SOLVE_20260929\\evidence",
+  "passed_hard_checks": {
+    "source_artifact_unchanged": true,
+    "required_24_responses_extracted": true,
+    "source_side_reciprocity": true,
+    "loaded_power_closure": true,
+    "no_fatal_solver_error": true,
+    "no_mesh_corruption": true
+  },
+  "sole_failed_hard_check": "native_numerical_convergence",
+  "failure_attribution": {
+    "frozen_runner_native_delta_sequence": [],
+    "actual_native_output_values": [
+      0.039114,
+      0.00606905,
+      0.00737333
+    ],
+    "final_two_actual_native_values": [
+      0.00606905,
+      0.00737333
+    ],
+    "frozen_threshold": 0.02,
+    "root_cause": "Parser recognized 'Maximum difference of S-parameters' or 'DeltaS =' but CST 2022.5 emitted 'All S-Parameters = <value>'."
+  },
+  "other_metrics": {
+    "source_side_reciprocity_max_abs_complex": 0.000017683876529212006,
+    "loaded_power_max_column": 0.9999855570204119,
+    "loaded_power_min_column": 0.7479859003788308,
+    "review_sentinel": "A_TO_B_EUP > -20 dB in core band",
+    "A_TO_B_EUP_peak_db": -16.251617998126797,
+    "A_TO_B_EUP_peak_ghz": 1.5736,
+    "severe_gt_minus10db": false
+  },
+  "formal_result_note": "Formal runner result remains HOLD. Read-only qualification recovery may parse the immutable native log without re-solving; it must not rewrite this formal result.",
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2A_S0L_READONLY_QUALIFICATION_RECOVERY"
+}

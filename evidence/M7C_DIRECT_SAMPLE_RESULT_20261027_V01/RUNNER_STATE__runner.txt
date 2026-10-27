@@ -1,0 +1,44 @@
+2026-10-27T02:23:47Z [runner] transaction start packet_id=GNSS-M7C-DIRECT-SAMPLE-20261027-V01 stage=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01 kind=SOLVE_LAUNCH transport=local
+2026-10-27T02:23:47Z [runner] packet source D:\quest_naoc_tarminal\SimulationOps_Runtime\NW\GNSS_Lband_Active_Array\M7C_DIRECT_SAMPLE_20261027_V01\task_packet.json sha256=459310c114c139c215a460852db9f7be89fdc4366d959032f8250b691eef00f0
+2026-10-27T02:23:47Z [runner] authorization build_required=False solve_required=True -> authorization snapshot satisfies stage kind SOLVE_LAUNCH
+2026-10-27T02:23:47Z [runner] preflight storage_0 min_free_bytes -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_0 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_1 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_2 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_3 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_4 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_5 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_6 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_7 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_8 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_9 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_10 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_11 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_12 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_13 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_14 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_15 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_16 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_17 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight dependency_18 file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight isolated_PolA file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight isolated_PolB file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight git_clean git_clean -> PASS
+2026-10-27T02:23:47Z [runner] preflight git_head git_head_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight runner_hash file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight evaluator_hash file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight launcher_hash file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight manifest_hash file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight config_hash file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight inventory_hash file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight contract_hash file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight source_hash file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight full_e2c_hash file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight old_m7c_csv file_sha256_equals -> PASS
+2026-10-27T02:23:47Z [runner] preflight target_absent path_absent -> PASS
+2026-10-27T02:23:47Z [runner] preflight result_absent result_path_absent -> PASS
+2026-10-27T02:23:47Z [runner] preflight cst_gui_absent process_absent -> PASS
+2026-10-27T02:23:47Z [runner] preflight cst_modeler_absent process_absent -> PASS
+2026-10-27T02:23:47Z [runner] entrypoint logical argv=["python", "scripts/cst_bundled_python_launcher_v01.py", "scripts/run_m7c_direct_sample_solve_v01.py", "--manifest", "execution/M7C_DIRECT_SAMPLE_SOLVE_MANIFEST_V01.json", "--out", "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_DIRECT_SAMPLE_20261027_V01\\M7C_DIRECT_SAMPLE_DIAGNOSTIC_SOLVED_V01.cst", "--evidence", "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_DIRECT_SAMPLE_20261027_V01\\evidence"]
+2026-10-27T02:35:08Z [runner] entrypoint finished exit_code=9 timed_out=False started=True launch_state=launched transport_error=None
+2026-10-27T02:35:09Z [runner] final status HOLD_ENTRYPOINT; result packet D:\quest_naoc_tarminal\SimulationOps_Runtime\NW\GNSS_Lband_Active_Array\M7C_DIRECT_SAMPLE_20261027_V01\result_packet.json

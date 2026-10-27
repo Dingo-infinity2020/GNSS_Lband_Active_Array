@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.2.8",
+  "packet_id": "GNSS-AR0-B1R-R3-D2-M0R1-20260927",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R3_D2_M0R1_BUILD_ONLY",
+  "final_status": "PASS_R1E1A4A_AR0_B1R_R3_D2_M0R1_MANUFACTURABLE_GROUND_MERGE_BUILD_ONLY",
+  "formal_build_products": 2,
+  "solver_invocations": 0,
+  "parent_t1r1_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+  "canonical_sha256": "4ec39ab9965dd9ec6b416d801ded0ee6e56d910d2ffc2ba405cb9dec978cd91e",
+  "fixture_A_sha256": "33294aa6200264135582ec0c0742a1b4e6ca7b2148e1adece2f64388d81d3dd6",
+  "geometry": {
+    "lower_rail_width_mm": 3.2,
+    "lower_rail_v_mm": [
+      12,
+      40
+    ],
+    "rail_taper_v_mm": [
+      12,
+      13
+    ],
+    "PolA_bridge_v_mm": [
+      33.8,
+      34.3
+    ],
+    "PolB_bridge_v_mm": [
+      34.85,
+      35.35
+    ],
+    "bridge_u_mm": [
+      -1.4,
+      1.4
+    ],
+    "minimum_rail_to_slot_clearance_mm": 0.275,
+    "A_bridge_to_slot_clearance_mm": 0.2514285714,
+    "B_bridge_to_slot_clearance_mm": 0.2585714286,
+    "via_count": 0
+  },
+  "interference_audit": {
+    "method": "12 independent temporary-copy destructive Boolean pairs",
+    "own_fr4_zero_overlap": "6/6",
+    "opposite_stalk_zero_overlap": "6/6"
+  },
+  "evidence": [
+    "evidence/r1e1a4a_ar0_b1r_r3_d2_m0r1_nw_20260927_build01/summary.json",
+    "evidence/r1e1a4a_ar0_b1r_r3_d2_m0r1_nw_20260927_build01/HUMAN_3D_REVIEW.md"
+  ],
+  "next_boundary": "AR0_B1R_R3_D2_M0R1_HUMAN_REVIEW_AND_SOLVE_AWAIT_AUTH"
+}

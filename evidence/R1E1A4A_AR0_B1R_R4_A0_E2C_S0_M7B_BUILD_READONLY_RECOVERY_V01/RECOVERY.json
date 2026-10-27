@@ -1,0 +1,52 @@
+{
+  "schema_version": "gnss-m7b-build-readonly-recovery-v0.1",
+  "status": "PASS_M7B_BUILD_READONLY_QUALIFICATION_RECOVERY_AWAIT_HUMAN_REVIEW",
+  "formal_build_invocations": 1,
+  "runner_final_status": "HOLD_ENTRYPOINT",
+  "runner_exit_code": 4,
+  "build_authorization_consumed": true,
+  "solve_authorization_consumed": false,
+  "solver_invocations": 0,
+  "artifact": {
+    "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M7B_CIN_PAD_CLEARANCE_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_CIN_PAD_CLEARANCE_BUILD_ONLY_V01.cst",
+    "sha256": "5498e9c447fdd4eeb969c02701d27886e839144ebe9941c4e7f56bc7419c69ea"
+  },
+  "failed_runner_gate": {
+    "name": "four_background_volume_losses_positive_symmetric",
+    "original_expected_volume_loss_per_branch_mm3": 0.077,
+    "root_cause": "QUALIFICATION_USED_CLEARANCE_TOOL_DEPTH_0P07_INSTEAD_OF_PARENT_LOCAL_BACK_GROUND_COPPER_THICKNESS_0P035"
+  },
+  "read_only_proof": {
+    "frozen_window_area_mm2": 1.1,
+    "frozen_parent_local_back_ground_thickness_mm": 0.035,
+    "corrected_expected_volume_loss_per_branch_mm3": 0.0385,
+    "observed_volume_loss_mm3": {
+      "E2C_A_N_BackGround:LOCAL_BACK_GROUND": 0.03849999999999998,
+      "E2C_A_P_BackGround:LOCAL_BACK_GROUND": 0.03849999999999998,
+      "E2C_B_N_BackGround:LOCAL_BACK_GROUND": 0.0385000000000002,
+      "E2C_B_P_BackGround:LOCAL_BACK_GROUND": 0.03849999999999998
+    },
+    "source_authority": [
+      "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2A_POLA_BUILD_ONLY_V01.mcr",
+      "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_BUILD_ONLY_V01.mcr",
+      "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_DUALPOL_BUILD_ONLY_V01.mcr"
+    ]
+  },
+  "passed_build_checks": {
+    "pre_parent_gate": true,
+    "shape_count_exact_177": true,
+    "ports_exact_24": true,
+    "all_expected_names_query": true,
+    "unmodified_173_solids_preserved": true,
+    "ports_byte_semantics_unchanged": true,
+    "history_persistent": true,
+    "fresh_reopen_hash_stable": true,
+    "no_solver_result_files_after_build": true,
+    "unexpected_changed_entities": []
+  },
+  "recovery_policy": "READ_ONLY_ONLY_NO_RERUN_NO_REBUILD",
+  "human_geometry_review_required": true,
+  "build_authorized": false,
+  "solve_authorized": false,
+  "next_stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7B_HUMAN_GEOMETRY_REVIEW"
+}

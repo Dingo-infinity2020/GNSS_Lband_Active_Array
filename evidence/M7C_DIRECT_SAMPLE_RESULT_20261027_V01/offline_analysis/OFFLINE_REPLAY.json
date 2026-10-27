@@ -1,0 +1,35 @@
+{
+  "status": "H_NUM_SUPPORTED_M7C_DIRECT_SAMPLE",
+  "numerical_pass": true,
+  "max_primary_pair_reciprocity_abs": 8.567101196428268e-08,
+  "budget_abs": 1e-06,
+  "at_peak_change_vs_old_abs": [
+    7.09453985762812e-05,
+    1.4708594632706558e-06
+  ],
+  "near_peak_both_directions_lte_half_old_peak": true,
+  "at_peak_both_directions_gte_0p8_old_peak": false,
+  "at_peak_direct_abs": [
+    8.67085280545513e-06,
+    8.679933743558618e-06
+  ],
+  "science_status_unchanged": "HOLD_M7C_GUARD",
+  "boundary": "No geometry change, full-band reclassification, retry or automatic next stage.",
+  "at_1p2096_ghz": {
+    "S2_5": {
+      "direct_db": -101.2387637240877,
+      "old_db": -82.08364457679738,
+      "abs_complex_change": 7.09453985762812e-05
+    },
+    "S5_2": {
+      "direct_db": -101.22967179812156,
+      "old_db": -101.72101834358224,
+      "abs_complex_change": 1.4708594632706558e-06
+    }
+  },
+  "input_hashes": {
+    "/tmp/m7c_direct_stage_20261027/qualification_recovery_v02_qualified/direct_response_native.csv": "5a05b7ff07c66ded612c58dca4f3ae82e55ce290a4812c0518ab8edb5027c793",
+    "/tmp/gnss_m7c_offline_review_20261027/M7C.csv": "711365d2f3336a5afed0cf94e2394f0ae75e0691421c8729af6dda2425a74cae",
+    "/tmp/m7c_direct_stage_20261027/qualification_recovery_v02_qualified/qualification_summary.json": "4371c3115923713aca2317c1e5f581dc56759102051fe86c51160c1c33d9a37a"
+  }
+}

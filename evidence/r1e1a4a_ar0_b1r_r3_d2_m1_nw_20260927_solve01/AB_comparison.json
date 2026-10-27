@@ -1,0 +1,48 @@
+{
+  "definition": "B minus A; B interpolated onto A frequency grid",
+  "decision_band_GHz": [
+    1.15,
+    1.65
+  ],
+  "max_abs_difference": {
+    "delta_S11_dB": 0.027605318329927853,
+    "delta_Zin_real_ohm": 1599.0844306214867,
+    "delta_Zin_imag_ohm": 2201.850291342907,
+    "delta_amp_imbalance_dB": 0.022297379428192952,
+    "delta_phase_error_deg": 0.2569926595346601,
+    "delta_CMR_dB": 27.449417373664232,
+    "delta_normalized_excess_loss_dB": 0.11975557840681228
+  },
+  "reference_samples": {
+    "L5": {
+      "f_GHz": 1.1768,
+      "delta_S11_dB": 0.02013623296818623,
+      "delta_Zin_real_ohm": -0.3468829618497864,
+      "delta_Zin_imag_ohm": 2.1398769566068836,
+      "delta_amp_imbalance_dB": 0.012640586475349385,
+      "delta_phase_error_deg": 0.105355785655604,
+      "delta_CMR_dB": 11.109053409287483,
+      "delta_normalized_excess_loss_dB": 0.003472224100575752
+    },
+    "L2": {
+      "f_GHz": 1.2272,
+      "delta_S11_dB": 0.014349722737762916,
+      "delta_Zin_real_ohm": -0.5271829143251239,
+      "delta_Zin_imag_ohm": 1.6953538256432807,
+      "delta_amp_imbalance_dB": 0.01371764159676374,
+      "delta_phase_error_deg": 0.1221165806404656,
+      "delta_CMR_dB": 12.246263671160477,
+      "delta_normalized_excess_loss_dB": 0.0039021786655148577
+    },
+    "L1": {
+      "f_GHz": 1.5752000000000002,
+      "delta_S11_dB": -0.023974397440140738,
+      "delta_Zin_real_ohm": -168.20614506423942,
+      "delta_Zin_imag_ohm": -154.49723334450505,
+      "delta_amp_imbalance_dB": 0.002173979140485359,
+      "delta_phase_error_deg": 0.2260529667075275,
+      "delta_CMR_dB": 10.176584741895866,
+      "delta_normalized_excess_loss_dB": -0.03203414566980001
+    }
+  }
+}

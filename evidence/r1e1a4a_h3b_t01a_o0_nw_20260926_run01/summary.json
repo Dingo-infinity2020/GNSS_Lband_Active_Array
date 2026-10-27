@@ -1,0 +1,83 @@
+{
+  "mode": "H3B_T01A_O0_STRAIGHT_REFERENCE",
+  "source_head": "6e8b4264d72b02e8d01d5801d9311bf5cf89ac8c",
+  "build_sha256": "b628d4853a91c43119ca7e9524fc203bc43e9781f79dc1e5a5d4e9298ca6486b",
+  "configured_sha256": "5773e1bf670f771059eeea155e6d299fd8b969c2c892123387f963c3f7bf0e4a",
+  "solved_sha256": "daef683e20130707273af64d2f0c02ba5484ebe9e84f89c8a1aca6cd0ed285f7",
+  "formal_solver_invocations": 1,
+  "adaptive_delta_sequence": [
+    {
+      "pass": 2,
+      "delta_s": 0.034357371444101455
+    },
+    {
+      "pass": 3,
+      "delta_s": 0.03827570612158339
+    },
+    {
+      "pass": 4,
+      "delta_s": 0.03932864593008475
+    },
+    {
+      "pass": 5,
+      "delta_s": 0.04060128285351054
+    },
+    {
+      "pass": 6,
+      "delta_s": 0.03716321353492386
+    },
+    {
+      "pass": 7,
+      "delta_s": 0.028702633691104148
+    },
+    {
+      "pass": 8,
+      "delta_s": 0.028740034818671094
+    },
+    {
+      "pass": 9,
+      "delta_s": 0.02777617655875227
+    },
+    {
+      "pass": 10,
+      "delta_s": 0.026164158862128285
+    },
+    {
+      "pass": 11,
+      "delta_s": 0.01989424170914305
+    },
+    {
+      "pass": 12,
+      "delta_s": 0.015183877170575425
+    }
+  ],
+  "metrics": {
+    "ref_s11_worst_db": -10.760769459285482,
+    "ref_s21_min_db": -0.532985581425309,
+    "ref_s21_max_db": -0.20359691665687338,
+    "reciprocity_max_abs_db": 8.831597447689354e-06,
+    "junction_excess_min_db": 0.03648635564110472,
+    "junction_excess_max_db": 0.10564100095048445,
+    "junction_excess_median_db": 0.06602490595984728,
+    "passes_executed": 12,
+    "final_two_delta_s": [
+      0.01989424170914305,
+      0.015183877170575425
+    ]
+  },
+  "build_checks": {
+    "shape_count_21": true,
+    "all_volumes_positive": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "reopen_hash_stable": true
+  },
+  "solve_checks": {
+    "native_two_final_below_0p02": true,
+    "reciprocity_le_0p1db": true,
+    "full_2port": true
+  },
+  "pass": true
+}

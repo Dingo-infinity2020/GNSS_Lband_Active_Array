@@ -1,0 +1,142 @@
+{
+  "state": "C60P45",
+  "theta_deg": 60.0,
+  "phi_deg": 45.0,
+  "source_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0c_scanstate_build_only_recovery01\\R1E0C_C60P45_SCANSTATE_BUILD_ONLY_V01.cst",
+  "source_sha256": "94360ee2c40d4e5236b7b7a1fee79b46739da2aaec70054e4aa707a123853e01",
+  "config_sha256": "2454e2c3cbca31304cdef363c51fb50f4dd105f378cdf75659526d4e05af46a1",
+  "broadside_context_sha256": "342ccaa2f71318cc287a9589ec8f911386f09542edeba1f382ca4389a2160d66",
+  "result_cst": "D:\\GNSS_Lband_Active_Array\\_r1e0c_b_c60p45_scan_solve_work\\R1E0C_B_C60P45_SCAN_SMOKE_V01.cst",
+  "result_cst_sha256": "58018c0ffa058c46a16fdca92948a6477ff77124960b027f0a2d071b4f368828",
+  "result_cst_bytes": 43567,
+  "metrics": {
+    "point_count": 1001,
+    "invalid_s11_values": 0,
+    "invalid_zactive_values": 0,
+    "science_band_re_min": {
+      "ohm": 55.42088558360749,
+      "f_ghz": 1.328
+    },
+    "science_band_re_max": {
+      "ohm": 77.84236751641495,
+      "f_ghz": 1.6496
+    },
+    "science_band_im_min": {
+      "ohm": -13.421328121963963,
+      "f_ghz": 1.1504
+    },
+    "science_band_im_max": {
+      "ohm": 103.0299517215876,
+      "f_ghz": 1.6496
+    },
+    "science_band_max_abs_z": {
+      "ohm": 129.13018675860917,
+      "f_ghz": 1.6496
+    },
+    "science_band_max_abs_s11": {
+      "value": 0.5127475895078316,
+      "f_ghz": 1.6496
+    },
+    "anchors": {
+      "1.17645": {
+        "f_ghz": 1.1768,
+        "s11_db": -14.085802300277754,
+        "zactive_re_ohm": 67.46979735313207,
+        "zactive_im_ohm": -6.16130569694317
+      },
+      "1.2276": {
+        "f_ghz": 1.2272,
+        "s11_db": -11.829658059464013,
+        "zactive_re_ohm": 59.72009560283651,
+        "zactive_im_ohm": 7.425583426316545
+      },
+      "1.27875": {
+        "f_ghz": 1.2784,
+        "s11_db": -10.294129271079823,
+        "zactive_re_ohm": 56.3000205105848,
+        "zactive_im_ohm": 20.29261536560313
+      },
+      "1.4": {
+        "f_ghz": 1.4,
+        "s11_db": -8.103003015782562,
+        "zactive_re_ohm": 56.821812224284486,
+        "zactive_im_ohm": 47.93376261789221
+      },
+      "1.5611": {
+        "f_ghz": 1.5608,
+        "s11_db": -6.483647731224237,
+        "zactive_re_ohm": 67.63273865715689,
+        "zactive_im_ohm": 82.42406465008152
+      },
+      "1.57542": {
+        "f_ghz": 1.5752000000000002,
+        "s11_db": -6.368852858053046,
+        "zactive_re_ohm": 69.06424865156495,
+        "zactive_im_ohm": 85.6102898560383
+      },
+      "1.602": {
+        "f_ghz": 1.6024,
+        "s11_db": -6.158070172469692,
+        "zactive_re_ohm": 71.99272885723342,
+        "zactive_im_ohm": 91.76023536337276
+      }
+    }
+  },
+  "comparison_vs_broadside": {
+    "sample_count": 625,
+    "max_complex_delta_s11": 0.8240957956235958,
+    "max_complex_delta_s11_freq_ghz": 1.6496,
+    "max_abs_delta_zactive_ohm": 209.35882679665616,
+    "max_abs_delta_zactive_freq_ghz": 1.3552
+  },
+  "native_adaptation": {
+    "delta_s_sequence": [
+      {
+        "pass": 2,
+        "delta_s": 0.0500864
+      },
+      {
+        "pass": 3,
+        "delta_s": 0.0284443
+      },
+      {
+        "pass": 4,
+        "delta_s": 0.0175831
+      },
+      {
+        "pass": 5,
+        "delta_s": 0.015738
+      }
+    ],
+    "last_two_below_0p02": true,
+    "desired_accuracy_termination": true,
+    "max_passes_reached": false,
+    "broadband_sweep_converged": true,
+    "warning_lines": [
+      "WARNING:",
+      "Prevented attempt to change the value for parameter R1E0_scan_theta_deg to 0 inside history rebuild at step 3.This can break parametrization and should be avoided. Please use the Parameter List to change the value of a parameter. The function \"MakeSureParameterExists\" can be used to create a parameter inside the history."
+    ],
+    "error_lines": []
+  },
+  "physics_alerts": {
+    "abs_s11_ge_0p90": false,
+    "re_zactive_le_0": false,
+    "abs_zactive_ge_1000": false,
+    "max_abs_s11": 0.5127475895078316,
+    "min_re_zactive_ohm": 55.42088558360749,
+    "max_abs_zactive_ohm": 129.13018675860917
+  },
+  "checks": {
+    "source_hash_match": true,
+    "periodic_s11_path_present": true,
+    "s11_nonempty": true,
+    "s11_finite": true,
+    "zactive_finite": true,
+    "native_last_two_delta_s_pass": true,
+    "native_desired_accuracy_termination": true,
+    "native_not_maxpass_terminated": true,
+    "broadband_sweep_converged": true,
+    "native_no_error_lines": true,
+    "pass": true
+  }
+}

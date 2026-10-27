@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2B-POLB-PREBUILD-20260929",
+  "status": "PASS_R4_A0_E2B_POLB_PREBUILD_READY_AUTHORIZED",
+  "remote_build_invocations": 0,
+  "solver_invocations": 0,
+  "parent_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+  "source_blobs": {
+    "macro": "e8cbb334173b093165c4ef05bb9d374d39ff74b4",
+    "inventory": "30cde1d4b5b155c360cf5654789eb6e942dd6d6d",
+    "kernel_reference": "72d5dc42d8b8cc649267131a34a4c022b27d16b3",
+    "build_runner": "ac25b35585533bb1764c9ceb52e2337b173fe5e7"
+  },
+  "static_audit": {
+    "formula": "45 - 12 + 74 = 107",
+    "exact_74_new_shape_set": true,
+    "temporary_drill_tools": 8,
+    "plated_vias": 8,
+    "rotate_minus135": 16,
+    "rotate_plus135": 0,
+    "B_P_drills": 4,
+    "B_N_drills": 4,
+    "raw_ports": 12,
+    "B_basis_port_coordinates_exact": true,
+    "half_lap_notch_exact": true,
+    "old_A_basis_active_geometry": false,
+    "build_runner_run_solver_calls": 0
+  },
+  "sole_geometry_delta_from_E2A": "E2B_N_BackGround half-lap support notch: 0.125 mm x 1 mm footprint",
+  "authorization": {
+    "BUILD_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": true,
+    "solve_activation_requires": [
+      "BUILD_PASS",
+      "EXPLICIT_HUMAN_3D_REVIEW_PASS"
+    ]
+  }
+}

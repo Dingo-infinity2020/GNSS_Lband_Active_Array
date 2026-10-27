@@ -1,0 +1,29 @@
+{
+  "schema_version": "gnss-m7c-offline-freeze-audit-v0.2",
+  "status": "PASS_M7C_OFFLINE_BUILD_CHAIN_HARDENED_AWAIT_HOST_STATIC_QUALIFICATION_AND_BUILD_AUTH",
+  "authority_commit": "cc62721366bbd9e8bf9cebe3028a6f1e1defb18f",
+  "checks": {
+    "audit_runner_reference": true,
+    "audit_packet_reference": true,
+    "packet_runner_reference": true,
+    "science_schema_reference": true,
+    "runner_correct_material_loss_gate": true,
+    "runner_no_solver": true,
+    "packet_no_solver": true,
+    "macro_create_count": false,
+    "macro_subtract_count": false,
+    "build_authorized": false,
+    "solve_authorized": false
+  },
+  "connector_text_sha256": {
+    "runner": "8d14e5193dfef3e5aee8ea35fafad819750818c1188c735e87fffb6a69ded8c9",
+    "packet": "b244b39bb6482d2ceb846cc1aed527fcf22bdc2e2cc4cd5f5c044038b6f7842e",
+    "audit": "e9b00217db63322c13b2b4909d1f8abcaca1f6a128d2bd20d04496aff5e91988",
+    "macro": "62f69181b70d192093fb71ebcc73c4a20ff04c602c04dbbadc2e190dacd99726",
+    "candidate": "bf3e0abdd529c639186edfb0f25c0c9104252534ad85c122db87a8e3b3ffb826",
+    "formal": "ca7cedce7725dbb0ce9688694317322501861858f8538313bad967acaab9ce8b"
+  },
+  "note": "Connector text hashes are offline provenance only. NW host-byte hashes remain authoritative for the future host static qualification because Windows checkout line endings may differ.",
+  "remote_execution_performed": false,
+  "cst_execution_performed": false
+}

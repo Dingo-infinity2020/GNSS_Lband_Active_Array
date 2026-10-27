@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.2.4",
+  "task": {
+    "project": "GNSS_Lband_Active_Array",
+    "task_id": "R1E0A-R1-READONLY-AUDIT-RECOVERY",
+    "stage": "R1E0A_R1_READONLY_AUDIT_RECOVERY",
+    "status": "PASS_R1E0A_PERIODIC_CONFIG_BUILD_ONLY_READONLY_RECOVERY"
+  },
+  "workspace": {
+    "host_alias": "NW",
+    "path": "D:\\GNSS_Lband_Active_Array\\GNSS_Lband_Active_Array-project-r0-charts-scaffold",
+    "state": "CHECKPOINTED"
+  },
+  "source": {
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "branch": "project/r0-charts-scaffold",
+    "recovery_source_commit": "76b875e397f05fdea607ca069c74bbdd4b8fe8ea"
+  },
+  "recovery": {
+    "mode": "READ_ONLY",
+    "formal_cst_rerun": false,
+    "qualifier": "scripts/qualify_r1e0a_existing_evidence.py",
+    "summary": "evidence/r1e0a_dc_nw_20260924_build01/requalification_summary.json"
+  },
+  "archive": {
+    "mode": "REFERENCE_ONLY",
+    "completed": true,
+    "purge_allowed": false
+  },
+  "closeout": {
+    "task_node": "read-only recovery PASS / R1E0A closed",
+    "handoff_written": true,
+    "purge_allowed": false,
+    "purged": false
+  }
+}

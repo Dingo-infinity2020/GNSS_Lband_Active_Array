@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2.10",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E1-S0-PASSIVE-EM-PRESOLVE-20260928",
+  "project": "GNSS_Lband_Active_Array",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E1_PASSIVE_EM_SOLVE_CONTRACT_FREEZE",
+  "status": "PASS_R4_A0_E1_PASSIVE_EM_PRESOLVE_FREEZE_READY_AWAIT_SOLVE_AUTH",
+  "formal_solver_invocations": 0,
+  "remote_calls": 0,
+  "source_authority": {
+    "v03_artifact_sha256": "a0e4bda5c64ea712564db76441721ca6dc147c97c061360a16a7d21f272f787a",
+    "build_status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E1_V03_BUILD_ONLY",
+    "human_geometry_review": "PASS_R4_A0_E1_V03_HUMAN_3D_REVIEW"
+  },
+  "solver_source": {
+    "path": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E1_PASSIVE_EM_SOLVER_CONFIG_V01.mcr",
+    "git_blob": "14554ad16fb7cb982ed7d9c03d0dc662bb4dec88",
+    "static_audit": {
+      "no_geometry_creation": true,
+      "no_material_edit": true,
+      "no_port_edit": true,
+      "frequency_1p0_to_1p8": true,
+      "maxpass16": true,
+      "max_delta_s_0p02": true,
+      "second_order_tet": true
+    }
+  },
+  "runner": {
+    "path": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e1_passive_em_solve.py",
+    "git_blob": "81379f68d79d229b713edd2ee2d06b3cec1853f4",
+    "static_audit": {
+      "expected_v03_sha_locked": true,
+      "complete_project_copy": true,
+      "presolve_six_port_audit": true,
+      "exactly_one_run_solver_call": true,
+      "full_6x6_extraction": true,
+      "convergence_extraction": true,
+      "no_automatic_retry": true
+    }
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "LNA_INTEGRATION_AUTHORIZED": false
+  },
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E1_S0_PASSIVE_EM_SOLVE_AWAIT_AUTH"
+}

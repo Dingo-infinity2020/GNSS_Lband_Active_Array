@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.2.12",
+  "packet_id": "GNSS-AR0-B1R-R4-A0-E2B-POLB-BUILD-20260929",
+  "project": {
+    "name": "GNSS_Lband_Active_Array",
+    "repository": "Dingo-infinity2020/GNSS_Lband_Active_Array",
+    "source_branch": "project/r0-charts-scaffold"
+  },
+  "stage": {
+    "name": "R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_BUILD_ONLY",
+    "target_host": "NW",
+    "parent_filename": "R1E1A4A_AR0_B1R_T1R1_GROUND_PLACEMENT_CORRECTED_BUILD_ONLY_V01.cst",
+    "parent_sha256": "fbf375c605acff4f53e46fedefba7acf24ef871b427a579091144b7833dd149e",
+    "macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_BUILD_ONLY_V01.mcr",
+    "macro_blob": "e8cbb334173b093165c4ef05bb9d374d39ff74b4",
+    "kernel_reference_macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2B_DRILL_KERNEL_REFERENCE_V01.mcr",
+    "kernel_reference_blob": "72d5dc42d8b8cc649267131a34a4c022b27d16b3",
+    "inventory_contract": "execution/R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_BUILD_INVENTORY_V01.json",
+    "inventory_blob": "30cde1d4b5b155c360cf5654789eb6e942dd6d6d",
+    "runner": "scripts/run_r1e1a4a_ar0_b1r_r4_a0_e2b_polb_build_only_v01.py",
+    "runner_blob": "ac25b35585533bb1764c9ceb52e2337b173fe5e7",
+    "target_root": "D:\\GNSS_R4A0E2B_20260929_BUILD",
+    "target_artifact": "R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_INTEGRATED_BUILD_ONLY_V01.cst",
+    "evidence_root": "D:\\GNSS_R4A0E2B_20260929_BUILD\\evidence",
+    "stop_boundary": "one build-only -> fresh reopen -> exact 107 solids/12 ports/8 vias/kernel drill match/intersection audits -> human-review copy -> STOP"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": true,
+    "solve_activation_state": "PREAUTHORIZED_BLOCKED_BY_HUMAN_REVIEW"
+  },
+  "budgets": {
+    "formal_build": 1,
+    "formal_solver": 1,
+    "automatic_retries": 0,
+    "silent_retry": false
+  },
+  "formal_build_invocations_consumed": 1,
+  "solver_invocations": 0,
+  "automatic_retries": 0,
+  "final_status": "PASS_R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_BUILD_ONLY",
+  "result_packet": "execution/result_packets/R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_BUILD_PASS_20260929_result.json",
+  "artifact_sha256": "002eb117b0716cf2a47856b4552dd96ef4567358c7dd5827cbe766d10a633f39",
+  "next_boundary": "R1E1A4A_AR0_B1R_R4_A0_E2B_POLB_HUMAN_3D_REVIEW"
+}

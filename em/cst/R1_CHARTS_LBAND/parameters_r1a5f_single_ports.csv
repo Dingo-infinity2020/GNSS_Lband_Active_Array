@@ -1,0 +1,12 @@
+parameter,value,unit,provenance,status,note
+geometry_source_sha256,b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa,,R1A3_HUMAN_REVIEW,FROZEN,immutable reviewed geometry
+terminal_r,3.00,mm,PROJECT_DESIGN_BASELINE,FROZEN,reuse R1A2/R1A4 terminal radius
+port_s2,0.7071067811865476,,MATHEMATICAL,FROZEN,1/sqrt(2)
+terminal_xy,2.121320343559643,mm,PROJECT_DERIVED,FROZEN,terminal_r/sqrt(2)
+port_terminal_z,copper_top_z,,PROJECT_DERIVED,FROZEN,top copper surface
+port_ref_impedance,100,ohm,PROJECT_BASELINE,FROZEN,differential reference
+model_A,Pol-A,,PROJECT_DESIGN,FROZEN,NE to SW single differential port only
+model_B,Pol-B,,PROJECT_DESIGN,FROZEN,NW to SE single differential port only
+model_B_relation,Rz(+90deg)_of_A,,PROJECT_DESIGN,FROZEN,generated from A endpoint tuple
+geometry_changes,NO,,PROJECT_GATE,FROZEN,port-only build
+solver,NO,,PROJECT_GATE,FROZEN,build-only gate

@@ -1,0 +1,6 @@
+{
+  "formal_solver_invocations": 1,
+  "host": "NW",
+  "method": "cst.interface open_project -> modeler.run_solver",
+  "source_sha256": "ab8a61cc781880ba938b729f44862d1d79f36dbb959288fc57ede5e61b4d2858"
+}

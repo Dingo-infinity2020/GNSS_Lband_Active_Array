@@ -1,0 +1,33 @@
+{
+  "actual_solver_launches": 1,
+  "container_project": "/work/gnss_ar0_b1r_t2s_20260927/runs/baseline/R1E1A4A_AR0_B1R_T2S_CONFIGURED_V01.cst",
+  "docker_exec_host_pid": 58036,
+  "end_utc": "2026-09-27T06:25:18Z",
+  "exact_command": [
+    "docker",
+    "exec",
+    "--user",
+    "1004",
+    "--workdir",
+    "/work/gnss_ar0_b1r_t2s_20260927/runs/baseline",
+    "cst2022",
+    "/opt/cst/CST_Studio_Suite_2022/cst_design_environment",
+    "-m",
+    "/work/gnss_ar0_b1r_t2s_20260927/runs/baseline/R1E1A4A_AR0_B1R_T2S_CONFIGURED_V01.cst",
+    "-f",
+    "--num-threads",
+    "16"
+  ],
+  "outer_exit_code": 137,
+  "post_run_project_sha256": "ab8a61cc781880ba938b729f44862d1d79f36dbb959288fc57ede5e61b4d2858",
+  "post_run_project_size_bytes": 52366,
+  "project": "/data/jlding/gnss_ar0_b1r_t2s_20260927/runs/baseline/R1E1A4A_AR0_B1R_T2S_CONFIGURED_V01.cst",
+  "retry_authorized": false,
+  "schema": "gnss_ar0_b1r_t2s_runtime_v1",
+  "solver_finished": true,
+  "solver_started": true,
+  "source_sha256": "ab8a61cc781880ba938b729f44862d1d79f36dbb959288fc57ede5e61b4d2858",
+  "start_utc": "2026-09-27T06:20:09Z",
+  "status": "HOLD_OUTER_EXIT_NONZERO",
+  "threads": 16
+}

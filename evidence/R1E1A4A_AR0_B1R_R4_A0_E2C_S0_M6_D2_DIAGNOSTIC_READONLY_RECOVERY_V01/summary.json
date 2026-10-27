@@ -1,0 +1,100 @@
+﻿{
+    "schema_version":  "gnss-m6-d2-readonly-recovery-v0.1",
+    "status":  "PASS_M6_D2_READONLY_RECOVERY_NUMERICAL",
+    "classification":  "READONLY_POSTSOLVE_RECOVERY_NO_RERUN",
+    "formal_solver_invocations":  1,
+    "recovery_solver_invocations":  0,
+    "automatic_retries":  0,
+    "solved_artifact_sha256":  "2abefb1360351746953c5007a4f57cba7b570bdde309917645b5433eb440fd45",
+    "baseline_sha256":  "a759ac6135a297429a8a166b6a01a39a66b5ec3a861267ed0f05d53ff605fae4",
+    "grid":  {
+                 "solved_count":  1002,
+                 "solved_min_ghz":  1.0,
+                 "solved_max_ghz":  1.8,
+                 "baseline_count":  1001,
+                 "baseline_min_ghz":  1.0,
+                 "baseline_max_ghz":  1.8,
+                 "comparison":  "complex-linear interpolation of solved D2 responses onto immutable E2A 1001-point grid"
+             },
+    "hard_checks":  {
+                        "immutable_solved_sha":  true,
+                        "baseline_sha":  true,
+                        "response_24_terms_complete":  true,
+                        "solved_grid_covers_baseline_1p0_1p8":  true,
+                        "canonical_comparison_grid_1001_1p0_1p8":  true,
+                        "source_side_reciprocity_lte_0p02":  true,
+                        "loaded_column_power_lte_1p02":  true,
+                        "final_two_delta_s_lte_0p02_proven":  true
+                    },
+    "convergence_candidates":  [
+                                   {
+                                       "source":  "result_tree",
+                                       "path":  "1D Results\\Convergence\\S-Parameters\\All S-Parameters",
+                                       "run_id":  0,
+                                       "final_two":  [
+                                                         0.06606372916243627,
+                                                         0.46184986067411415
+                                                     ],
+                                       "pass":  false
+                                   },
+                                   {
+                                       "source":  "native_log",
+                                       "path":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M6_D2_DIAGNOSTIC_SOLVE_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M6_D2_DIAGNOSTIC_SOLVED_V01\\Result\\output.txt",
+                                       "final_two":  [
+                                                         0.0094722,
+                                                         0.0144622
+                                                     ],
+                                       "pass":  true
+                                   }
+                               ],
+    "native_log_sequences":  [
+                                 {
+                                     "path":  "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M6_D2_DIAGNOSTIC_SOLVE_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M6_D2_DIAGNOSTIC_SOLVED_V01\\Result\\output.txt",
+                                     "values":  [
+                                                    0.0570926,
+                                                    0.0094722,
+                                                    0.0144622
+                                                ]
+                                 }
+                             ],
+    "metrics":  {
+                    "raw_source_side_max_complex_delta":  {
+                                                              "value":  0.3434190500032508,
+                                                              "frequency_ghz":  1.6496,
+                                                              "ports":  [
+                                                                            1,
+                                                                            1
+                                                                        ]
+                                                          },
+                    "eup_diff_to_common":  {
+                                               "variant_peak_db":  -14.242949967142124,
+                                               "baseline_peak_db":  -30.710619115420993,
+                                               "degradation_db":  16.46766914827887,
+                                               "frequency_ghz":  1.6496
+                                           },
+                    "eup_branch_return_imbalance":  {
+                                                        "max_abs_db":  2.100781830303534,
+                                                        "frequency_ghz":  1.6496
+                                                    },
+                    "source_side_reciprocity_max_abs_complex":  4.3497090510647751E-05,
+                    "loaded_column_power_max":  0.9999901324040936,
+                    "loaded_column_power_min":  0.4717235143589996,
+                    "effect_fractions":  {
+                                             "raw":  0.4879546796488664,
+                                             "mode":  0.7555581359999001,
+                                             "imbalance":  0.1846959612224845
+                                         },
+                    "variant_classification":  "INTERMEDIATE"
+                },
+    "field_evidence":  {
+                           "status":  "HOLD_FIELD_PATHS_NOT_DISCOVERED",
+                           "field_paths":  [
+
+                                           ],
+                           "monitor_named_paths":  [
+
+                                                   ]
+                       },
+    "science_interpretation_authority":  "ATTRIBUTION_CLASS_AUTHORITATIVE_FOR_D2_NUMERIC_METRICS",
+    "boundary":  "No rerun, no further solve, and no geometry optimization is authorized by this recovery."
+}

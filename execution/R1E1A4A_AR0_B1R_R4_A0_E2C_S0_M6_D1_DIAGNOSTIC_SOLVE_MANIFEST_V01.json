@@ -1,0 +1,169 @@
+{
+  "schema_version": "gnss-m6-diagnostic-solve-v0.1",
+  "status": "FROZEN_READY_AWAIT_SOLVE_AUTH",
+  "variant": "D1",
+  "stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M6_D1_DIAGNOSTIC_SOLVE",
+  "scientific_role": "ONE_POLARIZATION_OBSERVER_ATTRIBUTION",
+  "source_build": {
+    "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\build_only\\M6_D1_SIG_ATTRIBUTION_V01\\R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M6_D1_SIG_BUILD_ONLY_V01.cst",
+    "sha256": "37abf12c415de2418d5d204811f1bc31e9a24cdc30b6538fc2d7d2ce659de7af",
+    "shape_count": 113,
+    "raw_ports": 12,
+    "human_review_gate": "execution/M6_D1_HUMAN_GEOMETRY_REVIEW_PASS.json",
+    "human_review_status": "PASS_M6_D1_HUMAN_GEOMETRY_REVIEW",
+    "human_review_artifact_sha256": "37abf12c415de2418d5d204811f1bc31e9a24cdc30b6538fc2d7d2ce659de7af"
+  },
+  "observer_semantics": {
+    "inherited_from": "E2A-S0L",
+    "solve_ports": [
+      {
+        "n": 1,
+        "name": "A_E_UP",
+        "role": "SOURCE"
+      },
+      {
+        "n": 2,
+        "name": "A_P_IN",
+        "role": "SOURCE_DEVICE_INPUT_PLANE"
+      },
+      {
+        "n": 3,
+        "name": "A_P_OUT_LOAD50",
+        "role": "MATCHED_50OHM_LOAD_ONLY"
+      },
+      {
+        "n": 4,
+        "name": "B_E_UP",
+        "role": "SOURCE"
+      },
+      {
+        "n": 5,
+        "name": "B_P_IN",
+        "role": "SOURCE_DEVICE_INPUT_PLANE"
+      },
+      {
+        "n": 6,
+        "name": "B_P_OUT_LOAD50",
+        "role": "MATCHED_50OHM_LOAD_ONLY"
+      }
+    ],
+    "source_excitation_set": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "matched_load_only_set": [
+      3,
+      6
+    ],
+    "removed_raw_ports": [
+      4,
+      5,
+      6,
+      10,
+      11,
+      12
+    ],
+    "polB_diagnostic_ports": "NONE"
+  },
+  "solver": {
+    "band_ghz": [
+      1.0,
+      1.8
+    ],
+    "decision_band_ghz": [
+      1.15,
+      1.65
+    ],
+    "type": "CST HF Frequency Domain",
+    "mesh": "second-order tetrahedral adaptive",
+    "max_delta_s": 0.02,
+    "consecutive_passes_required": 2,
+    "max_passes": 16,
+    "formal_solver_budget": 1,
+    "automatic_retries": 0
+  },
+  "surface_current_evidence": {
+    "implementation": "Hfield frequency monitors; CST HF monitor yields H-field/surface-current result on conducting surfaces",
+    "frequencies_ghz": [
+      1.2276,
+      1.3384,
+      1.57542
+    ],
+    "labels": [
+      "L2",
+      "MIXED_WORST",
+      "L1"
+    ],
+    "required_for_mechanism_interpretation": true,
+    "not_a_numerical_convergence_gate": true,
+    "manual_review_scope": [
+      "observer Pol-A radiator/feed current distribution",
+      "added passive Pol-B diagnostic entities",
+      "symmetry/antisymmetry of E_UP branch current paths",
+      "whether current localizes on signal metal, ground/vias, or only composite paths"
+    ]
+  },
+  "response_contract": {
+    "complex_traces": 24,
+    "source_side_4x4_terms": 16,
+    "output_load_pickup_terms": 8,
+    "common_native_grid_required": true,
+    "baseline_csv": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\E2A_S0L_SOLVE_20260929\\evidence\\loaded_response_native.csv",
+    "baseline_sha256": "a759ac6135a297429a8a166b6a01a39a66b5ec3a861267ed0f05d53ff605fae4"
+  },
+  "hard_numerical_gates": {
+    "six_ports_exact": true,
+    "selected_source_excitation_exact": true,
+    "load_ports_never_excited": true,
+    "response_24_terms_complete": true,
+    "final_two_native_delta_s_lte_0p02": true,
+    "source_side_reciprocity_max_abs_complex_lte_0p02": true,
+    "loaded_column_power_lte_1p02": true,
+    "no_fatal_solver_error": true,
+    "no_mesh_corruption": true
+  },
+  "attribution_metrics": {
+    "raw_source_side_max_complex_delta": {
+      "baseline": "E2A isolated",
+      "full_e2c_reference": 0.7037929224295505
+    },
+    "eup_diff_to_common_degradation_db": {
+      "baseline_peak_db": -30.710619115420975,
+      "full_e2c_peak_db": -8.915249092059799,
+      "full_e2c_degradation_db": 21.795370023361176
+    },
+    "eup_branch_return_imbalance_db": {
+      "full_e2c_reference": 11.374270538449593
+    },
+    "fractions": {
+      "raw": "variant_raw_delta/full_e2c_raw_delta",
+      "mode": "max(0,variant_mode_degradation_db)/full_e2c_mode_degradation_db",
+      "imbalance": "variant_imbalance_db/full_e2c_imbalance_db"
+    },
+    "variant_classification": {
+      "STRONG": "at least 2 of 3 effect fractions >= 0.60",
+      "WEAK": "all 3 effect fractions <= 0.30",
+      "INTERMEDIATE": "otherwise"
+    }
+  },
+  "cross_variant_decision_logic": {
+    "D1_STRONG_D2_WEAK": "PRE_CIN_SIGNAL_PATH_PRIMARY",
+    "D1_WEAK_D2_STRONG": "GROUND_RETURN_PATH_PRIMARY",
+    "D1_WEAK_D2_WEAK": "SIGNAL_GROUND_INTERACTION_OR_COMPOSITE_MODE_PRIMARY",
+    "D1_STRONG_D2_STRONG": "BOTH_CLASSES_INDEPENDENTLY_STRONG",
+    "otherwise": "MIXED_OR_INCONCLUSIVE_REQUIRES_FIELD_CURRENT_REVIEW"
+  },
+  "execution": {
+    "config_macro": "source/cst/R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M6_D1_DIAGNOSTIC_SOLVE_CONFIG_V01.mcr",
+    "target_root": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M6_D1_DIAGNOSTIC_SOLVE_V01",
+    "artifact_name": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M6_D1_DIAGNOSTIC_SOLVED_V01.cst",
+    "stop_boundary": "STOP_AFTER_ONE_DIAGNOSTIC_SOLVE_AND_READONLY_QUALIFICATION_NO_RETRY_NO_GEOMETRY_OPTIMIZATION",
+    "config_macro_sha256": "8d2eb3f0f91c0cf8a15f12838818b3c089c208b67d9d9d03f4cdfccd37108260"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false
+  }
+}

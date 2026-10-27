@@ -1,0 +1,17 @@
+parameter,value,unit,provenance,status,note
+base_cst_sha256,b921889aede44ff2b4ad476be4157c2c72053cc3c6f6de4a4bf358e607adc8fa,,R1A3_HUMAN_REVIEW,FROZEN,immutable reviewed geometry source
+terminal_r,3.00,mm,PROJECT_DESIGN_BASELINE,FROZEN,R1A2 metadata
+port_s2,0.7071067811865476,,MATHEMATICAL,FROZEN,1/sqrt(2)
+terminal_xy,2.121320343559643,mm,PROJECT_DERIVED,FROZEN,terminal_r*port_s2
+port_terminal_z,copper_top_z,,PROJECT_DERIVED,FROZEN,top conductor surface
+port_ref_impedance,100,ohm,PAPER_ANCHORED_PROJECT_BASELINE,FROZEN,differential normalization baseline
+port1_pol,Pol-A,,PROJECT_DESIGN,FROZEN,NE to SW
+port1_p1,NE,,PROJECT_DESIGN,FROZEN,+terminal_xy,+terminal_xy
+port1_p2,SW,,PROJECT_DESIGN,FROZEN,-terminal_xy,-terminal_xy
+port2_pol,Pol-B,,PROJECT_DESIGN,FROZEN,NW to SE
+port2_p1,NW,,PROJECT_DESIGN,FROZEN,-terminal_xy,+terminal_xy
+port2_p2,SE,,PROJECT_DESIGN,FROZEN,+terminal_xy,-terminal_xy
+port2_relation,Rz(+90deg)_of_port1,,PROJECT_DESIGN,FROZEN,endpoint ordering also rotates
+port_type,SParameter,,PROJECT_GATE,FROZEN,ideal CST discrete ports
+ground_reference,NONE,,PROJECT_GATE,FROZEN,balanced differential ports
+solver,NO,,PROJECT_GATE,FROZEN,R1A4 build-only

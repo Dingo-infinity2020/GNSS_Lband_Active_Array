@@ -1,0 +1,12 @@
+{
+  "source": "NW installed CST Studio Suite 2022 FDSolver Object help",
+  "sha256": "f71f4a2a38114f6ffc72db3833394a20e6db686f05b5860ee883b02dcab53fdf",
+  "path": "D:\\Program Files (x86)\\CST Studio Suite 2022\\Online Help\\mergedProjects\\VBA_3D\\special_vbasolver\\special_vbasolver_fdsolver_object.htm",
+  "qualified_semantics": {
+    "SetMethod_Discrete_samples_only": "Disables broadband result calculation",
+    "ResetSampleIntervals_all": "Removes previous sampling intervals",
+    "AddSampleInterval_Single": "Calculates the specified frequency directly; adaptation flag selects mesh-adaptation frequency"
+  },
+  "new_simulator_applications": 0,
+  "new_solver_invocations": 0
+}

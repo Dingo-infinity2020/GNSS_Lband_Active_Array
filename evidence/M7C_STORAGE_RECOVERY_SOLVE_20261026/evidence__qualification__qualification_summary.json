@@ -1,0 +1,684 @@
+{
+  "status": "HOLD_E2C_S0_SEVERE_COEXISTENCE_REVIEW",
+  "disposition": "SEVERE_REVIEW",
+  "simulationops": "0.2.25",
+  "solved_artifact": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\M7C_STORAGE_RECOVERY_DIAGNOSTIC_SOLVED_V01.cst",
+  "solved_artifact_sha256": "90af39c8447d7245d6e1eb6f77930e3789b6c11c64ea14a7d314b33b07a0e5fa",
+  "sentinel_manifest_sha256": "7fde455373c882724c7098f79c779fd58179ce4dff70a7d151a66e9acc4d79ac",
+  "formal_solver_invocations_expected": 1,
+  "automatic_retries_expected": 0,
+  "native_files_copied": [
+    "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\qualification\\native_output_txt",
+    "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\qualification\\native_Model_log",
+    "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_STORAGE_RECOVERY_20261026_V01\\evidence\\qualification\\native_log_tet"
+  ],
+  "native_delta_sequence": [
+    {
+      "ordinal": 1,
+      "delta_s": 0.0726822
+    },
+    {
+      "ordinal": 2,
+      "delta_s": 0.0154013
+    },
+    {
+      "ordinal": 3,
+      "delta_s": 0.0149349
+    }
+  ],
+  "native_flags": {
+    "fatal_error": false,
+    "mesh_corruption": false,
+    "large_reflection_warning": false,
+    "disconnected_conductor_warning": false
+  },
+  "runmeta": {
+    "selected_run_id": 1,
+    "response_run_ids": {
+      "1D Results\\S-Parameters\\S1,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S2,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S3,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S4,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S5,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S6,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S7,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S8,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S9,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S10,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S11,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S12,1": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S1,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S2,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S3,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S4,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S5,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S6,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S7,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S8,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S9,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S10,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S11,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S12,2": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S1,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S2,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S3,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S4,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S5,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S6,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S7,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S8,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S9,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S10,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S11,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S12,4": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S1,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S2,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S3,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S4,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S5,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S6,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S7,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S8,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S9,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S10,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S11,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S12,5": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S1,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S2,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S3,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S4,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S5,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S6,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S7,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S8,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S9,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S10,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S11,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S12,7": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S1,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S2,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S3,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S4,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S5,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S6,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S7,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S8,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S9,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S10,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S11,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S12,8": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S1,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S2,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S3,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S4,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S5,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S6,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S7,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S8,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S9,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S10,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S11,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S12,10": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S1,11": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S2,11": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S3,11": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S4,11": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S5,11": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S6,11": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S7,11": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S8,11": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S9,11": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S10,11": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S11,11": [
+        0,
+        1
+      ],
+      "1D Results\\S-Parameters\\S12,11": [
+        0,
+        1
+      ]
+    },
+    "frequency_count": 1001,
+    "frequency_min_ghz": 1.0,
+    "frequency_max_ghz": 1.8
+  },
+  "hard_checks": {
+    "required_96_responses_extracted": true,
+    "native_grid_1001_1p0_1p8": true,
+    "native_final_two_delta_s_lte_0p02": true,
+    "source_side_reciprocity": true,
+    "loaded_power_closure": true,
+    "no_fatal_solver_error": true,
+    "no_mesh_corruption": true
+  },
+  "science": {
+    "baselines": {
+      "PolA": {
+        "path": "D:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\E2A_S0L_SOLVE_20260929\\evidence\\loaded_response_native.csv",
+        "sha256": "a759ac6135a297429a8a166b6a01a39a66b5ec3a861267ed0f05d53ff605fae4"
+      },
+      "PolB": {
+        "path": "D:\\GNSS_Lband_Active_Array\\GNSS_R4A0E2B_S0L_SOLVE_20260929\\qualification_recovery_v01\\loaded_response_native.csv",
+        "sha256": "103c0de1ee2353d284e84ab8e065c9e802f4e1283912d0e19f1f5c7a89ced4e5"
+      }
+    },
+    "comparisons": {
+      "PolA": {
+        "own_pol_complex_delta": {
+          "max_abs_complex": 0.33486402260119935,
+          "frequency_ghz": 1.6496,
+          "combined_ports": [
+            1,
+            1
+          ],
+          "baseline_ports": [
+            1,
+            1
+          ]
+        },
+        "mode_conversion": {
+          "E_diff_to_common": {
+            "combined": {
+              "peak_db": -13.82868893601062,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -30.710619115420975,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 16.881930179410354
+          },
+          "E_common_to_diff": {
+            "combined": {
+              "peak_db": -13.828607619206597,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -30.711725634378674,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 16.883118015172077
+          },
+          "E_diff_to_PIN_common": {
+            "combined": {
+              "peak_db": -42.6403177704659,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -67.61508572571978,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 24.97476795525388
+          },
+          "E_common_to_PIN_diff": {
+            "combined": {
+              "peak_db": -43.40049328289672,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -69.4569805816876,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 26.056487298790884
+          },
+          "PIN_diff_to_common": {
+            "combined": {
+              "peak_db": -68.56272018361733,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -73.5334326252104,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 4.970712441593065
+          },
+          "PIN_common_to_diff": {
+            "combined": {
+              "peak_db": -68.56251909581134,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -73.53379274293798,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 4.971273647126637
+          }
+        },
+        "eup_return_imbalance": {
+          "max_abs_db": 1.1943932159132502,
+          "frequency_ghz": 1.456
+        }
+      },
+      "PolB": {
+        "own_pol_complex_delta": {
+          "max_abs_complex": 0.8545482712537513,
+          "frequency_ghz": 1.6496,
+          "combined_ports": [
+            10,
+            10
+          ],
+          "baseline_ports": [
+            4,
+            4
+          ]
+        },
+        "mode_conversion": {
+          "E_diff_to_common": {
+            "combined": {
+              "peak_db": -5.865806409159658,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -32.433005338920054,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 26.567198929760394
+          },
+          "E_common_to_diff": {
+            "combined": {
+              "peak_db": -5.86583911066477,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -32.42592477565782,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 26.56008566499305
+          },
+          "E_diff_to_PIN_common": {
+            "combined": {
+              "peak_db": -39.112981868045814,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -69.18070317034076,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 30.06772130229495
+          },
+          "E_common_to_PIN_diff": {
+            "combined": {
+              "peak_db": -37.449614762653994,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -70.9005477320079,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 33.4509329693539
+          },
+          "PIN_diff_to_common": {
+            "combined": {
+              "peak_db": -58.861154486561595,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -75.73650041972425,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 16.875345933162656
+          },
+          "PIN_common_to_diff": {
+            "combined": {
+              "peak_db": -58.86119623688724,
+              "frequency_ghz": 1.6496
+            },
+            "isolated": {
+              "peak_db": -75.73581747095321,
+              "frequency_ghz": 1.6496
+            },
+            "degradation_db": 16.87462123406597
+          }
+        },
+        "eup_return_imbalance": {
+          "max_abs_db": 14.692905296257043,
+          "frequency_ghz": 1.6496
+        }
+      }
+    },
+    "source_side_reciprocity": {
+      "max_abs_complex": 0.003900911314379325,
+      "frequency_ghz": 1.4848,
+      "ports": [
+        4,
+        10
+      ],
+      "pass": true
+    },
+    "loaded_power_closure": {
+      "max": {
+        "sum_abs_s_sq": 0.9999838465903228,
+        "frequency_ghz": 1.0,
+        "source_port": 5
+      },
+      "min": {
+        "sum_abs_s_sq": 0.25792627209926605,
+        "frequency_ghz": 1.0544,
+        "source_port": 10
+      },
+      "pass": true
+    },
+    "cross_pol_device_coupling": {
+      "peak_db": -60.55249850955674,
+      "frequency_ghz": 1.6496,
+      "response_port": 3,
+      "source_port": 11
+    },
+    "resonance": {
+      "excursion_db": 20.992457147668276,
+      "f_start_ghz": 1.16,
+      "f_end_ghz": 1.2096,
+      "response_port": 2,
+      "source_port": 5
+    },
+    "review_triggers": [
+      "NARROW_RESONANCE_MECHANISM",
+      "PolA:EUP_RETURN_IMBALANCE",
+      "PolA:PIN_common_to_diff",
+      "PolA:PIN_diff_to_common",
+      "PolB:EUP_RETURN_IMBALANCE"
+    ],
+    "severe_triggers": [
+      "PolA:E_common_to_PIN_diff",
+      "PolA:E_common_to_diff",
+      "PolA:E_diff_to_PIN_common",
+      "PolA:E_diff_to_common",
+      "PolA:OWN_POL_COMPLEX_DELTA",
+      "PolB:E_common_to_PIN_diff",
+      "PolB:E_common_to_diff",
+      "PolB:E_diff_to_PIN_common",
+      "PolB:E_diff_to_common",
+      "PolB:OWN_POL_COMPLEX_DELTA",
+      "PolB:PIN_common_to_diff",
+      "PolB:PIN_diff_to_common"
+    ]
+  },
+  "interpretation_boundary": [
+    "This is a passive coexistence sentinel, not product input-match authority.",
+    "C_IN and QPL9547 remain absent from the CST network.",
+    "A non-severe REVIEW is classified offline before any geometry retune or network escalation.",
+    "A severe trigger or hard numerical failure blocks C1 promotion."
+  ]
+}

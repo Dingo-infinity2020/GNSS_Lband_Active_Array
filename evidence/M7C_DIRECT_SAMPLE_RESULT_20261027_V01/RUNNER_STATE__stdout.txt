@@ -1,0 +1,8 @@
+SIMOPS_EVENT {"schema_version":"simops-project-event-v0.1","event":"PHASE","phase":"presolve_config","state":"START","production_boundary":"NOT_OBSERVED"}
+PASS_E2C_S0_PRESOLVE_CONFIG_READY
+CONFIGURED_SHA256=de039f1e53a1576e41baf749547331671a751a966ac9e5666d33cf8309fe28fb
+SIMOPS_EVENT {"schema_version":"simops-project-event-v0.1","event":"PHASE","phase":"presolve_config","state":"PASS","production_boundary":"NOT_OBSERVED"}
+SIMOPS_EVENT {"schema_version":"simops-project-event-v0.1","event":"PHASE","phase":"solver_run","state":"START","production_boundary":"OBSERVED"}
+SIMOPS_EVENT {"schema_version":"simops-project-event-v0.1","event":"PHASE","phase":"solver_run","state":"PASS","production_boundary":"OBSERVED"}
+SIMOPS_EVENT {"schema_version":"simops-project-event-v0.1","event":"PHASE","phase":"qualification","state":"START","production_boundary":"OBSERVED"}
+SIMOPS_EVENT {"schema_version":"simops-project-event-v0.1","event":"PHASE","phase":"complete","state":"HOLD","production_boundary":"OBSERVED","message":"HOLD_M7C_DIRECT_EXECUTION"}

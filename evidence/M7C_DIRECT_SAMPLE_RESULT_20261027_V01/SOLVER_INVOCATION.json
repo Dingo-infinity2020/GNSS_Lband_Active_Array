@@ -1,0 +1,12 @@
+{
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "solver_started": true,
+  "source_sha256": "ee25237bc5f70e457adadf3745faf3d64f1401bb47717da5322d7347ba50ce98",
+  "python_pid": 13892,
+  "configured_copy_sha256": "de039f1e53a1576e41baf749547331671a751a966ac9e5666d33cf8309fe28fb",
+  "geometry_build_invocations": 0,
+  "solver_elapsed_seconds": 614.186999999918,
+  "solver_completed": true,
+  "solved_artifact_sha256": "c21fa9f047d83f4f3776d5e6ef5718e8924aaf8e54f0ad8cbb7cb6a7c6681851"
+}

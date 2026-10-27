@@ -1,0 +1,84 @@
+{
+  "schema_version": "gnss-d-drive-cleanup-v0.1",
+  "status": "PASS_D_DRIVE_STORAGE_RECOVERY",
+  "date": "2026-10-08",
+  "before_free_gb": 0.06,
+  "after_free_gb": 14.933,
+  "actions": [
+    {
+      "action": "CONDA_CACHE_CLEAN",
+      "detail": "conda clean --all followed by force package-cache removal after environment manifests were exported",
+      "environment_verification": [
+        "Python 3.13.9 PASS",
+        "conda 25.11.0 PASS",
+        "SimulationOps doctor PASS"
+      ],
+      "cache_before_gb": 6.555,
+      "cache_after_gb": 0.001
+    },
+    {
+      "action": "M7C_FAILED_RUN_FIELD_INTERMEDIATE_PURGE",
+      "files_removed": 96,
+      "bytes_gb": 2.976,
+      "preserved": [
+        ".cst file",
+        "same-stem project database except e/h/d/b field .m3t intermediates",
+        "native logs",
+        "qualification evidence",
+        "GitHub storage-HOLD closeout"
+      ],
+      "run_size_after_mb": 411.1,
+      "local_manifest": "D:\\GNSS_Lband_Active_Array\\runs\\metadata\\M7C_STORAGE_HOLD_FIELD_PURGE_20261008.csv"
+    },
+    {
+      "action": "M7A_CLOSED_REJECT_FIELD_COMPACTION",
+      "files_removed": 320,
+      "bytes_gb": 9.538,
+      "rationale": "M7A is closed/rejected; field intermediates are not part of current science authority",
+      "preserved": [
+        ".cst file",
+        "S-parameter result database",
+        "evidence/CSV/JSON"
+      ],
+      "verification": {
+        "S11_run_ids": [
+          0,
+          1
+        ],
+        "points_per_run": [
+          1001,
+          1001
+        ],
+        "frequency_ghz": [
+          [
+            1,
+            1.8
+          ],
+          [
+            1,
+            1.8
+          ]
+        ]
+      },
+      "run_size_after_gb": 1.097,
+      "local_manifest": "D:\\GNSS_Lband_Active_Array\\runs\\metadata\\M7A_CLOSED_REJECT_FIELD_COMPACTION_20261008.csv"
+    }
+  ],
+  "untouched_science_baselines": [
+    "E2C_S0_COEXISTENCE_20261002_V01",
+    "M7B_DIAGNOSTIC_SOLVE_V01",
+    "E2A_S0L_SOLVE_20260929",
+    "GNSS_R4A0E2B_S0L_SOLVE_20260929",
+    "M6_D1_DIAGNOSTIC_SOLVE_V01",
+    "M6_D2_DIAGNOSTIC_SOLVE_V01"
+  ],
+  "recovery_readiness": {
+    "storage_issue_resolved_for_planning": true,
+    "recovery_solve_authorized": false,
+    "required_before_future_recovery": [
+      "add/enforce minimum free-space preflight",
+      "freeze same-geometry infrastructure-recovery solve contract",
+      "retain original consumed M7C HOLD as immutable evidence"
+    ]
+  }
+}

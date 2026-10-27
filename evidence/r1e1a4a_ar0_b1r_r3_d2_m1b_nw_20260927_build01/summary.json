@@ -1,0 +1,25 @@
+{
+  "status": "PASS_R1E1A4A_AR0_B1R_R3_D2_M1B_RF_FIXTURE_BUILD_ONLY",
+  "simulationops": "0.2.8",
+  "solver_invocations": 0,
+  "parent": {
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d2_m0r1_build_work\\R1E1A4A_AR0_B1R_R3_D2_M0R1_MANUFACTURABLE_GROUND_MERGE_BUILD_ONLY_V01.cst",
+    "sha256": "4ec39ab9965dd9ec6b416d801ded0ee6e56d910d2ffc2ba405cb9dec978cd91e"
+  },
+  "artifact": {
+    "path": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_r3_d2_m1b_build_work\\R1E1A4A_AR0_B1R_R3_D2_M1B_RF_FIXTURE_BUILD_ONLY_V01.cst",
+    "sha256": "11b3576ff5efb4326a761554fb94d8588d22c54691d713f8181c359415bdb70e"
+  },
+  "shape_count": 10,
+  "port_count": 3,
+  "checks": {
+    "parent_hash_exact": true,
+    "shape_count_10": true,
+    "exact_keep_names": true,
+    "retained_signature_exact": true,
+    "port_count_3": true,
+    "polB_endpoint_transform_exact": true,
+    "fresh_reopen_hash_stable": true,
+    "result_tree_empty": true
+  }
+}

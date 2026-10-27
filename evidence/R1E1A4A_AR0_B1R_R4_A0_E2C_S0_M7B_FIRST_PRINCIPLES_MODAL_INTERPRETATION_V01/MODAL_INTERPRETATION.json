@@ -1,0 +1,119 @@
+{
+  "schema_version": "gnss-m7b-first-principles-modal-interpretation-v0.1",
+  "status": "PASS_M7B_FIRST_PRINCIPLES_MODAL_INTERPRETATION",
+  "source_data": "READ_ONLY_EXISTING_FULL_E2C_M7B_E2A_E2B_CSV_NO_NEW_SOLVE",
+  "modal_definition": {
+    "self_average": "A=(Spp+Snn)/2",
+    "mutual_average": "M=(Spn+Snp)/2",
+    "differential": "Sdd=A-M",
+    "differential_to_common": "Sdc approximately branch self asymmetry for reciprocal pair"
+  },
+  "anchors_ghz": [
+    1.2056,
+    1.2984,
+    1.3432,
+    1.5752,
+    1.6496
+  ],
+  "ratios_m7b_to_full_deviation": {
+    "PolA": {
+      "1.2056": {
+        "self_average": 1.7155,
+        "mutual_average": 0.8708,
+        "branch_asymmetry": 0.0502,
+        "Sdd": 2.3097
+      },
+      "1.2984": {
+        "self_average": 1.7465,
+        "mutual_average": 1.0338,
+        "branch_asymmetry": 0.054,
+        "Sdd": 2.2489
+      },
+      "1.3432": {
+        "self_average": 1.8246,
+        "mutual_average": 1.0585,
+        "branch_asymmetry": 0.0575,
+        "Sdd": 2.3234
+      },
+      "1.5752": {
+        "self_average": 2.2912,
+        "mutual_average": 0.8831,
+        "branch_asymmetry": 0.0782,
+        "Sdd": 3.199
+      },
+      "1.6496": {
+        "self_average": 2.3307,
+        "mutual_average": 0.7808,
+        "branch_asymmetry": 0.0832,
+        "Sdd": 3.5957
+      }
+    },
+    "PolB": {
+      "1.2056": {
+        "self_average": 1.7456,
+        "mutual_average": 0.85,
+        "branch_asymmetry": 0.0421,
+        "Sdd": 2.3221
+      },
+      "1.2984": {
+        "self_average": 1.7768,
+        "mutual_average": 1.0092,
+        "branch_asymmetry": 0.0453,
+        "Sdd": 2.2643
+      },
+      "1.3432": {
+        "self_average": 1.8556,
+        "mutual_average": 1.0338,
+        "branch_asymmetry": 0.0482,
+        "Sdd": 2.3395
+      },
+      "1.5752": {
+        "self_average": 2.3264,
+        "mutual_average": 0.8611,
+        "branch_asymmetry": 0.0651,
+        "Sdd": 3.2089
+      },
+      "1.6496": {
+        "self_average": 2.3678,
+        "mutual_average": 0.7592,
+        "branch_asymmetry": 0.069,
+        "Sdd": 3.5979
+      }
+    }
+  },
+  "key_observations": [
+    "M7B suppresses branch asymmetry/Sdc to roughly 4-8 percent of the full-E2C deviation across all five anchors.",
+    "M7B does not significantly change the branch mutual-average term at low/mid band and changes it only moderately at the upper-band anchor.",
+    "M7B increases the self-average deviation to roughly 1.7-2.4 times full E2C.",
+    "M7B increases differential Sdd deviation to roughly 2.25-3.60 times full E2C, with penalty growing toward the upper band.",
+    "Therefore the large residual after M7B is not primarily branch imbalance or direct inter-branch mutual coupling; it is a symmetric local self-loading/differential-impedance penalty introduced when the under-pad return reference is removed."
+  ],
+  "first_principles_model": {
+    "full_e2c": "CIN pad couples capacitively to a non-ideal/shared return network. Unequal effective return potentials/impedances convert differential energy to common mode and create branch imbalance.",
+    "m7b": "Removing backside ground beneath the CIN pad weakens that coupling, so asymmetry and mode conversion collapse. But it also removes the intended local RF reference/shunt capacitance, creating a broadband symmetric discontinuity in each branch.",
+    "frequency_trend": "The M7B differential penalty increases toward higher frequency, consistent with a local capacitive/reference-plane perturbation whose effect grows with frequency rather than a narrow new resonance.",
+    "implication": "The next corrective must preserve local pad-to-return reference while preventing that local return from participating strongly in the shared/global return network."
+  },
+  "mechanism_ranking": {
+    "direct_opposite_pol_signal_metal": "LOW; M6-D1 weak.",
+    "branch_asymmetry_common_mode": "REAL_BUT_ALREADY_CORRECTED_BY_M7B.",
+    "direct_branch_mutual_coupling": "NOT_PRIMARY_FOR_M7B_RESIDUAL; mutual-average changed modestly.",
+    "m7b_induced_symmetric_self_loading": "HIGH_CONFIDENCE_DOMINANT_IN_CURRENT_M7B_RESIDUAL.",
+    "larger_shared_return_path": "STILL_PLAUSIBLE_UNDERLYING_FULL_E2C_CONTRIBUTOR, but cannot be isolated until the M7B self-loading penalty is removed."
+  },
+  "next_design_principle": {
+    "preferred": "Retain copper under/near CIN pad as a controlled local return reference, while isolating its lateral/shared-current path to the broader backside ground with a moat/tongue/island topology that remains galvanically tied to the branch-local package/via return.",
+    "avoid": [
+      "Do not enlarge the M7B aperture.",
+      "Do not repeat upstream inner-edge setback.",
+      "Do not change inter-branch spacing first.",
+      "Do not optimize global ground shape before fixing the M7B-created self-loading penalty."
+    ],
+    "next_candidate_state": "OFFLINE_TOPOLOGY_DEFINITION_ONLY_NO_DIMENSIONS_FROZEN_YET"
+  },
+  "authorization": {
+    "BUILD_AUTHORIZED": false,
+    "SOLVE_AUTHORIZED": false,
+    "active_grant": null
+  }
+}

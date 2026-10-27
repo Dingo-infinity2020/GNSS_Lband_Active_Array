@@ -1,0 +1,30 @@
+{
+  "cst": "D:\\GNSS_Lband_Active_Array\\_r1a2_feed_reference_work\\R1A2_CHARTS_FEED_REFERENCE_BUILD_ONLY_V01.cst",
+  "cst_sha256": "a75f7c48e73f4461ceaedd5f0ebf1c4f118cd764843a98401cd8470444ca7193",
+  "macro_sha256": "314c41f1c247d7bd4a7bc5066d295d4c7487955d53e94c56d143c150cc4009ae",
+  "symmetry": {
+    "gap_count": 4,
+    "terminal_count": 4,
+    "gap_volumes": [
+      0.808163265304717,
+      0.808163265304717,
+      0.808163265304717,
+      0.808163265304717
+    ],
+    "terminal_volumes": [
+      0.159999999999991,
+      0.159999999999991,
+      0.159999999999991,
+      0.159999999999991
+    ],
+    "gap_volume_spread": 0.0,
+    "terminal_volume_spread": 0.0,
+    "pass": true
+  },
+  "log": [
+    "MACRO_SHA256=314c41f1c247d7bd4a7bc5066d295d4c7487955d53e94c56d143c150cc4009ae",
+    "BUILD_SAVE_PASS",
+    "EVIDENCE_PASS",
+    "REOPEN_PASS"
+  ]
+}

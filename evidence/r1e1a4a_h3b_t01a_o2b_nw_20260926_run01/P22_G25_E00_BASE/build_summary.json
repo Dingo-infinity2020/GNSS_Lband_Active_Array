@@ -1,0 +1,16 @@
+{
+  "candidate": "P22_G25_E00_BASE",
+  "pad_width_mm": 2.2,
+  "pad_gap_mm": 0.25,
+  "extension_mm": 0.0,
+  "build_sha256": "35b41b380ab0529be69084dcf6515a8eb855ff1059eeeb25aef89132aae454d9",
+  "checks": {
+    "shape_count_38": true,
+    "positive_volumes": true,
+    "port_count_zero": true,
+    "intersection_returned": true,
+    "no_solver_output": true,
+    "no_solver_results": true,
+    "hash_stable": true
+  }
+}

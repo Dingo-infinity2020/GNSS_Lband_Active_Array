@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\GNSS_Lband_Active_Array\_o2b_execute_once.py", line 210, in <module>
+    res=fresh_solve(Path(c["build_file"]),dst,SCREEN,sed,ref,False); row={"candidate":name,"pad_width_mm":c["pad_width_mm"],"pad_gap_mm":c["pad_gap_mm"],"extension_mm":c["extension_mm"],**res["metrics"],"balance_score":res["balance_score"],"solved_sha256":res["solved_sha256"]}
+  File "D:\GNSS_Lband_Active_Array\_o2b_execute_once.py", line 125, in fresh_solve
+    d=read_s(dst); ad=read_adapt(dst); m=metrics(d,ref); out={"source_build_sha256":source_sha,"configured_sha256":configured,"solved_sha256":sha(dst),"metrics":m,"balance_score":balanced(m),"adaptive_delta_sequence":ad,"formal_solver_invocations":1}
+  File "D:\GNSS_Lband_Active_Array\_o2b_execute_once.py", line 89, in read_adapt
+    return [{"pass":int(round(float(r[0]))),"delta_s":float(complex(r[1]).real)} for r in p3.get_result_item(hits[0]).get_data()]
+ValueError: ResultItem does not exist for run id=0. Please note that a parameter change in CST Studio Suite deletes results with run id=0.

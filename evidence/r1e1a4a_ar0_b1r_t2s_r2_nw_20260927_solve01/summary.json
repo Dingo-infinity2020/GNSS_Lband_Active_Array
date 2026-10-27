@@ -1,0 +1,12 @@
+{
+  "status": "HOLD_R1E1A4A_AR0_B1R_T2S_R2_NO_VALID_RESULTS",
+  "simulationops": "0.2.8",
+  "formal_solver_invocations": 1,
+  "automatic_retries": 0,
+  "source_fixture_sha256": "ae3bc705fea01e3a8f1c4a52458f447726843ba32a22d247c085c62b8bb83a7b",
+  "configured_sha256": "aceccdd6791dc22f2aaf8fbb65ac93eb7f321cdde2562793f68474ef159c1dc9",
+  "solved_sha256": "0c099f4de12bff222919c24f16114f2e19dd7ec872b4644ce064c0cf248af54c",
+  "solved_cst": "D:\\GNSS_Lband_Active_Array\\_r1e1a4a_ar0_b1r_t2s_r2_nw_solve01\\R1E1A4A_AR0_B1R_T2S_R2_NW_SOLVED_V01.cst",
+  "sparameters_produced": false,
+  "result_error": "ResultItem does not exist for run id=0. Please note that a parameter change in CST Studio Suite deletes results with run id=0."
+}

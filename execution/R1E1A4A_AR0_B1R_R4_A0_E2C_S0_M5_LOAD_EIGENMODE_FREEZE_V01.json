@@ -1,0 +1,29 @@
+{
+  "schema_version": "gnss-e2c-s0-m5-freeze-v0.1",
+  "status": "FROZEN_OFFLINE_M5",
+  "gamma_scan": {
+    "magnitude_step": 0.05,
+    "phase_step_deg": 10,
+    "passive_unit_disk": true,
+    "same_gamma_on_opposite_pol_eup_pair": true
+  },
+  "thresholds": {
+    "delta": 0.1,
+    "mode_degradation_db": 3.0,
+    "imbalance_db": 1.0
+  },
+  "modal_basis": [
+    "A_diff",
+    "A_common",
+    "B_diff",
+    "B_common"
+  ],
+  "frequencies_ghz": [
+    1.17645,
+    1.2276,
+    1.3384,
+    1.57542
+  ],
+  "BUILD_AUTHORIZED": false,
+  "SOLVE_AUTHORIZED": false
+}
