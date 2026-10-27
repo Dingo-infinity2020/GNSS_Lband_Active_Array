@@ -23,17 +23,16 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_RESULT_REVIEW**
+Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01_PREPARATION**
 
-- Current science status: `HOLD_M7C_GUARD`. One formal SOLVE consumed; zero retries.
-- Runner and numerical/response integrity PASS; required 96 traces ×1001 native points are complete.
-- Sdd restoration 6/6 PASS; Sdc symmetry 0/10 PASS; guard excursion 20.2398 dB exceeds 6 dB.
-- The native thin-PEC-edge approximation and YZ/partial-excitation warning remain preserved.
-- BUILD/SOLVE are false; active_grant=null. No silent retry or automatic next stage.
-- Complete source/results remain protected. No geometry/sweep/material/LNA/CST251/cleanup authority is open.
-- Allowed next work: read-only offline result/guard/polarization/model-warning review.
+- Original science status remains `HOLD_M7C_GUARD`; old recovery SOLVE is consumed and closed.
+- User explicitly delegates BUILD/SOLVE decisions until the current direct-sample diagnostic stage is complete (2026-10-27).
+- Selected scope: no geometry BUILD; qualify a new same-geometry, 15-direct-frequency diagnostic; at most one fresh formal SOLVE, zero automatic retries.
+- Current live BUILD/SOLVE remain false, active_grant=null during qualification. Only after nonproduction qualification PASS and source/hash freeze may the delegated authority be instantiated as a matching one-shot SOLVE grant.
+- Preserve geometry, materials, source/load semantics, numerical settings, old Sdc/Sdd/Guard gates, all native warnings and protected results.
+- No geometry optimization, LNA/CST251 work, old-result cleanup/relocation, or automatic next scientific stage.
 
-Current authority: `docs/M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md`; `PROJECT_HANDOFF.md`; `execution/stage_contract.json`.
+Current authority: `docs/M7C_DIRECT_SAMPLE_STAGE_PLAN_20261027.md`; `docs/M7C_WEAK_RESPONSE_DIRECT_SAMPLE_FREEZE_V01.md`; `PROJECT_HANDOFF.md`; `execution/stage_contract.json`.
 
 ## Historical M7B gate snapshot (superseded; no live authority)
 

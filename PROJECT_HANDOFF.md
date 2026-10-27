@@ -3,13 +3,13 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=103
+HANDOFF_VERSION=104
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_RESULT_REVIEW
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01_PREPARATION
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=HOLD_M7C_GUARD
+TASK_STATUS=M7C_DIRECT_SAMPLE_IMPLEMENTATION_QUALIFICATION_IN_PROGRESS
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
 SOLVER_PERMISSION=NO
@@ -20,7 +20,18 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-27 current baton — offline review complete, scientific HOLD retained
+## 2026-10-27 current baton — delegated direct-sample stage preparation
+
+User explicitly authorizes Codex to plan and complete this stage and decide necessary BUILD/SOLVE actions. Scope is recorded in `docs/M7C_DIRECT_SAMPLE_STAGE_PLAN_20261027.md`.
+
+Decision: retain the reviewed M7C geometry; no new geometry BUILD. Qualify `scripts/run_m7c_direct_sample_solve_v01.py`, the direct-only solver config, exact-frequency extractor and preregistered evaluator. Preparation keeps both live permissions false and active_grant=null. After host nonproduction qualification PASS, instantiate one matching fresh SOLVE grant under this explicit user authority; zero automatic retries.
+
+Original science remains HOLD_M7C_GUARD. Freeze: 15 diagnostic frequencies, 1.8-GHz adaptation, unchanged network/numerical/geometry/material settings; no full-band science reclassification. Installed CST 2022 help documents `Discrete samples only` and single sample intervals. Read-only library probe confirms native per-excitation residual curves; no CST application/solver was launched in preparation.
+
+Next: source commit -> NW task-private sync -> control/CST runtime qualification -> fresh SOLVE grant -> native contract-check/validate/dry-run -> at most one formal direct-sample diagnostic -> read-only qualification and closeout. If a formal solver completes but extraction fails, recover read-only without another solve.
+
+## 2026-10-27 offline review closeout (retained)
+
 
 Read `docs/M7C_OFFLINE_ATTRIBUTION_REVIEW_20261027.md` and `evidence/M7C_OFFLINE_REVIEW_20261027_V01/ANALYSIS.json`.
 

@@ -2,14 +2,16 @@
 
 SimulationOps: 0.2.26 @ c074982bce2ad1bc7c0914ad422244f2cba84d4a
 
-Current stage: R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_RESULT_REVIEW
-Current status: HOLD_M7C_GUARD
+Current stage: R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01_PREPARATION
+Current status: M7C_DIRECT_SAMPLE_IMPLEMENTATION_QUALIFICATION_IN_PROGRESS; original science HOLD_M7C_GUARD
 
 BUILD_AUTHORIZED: false
 SOLVE_AUTHORIZED: false
 active_grant: null
 LNA_INTEGRATION_AUTHORIZED: false
 CST251_AUTHORIZED: false
+
+2026-10-27 user explicitly delegates this direct-sample stage, including necessary BUILD/SOLVE decisions. Plan: docs/M7C_DIRECT_SAMPLE_STAGE_PLAN_20261027.md. No geometry BUILD is selected. Qualify the direct-only entrypoint/extractor before opening one matching SOLVE grant. Formal budget <=1, automatic retries=0. Current live permissions remain false during qualification; no cleanup/relocation, new geometry, LNA or CST251 scope.
 
 One SOLVE consumed, zero retries. Runner PASS and full numerical/response hard gates PASS; scientific GUARD HOLD. Sdd 6/6, Sdc 0/10, guard 20.2398 dB >6 dB. Retain source/results and native warnings. Authority: `docs/M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md`. Next boundary: read-only result interpretation only.
 

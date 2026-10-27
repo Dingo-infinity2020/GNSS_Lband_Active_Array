@@ -329,3 +329,6 @@ The fresh recovery completes the previously missing broadband dataset. M7C Sdd r
 The recovery grant is CONSUMED and closed. BUILD/SOLVE are false; next boundary is read-only guard/polarization/native-warning review under `docs/M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md`. Native thin-PEC-edge approximation is retained as an interpretation limitation. No automatic geometry change, retry or next simulation is authorized.
 
 After classification/review, follow the frozen AR0/mainline authority. Final LNA input matching remains blocked until the authoritative scan-dependent active-impedance locus exists.
+
+
+2026-10-27 update: offline review is complete; the user explicitly authorizes completion of the same-geometry weak-response direct-sample diagnostic. This is a bounded result-credibility question before any further geometry decision, not a mainline architecture change. See `docs/M7C_DIRECT_SAMPLE_STAGE_PLAN_20261027.md`; permissions/grants remain controlled by the current handoff and stage contract.

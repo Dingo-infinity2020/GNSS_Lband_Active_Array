@@ -440,3 +440,8 @@ Current allowed work:
 # Current execution control statement — 2026-10-26
 
 M7C same-geometry recovery SOLVE is closed CONSUMED with `HOLD_M7C_GUARD`. BUILD, SOLVE, optimization and hardware permissions are closed. Current allowed work is read-only result review under `M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md`. PROJECT_HANDOFF.md and execution/stage_contract.json control the current baton. Historical authorization statements do not grant new execution.
+
+
+# Current direct-sample delegation — 2026-10-27
+
+The user explicitly delegates completion of the current same-geometry M7C direct-sample diagnostic, including the decision whether BUILD/SOLVE is needed. `docs/M7C_DIRECT_SAMPLE_STAGE_PLAN_20261027.md` bounds this authority. No geometry BUILD is selected; qualify the new entrypoint before instantiating one live SOLVE grant. Current live booleans stay false during preparation. Original science remains HOLD_M7C_GUARD; no threshold/architecture/geometry change or automatic retry is authorized.
