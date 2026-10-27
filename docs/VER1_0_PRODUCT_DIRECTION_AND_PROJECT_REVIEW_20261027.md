@@ -1,8 +1,11 @@
 # 项目复盘与 Ver1.0 天线工程定义
 
-日期：2026-10-27  
-决策性质：用户委托的产品方向决策；**工程方向确定，射频/硬件资格尚未通过**。  
-复盘基线：`0293524dccb04fb707e533f0fa956b09fb7a80a2`。  
+日期：2026-10-27
+
+决策性质：用户委托的产品方向决策；**工程方向确定，射频/硬件资格尚未通过**。
+
+复盘基线：`0293524dccb04fb707e533f0fa956b09fb7a80a2`。
+
 当前科学结论：`HOLD_M7C_GUARD`；直接频点诊断：`H_NUM_SUPPORTED_M7C_DIRECT_SAMPLE`。
 
 本文件与 [D0023](DECISIONS.md#d0023--define-ver10-as-a-chartsar0-b-dual-polarized-active-array-element) 一起定义初版交付方向，不是新的几何、器件选型或执行授权。长期路线仍由 `PROJECT_MAINLINE.md` 控制，当前物理执行仍由 `PROJECT_HANDOFF.md` 与 `execution/stage_contract.json` 控制。本次不改需求、不改原验收阈值、不修改 CST/参数/结果。
