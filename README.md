@@ -11,11 +11,19 @@ Read these first:
 3. `docs/SIM_EXECUTION.md` - current SimulationOps execution state
 4. `execution/stage_contract.json` - machine-readable stage authorization
 
+## Ver1.0 product direction
+
+A reproducible CHARTS/AR0-B dual-polarized active array element: one planar radiator PCB, two orthogonal PCB stalks carrying four near-feed LNAs, a common backplane, and two independently powered RF outputs. Digital RHCP/LHCP synthesis follows X/Y calibration.
+
+94-mm pitch, approximately 70.7-mm radiator span and 57.1-mm height are engineering starting values. Ver1.0 includes assembly/test/calibration evidence and finite-array validation, not a new digital receiver backend. Product direction is decided; RF and hardware qualification remain open.
+
+Read [the project review and Ver1.0 definition](docs/VER1_0_PRODUCT_DIRECTION_AND_PROJECT_REVIEW_20261027.md) and [D0023](docs/DECISIONS.md#d0023--define-ver10-as-a-chartsar0-b-dual-polarized-active-array-element).
+
 ## Current scientific phase
 
-M7C same-geometry storage recovery completed with full broadband data and numerical PASS, but science is `HOLD_M7C_GUARD`. Differential restoration passes 6/6; symmetry passes 0/10; the new-window guard excursion is 20.2398 dB versus a 6-dB limit.
+The M7C same-geometry direct-sample diagnostic is COMPLETE: `H_NUM_SUPPORTED_M7C_DIRECT_SAMPLE`. Its formerly strongest weak-response peak is not reproduced in the direct-frequency solution. Broadband branch asymmetry and other guard context remain; original science stays `HOLD_M7C_GUARD`. The prior broadband gate records Sdd restoration 6/6, Sdc symmetry 0/10 and a 20.2398-dB guard excursion against the frozen 6-dB limit.
 
-BUILD/SOLVE are closed. See `docs/M7C_STORAGE_RECOVERY_SOLVE_RESULT_20261026.md`, `PROJECT_HANDOFF.md` and `execution/stage_contract.json`. The mainline remains array-aware receiver co-design; final LNA input matching is not frozen.
+BUILD/SOLVE are closed. See [the diagnostic result](docs/M7C_DIRECT_SAMPLE_DIAGNOSTIC_RESULT_20261027.md), `PROJECT_HANDOFF.md` and `execution/stage_contract.json`. The mainline remains array-aware receiver co-design; final LNA input matching is not frozen.
 
 ## Target system envelope
 
@@ -49,21 +57,22 @@ The 94-mm baseline numerically passed broadside, 30/45/60-deg principal-plane ch
 
 However, the two 60-deg planes differ by up to about 209 ohm in active impedance across the science band.
 
-Therefore the pitch/material trade is now the current mainline, and the final LNA input match is still not frozen.
+The integrated feed/ground coexistence and full-network feasibility must close before the pitch/material trade and authoritative R1E2 source cloud. The bare periodic result does not qualify the final active assembly; input matching remains open.
 
 ## Current execution
 
-`R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_RESULT_REVIEW`
+`R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_RESULT_REVIEW`
 
-`HOLD_M7C_GUARD`
+Diagnostic: `H_NUM_SUPPORTED_M7C_DIRECT_SAMPLE`; original science: `HOLD_M7C_GUARD`.
 
-- Exactly one fresh recovery SOLVE consumed; automatic retries=0.
-- 96 complex traces ×1001 native points; numerical hard gates all PASS.
-- Source/reference integrity PASS; complete C: output PROTECTED.
-- No live grant. Next boundary is read-only interpretation of the guard, polarization asymmetry and native model warnings.
+- One direct-sample SOLVE consumed; no geometry BUILD and zero automatic retries.
+- Qualified 96 complex responses x15 direct frequencies; all 11 checks PASS.
+- Original runner HOLD and zero-solver recovery histories retained; complete C: output PROTECTED.
+- No live grant. Next physical boundary is offline return-path hypothesis review only.
 
 ## Core documents
 
+- [Ver1.0 product direction and project review](docs/VER1_0_PRODUCT_DIRECTION_AND_PROJECT_REVIEW_20261027.md)
 - `PROJECT_MAINLINE.md`
 - `PROJECT_HANDOFF.md`
 - `docs/PROJECT_RULES.md`

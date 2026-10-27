@@ -29,6 +29,14 @@ First backup remains:
 
 No architecture replacement is allowed without explicit human approval and the replacement test in `docs/PROJECT_RULES.md`.
 
+## Ver1.0 engineering product direction — 2026-10-27
+
+User-delegated decision [D0023](docs/DECISIONS.md#d0023--define-ver10-as-a-chartsar0-b-dual-polarized-active-array-element) retains CHARTS/AR0-B: a balanced planar radiator, two orthogonal PCB stalks with four near-feed LNAs, a common backplane, and two independent RF outputs. The deliverable is a reproducible active element with assembly/test/calibration evidence and nominal 5x5 finite-array validation. The digital receiver backend is an external system/test interface.
+
+The 94-mm pitch, approximately 70.7-mm span and 57.1-mm height remain inherited starting values, not qualified product optima. Existing requirements, noise/stability budgets and array-source-cloud authority remain in force. Read [the complete project review and Ver1.0 definition](docs/VER1_0_PRODUCT_DIRECTION_AND_PROJECT_REVIEW_20261027.md).
+
+This design decision does not promote the current M7C geometry, change HOLD_M7C_GUARD or reopen execution. The route remains coexistence/return hypothesis review -> D0/C1 complete model/network and active feasibility -> integrated pitch/material trade and R1E2 atlas -> final frontend co-design -> finite/active validation. Current physical authority stays in the handoff and stage contract.
+
 ## Non-negotiable design principles
 
 1. **The isolated-element return loss is not the system objective.**

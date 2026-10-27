@@ -62,6 +62,8 @@ Historical authorization notes later in this file are evidence only unless the c
 
 ## Architecture control
 
+Ver1.0 product direction: `docs/VER1_0_PRODUCT_DIRECTION_AND_PROJECT_REVIEW_20261027.md` and D0023 retain CHARTS/AR0-B (stalk-top four-LNA dual-pol active element). Older horizontal H0/hub and electronics-on-radiator notes are historical; current geometry/provenance manifests control coordinates and placement. This product decision opens no physical execution authority.
+
 Current MAINLINE:
 - CHARTS-inspired planar balanced element
 - clean differential feed representation

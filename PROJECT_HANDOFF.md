@@ -3,7 +3,7 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=107
+HANDOFF_VERSION=108
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
@@ -19,6 +19,12 @@ MATERIAL_AB_PERMISSION=NO
 LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
+
+## 2026-10-27 Ver1.0 product-direction decision
+
+The user delegates the first-version antenna direction. D0023 and `docs/VER1_0_PRODUCT_DIRECTION_AND_PROJECT_REVIEW_20261027.md` select the current CHARTS/AR0-B dual-polarized active element: radiator PCB, two orthogonal stalk PCBs with four near-feed LNAs, common backplane, two independent RF outputs, and assembly/test/calibration plus finite-array validation. Inherited dimensions are engineering starting values, not production/RF qualification.
+
+This is a design-control/documentation decision only. The current physical execution task, original HOLD_M7C_GUARD, protected artifacts and closed grants remain as below. `execution/stage_contract.json` bytes are unchanged; its closed execution identity is retained. No geometry BUILD/SOLVE, model sweep, device integration or remote simulator action follows from this review.
 
 ## 2026-10-27 current baton — direct-sample stage COMPLETE
 

@@ -429,3 +429,31 @@ Decision:
 
 Reference:
 docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md
+
+## D0023 — Define Ver1.0 as a CHARTS/AR0-B dual-polarized active array element
+
+Date: 2026-10-27. Authority: the user delegates the Ver1.0 antenna direction decision.
+
+Decision:
+- retain the CHARTS-inspired balanced petal/ring radiator and the current AR0-B stalk-top twin-MSL/twin-LNA route;
+- target continuous 1.15–1.65 GHz, two independent linear outputs, calibrated digital RHCP/LHCP and the existing 0–60-degree core scan region;
+- use one radiator PCB, two orthogonal approximately 1-mm PCB stalks carrying four near-feed first-stage LNAs, and a common backplane; post-gain combining produces two RF/coax outputs with independent X/Y powering;
+- carry 94-mm pitch, approximately 70.7-mm radiator span and 57.1-mm height as inherited engineering starting values, not qualified production optima; final pitch/material and input matching remain governed by the integrated array gates;
+- keep QPL9547 as a reference device and FR4 as the cost baseline, subject to actual source-cloud noise, loss, stability, manufacturing and cost qualification;
+- deliver a reproducible active element and its assembly/test/calibration package, with a nominal 5x5 finite-array validation target; a 50-channel digital backend is an external test/system interface, not an antenna-hardware deliverable;
+- explicitly close local RF returns, supply, combiner, connector/shield and backplane paths; neither four isolated finite grounds nor an abstract ideal common ground constitute a released hardware return design.
+
+Rationale:
+- the passive radiator and periodic methodology provide a useful baseline;
+- isolated-polarization success did not establish four-front-end coexistence, and M7C restores differential loading while retaining failed symmetry and guard evidence;
+- the latest direct-sample diagnostic supports a numerical explanation for one very weak peak but leaves broadband asymmetry and the original scientific HOLD;
+- a bounded, manufacturable element with complete electrical and array closure is the next product objective.
+
+Supersession and limits:
+- D0017/D0018 electronics-on-radiator placement is historical; AR0-B puts first-stage LNAs on the stalk tops. D0018's old X/Y stalk naming is not dimensional/coordinate authority for AR0; use its current geometry manifests and verified terminal/polarization mapping.
+- D0020's hierarchical co-design principle remains. D0022's old T01-A -> H3B-I01 immediate route is superseded by the AR0/E3F lineage: coexistence/return review -> D0 model authority -> C1 full-network/active feasibility -> integrated pitch/material and R1E2 atlas -> final frontend co-design -> finite/active validation.
+- T01 remains a possible post-LNA grounded interconnect; it is not promoted into the balanced pre-LNA feed. PUMA remains FIRST_BACKUP and requires the existing same-matrix replacement test before promotion.
+- This is a product-direction decision, not geometry promotion or hardware PASS. Preserve HOLD_M7C_GUARD, all frozen gates and failed evidence. Current physical execution remains offline return-path hypothesis review only; BUILD/SOLVE=false and active_grant=null.
+
+Reference:
+[Project review and Ver1.0 definition](VER1_0_PRODUCT_DIRECTION_AND_PROJECT_REVIEW_20261027.md)
