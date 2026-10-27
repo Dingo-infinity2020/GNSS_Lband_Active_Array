@@ -9,24 +9,13 @@
   },
   "authorization": {
     "BUILD_AUTHORIZED": false,
-    "SOLVE_AUTHORIZED": true,
+    "SOLVE_AUTHORIZED": false,
     "production_solve_authorized": false,
     "material_ab_authorized": false,
     "lna_integration_authorized": false,
     "cst251_authorized": false,
     "semantics": "CURRENT_LIVE_ONLY",
-    "active_grant": {
-      "grant_id": "GNSS-M7C-DIRECT-SAMPLE-SOLVE-GRANT-20261027-01",
-      "kind": "SOLVE",
-      "state": "GRANTED",
-      "stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01",
-      "source_commit": "d8fdb3f17a8084c910be41701f6c01e9f91181f4",
-      "entrypoint_path": "scripts/run_m7c_direct_sample_solve_v01.py",
-      "entrypoint_sha256": "8905fa6bd7d13a01eeda1ce6c814af59b8642d48dd0ea6022f1c48eb5e3927e6",
-      "granted_at": "2026-10-27T02:17:39Z",
-      "expires_at": "2026-10-27T08:17:39Z",
-      "scope": "One same-geometry direct-frequency diagnostic under explicit delegated user stage authority; no geometry BUILD, no retry."
-    }
+    "active_grant": null
   },
   "scientific_freeze": {
     "candidate": "H3B_T01A_GCPW_ORTHOGONAL_TRANSITION",
@@ -38,8 +27,8 @@
     "pass12_delta_s": 0.01570656517587774,
     "max_delta_s_required": 0.02,
     "rf_baseline_interpretation": "NUMERICALLY_QUALIFIED; NO_SHARP_TOPOLOGY_RESONANCE; LOCAL_RF_OPTIMIZATION_STILL_REQUIRED",
-    "next_stage": "M7C_DIRECT_SAMPLE_ONE_SHOT_SOLVE",
-    "stop_boundary": "SAME_GEOMETRY_DIRECT_SAMPLE_DIAGNOSTIC_ONLY_NO_RETRY_OR_AUTOMATIC_GEOMETRY_CHANGE",
+    "next_stage": "ZERO_SOLVER_DIRECT_SAMPLE_QUALIFICATION_RECOVERY",
+    "stop_boundary": "READ_ONLY_EXTRACTION_RECOVERY_ON_LOCKED_SOLVED_ARTIFACT_NO_BUILD_OR_SOLVE",
     "master_plan": "docs/R1E1A4A_H3B_TO_ACTIVE_ARRAY_MASTERPLAN_V01.md",
     "simulationops_min": "0.2.12",
     "t01c_status": "DEFERRED_NOT_AUTHORIZED",
@@ -1939,7 +1928,7 @@
     "m7c_direct_sample_manifest": "execution/M7C_DIRECT_SAMPLE_SOLVE_MANIFEST_V01.json"
   },
   "execution": {
-    "current_stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01",
+    "current_stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_READONLY_QUALIFICATION_RECOVERY",
     "formal_recovery_solve_invocation_count": 1,
     "silent_retry_allowed": false,
     "hash_lock_required": true,
@@ -1948,7 +1937,7 @@
     "formal_o2b_screen_invocation_count": 9,
     "formal_o2b_qualification_invocation_count": 3,
     "last_completed_stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_STORAGE_RECOVERY_SOLVE_V01",
-    "last_status": "M7C_DIRECT_SAMPLE_SOLVE_GRANTED_PENDING_NATIVE_PACKET_PREFLIGHT",
+    "last_status": "HOLD_M7C_DIRECT_POSTSOLVE_READER_REPRESENTATION",
     "one_shot_required": true,
     "fresh_run_directory_required": true,
     "entrypoint_qualification": {
@@ -2017,7 +2006,9 @@
       "selected_formal_solve_budget": 1,
       "automatic_retries": 0,
       "live_grant_deferred_until_entrypoint_qualification": false
-    }
+    },
+    "m7c_direct_sample_formal_solver_invocations": 1,
+    "m7c_direct_sample_automatic_retries": 0
   },
   "workspace": {
     "host_alias": "NW",
@@ -2088,7 +2079,7 @@
     "forensics_command": "runner/nw/simops.cmd forensics --packet <packet>"
   },
   "evidence": {
-    "status_classification": "M7C_DIRECT_SAMPLE_SOLVE_GRANTED_OLD_SCIENCE_HOLD_RETAINED",
+    "status_classification": "HOLD_M7C_DIRECT_POSTSOLVE_READER_REPRESENTATION",
     "source_commit_for_o3_o4": "00bea9de782eb36c1d3f118866edd283808b6233",
     "o3_nominal_solved_sha256": "5a3ec0b2a9eca4bc0253d0e1fd5ab5f512d6d0fb63944bbd7b932505c1f5f82f",
     "o3_straight_reference_solved_sha256": "421c4951a122749aacf36254b8bb5a156547a22dd6ab9e465139c44207d6519b",
@@ -2342,6 +2333,25 @@
       "formal_solver_invocations": 1,
       "artifact_sha256": "90af39c8447d7245d6e1eb6f77930e3789b6c11c64ea14a7d314b33b07a0e5fa",
       "authorization_snapshot_sha256": "2cb06273e440eeb77531587a91aacbc8296d4961a157d559bc57bf05090f4bb4"
+    },
+    {
+      "grant_id": "GNSS-M7C-DIRECT-SAMPLE-SOLVE-GRANT-20261027-01",
+      "kind": "SOLVE",
+      "state": "CONSUMED",
+      "stage": "R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01",
+      "source_commit": "d8fdb3f17a8084c910be41701f6c01e9f91181f4",
+      "entrypoint_path": "scripts/run_m7c_direct_sample_solve_v01.py",
+      "entrypoint_sha256": "8905fa6bd7d13a01eeda1ce6c814af59b8642d48dd0ea6022f1c48eb5e3927e6",
+      "granted_at": "2026-10-27T02:17:39Z",
+      "expires_at": "2026-10-27T08:17:39Z",
+      "scope": "One same-geometry direct-frequency diagnostic under explicit delegated user stage authority; no geometry BUILD, no retry.",
+      "closed_at": "2026-10-27T02:35:09Z",
+      "packet_id": "GNSS-M7C-DIRECT-SAMPLE-20261027-V01",
+      "runner_final_status": "HOLD_ENTRYPOINT",
+      "formal_solver_invocations": 1,
+      "solver_completed": true,
+      "solved_artifact_sha256": "c21fa9f047d83f4f3776d5e6ef5718e8924aaf8e54f0ad8cbb7cb6a7c6681851",
+      "closeout_reason": "Solver completed; get_data tuple representation failed during result extraction. Zero-solver read-only recovery only."
     }
   ],
   "artifacts": {
@@ -2391,6 +2401,15 @@
       "purge_allowed": false,
       "retain_reason": "Science HOLD: preserve complete local result for offline review; archive/relocation/cleanup not authorized in this solve task.",
       "next_closeout": "AFTER_OFFLINE_GUARD_REVIEW_AND_EXPLICIT_ARCHIVE_PLAN"
+    },
+    "m7c_direct_sample_complete_project": {
+      "state": "PROTECTED",
+      "artifact": "C:\\GNSS_Lband_Active_Array\\runs\\formal\\solver_runs\\M7C_DIRECT_SAMPLE_20261027_V01\\M7C_DIRECT_SAMPLE_DIAGNOSTIC_SOLVED_V01.cst",
+      "artifact_sha256": "c21fa9f047d83f4f3776d5e6ef5718e8924aaf8e54f0ad8cbb7cb6a7c6681851",
+      "artifact_bytes": 154176,
+      "companion_identity_status": "PENDING_READONLY_CLOSEOUT_HASH",
+      "purge_allowed": false,
+      "long_term_storage_qualified": false
     }
   },
   "preparation": {

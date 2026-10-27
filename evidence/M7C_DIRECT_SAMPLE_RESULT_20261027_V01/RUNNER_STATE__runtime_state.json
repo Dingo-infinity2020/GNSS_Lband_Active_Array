@@ -1,0 +1,15 @@
+{
+  "schema_version": "runner-runtime-state-v0.2",
+  "packet_id": "GNSS-M7C-DIRECT-SAMPLE-20261027-V01",
+  "runner_pid": 32240,
+  "transaction_state": "FINALIZED",
+  "entrypoint_started": true,
+  "entrypoint_exit_code": 9,
+  "started_at": "2026-10-27T02:23:47Z",
+  "updated_at": "2026-10-27T02:35:09Z",
+  "finalized_at": "2026-10-27T02:35:09Z",
+  "result_packet_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIRECT_SAMPLE_20261027_V01\\result_packet.json",
+  "progress_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIRECT_SAMPLE_20261027_V01\\state\\runs\\GNSS-M7C-DIRECT-SAMPLE-20261027-V01\\project_progress.json",
+  "events_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIRECT_SAMPLE_20261027_V01\\state\\runs\\GNSS-M7C-DIRECT-SAMPLE-20261027-V01\\project_events.jsonl",
+  "rejected_events_path": "D:\\quest_naoc_tarminal\\SimulationOps_Runtime\\NW\\GNSS_Lband_Active_Array\\M7C_DIRECT_SAMPLE_20261027_V01\\state\\runs\\GNSS-M7C-DIRECT-SAMPLE-20261027-V01\\project_rejected_events.jsonl"
+}

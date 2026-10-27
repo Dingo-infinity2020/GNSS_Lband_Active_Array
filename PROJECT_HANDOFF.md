@@ -3,16 +3,16 @@
 ## MACHINE-READABLE HEADER
 
 ```text
-HANDOFF_VERSION=105
+HANDOFF_VERSION=106
 CANONICAL_BRANCH=project/r0-charts-scaffold
 MAINLINE_AUTHORITY=PROJECT_MAINLINE.md
 CURRENT_GATE=R1E1A4A-AR0-E2C-S0-CORRECTIVE
-CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01
+CURRENT_TASK_ID=R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_READONLY_QUALIFICATION_RECOVERY
 TASK_OWNER=DESIGN_CONTROL
-TASK_STATUS=M7C_DIRECT_SAMPLE_SOLVE_GRANTED_PENDING_NATIVE_PACKET_PREFLIGHT
+TASK_STATUS=HOLD_M7C_DIRECT_POSTSOLVE_READER_REPRESENTATION
 SIMULATIONOPS_PROTOCOL=0.2.26
 BUILD_AUTHORIZED=NO
-SOLVER_PERMISSION=YES
+SOLVER_PERMISSION=NO
 PRODUCTION_SOLVER_PERMISSION=NO
 OPTIMIZATION_PERMISSION=NO
 MATERIAL_AB_PERMISSION=NO
@@ -20,7 +20,14 @@ LNA_INTEGRATION_PERMISSION=NO
 CST251_PERMISSION=NO
 ```
 
-## 2026-10-27 current baton — one qualified direct-sample SOLVE granted
+## 2026-10-27 current baton — SOLVE consumed, read-only extraction recovery
+
+The single direct-sample SOLVE completed. Runner closed HOLD_ENTRYPOINT because a native get_data() representation failed during extraction; no automatic retry. Grant is CONSUMED; BUILD/SOLVE=false, active_grant=null.
+
+Locked solved SHA256: c21fa9f047d83f4f3776d5e6ef5718e8924aaf8e54f0ad8cbb7cb6a7c6681851. Only standalone zero-solver extraction recovery is allowed. Preserve original runner HOLD and exception. User's delegated stage authority covers this read-only completion; it does not reopen a solver grant.
+
+## 2026-10-27 one-shot authorization (consumed history)
+
 
 User delegated completion of this exact stage, including needed BUILD/SOLVE decisions. NW nonproduction qualification PASS at `d8fdb3f17a8084c910be41701f6c01e9f91181f4`: 32 host/source/storage checks, six expected command results, seven tests in each Python runtime; no simulator application/solver.
 

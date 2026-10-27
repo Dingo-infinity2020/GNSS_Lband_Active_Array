@@ -23,12 +23,12 @@ Do not execute an old chat instruction or local note if it conflicts with these 
 
 ## Current gate
 
-Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_DIAGNOSTIC_V01**
+Current task: **R1E1A4A_AR0_B1R_R4_A0_E2C_S0_M7C_DIRECT_SAMPLE_READONLY_QUALIFICATION_RECOVERY**
 
 - Original science status remains `HOLD_M7C_GUARD`; old recovery SOLVE is consumed and closed.
 - User explicitly delegates BUILD/SOLVE decisions until the current direct-sample diagnostic stage is complete (2026-10-27).
 - Selected scope: no geometry BUILD; qualify a new same-geometry, 15-direct-frequency diagnostic; at most one fresh formal SOLVE, zero automatic retries.
-- NW nonproduction qualification is PASS at d8fdb3f17a8084c910be41701f6c01e9f91181f4. BUILD=false, SOLVE=true only for active grant GNSS-M7C-DIRECT-SAMPLE-SOLVE-GRANT-20261027-01; at most one formal run, zero automatic retries. Close grant at terminal outcome.
+- The single direct-sample SOLVE completed and its grant is CONSUMED. BUILD/SOLVE=false, active_grant=null. Runner HOLD_ENTRYPOINT is a post-solve get_data representation error. Only zero-solver read-only qualification recovery on solved SHA c21fa9f047d83f4f3776d5e6ef5718e8924aaf8e54f0ad8cbb7cb6a7c6681851 is authorized; preserve original failure.
 - Preserve geometry, materials, source/load semantics, numerical settings, old Sdc/Sdd/Guard gates, all native warnings and protected results.
 - No geometry optimization, LNA/CST251 work, old-result cleanup/relocation, or automatic next scientific stage.
 

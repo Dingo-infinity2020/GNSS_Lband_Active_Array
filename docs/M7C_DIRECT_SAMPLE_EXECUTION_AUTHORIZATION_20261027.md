@@ -20,3 +20,8 @@ BUILD_AUTHORIZED=false; SOLVE_AUTHORIZED=true only for this matching live grant.
 The entrypoint closes its owned project/environment in finally blocks. Phase budgets are conservative elapsed audits (presolve 600 s, solver 7200 s, qualification 900 s), with generic runner 9000-s outer fail-safe for an unreturned call. There is no claim of an independent asynchronous solver-kill watchdog. Stable execution is awaited without recurring native log/process polling.
 
 At any terminal runner outcome: close the live grant, reconcile actual solver invocation count, preserve the result and global one-shot identity, and record the diagnostic outcome. If the solver completed but post-processing failed, only zero-solver read-only extraction recovery is within scope; do not rerun the solver. No automatic geometry/topology/optimization/LNA/CST251/cleanup/relocation follows.
+
+
+## Consumption closeout
+
+The one formal invocation ended 2026-10-27T02:35:09Z. Solver completed once (614.187 s); the transaction is HOLD_ENTRYPOINT because post-solve extraction raised ValueError while unpacking a get_data() representation. Grant is CONSUMED and live BUILD/SOLVE are false, active_grant=null. Solved SHA256 c21fa9f047d83f4f3776d5e6ef5718e8924aaf8e54f0ad8cbb7cb6a7c6681851 is locked. Only zero-solver read-only qualification recovery remains.
